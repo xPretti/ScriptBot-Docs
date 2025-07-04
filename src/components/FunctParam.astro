@@ -1,0 +1,64 @@
+---
+const { type, name, comment, value = undefined } = Astro.props;
+---
+
+<div>
+  <p>
+    {value ? <span class="optional">Optional</span> : <span class="required">Required</span>}
+    <span class="type">{type}</span>
+    {
+      value ? (
+        <span>{name}</span>
+        <span class="value">= {value};</span>
+      ) : (
+        <span>{name};</span>
+      )
+    }
+    <span class="comment">// {comment}</span>
+  </p>
+</div>
+
+<style>
+  div {
+    margin-top: 0;
+    width: auto !important;
+    max-width: auto;
+    min-width: auto !important;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .type {
+    font-weight: bold;
+    color: var(--sl-color-function-type);
+  }
+
+  .comment {
+    color: var(--sl-color-function-comment);
+  }
+
+  .value {
+    color: var(--sl-color-function-value);
+  }
+
+
+  .required,
+  .optional {
+    padding: 0 5px 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .required {
+    color: var(--sl-color-function-required);
+    background-color: color-mix(in srgb, var(--sl-color-function-required) 10%, transparent 100%);
+    border: 1px solid var(--sl-color-function-required);
+  }
+
+  .optional {
+    color: var(--sl-color-function-optional);
+    background-color: color-mix(in srgb, var(--sl-color-function-optional) 10%, transparent 100%);
+    border: 1px solid var(--sl-color-function-optional);
+  }
+</style>

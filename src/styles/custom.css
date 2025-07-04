@@ -17,6 +17,14 @@
   /* Header */
   --sl-color-black: #ffffff;
   --sl-content-width: 55rem;
+
+  /* My colors */
+  --sl-color-function-description: #eeeeee;
+  --sl-color-function-type: #515bee;
+  --sl-color-function-comment: #69a170;
+  --sl-color-function-value: #51b4ee;
+  --sl-color-function-required: #ee5151;
+  --sl-color-function-optional: #51b4ee;
 }
 
 /* Light mode colors. */
@@ -31,6 +39,9 @@
   --sl-color-gray-5: #414141;
   --sl-color-gray-6: #252525;
   --sl-color-black: #191919;
+
+  /* My colors */
+  --sl-color-function-description: #252525;
 }
 
 .variable-abbr,

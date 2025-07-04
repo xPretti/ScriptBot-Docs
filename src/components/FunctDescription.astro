@@ -1,0 +1,18 @@
+---
+const { text } = Astro.props;
+---
+
+<div>
+  <p>{text}</p>
+</div>
+
+<!-- Estilos -->
+<style>
+  div {
+    display: flex;
+    align-items: center;
+    background-color: var(--sl-color-function-description);
+    padding: 10px;
+    border-radius: 5px;
+  }
+</style>

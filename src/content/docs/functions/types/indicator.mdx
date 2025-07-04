@@ -1,0 +1,45 @@
+---
+title: INDICATOR[...]
+---
+
+import FunctDescription from "@components/FunctDescription.astro";
+import FunctParams from "@components/FunctParams.astro";
+import FunctParam from "@components/FunctParam.astro";
+import FunctReturns from "@components/FunctReturns.astro";
+import FunctReturnType from "@components/FunctReturnType.astro";
+import FunctObs from "@components/FunctObs.astro";
+import FunctAliases from "@components/FunctAliases.astro";
+
+<FunctDescription text="Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico." />
+
+<FunctParams>
+  <FunctParam
+    type="uint"
+    name="ID"
+    comment="Categoria que o indicador esta instalado."
+    value="0"
+  />
+  <FunctParam
+    type="uint"
+    name="BUFFER"
+    comment="Buffer do indicador que armazena o valor."
+    value="0"
+  />
+  <FunctParam
+    type="uint"
+    name="CANDLE"
+    comment="A vela de referância para obter o preço do indicador."
+    value="0"
+  />
+</FunctParams>
+
+<FunctReturns>
+  <FunctReturnType
+    successMsg="Retorna o valor do buffer do indicador."
+    errorMsg="Retorna o valor 0.0."
+  />
+</FunctReturns>
+
+<FunctObs>
+  <FunctAliases name="INDICATOR" aliases="IND" />
+</FunctObs>

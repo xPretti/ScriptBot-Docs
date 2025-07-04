@@ -1,0 +1,12 @@
+---
+const { title, greeting, name } = Astro.props;
+---
+
+<div data-pagefind-ignore>
+  <slot />
+  <slot name="title" />
+  <p>{greeting}, {name}!</p>
+</div>
+
+<!-- Estilos -->
+<style></style>
