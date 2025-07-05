@@ -15,6 +15,16 @@ export default defineConfig({
   },
   integrations: [
     starlight({
+      locales: {
+        root: {
+          label: "English",
+          lang: "en",
+        },
+        pt: {
+          label: "Português",
+          lang: "pt",
+        },
+      },
       favicon: "/public/favicon.ico",
       title: "ScriptBot",
       logo: {
@@ -89,6 +99,13 @@ export default defineConfig({
         },
       ],
       customCss: ["./src/styles/custom.css"],
+
+      // Custom components
+      components: {
+        // Override the default `SocialIcons` component.
+        FallbackContentNotice:
+          "./src/components/override/FallbackContentNotice.astro",
+      },
     }),
     mdx(),
   ],
