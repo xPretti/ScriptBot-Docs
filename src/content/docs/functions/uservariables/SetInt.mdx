@@ -1,7 +1,5 @@
 ---
-title: SetDouble[...]
-sidebar:
-  order: 101
+title: SetInt[...]
 ---
 
 import TitleContent from "@components/TitleContent.astro";
@@ -14,14 +12,14 @@ import FunctExample from "@components/FunctExample.astro";
 
 <TitleContent title="Parâmetros:">
   <FunctParam type="string" name="VARIABLE" comment="Nome da variável." />
-  <FunctParam type="double" name="VALUE" comment="Valor da variável." />
+  <FunctParam type="long" name="VALUE" comment="Valor da variável." />
 </TitleContent>
 
 <TitleContent title="Exemplos:">
   <FunctExample>
 
     ```js
-    SetDouble["Name", 777]
+    SetInt["Name", 777]
     ```
 
   </FunctExample>

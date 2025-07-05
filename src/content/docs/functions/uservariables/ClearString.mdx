@@ -1,7 +1,5 @@
 ---
-title: ReplaceInt[...]
-sidebar:
-  order: 100
+title: ClearString[...]
 ---
 
 import TitleContent from "@components/TitleContent.astro";
@@ -10,18 +8,17 @@ import FunctParam from "@components/FunctParam.astro";
 import FunctReturnType from "@components/FunctReturnType.astro";
 import FunctExample from "@components/FunctExample.astro";
 
-<FunctDescription text="Esta função permite substituir o valor de uma variável caso não exista." />
+<FunctDescription text="Esta função permite remover todas as variáveis criadas pelo usuário." />
 
 <TitleContent title="Parâmetros:">
-  <FunctParam type="string" name="VARIABLE" comment="Nome da variável." />
-  <FunctParam type="long" name="NEW_VALUE" comment="Novo valor da variável." />
+  <p> Esta função não recebe parâmetros. </p>
 </TitleContent>
 
 <TitleContent title="Exemplos:">
   <FunctExample>
 
     ```js
-    ReplaceInt["Name", 777]
+    ClearString[]
     ```
 
   </FunctExample>
@@ -29,9 +26,9 @@ import FunctExample from "@components/FunctExample.astro";
 
 <TitleContent title="Retornos:">
   <FunctReturnType
-    success="Retorna um boolean (true) se a variável foi criada."
+    success="Retorna um boolean (true) se as variáveis foram removidas."
     typeSuccess="bool"
-    error="Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente."
+    error="Retorna um boolean (false) se as variáveis não foram removidas ou não existem."
     typeError="bool"
   />
 </TitleContent>

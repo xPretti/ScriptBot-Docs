@@ -1,7 +1,5 @@
 ---
-title: ReplaceString[...]
-sidebar:
-  order: 102
+title: ReplaceInt[...]
 ---
 
 import TitleContent from "@components/TitleContent.astro";
@@ -14,18 +12,14 @@ import FunctExample from "@components/FunctExample.astro";
 
 <TitleContent title="Parâmetros:">
   <FunctParam type="string" name="VARIABLE" comment="Nome da variável." />
-  <FunctParam
-    type="String"
-    name="NEW_VALUE"
-    comment="Novo valor da variável."
-  />
+  <FunctParam type="long" name="NEW_VALUE" comment="Novo valor da variável." />
 </TitleContent>
 
 <TitleContent title="Exemplos:">
   <FunctExample>
 
     ```js
-    ReplaceString["Name", "Value"]
+    ReplaceInt["Name", 777]
     ```
 
   </FunctExample>

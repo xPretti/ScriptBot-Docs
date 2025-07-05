@@ -1,0 +1,33 @@
+---
+title: Constants
+---
+
+import CodeVar from "@components/CodeVar.astro";
+import ColorsComp from "@components/ColorsComp.astro";
+
+## Windows
+
+> Constantes referente ao tipo da janela com qual o indicador vai ser anexado.
+
+| VARIÁVEIS                            | RETORNOS                                                                               |
+| ------------------------------------ | -------------------------------------------------------------------------------------- |
+| <CodeVar>NEW</CodeVar>               | Cria o indicador em uma nova janela;                                                   |
+| <CodeVar>0</CodeVar>                 | Mesma janela do gráfico;                                                               |
+| <CodeVar>1 ... 2 ... 3 ...</CodeVar> | Cria o indicador em uma nova janela ou agrupa o indicador caso a janela já foi criada; |
+| <CodeVar>-1</CodeVar>                | Cria o indicador mas sem aparecer no gráfico;                                          |
+
+## Symbols
+
+> Constantes referente ao tipo de ativo que o indicador vai ser anexado.
+
+| VARIÁVEIS                          | RETORNOS                            |
+| ---------------------------------- | ----------------------------------- |
+| <CodeVar>SYMBOL</CodeVar>          | Ativo que o robô esta anexado;      |
+| <CodeVar>REAL</CodeVar>            | Ativo que o robô enviará as ordens; |
+| <CodeVar>"Nome do ativo"</CodeVar> | Ativo customizado;                  |
+
+## Colors
+
+> Constantes referente as cores de um objeto.
+
+<ColorsComp />

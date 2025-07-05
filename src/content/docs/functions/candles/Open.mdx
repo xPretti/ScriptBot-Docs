@@ -1,5 +1,5 @@
 ---
-title: INDICATOR'X'[...]
+title: Open[...]
 ---
 
 import TitleContent from "@components/TitleContent.astro";
@@ -9,19 +9,24 @@ import FunctReturnType from "@components/FunctReturnType.astro";
 import FunctAliases from "@components/FunctAliases.astro";
 import FunctExample from "@components/FunctExample.astro";
 
-<FunctDescription text="Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico." />
+<FunctDescription text="Esta função retorna o preço de abertura de uma vela." />
 
 <TitleContent title="Parâmetros:">
   <FunctParam
     type="uint"
-    name="BUFFER"
-    comment="Buffer do indicador que armazena o valor."
+    name="CANDLE"
+    comment="A vela de referência para obter o preço de abertura."
+  />
+  <FunctParam
+    type="ENUM_TIMEFRAME"
+    name="TIMEFRAME"
+    comment="O tempo gráfico de referência para obter o preço de abertura."
     value="0"
   />
   <FunctParam
-    type="uint"
-    name="CANDLE"
-    comment="A vela de referância para obter o preço do indicador."
+    type="string"
+    name="SYMBOL"
+    comment="O ativo de referência para obter o preço de abertura."
     value="0"
   />
 </TitleContent>
@@ -30,11 +35,9 @@ import FunctExample from "@components/FunctExample.astro";
   <FunctExample>
 
     ```js
-    INDICATOR0[buffer, candle]
-    INDICATOR1[buffer, candle]
-    INDICATOR2[buffer, candle]
-    INDICATOR...[buffer, candle]
-
+    Open[candle, timeframe, symbol]
+    Open[1, M5, "EURUSD"]
+    Open[1]
     ```
 
   </FunctExample>
@@ -50,5 +53,5 @@ import FunctExample from "@components/FunctExample.astro";
 </TitleContent>
 
 <TitleContent title="Observação:">
-  <FunctAliases name="INDICATOR1" aliases="IND1" />
+  <FunctAliases name="Open" aliases="IND" />
 </TitleContent>

@@ -1,7 +1,5 @@
 ---
-title: CreateString[...]
-sidebar:
-  order: 102
+title: CreateDouble[...]
 ---
 
 import TitleContent from "@components/TitleContent.astro";
@@ -14,14 +12,14 @@ import FunctExample from "@components/FunctExample.astro";
 
 <TitleContent title="Parâmetros:">
   <FunctParam type="string" name="VARIABLE" comment="Nome da variável." />
-  <FunctParam type="String" name="VALUE" comment="Valor da variável." />
+  <FunctParam type="double" name="VALUE" comment="Valor da variável." />
 </TitleContent>
 
 <TitleContent title="Exemplos:">
   <FunctExample>
 
     ```js
-    CreateString["Name", "Value"]
+    CreateDouble["Name", 777]
     ```
 
   </FunctExample>

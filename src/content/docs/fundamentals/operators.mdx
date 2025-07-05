@@ -1,0 +1,268 @@
+---
+title: Operators
+description: A reference page in my new Starlight docs site.
+---
+
+import CodeVar from "@components/CodeVar.astro";
+import Frame from "@components/Frame.astro";
+
+## Tipos de operadores
+
+> Tabela de operadores.
+
+| OPERADOR                    | DESCRICAO                   |
+| --------------------------- | --------------------------- |
+| <CodeVar> + </CodeVar>      | Adicionar;                  |
+| <CodeVar> - </CodeVar>      | Subtrair;                   |
+| <CodeVar> \* </CodeVar>     | Multiplicar;                |
+| <CodeVar> / </CodeVar>      | Dividir;                    |
+| <CodeVar> ! </CodeVar>      | Negação;                    |
+| <CodeVar> % </CodeVar>      | Resto da divisão.           |
+| <CodeVar> > </CodeVar>      | Maior que;                  |
+| <CodeVar> \< </CodeVar>     | Menor que;                  |
+| <CodeVar> >= </CodeVar>     | Maior ou igual a;           |
+| <CodeVar> \<\= </CodeVar>   | Menor ou igual a;           |
+| <CodeVar> == </CodeVar>     | Igual a;                    |
+| <CodeVar> != </CodeVar>     | Diferente de;               |
+| <CodeVar> && </CodeVar>     | E;                          |
+| <CodeVar> \| </CodeVar>     | Ou;                         |
+| <CodeVar> ( ) </CodeVar>    | Priorizar;                  |
+| <CodeVar> ? : </CodeVar>    | Condição IF '?' e ELSE ':'; |
+| <CodeVar> -> </CodeVar>     | Executador lógico;          |
+| <CodeVar> // </CodeVar>     | Comentário de linha;        |
+| <CodeVar>/\* \*/ </CodeVar> | Comentário de bloco;        |
+
+## Operadores
+
+<Frame>
+### +
+
+> Operador de adição.<br/>
+> Retorna a adição entre dois números.
+
+```java
+CLOSE[0] + CLOSE[1]
+```
+
+</Frame>
+
+<Frame>
+### -
+
+> Operador de subtração.<br/>
+> Retorna a subtração entre dois números.
+
+```java
+CLOSE[0] - CLOSE[1]
+```
+
+</Frame>
+
+<Frame>
+### \*
+
+> Operador de multiplicação.<br/>
+> Retorna a multiplicação entre dois números.
+
+```java
+CLOSE[0] * 2
+```
+
+</Frame>
+
+<Frame>
+### /
+
+> Operador de divisão.<br/>
+> Retorna a divisão entre dois números.
+
+```java
+CLOSE[0] / 2
+```
+
+</Frame>
+
+<Frame>
+### !
+
+> Operador de negação.<br/>
+> Usando o operador de negação, podemos inverter o resultado de uma expressão.<br/>
+> Exemplo:<br/>{" "}
+> `!(CLOSE[0] > CLOSE[1])` quando `CLOSE[0]` for maior que `CLOSE[1]`, o resultado será `true`, mas como estamos negando essa expressão, o resultado será `false`.
+
+```java
+!(CLOSE[0] > CLOSE[1])
+```
+
+</Frame>
+
+<Frame>
+### %
+
+> Operador de resto da divisão.<br/>
+> Retorna o resto da divisão entre dois números.
+
+```java
+11 % 2 // Retorna 1, pois é o resto da divisão de 11 por 2 (11 / 2 = 5 com resto 1)
+```
+
+</Frame>
+
+<Frame>
+### >
+
+> Operador de maior que.<br/>
+> Retorna verdadeiro se o valor à esquerda for maior ao valor à direita.
+
+```java
+CLOSE[0] > CLOSE[1]
+```
+
+</Frame>
+
+<Frame>
+### \<
+
+> Operador de menor que.<br/>
+> Retorna verdadeiro se o valor à esquerda for menor ao valor à direita.
+
+```java
+CLOSE[0] < CLOSE[1]
+```
+
+</Frame>
+
+<Frame>
+### >=
+
+> Operador de maior ou igual a.<br/>
+> Retorna verdadeiro se o valor à esquerda for maior ou igual ao valor à direita.
+
+```java
+CLOSE[0] >= CLOSE[1]
+```
+
+</Frame>
+
+<Frame>
+### \<=
+
+> Operador de menor ou igual a.<br/>
+> Retorna verdadeiro se o valor à esquerda for menor ou igual ao valor à direita.
+
+```java
+CLOSE[0] <= CLOSE[1]
+```
+
+</Frame>
+
+<Frame>
+### ==
+
+> Operador de igualdade.<br/>
+> Retorna verdadeiro se os valores comparados são iguais.
+
+```java
+CLOSE[0] == CLOSE[1]
+```
+
+</Frame>
+
+<Frame>
+### !=
+
+> Operador de desigualdade.<br/>
+> Retorna verdadeiro se os valores comparados não forem iguais.
+
+```java
+CLOSE[0] != CLOSE[1]
+```
+
+</Frame>
+
+<Frame>
+### &&
+
+> Operador de e.<br/>
+> Retorna verdadeiro apenas se ambas as condições forem verdadeiras.
+
+```java
+CLOSE[0] && CLOSE[1]
+```
+
+</Frame>
+
+<Frame>
+### \|
+
+> Operador de ou.<br/>
+> Retorna verdadeiro se pelo menos uma das condições for verdadeira.
+
+```java
+CLOSE[0] >= CLOSE[1] || OPEN[0] >= OPEN[1]
+```
+
+</Frame>
+
+<Frame>
+### ( )
+
+> Operador de priorização.<br/>
+> Utilizado para definir a ordem de avaliação das expressões, garantindo que os cálculos entre parênteses sejam executados antes dos demais operadores.
+
+```java
+(CLOSE[0] + CLOSE[1]) / 2
+```
+
+</Frame>
+
+<Frame>
+### ?:
+
+> Operador de condição.<br/>
+> Avalia uma condição e executa uma das duas instruções com base no resultado: a primeira se for verdadeira, a segunda se for falsa.
+
+```java
+CLOSE[0] > CLOSE[1] ? Print["Biggest"] : Print["Smallest"]
+```
+
+</Frame>
+
+<Frame>
+### ->
+
+> Operador de execução lógica.<br/>
+> Utilizado para executar comandos apenas quando a condição anterior for verdadeira.<br/>{" "}
+> **Atenção:** é obrigatório encerrar a instrução com `;`, pois esse caractere delimita o fim da expressão.
+
+```java
+CLOSE[0] > CLOSE[1] -> Print["Este comando só será executado se a condição for verdadeira"];
+```
+
+</Frame>
+
+<Frame>
+### //
+
+> Operador de comentário de linha.<br/>
+> Usando o operador de comentário de linha, podemos evitar que uma expressão a partir do comentario seja executada.<br/>
+> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` é executado, mas `OPEN[0] < OPEN[1]` nao, pois ele foi comentado.<br/>
+
+```java
+CLOSE[0] > CLOSE[1] // && OPEN[0] < OPEN[1]
+```
+
+</Frame>
+
+<Frame>
+### /\* \*/
+
+> Operador de comentário de bloco.<br/>
+> Usando o operador de comentário de bloco, podemos evitar que uma expressão entre o comentario seja executada.<br/>
+> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` nao é executado, pois ele foi comentado.<br/>
+
+```java
+/*CLOSE[0] > CLOSE[1]*/ OPEN[0] < OPEN[1]
+```
+
+</Frame>

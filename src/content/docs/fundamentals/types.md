@@ -1,8 +1,8 @@
 ---
-title: Types
+title: Data Types
 ---
 
-## Tipos
+## Tipos de dados
 
 > Esses tipos primitivos são usadados como retornos e parâmetros de funções.
 

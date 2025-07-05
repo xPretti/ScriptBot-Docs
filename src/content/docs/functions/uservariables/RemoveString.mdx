@@ -1,7 +1,5 @@
 ---
-title: GetInt[...]
-sidebar:
-  order: 100
+title: RemoveString[...]
 ---
 
 import TitleContent from "@components/TitleContent.astro";
@@ -10,21 +8,17 @@ import FunctParam from "@components/FunctParam.astro";
 import FunctReturnType from "@components/FunctReturnType.astro";
 import FunctExample from "@components/FunctExample.astro";
 
-<FunctDescription text="Esta função retorna o valor de uma variável criada pelo usuário." />
+<FunctDescription text="Esta função permite remover uma variável caso ela exista." />
 
 <TitleContent title="Parâmetros:">
-  <FunctParam
-    type="string"
-    name="VARIABLE"
-    comment="Nome da variável criada."
-  />
+  <FunctParam type="string" name="VARIABLE" comment="Nome da variável." />
 </TitleContent>
 
 <TitleContent title="Exemplos:">
   <FunctExample>
 
     ```js
-    GetInt["Name"]
+    RemoveString["Name"]
     ```
 
   </FunctExample>
@@ -32,9 +26,9 @@ import FunctExample from "@components/FunctExample.astro";
 
 <TitleContent title="Retornos:">
   <FunctReturnType
-    success="Retorna o valor armazenado na variável."
-    typeSuccess="long"
-    error="Retorna 0 se a variável não for encontrada."
-    typeError="long"
+    success="Retorna um boolean (true) se a variável foi removida."
+    typeSuccess="bool"
+    error="Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome."
+    typeError="bool"
   />
 </TitleContent>

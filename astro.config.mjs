@@ -37,20 +37,51 @@ export default defineConfig({
           autogenerate: { directory: "constants" },
         },
         {
+          label: "Fundamentals",
+          autogenerate: { directory: "fundamentals" },
+        },
+        {
           label: "Variables",
           autogenerate: { directory: "variables" },
         },
         {
           label: "Functions",
-          autogenerate: { directory: "functions", collapsed: true },
-          // items: [
-          //   "functions/functions",
-          //   {
-          //     label: "Types",
-          //     // collapsed: true,
-          //     autogenerate: { directory: "functions/types" },
-          //   },
-          // ],
+          // autogenerate: { directory: "functions", collapsed: true },
+          items: [
+            "functions/functions",
+            {
+              label: "User Variables",
+              collapsed: true,
+              autogenerate: {
+                directory: "functions/uservariables",
+                collapsed: true,
+              },
+            },
+            {
+              label: "Candles",
+              collapsed: true,
+              autogenerate: {
+                directory: "functions/candles",
+                collapsed: true,
+              },
+            },
+            {
+              label: "Debugs",
+              collapsed: true,
+              autogenerate: {
+                directory: "functions/debugs",
+                collapsed: true,
+              },
+            },
+            {
+              label: "Indicators",
+              collapsed: true,
+              autogenerate: {
+                directory: "functions/indicators",
+                collapsed: true,
+              },
+            },
+          ],
         },
         {
           label: "Moldable Vars",
@@ -65,6 +96,7 @@ export default defineConfig({
     resolve: {
       alias: {
         "@components": path.resolve("./src/components"),
+        "@utils": path.resolve("./src/utils"),
       },
     },
   },

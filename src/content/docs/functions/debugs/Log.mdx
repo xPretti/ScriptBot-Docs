@@ -1,5 +1,5 @@
 ---
-title: PRINT[...]
+title: Log[...]
 ---
 
 import TitleContent from "@components/TitleContent.astro";
@@ -8,7 +8,7 @@ import FunctParam from "@components/FunctParam.astro";
 import FunctReturnType from "@components/FunctReturnType.astro";
 import FunctExample from "@components/FunctExample.astro";
 
-<FunctDescription text="Esta função é usada para imprimir um texto nas logs do Metatrader, muito utilizada para depurar o código." />
+<FunctDescription text="Esta função é usada para imprimir um texto nas Logs do ScriptBot, ela é útil quando queremos separar textos de debug das Logs do Metatrader." />
 
 <TitleContent title="Parâmetros:">
   <FunctParam type="string" name="TEXT1" comment="Texto a ser impresso." />
@@ -30,8 +30,8 @@ import FunctExample from "@components/FunctExample.astro";
   <FunctExample>
 
     ```js
-    PRINT["Hello World!"]
-    PRINT["Symbol: ", SYMBOL, " CurrentTime: ", TIME_CURRENT]
+    Log["Hello World!"]
+    Log["Symbol: ", SYMBOL, " CurrentTime: ", TIME_CURRENT]
     ```
 
   </FunctExample>

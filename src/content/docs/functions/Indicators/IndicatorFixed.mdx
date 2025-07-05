@@ -1,5 +1,5 @@
 ---
-title: Indicator[...]
+title: Indicator'X'[...]
 ---
 
 import TitleContent from "@components/TitleContent.astro";
@@ -12,12 +12,6 @@ import FunctExample from "@components/FunctExample.astro";
 <FunctDescription text="Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico." />
 
 <TitleContent title="Parâmetros:">
-  <FunctParam
-    type="uint"
-    name="ID"
-    comment="Categoria que o indicador esta instalado."
-    value="0"
-  />
   <FunctParam
     type="uint"
     name="BUFFER"
@@ -36,7 +30,10 @@ import FunctExample from "@components/FunctExample.astro";
   <FunctExample>
 
     ```js
-    Indicator[id, buffer, candle]
+    Indicator0[buffer, candle]
+    Indicator1[buffer, candle]
+    Indicator2[buffer, candle]
+    Indicator...[buffer, candle]
 
     ```
 
@@ -53,5 +50,5 @@ import FunctExample from "@components/FunctExample.astro";
 </TitleContent>
 
 <TitleContent title="Observação:">
-  <FunctAliases name="Indicator" aliases="IND" />
+  <FunctAliases name="Indicator1" aliases="IND1" />
 </TitleContent>

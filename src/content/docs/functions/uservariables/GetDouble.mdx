@@ -1,7 +1,5 @@
 ---
-title: ClearInt[...]
-sidebar:
-  order: 100
+title: GetDouble[...]
 ---
 
 import TitleContent from "@components/TitleContent.astro";
@@ -10,17 +8,21 @@ import FunctParam from "@components/FunctParam.astro";
 import FunctReturnType from "@components/FunctReturnType.astro";
 import FunctExample from "@components/FunctExample.astro";
 
-<FunctDescription text="Esta função permite remover todas as variáveis criadas pelo usuário." />
+<FunctDescription text="Esta função retorna o valor de uma variável criada pelo usuário." />
 
 <TitleContent title="Parâmetros:">
-  <p> Esta função não recebe parâmetros. </p>
+  <FunctParam
+    type="string"
+    name="VARIABLE"
+    comment="Nome da variável criada."
+  />
 </TitleContent>
 
 <TitleContent title="Exemplos:">
   <FunctExample>
 
     ```js
-    ClearInt[]
+    GetDouble["Name"]
     ```
 
   </FunctExample>
@@ -28,9 +30,9 @@ import FunctExample from "@components/FunctExample.astro";
 
 <TitleContent title="Retornos:">
   <FunctReturnType
-    success="Retorna um boolean (true) se as variáveis foram removidas."
-    typeSuccess="bool"
-    error="Retorna um boolean (false) se as variáveis não foram removidas ou não existem."
-    typeError="bool"
+    success="Retorna o valor armazenado na variável."
+    typeSuccess="double"
+    error="Retorna 0 se a variável não for encontrada."
+    typeError="double"
   />
 </TitleContent>
