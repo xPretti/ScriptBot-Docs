@@ -1,0 +1,40 @@
+---
+title: GetString[...]
+sidebar:
+  order: 102
+---
+
+import TitleContent from "@components/TitleContent.astro";
+import FunctDescription from "@components/FunctDescription.astro";
+import FunctParam from "@components/FunctParam.astro";
+import FunctReturnType from "@components/FunctReturnType.astro";
+import FunctExample from "@components/FunctExample.astro";
+
+<FunctDescription text="Esta função retorna o valor de uma variável criada pelo usuário." />
+
+<TitleContent title="Parâmetros:">
+  <FunctParam
+    type="string"
+    name="VARIABLE"
+    comment="Nome da variável criada."
+  />
+</TitleContent>
+
+<TitleContent title="Exemplos:">
+  <FunctExample>
+
+    ```js
+    GetString["Name"]
+    ```
+
+  </FunctExample>
+</TitleContent>
+
+<TitleContent title="Retornos:">
+  <FunctReturnType
+    success="Retorna o valor armazenado na variável."
+    typeSuccess="string"
+    error="Retorna 0 se a variável não for encontrada."
+    typeError="string"
+  />
+</TitleContent>

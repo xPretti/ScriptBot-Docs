@@ -1,20 +1,51 @@
 ---
-const { successMsg, errorMsg } = Astro.props;
+const {
+  success,
+  error,
+  typeSuccess,
+  typeError,
+  typeLinkSuccess = "/constants/types",
+  typeLinkError = "/constants/types",
+} = Astro.props;
 ---
 
 <div class="return-container">
-  <div class="return-item">
-    <p class="title success">Em caso de sucesso:</p>
-    <p class="value">
-      {successMsg}
-    </p>
-  </div>
-  <div class="return-item">
-    <p class="title error">Em caso de erro:</p>
-    <p class="value">
-      {errorMsg}
-    </p>
-  </div>
+  {
+    success && (
+      <div class="return-item">
+        <div class="title">
+          <p class="success">Em caso de sucesso:</p>
+        </div>
+        <div class="value">
+          <p>{success}</p>
+          <div class="type-container">
+            <span>Retorno:</span>
+            <a href={typeLinkSuccess}>
+              <p class="type">{typeSuccess}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    )
+  }
+  {
+    error && (
+      <div class="return-item">
+        <div class="title">
+          <p class="error">Em caso de erro:</p>
+        </div>
+        <div class="value">
+          <p>{error}</p>
+          <div class="type-container">
+            <span>Retorno:</span>
+            <a href={typeLinkError}>
+              <p class="type">{typeError}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    )
+  }
 </div>
 
 <style>
@@ -36,13 +67,15 @@ const { successMsg, errorMsg } = Astro.props;
   .return-item .value {
     background-color: color-mix(
       in srgb,
-      var(--sl-color-function-description) 100%,
-      transparent 80%
+      var(--sl-color-function-description) 50%,
+      transparent 100%
     );
     padding: 10px;
   }
 
   .title {
+    display: flex;
+    gap: 0.5em;
     background-color: var(--sl-color-function-description);
     padding: 2px 5px 2px 10px;
     width: 100%;
@@ -57,6 +90,15 @@ const { successMsg, errorMsg } = Astro.props;
 
   p {
     margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--sl-color-function-type);
   }
 
   .value {
@@ -75,5 +117,15 @@ const { successMsg, errorMsg } = Astro.props;
 
   .success {
     font-weight: bold;
+  }
+
+  .type-container {
+    display: flex;
+    margin-top: 0.5em;
+    gap: 0.5em;
+  }
+  .type {
+    font-weight: bold;
+    color: var(--sl-color-function-type);
   }
 </style>

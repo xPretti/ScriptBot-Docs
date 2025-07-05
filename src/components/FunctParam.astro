@@ -1,11 +1,11 @@
 ---
-const { type, name, comment, value = undefined } = Astro.props;
+const { type, name, comment, value = undefined , typeLink="/constants/types"} = Astro.props;
 ---
 
-<div>
+<div class="param">
+  {value ? <p class="optional">Optional</p> : <p class="required">Required</p>}
   <p>
-    {value ? <span class="optional">Optional</span> : <span class="required">Required</span>}
-    <span class="type">{type}</span>
+    <a href={typeLink}><span class="type">{type}</span></a>
     {
       value ? (
         <span>{name}</span>
@@ -30,6 +30,22 @@ const { type, name, comment, value = undefined } = Astro.props;
     margin: 0;
   }
 
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--sl-color-function-type);
+  }
+
+  .param {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+  }
+
   .type {
     font-weight: bold;
     color: var(--sl-color-function-type);
@@ -46,9 +62,14 @@ const { type, name, comment, value = undefined } = Astro.props;
 
   .required,
   .optional {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 5px 0 5px;
     border-radius: 5px;
     font-size: 12px;
+    width: 75px;
+    height: 21px;
   }
   .required {
     color: var(--sl-color-function-required);

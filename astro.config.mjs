@@ -4,9 +4,15 @@ import starlight from "@astrojs/starlight";
 
 import mdx from "@astrojs/mdx";
 import path from "node:path";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 
 // https://astro.build/config
 export default defineConfig({
+  markdown: {
+    rehypePlugins: [rehypeHeadingIds],
+  },
   integrations: [
     starlight({
       favicon: "/public/favicon.ico",
@@ -36,14 +42,15 @@ export default defineConfig({
         },
         {
           label: "Functions",
-          items: [
-            "functions/functions",
-            {
-              label: "Types",
-              // collapsed: true,
-              autogenerate: { directory: "functions/types" },
-            },
-          ],
+          autogenerate: { directory: "functions", collapsed: true },
+          // items: [
+          //   "functions/functions",
+          //   {
+          //     label: "Types",
+          //     // collapsed: true,
+          //     autogenerate: { directory: "functions/types" },
+          //   },
+          // ],
         },
         {
           label: "Moldable Vars",

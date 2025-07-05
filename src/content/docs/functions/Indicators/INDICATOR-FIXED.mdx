@@ -1,0 +1,54 @@
+---
+title: INDICATOR'X'[...]
+---
+
+import TitleContent from "@components/TitleContent.astro";
+import FunctDescription from "@components/FunctDescription.astro";
+import FunctParam from "@components/FunctParam.astro";
+import FunctReturnType from "@components/FunctReturnType.astro";
+import FunctAliases from "@components/FunctAliases.astro";
+import FunctExample from "@components/FunctExample.astro";
+
+<FunctDescription text="Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico." />
+
+<TitleContent title="Parâmetros:">
+  <FunctParam
+    type="uint"
+    name="BUFFER"
+    comment="Buffer do indicador que armazena o valor."
+    value="0"
+  />
+  <FunctParam
+    type="uint"
+    name="CANDLE"
+    comment="A vela de referância para obter o preço do indicador."
+    value="0"
+  />
+</TitleContent>
+
+<TitleContent title="Exemplos:">
+  <FunctExample>
+
+    ```js
+    INDICATOR0[buffer, candle]
+    INDICATOR1[buffer, candle]
+    INDICATOR2[buffer, candle]
+    INDICATOR...[buffer, candle]
+
+    ```
+
+  </FunctExample>
+</TitleContent>
+
+<TitleContent title="Retornos:">
+  <FunctReturnType
+    success="Retorna o valor do buffer do indicador do tipo double."
+    typeSuccess="double"
+    error="Retorna o valor padrão zero para o tipo double (0.0)."
+    typeError="double"
+  />
+</TitleContent>
+
+<TitleContent title="Observação:">
+  <FunctAliases name="INDICATOR1" aliases="IND1" />
+</TitleContent>

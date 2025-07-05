@@ -1,0 +1,36 @@
+---
+title: RemoveString[...]
+sidebar:
+  order: 102
+---
+
+import TitleContent from "@components/TitleContent.astro";
+import FunctDescription from "@components/FunctDescription.astro";
+import FunctParam from "@components/FunctParam.astro";
+import FunctReturnType from "@components/FunctReturnType.astro";
+import FunctExample from "@components/FunctExample.astro";
+
+<FunctDescription text="Esta função permite remover uma variável caso ela exista." />
+
+<TitleContent title="Parâmetros:">
+  <FunctParam type="string" name="VARIABLE" comment="Nome da variável." />
+</TitleContent>
+
+<TitleContent title="Exemplos:">
+  <FunctExample>
+
+    ```js
+    RemoveString["Name"]
+    ```
+
+  </FunctExample>
+</TitleContent>
+
+<TitleContent title="Retornos:">
+  <FunctReturnType
+    success="Retorna um boolean (true) se a variável foi removida."
+    typeSuccess="bool"
+    error="Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome."
+    typeError="bool"
+  />
+</TitleContent>

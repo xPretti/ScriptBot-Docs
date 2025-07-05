@@ -1,9 +1,9 @@
 ---
-
+const { title } = Astro.props;
 ---
 
 <div>
-  <h5>Parâmetros:</h5>
+  <h4>{title}</h4>
   <ul>
     <slot />
   </ul>
@@ -13,14 +13,7 @@
 <style>
   div {
     margin-top: 2em;
-    background-color: color-mix(
-      in srgb,
-      var(--sl-color-function-description) 80%,
-      transparent 100%
-    );
-    padding: 10px;
     border-radius: 10px;
-    border: 1px solid var(--sl-color-function-description);
   }
   ul {
     display: block;

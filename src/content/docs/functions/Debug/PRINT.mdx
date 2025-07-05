@@ -1,0 +1,47 @@
+---
+title: PRINT[...]
+---
+
+import TitleContent from "@components/TitleContent.astro";
+import FunctDescription from "@components/FunctDescription.astro";
+import FunctParam from "@components/FunctParam.astro";
+import FunctReturnType from "@components/FunctReturnType.astro";
+import FunctExample from "@components/FunctExample.astro";
+
+<FunctDescription text="Esta função é usada para imprimir um texto nas logs do Metatrader, muito utilizada para depurar o código." />
+
+<TitleContent title="Parâmetros:">
+  <FunctParam type="string" name="TEXT1" comment="Texto a ser impresso." />
+  <FunctParam
+    type="string"
+    name="TEXT2"
+    comment="Segundo parametro de texto que será concatenado ao primeiro."
+    value='""'
+  />
+  <FunctParam
+    type="string"
+    name="TEXT..."
+    comment="Outro parametro de texto que será concatenado, máximo de 63 parametros."
+    value='""'
+  />
+</TitleContent>
+
+<TitleContent title="Exemplos:">
+  <FunctExample>
+
+    ```js
+    PRINT["Hello World!"]
+    PRINT["Symbol: ", SYMBOL, " CurrentTime: ", TIME_CURRENT]
+    ```
+
+  </FunctExample>
+</TitleContent>
+
+<TitleContent title="Retornos:">
+  <FunctReturnType
+    success="Retorna um valor boolean (true) em caso de sucesso de execução."
+    typeSuccess="bool"
+    error="Retorna um valor boolean (false) em caso de erro de execução."
+    typeError="bool"
+  />
+</TitleContent>

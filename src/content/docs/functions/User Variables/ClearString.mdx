@@ -1,0 +1,36 @@
+---
+title: ClearString[...]
+sidebar:
+  order: 102
+---
+
+import TitleContent from "@components/TitleContent.astro";
+import FunctDescription from "@components/FunctDescription.astro";
+import FunctParam from "@components/FunctParam.astro";
+import FunctReturnType from "@components/FunctReturnType.astro";
+import FunctExample from "@components/FunctExample.astro";
+
+<FunctDescription text="Esta função permite remover todas as variáveis criadas pelo usuário." />
+
+<TitleContent title="Parâmetros:">
+  <p> Esta função não recebe parâmetros. </p>
+</TitleContent>
+
+<TitleContent title="Exemplos:">
+  <FunctExample>
+
+    ```js
+    ClearString[]
+    ```
+
+  </FunctExample>
+</TitleContent>
+
+<TitleContent title="Retornos:">
+  <FunctReturnType
+    success="Retorna um boolean (true) se as variáveis foram removidas."
+    typeSuccess="bool"
+    error="Retorna um boolean (false) se as variáveis não foram removidas ou não existem."
+    typeError="bool"
+  />
+</TitleContent>
