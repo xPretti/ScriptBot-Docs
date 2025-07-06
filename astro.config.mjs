@@ -7,6 +7,7 @@ import path from "node:path";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
+import starlightThemeRapide from "starlight-theme-rapide";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,6 +16,7 @@ export default defineConfig({
   },
   integrations: [
     starlight({
+      plugins: [starlightThemeRapide()],
       locales: {
         root: {
           label: "English",
@@ -25,7 +27,7 @@ export default defineConfig({
           lang: "pt",
         },
       },
-      favicon: "/public/favicon.ico",
+      favicon: "./src/assets/Botrading.png",
       title: "ScriptBot",
       logo: {
         src: "./src/assets/Botrading.png",
