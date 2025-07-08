@@ -55,7 +55,7 @@
 }
 
 td {
-  padding: 10px;
+  padding: 8px;
 }
 
 td:last-child {
@@ -64,4 +64,31 @@ td:last-child {
 
 tr:hover > td {
   background-color: var(--sl-color-row-hover);
+}
+
+/* Modal */
+.modal-container {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  overflow: auto; /* permite scroll dentro do modal se necessário */
+}
+
+.modal-content {
+  /* background: white; */
+  /* border-radius: 8px; */
+  width: auto;
+  height: auto;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
+  overflow-y: auto;
+  z-index: 100000;
+}
+
+/* Function Modal */
+.fn-modal-content {
+  background-color: #ffffff;
 }

@@ -4,8 +4,6 @@ import starlight from "@astrojs/starlight";
 
 import mdx from "@astrojs/mdx";
 import path from "node:path";
-import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import starlightThemeRapide from "starlight-theme-rapide";
 
@@ -114,8 +112,14 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
+        "@src": path.resolve("./src"),
         "@components": path.resolve("./src/components"),
         "@utils": path.resolve("./src/utils"),
+        "@interfaces": path.resolve("./src/interfaces"),
+        "@data": path.resolve("./src/data"),
+        "@enums": path.resolve("./src/enums"),
+        "@services": path.resolve("./src/services"),
+        "@models": path.resolve("./src/models"),
       },
     },
   },
