@@ -1,12 +1,19 @@
-import { functionsData } from "@src/data/functions-data";
+import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
 import styles from "./ReactFunctionPage.module.css";
 
 import ReactFunctionParam from "./ReactFunctionParam";
 import ReactFunctionReturn from "./ReactFunctionReturn";
+import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
 
-export default function ReactFunctionPage({ fnName }: { fnName: string }) {
-   const fn = functionsData.find((f) => f.name === fnName);
+export default function ReactFunctionPage({
+   fnCategory,
+   fnName,
+}: {
+   fnCategory: ENUM_FUNCTION_CATEGORY_TYPE;
+   fnName: string;
+}) {
+   const fn = FUNCTION_MAPPING.get(fnCategory)?.get(fnName);
 
    if (!fn) {
       return <div>Função não encontrada ${fnName}</div>;
@@ -23,7 +30,7 @@ export default function ReactFunctionPage({ fnName }: { fnName: string }) {
             <div className={styles.titleContent}>
                <h3>Parâmetros</h3>
                {fn.parameters.length > 0 ? (
-                  <div>
+                  <div className={styles.paramsTypes}>
                      {fn.parameters.map((param) => (
                         <ReactFunctionParam
                            type={param.type.type}

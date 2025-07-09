@@ -27,6 +27,8 @@
    --sl-color-function-required: #ee5151;
    --sl-color-function-optional: #51b4ee;
 
+   --sl-color-modal-header: #f8f8f8;
+   --sl-color-modal-header-shadow: var(--sl-color-gray-5);
    --sl-color-modal-bg: #ffffff;
    --sl-color-modal-border: #a7a7a7;
 }
@@ -48,6 +50,8 @@
    /* My colors */
    --sl-color-function-description: #252525;
    --sl-color-row-hover: #252525;
+   --sl-color-modal-header: #252525;
+   --sl-color-modal-header-shadow: var(--sl-color-gray-5);
    --sl-color-modal-bg: #191919;
    --sl-color-modal-border: var(--sl-color-gray-5);
 }

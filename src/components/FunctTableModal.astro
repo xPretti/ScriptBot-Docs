@@ -1,72 +1,79 @@
 ---
-import { functionsData } from "@src/data/functions-data";
-import { ENUM_FUNCTION_CATEGORY_TYPE } from "@enums/function-enums.ts";
+import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import CodeVar from "@components/CodeVar.astro";
 import { Icon } from "@astrojs/starlight/components";
-import FunctionModal from "./FunctionModal.astro";
+import ReactFunctionModal from "./react/ReactFunctionModal";
 
-const category = ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS;
+const { category } = Astro.props;
+
+const elements =
+   FUNCTION_MAPPING.get(category) &&
+   Array.from(FUNCTION_MAPPING.get(category)!.values());
 ---
 
-<table>
-  <thead>
-    <tr>
-      <th>FUNÇÕES</th>
-      <th>SIGLAS</th>
-      <th>RETORNOS</th>
-    </tr>
-  </thead>
-  <tbody>
-    {
-      functionsData.map(
-        (fn) =>
-          fn.category === category && (
+<p>category: {category}</p>
+{
+   elements && (
+      <table>
+         <thead>
             <tr>
-              <td>
-                <CodeVar>{fn.name}</CodeVar>
-              </td>
-              <td>
-                <CodeVar>{fn.aliases}</CodeVar>
-              </td>
-              <td>
-                <FunctionModal fnName={fn.name}>
-                  <div class="description">
-                    {fn.description.simple}
-                    <Icon
-                      class="redirect-icon"
-                      name="open-book"
-                      size="1.5rem"
-                    />
-                  </div>
-                </FunctionModal>
-              </td>
+               <th>FUNÇÕES</th>
+               <th>SIGLAS</th>
+               <th>RETORNOS</th>
             </tr>
-          )
-      )
-    }
-  </tbody>
-</table>
+         </thead>
+         <tbody>
+            {elements.map((fn) => (
+               <tr>
+                  <td>
+                     <CodeVar>{fn.name}</CodeVar>
+                  </td>
+                  <td>
+                     <CodeVar>{fn.aliases}</CodeVar>
+                  </td>
+                  <td>
+                     <ReactFunctionModal
+                        client:visible
+                        fnCategory={fn.category.type}
+                        fnName={fn.name}
+                     >
+                        <div class="description">
+                           {fn.description.simple}
+                           <Icon
+                              class="redirect-icon"
+                              name="open-book"
+                              size="1.5rem"
+                           />
+                        </div>
+                     </ReactFunctionModal>
+                  </td>
+               </tr>
+            ))}
+         </tbody>
+      </table>
+   )
+}
 
 <!-- Estilos -->
 <style>
-  .description {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-  }
+   .description {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+   }
 
-  .redirect-icon {
-    opacity: 0.1;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    right: 10px;
-  }
+   .redirect-icon {
+      opacity: 0.1;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 10px;
+   }
 
-  .description:hover .redirect-icon {
-    color: var(--sl-color-accent-high);
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-    cursor: pointer;
-  }
+   .description:hover .redirect-icon {
+      color: var(--sl-color-accent-high);
+      opacity: 1;
+      transition: opacity 0.2s ease-in-out;
+      cursor: pointer;
+   }
 </style>

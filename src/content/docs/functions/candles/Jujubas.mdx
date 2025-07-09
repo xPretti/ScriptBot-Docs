@@ -2,6 +2,10 @@
 title: Teste1[...]
 ---
 
+import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
 import ReactFunctionPage from "@components/react/ReactFunctionPage";
 
-<ReactFunctionPage fnName="Teste3" />
+<ReactFunctionPage
+   fnCategory={ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS}
+   fnName="Teste3"
+/>

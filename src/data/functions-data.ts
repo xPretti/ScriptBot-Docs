@@ -1,13 +1,21 @@
 import { ENUM_FUNCTION_CATEGORY_TYPE } from "src/enums/function-enums";
 import type { FunctionModel } from "../interfaces/functions-interface";
 
-export const functionsData: FunctionModel[] = [
+export const FUNCTION_MAPPING: Map<
+   ENUM_FUNCTION_CATEGORY_TYPE,
+   Map<string, FunctionModel>
+> = new Map();
+
+[
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+      category: {
+         type: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+         label: "Indicadores",
+      },
       name: "Teste1",
       aliases: "T1",
       description: {
-         simple: "Retorna o nome Teste",
+         simple: "Retorna o nome Teste ",
          complex:
             "Esta função retorna o nome Teste e retorna o nome Invalid em caso de erro.",
       },
@@ -24,7 +32,10 @@ export const functionsData: FunctionModel[] = [
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+      category: {
+         type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+         label: "Indicadores",
+      },
       name: "Teste12",
       aliases: "T1",
       description: {
@@ -73,7 +84,10 @@ export const functionsData: FunctionModel[] = [
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+      category: {
+         type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+         label: "Indicadores",
+      },
       name: "Teste3",
       aliases: "T2",
       description: {
@@ -88,7 +102,8 @@ export const functionsData: FunctionModel[] = [
                typeLink: "/fundamentals/types",
             },
             name: "param1",
-            comment: "Primeiro parâmetro",
+            comment:
+               "Primeiro parâmetro 2222222222222222222222222222222222222222 2222222222222222222",
          },
          {
             type: {
@@ -130,7 +145,10 @@ export const functionsData: FunctionModel[] = [
 
    //
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+      category: {
+         type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+         label: "Indicadores",
+      },
       name: "SemParametros",
       aliases: "SP",
       description: {
@@ -150,7 +168,10 @@ export const functionsData: FunctionModel[] = [
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+      category: {
+         type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+         label: "Indicadores",
+      },
       name: "ComErroSomente",
       aliases: "CE",
       description: {
@@ -170,7 +191,10 @@ export const functionsData: FunctionModel[] = [
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+      category: {
+         type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+         label: "Indicadores",
+      },
       name: "MuitosAliases",
       aliases: "MA,MultiAlias,MAL",
       description: {
@@ -200,7 +224,10 @@ export const functionsData: FunctionModel[] = [
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+      category: {
+         type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+         label: "Indicadores",
+      },
       name: "SemRetorno",
       aliases: "SR",
       description: {
@@ -221,4 +248,11 @@ export const functionsData: FunctionModel[] = [
       examples: ["```js\nSR[true]\n```"],
       returns: {},
    },
-];
+].forEach((fn: FunctionModel) => {
+   const existing = FUNCTION_MAPPING.get(fn.category.type);
+   if (!existing) {
+      FUNCTION_MAPPING.set(fn.category.type, new Map([[fn.name, fn]]));
+   } else {
+      existing.set(fn.name, fn);
+   }
+});

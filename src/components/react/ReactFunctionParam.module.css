@@ -7,6 +7,15 @@
    width: auto !important;
    max-width: auto;
    min-width: auto !important;
+   overflow: hidden;
+}
+
+@media (max-width: 800px) {
+   .param {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+   }
 }
 
 .param p {
@@ -27,8 +36,14 @@
    color: var(--sl-color-function-type);
 }
 
+.text {
+   overflow: hidden;
+}
+
 .comment {
    color: var(--sl-color-function-comment);
+   overflow: hidden;
+   /* text-wrap: nowrap; */
 }
 
 .value {
@@ -44,7 +59,9 @@
    border-radius: 5px;
    font-size: 12px;
    width: 75px;
-   height: 21px;
+   min-width: 75px;
+   height: 22px;
+   text-wrap: nowrap;
 }
 
 .required {

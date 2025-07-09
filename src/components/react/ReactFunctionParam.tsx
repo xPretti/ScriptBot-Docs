@@ -22,7 +22,7 @@ export default function ReactFunctionParam({
          ) : (
             <p className={styles.required}>Required</p>
          )}
-         <p>
+         <p className={styles.text}>
             <a href={typeLink}>
                <span className={styles.type}>{type}</span>
             </a>

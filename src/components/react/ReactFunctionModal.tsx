@@ -1,23 +1,26 @@
 import { useState } from "react";
 import ReactModal from "./ReactModal";
-import { functionsData } from "@src/data/functions-data";
+import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
 import styles from "./ReactFunctionModal.module.css";
 
 import { X } from "lucide-react";
 import ReactFunctionParam from "./ReactFunctionParam";
 import ReactFunctionReturn from "./ReactFunctionReturn";
+import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
 
 export default function ReactFunctionModal({
+   fnCategory,
    fnName,
    children,
 }: {
+   fnCategory: ENUM_FUNCTION_CATEGORY_TYPE;
    fnName: string;
    children: React.ReactNode;
 }) {
    const [isOpen, setIsOpen] = useState(false);
 
-   const fn = functionsData.find((f) => f.name === fnName);
+   const fn = FUNCTION_MAPPING.get(fnCategory)?.get(fnName);
 
    if (!fn) {
       return <div>Função não encontrada ${fnName}</div>;
@@ -50,7 +53,7 @@ export default function ReactFunctionModal({
                   <div className={styles.titleContent}>
                      <h3>Parâmetros</h3>
                      {fn.parameters.length > 0 ? (
-                        <div>
+                        <div className={styles.paramsTypes}>
                            {fn.parameters.map((param) => (
                               <ReactFunctionParam
                                  type={param.type.type}
@@ -101,6 +104,12 @@ export default function ReactFunctionModal({
                         )}
                      </div>
                   )}
+               </div>
+               <div className={styles.footer}>
+                  <p>Acesse a documentação completa:</p>
+                  <a href="/fundamentals/types" className={styles.redirectBtn}>
+                     {fn.name}
+                  </a>
                </div>
             </div>
          </ReactModal>
