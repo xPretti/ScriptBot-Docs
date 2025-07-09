@@ -8,6 +8,7 @@ title: Data Types
 
 | VARIÁVEIS                            | RETORNOS                                                                                   |
 | ------------------------------------ | ------------------------------------------------------------------------------------------ |
+| <code class='variable'>void</code>   | Representa um valor vazio, sem retorno.                                                    |
 | <code class='variable'>int</code>    | Representa um inteiro com sinal (-2147483648 até 2147483647).                              |
 | <code class='variable'>uint</code>   | Representa um inteiro positivo (0 até 4294967295).                                         |
 | <code class='variable'>long</code>   | Representa um inteiro com sinal de 64 bits (-9223372036854775808 até 9223372036854775807). |

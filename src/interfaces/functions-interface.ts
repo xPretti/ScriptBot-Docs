@@ -31,7 +31,7 @@ export interface FunctionModel {
   category: ENUM_FUNCTION_CATEGORY_TYPE;
   name: string;
   aliases: string;
-  descricao: FunctionDescription;
+  description: FunctionDescription;
   parameters: FunctionParameter[];
   examples: string[];
   returns?: FunctionReturns;
