@@ -7,108 +7,107 @@ import path from "node:path";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import starlightThemeRapide from "starlight-theme-rapide";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   markdown: {
     rehypePlugins: [rehypeHeadingIds],
   },
-  integrations: [
-    starlight({
-      plugins: [starlightThemeRapide()],
-      locales: {
-        root: {
-          label: "English",
-          lang: "en",
-        },
-        pt: {
-          label: "Português",
-          lang: "pt",
-        },
+  integrations: [starlight({
+    plugins: [starlightThemeRapide()],
+    locales: {
+      root: {
+        label: "English",
+        lang: "en",
       },
-      favicon: "./src/assets/Botrading.png",
-      title: "ScriptBot",
-      logo: {
-        src: "./src/assets/Botrading.png",
+      pt: {
+        label: "Português",
+        lang: "pt",
       },
-      social: [
-        {
-          icon: "discord",
-          label: "discord",
-          href: "https://discord.botrading.net",
-        },
-      ],
-      sidebar: [
-        {
-          label: "Indicators",
-          autogenerate: { directory: "indicators" },
-        },
-        {
-          label: "Constants",
-          autogenerate: { directory: "constants" },
-        },
-        {
-          label: "Fundamentals",
-          autogenerate: { directory: "fundamentals" },
-        },
-        {
-          label: "Variables",
-          autogenerate: { directory: "variables" },
-        },
-        {
-          label: "Functions",
-          // autogenerate: { directory: "functions", collapsed: true },
-          items: [
-            "functions/functions",
-            {
-              label: "User Variables",
+    },
+    favicon: "./src/assets/Botrading.png",
+    title: "ScriptBot",
+    logo: {
+      src: "./src/assets/Botrading.png",
+    },
+    social: [
+      {
+        icon: "discord",
+        label: "discord",
+        href: "https://discord.botrading.net",
+      },
+    ],
+    sidebar: [
+      {
+        label: "Indicators",
+        autogenerate: { directory: "indicators" },
+      },
+      {
+        label: "Constants",
+        autogenerate: { directory: "constants" },
+      },
+      {
+        label: "Fundamentals",
+        autogenerate: { directory: "fundamentals" },
+      },
+      {
+        label: "Variables",
+        autogenerate: { directory: "variables" },
+      },
+      {
+        label: "Functions",
+        // autogenerate: { directory: "functions", collapsed: true },
+        items: [
+          "functions/functions",
+          {
+            label: "User Variables",
+            collapsed: true,
+            autogenerate: {
+              directory: "functions/uservariables",
               collapsed: true,
-              autogenerate: {
-                directory: "functions/uservariables",
-                collapsed: true,
-              },
             },
-            {
-              label: "Candles",
+          },
+          {
+            label: "Candles",
+            collapsed: true,
+            autogenerate: {
+              directory: "functions/candles",
               collapsed: true,
-              autogenerate: {
-                directory: "functions/candles",
-                collapsed: true,
-              },
             },
-            {
-              label: "Debugs",
+          },
+          {
+            label: "Debugs",
+            collapsed: true,
+            autogenerate: {
+              directory: "functions/debugs",
               collapsed: true,
-              autogenerate: {
-                directory: "functions/debugs",
-                collapsed: true,
-              },
             },
-            {
-              label: "Indicators",
+          },
+          {
+            label: "Indicators",
+            collapsed: true,
+            autogenerate: {
+              directory: "functions/indicators",
               collapsed: true,
-              autogenerate: {
-                directory: "functions/indicators",
-                collapsed: true,
-              },
             },
-          ],
-        },
-        {
-          label: "Moldable Vars",
-          autogenerate: { directory: "moldablevars" },
-        },
-      ],
-      customCss: ["./src/styles/custom.css"],
+          },
+        ],
+      },
+      {
+        label: "Moldable Vars",
+        autogenerate: { directory: "moldablevars" },
+      },
+    ],
+    customCss: ["./src/styles/custom.css"],
 
-      // Custom components
-      components: {
-        // Override the default `SocialIcons` component.
-        FallbackContentNotice:
-          "./src/components/override/FallbackContentNotice.astro",
-      },
-    }),
-    mdx(),
-  ],
+    // Custom components
+    components: {
+      // Override the default `SocialIcons` component.
+      FallbackContentNotice:
+        "./src/components/override/FallbackContentNotice.astro",
+    },
+  }), mdx(), react()],
   vite: {
     resolve: {
       alias: {

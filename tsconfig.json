@@ -3,17 +3,42 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@utils/*": ["src/utils/*"],
-      "@interfaces/*": ["src/interfaces/*"],
-      "@data/*": ["src/data/*"],
-      "@enums/*": ["src/enums/*"],
-      "@services/*": ["src/services/*"],
-      "@models/*": ["src/models/*"],
+      "@src/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@interfaces/*": [
+        "src/interfaces/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@enums/*": [
+        "src/enums/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@models/*": [
+        "src/models/*"
+      ]
     },
-    "types": ["astro/client"]
+    "types": [
+      "astro/client"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ]
 }

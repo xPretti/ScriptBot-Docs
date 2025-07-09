@@ -1,0 +1,9 @@
+---
+import ReactFunctionModal from "./react/ReactFunctionModal";
+
+const { fnName } = Astro.props;
+---
+
+<ReactFunctionModal client:visible fnName={fnName}>
+  <slot /></ReactFunctionModal
+>

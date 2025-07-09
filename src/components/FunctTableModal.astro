@@ -3,7 +3,7 @@ import { functionsData } from "@src/data/functions-data";
 import { ENUM_FUNCTION_CATEGORY_TYPE } from "@enums/function-enums.ts";
 import CodeVar from "@components/CodeVar.astro";
 import { Icon } from "@astrojs/starlight/components";
-import Modal from "./Modal.astro";
+import FunctionModal from "./FunctionModal.astro";
 
 const category = ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS;
 ---
@@ -28,8 +28,8 @@ const category = ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS;
               <td>
                 <CodeVar>{fn.aliases}</CodeVar>
               </td>
-              <td class="description-container">
-                <Modal fn={fn.name}>
+              <td>
+                <FunctionModal fnName={fn.name}>
                   <div class="description">
                     {fn.descricao.simple}
                     <Icon
@@ -38,7 +38,7 @@ const category = ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS;
                       size="1.5rem"
                     />
                   </div>
-                </Modal>
+                </FunctionModal>
               </td>
             </tr>
           )
@@ -49,10 +49,6 @@ const category = ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS;
 
 <!-- Estilos -->
 <style>
-  .description-container {
-    cursor: pointer;
-  }
-
   .description {
     position: relative;
     display: flex;
@@ -67,7 +63,7 @@ const category = ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS;
     right: 10px;
   }
 
-  .description-container:hover .redirect-icon {
+  .description:hover .redirect-icon {
     color: var(--sl-color-accent-high);
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
