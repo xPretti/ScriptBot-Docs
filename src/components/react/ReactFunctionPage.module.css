@@ -1,0 +1,87 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   gap: 1em;
+}
+
+.container p,
+.container h3,
+.container div {
+   margin: 0;
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5em;
+}
+
+.headerTop {
+   display: flex;
+   justify-content: space-between;
+}
+
+.headerTitle {
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.headerButtons {
+   display: flex;
+   align-items: center;
+}
+
+.description {
+   user-select: none;
+   cursor: pointer;
+}
+
+.close {
+   color: var(--sl-color-gray-2);
+   cursor: pointer;
+   width: 32px;
+   height: 32px;
+}
+
+.close:hover {
+   color: var(--sl-color-accent-high);
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+}
+
+.descriptionContainer {
+   display: flex;
+   align-items: center;
+   border-radius: 5px;
+}
+
+.titleContent {
+   display: flex;
+   flex-direction: column;
+   gap: 0.25em;
+}
+
+.examplesTypes {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid var(--sl-color-function-description);
+   background-color: color-mix(
+      in srgb,
+      var(--sl-color-function-description) 50%,
+      transparent 100%
+   );
+}
+
+.returnsTypes {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5em;
+}
