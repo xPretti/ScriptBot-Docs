@@ -1,0 +1,66 @@
+---
+import { buildFunctionsSidebar } from "@src/utils/functions-sidebar-utils";
+export const { sidebarGroups, pages } = buildFunctionsSidebar();
+
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+import CodeVar from "@src/components/CodeVar.astro";
+---
+
+<StarlightPage
+   frontmatter={{ title: "Functions" }}
+   sidebar={[
+      {
+         label: "Functions",
+         items: sidebarGroups,
+      },
+   ]}
+   lang="en"
+   isFallback={true}
+>
+   <h1>Todas as funções</h1>
+   <table>
+      <tr>
+         <th>VARIÁVEIS</th>
+         <th>RETORNOS</th>
+      </tr>
+      {
+         pages.map((p) => (
+            <tr>
+               <td>
+                  <CodeVar>{p.label}</CodeVar>
+               </td>
+               <td>
+                  <a class="function-item" href={p.link}>
+                     {p.description}
+                  </a>
+               </td>
+            </tr>
+         ))
+      }
+   </table>
+</StarlightPage>
+
+<style>
+   div,
+   a,
+   p {
+      margin: 0;
+   }
+   .function-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+   }
+   .function-item {
+      overflow: hidden;
+      max-width: fit-content;
+      gap: 0.5em;
+      padding: 5px;
+      cursor: pointer;
+      text-decoration: none;
+   }
+
+   .function-item:hover {
+      color: var(--sl-color-accent-high: );
+   }
+</style>

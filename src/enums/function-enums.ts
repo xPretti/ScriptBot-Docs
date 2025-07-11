@@ -1,6 +1,6 @@
 export enum ENUM_FUNCTION_CATEGORY_TYPE {
-   INDICATORS,
-   USER_VARIABLES,
-   CANDLES,
-   DEBUGS,
+   INDICATORS = "indicators",
+   USER_VARIABLES = "uservariables",
+   CANDLES = "candles",
+   DEBUGS = "debugs",
 }

@@ -106,9 +106,11 @@ export default function ReactFunctionModal({
                   )}
                </div>
                <div className={styles.footer}>
-                  <p>Acesse a documentação completa:</p>
-                  <a href="/fundamentals/types" className={styles.redirectBtn}>
-                     {fn.name}
+                  <a
+                     href={`/functions/${fnCategory}/${fnName}`}
+                     className={styles.redirectBtn}
+                  >
+                     Ver mais
                   </a>
                </div>
             </div>

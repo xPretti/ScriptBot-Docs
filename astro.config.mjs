@@ -14,18 +14,21 @@ export default defineConfig({
    markdown: {
       rehypePlugins: [rehypeHeadingIds],
    },
+
    integrations: [
       starlight({
          plugins: [starlightThemeRapide()],
+         defaultLocale: "root",
          locales: {
             root: {
                label: "English",
                lang: "en",
             },
-            pt: {
-               label: "Português",
-               lang: "pt",
-            },
+            // pt: {
+            //    label: "Português",
+            //    lang: "pt",
+            //    dir: "ltr",
+            // },
          },
          favicon: "./src/assets/Botrading.png",
          title: "ScriptBot",

@@ -10,10 +10,12 @@ export default function ReactFunctionPage({
    fnCategory,
    fnName,
 }: {
-   fnCategory: ENUM_FUNCTION_CATEGORY_TYPE;
+   fnCategory: ENUM_FUNCTION_CATEGORY_TYPE | string;
    fnName: string;
 }) {
-   const fn = FUNCTION_MAPPING.get(fnCategory)?.get(fnName);
+   const fn = FUNCTION_MAPPING.get(
+      fnCategory as ENUM_FUNCTION_CATEGORY_TYPE
+   )?.get(fnName);
 
    if (!fn) {
       return <div>Função não encontrada ${fnName}</div>;
@@ -31,8 +33,9 @@ export default function ReactFunctionPage({
                <h3>Parâmetros</h3>
                {fn.parameters.length > 0 ? (
                   <div className={styles.paramsTypes}>
-                     {fn.parameters.map((param) => (
+                     {fn.parameters.map((param, index) => (
                         <ReactFunctionParam
+                           key={index}
                            type={param.type.type}
                            name={param.name}
                            comment={param.comment}
@@ -48,8 +51,8 @@ export default function ReactFunctionPage({
             <div className={styles.titleContent}>
                <h3>Exemplos</h3>
                <div className={styles.examplesTypes}>
-                  {fn.examples.map((example) => (
-                     <p>{example}</p>
+                  {fn.examples.map((example, index) => (
+                     <p key={index}>{example}</p>
                   ))}
                </div>
             </div>

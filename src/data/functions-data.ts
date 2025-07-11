@@ -10,7 +10,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
-         label: "Indicadores",
+         label: "Candles",
       },
       name: "Teste1",
       aliases: "T1",
