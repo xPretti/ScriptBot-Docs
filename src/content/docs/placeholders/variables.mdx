@@ -4,6 +4,11 @@ title: Variables
 
 import { Aside } from "@astrojs/starlight/components";
 
+Variáveis são identificadores que armazenam dados dinâmicos utilizados em
+operações e expressões lógicas. Elas representam valores que podem mudar ao
+longo do tempo, mas não possuem parâmetros próprios que alterem seu
+comportamento.
+
 ## Variáveis locais de Posição
 
 > Essas variáveis são definidas previamente e utilizadas como parâmetros fixos durante a execução de gatilhos ou eventos de posição.
@@ -29,11 +34,11 @@ import { Aside } from "@astrojs/starlight/components";
 | <code class='variable'>\_FLAG_SA</code>     | Retorna se o pedido foi adicionado pelo subsistema de Preço Médio Simples.                       |
 
 <Aside type="tip">
-  Em eventos de modificação, como no `OnPositionModify()`, as variáveis locais
-  possuem duas versões: uma com o sufixo **_OLD** e outra sem sufixo.
-  <br />
-  As variáveis com o sufixo **_OLD** contêm o valor **antes** da modificação,
-  enquanto as sem sufixo refletem o valor **após** a modificação.
+   Em eventos de modificação, como no `OnPositionModify()`, as variáveis locais
+   possuem duas versões: uma com o sufixo **_OLD** e outra sem sufixo.
+   <br />
+   As variáveis com o sufixo **_OLD** contêm o valor **antes** da modificação,
+   enquanto as sem sufixo refletem o valor **após** a modificação.
 </Aside>
 
 ## Variáveis locais de Gatilhos:
@@ -162,21 +167,21 @@ import { Aside } from "@astrojs/starlight/components";
 | <code class='variable'>LOSS_TICKET_SELL</code> | <code class='variable-abbr'>LTICKETS</code> | Retorna o ticket da ultima venda com perda;                       |
 
 <Aside type="tip">
-  Variáveis de Ordens e Posições fechadas possuem 4 diferentes versões:
-  <br /> **_WEEK** que retorna a soma total da semana,
-  <br /> **_MONTH** que retorna a soma total do mês,
-  <br /> **_YEAR** que retorna a soma total do ano,
-  <br /> e as normais sem sufixo, que retornam o total do dia.
-  <br />
-  Para usar basta adicionar o sufixo ao final da variável. <br />
-  Por exemplo:
-  <code class="variable">ALL_VOLUME_WEEK</code>,
-  <code class="variable">ALL_GAIN_YEAR</code>
-  <br />
-  As siglas seguem o mesmo padrão, adicionando o sufixo ao final da variável.
-  <br /> Por exemplo:
-  <code class="variable-abbr">AVOL_WEEK</code>,
-  <code class="variable-abbr">AGAIN_YEAR</code>
+   Variáveis de Ordens e Posições fechadas possuem 4 diferentes versões:
+   <br /> **_WEEK** que retorna a soma total da semana,
+   <br /> **_MONTH** que retorna a soma total do mês,
+   <br /> **_YEAR** que retorna a soma total do ano,
+   <br /> e as normais sem sufixo, que retornam o total do dia.
+   <br />
+   Para usar basta adicionar o sufixo ao final da variável. <br />
+   Por exemplo:
+   <code class="variable">ALL_VOLUME_WEEK</code>,
+   <code class="variable">ALL_GAIN_YEAR</code>
+   <br />
+   As siglas seguem o mesmo padrão, adicionando o sufixo ao final da variável.
+   <br /> Por exemplo:
+   <code class="variable-abbr">AVOL_WEEK</code>,
+   <code class="variable-abbr">AGAIN_YEAR</code>
 </Aside>
 
 ## Variáveis de Sinais

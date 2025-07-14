@@ -6,7 +6,7 @@ title: Data Types
 
 > Esses tipos primitivos são usadados como retornos e parâmetros de funções.
 
-| VARIÁVEIS                            | RETORNOS                                                                                   |
+| TIPOS                                | RETORNOS                                                                                   |
 | ------------------------------------ | ------------------------------------------------------------------------------------------ |
 | <code class='variable'>void</code>   | Representa um valor vazio, sem retorno.                                                    |
 | <code class='variable'>int</code>    | Representa um inteiro com sinal (-2147483648 até 2147483647).                              |
