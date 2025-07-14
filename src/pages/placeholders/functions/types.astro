@@ -1,6 +1,8 @@
 ---
 import { buildFunctionsSidebar } from "@src/utils/functions-sidebar-utils";
-export const { sidebarGroups, pages } = buildFunctionsSidebar();
+export const { sidebarGroups, pages } = buildFunctionsSidebar(
+   "/placeholders/functions/types/"
+);
 
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
 import CodeVar from "@src/components/CodeVar.astro";

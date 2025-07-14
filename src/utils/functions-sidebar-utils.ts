@@ -1,12 +1,12 @@
 // src/utils/functions-sidebar.ts
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
-export function buildFunctionsSidebar() {
+export function buildFunctionsSidebar(path: string) {
    const pages = Array.from(FUNCTION_MAPPING.entries()).flatMap(
       ([categoryKey, functionsMap]) =>
          Array.from(functionsMap.values()).map((fn) => ({
             label: `${fn.name}`,
-            link: `/functions/${categoryKey}/${fn.name}`,
+            link: `${path}${categoryKey}/${fn.name}`,
             category: fn.category.type,
             categoryLabel: fn.category.label,
             description: fn.description.complex,

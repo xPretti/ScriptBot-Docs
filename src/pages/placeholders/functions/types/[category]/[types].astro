@@ -1,12 +1,14 @@
 ---
 import { buildFunctionsSidebar } from "@src/utils/functions-sidebar-utils";
-export const { sidebarGroups, pages } = buildFunctionsSidebar();
+export const { sidebarGroups, pages } = buildFunctionsSidebar(
+   "/placeholders/functions/types/"
+);
 
 export async function getStaticPaths() {
    return pages.map((page) => ({
       params: {
          category: page.category.toLowerCase(),
-         functions: page.label,
+         types: page.label,
       },
       props: {
          desc: page.description,
@@ -14,7 +16,7 @@ export async function getStaticPaths() {
    }));
 }
 
-const { category, functions } = Astro.params;
+const { category, types } = Astro.params;
 const { desc } = Astro.props;
 
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
@@ -22,7 +24,7 @@ import ReactFunctionPage from "@src/components/react/ReactFunctionPage";
 ---
 
 <StarlightPage
-   frontmatter={{ title: `${functions}`, description: desc }}
+   frontmatter={{ title: `${types}`, description: desc }}
    sidebar={[
       {
          label: "Functions",
@@ -30,5 +32,5 @@ import ReactFunctionPage from "@src/components/react/ReactFunctionPage";
       },
    ]}
 >
-   <ReactFunctionPage fnCategory={category} fnName={functions} />
+   <ReactFunctionPage fnCategory={category} fnName={types} />
 </StarlightPage>
