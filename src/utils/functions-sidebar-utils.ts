@@ -9,7 +9,7 @@ export function buildFunctionsSidebar(path: string) {
             link: `${path}${categoryKey}/${fn.name}`,
             category: fn.category.type,
             categoryLabel: fn.category.label,
-            description: fn.description.complex,
+            description: fn.description.simple,
          }))
    );
 
