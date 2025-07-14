@@ -64,7 +64,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS,
-         label: "Debugs",
+         label: "Depurações",
       },
       name: "Log",
       aliases: "",
@@ -124,7 +124,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS,
-         label: "Debugs",
+         label: "Depurações",
       },
       name: "Print",
       aliases: "",
@@ -185,7 +185,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
-         label: "Indicators",
+         label: "Indicadores",
       },
       name: "Indicator",
       aliases: "IND",
@@ -243,7 +243,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
-         label: "Indicators",
+         label: "Indicadores",
       },
       name: "Indicator'X'",
       aliases: "IND'X'",
@@ -295,7 +295,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "ClearDouble",
       aliases: "",
@@ -326,7 +326,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "ClearInt",
       aliases: "",
@@ -357,7 +357,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "ClearString",
       aliases: "",
@@ -388,7 +388,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "CreateDouble",
       aliases: "",
@@ -432,7 +432,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "CreateInt",
       aliases: "",
@@ -476,7 +476,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "CreateString",
       aliases: "",
@@ -520,7 +520,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "GetDouble",
       aliases: "",
@@ -557,7 +557,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "GetInt",
       aliases: "",
@@ -594,7 +594,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "GetString",
       aliases: "",
@@ -631,7 +631,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "RemoveDouble",
       aliases: "",
@@ -668,7 +668,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "RemoveInt",
       aliases: "",
@@ -705,7 +705,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "RemoveString",
       aliases: "",
@@ -742,7 +742,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "ReplaceDouble",
       aliases: "",
@@ -787,7 +787,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "ReplaceInt",
       aliases: "",
@@ -832,7 +832,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "ReplaceString",
       aliases: "",
@@ -877,7 +877,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "SetDouble",
       aliases: "",
@@ -923,7 +923,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "SetInt",
       aliases: "",
@@ -969,7 +969,7 @@ export const FUNCTION_MAPPING: Map<
    {
       category: {
          type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "User Variables",
+         label: "Variáveis de usuário",
       },
       name: "SetString",
       aliases: "",
@@ -1008,6 +1008,65 @@ export const FUNCTION_MAPPING: Map<
                "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
             type: {
                type: "bool",
+            },
+         },
+      },
+   },
+   //CANDLE
+   {
+      category: {
+         type: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+         label: "Velas",
+      },
+      name: "Open",
+      aliases: "O",
+      description: {
+         simple: "Retorna o preço de abertura de uma vela",
+         complex: "Esta função retorna o preço de abertura de uma vela.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "candle",
+            comment: "A vela de referência para obter o preço de abertura.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment:
+               "O tempo gráfico de referência para obter o preço de abertura.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência para obter o preço de abertura.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: [
+         "Open[candle, timeframe, symbol]",
+         "Open[1]",
+         'Open[1, M5, "EURUSD"]',
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor do buffer do indicador do tipo double.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0.0).",
+            type: {
+               type: "double",
             },
          },
       },

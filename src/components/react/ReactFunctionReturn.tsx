@@ -11,7 +11,7 @@ export default function ReactFunctionReturn({
    title,
    message,
    type,
-   typeLink = "/constants/types",
+   typeLink = "/fundamentals/types",
 }: Props) {
    if (!message) return null;
 
