@@ -11,7 +11,6 @@ const elements =
    Array.from(FUNCTION_MAPPING.get(category)!.values());
 ---
 
-<p>category: {category}</p>
 {
    elements && (
       <table>
@@ -38,7 +37,7 @@ const elements =
                         fnName={fn.name}
                      >
                         <div class="description">
-                           {fn.description.simple}
+                           <p class="text">{fn.description.simple}</p>
                            <Icon
                               class="redirect-icon"
                               name="open-book"
@@ -56,6 +55,11 @@ const elements =
 
 <!-- Estilos -->
 <style>
+   p,
+   svg {
+      margin: 0;
+      padding: 0;
+   }
    .description {
       position: relative;
       display: flex;
@@ -70,6 +74,7 @@ const elements =
       right: 10px;
    }
 
+   .description:hover .text,
    .description:hover .redirect-icon {
       color: var(--sl-color-accent-high);
       opacity: 1;
