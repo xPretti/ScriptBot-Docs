@@ -48,10 +48,6 @@ export default defineConfig({
                autogenerate: { directory: "indicators" },
             },
             {
-               label: "Constants",
-               autogenerate: { directory: "constants" },
-            },
-            {
                label: "Placeholders",
                autogenerate: { directory: "placeholders" },
             },
