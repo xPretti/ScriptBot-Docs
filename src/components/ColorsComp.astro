@@ -4,51 +4,51 @@ import { ColorUtils } from "../utils/color-utils";
 ---
 
 <div class="colors-container">
-  {
-    colorsData.map((color) => (
-      <div class="color-item" style={{ backgroundColor: color.value }}>
-        <p
-          class="color-name"
-          style={{
-            color: ColorUtils.hexToBlackOrWhite(
-              ColorUtils.invertHexColor(color.value)
-            ),
-          }}
-        >
-          {color.name}
-        </p>
-      </div>
-    ))
-  }
+   {
+      colorsData.map((color) => (
+         <div class="color-item" style={{ backgroundColor: color.value }}>
+            <p
+               class="color-name"
+               style={{
+                  color: ColorUtils.hexToBlackOrWhite(
+                     ColorUtils.invertHexColor(color.value)
+                  ),
+               }}
+            >
+               {color.name}
+            </p>
+         </div>
+      ))
+   }
 </div>
 
 <style>
-  div {
-    margin: 0;
-  }
-  .colors-container {
-    margin-top: 1.5em;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+   div {
+      margin: 0;
+   }
+   .colors-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1.5em;
+      gap: 10px;
+   }
 
-  .color-item {
-    width: 200px;
-    height: 50px;
-    border-radius: 5px;
-    overflow: hidden;
-    border: 1px solid var(--sl-color-gray-5);
-  }
+   .color-item {
+      width: 200px;
+      height: 50px;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1px solid var(--sl-color-gray-5);
+   }
 
-  .color-item:hover {
-    opacity: 0.6;
-  }
+   .color-item:hover {
+      opacity: 0.6;
+   }
 
-  .color-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+   .color-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+   }
 </style>
