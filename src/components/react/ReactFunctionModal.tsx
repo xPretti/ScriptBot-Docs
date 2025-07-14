@@ -54,8 +54,9 @@ export default function ReactFunctionModal({
                      <h3>Parâmetros</h3>
                      {fn.parameters.length > 0 ? (
                         <div className={styles.paramsTypes}>
-                           {fn.parameters.map((param) => (
+                           {fn.parameters.map((param, index) => (
                               <ReactFunctionParam
+                                 key={index}
                                  type={param.type.type}
                                  name={param.name}
                                  comment={param.comment}
@@ -71,8 +72,8 @@ export default function ReactFunctionModal({
                   <div className={styles.titleContent}>
                      <h3>Exemplos</h3>
                      <div className={styles.examplesTypes}>
-                        {fn.examples.map((example) => (
-                           <code>{example}</code>
+                        {fn.examples.map((example, index) => (
+                           <code key={index}>{example}</code>
                         ))}
                      </div>
                   </div>
