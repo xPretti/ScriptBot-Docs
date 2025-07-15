@@ -8,6 +8,7 @@ import { X } from "lucide-react";
 import ReactFunctionParam from "./ReactFunctionParam";
 import ReactFunctionReturn from "./ReactFunctionReturn";
 import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
+import { getFunctionExample } from "@src/utils/functions-comp-utils";
 
 export default function ReactFunctionModal({
    fnCategory,
@@ -73,6 +74,10 @@ export default function ReactFunctionModal({
                      <h3>Exemplos</h3>
                      <div className={styles.examplesTypes}>
                         <ol>
+                           <li>{getFunctionExample(fn)}</li>
+                           {fn.aliases && (
+                              <li>{getFunctionExample(fn, true)}</li>
+                           )}
                            {fn.examples.map((example, index) => (
                               <li key={index}>{example}</li>
                            ))}
