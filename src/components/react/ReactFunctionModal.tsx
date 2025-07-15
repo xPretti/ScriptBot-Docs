@@ -9,6 +9,7 @@ import ReactFunctionParam from "./ReactFunctionParam";
 import ReactFunctionReturn from "./ReactFunctionReturn";
 import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
 import { getFunctionExample } from "@src/utils/functions-comp-utils";
+import ReactCode from "./ReactCode";
 
 export default function ReactFunctionModal({
    fnCategory,
@@ -26,6 +27,17 @@ export default function ReactFunctionModal({
    if (!fn) {
       return <div>Função não encontrada ${fnName}</div>;
    }
+
+   const getExamples = () => {
+      let result = "//Default example: \n" + getFunctionExample(fn);
+      if (fn.aliases !== "") {
+         result += "\n\n//Using aliases: \n" + getFunctionExample(fn, true);
+      }
+      if (fn.examples.length > 0) {
+         result += `\n\n//Other examples\n${fn.examples.join("\n")}`;
+      }
+      return result;
+   };
 
    return (
       <div>
@@ -72,17 +84,7 @@ export default function ReactFunctionModal({
                   </div>
                   <div className={styles.titleContent}>
                      <h3>Exemplos</h3>
-                     <div className={styles.examplesTypes}>
-                        <ol>
-                           <li>{getFunctionExample(fn)}</li>
-                           {fn.aliases && (
-                              <li>{getFunctionExample(fn, true)}</li>
-                           )}
-                           {fn.examples.map((example, index) => (
-                              <li key={index}>{example}</li>
-                           ))}
-                        </ol>
-                     </div>
+                     <ReactCode language="java">{getExamples()}</ReactCode>
                   </div>
                   {fn.returns && (
                      <div className={styles.titleContent}>

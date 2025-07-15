@@ -56,6 +56,40 @@
    --sl-color-modal-header-shadow: var(--sl-color-gray-5);
    --sl-color-modal-bg: #191919;
    --sl-color-modal-border: var(--sl-color-gray-5);
+
+   /* code highlighting */
+   --code-text-color: #f1f1f1ff;
+   --code-bg-color: #1b1b1b;
+   --code-border-color: #292929;
+   --code-shadow: 0 1px rgba(255, 255, 255, 0.3);
+   --code-comment-color: #8b949e;
+   --code-punctuation-color: #c9d1d9;
+   --code-property-color: #d2a8ff;
+   --code-tag-color: #7ee787;
+   --code-constant-color: #79c0ff;
+   --code-symbol-color: #ff7b72;
+   --code-deleted-color: #ffa198;
+   --code-boolean-color: #ff7b72;
+   --code-number-color: #79c0ff;
+   --code-selector-color: #7ee787;
+   --code-attr-name-color: #d2a8ff;
+   --code-string-color: rgb(254, 255, 191);
+   --code-char-color: #7ee787;
+   --code-builtin-color: #d2a8ff;
+   --code-inserted-color: #7ee787;
+   --code-operator-color: #ff7b72;
+   --code-entity-color: #c9d1d9;
+   --code-url-color: #79c0ff;
+   --code-css-string-color: #d9d7c9;
+   --code-style-string-color: #c9d1d9;
+   --code-variable-color: #ffa657;
+   --code-atrule-color: #ff7b72;
+   --code-attr-value-color: #a5d6ff;
+   --code-function-color: #d2a8ff;
+   --code-class-name-color: #d2a8ff;
+   --code-keyword-color: #ff7b72;
+   --code-regex-color: #ffa657;
+   --code-important-color: #ffa657;
 }
 
 .variable-abbr,
