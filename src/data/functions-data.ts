@@ -220,11 +220,7 @@ export const FUNCTION_MAPPING: Map<
             value: "0",
          },
       ],
-      examples: [
-         "Indicator[id, buffer, candle]",
-         "IND[id, buffer, candle]",
-         "CLOSE[1] <= IND[7, 0, 1] && CLOSE[0] >= IND[7, 1, 1]",
-      ],
+      examples: ["CLOSE[1] <= IND[7, 0, 1] && CLOSE[0] >= IND[7, 1, 1]"],
       returns: {
          success: {
             message: "Retorna o valor do buffer do indicador do tipo double.",
@@ -271,8 +267,6 @@ export const FUNCTION_MAPPING: Map<
          },
       ],
       examples: [
-         "Indicator0[buffer, candle]",
-         "Indicator10[buffer, candle]",
          "IND1[buffer, candle]",
          "CLOSE[1] <= IND7[0, 1] && CLOSE[0] >= IND7[1, 1]",
       ],
@@ -305,7 +299,7 @@ export const FUNCTION_MAPPING: Map<
             "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
       parameters: [],
-      examples: ["ClearDouble[]", 'GetDouble["Count"] >= 10 -> ClearDouble[];'],
+      examples: ['GetDouble["Count"] >= 10 -> ClearDouble[];'],
       returns: {
          success: {
             message:
@@ -336,7 +330,7 @@ export const FUNCTION_MAPPING: Map<
             "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
       parameters: [],
-      examples: ["ClearInt[]", 'GetInt["Count"] >= 10 -> ClearInt[];'],
+      examples: ['GetInt["Count"] >= 10 -> ClearInt[];'],
       returns: {
          success: {
             message:
@@ -367,7 +361,7 @@ export const FUNCTION_MAPPING: Map<
             "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
       parameters: [],
-      examples: ["ClearString[]", 'GetInt["Count"] >= 10 -> ClearString[];'],
+      examples: ['GetInt["Count"] >= 10 -> ClearString[];'],
       returns: {
          success: {
             message:
@@ -1051,11 +1045,7 @@ export const FUNCTION_MAPPING: Map<
             value: "SYMBOL",
          },
       ],
-      examples: [
-         "Open[candle, timeframe, symbol]",
-         "Open[1]",
-         'Open[1, M5, "EURUSD"]',
-      ],
+      examples: ["Open[1]", 'Open[1, M5, "EURUSD"]'],
       returns: {
          success: {
             message: "Retorna o valor do buffer do indicador do tipo double.",

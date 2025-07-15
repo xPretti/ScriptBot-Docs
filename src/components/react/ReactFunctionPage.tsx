@@ -5,6 +5,7 @@ import styles from "./ReactFunctionPage.module.css";
 import ReactFunctionParam from "./ReactFunctionParam";
 import ReactFunctionReturn from "./ReactFunctionReturn";
 import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
+import type { FunctionModel } from "@src/interfaces/functions-interface";
 
 export default function ReactFunctionPage({
    fnCategory,
@@ -20,6 +21,13 @@ export default function ReactFunctionPage({
    if (!fn) {
       return <div>Função não encontrada ${fnName}</div>;
    }
+
+   const getFunctionExample = (isAlias = false) => {
+      const name = isAlias ? fn.aliases : fn.name;
+      return `${name}[${fn.parameters
+         .map((param) => param.name + (param.value ? ` = ${param.value}` : ""))
+         .join(", ")}]`;
+   };
 
    return (
       <div className={styles.container}>
@@ -51,9 +59,13 @@ export default function ReactFunctionPage({
             <div className={styles.titleContent}>
                <h3>Exemplos</h3>
                <div className={styles.examplesTypes}>
-                  {fn.examples.map((example, index) => (
-                     <p key={index}>{example}</p>
-                  ))}
+                  <ol>
+                     <li>{getFunctionExample()}</li>
+                     {fn.aliases && <li>{getFunctionExample(true)}</li>}
+                     {fn.examples.map((example, index) => (
+                        <li key={index}>{example}</li>
+                     ))}
+                  </ol>
                </div>
             </div>
             {fn.returns && (

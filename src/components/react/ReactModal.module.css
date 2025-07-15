@@ -2,10 +2,10 @@
 .container {
    position: fixed;
    inset: 0;
-   z-index: 50;
+   z-index: 49;
 }
 
-.background {
+.backdrop {
    background-color: rgba(0, 0, 0, 0.4);
    /* background-color: rgba(250, 24, 24, 0.4); */
    overflow: auto;
@@ -14,14 +14,13 @@
    will-change: transform;
 }
 
-.padding {
+.wrapper {
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 15px;
    pointer-events: all;
    width: 100%;
-   /* height: fit-content; */
    min-height: 100vh;
 }
 
@@ -29,7 +28,6 @@
    width: 960px;
    height: fit-content;
    z-index: 51;
-   pointer-events: all;
 }
 
 @media (max-width: 950px) {

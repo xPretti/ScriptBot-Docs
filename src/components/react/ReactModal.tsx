@@ -31,8 +31,8 @@ export default function ReactModal({ isOpen, onClose, children }: Props) {
 
    return createPortal(
       <div className={styles.container} onClick={handleClickClose}>
-         <div className={styles.background}>
-            <div className={styles.padding}>
+         <div className={styles.backdrop}>
+            <div className={styles.wrapper} onClick={handleClickClose}>
                <div className={styles.content}>{children}</div>
             </div>
          </div>

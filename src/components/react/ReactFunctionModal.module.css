@@ -83,6 +83,16 @@
    );
 }
 
+.examplesTypes ol {
+   list-style-position: inside;
+   padding: 0;
+}
+
+.examplesTypes ol li::marker {
+   /* color: var(--sl-color-function-type); */
+   font-weight: bold;
+}
+
 .returnsTypes {
    display: flex;
    flex-direction: column;

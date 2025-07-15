@@ -72,9 +72,11 @@ export default function ReactFunctionModal({
                   <div className={styles.titleContent}>
                      <h3>Exemplos</h3>
                      <div className={styles.examplesTypes}>
-                        {fn.examples.map((example, index) => (
-                           <code key={index}>{example}</code>
-                        ))}
+                        <ol>
+                           {fn.examples.map((example, index) => (
+                              <li key={index}>{example}</li>
+                           ))}
+                        </ol>
                      </div>
                   </div>
                   {fn.returns && (
