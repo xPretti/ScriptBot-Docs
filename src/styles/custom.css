@@ -92,6 +92,7 @@
    --code-important-color: #ffa657;
 }
 
+/* remover esses css de vars, usar o component */
 .variable-abbr,
 .variable {
    text-wrap: nowrap;

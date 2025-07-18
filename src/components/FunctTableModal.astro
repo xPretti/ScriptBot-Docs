@@ -17,7 +17,6 @@ const elements =
          <thead>
             <tr>
                <th>FUNÇÕES</th>
-               <th>SIGLAS</th>
                <th>RETORNOS</th>
             </tr>
          </thead>
@@ -25,10 +24,10 @@ const elements =
             {elements.map((fn) => (
                <tr>
                   <td>
-                     <CodeVar>{fn.name}</CodeVar>
-                  </td>
-                  <td>
-                     <CodeVar>{fn.aliases}</CodeVar>
+                     <div class="name-container">
+                        {fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}
+                        <CodeVar>{fn.name}</CodeVar>
+                     </div>
                   </td>
                   <td>
                      <ReactFunctionModal
@@ -55,6 +54,10 @@ const elements =
 
 <!-- Estilos -->
 <style>
+   td {
+      height: 3rem;
+      vertical-align: middle;
+   }
    p,
    svg {
       margin: 0;
@@ -64,9 +67,12 @@ const elements =
       position: relative;
       display: flex;
       flex-direction: row;
+      height: 100%;
+      align-items: center;
    }
 
    .redirect-icon {
+      display: inline-block;
       opacity: 0.1;
       position: absolute;
       height: 100%;

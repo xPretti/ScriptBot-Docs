@@ -40,7 +40,7 @@ export default function ReactFunctionModal({
    };
 
    return (
-      <div>
+      <div className={styles.modalContainer}>
          <div className={styles.description} onClick={() => setIsOpen(true)}>
             {children}
          </div>

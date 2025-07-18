@@ -1,3 +1,6 @@
+.modalContainer {
+   height: 100%;
+}
 .container {
    display: flex;
    flex-direction: column;
@@ -35,6 +38,7 @@
 }
 
 .description {
+   height: 100%;
    user-select: none;
    cursor: pointer;
 }

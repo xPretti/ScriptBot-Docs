@@ -323,7 +323,7 @@ export const FUNCTION_MAPPING: Map<
          label: "Variáveis de usuário",
       },
       name: "ClearInt",
-      aliases: "",
+      aliases: "Jujubas",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário",
          complex:
