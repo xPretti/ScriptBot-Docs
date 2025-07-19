@@ -922,7 +922,7 @@ export const FUNCTION_MAPPING: Map<
             comment: "Valor da variável.",
          },
       ],
-      examples: ['SetInt["Name", "my other text"]'],
+      examples: ['SetString["Name", "my other text"]'],
       returns: {
          success: {
             message:
@@ -1567,6 +1567,819 @@ export const FUNCTION_MAPPING: Map<
             message: "Retorna o valor padrão zero para o tipo long (0).",
             type: {
                type: "long",
+            },
+         },
+      },
+   },
+   // MATH
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "Median",
+      aliases: "Med",
+      description: {
+         simple: "Retorna a media entre dois valores",
+         complex: "Esta função retorna a media entre dois valores.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "first",
+            comment: "O primeiro valor.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "second",
+            comment: "O segundo valor.",
+         },
+      ],
+      examples: ["Median[749, 750]"],
+      returns: {
+         success: {
+            message: "Retorna o preço médio entre os dois valores.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "TickToPoint",
+      aliases: "TickTP",
+      description: {
+         simple: "Retorna o valor de tick convertido em pontos",
+         complex: "Esta função retorna o valor de tick convertido em pontos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor que será calculado.",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["TickToPoint[50]", 'TickToPoint[50, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o valor de tick convertido.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "MoneyToPoint",
+      aliases: "MoneyTP",
+      description: {
+         simple: "Retorna o valor na moeda convertida em pontos",
+         complex: "Esta função retorna o valor na moeda convertida em pontos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor que será calculado.",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["MoneyToPoint[50]", 'MoneyToPoint[50, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o valor de tick convertido.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "PipToPoint",
+      aliases: "PipTP",
+      description: {
+         simple: "Retorna o valor do pip convertido em pontos",
+         complex: "Esta função retorna o valor do pip convertido em pontos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor que será calculado.",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["PipToPoint[50]", 'PipToPoint[50, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o valor de tick convertido.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "CountStep",
+      aliases: "Count",
+      description: {
+         simple: "Retorna a quantidade de passos que ocorreram",
+         complex:
+            "Esta função calcula a quantidade de passos realizados e arredonda o resultado para o inteiro mais próximo de zero.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor base.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "step",
+            comment: "O valor do passo.",
+         },
+      ],
+      examples: ["CountStep[50, 2]"],
+      returns: {
+         success: {
+            message: "Retorna a quantidade de passos.",
+            type: {
+               type: "uint",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo uint (0).",
+            type: {
+               type: "uint",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "CountStepGradual",
+      aliases: "CountGrad",
+      description: {
+         simple:
+            "Retorna a quantidade de passos que ocorreram de forma gradual",
+         complex:
+            "Esta função calcula a quantidade de passos realizados de forma gradual e arredonda o resultado para o inteiro mais próximo de zero.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor base.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "step",
+            comment: "O valor do passo.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "multiplier",
+            comment: "O valor do multiplicador.",
+            value: "1.0",
+         },
+      ],
+      examples: ["CountStepGradual[50, 2]"],
+      returns: {
+         success: {
+            message: "Retorna a quantidade de passos.",
+            type: {
+               type: "uint",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo uint (0).",
+            type: {
+               type: "uint",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "Division",
+      aliases: "Divi",
+      description: {
+         simple:
+            "Retorna a divisão entre dois valores, permitindo que o denominador seja zero",
+         complex:
+            "Esta função retorna a divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor base.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "divisor",
+            comment: "O valor do denominador.",
+         },
+      ],
+      examples: ["Division[50, 2]"],
+      returns: {
+         success: {
+            message: "Retorna o resultado da divisão.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "RestDivision",
+      aliases: "RDivi",
+      description: {
+         simple:
+            "Retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero",
+         complex:
+            "Esta função retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor base.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "divisor",
+            comment: "O valor do denominador.",
+         },
+      ],
+      examples: ["RestDivision[50, 2]"],
+      returns: {
+         success: {
+            message: "Retorna o resto da divisão.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "Percent",
+      aliases: "",
+      description: {
+         simple:
+            "Retorna a variação percentual de value até target, com value sendo o valor base",
+         complex:
+            "Esta função retorna a variação percentual de value até target, com value sendo o valor base.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor base.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "target",
+            comment: "O valor do alvo.",
+         },
+      ],
+      examples: ["Percent[100, 120] // 20%", "Percent[100, 50] // -50%"],
+      returns: {
+         success: {
+            message: "Retorna a variação percentual.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "PercentOfValue",
+      aliases: "PercentValue",
+      description: {
+         simple: "Retorna a quantidade percentual de um valor",
+         complex: "Esta função retorna a quantidade percentual de um valor.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor base.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "percent",
+            comment: "O valor percentual que será retornado.",
+         },
+      ],
+      examples: [
+         "PercentOfValue[100, 20] // Return 20.0",
+         "PercentOfValue[200, 50] // Return 100.0",
+      ],
+      returns: {
+         success: {
+            message: "Retorna a quantidade percentual.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "HitPercent",
+      aliases: "",
+      description: {
+         simple: "Retorna a quantidade percentual de acerto",
+         complex:
+            "Esta função retorna a quantidade percentual de acerto entre gain e loss. A variação sempre será de 0% a 100%.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "gain",
+            comment: "O valor de quantidade de ganho.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "loss",
+            comment: "O valor de quantidade de perda.",
+         },
+      ],
+      examples: [
+         "HitPercent[30, 70] // Is 30% of hit percent",
+         "HitPercent[30, 100] // Is 23,07% of hit percent",
+      ],
+      returns: {
+         success: {
+            message: "Retorna a quantidade percentual de acerto.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "CorrectPrice",
+      aliases: "FixPrice",
+      description: {
+         simple: "Retorna o valor correto de um preço",
+         complex:
+            "Esta função corrige preços inválidos, convertendo-os para valores válidos conforme o passo do mercado.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "price",
+            comment: "O valor do preço.",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O simbolo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: [],
+      returns: {
+         success: {
+            message: "Retorna o preço correto do ativo alvo.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "Random",
+      aliases: "",
+      description: {
+         simple: "Retorna um valor inteiro aleatório entre dois valores",
+         complex:
+            "Esta função retorna um valor inteiro aleatório entre dois valores.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "int",
+            },
+            name: "min",
+            comment: "O valor minimo.",
+         },
+         {
+            type: {
+               type: "int",
+            },
+            name: "max",
+            comment: "O valor maximo.",
+         },
+      ],
+      examples: ["Random[0, 1000]"],
+      returns: {
+         success: {
+            message: "Retorna um valor inteiro aleatório entre dois valores.",
+            type: {
+               type: "int",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo int (0).",
+            type: {
+               type: "int",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "Round",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor arredondado",
+         complex: "Esta função retorna o valor arredondado.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor para ser arredondado.",
+         },
+      ],
+      examples: ["Round[10.7] // 11", "Round[10.3] // 10", "Round[Close[0]/2]"],
+      returns: {
+         success: {
+            message: "Retorna o valor arredondado.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "RoundUp",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor arredondado para cima",
+         complex:
+            "Esta função retorna o valor arredondado para cima, garantindo que o resultado seja sempre o próximo inteiro maior ou igual.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor para ser arredondado.",
+         },
+      ],
+      examples: [
+         "RoundUp[10.7] // 11",
+         "RoundUp[10.3] // 11",
+         "RoundUp[Close[0]/2]",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor arredondado.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "RoundDown",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor arredondado para baixo",
+         complex:
+            "Esta função retorna o valor arredondado para baixo, garantindo que o resultado seja sempre o próximo inteiro menor ou igual.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "O valor para ser arredondado.",
+         },
+      ],
+      examples: [
+         "RoundDown[10.7] // 10",
+         "RoundDown[10.3] // 10",
+         "RoundDown[Close[0]/2]",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor arredondado.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "Max",
+      aliases: "",
+      description: {
+         simple: "Retorna o maior valor entre dois números",
+         complex:
+            "Esta função retorna o maior valor entre dois números fornecidos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "first",
+            comment: "o primeiro valor.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "second",
+            comment: "O segundo valor.",
+         },
+      ],
+      examples: ["Max[10, 20] // 20", "Max[60, 40] // 60"],
+      returns: {
+         success: {
+            message: "Retorna o maior valor.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "Min",
+      aliases: "",
+      description: {
+         simple: "Retorna o menor valor entre dois números",
+         complex:
+            "Esta função retorna o menor valor entre dois números fornecidos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "first",
+            comment: "o primeiro valor.",
+         },
+         {
+            type: {
+               type: "double",
+            },
+            name: "second",
+            comment: "O segundo valor.",
+         },
+      ],
+      examples: ["Min[10, 20] // 10", "Min[60, 40] // 40"],
+      returns: {
+         success: {
+            message: "Retorna o menor valor.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "IsChance",
+      aliases: "Chance",
+      description: {
+         simple: "Retorna verdadeiro com base em uma chance percentual",
+         complex:
+            "Esta função retorna verdadeiro com base em uma chance percentual entre 0 e 100. Por exemplo, ao passar 30, há aproximadamente 30% de chance de retornar verdadeiro.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "chance",
+            comment: "o valor da chance.",
+         },
+      ],
+      examples: [
+         "IsChance[10] // It contains 10% chance of returning true.",
+         "IsChance[60]",
+      ],
+      returns: {
+         success: {
+            message: "Retorna verdadeiro caso a chance seja atingida.",
+            type: {
+               type: "bool",
+            },
+         },
+         error: {
+            message: "Retorna falso caso a chance não seja atingida.",
+            type: {
+               type: "bool",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      name: "Decimals",
+      aliases: "Decimal",
+      description: {
+         simple: "Retorna o número de casas decimais de um valor",
+         complex:
+            "Esta função retorna a quantidade de casas decimais presentes em um número, indicando seu nível de precisão.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "o valor a ser verificado.",
+         },
+      ],
+      examples: ["Decimals[10.00002] // Is 5"],
+      returns: {
+         success: {
+            message: "Retorna a quantidade de casas decimais.",
+            type: {
+               type: "int",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo int (0).",
+            type: {
+               type: "int",
             },
          },
       },
