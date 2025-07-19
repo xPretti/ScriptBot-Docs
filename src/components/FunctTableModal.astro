@@ -6,6 +6,11 @@ import ReactFunctionModal from "./react/ReactFunctionModal";
 
 const { category } = Astro.props;
 
+const containsAliases =
+   FUNCTION_MAPPING.get(category) &&
+   Array.from(FUNCTION_MAPPING.get(category)!.values()).find((fn) => {
+      return fn.aliases;
+   });
 const elements =
    FUNCTION_MAPPING.get(category) &&
    Array.from(FUNCTION_MAPPING.get(category)!.values());
@@ -17,6 +22,7 @@ const elements =
          <thead>
             <tr>
                <th>FUNÇÕES</th>
+               <th class="aliases">{containsAliases && "ALIASES"}</th>
                <th>RETORNOS</th>
             </tr>
          </thead>
@@ -25,14 +31,21 @@ const elements =
                <tr>
                   <td>
                      <div class="name-container">
-                        {fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}
+                        {fn.aliases && (
+                           <div class="aliases-mobile">
+                              <CodeVar>{fn.aliases}</CodeVar>
+                           </div>
+                        )}
                         <CodeVar>{fn.name}</CodeVar>
                      </div>
+                  </td>
+                  <td class="aliases">
+                     {fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}
                   </td>
                   <td>
                      <ReactFunctionModal
                         client:visible
-                        fnCategory={fn.category.type}
+                        fnCategory={fn.category}
                         fnName={fn.name}
                      >
                         <div class="description">
@@ -86,5 +99,17 @@ const elements =
       opacity: 1;
       transition: opacity 0.2s ease-in-out;
       cursor: pointer;
+   }
+
+   .aliases-mobile {
+      display: none;
+   }
+   @media (max-width: 950px) {
+      .aliases {
+         display: none;
+      }
+      .aliases-mobile {
+         display: block;
+      }
    }
 </style>

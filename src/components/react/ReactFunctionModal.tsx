@@ -40,7 +40,7 @@ export default function ReactFunctionModal({
    };
 
    return (
-      <div className={styles.modalContainer}>
+      <>
          <div className={styles.description} onClick={() => setIsOpen(true)}>
             {children}
          </div>
@@ -125,6 +125,6 @@ export default function ReactFunctionModal({
                </div>
             </div>
          </ReactModal>
-      </div>
+      </>
    );
 }

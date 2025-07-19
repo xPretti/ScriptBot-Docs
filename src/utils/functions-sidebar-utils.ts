@@ -1,5 +1,6 @@
 // src/utils/functions-sidebar.ts
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
+import { getFunctionCategoryLabel } from "@src/enums/function-enums";
 
 export function buildFunctionsSidebar(path: string) {
    const pages = Array.from(FUNCTION_MAPPING.entries()).flatMap(
@@ -7,8 +8,8 @@ export function buildFunctionsSidebar(path: string) {
          Array.from(functionsMap.values()).map((fn) => ({
             label: `${fn.name}`,
             link: `${path}${categoryKey}/${fn.name}`,
-            category: fn.category.type,
-            categoryLabel: fn.category.label,
+            category: fn.category,
+            categoryLabel: getFunctionCategoryLabel[fn.category](),
             description: fn.description.simple,
          }))
    );

@@ -62,10 +62,7 @@ export const FUNCTION_MAPPING: Map<
 
    // DEBUGS
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS,
-         label: "Depurações",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS,
       name: "Log",
       aliases: "",
       description: {
@@ -122,10 +119,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS,
-         label: "Depurações",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS,
       name: "Print",
       aliases: "",
       description: {
@@ -183,10 +177,7 @@ export const FUNCTION_MAPPING: Map<
    },
    // INDICATORS
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
-         label: "Indicadores",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
       name: "Indicator",
       aliases: "IND",
       description: {
@@ -237,10 +228,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
-         label: "Indicadores",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
       name: "Indicator'X'",
       aliases: "IND'X'",
       description: {
@@ -287,10 +275,7 @@ export const FUNCTION_MAPPING: Map<
    },
    // USER VARIABLES
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "ClearDouble",
       aliases: "",
       description: {
@@ -318,12 +303,9 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "ClearInt",
-      aliases: "Jujubas",
+      aliases: "",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário",
          complex:
@@ -349,10 +331,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "ClearString",
       aliases: "",
       description: {
@@ -380,10 +359,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "CreateDouble",
       aliases: "",
       description: {
@@ -424,10 +400,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "CreateInt",
       aliases: "",
       description: {
@@ -468,10 +441,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "CreateString",
       aliases: "",
       description: {
@@ -512,10 +482,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "GetDouble",
       aliases: "",
       description: {
@@ -549,10 +516,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "GetInt",
       aliases: "",
       description: {
@@ -586,10 +550,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "GetString",
       aliases: "",
       description: {
@@ -623,10 +584,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "RemoveDouble",
       aliases: "",
       description: {
@@ -660,10 +618,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "RemoveInt",
       aliases: "",
       description: {
@@ -697,10 +652,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "RemoveString",
       aliases: "",
       description: {
@@ -734,10 +686,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "ReplaceDouble",
       aliases: "",
       description: {
@@ -779,10 +728,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "ReplaceInt",
       aliases: "",
       description: {
@@ -824,10 +770,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "ReplaceString",
       aliases: "",
       description: {
@@ -869,10 +812,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "SetDouble",
       aliases: "",
       description: {
@@ -915,10 +855,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "SetInt",
       aliases: "",
       description: {
@@ -961,10 +898,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
-         label: "Variáveis de usuário",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
       name: "SetString",
       aliases: "",
       description: {
@@ -1008,10 +942,7 @@ export const FUNCTION_MAPPING: Map<
    },
    //CANDLE
    {
-      category: {
-         type: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
-         label: "Velas",
-      },
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
       name: "Open",
       aliases: "O",
       description: {
@@ -1024,7 +955,7 @@ export const FUNCTION_MAPPING: Map<
                type: "uint",
             },
             name: "candle",
-            comment: "A vela de referência para obter o preço de abertura.",
+            comment: "A vela de referência.",
          },
          {
             type: {
@@ -1032,8 +963,7 @@ export const FUNCTION_MAPPING: Map<
                typeLink: "/fundamentals/mt5-enumerators#timeframes",
             },
             name: "timeframe",
-            comment:
-               "O tempo gráfico de referência para obter o preço de abertura.",
+            comment: "O tempo gráfico de referência.",
             value: "0",
          },
          {
@@ -1041,14 +971,14 @@ export const FUNCTION_MAPPING: Map<
                type: "string",
             },
             name: "symbol",
-            comment: "O ativo de referência para obter o preço de abertura.",
+            comment: "O ativo de referência.",
             value: "SYMBOL",
          },
       ],
       examples: ["Open[1]", 'Open[1, M5, "EURUSD"]'],
       returns: {
          success: {
-            message: "Retorna o valor do buffer do indicador do tipo double.",
+            message: "Retorna o preço da vela.",
             type: {
                type: "double",
             },
@@ -1061,10 +991,590 @@ export const FUNCTION_MAPPING: Map<
          },
       },
    },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "Close",
+      aliases: "C",
+      description: {
+         simple: "Retorna o preço de fechamento de uma vela",
+         complex: "Esta função retorna o preço de fechamento de uma vela.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "candle",
+            comment: "A vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["Close[1]", 'Close[1, M5, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o preço da vela.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0.0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "High",
+      aliases: "H",
+      description: {
+         simple: "Retorna o preço da máxima de uma vela",
+         complex: "Esta função retorna o preço da máxima de uma vela.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "candle",
+            comment: "A vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["High[1]", 'High[1, M5, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o preço da vela.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0.0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "Low",
+      aliases: "L",
+      description: {
+         simple: "Retorna o preço da mínima de uma vela",
+         complex: "Esta função retorna o preço da mínima de uma vela.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "candle",
+            comment: "A vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["Low[1]", 'Low[1, M5, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o preço da vela.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0.0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "Time",
+      aliases: "T",
+      description: {
+         simple: "Retorna o horário de abertura de uma vela",
+         complex: "Esta função retorna o horário de abertura de uma vela.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "candle",
+            comment: "A vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["Time[1]", 'Time[1, M5, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o horário da vela.",
+            type: {
+               type: "uint",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo uint (0).",
+            type: {
+               type: "uint",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "Direction",
+      aliases: "DIR",
+      description: {
+         simple:
+            "Retorna a direção de uma vela (-1 = Negativa, 0 = Neutra, 1 = Positiva)",
+         complex:
+            "Esta função retorna a direção simplificada de uma vela, ou seja, se a vela é positiva ou negativa. (-1 = Negativa, 0 = Neutra, 1 = Positiva)",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "candle",
+            comment: "A vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: [
+         "Direction[1]",
+         'Direction[1, M5, "EURUSD"]',
+         "DIR[1] == 1 // Check if the candle is positive/buying",
+      ],
+      returns: {
+         success: {
+            message: "Retorna a direção da vela.",
+            type: {
+               type: "int",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo int (0).",
+            type: {
+               type: "int",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "Spread",
+      aliases: "SPD",
+      description: {
+         simple: "Retorna a quantidade de spread de uma vela",
+         complex: "Esta função retorna a quantidade de spread de uma vela.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "candle",
+            comment: "A vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["Spread[1]", 'Spread[1, M5, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o spread da vela.",
+            type: {
+               type: "int",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo int (0).",
+            type: {
+               type: "int",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "Candle",
+      aliases: "",
+      description: {
+         simple: "Retorna o index da vela",
+         complex:
+            "Esta função retorna o identificador da vela, usado para obter o index utilizando o horário especificado.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "timeSeconds",
+            comment: "O horário em segundos.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: [
+         "Candle[1]",
+         'Candle[1, M5, "EURUSD"]',
+         'Candle[ToTime["13:00"]] // How to get the candle at 13:00 of the day',
+         "Candle[TIME_CURRENT-300] // How to get the last 5 minutes candles index",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o index da vela.",
+            type: {
+               type: "int",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo int (0).",
+            type: {
+               type: "int",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "MaxHigh",
+      aliases: "MaxH",
+      description: {
+         simple: "Retorna o preço máximo entre duas posições de velas",
+         complex:
+            "Esta função retorna o maior preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da maior vela encontrada nesse intervalo.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "startIndex",
+            comment: "O index da primeira vela de referência.",
+         },
+         {
+            type: {
+               type: "uint",
+            },
+            name: "endIndex",
+            comment: "O index da ultima vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["MaxHigh[0, 20]", 'MaxHigh[0, 20, M5, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o preço da maior vela.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "MaxLow",
+      aliases: "MaxL",
+      description: {
+         simple: "Retorna o preço mínimo entre duas posições de velas",
+         complex:
+            "Esta função retorna o menor preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da menor vela encontrada nesse intervalo.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "startIndex",
+            comment: "O index da primeira vela de referência.",
+         },
+         {
+            type: {
+               type: "uint",
+            },
+            name: "endIndex",
+            comment: "O index da ultima vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["MaxLow[0, 20]", 'MaxLow[0, 20, M5, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o preço da menor vela.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "TickVolume",
+      aliases: "TICKV",
+      description: {
+         simple: "Retorna o volume de uma vela",
+         complex:
+            "Esta função retorna o volume de uma vela com base nos dados de tick.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "candle",
+            comment: "A vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["TickVolume[1]", 'TickVolume[1, M5, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o volume da vela.",
+            type: {
+               type: "long",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo long (0).",
+            type: {
+               type: "long",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      name: "RealVolume",
+      aliases: "REALV",
+      description: {
+         simple: "Retorna o volume de uma vela usando os dados reais",
+         complex:
+            "Esta função retorna o volume de uma vela com base em dados reais. Em alguns mercados, no entanto, o volume pode ser constantemente zero devido à ausência de dados de volume no feed de dados, seja por limitações da corretora, do tipo de ativo (como forex, que muitas vezes não fornece volume real), ou pela forma como o volume é calculado e disponibilizado.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "candle",
+            comment: "A vela de referência.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico de referência.",
+            value: "0",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ["TickVolume[1]", 'TickVolume[1, M5, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o volume da vela.",
+            type: {
+               type: "long",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo long (0).",
+            type: {
+               type: "long",
+            },
+         },
+      },
+   },
 ].forEach((fn: FunctionModel) => {
-   const existing = FUNCTION_MAPPING.get(fn.category.type);
+   const existing = FUNCTION_MAPPING.get(fn.category);
    if (!existing) {
-      FUNCTION_MAPPING.set(fn.category.type, new Map([[fn.name, fn]]));
+      FUNCTION_MAPPING.set(fn.category, new Map([[fn.name, fn]]));
    } else {
       existing.set(fn.name, fn);
    }

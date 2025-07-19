@@ -21,8 +21,10 @@ export default defineConfig({
          defaultLocale: "root",
          locales: {
             root: {
-               label: "English",
-               lang: "en",
+               // label: "English",
+               // lang: "en",
+               label: "Português",
+               lang: "pt",
             },
             // pt: {
             //    label: "Português",

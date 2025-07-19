@@ -5,7 +5,9 @@ sidebar:
    order: 0
 ---
 
+import AnchorHeading from "@astrojs/starlight/components/AnchorHeading.astro";
 import FunctTableModal from "@components/FunctTableModal.astro";
+import HeaderContent from "@components/HeaderContent.astro";
 import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
 import { Aside } from "@astrojs/starlight/components";
 
@@ -15,6 +17,43 @@ parâmetros, o que permite modificar seu comportamento conforme os valores
 fornecidos. Elas oferecem maior flexibilidade na criação de regras e
 estratégias personalizadas.
 
-## Further reading
+<HeaderContent desc="Essas funções permitem executar comandos de depuração.">
+   <Fragment slot="header">
+
+      ## Depurações
+
+   </Fragment>
+
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS} />
+</HeaderContent>
+
+<HeaderContent desc="Essas funções permitem acessar os valores dos buffers de um indicador, como preços, sinais, cores.">
+   <Fragment slot="header">
+
+      ## Indicadores
+
+   </Fragment>
+
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS} />
+</HeaderContent>
+
+<HeaderContent desc="Essas funções permitem acessar os valores das velas, como preços de abertura, fechamento etc.">
+   <Fragment slot="header">
+
+      ## Velas
+
+   </Fragment>
+
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.CANDLES} />
+</HeaderContent>
+
+<HeaderContent desc="Essas variáveis permitem que o usuário crie suas próprias variáveis personalizadas.">
+   <Fragment slot="header">
+
+      ## Variáveis do usuário
+
+   </Fragment>
 
 <FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES} />
+
+</HeaderContent>

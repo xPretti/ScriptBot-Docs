@@ -1,0 +1,12 @@
+---
+const { desc } = Astro.props;
+---
+
+<slot name="header" />
+<div>
+   {desc && <blockquote>{desc}</blockquote>}
+   <slot />
+</div>
+
+<!-- Estilos -->
+<style></style>
