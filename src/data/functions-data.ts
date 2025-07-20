@@ -964,7 +964,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1014,7 +1014,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1064,7 +1064,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1114,7 +1114,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1164,7 +1164,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1216,7 +1216,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1270,7 +1270,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1321,7 +1321,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1384,7 +1384,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1442,7 +1442,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1493,7 +1493,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -1544,7 +1544,7 @@ export const FUNCTION_MAPPING: Map<
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
-            value: "0",
+            value: "CURRENT",
          },
          {
             type: {
@@ -2381,6 +2381,1227 @@ export const FUNCTION_MAPPING: Map<
             type: {
                type: "int",
             },
+         },
+      },
+   },
+   // CONTA
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.ACCOUNT,
+      name: "GetVolume",
+      aliases: "GetVol",
+      description: {
+         simple: "Retorna o volume que a ordem será executada",
+         complex:
+            "Esta função retorna o volume que a ordem será colocada no mercado.",
+      },
+      parameters: [],
+      examples: [],
+      returns: {
+         success: {
+            message: "Retorna o volume.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0.0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.ACCOUNT,
+      name: "SetVolume",
+      aliases: "SetVol",
+      description: {
+         simple: "Define o novo volume da ordem",
+         complex:
+            "Esta função define o novo volume utilizado no sistema de envio de ordens. Ela altera diretaemente o valor no gerenciador de volume, portanto, é importante considerar o método de cálculo do mesmo.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "o valor do volume.",
+         },
+      ],
+      examples: ["SetVol[10]"],
+      returns: {
+         success: {
+            message:
+               "Retorna true se o volume for alterado com sucesso, ou false caso contrário.",
+            type: {
+               type: "bool",
+            },
+         },
+         error: {
+            message: "Retorna false em caso de erro ou falha.",
+            type: {
+               type: "bool",
+            },
+         },
+      },
+   },
+   // CONVERSORES
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      name: "ToPositive",
+      aliases: "Pos",
+      description: {
+         simple: "Retorna o valor absoluto de um número",
+         complex:
+            "Esta função retorna o valor absoluto de um número, ou seja, o seu valor sem sinal (sempre positivo).",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "o valor a ser convertido.",
+         },
+      ],
+      examples: [
+         "ToPositive[-10] // Is 10",
+         `ToPositive[Close[0]-Open[0]] // Result of the calculation "close [0] -Open [0]" will be positive even when "Open" is larger.`,
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor absoluto.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      name: "ToNegative",
+      aliases: "Neg",
+      description: {
+         simple: "Retorna o valor negativo de um número",
+         complex:
+            "Esta função retorna o valor negativo de um número, ou seja, o seu valor com sinal (sempre negativo).",
+      },
+      parameters: [
+         {
+            type: {
+               type: "double",
+            },
+            name: "value",
+            comment: "o valor a ser convertido.",
+         },
+      ],
+      examples: [
+         "ToNegative[10] // Is -10",
+         `ToNegative[Close[0]-Open[0]] // Result of the calculation "close [0] -Open [0]" will be negative even when "Open" is smaller.`,
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor negativo.",
+            type: {
+               type: "double",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo double (0).",
+            type: {
+               type: "double",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      name: "ToTime",
+      aliases: "",
+      description: {
+         simple:
+            "Retorna o horário em forma de texto simples para data em segundos",
+         complex:
+            "Esta função retorna o horário em forma de texto para número em segundos. Com esta função você pode acessar a vela do dia usando um horário em forma de texto, por exemplo '13:00'.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "string",
+            },
+            name: "time",
+            comment: "o valor do horário.",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "symbol",
+            comment: "O ativo de referência.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: [`ToTime["19:00"]`],
+      returns: {
+         success: {
+            message: "Retorna o horário em segundos.",
+            type: {
+               type: "uint",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo uint (0).",
+            type: {
+               type: "uint",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      name: "ToTimeModify",
+      aliases: "TMod",
+      description: {
+         simple: "Retorna o horário modificado",
+         complex:
+            "Esta função permite modificar um horário passado de referencia.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "int",
+            },
+            name: "time",
+            comment: "o valor do horário em segundos.",
+         },
+         {
+            type: {
+               type: "int",
+            },
+            name: "seconds",
+            comment: "O valor de segundos a ser modificado ou -1 para ignorar.",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "int",
+            },
+            name: "minutes",
+            comment: "O valor de minutos a ser modificado ou -1 para ignorar.",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "int",
+            },
+            name: "hours",
+            comment: "O valor de horas a ser modificado ou -1 para ignorar.",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "int",
+            },
+            name: "day",
+            comment: "O valor do dia a ser modificado ou -1 para ignorar.",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "int",
+            },
+            name: "month",
+            comment: "O valor do mês a ser modificado ou -1 para ignorar.",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "int",
+            },
+            name: "year",
+            comment: "O valor do ano a ser modificado ou -1 para ignorar.",
+            value: "-1",
+         },
+      ],
+      examples: [
+         `ToTimeModify[TIME_CURRENT, 50, 10, 12] // I would modify the seconds, minutes and hours.`,
+         `ToTimeModify[TIME_CURRENT, -1, -1, -1, 10] // I would only change the day, the other data would remain the same.`,
+      ],
+      returns: {
+         success: {
+            message: "Retorna o novo horário em segundos.",
+            type: {
+               type: "uint",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo uint (0).",
+            type: {
+               type: "uint",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      name: "ToTimeFormat",
+      aliases: "TFormat",
+      description: {
+         simple: "Retorna o horário em forma de texto",
+         complex:
+            "Esta função transforma um valor em segundos em uma representação textual de horário.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "uint",
+            },
+            name: "time",
+            comment: "o valor do horário.",
+         },
+      ],
+      examples: [
+         `ToTimeFormat[TIME_CURRENT] // It would be similar to: "1970.01.01 19:00:00"`,
+      ],
+      returns: {
+         success: {
+            message: "Retorna o horário em forma de texto.",
+            type: {
+               type: "string",
+            },
+         },
+         error: {
+            message: "Retorna a string vazia.",
+            type: {
+               type: "string",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      name: "ToFormat",
+      aliases: "Format",
+      description: {
+         simple: "Retorna uma nova string formatada",
+         complex:
+            "Esta função permite modificar um texto, formatando-o de acordo com os parâmetros definidos internamente.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "string",
+            },
+            name: "text",
+            comment: "o valor do texto.",
+         },
+         {
+            type: {
+               type: "any",
+            },
+            name: "param1",
+            comment: "Primeiro parametro que será formatado.",
+            value: '""',
+         },
+         {
+            type: {
+               type: "any",
+            },
+            name: "param...63",
+            comment:
+               "Os demais parametros que serão formatados. Não pode ser mais de 63.",
+            value: '""',
+         },
+      ],
+      examples: [
+         `ToFormat["Hello, {0}!", "World"]] // New text: "Hello, World!"`,
+         `ToFormat["My text is {0} and my number is {1}!", "Metatrader is God", 10]] // New text: "My text is Metatrader is God and my number is 10!"`,
+         `ToFormat["My list: {0}, {1}, again {0}!", "Jujubas", 777]] // New text: "My list: Jujubas, 777, again Jujubas!"`,
+      ],
+      returns: {
+         success: {
+            message: "Retorna o novo texto formatado.",
+            type: {
+               type: "string",
+            },
+         },
+         error: {
+            message: "Retorna a string vazia.",
+            type: {
+               type: "string",
+            },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      name: "ToInt",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor convertido para inteiro",
+         complex:
+            "Esta função retorna o valor convertido para inteiro. Se o valor for uma string, ele será convertido para zero. Caso seja um número decimal, será arredondado para o inteiro mais próximo.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "any",
+            },
+            name: "value",
+            comment: "o valor a ser convertido.",
+         },
+      ],
+      examples: [
+         "ToInt[10.5] // Is 10",
+         `ToInt["9999"] // Is 9999`,
+         `ToInt["My age 30"] // To convert to zero`,
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor convertido para inteiro.",
+            type: {
+               type: "int",
+            },
+         },
+         error: {
+            message: "Retorna o valor padrão zero para o tipo int (0).",
+            type: {
+               type: "int",
+            },
+         },
+      },
+   },
+   // MERCADO
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "Last",
+      aliases: "",
+      description: {
+         simple: "Retorna o último preço de negociação.",
+         complex:
+            "Esta função retorna o valor do último preço de negociação para o símbolo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['Last["PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o último preço.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "LastHigh",
+      aliases: "LastH",
+      description: {
+         simple: "Retorna o maior preço do último negócio.",
+         complex:
+            "Esta função retorna o maior preço registrado no último negócio do símbolo informado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['LastHigh["VALE3"]'],
+      returns: {
+         success: {
+            message: "Retorna o maior preço do último negócio.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "LastLow",
+      aliases: "LastL",
+      description: {
+         simple: "Retorna o menor preço do último negócio.",
+         complex:
+            "Esta função retorna o menor preço registrado no último negócio do símbolo informado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['LastLow["VALE3"]'],
+      returns: {
+         success: {
+            message: "Retorna o menor preço do último negócio.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "Ask",
+      aliases: "",
+      description: {
+         simple: "Retorna o preço de venda (ask).",
+         complex:
+            "Esta função retorna o preço de venda (ask) atual do símbolo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['Ask["PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o preço de venda.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "AskHigh",
+      aliases: "AskH",
+      description: {
+         simple: "Retorna o maior preço de venda (ask).",
+         complex:
+            "Esta função retorna o maior valor de ask registrado no dia para o símbolo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['AskHigh["ITUB4"]'],
+      returns: {
+         success: {
+            message: "Retorna o maior preço de venda.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "AskLow",
+      aliases: "AskL",
+      description: {
+         simple: "Retorna o menor preço de venda (ask).",
+         complex:
+            "Esta função retorna o menor valor de ask registrado no dia para o símbolo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['AskLow["ITUB4"]'],
+      returns: {
+         success: {
+            message: "Retorna o menor preço de venda.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "Bid",
+      aliases: "",
+      description: {
+         simple: "Retorna o preço de compra (bid).",
+         complex:
+            "Esta função retorna o preço de compra (bid) atual do símbolo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['Bid["BBAS3"]'],
+      returns: {
+         success: {
+            message: "Retorna o preço de compra.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "BidHigh",
+      aliases: "BidH",
+      description: {
+         simple: "Retorna o maior preço de compra (bid).",
+         complex:
+            "Esta função retorna o maior valor de bid registrado no dia para o símbolo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['BidHigh["BBAS3"]'],
+      returns: {
+         success: {
+            message: "Retorna o maior preço de compra.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "BidLow",
+      aliases: "BidL",
+      description: {
+         simple: "Retorna o menor preço de compra (bid).",
+         complex:
+            "Esta função retorna o menor valor de bid registrado no dia para o símbolo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['BidLow["BBAS3"]'],
+      returns: {
+         success: {
+            message: "Retorna o menor preço de compra.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "LastTime",
+      aliases: "LastT",
+      description: {
+         simple: "Retorna o horário do último negócio.",
+         complex:
+            "Esta função retorna o timestamp (horário) da última negociação para o símbolo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['LastTime["PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o horário da última negociação.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna zero se o símbolo for inválido.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "DayStartTime",
+      aliases: "DayST",
+      description: {
+         simple: "Retorna o horário de início do pregão no dia especificado.",
+         complex:
+            "Esta função retorna o horário de abertura do pregão para o ativo no dia informado. Pode variar conforme o ativo e o mercado.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "day",
+            comment:
+               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['DayStartTime[0, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o horário de abertura do pregão.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna null se os dados estiverem indisponíveis.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "DayEndTime",
+      aliases: "DayET",
+      description: {
+         simple:
+            "Retorna o horário de encerramento do pregão no dia especificado.",
+         complex:
+            "Esta função retorna o horário de fechamento do pregão para o ativo no dia informado.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "day",
+            comment:
+               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['DayEndTime[0, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o horário de fechamento do pregão.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna null se os dados estiverem indisponíveis.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "DayStartCandle",
+      aliases: "DaySC",
+      description: {
+         simple: "Retorna a vela (candle) de início do dia.",
+         complex:
+            "Esta função retorna o identificador ou timestamp da primeira vela (candle) do dia para o ativo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "day",
+            comment:
+               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['DayStartCandle[20250719, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna a vela inicial do dia.",
+            type: { type: "uint" },
+         },
+         error: {
+            message: "Retorna 0 se não houver vela no dia.",
+            type: { type: "uint" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "DayEndCandle",
+      aliases: "DayEC",
+      description: {
+         simple: "Retorna a vela (candle) de fim do dia.",
+         complex:
+            "Esta função retorna o identificador ou timestamp da última vela (candle) do dia para o ativo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "day",
+            comment:
+               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['DayEndCandle[0, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna a última vela do dia.",
+            type: { type: "uint" },
+         },
+         error: {
+            message: "Retorna 0 se não houver vela no dia.",
+            type: { type: "uint" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "DayHigh",
+      aliases: "DayH",
+      description: {
+         simple: "Retorna o maior preço do dia.",
+         complex:
+            "Esta função retorna o maior valor de preço negociado no dia, para o timeframe e símbolo informados.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "day",
+            comment:
+               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['DayHigh[0, M5, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o maior preço do dia.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se não houver dados.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      name: "DayLow",
+      aliases: "DayL",
+      description: {
+         simple: "Retorna o menor preço do dia.",
+         complex:
+            "Esta função retorna o menor valor de preço negociado no dia, para o timeframe e símbolo informados.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "day",
+            comment:
+               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "O tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "O símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['DayLow[0, M5, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o menor preço do dia.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna zero se não houver dados.",
+            type: { type: "double" },
+         },
+      },
+   },
+   // TEMPO
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      name: "IsTime",
+      aliases: "",
+      description: {
+         simple: "Verifica se o tempo corresponde aos critérios informados.",
+         complex:
+            "Esta função verifica se o horário de referência corresponde aos valores fornecidos para hora, minuto e segundo. Caso algum dos valores seja -1, ele será ignorado no critério.",
+      },
+      parameters: [
+         {
+            type: { type: "datetime" },
+            name: "timeRef",
+            comment: "Horário de referência.",
+         },
+         {
+            type: { type: "int" },
+            name: "hour",
+            comment: "Hora (0 a 23) ou -1 para ignorar.",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "minute",
+            comment: "Minuto (0 a 59) ou -1 para ignorar.",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "second",
+            comment: "Segundo (0 a 59) ou -1 para ignorar.",
+            value: "-1",
+         },
+      ],
+      examples: [
+         "IsTime[TIME_CURRENT, 10] // Retorna true se a hora for 10",
+         "IsTime[TIME_CURRENT, -1, 30] // Retorna true se o minuto for 30",
+      ],
+      returns: {
+         success: {
+            message: "Retorna true se o horário corresponder aos critérios.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna false se não corresponder ou houver erro nos parâmetros.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      name: "SymbolTime",
+      aliases: "STime",
+      description: {
+         simple: "Retorna o horário atual do símbolo.",
+         complex:
+            "Esta função retorna o timestamp atual do ativo (símbolo) no mercado correspondente.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['SymbolTime["PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o horário atual do ativo.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna null se o símbolo for inválido.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      name: "TimeLeft",
+      aliases: "TLeft",
+      description: {
+         simple: "Retorna o tempo restante da vela atual.",
+         complex:
+            "Esta função retorna quanto tempo falta para o término da vela atual no timeframe e símbolo especificados.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['TimeLeft[M5, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o tempo restante (em segundos) da vela atual.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna -1 se os parâmetros forem inválidos.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      name: "DayOfWeek",
+      aliases: "DayW",
+      description: {
+         simple: "Retorna o dia da semana.",
+         complex:
+            "Esta função retorna o dia da semana (0 = domingo, 1 = segunda, ..., 6 = sábado) do símbolo informado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['DayOfWeek["PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o número correspondente ao dia da semana.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna -1 se não for possível determinar o dia.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      name: "DayOfYear",
+      aliases: "DayY",
+      description: {
+         simple: "Retorna o dia do ano.",
+         complex:
+            "Esta função retorna o número do dia no ano (1 a 366) com base no horário atual do símbolo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['DayOfYear["VALE3"]'],
+      returns: {
+         success: {
+            message: "Retorna o dia do ano.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna -1 se o símbolo for inválido.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      name: "Month",
+      aliases: "",
+      description: {
+         simple: "Retorna o mês atual.",
+         complex:
+            "Esta função retorna o número do mês atual (1 a 12) com base no horário atual do símbolo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['Month["VALE3"]'],
+      returns: {
+         success: {
+            message: "Retorna o número do mês.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna -1 se não for possível determinar o mês.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      name: "Year",
+      aliases: "",
+      description: {
+         simple: "Retorna o ano atual.",
+         complex:
+            "Esta função retorna o número do ano atual com base no horário do símbolo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['Year["VALE3"]'],
+      returns: {
+         success: {
+            message: "Retorna o ano atual (ex: 2025).",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna -1 se não for possível determinar o ano.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      name: "StartTime",
+      aliases: "StartT",
+      description: {
+         simple: "Retorna o horário inicial de referência.",
+         complex:
+            "Esta função retorna o horário de início conforme o método informado. Pode representar abertura do dia, semana, mês, etc.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "ENUM_TIME_HISTORIC",
+               typeLink: "/fundamentals/scriptbot-enumerators#time-historic",
+            },
+            name: "method",
+            comment: "Método de cálculo (ex: 'TYPE_DAY', 'TYPE_WEEK' ...).",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['StartTime[TYPE_DAY, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o horário de início conforme o método.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna null se o método ou símbolo for inválido.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      name: "ValueOfTime",
+      aliases: "ValueT",
+      description: {
+         simple: "Converte o horário em valor numérico baseado no método.",
+         complex:
+            "Esta função retorna um valor numérico representando o tempo, conforme o método especificado (como timestamp, segundos do dia, etc).",
+      },
+      parameters: [
+         {
+            type: { type: "datetime" },
+            name: "time",
+            comment: "Horário a ser convertido.",
+         },
+         {
+            type: {
+               type: "ENUM_TIME_TYPE",
+               typeLink: "/fundamentals/scriptbot-enumerators#time-type",
+            },
+            name: "method",
+            comment: "Método de retorno. (ex: 'TYPE_SEC', 'TYPE_MIN' ...).",
+         },
+      ],
+      examples: ["ValueOfTime[TimeNow, TYPE_SEC]"],
+      returns: {
+         success: {
+            message: "Retorna o valor numérico correspondente ao horário.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna -1 se o horário ou método forem inválidos.",
+            type: { type: "int" },
          },
       },
    },

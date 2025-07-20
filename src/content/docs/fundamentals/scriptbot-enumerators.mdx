@@ -4,7 +4,7 @@ title: ScriptBot Enumerators
 
 import CodeVar from "@components/CodeVar.astro";
 
-### Tipos de posição:
+### Positions:
 
 > Enumerador referente ao tipo de posição/ordem.
 
@@ -13,3 +13,30 @@ import CodeVar from "@components/CodeVar.astro";
 | <CodeVar>TYPE_ALL</CodeVar>  | Todas as posições;         |
 | <CodeVar>TYPE_BUY</CodeVar>  | Apenas posições de compra; |
 | <CodeVar>TYPE_SELL</CodeVar> | Apenas posições de venda;  |
+
+### Time historic:
+
+> Enumerador referente ao tipo de tempo histórico.
+
+| VARIÁVEIS                     | RETORNOS                      |
+| ----------------------------- | ----------------------------- |
+| <CodeVar>TYPE_DAY</CodeVar>   | Apenas o histórico do dia;    |
+| <CodeVar>TYPE_WEEK</CodeVar>  | Apenas o histórico da semana; |
+| <CodeVar>TYPE_MONTH</CodeVar> | Apenas o histórico do mês;    |
+| <CodeVar>TYPE_YEAR</CodeVar>  | Apenas o histórico do ano;    |
+| <CodeVar>TYPE_ALL</CodeVar>   | Histórico completo;           |
+
+### Time type:
+
+> Enumerador referente ao tipo de tempo.
+
+| VARIÁVEIS                        | RETORNOS                  |
+| -------------------------------- | ------------------------- |
+| <CodeVar>TYPE_SEC</CodeVar>      | Apenas os segundos;       |
+| <CodeVar>TYPE_MIN</CodeVar>      | Apenas os minutos;        |
+| <CodeVar>TYPE_HOUR</CodeVar>     | Apenas as horas;          |
+| <CodeVar>TYPE_DAY</CodeVar>      | Apenas os dias;           |
+| <CodeVar>TYPE_DAY_WEEK</CodeVar> | Apenas os dias da semana; |
+| <CodeVar>TYPE_DAY_YEAR</CodeVar> | Apenas os dias do ano;    |
+| <CodeVar>TYPE_MONTH</CodeVar>    | Apenas os mês;            |
+| <CodeVar>TYPE_YEAR</CodeVar>     | Apenas os anos;           |
