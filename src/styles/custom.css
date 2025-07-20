@@ -108,6 +108,19 @@ td {
    padding: 8px;
 }
 
+td:first-child {
+   border-left: none;
+}
+
+td,
+td:last-child {
+   border-left: 1px solid var(--sl-color-gray-5);
+}
+
+tr {
+   overflow: visible;
+}
+
 td:last-child {
    width: 100%;
 }

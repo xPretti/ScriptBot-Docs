@@ -66,7 +66,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Log",
       aliases: "",
       description: {
-         simple: "Imprime um texto nas Logs do ScriptBot",
+         simple: "Imprime um texto nas Logs do ScriptBot;",
          complex:
             "Esta função é usada para imprimir um texto nas Logs do ScriptBot, ela é útil quando queremos separar textos de debug das Logs do Metatrader.",
       },
@@ -123,7 +123,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Print",
       aliases: "",
       description: {
-         simple: "Imprime um texto nas logs do Metatrader",
+         simple: "Imprime um texto nas logs do Metatrader;",
          complex:
             "Esta função é usada para imprimir um texto nas logs do Metatrader, muito utilizada para depurar o código.",
       },
@@ -181,7 +181,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Indicator",
       aliases: "IND",
       description: {
-         simple: "Retorna o valor do buffer de um indicador",
+         simple: "Retorna o valor do buffer de um indicador;",
          complex:
             "Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico.",
       },
@@ -232,7 +232,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Indicator'X'",
       aliases: "IND'X'",
       description: {
-         simple: "Retorna o valor do buffer de um indicador",
+         simple: "Retorna o valor do buffer de um indicador;",
          complex:
             "Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico. Esta função é prefixada, sendo necessário substituir o 'x' por um valor entre 0 e 20, onde 'x' representa a categoria em que o indicador está configurado nas definições do robô.",
       },
@@ -279,7 +279,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ClearDouble",
       aliases: "",
       description: {
-         simple: "Remove todas as variáveis criadas pelo usuário",
+         simple: "Remove todas as variáveis criadas pelo usuário;",
          complex:
             "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
@@ -307,7 +307,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ClearInt",
       aliases: "",
       description: {
-         simple: "Remove todas as variáveis criadas pelo usuário",
+         simple: "Remove todas as variáveis criadas pelo usuário;",
          complex:
             "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
@@ -335,7 +335,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ClearString",
       aliases: "",
       description: {
-         simple: "Remove todas as variáveis criadas pelo usuário",
+         simple: "Remove todas as variáveis criadas pelo usuário;",
          complex:
             "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
@@ -363,7 +363,7 @@ export const FUNCTION_MAPPING: Map<
       name: "CreateDouble",
       aliases: "",
       description: {
-         simple: "Cria uma variável caso ela não exista",
+         simple: "Cria uma variável caso ela não exista;",
          complex: "Esta função permite criar uma variável caso não exista.",
       },
       parameters: [
@@ -404,7 +404,7 @@ export const FUNCTION_MAPPING: Map<
       name: "CreateInt",
       aliases: "",
       description: {
-         simple: "Cria uma variável caso ela não exista",
+         simple: "Cria uma variável caso ela não exista;",
          complex: "Esta função permite criar uma variável caso não exista.",
       },
       parameters: [
@@ -445,7 +445,7 @@ export const FUNCTION_MAPPING: Map<
       name: "CreateString",
       aliases: "",
       description: {
-         simple: "Cria uma variável caso ela não exista",
+         simple: "Cria uma variável caso ela não exista;",
          complex: "Esta função permite criar uma variável caso não exista.",
       },
       parameters: [
@@ -486,7 +486,7 @@ export const FUNCTION_MAPPING: Map<
       name: "GetDouble",
       aliases: "",
       description: {
-         simple: "Retorna o valor de uma variável criada pelo usuário",
+         simple: "Retorna o valor de uma variável criada pelo usuário;",
          complex:
             "Esta função retorna o valor de uma variável criada pelo usuário.",
       },
@@ -520,7 +520,7 @@ export const FUNCTION_MAPPING: Map<
       name: "GetInt",
       aliases: "",
       description: {
-         simple: "Retorna o valor de uma variável criada pelo usuário",
+         simple: "Retorna o valor de uma variável criada pelo usuário;",
          complex:
             "Esta função retorna o valor de uma variável criada pelo usuário.",
       },
@@ -554,7 +554,7 @@ export const FUNCTION_MAPPING: Map<
       name: "GetString",
       aliases: "",
       description: {
-         simple: "Retorna o valor de uma variável criada pelo usuário",
+         simple: "Retorna o valor de uma variável criada pelo usuário;",
          complex:
             "Esta função retorna o valor de uma variável criada pelo usuário.",
       },
@@ -588,7 +588,7 @@ export const FUNCTION_MAPPING: Map<
       name: "RemoveDouble",
       aliases: "",
       description: {
-         simple: "Remove uma variável caso ela exista",
+         simple: "Remove uma variável caso ela exista;",
          complex: "Esta função permite remover uma variável caso ela exista.",
       },
       parameters: [
@@ -622,7 +622,7 @@ export const FUNCTION_MAPPING: Map<
       name: "RemoveInt",
       aliases: "",
       description: {
-         simple: "Remove uma variável caso ela exista",
+         simple: "Remove uma variável caso ela exista;",
          complex: "Esta função permite remover uma variável caso ela exista.",
       },
       parameters: [
@@ -656,7 +656,7 @@ export const FUNCTION_MAPPING: Map<
       name: "RemoveString",
       aliases: "",
       description: {
-         simple: "Remove uma variável caso ela exista",
+         simple: "Remove uma variável caso ela exista;",
          complex: "Esta função permite remover uma variável caso ela exista.",
       },
       parameters: [
@@ -668,7 +668,7 @@ export const FUNCTION_MAPPING: Map<
             comment: "Nome da variável.",
          },
       ],
-      examples: ['RemoveString["Name"'],
+      examples: ['RemoveString["Name"]'],
       returns: {
          success: {
             message: "Retorna um boolean (true) se a variável foi removida..",
@@ -690,7 +690,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ReplaceDouble",
       aliases: "",
       description: {
-         simple: "Substitui o valor de uma variável caso ela exista",
+         simple: "Substitui o valor de uma variável caso ela exista;",
          complex:
             "Esta função permite substituir o valor de uma variável caso não exista.",
       },
@@ -732,7 +732,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ReplaceInt",
       aliases: "",
       description: {
-         simple: "Substitui o valor de uma variável caso ela exista",
+         simple: "Substitui o valor de uma variável caso ela exista;",
          complex:
             "Esta função permite substituir o valor de uma variável caso não exista.",
       },
@@ -774,7 +774,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ReplaceString",
       aliases: "",
       description: {
-         simple: "Substitui o valor de uma variável caso ela exista",
+         simple: "Substitui o valor de uma variável caso ela exista;",
          complex:
             "Esta função permite substituir o valor de uma variável caso não exista.",
       },
@@ -816,7 +816,7 @@ export const FUNCTION_MAPPING: Map<
       name: "SetDouble",
       aliases: "",
       description: {
-         simple: "Define o valor de uma variável ou cria uma nova",
+         simple: "Define o valor de uma variável ou cria uma nova;",
          complex:
             "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
       },
@@ -859,7 +859,7 @@ export const FUNCTION_MAPPING: Map<
       name: "SetInt",
       aliases: "",
       description: {
-         simple: "Define o valor de uma variável ou cria uma nova",
+         simple: "Define o valor de uma variável ou cria uma nova;",
          complex:
             "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
       },
@@ -902,7 +902,7 @@ export const FUNCTION_MAPPING: Map<
       name: "SetString",
       aliases: "",
       description: {
-         simple: "Define o valor de uma variável ou cria uma nova",
+         simple: "Define o valor de uma variável ou cria uma nova;",
          complex:
             "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
       },
@@ -946,7 +946,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Open",
       aliases: "O",
       description: {
-         simple: "Retorna o preço de abertura de uma vela",
+         simple: "Retorna o preço de abertura de uma vela;",
          complex: "Esta função retorna o preço de abertura de uma vela.",
       },
       parameters: [
@@ -996,7 +996,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Close",
       aliases: "C",
       description: {
-         simple: "Retorna o preço de fechamento de uma vela",
+         simple: "Retorna o preço de fechamento de uma vela;",
          complex: "Esta função retorna o preço de fechamento de uma vela.",
       },
       parameters: [
@@ -1046,7 +1046,7 @@ export const FUNCTION_MAPPING: Map<
       name: "High",
       aliases: "H",
       description: {
-         simple: "Retorna o preço da máxima de uma vela",
+         simple: "Retorna o preço da máxima de uma vela;",
          complex: "Esta função retorna o preço da máxima de uma vela.",
       },
       parameters: [
@@ -1096,7 +1096,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Low",
       aliases: "L",
       description: {
-         simple: "Retorna o preço da mínima de uma vela",
+         simple: "Retorna o preço da mínima de uma vela;",
          complex: "Esta função retorna o preço da mínima de uma vela.",
       },
       parameters: [
@@ -1146,7 +1146,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Time",
       aliases: "T",
       description: {
-         simple: "Retorna o horário de abertura de uma vela",
+         simple: "Retorna o horário de abertura de uma vela;",
          complex: "Esta função retorna o horário de abertura de uma vela.",
       },
       parameters: [
@@ -1197,7 +1197,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DIR",
       description: {
          simple:
-            "Retorna a direção de uma vela (-1 = Negativa, 0 = Neutra, 1 = Positiva)",
+            "Retorna a direção de uma vela (-1 = Negativa, 0 = Neutra, 1 = Positiva);",
          complex:
             "Esta função retorna a direção simplificada de uma vela, ou seja, se a vela é positiva ou negativa. (-1 = Negativa, 0 = Neutra, 1 = Positiva)",
       },
@@ -1252,7 +1252,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Spread",
       aliases: "SPD",
       description: {
-         simple: "Retorna a quantidade de spread de uma vela",
+         simple: "Retorna a quantidade de spread de uma vela;",
          complex: "Esta função retorna a quantidade de spread de uma vela.",
       },
       parameters: [
@@ -1302,7 +1302,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Candle",
       aliases: "",
       description: {
-         simple: "Retorna o index da vela",
+         simple: "Retorna o index da vela;",
          complex:
             "Esta função retorna o identificador da vela, usado para obter o index utilizando o horário especificado.",
       },
@@ -1358,7 +1358,7 @@ export const FUNCTION_MAPPING: Map<
       name: "MaxHigh",
       aliases: "MaxH",
       description: {
-         simple: "Retorna o preço máximo entre duas posições de velas",
+         simple: "Retorna o preço máximo entre duas posições de velas;",
          complex:
             "Esta função retorna o maior preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da maior vela encontrada nesse intervalo.",
       },
@@ -1416,7 +1416,7 @@ export const FUNCTION_MAPPING: Map<
       name: "MaxLow",
       aliases: "MaxL",
       description: {
-         simple: "Retorna o preço mínimo entre duas posições de velas",
+         simple: "Retorna o preço mínimo entre duas posições de velas;",
          complex:
             "Esta função retorna o menor preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da menor vela encontrada nesse intervalo.",
       },
@@ -1474,7 +1474,7 @@ export const FUNCTION_MAPPING: Map<
       name: "TickVolume",
       aliases: "TICKV",
       description: {
-         simple: "Retorna o volume de uma vela",
+         simple: "Retorna o volume de uma vela;",
          complex:
             "Esta função retorna o volume de uma vela com base nos dados de tick.",
       },
@@ -1525,7 +1525,7 @@ export const FUNCTION_MAPPING: Map<
       name: "RealVolume",
       aliases: "REALV",
       description: {
-         simple: "Retorna o volume de uma vela usando os dados reais",
+         simple: "Retorna o volume de uma vela usando os dados reais;",
          complex:
             "Esta função retorna o volume de uma vela com base em dados reais. Em alguns mercados, no entanto, o volume pode ser constantemente zero devido à ausência de dados de volume no feed de dados, seja por limitações da corretora, do tipo de ativo (como forex, que muitas vezes não fornece volume real), ou pela forma como o volume é calculado e disponibilizado.",
       },
@@ -1577,7 +1577,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Median",
       aliases: "Med",
       description: {
-         simple: "Retorna a media entre dois valores",
+         simple: "Retorna a media entre dois valores;",
          complex: "Esta função retorna a media entre dois valores.",
       },
       parameters: [
@@ -1617,7 +1617,7 @@ export const FUNCTION_MAPPING: Map<
       name: "TickToPoint",
       aliases: "TickTP",
       description: {
-         simple: "Retorna o valor de tick convertido em pontos",
+         simple: "Retorna o valor de tick convertido em pontos;",
          complex: "Esta função retorna o valor de tick convertido em pontos.",
       },
       parameters: [
@@ -1658,7 +1658,7 @@ export const FUNCTION_MAPPING: Map<
       name: "MoneyToPoint",
       aliases: "MoneyTP",
       description: {
-         simple: "Retorna o valor na moeda convertida em pontos",
+         simple: "Retorna o valor na moeda convertida em pontos;",
          complex: "Esta função retorna o valor na moeda convertida em pontos.",
       },
       parameters: [
@@ -1699,7 +1699,7 @@ export const FUNCTION_MAPPING: Map<
       name: "PipToPoint",
       aliases: "PipTP",
       description: {
-         simple: "Retorna o valor do pip convertido em pontos",
+         simple: "Retorna o valor do pip convertido em pontos;",
          complex: "Esta função retorna o valor do pip convertido em pontos.",
       },
       parameters: [
@@ -1740,7 +1740,7 @@ export const FUNCTION_MAPPING: Map<
       name: "CountStep",
       aliases: "Count",
       description: {
-         simple: "Retorna a quantidade de passos que ocorreram",
+         simple: "Retorna a quantidade de passos que ocorreram;",
          complex:
             "Esta função calcula a quantidade de passos realizados e arredonda o resultado para o inteiro mais próximo de zero.",
       },
@@ -1782,7 +1782,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "CountGrad",
       description: {
          simple:
-            "Retorna a quantidade de passos que ocorreram de forma gradual",
+            "Retorna a quantidade de passos que ocorreram de forma gradual;",
          complex:
             "Esta função calcula a quantidade de passos realizados de forma gradual e arredonda o resultado para o inteiro mais próximo de zero.",
       },
@@ -1832,7 +1832,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "Divi",
       description: {
          simple:
-            "Retorna a divisão entre dois valores, permitindo que o denominador seja zero",
+            "Retorna a divisão entre dois valores, permitindo que o denominador seja zero;",
          complex:
             "Esta função retorna a divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
       },
@@ -1874,7 +1874,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "RDivi",
       description: {
          simple:
-            "Retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero",
+            "Retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero;",
          complex:
             "Esta função retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
       },
@@ -1916,7 +1916,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple:
-            "Retorna a variação percentual de value até target, com value sendo o valor base",
+            "Retorna a variação percentual de value até target, com value sendo o valor base;",
          complex:
             "Esta função retorna a variação percentual de value até target, com value sendo o valor base.",
       },
@@ -1957,7 +1957,7 @@ export const FUNCTION_MAPPING: Map<
       name: "PercentOfValue",
       aliases: "PercentValue",
       description: {
-         simple: "Retorna a quantidade percentual de um valor",
+         simple: "Retorna a quantidade percentual de um valor;",
          complex: "Esta função retorna a quantidade percentual de um valor.",
       },
       parameters: [
@@ -2000,7 +2000,7 @@ export const FUNCTION_MAPPING: Map<
       name: "HitPercent",
       aliases: "",
       description: {
-         simple: "Retorna a quantidade percentual de acerto",
+         simple: "Retorna a quantidade percentual de acerto;",
          complex:
             "Esta função retorna a quantidade percentual de acerto entre gain e loss. A variação sempre será de 0% a 100%.",
       },
@@ -2044,7 +2044,7 @@ export const FUNCTION_MAPPING: Map<
       name: "CorrectPrice",
       aliases: "FixPrice",
       description: {
-         simple: "Retorna o valor correto de um preço",
+         simple: "Retorna o valor correto de um preço;",
          complex:
             "Esta função corrige preços inválidos, convertendo-os para valores válidos conforme o passo do mercado.",
       },
@@ -2086,7 +2086,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Random",
       aliases: "",
       description: {
-         simple: "Retorna um valor inteiro aleatório entre dois valores",
+         simple: "Retorna um valor inteiro aleatório entre dois valores;",
          complex:
             "Esta função retorna um valor inteiro aleatório entre dois valores.",
       },
@@ -2127,7 +2127,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Round",
       aliases: "",
       description: {
-         simple: "Retorna o valor arredondado",
+         simple: "Retorna o valor arredondado;",
          complex: "Esta função retorna o valor arredondado.",
       },
       parameters: [
@@ -2160,7 +2160,7 @@ export const FUNCTION_MAPPING: Map<
       name: "RoundUp",
       aliases: "",
       description: {
-         simple: "Retorna o valor arredondado para cima",
+         simple: "Retorna o valor arredondado para cima;",
          complex:
             "Esta função retorna o valor arredondado para cima, garantindo que o resultado seja sempre o próximo inteiro maior ou igual.",
       },
@@ -2198,7 +2198,7 @@ export const FUNCTION_MAPPING: Map<
       name: "RoundDown",
       aliases: "",
       description: {
-         simple: "Retorna o valor arredondado para baixo",
+         simple: "Retorna o valor arredondado para baixo;",
          complex:
             "Esta função retorna o valor arredondado para baixo, garantindo que o resultado seja sempre o próximo inteiro menor ou igual.",
       },
@@ -2236,7 +2236,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Max",
       aliases: "",
       description: {
-         simple: "Retorna o maior valor entre dois números",
+         simple: "Retorna o maior valor entre dois números;",
          complex:
             "Esta função retorna o maior valor entre dois números fornecidos.",
       },
@@ -2277,7 +2277,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Min",
       aliases: "",
       description: {
-         simple: "Retorna o menor valor entre dois números",
+         simple: "Retorna o menor valor entre dois números;",
          complex:
             "Esta função retorna o menor valor entre dois números fornecidos.",
       },
@@ -2318,7 +2318,7 @@ export const FUNCTION_MAPPING: Map<
       name: "IsChance",
       aliases: "Chance",
       description: {
-         simple: "Retorna verdadeiro com base em uma chance percentual",
+         simple: "Retorna verdadeiro com base em uma chance percentual;",
          complex:
             "Esta função retorna verdadeiro com base em uma chance percentual entre 0 e 100. Por exemplo, ao passar 30, há aproximadamente 30% de chance de retornar verdadeiro.",
       },
@@ -2355,7 +2355,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Decimals",
       aliases: "Decimal",
       description: {
-         simple: "Retorna o número de casas decimais de um valor",
+         simple: "Retorna o número de casas decimais de um valor;",
          complex:
             "Esta função retorna a quantidade de casas decimais presentes em um número, indicando seu nível de precisão.",
       },
@@ -2390,7 +2390,7 @@ export const FUNCTION_MAPPING: Map<
       name: "GetVolume",
       aliases: "GetVol",
       description: {
-         simple: "Retorna o volume que a ordem será executada",
+         simple: "Retorna o volume que a ordem será executada;",
          complex:
             "Esta função retorna o volume que a ordem será colocada no mercado.",
       },
@@ -2416,7 +2416,7 @@ export const FUNCTION_MAPPING: Map<
       name: "SetVolume",
       aliases: "SetVol",
       description: {
-         simple: "Define o novo volume da ordem",
+         simple: "Define o novo volume da ordem;",
          complex:
             "Esta função define o novo volume utilizado no sistema de envio de ordens. Ela altera diretaemente o valor no gerenciador de volume, portanto, é importante considerar o método de cálculo do mesmo.",
       },
@@ -2452,7 +2452,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ToPositive",
       aliases: "Pos",
       description: {
-         simple: "Retorna o valor absoluto de um número",
+         simple: "Retorna o valor absoluto de um número;",
          complex:
             "Esta função retorna o valor absoluto de um número, ou seja, o seu valor sem sinal (sempre positivo).",
       },
@@ -2489,7 +2489,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ToNegative",
       aliases: "Neg",
       description: {
-         simple: "Retorna o valor negativo de um número",
+         simple: "Retorna o valor negativo de um número;",
          complex:
             "Esta função retorna o valor negativo de um número, ou seja, o seu valor com sinal (sempre negativo).",
       },
@@ -2527,7 +2527,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple:
-            "Retorna o horário em forma de texto simples para data em segundos",
+            "Retorna o horário em forma de texto simples para data em segundos;",
          complex:
             "Esta função retorna o horário em forma de texto para número em segundos. Com esta função você pode acessar a vela do dia usando um horário em forma de texto, por exemplo '13:00'.",
       },
@@ -2569,7 +2569,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ToTimeModify",
       aliases: "TMod",
       description: {
-         simple: "Retorna o horário modificado",
+         simple: "Retorna o horário modificado;",
          complex:
             "Esta função permite modificar um horário passado de referencia.",
       },
@@ -2654,7 +2654,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ToTimeFormat",
       aliases: "TFormat",
       description: {
-         simple: "Retorna o horário em forma de texto",
+         simple: "Retorna o horário em forma de texto;",
          complex:
             "Esta função transforma um valor em segundos em uma representação textual de horário.",
       },
@@ -2690,7 +2690,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ToFormat",
       aliases: "Format",
       description: {
-         simple: "Retorna uma nova string formatada",
+         simple: "Retorna uma nova string formatada;",
          complex:
             "Esta função permite modificar um texto, formatando-o de acordo com os parâmetros definidos internamente.",
       },
@@ -2745,7 +2745,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ToInt",
       aliases: "",
       description: {
-         simple: "Retorna o valor convertido para inteiro",
+         simple: "Retorna o valor convertido para inteiro;",
          complex:
             "Esta função retorna o valor convertido para inteiro. Se o valor for uma string, ele será convertido para zero. Caso seja um número decimal, será arredondado para o inteiro mais próximo.",
       },
@@ -2784,7 +2784,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Last",
       aliases: "",
       description: {
-         simple: "Retorna o último preço de negociação.",
+         simple: "Retorna o último preço de negociação;",
          complex:
             "Esta função retorna o valor do último preço de negociação para o símbolo especificado.",
       },
@@ -2813,7 +2813,7 @@ export const FUNCTION_MAPPING: Map<
       name: "LastHigh",
       aliases: "LastH",
       description: {
-         simple: "Retorna o maior preço do último negócio.",
+         simple: "Retorna o maior preço do último negócio;",
          complex:
             "Esta função retorna o maior preço registrado no último negócio do símbolo informado.",
       },
@@ -2842,7 +2842,7 @@ export const FUNCTION_MAPPING: Map<
       name: "LastLow",
       aliases: "LastL",
       description: {
-         simple: "Retorna o menor preço do último negócio.",
+         simple: "Retorna o menor preço do último negócio;",
          complex:
             "Esta função retorna o menor preço registrado no último negócio do símbolo informado.",
       },
@@ -2871,7 +2871,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Ask",
       aliases: "",
       description: {
-         simple: "Retorna o preço de venda (ask).",
+         simple: "Retorna o preço de venda (ask);",
          complex:
             "Esta função retorna o preço de venda (ask) atual do símbolo especificado.",
       },
@@ -2900,7 +2900,7 @@ export const FUNCTION_MAPPING: Map<
       name: "AskHigh",
       aliases: "AskH",
       description: {
-         simple: "Retorna o maior preço de venda (ask).",
+         simple: "Retorna o maior preço de venda (ask);",
          complex:
             "Esta função retorna o maior valor de ask registrado no dia para o símbolo especificado.",
       },
@@ -2929,7 +2929,7 @@ export const FUNCTION_MAPPING: Map<
       name: "AskLow",
       aliases: "AskL",
       description: {
-         simple: "Retorna o menor preço de venda (ask).",
+         simple: "Retorna o menor preço de venda (ask);",
          complex:
             "Esta função retorna o menor valor de ask registrado no dia para o símbolo especificado.",
       },
@@ -2958,7 +2958,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Bid",
       aliases: "",
       description: {
-         simple: "Retorna o preço de compra (bid).",
+         simple: "Retorna o preço de compra (bid);",
          complex:
             "Esta função retorna o preço de compra (bid) atual do símbolo especificado.",
       },
@@ -2987,7 +2987,7 @@ export const FUNCTION_MAPPING: Map<
       name: "BidHigh",
       aliases: "BidH",
       description: {
-         simple: "Retorna o maior preço de compra (bid).",
+         simple: "Retorna o maior preço de compra (bid);",
          complex:
             "Esta função retorna o maior valor de bid registrado no dia para o símbolo especificado.",
       },
@@ -3016,7 +3016,7 @@ export const FUNCTION_MAPPING: Map<
       name: "BidLow",
       aliases: "BidL",
       description: {
-         simple: "Retorna o menor preço de compra (bid).",
+         simple: "Retorna o menor preço de compra (bid);",
          complex:
             "Esta função retorna o menor valor de bid registrado no dia para o símbolo especificado.",
       },
@@ -3045,9 +3045,9 @@ export const FUNCTION_MAPPING: Map<
       name: "LastTime",
       aliases: "LastT",
       description: {
-         simple: "Retorna o horário do último negócio.",
+         simple: "Retorna o horário do último negócio;",
          complex:
-            "Esta função retorna o timestamp (horário) da última negociação para o símbolo especificado.",
+            "Esta função retorna o horário da última negociação para o símbolo especificado.",
       },
       parameters: [
          {
@@ -3074,7 +3074,7 @@ export const FUNCTION_MAPPING: Map<
       name: "DayStartTime",
       aliases: "DayST",
       description: {
-         simple: "Retorna o horário de início do pregão no dia especificado.",
+         simple: "Retorna o horário de início do pregão no dia especificado;",
          complex:
             "Esta função retorna o horário de abertura do pregão para o ativo no dia informado. Pode variar conforme o ativo e o mercado.",
       },
@@ -3110,7 +3110,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DayET",
       description: {
          simple:
-            "Retorna o horário de encerramento do pregão no dia especificado.",
+            "Retorna o horário de encerramento do pregão no dia especificado;",
          complex:
             "Esta função retorna o horário de fechamento do pregão para o ativo no dia informado.",
       },
@@ -3145,9 +3145,9 @@ export const FUNCTION_MAPPING: Map<
       name: "DayStartCandle",
       aliases: "DaySC",
       description: {
-         simple: "Retorna a vela (candle) de início do dia.",
+         simple: "Retorna a vela (candle) de início do dia;",
          complex:
-            "Esta função retorna o identificador ou timestamp da primeira vela (candle) do dia para o ativo especificado.",
+            "Esta função retorna o identificador da primeira vela (candle) do dia para o ativo especificado.",
       },
       parameters: [
          {
@@ -3180,9 +3180,9 @@ export const FUNCTION_MAPPING: Map<
       name: "DayEndCandle",
       aliases: "DayEC",
       description: {
-         simple: "Retorna a vela (candle) de fim do dia.",
+         simple: "Retorna a vela (candle) de fim do dia;",
          complex:
-            "Esta função retorna o identificador ou timestamp da última vela (candle) do dia para o ativo especificado.",
+            "Esta função retorna o identificador da última vela (candle) do dia para o ativo especificado.",
       },
       parameters: [
          {
@@ -3215,7 +3215,7 @@ export const FUNCTION_MAPPING: Map<
       name: "DayHigh",
       aliases: "DayH",
       description: {
-         simple: "Retorna o maior preço do dia.",
+         simple: "Retorna o maior preço do dia;",
          complex:
             "Esta função retorna o maior valor de preço negociado no dia, para o timeframe e símbolo informados.",
       },
@@ -3259,7 +3259,7 @@ export const FUNCTION_MAPPING: Map<
       name: "DayLow",
       aliases: "DayL",
       description: {
-         simple: "Retorna o menor preço do dia.",
+         simple: "Retorna o menor preço do dia;",
          complex:
             "Esta função retorna o menor valor de preço negociado no dia, para o timeframe e símbolo informados.",
       },
@@ -3304,7 +3304,7 @@ export const FUNCTION_MAPPING: Map<
       name: "IsTime",
       aliases: "",
       description: {
-         simple: "Verifica se o tempo corresponde aos critérios informados.",
+         simple: "Verifica se o tempo corresponde aos critérios informados;",
          complex:
             "Esta função verifica se o horário de referência corresponde aos valores fornecidos para hora, minuto e segundo. Caso algum dos valores seja -1, ele será ignorado no critério.",
       },
@@ -3334,8 +3334,8 @@ export const FUNCTION_MAPPING: Map<
          },
       ],
       examples: [
-         "IsTime[TIME_CURRENT, 10] // Retorna true se a hora for 10",
-         "IsTime[TIME_CURRENT, -1, 30] // Retorna true se o minuto for 30",
+         "IsTime[TIME_CURRENT, 10] // Returns true if the hour is 10",
+         "IsTime[TIME_CURRENT, -1, 30] // Returns true if the minute is 30",
       ],
       returns: {
          success: {
@@ -3354,9 +3354,9 @@ export const FUNCTION_MAPPING: Map<
       name: "SymbolTime",
       aliases: "STime",
       description: {
-         simple: "Retorna o horário atual do símbolo.",
+         simple: "Retorna o horário atual do símbolo;",
          complex:
-            "Esta função retorna o timestamp atual do ativo (símbolo) no mercado correspondente.",
+            "Esta função retorna o horário atual do ativo (símbolo) no mercado correspondente.",
       },
       parameters: [
          {
@@ -3383,7 +3383,7 @@ export const FUNCTION_MAPPING: Map<
       name: "TimeLeft",
       aliases: "TLeft",
       description: {
-         simple: "Retorna o tempo restante da vela atual.",
+         simple: "Retorna o tempo restante da vela atual;",
          complex:
             "Esta função retorna quanto tempo falta para o término da vela atual no timeframe e símbolo especificados.",
       },
@@ -3421,7 +3421,7 @@ export const FUNCTION_MAPPING: Map<
       name: "DayOfWeek",
       aliases: "DayW",
       description: {
-         simple: "Retorna o dia da semana.",
+         simple: "Retorna o dia da semana;",
          complex:
             "Esta função retorna o dia da semana (0 = domingo, 1 = segunda, ..., 6 = sábado) do símbolo informado.",
       },
@@ -3450,7 +3450,7 @@ export const FUNCTION_MAPPING: Map<
       name: "DayOfYear",
       aliases: "DayY",
       description: {
-         simple: "Retorna o dia do ano.",
+         simple: "Retorna o dia do ano;",
          complex:
             "Esta função retorna o número do dia no ano (1 a 366) com base no horário atual do símbolo.",
       },
@@ -3479,7 +3479,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Month",
       aliases: "",
       description: {
-         simple: "Retorna o mês atual.",
+         simple: "Retorna o mês atual;",
          complex:
             "Esta função retorna o número do mês atual (1 a 12) com base no horário atual do símbolo.",
       },
@@ -3508,7 +3508,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Year",
       aliases: "",
       description: {
-         simple: "Retorna o ano atual.",
+         simple: "Retorna o ano atual;",
          complex:
             "Esta função retorna o número do ano atual com base no horário do símbolo.",
       },
@@ -3537,7 +3537,7 @@ export const FUNCTION_MAPPING: Map<
       name: "StartTime",
       aliases: "StartT",
       description: {
-         simple: "Retorna o horário inicial de referência.",
+         simple: "Retorna o horário inicial de referência;",
          complex:
             "Esta função retorna o horário de início conforme o método informado. Pode representar abertura do dia, semana, mês, etc.",
       },
@@ -3574,9 +3574,9 @@ export const FUNCTION_MAPPING: Map<
       name: "ValueOfTime",
       aliases: "ValueT",
       description: {
-         simple: "Converte o horário em valor numérico baseado no método.",
+         simple: "Converte o horário em valor numérico baseado no método;",
          complex:
-            "Esta função retorna um valor numérico representando o tempo, conforme o método especificado (como timestamp, segundos do dia, etc).",
+            "Esta função retorna um valor numérico representando o tempo, conforme o método especificado. Podendo ser segundos, minutos, horas, etc..",
       },
       parameters: [
          {

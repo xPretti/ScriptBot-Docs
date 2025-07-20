@@ -22,7 +22,7 @@ const elements =
          <thead>
             <tr>
                <th>FUNÇÕES</th>
-               <th class="aliases">{containsAliases && "ALIASES"}</th>
+               {containsAliases && <th class="aliases">ALIASES</th>}
                <th>RETORNOS</th>
             </tr>
          </thead>
@@ -39,9 +39,11 @@ const elements =
                         <CodeVar>{fn.name}</CodeVar>
                      </div>
                   </td>
-                  <td class="aliases">
-                     {fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}
-                  </td>
+                  {containsAliases && (
+                     <td class="aliases">
+                        {fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}
+                     </td>
+                  )}
                   <td>
                      <ReactFunctionModal
                         client:visible
