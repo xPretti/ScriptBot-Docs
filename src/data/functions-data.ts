@@ -3605,6 +3605,1335 @@ export const FUNCTION_MAPPING: Map<
          },
       },
    },
+   // TRADES
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "AllTotal",
+      aliases: "ATotal",
+      description: {
+         simple:
+            "Retorna a quantidade total de negociações do tipo especificado.",
+         complex:
+            "Esta função retorna o total de negociações abertas do tipo especificado, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['AllTotal[TYPE_BUY, -1, 123456, M5, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o total de trades conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "AllTotalBuy",
+      aliases: "ATotalBuy",
+      description: {
+         simple: "Retorna a quantidade total de negociações de compra.",
+         complex:
+            "Esta função retorna o total de negociações de compra abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['AllTotalBuy[-1, 123456, M5, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o total de trades de compra conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "AllTotalSell",
+      aliases: "ATotalSell",
+      description: {
+         simple: "Retorna a quantidade total de negociações de venda.",
+         complex:
+            "Esta função retorna o total de negociações de venda abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['AllTotalSell[-1, 123456, M5, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o total de trades de venda conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "AllTotalAll",
+      aliases: "ATotalAll",
+      description: {
+         simple: "Retorna a quantidade total de todas as negociações.",
+         complex:
+            "Esta função retorna o total de todas as negociações abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['AllTotalAll[-1, 123456, M5, "PETR4"]'],
+      returns: {
+         success: {
+            message: "Retorna o total de todos os trades conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTotal",
+      aliases: "PTotal",
+      description: {
+         simple: "Retorna a quantidade total de posições do tipo especificado.",
+         complex:
+            "Esta função retorna o total de posições abertas do tipo especificado, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de posição: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['PosTotal[TYPE_SELL, -1, 123456, M15, "VALE3"]'],
+      returns: {
+         success: {
+            message: "Retorna o total de posições conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTotalBuy",
+      aliases: "PTotalBuy",
+      description: {
+         simple: "Retorna a quantidade total de posições de compra.",
+         complex:
+            "Esta função retorna o total de posições de compra abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['PosTotalBuy[-1, 123456, H1, "PETR4"]'],
+      returns: {
+         success: {
+            message:
+               "Retorna o total de posições de compra conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTotalSell",
+      aliases: "PTotalSell",
+      description: {
+         simple: "Retorna a quantidade total de posições de venda.",
+         complex:
+            "Esta função retorna o total de posições de venda abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['PosTotalSell[-1, 123456, D1, "ITUB4"]'],
+      returns: {
+         success: {
+            message:
+               "Retorna o total de posições de venda conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTotalAll",
+      aliases: "PTotalAll",
+      description: {
+         simple: "Retorna a quantidade total de todas as posições.",
+         complex:
+            "Esta função retorna o total de todas as posições abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['PosTotalAll[-1, 123456, W1, "BBDC4"]'],
+      returns: {
+         success: {
+            message:
+               "Retorna o total de todas as posições conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderTotal",
+      aliases: "OTotal",
+      description: {
+         simple: "Retorna a quantidade total de ordens do tipo especificado.",
+         complex:
+            "Esta função retorna o total de ordens pendentes do tipo especificado, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de ordem: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['OrderTotal[TYPE_BUY, -1, 123456, M30, "ABEV3"]'],
+      returns: {
+         success: {
+            message: "Retorna o total de ordens conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderTotalBuy",
+      aliases: "OTotalBuy",
+      description: {
+         simple: "Retorna a quantidade total de ordens de compra.",
+         complex:
+            "Esta função retorna o total de ordens de compra pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['OrderTotalBuy[-1, 123456, H4, "WEGE3"]'],
+      returns: {
+         success: {
+            message: "Retorna o total de ordens de compra conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderTotalSell",
+      aliases: "OTotalSell",
+      description: {
+         simple: "Retorna a quantidade total de ordens de venda.",
+         complex:
+            "Esta função retorna o total de ordens de venda pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['OrderTotalSell[-1, 123456, D1, "LREN3"]'],
+      returns: {
+         success: {
+            message: "Retorna o total de ordens de venda conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderTotalAll",
+      aliases: "OTotalAll",
+      description: {
+         simple: "Retorna a quantidade total de todas as ordens.",
+         complex:
+            "Esta função retorna o total de todas as ordens pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: ['OrderTotalAll[-1, 123456, MN1, "BBAS3"]'],
+      returns: {
+         success: {
+            message: "Retorna o total de todas as ordens conforme os filtros.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosDouble",
+      aliases: "",
+      description: {
+         simple:
+            "Retorna o valor de uma propriedade numérica (double) de uma posição.",
+         complex:
+            "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma posição aberta, identificada pelo seu ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+         {
+            type: {
+               type: "ENUM_POS_DOUBLE",
+               typeLink:
+                  "/fundamentals/scriptbot-enumerators#position-property-double",
+            },
+            name: "property",
+            comment:
+               "Propriedade da posição: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura).",
+         },
+      ],
+      examples: [
+         "PosDouble[123456, TYPE_VOLUME] // Retorna o volume/lotes da posição",
+         "PosDouble[Ticket[0], TYPE_OPEN] // Retorna o preço de abertura da posição",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor da propriedade solicitada.",
+            type: { type: "double" },
+         },
+         error: {
+            message:
+               "Retorna 0.0 se a posição não existir ou a propriedade for inválida.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosInt",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor de uma propriedade inteira de uma posição.",
+         complex:
+            "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma posição aberta, identificada pelo seu ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+         {
+            type: {
+               type: "ENUM_POS_INT",
+               typeLink:
+                  "/fundamentals/scriptbot-enumerators#position-property-int",
+            },
+            name: "property",
+            comment:
+               "Propriedade da posição: 'TYPE_TIME' (timestamp de abertura), 'TYPE_MAGIC' (número mágico).",
+         },
+      ],
+      examples: [
+         "PosInt[123456, TYPE_TIME] // Retorna o timestamp de abertura da posição",
+         "PosInt[Ticket[0], TYPE_MAGIC] // Retorna o número mágico da posição",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor da propriedade solicitada.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a posição não existir ou a propriedade for inválida.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosString",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor de uma propriedade textual de uma posição.",
+         complex:
+            "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma posição aberta, identificada pelo seu ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+         {
+            type: {
+               type: "ENUM_POS_STRING",
+               typeLink:
+                  "/fundamentals/scriptbot-enumerators#position-property-string",
+            },
+            name: "property",
+            comment:
+               "Propriedade da posição: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação).",
+         },
+      ],
+      examples: [
+         "PosString[123456, TYPE_SYMBOL] // Retorna o símbolo do ativo da posição",
+         "PosString[Ticket[0], TYPE_COMMENT] // Retorna o comentário da posição",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor da propriedade solicitada.",
+            type: { type: "string" },
+         },
+         error: {
+            message:
+               "Retorna uma string vazia se a posição não existir ou a propriedade for inválida.",
+            type: { type: "string" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTicket",
+      aliases: "PTicket",
+      description: {
+         simple: "Retorna o ticket de uma posição.",
+         complex:
+            "Esta função retorna o ticket de uma posição aberta usando os parâmetros informados.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "index",
+            comment: "Indice da posição. Começando com 0 para a mais atual.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: [
+         "PosTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o ticket da posição.",
+            type: { type: "ulong" },
+         },
+         error: {
+            message:
+               "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            type: { type: "ulong" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosCurrent",
+      aliases: "PCurrent",
+      description: {
+         simple: "Retorna o preço atual de uma posição aberta.",
+         complex:
+            "Esta função retorna o preço atual de uma posição aberta identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosCurrent[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o preço atual da posição.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosOpen",
+      aliases: "PO",
+      description: {
+         simple: "Retorna o preço de abertura de uma posição.",
+         complex:
+            "Esta função retorna o preço de abertura de uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosOpen[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o preço de abertura da posição.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosProfit",
+      aliases: "PProfit",
+      description: {
+         simple: "Retorna o lucro atual de uma posição.",
+         complex:
+            "Esta função retorna o lucro ou prejuízo atual (em moeda do ativo) de uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosProfit[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o lucro/prejuízo atual da posição.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosStop",
+      aliases: "PSL",
+      description: {
+         simple: "Retorna o preço do Stop Loss de uma posição.",
+         complex:
+            "Esta função retorna o preço definido para o Stop Loss de uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosStop[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o preço do Stop Loss.",
+            type: { type: "double" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a posição não tiver Stop Loss definido ou não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosSwap",
+      aliases: "PSWAP",
+      description: {
+         simple: "Retorna o valor do swap acumulado de uma posição.",
+         complex:
+            "Esta função retorna o valor total de swap acumulado para uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosSwap[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o valor acumulado de swap.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTake",
+      aliases: "PTP",
+      description: {
+         simple: "Retorna o preço do Take Profit de uma posição.",
+         complex:
+            "Esta função retorna o preço definido para o Take Profit de uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosTake[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o preço do Take Profit.",
+            type: { type: "double" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a posição não tiver Take Profit definido ou não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosVolume",
+      aliases: "PVol",
+      description: {
+         simple: "Retorna o volume de uma posição.",
+         complex:
+            "Esta função retorna o volume (tamanho) de uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosVolume[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o volume da posição.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosIdentifier",
+      aliases: "PIdent",
+      description: {
+         simple: "Retorna o identificador único de uma posição.",
+         complex:
+            "Esta função retorna o identificador da posição, um valor único atribuído a cada nova posição aberta, que permanece inalterado durante toda a sua existência. Alterações na posição não modificam esse identificador.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosIdentifier[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o ticket da posição.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosMagic",
+      aliases: "PMagic",
+      description: {
+         simple: "Retorna o número mágico de uma posição.",
+         complex:
+            "Esta função retorna o número mágico (identificador do robô) de uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosMagic[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o número mágico da posição.",
+            type: { type: "ulong" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "ulong" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosReason",
+      aliases: "PReason",
+      description: {
+         simple: "Retorna o motivo de abertura de uma posição.",
+         complex:
+            "Esta função retorna o código que indica o motivo pelo qual a posição foi aberta.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosReason[Ticket[0]]"],
+      returns: {
+         success: {
+            message:
+               "Retorna o código do motivo de abertura. 0: Terminal desktop. 1: Aplicativo móvel. 2: Plataforma web. 3: Expert Advisor, script ou outro código MQL5",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTime",
+      aliases: "PT",
+      description: {
+         simple: "Retorna o horário de abertura de uma posição.",
+         complex:
+            "Esta função retorna o horário de abertura de uma posição no formato datetime.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosTime[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o datetime de abertura da posição.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTimeMsc",
+      aliases: "PTMsc",
+      description: {
+         simple:
+            "Retorna o horário de abertura de uma posição em milissegundos.",
+         complex:
+            "Esta função retorna o horário de abertura de uma posição no formato datetime em milissegundos desde 01/01/1970.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosTimeMsc[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o timestamp em milissegundos.",
+            type: { type: "long" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "long" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTimeUpdate",
+      aliases: "PTUpdate",
+      description: {
+         simple: "Retorna o horário da última atualização de uma posição.",
+         complex:
+            "Esta função retorna o horário da última atualização (modificação) de uma posição no formato datetime.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosTimeUpdate[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o datetime da última atualização.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTimeUpdateMsc",
+      aliases: "PTUpdateMsc",
+      description: {
+         simple:
+            "Retorna o horário da última atualização de uma posição em milissegundos.",
+         complex:
+            "Esta função retorna o horário da última atualização de uma posição no formato datetime em milissegundos desde 01/01/1970.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosTimeUpdateMsc[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o timestamp em milissegundos.",
+            type: { type: "long" },
+         },
+         error: {
+            message: "Retorna 0 se a posição não for encontrada.",
+            type: { type: "long" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosType",
+      aliases: "PType",
+      description: {
+         simple: "Retorna o tipo de uma posição (compra/venda).",
+         complex:
+            "Esta função retorna o tipo da posição (0 para compra, 1 para venda) identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosType[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna 0 (compra) ou 1 (venda).",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna -1 se a posição não for encontrada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosSymbol",
+      aliases: "PSymbol",
+      description: {
+         simple: "Retorna o símbolo do ativo de uma posição.",
+         complex:
+            "Esta função retorna o símbolo do ativo negociado em uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosSymbol[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o símbolo do ativo.",
+            type: { type: "string" },
+         },
+         error: {
+            message: "Retorna string vazia se a posição não for encontrada.",
+            type: { type: "string" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosComment",
+      aliases: "PComment",
+      description: {
+         simple: "Retorna o comentário associado a uma posição.",
+         complex:
+            "Esta função retorna o comentário/texto descritivo associado a uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosComment[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o comentário da posição.",
+            type: { type: "string" },
+         },
+         error: {
+            message: "Retorna string vazia se a posição não for encontrada.",
+            type: { type: "string" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosExternal",
+      aliases: "PExternal",
+      description: {
+         simple: "Retorna o ID externo de uma posição.",
+         complex:
+            "Esta função retorna o identificador externo (gerado pelo servidor) de uma posição identificada pelo ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição.",
+         },
+      ],
+      examples: ["PosExternal[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o ID externo da posição.",
+            type: { type: "string" },
+         },
+         error: {
+            message: "Retorna string vazia se a posição não for encontrada.",
+            type: { type: "string" },
+         },
+      },
+   },
 ].forEach((fn: FunctionModel) => {
    const existing = FUNCTION_MAPPING.get(fn.category);
    if (!existing) {

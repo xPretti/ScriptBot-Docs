@@ -4,7 +4,7 @@ title: ScriptBot Enumerators
 
 import CodeVar from "@components/CodeVar.astro";
 
-### Positions:
+## Trade:
 
 > Enumerador referente ao tipo de posição/ordem.
 
@@ -14,7 +14,7 @@ import CodeVar from "@components/CodeVar.astro";
 | <CodeVar>TYPE_BUY</CodeVar>  | Apenas posições de compra; |
 | <CodeVar>TYPE_SELL</CodeVar> | Apenas posições de venda;  |
 
-### Time historic:
+## Time historic:
 
 > Enumerador referente ao tipo de tempo histórico.
 
@@ -26,7 +26,7 @@ import CodeVar from "@components/CodeVar.astro";
 | <CodeVar>TYPE_YEAR</CodeVar>  | Apenas o histórico do ano;    |
 | <CodeVar>TYPE_ALL</CodeVar>   | Histórico completo;           |
 
-### Time type:
+## Time type:
 
 > Enumerador referente ao tipo de tempo.
 
@@ -40,3 +40,87 @@ import CodeVar from "@components/CodeVar.astro";
 | <CodeVar>TYPE_DAY_YEAR</CodeVar> | Apenas o dia do ano;    |
 | <CodeVar>TYPE_MONTH</CodeVar>    | Apenas o mês;           |
 | <CodeVar>TYPE_YEAR</CodeVar>     | Apenas o ano;           |
+
+## Position property double:
+
+> Enumerador referente a propriedade da posição.
+
+| VARIÁVEIS                       | RETORNOS               |
+| ------------------------------- | ---------------------- |
+| <CodeVar>TYPE_VOLUME</CodeVar>  | Volume de uma posição; |
+| <CodeVar>TYPE_OPEN</CodeVar>    | Preço de abertura;     |
+| <CodeVar>TYPE_SL</CodeVar>      | Preço do stop;         |
+| <CodeVar>TYPE_TP</CodeVar>      | Preço do take;         |
+| <CodeVar>TYPE_CURRENT</CodeVar> | Preço atual;           |
+| <CodeVar>TYPE_SWAP</CodeVar>    | Swap acumulativo;      |
+| <CodeVar>TYPE_PROFIT</CodeVar>  | Lucro corrente;        |
+
+## Position property int:
+
+> Enumerador referente a propriedade da posição.
+
+| VARIÁVEIS                               | RETORNOS                                                                                                                                        |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| <CodeVar>TYPE_TICKET</CodeVar>          | Bilhete da posição;                                                                                                                             |
+| <CodeVar>TYPE_TIME</CodeVar>            | Hora de abertura de uma posição;                                                                                                                |
+| <CodeVar>TYPE_TIME_MSC</CodeVar>        | Posição de tempo de abertura em milissegundos desde 01.01.1970;                                                                                 |
+| <CodeVar>TYPE_TIME_UPDATE</CodeVar>     | Posição de tempo de alteração;                                                                                                                  |
+| <CodeVar>TYPE_TIME_UPDATE_MSC</CodeVar> | Posição de tempo de alteração em milissegundo desde 01.01.1970;                                                                                 |
+| <CodeVar>TYPE_TYPE</CodeVar>            | Tipo de posição; (0: Compra, 1: Venda)                                                                                                          |
+| <CodeVar>TYPE_MAGIC</CodeVar>           | Número mágico de uma posição;                                                                                                                   |
+| <CodeVar>TYPE_IDENTIFIER</CodeVar>      | Identificador de uma posição;                                                                                                                   |
+| <CodeVar>TYPE_REASON</CodeVar>          | Razão para a abertura da posição; (0: Terminal desktop, 1: Aplicativo móvel, 2: Plataforma web, 3: Expert Advisor, script ou outro código MQL5) |
+
+## Position property string:
+
+> Enumerador referente a propriedade da posição.
+
+| VARIÁVEIS                           | RETORNOS                                                              |
+| ----------------------------------- | --------------------------------------------------------------------- |
+| <CodeVar>TYPE_SYMBOL</CodeVar>      | Simbolo da posição;                                                   |
+| <CodeVar>TYPE_COMMENT</CodeVar>     | Comentario da posição;                                                |
+| <CodeVar>TYPE_EXTERNAL_ID</CodeVar> | ID de posição no sistema externo de negociação (na bolsa de valores); |
+
+## Order property double:
+
+> Enumerador referente a propriedade da ordem.
+
+| VARIÁVEIS                              | RETORNOS                      |
+| -------------------------------------- | ----------------------------- |
+| <CodeVar>TYPE_VOLUME_INITIAL</CodeVar> | Volume inicial da ordem;      |
+| <CodeVar>TYPE_VOLUME</CodeVar>         | Volume atual da ordem;        |
+| <CodeVar>TYPE_OPEN</CodeVar>           | Preço de abertura da ordem;   |
+| <CodeVar>TYPE_SL</CodeVar>             | Preço do stop da ordem;       |
+| <CodeVar>TYPE_TP</CodeVar>             | Preço do take da ordem;       |
+| <CodeVar>TYPE_CURRENT</CodeVar>        | Preço atual da ordem;         |
+| <CodeVar>TYPE_STOP_LIMIT</CodeVar>     | Preço do stop limit da ordem; |
+
+## Order property int:
+
+> Enumerador referente a propriedade da ordem.
+
+| VARIÁVEIS                               | RETORNOS                                                                                                                                                                  |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <CodeVar>TYPE_TICKET</CodeVar>          | Bilhete da ordem;                                                                                                                                                         |
+| <CodeVar>TYPE_TIME_SETUP</CodeVar>      | Hora da configuração da ordem;                                                                                                                                            |
+| <CodeVar>TYPE_TYPE</CodeVar>            | Tipo da ordem; (0: Compra mercado, 1: Venda mercado, 2: Buy Limit, 3: Sell Limit, 4: Buy Stop, 5: Sell Stop, 6: Buy Stop Limit, 7: Sell Stop Limit, 8: Fechar por oposta) |
+| <CodeVar>TYPE_STATE</CodeVar>           | Estado da ordem; (0: Verificando, 1: Aceita, 2: Cancelada, 3: Parcial, 4: Executada, 5: Rejeitada, 6: Expirada, 7: Registrando, 8: Modificando, 9: Cancelando)            |
+| <CodeVar>TYPE_TIME_EXPIRATION</CodeVar> | Tempo de expiração da ordem;                                                                                                                                              |
+| <CodeVar>TYPE_TIME_DONE</CodeVar>       | Tempo de conclusão da ordem;                                                                                                                                              |
+| <CodeVar>TYPE_TIME_SETUP_MSC</CodeVar>  | Tempo de configuração da ordem em milissegundos desde 01.01.1970;                                                                                                         |
+| <CodeVar>TYPE_TIME_DONE_MSC</CodeVar>   | Tempo de conclusão da ordem em milissegundos desde 01.01.1970;                                                                                                            |
+| <CodeVar>TYPE_FILLING</CodeVar>         | Tipo de preenchimento da ordem; (0: FOK (tudo ou nada), 1: IOC (tudo/parcial), 2: BOC (só livro), 3: Return (parcial continua))                                           |
+| <CodeVar>TYPE_TIME</CodeVar>            | Hora da ordem;                                                                                                                                                            |
+| <CodeVar>TYPE_MAGIC</CodeVar>           | Número mágico da ordem;                                                                                                                                                   |
+| <CodeVar>TYPE_REASON</CodeVar>          | Razão da ordem; (0: Desktop, 1: Mobile, 2: Web, 3: Expert, 4: Stop Loss, 5: Take Profit, 6: Stop Out)                                                                     |
+| <CodeVar>TYPE_POSITION_ID</CodeVar>     | ID da posição da ordem;                                                                                                                                                   |
+| <CodeVar>TYPE_POSITION_BY_ID</CodeVar>  | Posição da ordem por ID;                                                                                                                                                  |
+
+## Order property string:
+
+> Enumerador referente a propriedade da ordem.
+
+| VARIÁVEIS                       | RETORNOS             |
+| ------------------------------- | -------------------- |
+| <CodeVar>TYPE_SYMBOL</CodeVar>  | Simbolo da ordem;    |
+| <CodeVar>TYPE_COMMENT</CodeVar> | Comentario da ordem; |

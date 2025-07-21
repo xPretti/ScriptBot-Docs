@@ -8,6 +8,7 @@ export enum ENUM_FUNCTION_CATEGORY_TYPE {
    CONVERTER = "converter",
    MARKET = "market",
    TIME = "time",
+   TRADES = "trades",
 }
 
 export const getFunctionCategoryLabel: Record<
@@ -23,4 +24,5 @@ export const getFunctionCategoryLabel: Record<
    [ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER]: () => "Conversores",
    [ENUM_FUNCTION_CATEGORY_TYPE.MARKET]: () => "Mercado",
    [ENUM_FUNCTION_CATEGORY_TYPE.TIME]: () => "Tempo",
+   [ENUM_FUNCTION_CATEGORY_TYPE.TRADES]: () => "Posições e Ordens abertas",
 };
