@@ -4248,6 +4248,58 @@ export const FUNCTION_MAPPING: Map<
    },
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "PosTicket",
+      aliases: "PTicket",
+      description: {
+         simple: "Retorna o ticket de uma posição.",
+         complex:
+            "Esta função retorna o ticket de uma posição aberta usando os parâmetros informados.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "index",
+            comment: "Indice da posição. Começando com 0 para a mais atual.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: [
+         "PosTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o ticket da posição.",
+            type: { type: "ulong" },
+         },
+         error: {
+            message:
+               "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            type: { type: "ulong" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
       name: "PosDouble",
       aliases: "",
       description: {
@@ -4370,58 +4422,6 @@ export const FUNCTION_MAPPING: Map<
             message:
                "Retorna uma string vazia se a posição não existir ou a propriedade for inválida.",
             type: { type: "string" },
-         },
-      },
-   },
-   {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
-      name: "PosTicket",
-      aliases: "PTicket",
-      description: {
-         simple: "Retorna o ticket de uma posição.",
-         complex:
-            "Esta função retorna o ticket de uma posição aberta usando os parâmetros informados.",
-      },
-      parameters: [
-         {
-            type: { type: "int" },
-            name: "index",
-            comment: "Indice da posição. Começando com 0 para a mais atual.",
-         },
-         {
-            type: {
-               type: "ENUM_TRADE",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade",
-            },
-            name: "type",
-            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
-            value: "TYPE_ALL",
-         },
-         {
-            type: { type: "int" },
-            name: "magic",
-            comment: "Número mágico para filtrar as operações.",
-            value: "MAGIC",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "SYMBOL",
-         },
-      ],
-      examples: [
-         "PosTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente",
-      ],
-      returns: {
-         success: {
-            message: "Retorna o ticket da posição.",
-            type: { type: "ulong" },
-         },
-         error: {
-            message:
-               "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
-            type: { type: "ulong" },
          },
       },
    },
@@ -4930,6 +4930,813 @@ export const FUNCTION_MAPPING: Map<
          },
          error: {
             message: "Retorna string vazia se a posição não for encontrada.",
+            type: { type: "string" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderTicket",
+      aliases: "OTicket",
+      description: {
+         simple: "Retorna o ticket de uma ordem.",
+         complex:
+            "Esta função retorna o ticket de uma ordem aberta usando os parâmetros informados.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "index",
+            comment: "Indice da ordem. Começando com 0 para a mais atual.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "int" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "SYMBOL",
+         },
+      ],
+      examples: [
+         "OrderTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o ticket da ordem.",
+            type: { type: "ulong" },
+         },
+         error: {
+            message:
+               "Retorna 0 se nenhuma ordem for encontrada com os parâmetros informados.",
+            type: { type: "ulong" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderDouble",
+      aliases: "",
+      description: {
+         simple:
+            "Retorna o valor de uma propriedade numérica (double) de uma ordem.",
+         complex:
+            "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma ordem aberta, identificada pelo seu ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+         {
+            type: {
+               type: "ENUM_ORDER_DOUBLE",
+               typeLink:
+                  "/fundamentals/scriptbot-enumerators#order-property-double",
+            },
+            name: "property",
+            comment:
+               "Propriedade da ordem: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura).",
+         },
+      ],
+      examples: [
+         "OrderDouble[123456, TYPE_VOLUME] // Retorna o volume/lotes da ordem",
+         "OrderDouble[Ticket[0], TYPE_OPEN] // Retorna o preço de abertura da ordem",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor da propriedade solicitada.",
+            type: { type: "double" },
+         },
+         error: {
+            message:
+               "Retorna 0.0 se a ordem não existir ou a propriedade for inválida.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderInt",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor de uma propriedade inteira de uma ordem.",
+         complex:
+            "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma ordem aberta, identificada pelo seu ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+         {
+            type: {
+               type: "ENUM_ORDER_INT",
+               typeLink:
+                  "/fundamentals/scriptbot-enumerators#order-property-int",
+            },
+            name: "property",
+            comment:
+               "Propriedade da ordem: 'TYPE_TIME_SETUP' (timestamp de abertura), 'TYPE_MAGIC' (número mágico).",
+         },
+      ],
+      examples: [
+         "OrderInt[123456, TYPE_TIME_SETUP] // Retorna o timestamp de abertura da ordem",
+         "OrderInt[Ticket[0], TYPE_MAGIC] // Retorna o número mágico da ordem",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor da propriedade solicitada.",
+            type: { type: "int" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a ordem não existir ou a propriedade for inválida.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderString",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor de uma propriedade textual de uma ordem.",
+         complex:
+            "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma ordem aberta, identificada pelo seu ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+         {
+            type: {
+               type: "ENUM_ORDER_STRING",
+               typeLink:
+                  "/fundamentals/scriptbot-enumerators#order-property-string",
+            },
+            name: "property",
+            comment:
+               "Propriedade da ordem: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação).",
+         },
+      ],
+      examples: [
+         "OrderString[123456, TYPE_SYMBOL] // Retorna o símbolo do ativo da ordem",
+         "OrderString[Ticket[0], TYPE_COMMENT] // Retorna o comentário da ordem",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor da propriedade solicitada.",
+            type: { type: "string" },
+         },
+         error: {
+            message:
+               "Retorna uma string vazia se a ordem não existir ou a propriedade for inválida.",
+            type: { type: "string" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderVolumeInit",
+      aliases: "OVolInit",
+      description: {
+         simple: "Retorna o volume inicial de uma ordem pendente.",
+         complex:
+            "Esta função retorna o volume inicial especificado quando a ordem pendente foi criada.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderVolumeInit[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o volume inicial da ordem.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderVolume",
+      aliases: "OVol",
+      description: {
+         simple: "Retorna o volume atual de uma ordem.",
+         complex:
+            "Esta função retorna o volume atual (tamanho) de uma ordem, que pode ter sido modificado após a criação.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderVolume[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o volume atual da ordem.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderOpen",
+      aliases: "OO",
+      description: {
+         simple: "Retorna o preço de abertura de uma ordem.",
+         complex:
+            "Esta função retorna o preço de abertura especificado para uma ordem pendente.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderOpen[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o preço de abertura da ordem.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderStop",
+      aliases: "OSL",
+      description: {
+         simple: "Retorna o preço do Stop Loss de uma ordem.",
+         complex:
+            "Esta função retorna o preço definido para o Stop Loss de uma ordem pendente.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderStop[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o preço do Stop Loss.",
+            type: { type: "double" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a ordem não tiver Stop Loss definido ou não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderTake",
+      aliases: "OTP",
+      description: {
+         simple: "Retorna o preço do Take Profit de uma ordem.",
+         complex:
+            "Esta função retorna o preço definido para o Take Profit de uma ordem pendente.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderTake[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o preço do Take Profit.",
+            type: { type: "double" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a ordem não tiver Take Profit definido ou não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderCurrent",
+      aliases: "OCurrent",
+      description: {
+         simple: "Retorna o preço atual de uma ordem pendente.",
+         complex:
+            "Esta função retorna o preço atual (de mercado) para o ativo da ordem pendente.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderCurrent[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o preço atual do ativo da ordem.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderStopLimit",
+      aliases: "OSLLimit",
+      description: {
+         simple: "Retorna o preço de ativação para ordens Stop Limit.",
+         complex:
+            "Esta função retorna o preço de ativação especificado para ordens do tipo Stop Limit.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderStopLimit[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o preço de ativação da Stop Limit.",
+            type: { type: "double" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a ordem não for do tipo Stop Limit ou não for encontrada.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderSetup",
+      aliases: "OSetup",
+      description: {
+         simple: "Retorna a data/hora de criação da ordem.",
+         complex:
+            "Esta função retorna o momento em que a ordem foi criada no formato datetime.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderSetup[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o datetime de criação da ordem.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderType",
+      aliases: "OType",
+      description: {
+         simple: "Retorna o tipo de uma ordem.",
+         complex:
+            "Esta função retorna o tipo da ordem (compra/venda, stop/limit, etc) conforme enumerador de tipos de ordem.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderType[Ticket[0]]"],
+      returns: {
+         success: {
+            message:
+               "Retorna o código do tipo de ordem. (0: Compra mercado, 1: Venda mercado, 2: Buy Limit, 3: Sell Limit, 4: Buy Stop, 5: Sell Stop, 6: Buy Stop Limit, 7: Sell Stop Limit, 8: Fechar por oposta)",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderState",
+      aliases: "OState",
+      description: {
+         simple: "Retorna o estado atual de uma ordem.",
+         complex:
+            "Esta função retorna o estado atual da ordem conforme enumerador de estados.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderState[Ticket[0]]"],
+      returns: {
+         success: {
+            message:
+               "Retorna o código do estado da ordem. (0: Verificando, 1: Aceita, 2: Cancelada, 3: Parcial, 4: Executada, 5: Rejeitada, 6: Expirada, 7: Registrando, 8: Modificando, 9: Cancelando)",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderTimeExpiration",
+      aliases: "OTExpira",
+      description: {
+         simple: "Retorna a data/hora de expiração de uma ordem.",
+         complex:
+            "Esta função retorna o momento em que a ordem pendente irá expirar (se aplicável) no formato datetime.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderTimeExpiration[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o datetime de expiração da ordem.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a ordem não tiver expiração ou não for encontrada.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderDone",
+      aliases: "ODone",
+      description: {
+         simple:
+            "Retorna a data/hora de execução ou cancelamento de uma ordem.",
+         complex:
+            "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato datetime.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderDone[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o datetime de execução/cancelamento.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a ordem ainda estiver pendente ou não for encontrada.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderSetupMsc",
+      aliases: "OSetupMsc",
+      description: {
+         simple: "Retorna a data/hora de criação da ordem em milissegundos.",
+         complex:
+            "Esta função retorna o momento em que a ordem foi criada no formato timestamp em milissegundos desde 01/01/1970.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderSetupMsc[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o timestamp em milissegundos.",
+            type: { type: "long" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "long" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderDoneMsc",
+      aliases: "ODoneMsc",
+      description: {
+         simple:
+            "Retorna a data/hora de execução ou cancelamento em milissegundos.",
+         complex:
+            "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato timestamp em milissegundos desde 01/01/1970.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderDoneMsc[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o timestamp em milissegundos.",
+            type: { type: "long" },
+         },
+         error: {
+            message:
+               "Retorna 0 se a ordem ainda estiver pendente ou não for encontrada.",
+            type: { type: "long" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderFilling",
+      aliases: "OFilling",
+      description: {
+         simple: "Retorna a política de preenchimento de uma ordem.",
+         complex:
+            "Esta função retorna o tipo de política de preenchimento (FOK, IOC, etc) conforme enumerador de tipos de preenchimento.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderFilling[Ticket[0]]"],
+      returns: {
+         success: {
+            message:
+               "Retorna o código da política de preenchimento. (0: FOK (tudo ou nada), 1: IOC (tudo/parcial), 2: BOC (só livro), 3: Return (parcial continua))",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderTime",
+      aliases: "OT",
+      description: {
+         simple: "Retorna a data/hora da última modificação da ordem.",
+         complex:
+            "Esta função retorna o momento da última modificação da ordem no formato datetime.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderTime[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o datetime da última modificação.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderMagic",
+      aliases: "OMagic",
+      description: {
+         simple: "Retorna o número mágico de uma ordem.",
+         complex:
+            "Esta função retorna o número mágico (identificador personalizado do robô) associado a uma ordem.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderMagic[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o número mágico da ordem.",
+            type: { type: "ulong" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "ulong" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderReason",
+      aliases: "OReason",
+      description: {
+         simple: "Retorna o motivo de criação da ordem.",
+         complex:
+            "Esta função retorna o código que indica o motivo pelo qual a ordem foi criada (manual, EA, etc).",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderReason[Ticket[0]]"],
+      returns: {
+         success: {
+            message:
+               "Retorna o código do motivo de criação. (0: Desktop, 1: Mobile, 2: Web, 3: Expert, 4: Stop Loss, 5: Take Profit, 6: Stop Out) ",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderId",
+      aliases: "OId",
+      description: {
+         simple: "Retorna o ID da ordem no sistema.",
+         complex:
+            "Esta função retorna o identificador único da ordem no sistema de negociação.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderId[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o ID da ordem.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderById",
+      aliases: "OById",
+      description: {
+         simple: "Retorna o ticket da ordem pelo ID do sistema.",
+         complex:
+            "Esta função retorna o número do ticket correspondente a um ID de ordem no sistema.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "ID da ordem no sistema.",
+         },
+      ],
+      examples: ["OrderById[987654]"],
+      returns: {
+         success: {
+            message: "Retorna o número do ticket da ordem.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se a ordem não for encontrada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderSymbol",
+      aliases: "OSymbol",
+      description: {
+         simple: "Retorna o símbolo do ativo de uma ordem.",
+         complex:
+            "Esta função retorna o símbolo do ativo negociado em uma ordem.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderSymbol[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o símbolo do ativo.",
+            type: { type: "string" },
+         },
+         error: {
+            message: "Retorna string vazia se a ordem não for encontrada.",
+            type: { type: "string" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      name: "OrderComment",
+      aliases: "OComment",
+      description: {
+         simple: "Retorna o comentário associado a uma ordem.",
+         complex:
+            "Esta função retorna o comentário/texto descritivo associado a uma ordem.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a ordem.",
+         },
+      ],
+      examples: ["OrderComment[Ticket[0]]"],
+      returns: {
+         success: {
+            message: "Retorna o comentário da ordem.",
+            type: { type: "string" },
+         },
+         error: {
+            message: "Retorna string vazia se a ordem não for encontrada.",
             type: { type: "string" },
          },
       },
