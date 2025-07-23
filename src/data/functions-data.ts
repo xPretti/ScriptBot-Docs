@@ -7,62 +7,9 @@ export const FUNCTION_MAPPING: Map<
 > = new Map();
 
 [
-   // {
-   //    category: {
-   //       type: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
-   //       label: "Indicadores",
-   //    },
-   //    name: "Teste12",
-   //    aliases: "T1",
-   //    description: {
-   //       simple: "Retorna o nome Teste",
-   //       complex:
-   //          "Esta função retorna o nome Teste e retorna o nome Invalid em caso de erro.",
-   //    },
-   //    parameters: [
-   //       {
-   //          type: {
-   //             type: "string",
-   //             typeLink: "/fundamentals/types",
-   //          },
-   //          name: "param1",
-   //          comment: "Primeiro parâmetro",
-   //       },
-   //       {
-   //          type: {
-   //             type: "string",
-   //             typeLink: "/fundamentals/types",
-   //          },
-   //          name: "param2",
-   //          comment: "Segundo parâmetro",
-   //          value: "666",
-   //       },
-   //    ],
-   //    examples: [
-   //       "```js\nTeste1[Param1, Param2]\n```",
-   //       "```js\nT1[Param1]\n```",
-   //    ],
-   //    returns: {
-   //       success: {
-   //          message: "Em caso de sucesso retorno o nome Teste",
-   //          type: {
-   //             type: "string",
-   //             typeLink: "/fundamentals/types",
-   //          },
-   //       },
-   //       error: {
-   //          message: "Em caso de erro retorno o nome Invalid",
-   //          type: {
-   //             type: "string",
-   //             typeLink: "/fundamentals/types",
-   //          },
-   //       },
-   //    },
-   // },
-
    // DEBUGS
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUG,
       name: "Log",
       aliases: "",
       description: {
@@ -119,7 +66,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUG,
       name: "Print",
       aliases: "",
       description: {
@@ -177,7 +124,7 @@ export const FUNCTION_MAPPING: Map<
    },
    // INDICATORS
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATOR,
       name: "Indicator",
       aliases: "IND",
       description: {
@@ -228,7 +175,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATOR,
       name: "Indicator'X'",
       aliases: "IND'X'",
       description: {
@@ -275,7 +222,7 @@ export const FUNCTION_MAPPING: Map<
    },
    // USER VARIABLES
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearDouble",
       aliases: "",
       description: {
@@ -303,7 +250,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearInt",
       aliases: "",
       description: {
@@ -331,7 +278,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearString",
       aliases: "",
       description: {
@@ -359,7 +306,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "CreateDouble",
       aliases: "",
       description: {
@@ -400,7 +347,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "CreateInt",
       aliases: "",
       description: {
@@ -441,7 +388,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "CreateString",
       aliases: "",
       description: {
@@ -482,7 +429,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "GetDouble",
       aliases: "",
       description: {
@@ -516,7 +463,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "GetInt",
       aliases: "",
       description: {
@@ -550,7 +497,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "GetString",
       aliases: "",
       description: {
@@ -584,7 +531,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "RemoveDouble",
       aliases: "",
       description: {
@@ -618,7 +565,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "RemoveInt",
       aliases: "",
       description: {
@@ -652,7 +599,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "RemoveString",
       aliases: "",
       description: {
@@ -686,7 +633,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ReplaceDouble",
       aliases: "",
       description: {
@@ -728,7 +675,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ReplaceInt",
       aliases: "",
       description: {
@@ -770,7 +717,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ReplaceString",
       aliases: "",
       description: {
@@ -812,7 +759,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "SetDouble",
       aliases: "",
       description: {
@@ -855,7 +802,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "SetInt",
       aliases: "",
       description: {
@@ -898,7 +845,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "SetString",
       aliases: "",
       description: {
@@ -942,7 +889,7 @@ export const FUNCTION_MAPPING: Map<
    },
    //CANDLE
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "Open",
       aliases: "O",
       description: {
@@ -992,7 +939,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "Close",
       aliases: "C",
       description: {
@@ -1042,7 +989,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "High",
       aliases: "H",
       description: {
@@ -1092,7 +1039,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "Low",
       aliases: "L",
       description: {
@@ -1142,7 +1089,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "Time",
       aliases: "T",
       description: {
@@ -1192,7 +1139,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "Direction",
       aliases: "DIR",
       description: {
@@ -1248,7 +1195,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "Spread",
       aliases: "SPD",
       description: {
@@ -1298,7 +1245,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "Candle",
       aliases: "",
       description: {
@@ -1354,7 +1301,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "MaxHigh",
       aliases: "MaxH",
       description: {
@@ -1412,7 +1359,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "MaxLow",
       aliases: "MaxL",
       description: {
@@ -1470,7 +1417,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "TickVolume",
       aliases: "TICKV",
       description: {
@@ -1521,7 +1468,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
       name: "RealVolume",
       aliases: "REALV",
       description: {
@@ -3607,7 +3554,7 @@ export const FUNCTION_MAPPING: Map<
    },
    // TRADES
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllTotal",
       aliases: "ATotal",
       description: {
@@ -3650,7 +3597,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['AllTotal[TYPE_BUY, -1, 123456, M5, "PETR4"]'],
@@ -3667,7 +3614,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllTotalBuy",
       aliases: "ATotalBuy",
       description: {
@@ -3701,7 +3648,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['AllTotalBuy[-1, 123456, M5, "PETR4"]'],
@@ -3718,7 +3665,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllTotalSell",
       aliases: "ATotalSell",
       description: {
@@ -3752,7 +3699,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['AllTotalSell[-1, 123456, M5, "PETR4"]'],
@@ -3769,7 +3716,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllTotalAll",
       aliases: "ATotalAll",
       description: {
@@ -3803,7 +3750,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['AllTotalAll[-1, 123456, M5, "PETR4"]'],
@@ -3820,7 +3767,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTotal",
       aliases: "PTotal",
       description: {
@@ -3862,7 +3809,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['PosTotal[TYPE_SELL, -1, 123456, M15, "VALE3"]'],
@@ -3879,7 +3826,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTotalBuy",
       aliases: "PTotalBuy",
       description: {
@@ -3913,7 +3860,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['PosTotalBuy[-1, 123456, H1, "PETR4"]'],
@@ -3931,7 +3878,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTotalSell",
       aliases: "PTotalSell",
       description: {
@@ -3965,7 +3912,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['PosTotalSell[-1, 123456, D1, "ITUB4"]'],
@@ -3983,7 +3930,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTotalAll",
       aliases: "PTotalAll",
       description: {
@@ -4017,7 +3964,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['PosTotalAll[-1, 123456, W1, "BBDC4"]'],
@@ -4035,7 +3982,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTotal",
       aliases: "OTotal",
       description: {
@@ -4077,7 +4024,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['OrderTotal[TYPE_BUY, -1, 123456, M30, "ABEV3"]'],
@@ -4094,7 +4041,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTotalBuy",
       aliases: "OTotalBuy",
       description: {
@@ -4128,7 +4075,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['OrderTotalBuy[-1, 123456, H4, "WEGE3"]'],
@@ -4145,7 +4092,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTotalSell",
       aliases: "OTotalSell",
       description: {
@@ -4179,7 +4126,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['OrderTotalSell[-1, 123456, D1, "LREN3"]'],
@@ -4196,7 +4143,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTotalAll",
       aliases: "OTotalAll",
       description: {
@@ -4230,7 +4177,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: ['OrderTotalAll[-1, 123456, MN1, "BBAS3"]'],
@@ -4247,7 +4194,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTicket",
       aliases: "PTicket",
       description: {
@@ -4280,7 +4227,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: [
@@ -4299,7 +4246,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosDouble",
       aliases: "",
       description: {
@@ -4342,7 +4289,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosInt",
       aliases: "",
       description: {
@@ -4384,7 +4331,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosString",
       aliases: "",
       description: {
@@ -4426,7 +4373,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosCurrent",
       aliases: "PCurrent",
       description: {
@@ -4454,7 +4401,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosOpen",
       aliases: "PO",
       description: {
@@ -4482,7 +4429,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosProfit",
       aliases: "PProfit",
       description: {
@@ -4510,7 +4457,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosStop",
       aliases: "PSL",
       description: {
@@ -4539,7 +4486,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosSwap",
       aliases: "PSWAP",
       description: {
@@ -4567,7 +4514,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTake",
       aliases: "PTP",
       description: {
@@ -4596,7 +4543,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosVolume",
       aliases: "PVol",
       description: {
@@ -4624,7 +4571,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosIdentifier",
       aliases: "PIdent",
       description: {
@@ -4652,7 +4599,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosMagic",
       aliases: "PMagic",
       description: {
@@ -4680,7 +4627,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosReason",
       aliases: "PReason",
       description: {
@@ -4709,7 +4656,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTime",
       aliases: "PT",
       description: {
@@ -4737,7 +4684,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTimeMsc",
       aliases: "PTMsc",
       description: {
@@ -4766,7 +4713,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTimeUpdate",
       aliases: "PTUpdate",
       description: {
@@ -4794,7 +4741,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTimeUpdateMsc",
       aliases: "PTUpdateMsc",
       description: {
@@ -4823,7 +4770,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosType",
       aliases: "PType",
       description: {
@@ -4851,7 +4798,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosSymbol",
       aliases: "PSymbol",
       description: {
@@ -4879,7 +4826,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosComment",
       aliases: "PComment",
       description: {
@@ -4907,7 +4854,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosExternal",
       aliases: "PExternal",
       description: {
@@ -4935,7 +4882,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTicket",
       aliases: "OTicket",
       description: {
@@ -4968,7 +4915,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: [
@@ -4987,7 +4934,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderDouble",
       aliases: "",
       description: {
@@ -5030,7 +4977,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderInt",
       aliases: "",
       description: {
@@ -5072,7 +5019,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderString",
       aliases: "",
       description: {
@@ -5114,7 +5061,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderVolumeInit",
       aliases: "OVolInit",
       description: {
@@ -5142,7 +5089,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderVolume",
       aliases: "OVol",
       description: {
@@ -5170,7 +5117,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderOpen",
       aliases: "OO",
       description: {
@@ -5198,7 +5145,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderStop",
       aliases: "OSL",
       description: {
@@ -5227,7 +5174,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTake",
       aliases: "OTP",
       description: {
@@ -5256,7 +5203,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderCurrent",
       aliases: "OCurrent",
       description: {
@@ -5284,7 +5231,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderStopLimit",
       aliases: "OSLLimit",
       description: {
@@ -5313,7 +5260,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderSetup",
       aliases: "OSetup",
       description: {
@@ -5341,7 +5288,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderType",
       aliases: "OType",
       description: {
@@ -5370,7 +5317,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderState",
       aliases: "OState",
       description: {
@@ -5399,7 +5346,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTimeExpiration",
       aliases: "OTExpira",
       description: {
@@ -5428,7 +5375,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderDone",
       aliases: "ODone",
       description: {
@@ -5458,7 +5405,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderSetupMsc",
       aliases: "OSetupMsc",
       description: {
@@ -5486,7 +5433,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderDoneMsc",
       aliases: "ODoneMsc",
       description: {
@@ -5516,7 +5463,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderFilling",
       aliases: "OFilling",
       description: {
@@ -5545,7 +5492,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTime",
       aliases: "OT",
       description: {
@@ -5573,7 +5520,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderMagic",
       aliases: "OMagic",
       description: {
@@ -5601,7 +5548,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderReason",
       aliases: "OReason",
       description: {
@@ -5630,7 +5577,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderId",
       aliases: "OId",
       description: {
@@ -5658,7 +5605,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderById",
       aliases: "OById",
       description: {
@@ -5686,7 +5633,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderSymbol",
       aliases: "OSymbol",
       description: {
@@ -5714,7 +5661,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADES,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderComment",
       aliases: "OComment",
       description: {
@@ -5743,7 +5690,7 @@ export const FUNCTION_MAPPING: Map<
    },
    // DEALS
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTicket",
       aliases: "DTicket",
       description: {
@@ -5804,7 +5751,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
             name: "symbol",
             comment: "Símbolo do ativo.",
-            value: "SYMBOL",
+            value: "REAL",
          },
       ],
       examples: [
@@ -5824,7 +5771,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealProfit",
       aliases: "DProfit",
       description: {
@@ -5852,7 +5799,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealOpen",
       aliases: "DO",
       description: {
@@ -5880,7 +5827,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealCommission",
       aliases: "DComm",
       description: {
@@ -5908,7 +5855,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealFee",
       aliases: "DFee",
       description: {
@@ -5936,7 +5883,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealStop",
       aliases: "DSL",
       description: {
@@ -5964,7 +5911,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTake",
       aliases: "DTP",
       description: {
@@ -5992,7 +5939,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealSwap",
       aliases: "DSwap",
       description: {
@@ -6020,7 +5967,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealVolume",
       aliases: "DVol",
       description: {
@@ -6048,7 +5995,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealMagic",
       aliases: "DMagic",
       description: {
@@ -6076,7 +6023,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealReason",
       aliases: "DReason",
       description: {
@@ -6105,7 +6052,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealOrder",
       aliases: "DOrder",
       description: {
@@ -6133,7 +6080,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealId",
       aliases: "DId",
       description: {
@@ -6161,7 +6108,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealEntry",
       aliases: "DEntry",
       description: {
@@ -6190,7 +6137,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealOut",
       aliases: "DOut",
       description: {
@@ -6219,7 +6166,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealIn",
       aliases: "DIn",
       description: {
@@ -6248,7 +6195,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTime",
       aliases: "DT",
       description: {
@@ -6276,7 +6223,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTimeMsc",
       aliases: "DTMsc",
       description: {
@@ -6306,7 +6253,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealType",
       aliases: "DType",
       description: {
@@ -6334,7 +6281,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealComment",
       aliases: "DComment",
       description: {
@@ -6362,7 +6309,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealExternal",
       aliases: "DExternal",
       description: {
@@ -6390,7 +6337,7 @@ export const FUNCTION_MAPPING: Map<
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEALS,
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealSymbol",
       aliases: "DSymbol",
       description: {
@@ -6414,6 +6361,1065 @@ export const FUNCTION_MAPPING: Map<
          error: {
             message: "Retorna string vazia se o negócio não for encontrado.",
             type: { type: "string" },
+         },
+      },
+   },
+   // TRADE
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "BuyAuto",
+      aliases: "",
+      description: {
+         simple: "Abre uma posição de compra no mercado.",
+         complex:
+            "Esta função abre uma posição de compra no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (compra imediata ou pendente) é definido automaticamente.",
+      },
+      parameters: [
+         {
+            type: { type: "double" },
+            name: "price",
+            comment: "Preço de entrada para a ordem de compra.",
+         },
+         {
+            type: { type: "double" },
+            name: "volume",
+            comment: "Volume/lote da operação.",
+         },
+         {
+            type: { type: "int" },
+            name: "tpPoints",
+            comment: "Pontos para o take profit (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "int" },
+            name: "slPoints",
+            comment: "Pontos para o stop loss (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "string" },
+            name: "comment",
+            comment: "Comentário associado à ordem.",
+            value: '"SB-PlaceByFunction"',
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo (vazio para usar o símbolo atual).",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "BuyAuto[ASK, 0.1, 100, 50] // Compra 0.1 lote no preço atual com TP 100 pontos e SL 50 pontos",
+         "BuyAuto[ASK, 0.5] // Compra 0.5 lote sem TP/SL",
+         "BuyAuto[ASK, 0.5, TickToPoint[20], TickToPoint[20]] // Compra 0.5 lote com TP/SL em 20 ticks",
+      ],
+      returns: {
+         success: {
+            message: "Retorna true se a ordem for executada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a ordem não for executada com sucesso.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "SellAuto",
+      aliases: "",
+      description: {
+         simple: "Abre uma posição de venda no mercado.",
+         complex:
+            "Esta função abre uma posição de venda no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (venda imediata ou pendente) é definido automaticamente.",
+      },
+      parameters: [
+         {
+            type: { type: "double" },
+            name: "price",
+            comment: "Preço de entrada para a ordem de venda.",
+         },
+         {
+            type: { type: "double" },
+            name: "volume",
+            comment: "Volume/lote da operação.",
+         },
+         {
+            type: { type: "int" },
+            name: "tpPoints",
+            comment: "Pontos para o take profit (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "int" },
+            name: "slPoints",
+            comment: "Pontos para o stop loss (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "string" },
+            name: "comment",
+            comment: "Comentário associado à ordem.",
+            value: '"SB-PlaceByFunction"',
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo (vazio para usar o símbolo atual).",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "SellAuto[BID, 0.1, 100, 50] // Venda 0.1 lote no preço atual com TP 100 pontos e SL 50 pontos",
+         "SellAuto[BID, 0.5] // Venda 0.5 lote sem TP/SL",
+         "SellAuto[BID, 0.5, TickToPoint[20], TickToPoint[20]] // Venda 0.5 lote com TP/SL em 20 ticks",
+      ],
+      returns: {
+         success: {
+            message: "Retorna true se a ordem for executada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a ordem não for executada com sucesso.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "Buy",
+      aliases: "",
+      description: {
+         simple: "Abre uma posição de compra no mercado atual.",
+         complex:
+            "Esta função abre uma posição de compra no preço de mercado atual (Ask), com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
+      },
+      parameters: [
+         {
+            type: { type: "double" },
+            name: "volume",
+            comment: "Volume/lote da operação.",
+         },
+         {
+            type: { type: "int" },
+            name: "tpPoints",
+            comment: "Pontos para o take profit (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "int" },
+            name: "slPoints",
+            comment: "Pontos para o stop loss (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "string" },
+            name: "comment",
+            comment: "Comentário associado à ordem.",
+            value: '"SB-PlaceByFunction"',
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo (vazio para usar o símbolo atual).",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "Buy[0.1, 100, 50] // Compra 0.1 lote no preço de mercado com TP 100 pontos e SL 50 pontos",
+         "Buy[0.5] // Compra 0.5 lote sem TP/SL",
+         "Buy[0.5, TickToPoint[20], TickToPoint[20]] // Compra 0.5 lote com TP/SL em 20 ticks",
+      ],
+      returns: {
+         success: {
+            message: "Retorna true se a ordem for executada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a ordem não for executada com sucesso.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "Sell",
+      aliases: "",
+      description: {
+         simple: "Abre uma posição de venda no mercado atual.",
+         complex:
+            "Esta função abre uma posição de venda no preço de mercado atual (Bid), com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
+      },
+      parameters: [
+         {
+            type: { type: "double" },
+            name: "volume",
+            comment: "Volume/lote da operação.",
+         },
+         {
+            type: { type: "int" },
+            name: "tpPoints",
+            comment: "Pontos para o take profit (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "int" },
+            name: "slPoints",
+            comment: "Pontos para o stop loss (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "string" },
+            name: "comment",
+            comment: "Comentário associado à ordem.",
+            value: '"SB-PlaceByFunction"',
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo (vazio para usar o símbolo atual).",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "Sell[0.1, 100, 50] // Vende 0.1 lote no preço de mercado com TP 100 pontos e SL 50 pontos",
+         "Sell[0.5] // Vende 0.5 lote sem TP/SL",
+         "Sell[0.5, TickToPoint[20], TickToPoint[20]] // Vende 0.5 lote com TP/SL em 20 ticks",
+      ],
+      returns: {
+         success: {
+            message: "Retorna true se a ordem for executada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a ordem não for executada com sucesso.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "BuyOrder",
+      aliases: "",
+      description: {
+         simple: "Coloca uma ordem pendente de compra.",
+         complex:
+            "Esta função coloca uma ordem pendente de compra (Buy Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
+      },
+      parameters: [
+         {
+            type: { type: "double" },
+            name: "price",
+            comment: "Preço de ativação para a ordem pendente.",
+         },
+         {
+            type: { type: "double" },
+            name: "volume",
+            comment: "Volume/lote da operação.",
+         },
+         {
+            type: { type: "int" },
+            name: "tpPoints",
+            comment: "Pontos para o take profit (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "int" },
+            name: "slPoints",
+            comment: "Pontos para o stop loss (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "string" },
+            name: "comment",
+            comment: "Comentário associado à ordem.",
+            value: '"SB-PlaceByFunction"',
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo (vazio para usar o símbolo atual).",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "BuyOrder[1.12000, 0.1, 100, 50] // Ordem pendente de compra em 1.12000 com TP 100 pontos e SL 50 pontos",
+         "BuyOrder[1.11500, 0.5] // Ordem pendente de compra em 1.11500 sem TP/SL",
+         "BuyOrder[1.11500, 0.5, TickToPoint[20], TickToPoint[20]] // Ordem pendente de compra em 1.11500 com TP/SL em 20 ticks",
+      ],
+      returns: {
+         success: {
+            message: "Retorna true se a ordem for executada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a ordem não for executada com sucesso.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "SellOrder",
+      aliases: "",
+      description: {
+         simple: "Coloca uma ordem pendente de venda.",
+         complex:
+            "Esta função coloca uma ordem pendente de venda (Sell Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
+      },
+      parameters: [
+         {
+            type: { type: "double" },
+            name: "price",
+            comment: "Preço de ativação para a ordem pendente.",
+         },
+         {
+            type: { type: "double" },
+            name: "volume",
+            comment: "Volume/lote da operação.",
+         },
+         {
+            type: { type: "int" },
+            name: "tpPoints",
+            comment: "Pontos para o take profit (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "int" },
+            name: "slPoints",
+            comment: "Pontos para o stop loss (0 para desativar).",
+            value: "0",
+         },
+         {
+            type: { type: "string" },
+            name: "comment",
+            comment: "Comentário associado à ordem.",
+            value: '"SB-PlaceByFunction"',
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo (vazio para usar o símbolo atual).",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "SellOrder[1.13000, 0.1, 100, 50] // Ordem pendente de venda em 1.13000 com TP 100 pontos e SL 50 pontos",
+         "SellOrder[1.13500, 0.5] // Ordem pendente de venda em 1.13500 sem TP/SL",
+         "SellOrder[1.13500, 0.5, TickToPoint[20], TickToPoint[20]] // Ordem pendente de venda em 1.13500 com TP/SL em 20 ticks",
+      ],
+      returns: {
+         success: {
+            message: "Retorna true se a ordem for executada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a ordem não for executada com sucesso.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "PosClose",
+      aliases: "",
+      description: {
+         simple: "Fecha uma posição aberta completamente.",
+         complex:
+            "Esta função fecha completamente uma posição aberta no mercado, identificada pelo seu ticket. O fechamento é feito ao preço atual de mercado.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment: "Número do ticket que identifica a posição a ser fechada.",
+         },
+      ],
+      examples: [
+         "PosClose[PosTicket[0]] // Fecha completamente a ultima posição aberta",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a posição for fechada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a posição não for encontrada ou não puder ser fechada.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "PosClosePartial",
+      aliases: "",
+      description: {
+         simple: "Fecha parcialmente uma posição aberta.",
+         complex:
+            "Esta função fecha parcialmente uma posição aberta no mercado, reduzindo seu volume pelo valor especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a posição a ser parcialmente fechada.",
+         },
+         {
+            type: { type: "double" },
+            name: "volume",
+            comment: "Volume/lote a ser fechado.",
+         },
+      ],
+      examples: [
+         "PosClosePartial[PosTicket[0], 0.5] // Fecha 0.5 lotes da ultima posição aberta",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a posição for parcialmente fechada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a posição não for encontrada, o volume for inválido ou não puder ser fechada.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "OrderClose",
+      aliases: "",
+      description: {
+         simple: "Cancela uma ordem pendente.",
+         complex:
+            "Esta função cancela uma ordem pendente (limit/stop) identificada pelo seu ticket.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a ordem pendente a ser cancelada.",
+         },
+      ],
+      examples: [
+         "OrderClose[OrderTicket[0]] // Cancela a ultima ordem pendente",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a ordem for cancelada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a ordem não for encontrada ou não puder ser cancelada.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "PosCloseAll",
+      aliases: "",
+      description: {
+         simple: "Fecha todas as posições abertas.",
+         complex:
+            "Esta função fecha todas as posições abertas no mercado, podendo ser filtradas por símbolo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment:
+               "Símbolo do ativo (opcional - vazio fecha todas as posições do ativo atual).",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "PosCloseAll[] // Fecha todas as posições abertas em todos os símbolos",
+         "PosCloseAll[EURUSD] // Fecha todas as posições abertas somente no EURUSD",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o número de posições fechadas com sucesso.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma posição for fechada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "PosBuyCloseAll",
+      aliases: "",
+      description: {
+         simple: "Fecha todas as posições de compra abertas.",
+         complex:
+            "Esta função fecha todas as posições de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment:
+               "Símbolo do ativo (opcional - vazio fecha todas as posições de compra do ativo atual).",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "PosBuyCloseAll[] // Fecha todas as posições de compra em todos os símbolos",
+         "PosBuyCloseAll[EURUSD] // Fecha todas as posições de compra somente no EURUSD",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna o número de posições de compra fechadas com sucesso.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma posição de compra for fechada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "PosSellCloseAll",
+      aliases: "",
+      description: {
+         simple: "Fecha todas as posições de venda abertas.",
+         complex:
+            "Esta função fecha todas as posições de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment:
+               "Símbolo do ativo (opcional - vazio fecha todas as posições de venda do ativo atual).",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "PosSellCloseAll[] // Fecha todas as posições de venda em todos os símbolos",
+         "PosSellCloseAll[EURUSD] // Fecha todas as posições de venda somente no EURUSD",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna o número de posições de venda fechadas com sucesso.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma posição de venda for fechada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "PosModify",
+      aliases: "",
+      description: {
+         simple:
+            "Modifica os níveis de take profit e stop loss de uma posição aberta.",
+         complex:
+            "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a posição a ser modificada.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE_MODIFY",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+            },
+            name: "method",
+            comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
+         },
+         {
+            type: { type: "double" },
+            name: "take",
+            comment: "Valor do novo take. (0= ignora).",
+            value: "0",
+         },
+         {
+            type: { type: "double" },
+            name: "stop",
+            comment: "Valor do novo stop loss. (0= ignora).",
+            value: "0",
+         },
+      ],
+      examples: [
+         "PosModify[123456, TYPE_PRICE, 1.12500, 1.11500] // Altera TP para 1.12500 e SL para 1.11500 (valores absolutos)",
+         "PosModify[123456, TYPE_POINT, 300, 150] // Altera TP para +300 pontos e SL para -150 pontos do preço de abertura",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "PosModifyTake",
+      aliases: "",
+      description: {
+         simple: "Modifica apenas o take profit de uma posição aberta.",
+         complex:
+            "Esta função permite alterar somente o nível de take profit de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a posição a ser modificada.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE_MODIFY",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+            },
+            name: "method",
+            comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
+         },
+         {
+            type: { type: "double" },
+            name: "take",
+            comment: "Valor do novo take profit (0 mantém inalterado).",
+            value: "0",
+         },
+      ],
+      examples: [
+         "PosModifyTake[123456, TYPE_PRICE, 1.12500] // Altera TP para 1.12500 (valor absoluto)",
+         "PosModifyTake[123456, TYPE_POINT, 300] // Altera TP para +300 pontos do preço de abertura",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "PosModifyStop",
+      aliases: "",
+      description: {
+         simple: "Modifica apenas o stop loss de uma posição aberta.",
+         complex:
+            "Esta função permite alterar somente o nível de stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a posição a ser modificada.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE_MODIFY",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+            },
+            name: "method",
+            comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
+         },
+         {
+            type: { type: "double" },
+            name: "stop",
+            comment: "Valor do novo stop loss (0 mantém inalterado).",
+            value: "0",
+         },
+      ],
+      examples: [
+         "PosModifyStop[123456, TYPE_PRICE, 1.11500] // Altera SL para 1.11500 (valor absoluto)",
+         "PosModifyStop[123456, TYPE_POINT, 150] // Altera SL para -150 pontos do preço de abertura",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "OrderModify",
+      aliases: "",
+      description: {
+         simple:
+            "Modifica os níveis de take profit e stop loss de uma ordem aberta.",
+         complex:
+            "Esta função permite alterar os níveis de take profit e/ou stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a ordem a ser modificada.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE_MODIFY",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+            },
+            name: "method",
+            comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
+         },
+         {
+            type: { type: "double" },
+            name: "take",
+            comment: "Valor do novo take. (0= ignora).",
+            value: "0",
+         },
+         {
+            type: { type: "double" },
+            name: "stop",
+            comment: "Valor do novo stop loss. (0= ignora).",
+            value: "0",
+         },
+         {
+            type: { type: "double" },
+            name: "price",
+            comment: "Valor do novo preço. (0= ignora).",
+            value: "0",
+         },
+      ],
+      examples: [
+         "OrderModify[123456, TYPE_PRICE, 1.12500, 1.11500] // Altera TP para 1.12500 e SL para 1.11500 (valores absolutos)",
+         "OrderModify[123456, TYPE_POINT, 300, 150] // Altera TP para +300 pontos e SL para -150 pontos do preço de abertura",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "OrderModifyTake",
+      aliases: "",
+      description: {
+         simple: "Modifica apenas o take profit de uma ordem aberta.",
+         complex:
+            "Esta função permite alterar somente o nível de take profit de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a ordem a ser modificada.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE_MODIFY",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+            },
+            name: "method",
+            comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
+         },
+         {
+            type: { type: "double" },
+            name: "take",
+            comment: "Valor do novo take profit (0 mantém inalterado).",
+            value: "0",
+         },
+      ],
+      examples: [
+         "OrderModifyTake[123456, TYPE_PRICE, 1.12500] // Altera TP para 1.12500 (valor absoluto)",
+         "OrderModifyTake[123456, TYPE_POINT, 300] // Altera TP para +300 pontos do preço de abertura",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "OrderModifyStop",
+      aliases: "",
+      description: {
+         simple: "Modifica apenas o stop loss de uma ordem aberta.",
+         complex:
+            "Esta função permite alterar somente o nível de stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a ordem a ser modificada.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE_MODIFY",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+            },
+            name: "method",
+            comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
+         },
+         {
+            type: { type: "double" },
+            name: "stop",
+            comment: "Valor do novo stop loss (0 mantém inalterado).",
+            value: "0",
+         },
+      ],
+      examples: [
+         "OrderModifyStop[123456, TYPE_PRICE, 1.11500] // Altera SL para 1.11500 (valor absoluto)",
+         "OrderModifyStop[123456, TYPE_POINT, 150] // Altera SL para -150 pontos do preço de abertura",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "OrderModifyPrice",
+      aliases: "",
+      description: {
+         simple: "Modifica apenas o preço de uma ordem aberta.",
+         complex:
+            "Esta função permite alterar somente o preço de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a ordem a ser modificada.",
+         },
+         {
+            type: { type: "double" },
+            name: "price",
+            comment: "Valor do novo preço.",
+         },
+      ],
+      examples: [
+         "OrderModifyPrice[123456, 1.11500] // Altera preço para 1.11500",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "Modify",
+      aliases: "",
+      description: {
+         simple:
+            "Modifica os níveis de take profit e stop loss de uma posição ou ordem aberta.",
+         complex:
+            "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a posição a ser modificada.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE_MODIFY",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+            },
+            name: "method",
+            comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
+         },
+         {
+            type: { type: "double" },
+            name: "take",
+            comment: "Valor do novo take. (0= ignora).",
+            value: "0",
+         },
+         {
+            type: { type: "double" },
+            name: "stop",
+            comment: "Valor do novo stop loss. (0= ignora).",
+            value: "0",
+         },
+      ],
+      examples: [
+         "Modify[123456, TYPE_PRICE, 1.12500, 1.11500] // Altera TP para 1.12500 e SL para 1.11500 (valores absolutos)",
+         "Modify[123456, TYPE_POINT, 300, 150] // Altera TP para +300 pontos e SL para -150 pontos do preço de abertura",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "ModifyTake",
+      aliases: "",
+      description: {
+         simple:
+            "Modifica apenas o take profit de uma posição ou ordem aberta.",
+         complex:
+            "Esta função permite alterar somente o nível de take profit de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a posição a ser modificada.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE_MODIFY",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+            },
+            name: "method",
+            comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
+         },
+         {
+            type: { type: "double" },
+            name: "take",
+            comment: "Valor do novo take profit (0 mantém inalterado).",
+            value: "0",
+         },
+      ],
+      examples: [
+         "ModifyTake[123456, TYPE_PRICE, 1.12500] // Altera TP para 1.12500 (valor absoluto)",
+         "ModifyTake[123456, TYPE_POINT, 300] // Altera TP para +300 pontos do preço de abertura",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "ModifyStop",
+      aliases: "",
+      description: {
+         simple: "Modifica apenas o stop loss de uma posição ou ordem aberta.",
+         complex:
+            "Esta função permite alterar somente o nível de stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
+      },
+      parameters: [
+         {
+            type: { type: "ulong" },
+            name: "ticket",
+            comment:
+               "Número do ticket que identifica a posição a ser modificada.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE_MODIFY",
+               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+            },
+            name: "method",
+            comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
+         },
+         {
+            type: { type: "double" },
+            name: "stop",
+            comment: "Valor do novo stop loss (0 mantém inalterado).",
+            value: "0",
+         },
+      ],
+      examples: [
+         "ModifyStop[123456, TYPE_PRICE, 1.11500] // Altera SL para 1.11500 (valor absoluto)",
+         "ModifyStop[123456, TYPE_POINT, 150] // Altera SL para -150 pontos do preço de abertura",
+      ],
+      returns: {
+         success: {
+            message:
+               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message:
+               "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
          },
       },
    },

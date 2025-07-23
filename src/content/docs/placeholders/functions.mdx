@@ -20,19 +20,19 @@ estratégias personalizadas.
 
 > Essas funções permitem executar comandos de depuração.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.DEBUGS} />
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.DEBUG} />
 
 ## Indicadores
 
 > Essas funções permitem acessar os valores dos buffers de um indicador, como preços, sinais, cores.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.INDICATORS} />
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.INDICATOR} />
 
 ## Candles
 
 > Essas funções permitem acessar os valores das velas, como preços de abertura, fechamento etc.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.CANDLES} />
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.CANDLE} />
 
 ## Mercado
 
@@ -56,13 +56,13 @@ estratégias personalizadas.
 
 > Estas funções permitem obter informações sobre posições e ordens abertas, como quantidades, preços, volumes, etc.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.TRADES} />
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE} />
 
 ## Posições fechadas
 
 > Estas funções permitem obter informações sobre posições fechadas, como quantidades, preços, volumes, etc.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.DEALS} />
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE} />
 
 ## Conversores
 
@@ -74,4 +74,10 @@ estratégias personalizadas.
 
 > Essas variáveis permitem que o usuário crie suas próprias variáveis personalizadas.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLES} />
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE} />
+
+## Trades
+
+> Estas funções permitem abrir, gerenciar e fechar posições de trade, incluindo ordens.
+
+<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.TRADE} />
