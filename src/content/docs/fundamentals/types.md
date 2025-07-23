@@ -1,6 +1,10 @@
 ---
 title: Data Types
+sidebar:
+   order: 0
 ---
+
+Nesta página, você encontrará os tipos de dados primitivos disponíveis no ScriptBot. Esses tipos são utilizados como parâmetros e valores de retorno em funções, permitindo o controle preciso sobre o tipo de informação manipulada no projeto. Cada tipo possui uma finalidade específica, abrangendo desde números inteiros e caracteres até valores booleanos e horários.
 
 ## Tipos de dados
 
