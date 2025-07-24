@@ -1,9 +1,9 @@
 import { ENUM_FUNCTION_CATEGORY_TYPE } from "src/enums/function-enums";
-import type { FunctionModel } from "../interfaces/functions-interface";
+import type { FunctionPlaceholderInterface } from "../interfaces/placeholder-interface";
 
 export const FUNCTION_MAPPING: Map<
    ENUM_FUNCTION_CATEGORY_TYPE,
-   Map<string, FunctionModel>
+   Map<string, FunctionPlaceholderInterface>
 > = new Map();
 
 [
@@ -7423,7 +7423,7 @@ export const FUNCTION_MAPPING: Map<
          },
       },
    },
-].forEach((fn: FunctionModel) => {
+].forEach((fn: FunctionPlaceholderInterface) => {
    const existing = FUNCTION_MAPPING.get(fn.category);
    if (!existing) {
       FUNCTION_MAPPING.set(fn.category, new Map([[fn.name, fn]]));

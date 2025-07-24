@@ -3,11 +3,6 @@ export type FunctionType = {
    typeLink?: string;
 };
 
-export type FunctionDescription = {
-   simple: string;
-   complex: string;
-};
-
 export type FunctionParameter = {
    type: FunctionType;
    name: string;

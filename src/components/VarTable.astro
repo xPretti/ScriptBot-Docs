@@ -1,14 +1,12 @@
 ---
-import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import CodeVar from "@components/CodeVar.astro";
-import { Icon } from "@astrojs/starlight/components";
-import ReactFunctionModal from "./react/ReactFunctionModal";
+import { VARIABLE_MAPPING } from "@src/data/variables-data";
 
 const { category } = Astro.props;
 
 const elements =
-   FUNCTION_MAPPING.get(category) &&
-   Array.from(FUNCTION_MAPPING.get(category)!.values());
+   VARIABLE_MAPPING.get(category) &&
+   Array.from(VARIABLE_MAPPING.get(category)!.values());
 
 const containsAliases =
    elements &&
@@ -22,7 +20,7 @@ const containsAliases =
       <table>
          <thead>
             <tr>
-               <th>FUNÇÕES</th>
+               <th>VARIÁVEIS</th>
                {containsAliases && <th class="aliases">ALIASES</th>}
                <th>RETORNOS</th>
             </tr>
@@ -46,20 +44,7 @@ const containsAliases =
                      </td>
                   )}
                   <td>
-                     <ReactFunctionModal
-                        client:visible
-                        fnCategory={fn.category}
-                        fnName={fn.name}
-                     >
-                        <div class="description">
-                           <p class="text">{fn.description.simple}</p>
-                           <Icon
-                              class="redirect-icon"
-                              name="open-book"
-                              size="1.5rem"
-                           />
-                        </div>
-                     </ReactFunctionModal>
+                     <p>{fn.description.simple}</p>
                   </td>
                </tr>
             ))}
@@ -74,34 +59,9 @@ const containsAliases =
       height: 3rem;
       vertical-align: middle;
    }
-   p,
-   svg {
+   p {
       margin: 0;
       padding: 0;
-   }
-   .description {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      height: 100%;
-      align-items: center;
-   }
-
-   .redirect-icon {
-      display: inline-block;
-      opacity: 0.1;
-      position: absolute;
-      height: 100%;
-      top: 0;
-      right: 10px;
-   }
-
-   .description:hover .text,
-   .description:hover .redirect-icon {
-      color: var(--sl-color-accent-high);
-      opacity: 1;
-      transition: opacity 0.2s ease-in-out;
-      cursor: pointer;
    }
 
    .aliases-mobile {

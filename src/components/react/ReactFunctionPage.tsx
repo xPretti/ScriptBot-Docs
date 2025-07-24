@@ -5,7 +5,7 @@ import styles from "./ReactFunctionPage.module.css";
 import ReactFunctionParam from "./ReactFunctionParam";
 import ReactFunctionReturn from "./ReactFunctionReturn";
 import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
-import type { FunctionModel } from "@src/interfaces/functions-interface";
+import type { FunctionPlaceholderInterface } from "@src/interfaces/placeholder-interface";
 import { getFunctionExample } from "@src/utils/functions-comp-utils";
 import ReactCode from "./ReactCode";
 
