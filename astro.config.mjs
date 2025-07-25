@@ -48,18 +48,30 @@ export default defineConfig({
             {
                label: "Indicators",
                autogenerate: { directory: "indicators" },
+               translations: {
+                  pt: "Indicadores",
+               },
             },
             {
                label: "Placeholders",
                autogenerate: { directory: "placeholders" },
+               translations: {
+                  pt: "Espaços reservados",
+               },
             },
             {
                label: "Fundamentals",
                autogenerate: { directory: "fundamentals" },
+               translations: {
+                  pt: "Fundamentos",
+               },
             },
             {
                label: "Moldable Vars",
                autogenerate: { directory: "moldablevars" },
+               translations: {
+                  pt: "Variáveis moldáveis",
+               },
             },
          ],
          customCss: ["./src/styles/custom.css"],

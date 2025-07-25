@@ -1,5 +1,5 @@
 ---
-title: Data Types
+title: Tipos de dados
 sidebar:
    order: 0
 ---

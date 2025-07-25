@@ -907,7 +907,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -957,7 +957,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1007,7 +1007,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1057,7 +1057,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1107,7 +1107,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1159,7 +1159,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1213,7 +1213,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1264,7 +1264,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1327,7 +1327,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1385,7 +1385,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1436,7 +1436,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1487,7 +1487,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -3176,7 +3176,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico.",
@@ -3220,7 +3220,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico.",
@@ -3338,7 +3338,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3492,7 +3492,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIME_HISTORIC",
-               typeLink: "/fundamentals/scriptbot-enumerators#time-historic",
+               typeLink: "/fundamentals/enumerators#time-historic",
             },
             name: "method",
             comment: "Método de cálculo (ex: 'TYPE_DAY', 'TYPE_WEEK' ...).",
@@ -3534,7 +3534,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIME_TYPE",
-               typeLink: "/fundamentals/scriptbot-enumerators#time-type",
+               typeLink: "/fundamentals/enumerators#time-type",
             },
             name: "method",
             comment: "Método de retorno. (ex: 'TYPE_SEC', 'TYPE_MIN' ...).",
@@ -3567,7 +3567,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+               typeLink: "/fundamentals/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -3587,7 +3587,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3638,7 +3638,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3689,7 +3689,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3740,7 +3740,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3779,7 +3779,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+               typeLink: "/fundamentals/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de posição: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -3799,7 +3799,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3850,7 +3850,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3902,7 +3902,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3954,7 +3954,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3994,7 +3994,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+               typeLink: "/fundamentals/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de ordem: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -4014,7 +4014,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -4065,7 +4065,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -4116,7 +4116,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -4167,7 +4167,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/mt5-enumerators#timeframes",
+               typeLink: "/fundamentals/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -4211,7 +4211,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+               typeLink: "/fundamentals/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -4264,8 +4264,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_POS_DOUBLE",
-               typeLink:
-                  "/fundamentals/scriptbot-enumerators#position-property-double",
+               typeLink: "/fundamentals/enumerators#position-property-double",
             },
             name: "property",
             comment:
@@ -4306,8 +4305,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_POS_INT",
-               typeLink:
-                  "/fundamentals/scriptbot-enumerators#position-property-int",
+               typeLink: "/fundamentals/enumerators#position-property-int",
             },
             name: "property",
             comment:
@@ -4348,8 +4346,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_POS_STRING",
-               typeLink:
-                  "/fundamentals/scriptbot-enumerators#position-property-string",
+               typeLink: "/fundamentals/enumerators#position-property-string",
             },
             name: "property",
             comment:
@@ -4899,7 +4896,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+               typeLink: "/fundamentals/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -4952,8 +4949,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_ORDER_DOUBLE",
-               typeLink:
-                  "/fundamentals/scriptbot-enumerators#order-property-double",
+               typeLink: "/fundamentals/enumerators#order-property-double",
             },
             name: "property",
             comment:
@@ -4994,8 +4990,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_ORDER_INT",
-               typeLink:
-                  "/fundamentals/scriptbot-enumerators#order-property-int",
+               typeLink: "/fundamentals/enumerators#order-property-int",
             },
             name: "property",
             comment:
@@ -5036,8 +5031,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_ORDER_STRING",
-               typeLink:
-                  "/fundamentals/scriptbot-enumerators#order-property-string",
+               typeLink: "/fundamentals/enumerators#order-property-string",
             },
             name: "property",
             comment:
@@ -5707,7 +5701,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade",
+               typeLink: "/fundamentals/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'",
@@ -5716,7 +5710,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_MARKET_ACTION",
-               typeLink: "/fundamentals/scriptbot-enumerators#market-action",
+               typeLink: "/fundamentals/enumerators#market-action",
             },
             name: "actionType",
             comment: "Tipo de fechamento: 'TYPE_IN', 'TYPE_OUT', 'TYPE_ALL'.",
@@ -5725,7 +5719,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TIME_HISTORIC",
-               typeLink: "/fundamentals/scriptbot-enumerators#time-historic",
+               typeLink: "/fundamentals/enumerators#time-historic",
             },
             name: "dateType",
             comment: "Tipo de data de inicio: 'TYPE_DAY', 'TYPE_WEEK'",
@@ -5734,7 +5728,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_MARKET_GET",
-               typeLink: "/fundamentals/scriptbot-enumerators#market-get",
+               typeLink: "/fundamentals/enumerators#market-get",
             },
             name: "profitType",
             comment:
@@ -6945,7 +6939,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+               typeLink: "/fundamentals/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -6999,7 +6993,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+               typeLink: "/fundamentals/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -7047,7 +7041,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+               typeLink: "/fundamentals/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -7096,7 +7090,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+               typeLink: "/fundamentals/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -7156,7 +7150,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+               typeLink: "/fundamentals/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -7204,7 +7198,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+               typeLink: "/fundamentals/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -7291,7 +7285,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+               typeLink: "/fundamentals/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -7346,7 +7340,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+               typeLink: "/fundamentals/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -7394,7 +7388,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/scriptbot-enumerators#trade-modify",
+               typeLink: "/fundamentals/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",

@@ -1,12 +1,84 @@
 ---
-title: ScriptBot Enumerators
+title: Enumeradores
 sidebar:
-   order: 10
+   order: 0
 ---
 
 import CodeVar from "@components/CodeVar.astro";
 
 Nesta página você encontrará os enumeradores utilizados no ScriptBot para representar diferentes categorias de valores. Esses enumeradores facilitam a definição de parâmetros em indicadores e funções.
+
+## Prices
+
+> Enumerador referente ao método de preço de um indicador.
+
+| VARIÁVEIS                   | SIGLAS |
+| --------------------------- | ------ |
+| <CodeVar>CLOSE</CodeVar>    | 1      |
+| <CodeVar>OPEN</CodeVar>     | 2      |
+| <CodeVar>HIGH</CodeVar>     | 3      |
+| <CodeVar>LOW</CodeVar>      | 4      |
+| <CodeVar>MEDIAN</CodeVar>   | 5      |
+| <CodeVar>TYPICAL</CodeVar>  | 6      |
+| <CodeVar>WEIGHTED</CodeVar> | 7      |
+
+## Methods
+
+> Enumerador referente ao método do cálculo de um indicador.
+
+| VARIÁVEIS                      | SIGLAS |
+| ------------------------------ | ------ |
+| <CodeVar>SIMPLE</CodeVar>      | 0      |
+| <CodeVar>EXPONENTIAL</CodeVar> | 1      |
+| <CodeVar>SMOOTHED</CodeVar>    | 2      |
+| <CodeVar>LINEAR</CodeVar>      | 3      |
+
+## Volumes
+
+> Enumerador referente ao método do cálculo de um indicador de volume.
+
+| VARIÁVEIS               | SIGLAS |
+| ----------------------- | ------ |
+| <CodeVar>TICK</CodeVar> | 0      |
+| <CodeVar>REAL</CodeVar> | 1      |
+
+## Stochastic
+
+> Enumerador referente ao método de preço de um indicador de stochatic.
+
+| VARIÁVEIS                     | SIGLAS |
+| ----------------------------- | ------ |
+| <CodeVar>LOWHIGH</CodeVar>    | 0      |
+| <CodeVar>CLOSECLOSE</CodeVar> | 1      |
+
+## Timeframes
+
+> Enumerador referente aos tempos gráficos.
+
+| VARIÁVEIS                  | TEMPOS                 |
+| -------------------------- | ---------------------- |
+| <CodeVar>CURRENT</CodeVar> | Tempo gráfico do robô. |
+| <CodeVar>M1</CodeVar>      | 1 minuto.              |
+| <CodeVar>M2</CodeVar>      | 2 minutos.             |
+| <CodeVar>M3</CodeVar>      | 3 minutos.             |
+| <CodeVar>M4</CodeVar>      | 4 minutos.             |
+| <CodeVar>M5</CodeVar>      | 5 minutos.             |
+| <CodeVar>M6</CodeVar>      | 6 minutos.             |
+| <CodeVar>M10</CodeVar>     | 10 minutos.            |
+| <CodeVar>M12</CodeVar>     | 12 minutos.            |
+| <CodeVar>M15</CodeVar>     | 15 minutos.            |
+| <CodeVar>M20</CodeVar>     | 20 minutos.            |
+| <CodeVar>M30</CodeVar>     | 30 minutos.            |
+| <CodeVar>H1</CodeVar>      | 1 hora.                |
+| <CodeVar>H2</CodeVar>      | 2 horas.               |
+| <CodeVar>H3</CodeVar>      | 3 horas.               |
+| <CodeVar>H4</CodeVar>      | 4 horas.               |
+| <CodeVar>H6</CodeVar>      | 6 horas.               |
+| <CodeVar>H8</CodeVar>      | 8 horas.               |
+| <CodeVar>H12</CodeVar>     | 12 horas.              |
+| <CodeVar>D1</CodeVar>      | 1 dia.                 |
+| <CodeVar>W1</CodeVar>      | 1 semana.              |
+| <CodeVar>MN1</CodeVar>     | 1 mês.                 |
 
 ## Trade:
 
@@ -157,3 +229,18 @@ Nesta página você encontrará os enumeradores utilizados no ScriptBot para rep
 | ----------------------------- | ------------------- |
 | <CodeVar>TYPE_PRICE</CodeVar> | Será usado o preço. |
 | <CodeVar>TYPE_POINT</CodeVar> | Será usado o ponto. |
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
