@@ -1,0 +1,54 @@
+---
+title: Conhecendo
+sidebar:
+   order: 0
+---
+
+Nesta página, você vai conhecer os fragmentos disponíveis no ScriptBot: para que servem, como funcionam e de que forma podem facilitar suas automatizações. Entenda também como esses recursos aceleram o desenvolvimento de estratégias de forma prática e eficiente.
+
+## Para que servem?
+
+Os **fragmentos**, anteriormente chamados de "**variáveis modeláveis**", são uma forma de armazenar dados, como números ou textos, dentro do ScriptBot. Esses dados podem ser utilizados em expressões lógicas, parâmetros de indicadores, filtros, eventos ou em qualquer outro lugar que permita a criação de expressões.
+
+Além de tornar o desenvolvimento das estratégias mais organizado, flexível e eficiente, os fragmentos também foram criados para resolver um problema específico: a impossibilidade de realizar otimizações no Backtest do MetaTrader 5 devido ao uso de textos na lógica das estratégias pelo ScriptBot.
+
+Com o tempo, os fragmentos foram aprimorados e hoje não só solucionam essa limitação, como também ajudam a acelerar o desenvolvimento e o reaproveitamento do código.
+
+## Como funciona?
+
+Os fragmentos são dados constantes, ou seja, seus valores não mudam durante a execução do robô e são amplamente utilizados em diversas partes dele. Na inicialização, todos os cálculos que envolvem fragmentos são automaticamente convertidos, essa conversão acontece antes da compilação da expressão lógica e ocorre apenas uma vez.
+
+### Entendendo os fragmentos
+
+A imagem abaixo mostra uma lista simplificada de fragmentos disponíveis no ScriptBot.
+
+![Fragmentos](/src/assets/Fragments.png)
+
+Nesta lista podemos notar que existem vários tipos de fragmentos, sendo eles:
+
+-  **INTEGER**: Que pode armazenar valores inteiros.
+-  **DOUBLE**: Que pode armazenar valores decimais, ou seja, números de ponto flutuante.
+-  **STRING**: Que pode armazenar textos, expressões lógicas ou qualquer tipo de valor.
+-  **TIMEFRAME**: Que pode armazenar tempos gráficos.
+
+### Utilizando os fragmentos na expressão lógica
+
+Para utilizar um fragmento é simples, basta utilizar o nome do fragmento na sua expressão lógica, como por exemplo:
+
+```java
+CLOSE[0] > CLOSE[1] && STR0
+```
+
+Se, por exemplo, o fragmento **STR0** tiver o valor `ALL_PROFIT_OPEN >= 50`, a expressão lógica será automaticamente convertida, durante a inicialização, para:
+
+```java
+CLOSE[0] > CLOSE[1] && ALL_PROFIT_OPEN >= 50
+```
+
+## Utilizando os fragmentos em parâmetros de indicadores
+
+Os fragmentos podem ser utilizados em parâmetros de indicadores, como mostrado na imagem abaixo:
+
+![Fragmentos](/src/assets/Ind0.png)
+
+Na imagem acima, podemos observar o uso dos fragmentos **TF0**, **INT0** e **INT1**. Esses fragmentos serão automaticamente convertidos durante a inicialização, o que permite realizar otimizações de estratégias usando o Backtest do MetaTrader 5 ou simplesmente facilitar a manutenção da estratégia.

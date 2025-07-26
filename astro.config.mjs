@@ -67,10 +67,10 @@ export default defineConfig({
                },
             },
             {
-               label: "Moldable Vars",
-               autogenerate: { directory: "moldablevars" },
+               label: "Fragments",
+               autogenerate: { directory: "fragments" },
                translations: {
-                  pt: "Variáveis moldáveis",
+                  pt: "Fragmentos",
                },
             },
          ],
