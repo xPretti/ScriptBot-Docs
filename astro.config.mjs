@@ -17,7 +17,7 @@ export default defineConfig({
 
    integrations: [
       starlight({
-         plugins: [starlightThemeRapide()],
+         // plugins: [starlightThemeRapide()],
          defaultLocale: "root",
          locales: {
             root: {
@@ -78,9 +78,8 @@ export default defineConfig({
 
          // Custom components
          components: {
-            // Override the default `SocialIcons` component.
-            FallbackContentNotice:
-               "./src/components/override/FallbackContentNotice.astro",
+            // FallbackContentNotice:
+            //    "./src/components/override/FallbackContentNotice.astro",
          },
       }),
       mdx(),

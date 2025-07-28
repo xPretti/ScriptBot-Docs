@@ -18,20 +18,22 @@ Para entender, leia [O que é um fragmento](/fragments/understand/).
 
 ## Utilização avançada
 
-Os **fragmentos** foram criados inicialmente para resolver um problema específico: a impossibilidade de realizar otimizações no Backtest do MetaTrader 5. Com o tempo, eles foram aprimorados e hoje não apenas superam essa limitação, mas também aceleram o desenvolvimento e o reaproveitamento do código por meio do uso de parâmetros, que os tornam semelhantes a funções.
+Os **fragmentos** foram criados inicialmente para resolver um problema específico: a impossibilidade de realizar otimizações no Backtest do MetaTrader 5. Com o tempo, eles foram aprimorados e hoje não apenas superam essa limitação, mas também contribuem para acelerar o desenvolvimento e o reaproveitamento do código.
+
+Com o suporte a parâmetros, os fragmentos passaram a se comportar de forma semelhante a funções, com a diferença de que atuam no momento da inicialização, injetando código diretamente no fluxo da expressão lógica.
 
 ### Parametrização
 
-Uma das principais novidades é a possibilidade de usar parâmetros na composição de fragmentos do tipo **STRING**, transformando-os em uma espécie de função constante. Isso permite alterar o comportamento do fragmento conforme os parâmetros passados, tornando a criação das expressões mais flexível e eficiente.
+Uma das principais novidades é a possibilidade de usar parâmetros na composição de fragmentos do tipo **STRING**, transformando-os em uma espécie de função constante. Isso permite alterar o comportamento do fragmento conforme os parâmetros passados, deixando a expressão um pouco mais dinâmica.
 
-#### Definição do fragmento:
+### Definição do fragmento
 
 Vamos definir o fragmento **STR0** com o seguinte valor: `ALL_PROFIT_OPEN >= @0 && @1`. <br/>
 O caracter `@` indica que será um parametro e `0` e `1` indicam os indices dos parâmetros. O indice deve ser maior ou igual a zero, sendo zero o primeiro parâmetro.
 
 ![Fragmentos](/src/assets/StrParam.png)
 
-#### Uso sem parâmetros:
+### Uso sem parâmetros
 
 Abaixo está um exemplo de uso do fragmento sem parâmetros:
 
@@ -41,7 +43,7 @@ CLOSE[0] > CLOSE[1] && STR0
 
 O fragmento **STR0** será automaticamente convertido para `CLOSE[0] > CLOSE[1] && ALL_PROFIT_OPEN >= @0 && @1`, o que causará um erro na compilação da expressão lógica devido à ausência dos parâmetros necessários. Esse erro acontece porque, na definição do fragmento, os parâmetros `@0` e `@1` foram declarados como obrigatórios.
 
-#### Uso com parâmetros:
+### Uso com parâmetros
 
 Abaixo está um exemplo de uso do fragmento com parâmetros:
 
@@ -49,6 +51,6 @@ Abaixo está um exemplo de uso do fragmento com parâmetros:
 CLOSE[0] > CLOSE[1] && STR0[50, Print["My age is: ", INT0]]
 ```
 
-O fragmento **STR0** sera convertido para `CLOSE[0] > CLOSE[1] && ALL_PROFIT_OPEN >= 50 && Print["My age is: ", INT0]`. Nenhum erro ocorrerá, pois os parâmetros foram fornecidos corretamente.
+O fragmento **STR0** será convertido para `CLOSE[0] > CLOSE[1] && ALL_PROFIT_OPEN >= 50 && Print["My age is: ", INT0]`. Nenhum erro ocorrerá, pois todos os parâmetros foram fornecidos corretamente.
 
-Em geral, o uso de parâmetros permite criar expressões mais complexas e flexíveis. Além disso, possibilita modificar uma expressão de forma dinâmica, ajustando seu comportamento conforme os parâmetros fornecidos.
+De modo geral, o uso de parâmetros permite criar expressões mais complexas e flexíveis. Além disso, possibilita modificar o comportamento da expressão de forma dinâmica, conforme os valores passados.
