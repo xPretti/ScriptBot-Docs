@@ -5,6 +5,7 @@ sidebar:
 ---
 
 import { Aside } from "@astrojs/starlight/components";
+import ImgFrame from "@components/ImgFrame.astro";
 
 Nesta página, você vai aprender a utilizar os fragmentos de forma mais avançada, combinando parâmetros na composição de seus valores.
 
@@ -31,7 +32,10 @@ Uma das principais novidades é a possibilidade de usar parâmetros na composiç
 Vamos definir o fragmento **STR0** com o seguinte valor: `ALL_PROFIT_OPEN >= @0 && @1`. <br/>
 O caracter `@` indica que será um parametro e `0` e `1` indicam os indices dos parâmetros. O indice deve ser maior ou igual a zero, sendo zero o primeiro parâmetro.
 
+<ImgFrame> 
 ![Fragmentos](/src/assets/StrParam.png)
+</ImgFrame>
+
 
 ### Uso sem parâmetros
 

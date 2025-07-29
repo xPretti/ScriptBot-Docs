@@ -5,6 +5,7 @@ sidebar:
 ---
 
 import { Aside } from "@astrojs/starlight/components";
+import ImgFrame from "@components/ImgFrame.astro";
 
 Nesta página, você vai conhecer os fragmentos disponíveis no ScriptBot: para que servem, como funcionam e de que forma podem facilitar suas automatizações. Entenda também como esses recursos aceleram o desenvolvimento de estratégias de forma prática e eficiente.
 
@@ -26,7 +27,10 @@ Após a conversão, os fragmentos já estão incorporados diretamente nas expres
 
 A imagem abaixo mostra uma lista simplificada de fragmentos disponíveis no ScriptBot.
 
+<ImgFrame> 
 ![Fragmentos](/src/assets/Fragments.png)
+</ImgFrame>
+
 
 Nesta lista podemos notar que existem vários tipos de fragmentos, sendo eles:
 
@@ -59,6 +63,8 @@ Os fragmentos ganham ainda mais potencial com o uso de recursos avançados. Na p
 
 Os fragmentos podem ser utilizados em parâmetros de indicadores, como mostrado na imagem abaixo:
 
+<ImgFrame> 
 ![Fragmentos](/src/assets/Ind0.png)
+</ImgFrame>
 
 Na imagem acima, podemos observar o uso dos fragmentos **TF0**, **INT0** e **INT1**. Esses fragmentos serão automaticamente convertidos durante a inicialização, o que permite realizar otimizações de estratégias usando o Backtest do MetaTrader 5 ou simplesmente facilitar a manutenção da estratégia.

@@ -2,6 +2,7 @@
 title: Variáveis
 ---
 
+import CodeVar from "@components/CodeVar.astro";
 import VarTable from "@components/VarTable.astro";
 import { ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/variable-enums";
 import { Aside } from "@astrojs/starlight/components";
@@ -60,21 +61,17 @@ comportamento.
 <VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE} />
 
 <Aside type="tip">
-   Variáveis de Ordens e Posições fechadas possuem 4 diferentes versões:
-   <br /> **_WEEK** que retorna a soma total da semana,
-   <br /> **_MONTH** que retorna a soma total do mês,
-   <br /> **_YEAR** que retorna a soma total do ano,
-   <br /> e as normais sem sufixo, que retornam o total do dia.
+   Variáveis de Ordens e Posições fechadas possuem 4 diferentes versões:  
+   **_WEEK** que retorna a soma total da semana,  
+   **_MONTH** que retorna a soma total do mês,  
+   **_YEAR** que retorna a soma total do ano,  
+   e as normais sem sufixo, que retornam o total do dia.
    <br />
-   Para usar basta adicionar o sufixo ao final da variável. <br />
-   Por exemplo:
-   <code class="variable">ALL_VOLUME_WEEK</code>,
-   <code class="variable">ALL_GAIN_YEAR</code>
+   Para usar basta adicionar o sufixo ao final da variável.  
+   Por exemplo: `ALL_VOLUME_WEEK`, `ALL_GAIN_YEAR`
    <br />
-   As siglas seguem o mesmo padrão, adicionando o sufixo ao final da variável.
-   <br /> Por exemplo:
-   <code class="variable-abbr">AVOL_WEEK</code>,
-   <code class="variable-abbr">AGAIN_YEAR</code>
+   As siglas seguem o mesmo padrão, adicionando o sufixo ao final da variável.  
+   Por exemplo: `AVOL_WEEK`, `AGAIN_YEAR`
 </Aside>
 
 ## Sinais
