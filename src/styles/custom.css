@@ -146,11 +146,13 @@ td:last-child {
    border-inline-start: 1px solid var(--sl-color-accent-high);
 }
 
-.top-level summary:hover * {
-   color: var(--sl-color-accent-high);
-}
+@media (pointer: fine) {
+   .top-level summary:hover * {
+      color: var(--sl-color-accent-high);
+   }
 
-.top-level details:has(> summary:hover) li,
-.top-level li:has(> a[aria-current="false"]:hover) {
-   border-inline-start: 1px solid var(--sl-color-accent-high);
+   .top-level details:has(> summary:hover) li,
+   .top-level li:has(> a[aria-current="false"]:hover) {
+      border-inline-start: 1px solid var(--sl-color-accent-high);
+   }
 }
