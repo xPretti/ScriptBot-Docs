@@ -128,3 +128,29 @@ td:last-child {
 /* tr:hover > td {
    background-color: var(--sl-color-row-hover);
 } */
+
+.pagination-links a {
+   box-shadow: none;
+}
+
+.top-level a[aria-current="false"] {
+   transition: color 0.15s ease-in-out;
+}
+
+.top-level a[aria-current="page"] {
+   color: var(--sl-color-accent-high);
+   background-color: transparent;
+}
+
+.top-level li:has(> a[aria-current="page"]) {
+   border-inline-start: 1px solid var(--sl-color-accent-high);
+}
+
+.top-level summary:hover * {
+   color: var(--sl-color-accent-high);
+}
+
+.top-level details:has(> summary:hover) li,
+.top-level li:has(> a[aria-current="false"]:hover) {
+   border-inline-start: 1px solid var(--sl-color-accent-high);
+}

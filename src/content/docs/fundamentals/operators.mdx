@@ -40,7 +40,7 @@ Nesta página você encontrará os operadores disponíveis no ScriptBot. Operado
 <Frame>
 ### Operator +
 
-> Operador de adição.<br/>
+> Operador de adição.  
 > Retorna a adição entre dois números.
 
 ```java
@@ -52,7 +52,7 @@ CLOSE[0] + CLOSE[1]
 <Frame>
 ### Operator -
 
-> Operador de subtração.<br/>
+> Operador de subtração.  
 > Retorna a subtração entre dois números.
 
 ```java
@@ -64,7 +64,7 @@ CLOSE[0] - CLOSE[1]
 <Frame>
 ### Operator \*
 
-> Operador de multiplicação.<br/>
+> Operador de multiplicação.  
 > Retorna a multiplicação entre dois números.
 
 ```java
@@ -76,7 +76,7 @@ CLOSE[0] * 2
 <Frame>
 ### Operator /
 
-> Operador de divisão.<br/>
+> Operador de divisão.  
 > Retorna a divisão entre dois números.
 
 ```java
@@ -88,9 +88,9 @@ CLOSE[0] / 2
 <Frame>
 ### Operator !
 
-> Operador de negação.<br/>
-> Usando o operador de negação, podemos inverter o resultado de uma expressão.<br/>
-> Exemplo:<br/>{" "}
+> Operador de negação.  
+> Usando o operador de negação, podemos inverter o resultado de uma expressão.  
+> Exemplo:  
 > `!(CLOSE[0] > CLOSE[1])` quando `CLOSE[0]` for maior que `CLOSE[1]`, o resultado será `true`, mas como estamos negando essa expressão, o resultado será `false`.
 
 ```java
@@ -102,7 +102,7 @@ CLOSE[0] / 2
 <Frame>
 ### Operator %
 
-> Operador de resto da divisão.<br/>
+> Operador de resto da divisão.  
 > Retorna o resto da divisão entre dois números.
 
 ```java
@@ -114,7 +114,7 @@ CLOSE[0] / 2
 <Frame>
 ### Operator >
 
-> Operador de maior que.<br/>
+> Operador de maior que.  
 > Retorna verdadeiro se o valor à esquerda for maior ao valor à direita.
 
 ```java
@@ -126,7 +126,7 @@ CLOSE[0] > CLOSE[1]
 <Frame>
 ### Operator \<
 
-> Operador de menor que.<br/>
+> Operador de menor que.  
 > Retorna verdadeiro se o valor à esquerda for menor ao valor à direita.
 
 ```java
@@ -138,7 +138,7 @@ CLOSE[0] < CLOSE[1]
 <Frame>
 ### Operator >=
 
-> Operador de maior ou igual a.<br/>
+> Operador de maior ou igual a.  
 > Retorna verdadeiro se o valor à esquerda for maior ou igual ao valor à direita.
 
 ```java
@@ -150,7 +150,7 @@ CLOSE[0] >= CLOSE[1]
 <Frame>
 ### Operator \<=
 
-> Operador de menor ou igual a.<br/>
+> Operador de menor ou igual a.  
 > Retorna verdadeiro se o valor à esquerda for menor ou igual ao valor à direita.
 
 ```java
@@ -162,7 +162,7 @@ CLOSE[0] <= CLOSE[1]
 <Frame>
 ### Operator ==
 
-> Operador de igualdade.<br/>
+> Operador de igualdade.  
 > Retorna verdadeiro se os valores comparados são iguais.
 
 ```java
@@ -174,7 +174,7 @@ CLOSE[0] == CLOSE[1]
 <Frame>
 ### Operator !=
 
-> Operador de desigualdade.<br/>
+> Operador de desigualdade.  
 > Retorna verdadeiro se os valores comparados não forem iguais.
 
 ```java
@@ -186,7 +186,7 @@ CLOSE[0] != CLOSE[1]
 <Frame>
 ### Operator &&
 
-> Operador de e.<br/>
+> Operador de e.  
 > Retorna verdadeiro apenas se ambas as condições forem verdadeiras.
 
 ```java
@@ -198,7 +198,7 @@ CLOSE[0] && CLOSE[1]
 <Frame>
 ### Operator \|
 
-> Operador de ou.<br/>
+> Operador de ou.  
 > Retorna verdadeiro se pelo menos uma das condições for verdadeira.
 
 ```java
@@ -210,7 +210,7 @@ CLOSE[0] >= CLOSE[1] || OPEN[0] >= OPEN[1]
 <Frame>
 ### Operator ( )
 
-> Operador de priorização.<br/>
+> Operador de priorização.  
 > Utilizado para definir a ordem de avaliação das expressões, garantindo que os cálculos entre parênteses sejam executados antes dos demais operadores.
 
 ```java
@@ -222,7 +222,7 @@ CLOSE[0] >= CLOSE[1] || OPEN[0] >= OPEN[1]
 <Frame>
 ### Operator ?:
 
-> Operador de condição.<br/>
+> Operador de condição.  
 > Avalia uma condição e executa uma das duas instruções com base no resultado: a primeira se for verdadeira, a segunda se for falsa.
 
 ```java
@@ -234,9 +234,11 @@ CLOSE[0] > CLOSE[1] ? Print["Biggest"] : Print["Smallest"]
 <Frame>
 ### Operator ->
 
-> Operador de execução lógica.<br/>
-> Utilizado para executar comandos apenas quando a condição anterior for verdadeira.<br/>{" "}
-> **Atenção:** é obrigatório encerrar a instrução com `;`, pois esse caractere delimita o fim da expressão.
+> Operador de execução lógica.  
+> Utilizado para executar comandos apenas quando a condição anterior for verdadeira.  
+> 
+> **Atenção:**  
+> É obrigatório encerrar a instrução com `;`, pois esse caractere delimita o fim da expressão.
 
 ```java
 CLOSE[0] > CLOSE[1] -> Print["Este comando só será executado se a condição for verdadeira"];
@@ -247,9 +249,9 @@ CLOSE[0] > CLOSE[1] -> Print["Este comando só será executado se a condição f
 <Frame>
 ### Operator //
 
-> Operador de comentário de linha.<br/>
-> Usando o operador de comentário de linha, podemos evitar que uma expressão a partir do comentario seja executada.<br/>
-> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` é executado, mas `OPEN[0] < OPEN[1]` nao, pois ele foi comentado.<br/>
+> Operador de comentário de linha.  
+> Usando o operador de comentário de linha, podemos evitar que uma expressão a partir do comentario seja executada.  
+> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` é executado, mas `OPEN[0] < OPEN[1]` nao, pois ele foi comentado.  
 
 ```java
 CLOSE[0] > CLOSE[1] // && OPEN[0] < OPEN[1]
@@ -260,9 +262,9 @@ CLOSE[0] > CLOSE[1] // && OPEN[0] < OPEN[1]
 <Frame>
 ### Operator /\* \*/
 
-> Operador de comentário de bloco.<br/>
-> Usando o operador de comentário de bloco, podemos evitar que uma expressão entre o comentario seja executada.<br/>
-> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` nao é executado, pois ele foi comentado.<br/>
+> Operador de comentário de bloco.  
+> Usando o operador de comentário de bloco, podemos evitar que uma expressão entre o comentario seja executada.  
+> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` nao é executado, pois ele foi comentado.  
 
 ```java
 /*CLOSE[0] > CLOSE[1]*/ OPEN[0] < OPEN[1]

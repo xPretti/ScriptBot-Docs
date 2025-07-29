@@ -53,6 +53,13 @@ export default defineConfig({
                },
             },
             {
+               label: "Fundamentals",
+               autogenerate: { directory: "fundamentals" },
+               translations: {
+                  pt: "Fundamentos",
+               },
+            },
+            {
                label: "Placeholders",
                autogenerate: { directory: "placeholders" },
                translations: {
@@ -60,10 +67,10 @@ export default defineConfig({
                },
             },
             {
-               label: "Fundamentals",
-               autogenerate: { directory: "fundamentals" },
+               label: "Conditions",
+               autogenerate: { directory: "conditions" },
                translations: {
-                  pt: "Fundamentos",
+                  pt: "Condições",
                },
             },
             {
