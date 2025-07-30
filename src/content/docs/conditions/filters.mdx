@@ -1,5 +1,161 @@
 ---
 title: Filtros
 sidebar:
-   order: 0
+  order: 1
 ---
+
+import ImgFrame from "@components/ImgFrame.astro";
+
+Nesta página, você encontrará informações sobre os filtros, para que servem e como eles podem ajudar a melhorar a confiabilidade das estratégias no ScriptBot.
+
+## O que é um filtro?
+
+Um **filtro** é uma camada de validação configurável que permite ao usuário controlar a entrada de ordens no mercado. Cada filtro atua como uma regra lógica personalizada que, quando satisfeita, contribui com um determinado **peso** para a validação final da operação. O sistema permite a criação de até **10 filtros**, sendo que cada um pode ser:
+
+- **Obrigatório** ou **opcional**;
+- Configurado com um **peso específico**;
+- Definido com **condições lógicas** personalizadas pelo usuário (como expressões booleanas baseadas em indicadores ou sinais do mercado);
+- Associado a diferentes **métodos de validação**.
+
+Esses filtros são acionados automaticamente após o [Gatilho de Confirmação](/conditions/triggers), iniciando o processo de verificação para liberar ou não a entrada no mercado.
+
+## Para que servem?
+
+Os filtros servem para garantir que as entradas de **compra ou venda** ocorram apenas quando condições específicas forem atendidas. Eles permitem ao usuário construir uma estrutura de validação robusta e personalizada, elevando o nível de controle e segurança nas operações.
+
+O funcionamento é baseado na soma dos **pesos** dos filtros validados. Quando o total atinge ou supera o peso mínimo definido pelo usuário, a ordem é **autorizada**. Caso contrário, a entrada é **bloqueada** e a ordem não é enviada ao mercado.
+
+De forma resumida, os filtros ajudam a:
+
+- Evitar entradas impulsivas ou fora dos critérios estabelecidos;
+- Apoiar a tomada de decisão com validações objetivas e consistentes;
+- Adicionar camadas de verificação que aumentam a confiabilidade das estratégias;
+- Organizar e simplificar validações complexas, especialmente quando há múltiplas condições envolvidas.
+
+## Configurando os filtros
+
+A configuração dos filtros é simples e intuitiva. Abaixo, você pode visualizar uma imagem que ilustra a estrutura dos filtros no sistema:
+
+<ImgFrame>![Filtros](@src/assets/Filters.png)</ImgFrame>
+
+Cada filtro pode ser configurado de forma personalizada, de acordo com as necessidades do usuário. A estrutura de configuração se divide em duas partes: **Geral** e **Filtro**.
+
+### Geral
+
+- **Peso mínimo de validação**: Define o valor mínimo que a soma dos pesos dos filtros deve atingir para que o sistema autorize a entrada da ordem.
+
+### Filtro
+
+- **Tipo**: Define o comportamento do filtro durante a validação. As opções são:
+  - **Desativado**: O filtro é ignorado no processo de validação.
+  - **Obrigatório**:
+    - O filtro é sempre executado e deve ser validado com sucesso para que a ordem seja autorizada.
+    - Este filtro também contribui para a pontuação total quando validado com sucesso.
+  - **Opcional**:
+    - O filtro é executado apenas se a soma total dos pesos ainda não tiver atingido o valor necessário.
+    - Seu resultado contribui para a pontuação, seja validado ou não.
+- **Peso de Sucesso**: Valor somado à pontuação total caso o filtro seja validado com sucesso.
+- **Peso de Falha**: Valor somado à pontuação caso o filtro não seja validado. Pode ser zero, positivo ou negativo, conforme a estratégia adotada.
+- **Cálculos de Validação**: São expressões condicionais que o sistema executa quando o filtro for chamado.
+
+## Entendendo os filtros
+
+Os filtros são, essencialmente, validações em camadas. Cada validação tem um peso associado, que influencia a pontuação total da ordem. Se a soma dos pesos dos filtros atingir ou superar o valor do **peso mínimo**, a ordem é autorizada.
+
+### Primeiro exemplo:
+
+Neste exemplo, os filtros são utilizados de forma complementar. O sistema considera uma entrada válida (compra ou venda) quando a soma dos pesos dos filtros validados atinge um valor mínimo.
+
+Exemplo da configuração:
+
+<ImgFrame>![EX1](@src/assets/FilterEx01.png)</ImgFrame>
+
+Se ao menos dois filtros forem validados com sucesso (2 × 25 = 50), o sistema considera que o critério mínimo foi atingido e confirma a entrada de compra ou venda.
+
+**Cálculos da Validação:**
+
+```js
+Filtro 01 (complementar): "(25 + 25) >= 50" → verdadeiro → +25
+Filtro 02 (complementar): "(25 + 25) >= 50" → verdadeiro → +25
+Filtro 03 (complementar): "50 < 25"         → falso      → +0
+
+Soma dos pesos: 25 + 25 + 0 = 50
+```
+
+**Resultado:**  
+Como a soma dos pesos dos filtros validados atingiu o mínimo exigido (50), a entrada é confirmada.
+
+### Segundo exemplo:
+
+Neste exemplo, são utilizados filtros complementares e obrigatórios. O sistema exige que:
+
+1. A soma dos pesos dos filtros validados atinja o valor mínimo configurado.
+2. Todos os filtros obrigatórios também sejam validados com sucesso.
+
+Exemplo da configuração:
+
+<ImgFrame>![EX2](@src/assets/FilterEx02.png)</ImgFrame>
+
+Mesmo que a soma dos filtros complementares atinja o peso mínimo, se algum filtro obrigatório falhar, a entrada não será confirmada.
+
+**Cálculos da Validação:**
+
+```js
+Filtro 01 (complementar): "(25 + 25) >= 50" → verdadeiro → +25
+Filtro 02 (complementar): "(25 + 25) >= 50" → verdadeiro → +25
+Filtro 03 (obrigatório):  "50 < 25"         → falso      → +0
+
+Soma dos pesos: 25 + 25 + 0 = 50
+```
+
+**Resultado:**  
+Embora a soma dos filtros validados tenha atingido o mínimo necessário (50), o filtro obrigatório não foi validado, portanto a entrada não é confirmada.
+
+### Terceiro exemplo:
+
+Neste exemplo, são utilizados filtros complementares e obrigatórios. O sistema exige que:
+
+1. A soma dos pesos dos filtros validados atinja o valor mínimo configurado.
+2. Todos os filtros obrigatórios também sejam validados com sucesso.
+
+Exemplo da configuração:
+
+<ImgFrame>![EX3](@src/assets/FilterEx03.png)</ImgFrame>
+
+Mesmo que a soma dos filtros complementares atinja o peso mínimo, se algum filtro obrigatório falhar, a entrada não será confirmada.
+
+**Cálculos da Validação:**
+
+```js
+Filtro 01 (obrigatório):  "(25 + 25) >= 50" → verdadeiro → +25
+Filtro 02 (complementar): "(25 + 25) >= 50" → verdadeiro → +25
+Filtro 03 (complementar): "50 < 25"         → falso      → +0
+
+Soma dos pesos: 25 + 25 + 0 = 50
+```
+
+**Resultado:**  
+A soma dos filtros validados atingiu o mínimo necessário (50) e o filtro obrigatório foi validado. Portanto, a entrada é confirmada.
+
+### Quarto exemplo:
+
+Neste exemplo, são utilizados apenas filtros obrigatórios. Nesse caso, o sistema não depende da soma mínima de pesos, mas sim da validação de todos os filtros obrigatórios.
+
+Exemplo da configuração:
+
+<ImgFrame>![EX4](@src/assets/FilterEx04.png)</ImgFrame>
+
+Mesmo que os filtros validados acumulem peso suficiente, a entrada não será confirmada se qualquer filtro obrigatório falhar.
+
+**Cálculos da Validação:**
+
+```js
+Filtro 01 (obrigatório): "(25 + 25) >= 50" → verdadeiro → +25
+Filtro 02 (obrigatório): "(25 + 25) >= 50" → verdadeiro → +25
+Filtro 03 (obrigatório): "50 < 25"         → falso      → +0
+
+Soma dos pesos: 25 + 25 + 0 = 50
+```
+
+**Resultado:**  
+Apesar da soma dos pesos atingir 50, o filtro obrigatório "Filtro 03" não foi validado. Como nem todos os filtros obrigatórios foram validados, a entrada não é confirmada.

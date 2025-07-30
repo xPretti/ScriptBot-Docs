@@ -42,34 +42,45 @@ O fluxo de operações do ScriptBot segue a seguinte ordem:
 flowchart TD
     A["PRE-REQUISITO"] -- TRUE --- n1["ENTRADA"]
     n1 -- TRUE --- n2["CONFIRMAÇÃO"]
-    n2 -- TRUE --- n3["ENVIO DO PEDIDO"]
+    n2 -- TRUE --- n3["FILTROS"]
     A -- EMPTY --- n1
     n2 -- EMPTY --- n3
+    n3 -- TRUE --- n4["ENVIO DO PEDIDO"]
+    n3 -- EMPTY --- n4
+
     A@{ shape: rounded}
     n2@{ shape: rounded}
-    n3@{ shape: hex}
-```
+    n3@{ shape: terminal}
+    n4@{ shape: hex}
+    style n3 stroke:#FF6D00,color:#FF6D00
+
+````
 </Preview>
 
 O fluxo de execução é composto por quatro etapas principais, organizadas sequencialmente:
 
 {/* prettier-ignore */}
 <Steps>
-1. **PRE-REQUISITO**  
-   - Primeira verificação da sequência.  
-   - Responsável por fazer verificações iniciais, usadas para cálculos simples e rápidos.  
-   - Se validado como **verdadeiro**, o fluxo prossegue para o próximo gatilho.  
+1. **PRE-REQUISITO**
+   - Primeira verificação da sequência.
+   - Responsável por fazer verificações iniciais, usadas para cálculos simples e rápidos.
+   - Se validado como **verdadeiro**, o fluxo prossegue para o próximo gatilho.
    - **Opcional**: caso esteja vazio, o processo segue diretamente para o **ENTRADA**.
-2. **ENTRADA**  
-   - Gatilho de entrada da estratégia.  
-   - Responsável por realizar o cálculo da lógica principal da estratégia.  
+2. **ENTRADA**
+   - Gatilho de entrada da estratégia.
+   - Responsável por realizar o cálculo da lógica principal da estratégia.
    - Se validado como **verdadeiro**, leva à próxima etapa (**CONFIRMAÇÃO**).
-3. **CONFIRMAÇÃO**  
-   - Confirmação adicional antes da execução.  
-   - Responsável por fazer cálculos adicionais, se necessário.  
+3. **CONFIRMAÇÃO**
+   - Confirmação adicional antes da execução.
+   - Responsável por fazer cálculos adicionais, se necessário.
+   - **Opcional**: se não estiver configurado, o fluxo segue diretamente para **FILTROS**.
+4. **FILTROS**
+   - Os filtros aplicam múltiplas camadas de validações para aumentar a **confiabilidade** da estratégia.
+   - Cada filtro realiza uma **validação específica** e pode ter **pesos diferentes**, permitindo uma análise mais refinada.
+   - A documentação completa sobre os filtros podem ser encontradas em [Filtros](/conditions/filters).
    - **Opcional**: se não estiver configurado, o fluxo segue diretamente para **ENVIO DO PEDIDO**.
-4. **ENVIO DO PEDIDO**  
-   - Etapa final do fluxo.  
+5. **ENVIO DO PEDIDO**
+   - Etapa final do fluxo.
    - Responsável pelo envio da operação propriamente dita.
 </Steps>
 
@@ -103,7 +114,8 @@ O fluxo de saída segue a seguinte ordem:
 flowchart TD
     A["SAIDA"] -- TRUE --- n3["FECHAMENTO TOTAL"]
     n3@{ shape: hex}
-```
+````
+
 </Preview>
 
 O fluxo é resumido em duas etapas:
