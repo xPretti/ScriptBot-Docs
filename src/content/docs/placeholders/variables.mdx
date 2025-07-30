@@ -12,70 +12,78 @@ operações e expressões lógicas. Elas representam valores que podem mudar ao
 longo do tempo, mas não possuem parâmetros próprios que alterem seu
 comportamento.
 
-## Posições
+## Posições e Ordens: \{#positions-and-orders\}
 
-> Essas variáveis são definidas previamente e utilizadas como parâmetros fixos durante a execução de gatilhos ou eventos de posição.
+> Essas variáveis são definidas previamente e utilizadas como parâmetros fixos
+> durante a execução de gatilhos ou eventos de posição.
 
 <VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION} />
 
+{/* prettier-ignore */}
 <Aside type="tip">
-   Em eventos de modificação, como no `OnPositionModify()`, as variáveis locais
-   possuem duas versões: uma com o sufixo **_OLD** e outra sem sufixo.
-   <br />
-   As variáveis com o sufixo **_OLD** contêm o valor **antes** da modificação,
-   enquanto as sem sufixo refletem o valor **após** a modificação.
-   <br />
-   Exemplo:  
-   **_SL_OLD**: Antes da modificação  
-   **_SL**: Após a modificação.
+  Em eventos de modificação, como no `OnPositionModify()`, as variáveis locais
+  possuem duas versões: uma com o sufixo **\_OLD** e outra sem sufixo.
+  <br />
+  As variáveis com o sufixo **_OLD** contêm o valor **antes** da modificação, enquanto
+  as sem sufixo refletem o valor **após** a modificação.
+  <br />
+  Exemplos:  
+  **_SL_OLD**: Retorna o valor antes da modificação.  
+  **_SL**: Retorna o valor após a modificação.
 </Aside>
 
-## Gatilhos: 
+## Gatilhos: \{#triggers\}
 
-> Essas variáveis funcionam como parâmetros locais e imutáveis, configurados previamente à ativação de um gatilho.
+> Essas variáveis funcionam como parâmetros locais e imutáveis, configurados
+> previamente à ativação de um gatilho.
 
 <VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER} />
 
-## Conta:
+## Conta: \{#account\}
 
-> Essas variáveis contêm dados da conta, incluindo saldo disponível, margens operacionais, limites de operação e informações da corretora.
+> Essas variáveis contêm dados da conta, incluindo saldo disponível, margens
+> operacionais, limites de operação e informações da corretora.
 
 <VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT} />
 
-## Mercado
+## Mercado \{#market\}
 
-> Essas variáveis contêm dados do mercado, incluindo preços de entrada, ativos envolvidos e horários de negociação.
+> Essas variáveis contêm dados do mercado, incluindo preços de entrada, ativos
+> envolvidos e horários de negociação.
 
 <VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.MARKET} />
 
-## Posições e Ordens abertas
+## Posições e Ordens abertas \{#open-trades\}
 
-> Essas variáveis contém os dados de ordens e posições que ainda não foram encerradas, permitindo o acompanhamento em tempo real.
+> Essas variáveis contém os dados de ordens e posições que ainda não foram
+> encerradas, permitindo o acompanhamento em tempo real.
 
 <VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE} />
 
-## Posições e Ordens fechadas
+## Posições e Ordens fechadas \{#closed-trades\}
 
 > Essas variáveis contém os dados de ordens e posições que foram encerradas.
 
 <VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE} />
 
+{/* prettier-ignore */}
 <Aside type="tip">
-   Variáveis de Ordens e Posições fechadas possuem 4 diferentes versões:  
-   **_WEEK** que retorna a soma total da semana,  
-   **_MONTH** que retorna a soma total do mês,  
-   **_YEAR** que retorna a soma total do ano,  
-   e as normais sem sufixo, que retornam o total do dia.
-   <br />
-   Para usar basta adicionar o sufixo ao final da variável.  
-   Por exemplo: `ALL_VOLUME_WEEK`, `ALL_GAIN_YEAR`
-   <br />
-   As siglas seguem o mesmo padrão, adicionando o sufixo ao final da variável.  
-   Por exemplo: `AVOL_WEEK`, `AGAIN_YEAR`
+  Variáveis de Ordens e Posições fechadas possuem 4 diferentes versões:  
+  **_WEEK** que retorna a soma total da semana,  
+  **_MONTH** que retorna a soma total do mês,  
+  **_YEAR** que retorna a soma total do ano,  
+  e as normais sem sufixo, que retornam o total do dia.
+  <br />
+  Para usar basta adicionar o sufixo ao final da variável.  
+  Por exemplo: `ALL_VOLUME_WEEK`, `ALL_GAIN_YEAR`
+  <br />
+  As siglas seguem o mesmo padrão, adicionando o sufixo ao final da variável.  
+  Por exemplo: `AVOL_WEEK`, `AGAIN_YEAR`
 </Aside>
 
-## Sinais
+## Sinais \{#signals\}
 
-> Essas variáveis guardam as informações dos sinais, que são definidos com base nos gatilhos de entrada e confirmação.
+> Essas variáveis guardam as informações dos sinais, que são definidos com base
+> nos gatilhos de entrada e confirmação.
 
 <VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL} />

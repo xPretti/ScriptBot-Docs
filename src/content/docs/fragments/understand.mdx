@@ -1,7 +1,7 @@
 ---
 title: Conhecendo
 sidebar:
-   order: 0
+  order: 0
 ---
 
 import { Aside } from "@astrojs/starlight/components";
@@ -27,17 +27,14 @@ Após a conversão, os fragmentos já estão incorporados diretamente nas expres
 
 A imagem abaixo mostra uma lista simplificada de fragmentos disponíveis no ScriptBot.
 
-<ImgFrame> 
-![Fragmentos](/src/assets/Fragments.png)
-</ImgFrame>
-
+<ImgFrame>![Fragmentos](@src/assets/Fragments.png)</ImgFrame>
 
 Nesta lista podemos notar que existem vários tipos de fragmentos, sendo eles:
 
--  **INTEGER**: Que pode armazenar valores inteiros.
--  **DOUBLE**: Que pode armazenar valores decimais, ou seja, números de ponto flutuante.
--  **STRING**: Que pode armazenar textos, expressões lógicas ou qualquer tipo de valor.
--  **TIMEFRAME**: Que pode armazenar tempos gráficos.
+- **INTEGER**: Que pode armazenar valores inteiros.
+- **DOUBLE**: Que pode armazenar valores decimais, ou seja, números de ponto flutuante.
+- **STRING**: Que pode armazenar textos, expressões lógicas ou qualquer tipo de valor.
+- **TIMEFRAME**: Que pode armazenar tempos gráficos.
 
 ### Fragmentos na expressão lógica
 
@@ -63,8 +60,6 @@ Os fragmentos ganham ainda mais potencial com o uso de recursos avançados. Na p
 
 Os fragmentos podem ser utilizados em parâmetros de indicadores, como mostrado na imagem abaixo:
 
-<ImgFrame> 
-![Fragmentos](/src/assets/Ind0.png)
-</ImgFrame>
+<ImgFrame>![Fragmentos](@src/assets/Ind0.png)</ImgFrame>
 
 Na imagem acima, podemos observar o uso dos fragmentos **TF0**, **INT0** e **INT1**. Esses fragmentos serão automaticamente convertidos durante a inicialização, o que permite realizar otimizações de estratégias usando o Backtest do MetaTrader 5 ou simplesmente facilitar a manutenção da estratégia.

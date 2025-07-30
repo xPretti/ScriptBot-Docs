@@ -1,0 +1,23 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="preview-container">
+  <h6 class="preview-title">{title}</h6>
+  <div class="preview-content">
+    <slot />
+  </div>
+</div>
+
+<!-- Estilos -->
+<style>
+  .preview-container {
+    background-color: color-mix(in srgb, var(--sl-color-function-description) 50%, transparent 100%);
+    padding: 10px;
+    /* border-radius: 5px; */
+    border: 1px solid var(--sl-color-function-description);
+  }
+  .preview-content {
+    margin: 0;
+  }
+</style>

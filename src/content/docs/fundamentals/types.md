@@ -11,7 +11,7 @@ Nesta página, você encontrará os tipos de dados primitivos disponíveis no Sc
 > Esses tipos primitivos são usadados como retornos e parâmetros de funções.
 
 | TIPOS                                  | RETORNOS                                                                                   |
-| -------------------------------------- | ------------------------------------------------------------------------------------------ |
+|----------------------------------------|--------------------------------------------------------------------------------------------|
 | <code class='variable'>void</code>     | Representa um valor vazio, sem retorno.                                                    |
 | <code class='variable'>any</code>      | Representa qualquer valor. Seja um int, double, string, etc.                               |
 | <code class='variable'>int</code>      | Representa um inteiro com sinal (-2147483648 até 2147483647).                              |

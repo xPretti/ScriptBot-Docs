@@ -1,13 +1,13 @@
 ---
 title: Operadores
 sidebar:
-   order: 0
+  order: 0
 ---
 
 import CodeVar from "@components/CodeVar.astro";
 import Frame from "@components/Frame.astro";
 
-Nesta página você encontrará os operadores disponíveis no ScriptBot. Operadores são símbolos utilizados para realizar operações matemáticas, lógicas ou estruturais dentro de uma expressão, sendo fundamentais na criação de condições, cálculos e controle de fluxo em scripts.
+Nesta página, você encontrará os operadores disponíveis no ScriptBot. Operadores são símbolos utilizados para realizar operações matemáticas, lógicas ou estruturais dentro de uma expressão, sendo fundamentais na criação de condições, cálculos e controle de fluxo em scripts.
 
 ## Tipos de operadores
 
@@ -235,8 +235,8 @@ CLOSE[0] > CLOSE[1] ? Print["Biggest"] : Print["Smallest"]
 ### Operator ->
 
 > Operador de execução lógica.  
-> Utilizado para executar comandos apenas quando a condição anterior for verdadeira.  
-> 
+> Utilizado para executar comandos apenas quando a condição anterior for verdadeira.
+>
 > **Atenção:**  
 > É obrigatório encerrar a instrução com `;`, pois esse caractere delimita o fim da expressão.
 
@@ -251,7 +251,7 @@ CLOSE[0] > CLOSE[1] -> Print["Este comando só será executado se a condição f
 
 > Operador de comentário de linha.  
 > Usando o operador de comentário de linha, podemos evitar que uma expressão a partir do comentario seja executada.  
-> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` é executado, mas `OPEN[0] < OPEN[1]` nao, pois ele foi comentado.  
+> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` é executado, mas `OPEN[0] < OPEN[1]` nao, pois ele foi comentado.
 
 ```java
 CLOSE[0] > CLOSE[1] // && OPEN[0] < OPEN[1]
@@ -264,7 +264,7 @@ CLOSE[0] > CLOSE[1] // && OPEN[0] < OPEN[1]
 
 > Operador de comentário de bloco.  
 > Usando o operador de comentário de bloco, podemos evitar que uma expressão entre o comentario seja executada.  
-> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` nao é executado, pois ele foi comentado.  
+> No exemplo abaixo, `CLOSE[0] > CLOSE[1]` nao é executado, pois ele foi comentado.
 
 ```java
 /*CLOSE[0] > CLOSE[1]*/ OPEN[0] < OPEN[1]
