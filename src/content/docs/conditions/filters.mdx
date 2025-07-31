@@ -10,26 +10,28 @@ Nesta página, você encontrará informações sobre os filtros, para que servem
 
 ## O que é um filtro?
 
-Um **filtro** é uma camada de validação configurável que permite ao usuário controlar a entrada de ordens no mercado. Cada filtro atua como uma regra lógica personalizada que, quando satisfeita, contribui com um determinado **peso** para a validação final da operação. O sistema permite a criação de até **10 filtros**, sendo que cada um pode ser:
+Os filtros são um sistema avançado de validação em camadas, baseado em regras lógicas personalizadas e atribuídas com pesos específicos. Cada filtro funciona de forma independente, mas contribui para a decisão final com seu valor de importância. A soma dos pesos define se a operação será confirmada ou rejeitada.
 
-- **Obrigatório** ou **opcional**;
-- Configurado com um **peso específico**;
-- Definido com **condições lógicas** personalizadas pelo usuário (como expressões booleanas baseadas em indicadores ou sinais do mercado);
-- Associado a diferentes **métodos de validação**.
+Diversos filtros podem ser criados para compras e vendas, cada um com configurações personalizáveis:
 
-Esses filtros são acionados automaticamente após o [Gatilho de Confirmação](/conditions/triggers), iniciando o processo de verificação para liberar ou não a entrada no mercado.
+- Definir como obrigatório ou opcional;
+- Atribuir um peso personalizado;
+- Estabelecer condições lógicas baseadas em indicadores ou sinais de mercado;
+- Escolher diferentes métodos de validação.
+
+Os filtros são acionados automaticamente após o [Gatilho de Confirmação](/conditions/triggers), iniciando a análise para autorizar ou não a entrada no mercado.
 
 ## Para que servem?
 
-Os filtros servem para garantir que as entradas de **compra ou venda** ocorram apenas quando condições específicas forem atendidas. Eles permitem ao usuário construir uma estrutura de validação robusta e personalizada, elevando o nível de controle e segurança nas operações.
+Os filtros garantem que entradas de compra ou venda só ocorram quando condições específicas forem atendidas, oferecendo ao usuário um controle mais rigoroso e personalizado sobre suas operações.
 
-O funcionamento é baseado na soma dos **pesos** dos filtros validados. Quando o total atinge ou supera o peso mínimo definido pelo usuário, a ordem é **autorizada**. Caso contrário, a entrada é **bloqueada** e a ordem não é enviada ao mercado.
+O sistema funciona com base na soma dos pesos dos filtros validados. Quando esse total atinge (ou supera) o peso mínimo definido, a ordem é autorizada. Caso contrário, a entrada é bloqueada, e a ordem não é enviada ao mercado.
 
-De forma resumida, os filtros ajudam a:
+Em resumo, os filtros servem para:
 
-- Evitar entradas impulsivas ou fora dos critérios estabelecidos;
-- Apoiar a tomada de decisão com validações objetivas e consistentes;
-- Adicionar camadas de verificação que aumentam a confiabilidade das estratégias;
+- Evitar entradas impulsivas ou fora dos critérios definidos;
+- Apoiar decisões com validações objetivas e consistentes;
+- Adicionar camadas de verificação que aumentam a segurança da estratégia;
 - Organizar e simplificar validações complexas, especialmente quando há múltiplas condições envolvidas.
 
 ## Configurando os filtros
@@ -42,11 +44,11 @@ Cada filtro pode ser configurado de forma personalizada, de acordo com as necess
 
 ### Geral
 
-- **Peso mínimo de validação**: Define o valor mínimo que a soma dos pesos dos filtros deve atingir para que o sistema autorize a entrada da ordem.
+- **[01] - Peso mínimo de validação**: Define o valor mínimo que a soma dos pesos dos filtros deve atingir para que o sistema autorize a entrada da ordem.
 
 ### Filtro
 
-- **Tipo**: Define o comportamento do filtro durante a validação. As opções são:
+- **[01] - Tipo**: Define o comportamento do filtro durante a validação. As opções são:
   - **Desativado**: O filtro é ignorado no processo de validação.
   - **Obrigatório**:
     - O filtro é sempre executado e deve ser validado com sucesso para que a ordem seja autorizada.
@@ -54,9 +56,9 @@ Cada filtro pode ser configurado de forma personalizada, de acordo com as necess
   - **Opcional**:
     - O filtro é executado apenas se a soma total dos pesos ainda não tiver atingido o valor necessário.
     - Seu resultado contribui para a pontuação, seja validado ou não.
-- **Peso de Sucesso**: Valor somado à pontuação total caso o filtro seja validado com sucesso.
-- **Peso de Falha**: Valor somado à pontuação caso o filtro não seja validado. Pode ser zero, positivo ou negativo, conforme a estratégia adotada.
-- **Cálculos de Validação**: São expressões condicionais que o sistema executa quando o filtro for chamado.
+- **[02] - Peso de Sucesso**: Valor somado à pontuação total caso o filtro seja validado com sucesso.
+- **[03] - Peso de Falha**: Valor somado à pontuação caso o filtro não seja validado. Pode ser zero, positivo ou negativo, conforme a estratégia adotada.
+- **[04 & 05] - Cálculos de Validação**: São expressões condicionais que o sistema executa quando o filtro for chamado.
 
 ## Entendendo os filtros
 

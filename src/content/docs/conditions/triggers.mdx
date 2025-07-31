@@ -13,17 +13,15 @@ Nesta página, você encontrará informações sobre os gatilhos de entrada, sa�
 
 ## O que é um gatilho?
 
-Um gatilho funciona como um ponto de execução, responsável por verificar uma condição definida pelo usuário. Essa condição é expressa por meio de expressões lógicas e avaliada periodicamente, de acordo com a [frequência configurada](/settings/frequencies).
+Um gatilho é um ponto de execução automatizado que verifica, em intervalos regulares, uma condição lógica definida pelo usuário. Essas condições são expressas por meio de expressões lógicas e avaliadas conforme a [frequência configurada](/settings/frequencies).
 
-No ScriptBot, os gatilhos representam a forma como o robô manipula posições e ordens no mercado, atuando de maneira automatizada conforme as regras definidas pelo usuário.
+No ScriptBot, os gatilhos são o mecanismo central de controle sobre ordens e posições, permitindo que o robô atue de forma autônoma, seguindo as regras definidas pelo usuário. Os principais tipos de gatilhos são:
 
-**Por exemplo:**
+- **Gatilhos de entrada:** disparam ordens de compra ou venda quando a condição de entrada for satisfeita;
+- **Gatilhos de saída:** executam a saída do mercado, encerrando uma posição ou cancelando uma ordem;
+- **Gatilhos de atualização:** ajustam ordens ou posições existentes, com base em condições atualizadas do mercado.
 
-- **Gatilhos de entrada:** executam uma lógica que, quando validada, acionam a entrada no mercado, realizando uma compra ou venda.
-- **Gatilhos de saída:** executam uma lógica que, quando confirmada, determinam a saída do mercado, seja fechando uma posição ou cancelando um pedido.
-- **Gatilhos de atualização:** executam uma lógica para modificar ordens ou posições já existentes, ajustando-as conforme necessário.
-
-Existem vários tipos de gatilhos, e cada um possui uma função específica dentro do fluxo de operações, permitindo maior controle e flexibilidade na automação das estratégias.
+Há diferentes tipos de gatilhos, cada um com um papel específico no fluxo da estratégia. Eles oferecem controle granular e flexibilidade para automatizar decisões com precisão e segurança.
 
 ## Gatilhos de entrada
 
