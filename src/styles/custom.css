@@ -103,6 +103,11 @@
   --code-important-color: #ffa657;
 }
 
+/* corrige o fundo azul em dispositivos móveis */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* remover esses css de vars, usar o component */
 .variable-abbr,
 .variable {

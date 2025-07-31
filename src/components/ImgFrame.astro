@@ -3,25 +3,26 @@ const { center = false } = Astro.props;
 ---
 
 <div class={`img-frame ${center ? "center" : ""}`}>
-   <div class="img-content">
-      <slot />
-   </div>
+  <div class="img-content">
+    <slot />
+  </div>
 </div>
 
 <style>
-   .img-frame {
-      display: flex;
-   }
-   .img-content {
-      width: fit-content;
-      border-radius: 7px;
-      border: 1px solid var(--sl-color-img-frame-border);
-      /* box-shadow: 1px 1px 2px 0 var(--sl-color-img-frame-border); */
-      overflow: hidden;
-   }
+  .img-frame {
+    display: flex;
+  }
+  .img-content {
+    display: flex;
+    width: fit-content;
+    border-radius: 7px;
+    border: 1px solid var(--sl-color-img-frame-border);
+    /* box-shadow: 1px 1px 2px 0 var(--sl-color-img-frame-border); */
+    overflow: hidden;
+  }
 
-   .img-frame.center {
-      justify-content: center;
-      align-items: center;
-   }
+  .img-frame.center {
+    justify-content: center;
+    align-items: center;
+  }
 </style>
