@@ -36,6 +36,7 @@ Os gatilhos seguem uma ordem de execução baseada em uma lógica condicional qu
 O fluxo de operações do ScriptBot segue a seguinte ordem:
 
 <Preview>
+
 ```mermaid
 flowchart TD
     A["PRE-REQUISITO"] -- TRUE --- n1["ENTRADA"]
@@ -52,7 +53,8 @@ flowchart TD
     n4@{ shape: hex}
     style n3 stroke:#FF6D00,color:#FF6D00
 
-````
+```
+
 </Preview>
 
 O fluxo de execução é composto por quatro etapas principais, organizadas sequencialmente:
@@ -108,11 +110,12 @@ Os gatilhos de **saída total** são responsáveis por tentar encerrar todas as 
 O fluxo de saída segue a seguinte ordem:
 
 <Preview>
+
 ```mermaid
 flowchart TD
     A["SAIDA"] -- TRUE --- n3["FECHAMENTO TOTAL"]
     n3@{ shape: hex}
-````
+```
 
 </Preview>
 
@@ -141,6 +144,7 @@ Esse tipo de cálculo realiza uma **iteração separada** para cada posição ou
 O fluxo de saída segue a seguinte ordem:
 
 <Preview>
+
 ```mermaid
 flowchart TD
     n5["ITERADOR"] --- n4["Small Circle"]
@@ -153,6 +157,7 @@ flowchart TD
     n5@{ shape: loop-limit}
     n4@{ shape: sm-circ}
 ```
+
 </Preview>
 
 O fluxo é resumido nas seguintes etapas:
@@ -188,6 +193,7 @@ Esse tipo de cálculo realiza uma **iteração separada** para cada posição ou
 O fluxo de atualização segue a seguinte ordem:
 
 <Preview>
+
 ```mermaid
 flowchart TD
     n5["ITERADOR"] --- n4["Small Circle"] & n6>"ORDEM OU POSIÇÃO"]
@@ -196,6 +202,7 @@ flowchart TD
     n5@{ shape: loop-limit}
     n4@{ shape: sm-circ}
 ```
+
 </Preview>
 
 O fluxo é resumido nas seguintes etapas:

@@ -9,6 +9,8 @@ sidebar:
 
 import ImgFrame from "@components/ImgFrame.astro";
 import { Aside } from "@astrojs/starlight/components";
+import Preview from "@components/Preview.astro";
+import { Steps } from "@astrojs/starlight/components";
 
 Nesta página, você encontrará informações sobre os eventos, para que servem e como eles podem ser utilizados em estratégias no ScriptBot.
 
@@ -27,18 +29,66 @@ Atualmente, os eventos são utilizados de forma simples para monitorar e reagir 
 
 ## O que é um evento?
 
-Um evento é uma ação ou ocorrência que acontece durante a execução do robô. Sempre que o robô realiza uma tarefa relevante, como abrir uma ordem, fechar uma operação ou validar um gatilho, ele dispara um evento.
+Eventos são ações ou ocorrências que acontecem durante a execução do robô, como a abertura de uma ordem, o encerramento de uma operação ou a validação de um gatilho. Sempre que uma tarefa relevante é realizada, o robô dispara um evento correspondente.
 
-Esses eventos podem ser monitorados e manipulados pelo usuário, permitindo a criação de estratégias mais dinâmicas e inteligentes.
+Esses eventos podem ser monitorados e utilizados para automatizar as ações do robô em diferentes situações de mercado. Assim, o usuário pode configurar regras e estratégias personalizadas que respondem automaticamente a ocorrências específicas, como o fechamento de uma posição com lucro, a execução de uma ordem ou a identificação de um sinal de compra.
 
-## Para que servem os eventos?
-
-Os eventos permitem automatizar respostas do robô a diferentes situações do mercado. Com eles, você pode criar regras e estratégias que reagem imediatamente a acontecimentos, como lucro atingido no fechamento de uma posição, ordem executada ou sinal de compra identificado.
-
-Na prática, os eventos tornam o ScriptBot mais inteligente e flexível, possibilitando a execução de ações personalizadas em resposta a diferentes situações, aprimorando o controle e a eficiência das operações.
+Na prática, os eventos tornam o ScriptBot mais inteligente, dinâmico e flexível, permitindo a execução de ações específicas em tempo real. Isso resulta em maior controle e eficiência das estratégias.
 
 ## Configurando os eventos
 
 A configuração dos eventos é simples e intuitiva. Abaixo, você pode visualizar uma imagem que ilustra a estrutura dos eventos no sistema:
 
 <ImgFrame>![Eventos](@src/assets/Events.png)</ImgFrame>
+
+Cada evento pode ser configurado de forma personalizada, de acordo com as necessidades do usuário.
+
+### Evento
+
+- **[01] - Tipo**: Define o tipo do evento que será ouvido. Acesse a [Lista de Eventos](/fundamentals/events/)
+- **[02 & 03] - Cálculos de Validação**: São expressões condicionais que o sistema executa quando o evento for chamado.
+- **[04] - Executar em caso de sucesso**: Ações que serão executadas quando o evento for validado.
+- **[05] - Executar em caso de falha**: Ações que serão executadas quando o evento falhar.
+
+## Exemplo
+
+Neste exemplo, vamos monitorar o evento de início de um novo dia e registrar uma mensagem nas logs indicando se é segunda-feira ou não.
+
+Exemplo da configuração:
+
+<ImgFrame>![Ouvindo o evento OnDay()](@src/assets/EventEx01.png)</ImgFrame>
+
+Sempre que um novo dia começar, o evento `OnDay()` será acionado. O sistema então realizará os cálculos necessários para determinar se o evento foi validado ou não.
+
+O fluxo da execução segue a seguinte ordem:
+
+<Preview>
+
+```mermaid
+flowchart TD
+    A["OnDay()"] --> n1
+    n1["DayOfWeek[] == 0"] -- TRUE --- n3["Print[Today is Monday]"]
+    n1 -- FALSE --- n4["Print[Today is not Monday]"]
+    n1@{ shape: braces}
+    n3@{ shape: braces}
+    n4@{ shape: braces}
+    A@{ shape: event}
+```
+
+</Preview>
+
+O fluxo é resumido nas seguintes etapas:
+
+{/* prettier-ignore */}
+<Steps>
+1. **EVENTO**
+   * Evento que será monitorado.
+2. **CÁLCULOS**
+   * Responsável por executar a tentativa da validação.
+   * Se o resultado for **verdadeiro**, o fluxo segue para a etapa **(SUCESSO)**.
+   * Se o resultado for **falso**, o fluxo segue para a etapa **(FALHA)**.
+3. **SUCESSO**
+   * Executa os cálculos definidos para o cenário de validação bem-sucedida.
+4. **FALHA**
+   * Executa os cálculos definidos para o cenário de validação mal-sucedida.
+</Steps>
