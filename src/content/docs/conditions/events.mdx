@@ -2,4 +2,43 @@
 title: Eventos
 sidebar:
   order: 1
+  badge:
+    text: Beta
+    variant: caution
 ---
+
+import ImgFrame from "@components/ImgFrame.astro";
+import { Aside } from "@astrojs/starlight/components";
+
+Nesta página, você encontrará informações sobre os eventos, para que servem e como eles podem ser utilizados em estratégias no ScriptBot.
+
+{/* prettier-ignore */}
+<Aside>
+Os eventos ainda não estão em sua versão final. Em futuras atualizações, será incluída uma manipulação mais avançada e flexível dos eventos.
+
+Algumas funcionalidades previstas incluem:
+
+- **Manipulação de fluxo:** Permitir cancelar a execução e continuação de uma ação específica;
+- **Manipulação de dados:** Permitir alteração dos parâmetros de um evento;
+
+Atualmente, os eventos são utilizados de forma simples para monitorar e reagir a acontecimentos do mercado, sem interferir no fluxo principal de execução do robô.
+
+</Aside>
+
+## O que é um evento?
+
+Um evento é uma ação ou ocorrência que acontece durante a execução do robô. Sempre que o robô realiza uma tarefa relevante, como abrir uma ordem, fechar uma operação ou validar um gatilho, ele dispara um evento.
+
+Esses eventos podem ser monitorados e manipulados pelo usuário, permitindo a criação de estratégias mais dinâmicas e inteligentes.
+
+## Para que servem os eventos?
+
+Os eventos permitem automatizar respostas do robô a diferentes situações do mercado. Com eles, você pode criar regras e estratégias que reagem imediatamente a acontecimentos, como lucro atingido no fechamento de uma posição, ordem executada ou sinal de compra identificado.
+
+Na prática, os eventos tornam o ScriptBot mais inteligente e flexível, possibilitando a execução de ações personalizadas em resposta a diferentes situações, aprimorando o controle e a eficiência das operações.
+
+## Configurando os eventos
+
+A configuração dos eventos é simples e intuitiva. Abaixo, você pode visualizar uma imagem que ilustra a estrutura dos eventos no sistema:
+
+<ImgFrame>![Eventos](@src/assets/Events.png)</ImgFrame>
