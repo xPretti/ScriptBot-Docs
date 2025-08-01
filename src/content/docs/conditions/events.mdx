@@ -29,11 +29,11 @@ Atualmente, os eventos são utilizados de forma simples para monitorar e reagir 
 
 ## O que é um evento?
 
-Eventos são ações ou ocorrências que acontecem durante a execução do robô, como a abertura de uma ordem, o encerramento de uma operação ou a validação de um gatilho. Sempre que uma tarefa relevante é realizada, o robô dispara um evento correspondente.
+Eventos são ações ou ocorrências que acontecem durante a execução do robô, como a abertura de uma ordem, o encerramento de uma posição ou a validação de um gatilho. Sempre que uma tarefa relevante é realizada, o robô dispara um evento correspondente.
 
-Esses eventos podem ser monitorados e utilizados para automatizar as ações do robô em diferentes situações de mercado. Assim, o usuário pode configurar regras e estratégias personalizadas que respondem automaticamente a ocorrências específicas, como o fechamento de uma posição com lucro, a execução de uma ordem ou a identificação de um sinal de compra.
+Esses eventos podem ser monitorados e utilizados para automatizar as ações do robô em diferentes situações de mercado. Dessa forma, o usuário pode configurar regras e estratégias personalizadas que respondem automaticamente a ocorrências específicas.
 
-Na prática, os eventos tornam o ScriptBot mais inteligente, dinâmico e flexível, permitindo a execução de ações específicas em tempo real. Isso resulta em maior controle e eficiência das estratégias.
+Na prática, os eventos tornam o ScriptBot mais inteligente, dinâmico e flexível, permitindo a execução de ações em tempo real a partir de cada ocorrência. Isso proporciona maior controle e aumenta a eficiência das estratégias.
 
 ## Configurando os eventos
 
@@ -82,13 +82,17 @@ O fluxo é resumido nas seguintes etapas:
 {/* prettier-ignore */}
 <Steps>
 1. **EVENTO**
+   * Evento: `OnDay()`.
    * Evento que será monitorado.
 2. **CÁLCULOS**
+   * Condição: `DayOfWeek[] == 0`.
    * Responsável por executar a tentativa da validação.
    * Se o resultado for **verdadeiro**, o fluxo segue para a etapa **(SUCESSO)**.
    * Se o resultado for **falso**, o fluxo segue para a etapa **(FALHA)**.
 3. **SUCESSO**
+   * Resposta: `Print["Today is Monday"]`.
    * Executa os cálculos definidos para o cenário de validação bem-sucedida.
 4. **FALHA**
+   * Resposta: `Print["Today is not Monday"]`.
    * Executa os cálculos definidos para o cenário de validação mal-sucedida.
 </Steps>
