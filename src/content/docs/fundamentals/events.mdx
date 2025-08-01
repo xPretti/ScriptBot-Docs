@@ -1,0 +1,86 @@
+---
+title: Events
+sidebar:
+  order: 0
+---
+
+import CodeVar from "@components/CodeVar.astro";
+import { Aside } from "@astrojs/starlight/components";
+
+Nesta página, você encontrará os eventos disponíveis no ScriptBot. Eventos são ocorrências que podem ser monitoradas e personalizadas conforme o comportamento desejado.
+
+<Aside type="note">
+
+Antes de prosseguir, é importante entender o que é um evento e como utilizar.
+
+Para entender, leia [O que é um evento](/conditions/events/).
+
+</Aside>
+
+## Eventos normais
+
+> Eventos normais são ocorrências comuns que acontecem durante a execução do robô, como o início, parada ou passagem do tempo.
+> Estes eventos não possuem parametros.
+
+| EVENTOS                              | DESCRIÇÃO                            |
+| ------------------------------------ | ------------------------------------ |
+| <CodeVar>OnStart()</CodeVar>         | Ocorre quando o robô inicia.         |
+| <CodeVar>OnRestart()</CodeVar>       | Ocorre quando o robô reinicia.       |
+| <CodeVar>OnStop()</CodeVar>          | Ocorre quando o robô para.           |
+| <CodeVar>OnTick()</CodeVar>          | Ocorre em cada tick.                 |
+| <CodeVar>OnLateTick()</CodeVar>      | Ocorre em cada final de tick.        |
+| <CodeVar>OnOptimizedTick()</CodeVar> | Ocorre em cada tick otimizado.       |
+| <CodeVar>OnTickSecond()</CodeVar>    | Ocorre em cada segundo de tick.      |
+| <CodeVar>OnCandle()</CodeVar>        | Ocorre em cada candle.               |
+| <CodeVar>OnTimer()</CodeVar>         | Ocorre em cada milisegundo.          |
+| <CodeVar>OnLateTimer()</CodeVar>     | Ocorre em cada final do milisegundo. |
+| <CodeVar>OnSecond()</CodeVar>        | Ocorre em cada segundo.              |
+| <CodeVar>OnDay()</CodeVar>           | Ocorre em cada dia.                  |
+| <CodeVar>OnWeek()</CodeVar>          | Ocorre em cada semana.               |
+| <CodeVar>OnMonth()</CodeVar>         | Ocorre em cada mês.                  |
+| <CodeVar>OnYear()</CodeVar>          | Ocorre em cada ano.                  |
+| <CodeVar>OnOnline()</CodeVar>        | Ocorre quando o robô volta online.   |
+| <CodeVar>OnOffline()</CodeVar>       | Ocorre quando o robô volta offline.  |
+
+## Eventos de gatilhos
+
+> Eventos de gatilhos são ocorrências que acontecem quando uma condição ou expressão lógica é executada.  
+> Variáveis de manipulação: [Gatilhos](/placeholders/variables/#triggers)
+
+| EVENTOS                                             | DESCRIÇÃO                                                                          |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| <CodeVar>OnRequisite()</CodeVar>                    | Ocorre quando uma condição de requisito é atendida com sucesso.                    |
+| <CodeVar>OnRequisiteFailed()</CodeVar>              | Ocorre quando uma condição de requisito é atendida sem sucesso.                    |
+| <CodeVar>OnEntry()</CodeVar>                        | Ocorre quando uma condição de entrada é atendida com sucesso.                      |
+| <CodeVar>OnEntryFailed()</CodeVar>                  | Ocorre quando uma condição de entrada é atendida sem sucesso.                      |
+| <CodeVar>OnConfirm()</CodeVar>                      | Ocorre quando uma condição de confirmação é atendida com sucesso.                  |
+| <CodeVar>OnConfirmFailed()</CodeVar>                | Ocorre quando uma condição de confirmação é atendida sem sucesso.                  |
+| <CodeVar>OnPositionExit()</CodeVar>                 | Ocorre quando uma condição de saída de posições é atendida com sucesso.            |
+| <CodeVar>OnPositionExitFailed()</CodeVar>           | Ocorre quando uma condição de saída de posições é atendida sem sucesso.            |
+| <CodeVar>OnPositionExitIndividual()</CodeVar>       | Ocorre quando uma condição de saída de posições individual é atendida com sucesso. |
+| <CodeVar>OnPositionExitIndividualFailed()</CodeVar> | Ocorre quando uma condição de saída de posições individual é atendida sem sucesso. |
+| <CodeVar>OnOrderExit()</CodeVar>                    | Ocorre quando uma condição de saída de ordens é atendida com sucesso.              |
+| <CodeVar>OnOrderExitFailed()</CodeVar>              | Ocorre quando uma condição de saída de ordens é atendida sem sucesso.              |
+| <CodeVar>OnOrderExitIndividual()</CodeVar>          | Ocorre quando uma condição de saída de ordens individual é atendida com sucesso.   |
+| <CodeVar>OnOrderExitIndividualFailed()</CodeVar>    | Ocorre quando uma condição de saída de ordens individual é atendida sem sucesso.   |
+| <CodeVar>OnFilter()</CodeVar>                       | Ocorre quando uma condição de filtro é atendida com sucesso.                       |
+| <CodeVar>OnFilterFailed()</CodeVar>                 | Ocorre quando uma condição de filtro é atendida sem sucesso.                       |
+
+## Eventos de ordens
+
+> Eventos de ordens são ocorrências de transações de operações realizadas pelo robô.  
+> Variáveis de manipulação: [Posições e Ordens](/placeholders/variables/#positions-and-orders)
+
+| EVENTOS                               | DESCRIÇÃO                                                 |
+| ------------------------------------- | --------------------------------------------------------- |
+| <CodeVar>OnInactive()</CodeVar>       | Ocorre quando um pedido fica inativo por um certo tempo.  |
+| <CodeVar>OnValidate()</CodeVar>       | Ocorre quando um pedido foi validado e criado no mercado. |
+| <CodeVar>OnPositionAdd()</CodeVar>    | Ocorre quando uma posição foi criada.                     |
+| <CodeVar>OnPositionNotAdd()</CodeVar> | Ocorre quando uma posição não foi criada.                 |
+| <CodeVar>OnPositionClose()</CodeVar>  | Ocorre quando uma posição foi fechada.                    |
+| <CodeVar>OnPositionModify()</CodeVar> | Ocorre quando uma posição foi modificada.                 |
+| <CodeVar>OnOrderAdd()</CodeVar>       | Ocorre quando uma ordem foi criada.                       |
+| <CodeVar>OnOrderNotAdd()</CodeVar>    | Ocorre quando uma ordem não foi criada.                   |
+| <CodeVar>OnOrderCancel()</CodeVar>    | Ocorre quando uma ordem foi cancelada.                    |
+| <CodeVar>OnOrderTrigger()</CodeVar>   | Ocorre quando uma ordem foi acionada.                     |
+| <CodeVar>OnOrderModify()</CodeVar>    | Ocorre quando uma ordem foi modificada.                   |

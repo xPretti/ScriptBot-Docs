@@ -1,14 +1,14 @@
 ---
 title: Enumeradores
 sidebar:
-   order: 0
+  order: 0
 ---
 
 import CodeVar from "@components/CodeVar.astro";
 
 Nesta página, você encontrará os enumeradores utilizados no ScriptBot para representar diferentes categorias de valores. Esses enumeradores facilitam a definição de parâmetros em indicadores e funções.
 
-## Prices
+## Preços \{#prices\}
 
 > Enumerador referente ao método de preço de um indicador.
 
@@ -22,36 +22,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPICAL</CodeVar>  | 6      |
 | <CodeVar>WEIGHTED</CodeVar> | 7      |
 
-## Methods
-
-> Enumerador referente ao método do cálculo de um indicador.
-
-| VARIÁVEIS                      | SIGLAS |
-| ------------------------------ | ------ |
-| <CodeVar>SIMPLE</CodeVar>      | 0      |
-| <CodeVar>EXPONENTIAL</CodeVar> | 1      |
-| <CodeVar>SMOOTHED</CodeVar>    | 2      |
-| <CodeVar>LINEAR</CodeVar>      | 3      |
-
-## Volumes
-
-> Enumerador referente ao método do cálculo de um indicador de volume.
-
-| VARIÁVEIS               | SIGLAS |
-| ----------------------- | ------ |
-| <CodeVar>TICK</CodeVar> | 0      |
-| <CodeVar>REAL</CodeVar> | 1      |
-
-## Stochastic
-
-> Enumerador referente ao método de preço de um indicador de stochatic.
-
-| VARIÁVEIS                     | SIGLAS |
-| ----------------------------- | ------ |
-| <CodeVar>LOWHIGH</CodeVar>    | 0      |
-| <CodeVar>CLOSECLOSE</CodeVar> | 1      |
-
-## Timeframes
+## Tempo gráfico \{#timeframes\}
 
 > Enumerador referente aos tempos gráficos.
 
@@ -80,7 +51,36 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>W1</CodeVar>      | 1 semana.              |
 | <CodeVar>MN1</CodeVar>     | 1 mês.                 |
 
-## Trade:
+## Cálculos \{#methods\}
+
+> Enumerador referente ao método do cálculo de um indicador.
+
+| VARIÁVEIS                      | SIGLAS |
+| ------------------------------ | ------ |
+| <CodeVar>SIMPLE</CodeVar>      | 0      |
+| <CodeVar>EXPONENTIAL</CodeVar> | 1      |
+| <CodeVar>SMOOTHED</CodeVar>    | 2      |
+| <CodeVar>LINEAR</CodeVar>      | 3      |
+
+## Volumes \{#volumes\}
+
+> Enumerador referente ao método do cálculo de um indicador de volume.
+
+| VARIÁVEIS               | SIGLAS |
+| ----------------------- | ------ |
+| <CodeVar>TICK</CodeVar> | 0      |
+| <CodeVar>REAL</CodeVar> | 1      |
+
+## Stochastic \{#stochastic\}
+
+> Enumerador referente ao método de preço de um indicador de stochatic.
+
+| VARIÁVEIS                     | SIGLAS |
+| ----------------------------- | ------ |
+| <CodeVar>LOWHIGH</CodeVar>    | 0      |
+| <CodeVar>CLOSECLOSE</CodeVar> | 1      |
+
+## Tipo de posição \{#trade\}
 
 > Enumerador referente ao tipo de posição/ordem.
 
@@ -90,7 +90,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_BUY</CodeVar>  | Apenas posições de compra. |
 | <CodeVar>TYPE_SELL</CodeVar> | Apenas posições de venda.  |
 
-## Market action:
+## Ação de fechamento \{#market-action\}
 
 > Enumerador referente ao tipo de ação de fechamento.
 
@@ -100,7 +100,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_IN</CodeVar>  | Apenas posições de abertura (in). Utiliza a ordem original de abertura da posição, em vez da ordem que foi usada para o fechamento. |
 | <CodeVar>TYPE_OUT</CodeVar> | Apenas posições de fechamento (out).                                                                                                |
 
-## Market get:
+## Tipo de retorno \{#market-get\}
 
 > Enumerador referente ao tipo de retorno.
 
@@ -110,7 +110,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_POSITIVE</CodeVar> | Apenas retornos positivo.  |
 | <CodeVar>TYPE_NEGATIVE</CodeVar> | Apenas retornos negativo.  |
 
-## Time historic:
+## Histórico \{#time-historic\}
 
 > Enumerador referente ao tipo de tempo histórico.
 
@@ -122,7 +122,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_YEAR</CodeVar>  | Apenas o histórico do ano.    |
 | <CodeVar>TYPE_ALL</CodeVar>   | Histórico completo.           |
 
-## Time type:
+## Tempo \{#time-type\}
 
 > Enumerador referente ao tipo de tempo.
 
@@ -137,7 +137,16 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_MONTH</CodeVar>    | Apenas o mês.           |
 | <CodeVar>TYPE_YEAR</CodeVar>     | Apenas o ano.           |
 
-## Position property double:
+## Tipo de modificação \{#trade-modify\}
+
+> Enumerador referente a forma que a negociação será modificada.
+
+| VARIÁVEIS                     | RETORNOS            |
+| ----------------------------- | ------------------- |
+| <CodeVar>TYPE_PRICE</CodeVar> | Será usado o preço. |
+| <CodeVar>TYPE_POINT</CodeVar> | Será usado o ponto. |
+
+## Propiedade da posição (double) \{#position-property-double\}
 
 > Enumerador referente a propriedade da posição.
 
@@ -151,7 +160,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_SWAP</CodeVar>    | Swap acumulativo.      |
 | <CodeVar>TYPE_PROFIT</CodeVar>  | Lucro corrente.        |
 
-## Position property int:
+## Propiedade da posição (int) \{#position-property-int\}
 
 > Enumerador referente a propriedade da posição.
 
@@ -167,7 +176,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_IDENTIFIER</CodeVar>      | Identificador de uma posição.                                                                                                                   |
 | <CodeVar>TYPE_REASON</CodeVar>          | Razão para a abertura da posição. (0: Terminal desktop, 1: Aplicativo móvel, 2: Plataforma web, 3: Expert Advisor, script ou outro código MQL5) |
 
-## Position property string:
+## Propiedade da posição (string) \{#position-property-string\}
 
 > Enumerador referente a propriedade da posição.
 
@@ -177,7 +186,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_COMMENT</CodeVar>     | Comentario da posição.                                                |
 | <CodeVar>TYPE_EXTERNAL_ID</CodeVar> | ID de posição no sistema externo de negociação (na bolsa de valores). |
 
-## Order property double:
+## Propiedade da ordem (double) \{#order-property-double\}
 
 > Enumerador referente a propriedade da ordem.
 
@@ -191,7 +200,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_CURRENT</CodeVar>        | Preço atual da ordem.         |
 | <CodeVar>TYPE_STOP_LIMIT</CodeVar>     | Preço do stop limit da ordem. |
 
-## Order property int:
+## Propiedade da ordem (int) \{#order-property-int\}
 
 > Enumerador referente a propriedade da ordem.
 
@@ -212,7 +221,7 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | <CodeVar>TYPE_POSITION_ID</CodeVar>     | ID da posição da ordem.                                                                                                                                                   |
 | <CodeVar>TYPE_POSITION_BY_ID</CodeVar>  | Posição da ordem por ID.                                                                                                                                                  |
 
-## Order property string:
+## Propiedade da ordem (string) \{#order-property-string\}
 
 > Enumerador referente a propriedade da ordem.
 
@@ -220,15 +229,6 @@ Nesta página, você encontrará os enumeradores utilizados no ScriptBot para re
 | ------------------------------- | -------------------- |
 | <CodeVar>TYPE_SYMBOL</CodeVar>  | Simbolo da ordem.    |
 | <CodeVar>TYPE_COMMENT</CodeVar> | Comentario da ordem. |
-
-## Trade modify:
-
-> Enumerador referente a forma que a negociação será modificada.
-
-| VARIÁVEIS                     | RETORNOS            |
-| ----------------------------- | ------------------- |
-| <CodeVar>TYPE_PRICE</CodeVar> | Será usado o preço. |
-| <CodeVar>TYPE_POINT</CodeVar> | Será usado o ponto. |
 
 <br />
 <br />

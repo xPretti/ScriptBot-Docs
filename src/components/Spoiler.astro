@@ -1,0 +1,42 @@
+---
+const { title, open = true } = Astro.props;
+---
+
+<div class="spoiler-container">
+  <details class="spoiler" open={open}>
+    <summary class="spoiler-title">{title}</summary>
+    <div class="spoiler-content">
+      <slot />
+    </div>
+  </details>
+</div>
+
+<!-- Estilos -->
+<style>
+  .spoiler-container {
+    background-color: color-mix(in srgb, var(--sl-color-function-description) 50%, transparent 100%);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--sl-color-function-description);
+  }
+
+  .spoiler {
+    border: none;
+    padding: 0 0 0 5px;
+  }
+
+  .spoiler-title {
+    padding: 0;
+    margin: 0;
+  }
+
+  .spoiler[open] .spoiler-title {
+    padding: 0;
+    margin: 0;
+    color: var(--sl-color-accent-high);
+  }
+
+  .spoiler-content {
+    margin-top: 8px;
+  }
+</style>
