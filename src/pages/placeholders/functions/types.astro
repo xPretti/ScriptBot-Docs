@@ -1,8 +1,6 @@
 ---
 import { buildFunctionsSidebar } from "@src/utils/functions-sidebar-utils";
-export const { sidebarGroups, pages } = buildFunctionsSidebar(
-   "/placeholders/functions/types/"
-);
+export const { sidebarGroups, pages } = buildFunctionsSidebar("/placeholders/functions/types/");
 
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
 import CodeVar from "@src/components/CodeVar.astro";
@@ -16,8 +14,6 @@ import CodeVar from "@src/components/CodeVar.astro";
          items: sidebarGroups,
       },
    ]}
-   lang="en"
-   isFallback={true}
 >
    <h1>Todas as funções</h1>
    <table>
@@ -60,9 +56,10 @@ import CodeVar from "@src/components/CodeVar.astro";
       padding: 5px;
       cursor: pointer;
       text-decoration: none;
+      color: inherit;
    }
 
    .function-item:hover {
-      color: var(--sl-color-accent-high: );
+      color: var(--sl-color-accent-high);
    }
 </style>

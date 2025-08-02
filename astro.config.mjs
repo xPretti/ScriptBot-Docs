@@ -11,90 +11,90 @@ import starlightImageZoom from "starlight-image-zoom";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  markdown: {
-    rehypePlugins: [[rehypeHeadingIds, { headingIdCompat: true }]],
-    remarkPlugins: [remarkCustomHeaderId],
-  },
+   markdown: {
+      rehypePlugins: [[rehypeHeadingIds, { headingIdCompat: true }]],
+      remarkPlugins: [remarkCustomHeaderId],
+   },
 
-  integrations: [
-    mermaid(),
-    starlight({
-      plugins: [starlightImageZoom()],
-      defaultLocale: "root",
-      locales: {
-        root: {
-          label: "Português",
-          lang: "pt",
-        },
+   integrations: [
+      mermaid(),
+      starlight({
+         plugins: [starlightImageZoom()],
+         defaultLocale: "root",
+         locales: {
+            root: {
+               label: "Português",
+               lang: "pt",
+            },
+         },
+         favicon: "./favicon.ico",
+         title: "ScriptBot",
+         logo: {
+            src: "./src/assets/Botrading.png",
+         },
+         social: [
+            {
+               icon: "discord",
+               label: "discord",
+               href: "https://discord.botrading.net",
+            },
+         ],
+         sidebar: [
+            {
+               label: "Indicators",
+               autogenerate: { directory: "indicators" },
+               translations: {
+                  pt: "Indicadores",
+               },
+            },
+            {
+               label: "Fundamentals",
+               autogenerate: { directory: "fundamentals" },
+               translations: {
+                  pt: "Fundamentos",
+               },
+            },
+            {
+               label: "Placeholders",
+               autogenerate: { directory: "placeholders" },
+               translations: {
+                  pt: "Espaços reservados",
+               },
+            },
+            {
+               label: "Conditions",
+               autogenerate: { directory: "conditions" },
+               translations: {
+                  pt: "Condições",
+               },
+            },
+            {
+               label: "Fragments",
+               autogenerate: { directory: "fragments" },
+               translations: {
+                  pt: "Fragmentos",
+               },
+            },
+         ],
+         customCss: ["./src/styles/custom.css"],
+      }),
+      mdx({
+         optimize: true,
+      }),
+      react(),
+   ],
+   vite: {
+      resolve: {
+         alias: {
+            "@src": path.resolve("./src"),
+            "@components": path.resolve("./src/components"),
+            "@utils": path.resolve("./src/utils"),
+            "@interfaces": path.resolve("./src/interfaces"),
+            "@data": path.resolve("./src/data"),
+            "@enums": path.resolve("./src/enums"),
+            "@services": path.resolve("./src/services"),
+            "@models": path.resolve("./src/models"),
+         },
       },
-      favicon: "./favicon.ico",
-      title: "ScriptBot",
-      logo: {
-        src: "./src/assets/Botrading.png",
-      },
-      social: [
-        {
-          icon: "discord",
-          label: "discord",
-          href: "https://discord.botrading.net",
-        },
-      ],
-      sidebar: [
-        {
-          label: "Indicators",
-          autogenerate: { directory: "indicators" },
-          translations: {
-            pt: "Indicadores",
-          },
-        },
-        {
-          label: "Fundamentals",
-          autogenerate: { directory: "fundamentals" },
-          translations: {
-            pt: "Fundamentos",
-          },
-        },
-        {
-          label: "Placeholders",
-          autogenerate: { directory: "placeholders" },
-          translations: {
-            pt: "Espaços reservados",
-          },
-        },
-        {
-          label: "Conditions",
-          autogenerate: { directory: "conditions" },
-          translations: {
-            pt: "Condições",
-          },
-        },
-        {
-          label: "Fragments",
-          autogenerate: { directory: "fragments" },
-          translations: {
-            pt: "Fragmentos",
-          },
-        },
-      ],
-      customCss: ["./src/styles/custom.css"],
-    }),
-    mdx({
-      optimize: true,
-    }),
-    react(),
-  ],
-  vite: {
-    resolve: {
-      alias: {
-        "@src": path.resolve("./src"),
-        "@components": path.resolve("./src/components"),
-        "@utils": path.resolve("./src/utils"),
-        "@interfaces": path.resolve("./src/interfaces"),
-        "@data": path.resolve("./src/data"),
-        "@enums": path.resolve("./src/enums"),
-        "@services": path.resolve("./src/services"),
-        "@models": path.resolve("./src/models"),
-      },
-    },
-  },
+   },
 });

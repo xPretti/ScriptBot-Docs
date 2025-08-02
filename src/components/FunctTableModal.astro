@@ -2,6 +2,7 @@
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import CodeVar from "@components/CodeVar.astro";
 import { Icon } from "@astrojs/starlight/components";
+import { BookOpenText } from "lucide-react";
 import ReactFnModal from "./react/functions/ReactFnModal";
 
 const { category } = Astro.props;
@@ -43,7 +44,10 @@ const containsAliases =
                      <ReactFnModal client:visible fnCategory={fn.category} fnName={fn.name}>
                         <div class="description">
                            <p class="text">{fn.description.simple}</p>
-                           <Icon class="redirect-icon" name="open-book" size="1.5rem" />
+                           {/* <Icon class="redirect-icon" name="open-book" size="1.5rem" /> */}
+                           <div class="redirect-icon">
+                              <BookOpenText size="1.5rem" />
+                           </div>
                         </div>
                      </ReactFnModal>
                   </td>
@@ -78,7 +82,10 @@ const containsAliases =
    }
 
    .redirect-icon {
-      display: inline-block;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       opacity: 0.1;
       position: absolute;
       height: 100%;
