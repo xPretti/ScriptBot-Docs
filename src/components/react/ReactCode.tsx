@@ -182,6 +182,7 @@ export default function ReactCode({ children, language }: Props) {
          wrapLongLines={true}
          wrapLines={true}
          style={theme}
+         className={styles.code}
       >
          {toText(children)}
       </SyntaxHighlighter>

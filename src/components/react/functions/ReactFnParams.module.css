@@ -1,0 +1,53 @@
+.table {
+   width: fit-content;
+}
+
+.param p {
+   margin: 0;
+}
+
+.param a {
+   text-decoration: none;
+}
+
+.param a:hover {
+   text-decoration: underline;
+   text-decoration-color: var(--sl-color-function-type);
+}
+
+.param td {
+   padding: 0 0.5rem 0 0;
+   border: none;
+   vertical-align: top;
+}
+
+.param td:empty {
+   padding: 0;
+}
+
+.type {
+   font-weight: bold;
+   color: var(--sl-color-function-type);
+}
+
+.text {
+   overflow: hidden;
+}
+
+.comment {
+   min-width: 18.75rem;
+}
+
+.comment p {
+   color: var(--sl-color-function-comment);
+   overflow: hidden;
+}
+
+.variable {
+   text-wrap: nowrap;
+}
+
+.value {
+   text-wrap: nowrap;
+   color: var(--sl-color-function-value);
+}

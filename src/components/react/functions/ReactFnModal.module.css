@@ -54,7 +54,7 @@
 
 .body {
    display: flex;
-   padding: 20px;
+   padding: 15px;
    overflow: hidden;
 }
 
@@ -64,7 +64,8 @@
    gap: 2rem;
    width: 100%;
    overflow-y: scroll;
-   padding-right: 1.5rem;
+   overflow-x: hidden;
+   padding-right: 0.8rem;
 }
 
 .content::-webkit-scrollbar {
@@ -76,7 +77,6 @@
    border-radius: 3px;
 }
 
-/* Barra que se move */
 .content::-webkit-scrollbar-thumb {
    background-color: var(--sl-color-gray-4);
    border-radius: 3px;

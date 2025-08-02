@@ -1,10 +1,10 @@
 import styles from "./ReactFnContent.module.css";
 
-import ReactFnParam from "./ReactFnParam";
 import ReactFnReturn from "./ReactFnReturn";
 import type { FunctionPlaceholderInterface } from "@src/interfaces/placeholder-interface";
 import { getFunctionExample } from "@src/utils/functions-comp-utils";
 import ReactCode from "../ReactCode";
+import ReactFnParams from "./ReactFnParams";
 
 export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterface }) {
    if (!fn) return null;
@@ -29,17 +29,8 @@ export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterfac
             <div className={styles.titleContent}>
                <h3>Parâmetros</h3>
                {fn.parameters.length > 0 ? (
-                  <div className={styles.paramsTypes}>
-                     {fn.parameters.map((param, index) => (
-                        <ReactFnParam
-                           key={index}
-                           type={param.type.type}
-                           name={param.name}
-                           comment={param.comment}
-                           value={param.value}
-                           typeLink={param.type.typeLink}
-                        />
-                     ))}
+                  <div className={styles.scrollable}>
+                     <ReactFnParams params={fn.parameters} />
                   </div>
                ) : (
                   <p>Esta função não requer parâmetros.</p>
