@@ -1,0 +1,61 @@
+.content p,
+.content h3,
+.content div {
+   margin: 0;
+}
+
+.description {
+   user-select: none;
+   cursor: pointer;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+}
+
+.descriptionContainer {
+   display: flex;
+   align-items: center;
+   border-radius: 5px;
+}
+
+.titleContent {
+   display: flex;
+   flex-direction: column;
+   gap: 0.2rem;
+}
+
+.examplesTypes {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid var(--sl-color-function-description);
+   background-color: color-mix(in srgb, var(--sl-color-function-description) 50%, transparent 100%);
+}
+
+.examplesTypes ol {
+   list-style-position: inside;
+   padding: 0;
+}
+
+.examplesTypes ol li::marker {
+   /* color: var(--sl-color-function-type); */
+   font-weight: bold;
+}
+
+.returnsTypes {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5em;
+}
+
+@media (max-width: 800px) {
+   .paramsTypes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+   }
+}
