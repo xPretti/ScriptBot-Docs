@@ -1,36 +1,7 @@
-.container {
-   display: flex;
-   flex-direction: column;
-   width: 100%;
-   gap: 2em;
-}
-
-.container p,
-.container h3,
-.container div {
+.content p,
+.content h3,
+.content div {
    margin: 0;
-}
-
-.header {
-   display: flex;
-   flex-direction: column;
-   gap: 0.5em;
-}
-
-.headerTop {
-   display: flex;
-   justify-content: space-between;
-}
-
-.headerTitle {
-   display: flex;
-   align-items: center;
-   width: 100%;
-}
-
-.headerButtons {
-   display: flex;
-   align-items: center;
 }
 
 .description {
@@ -73,11 +44,7 @@
    padding: 10px;
    border-radius: 5px;
    border: 1px solid var(--sl-color-function-description);
-   background-color: color-mix(
-      in srgb,
-      var(--sl-color-function-description) 50%,
-      transparent 100%
-   );
+   background-color: color-mix(in srgb, var(--sl-color-function-description) 50%, transparent 100%);
 }
 
 .examplesTypes ol {

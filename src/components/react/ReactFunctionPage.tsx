@@ -9,16 +9,8 @@ import type { FunctionPlaceholderInterface } from "@src/interfaces/placeholder-i
 import { getFunctionExample } from "@src/utils/functions-comp-utils";
 import ReactCode from "./ReactCode";
 
-export default function ReactFunctionPage({
-   fnCategory,
-   fnName,
-}: {
-   fnCategory: ENUM_FUNCTION_CATEGORY_TYPE | string;
-   fnName: string;
-}) {
-   const fn = FUNCTION_MAPPING.get(
-      fnCategory as ENUM_FUNCTION_CATEGORY_TYPE
-   )?.get(fnName);
+export default function ReactFunctionPage({ fnCategory, fnName }: { fnCategory: ENUM_FUNCTION_CATEGORY_TYPE | string; fnName: string }) {
+   const fn = FUNCTION_MAPPING.get(fnCategory as ENUM_FUNCTION_CATEGORY_TYPE)?.get(fnName);
 
    if (!fn) {
       return <div>Função não encontrada ${fnName}</div>;
@@ -36,13 +28,11 @@ export default function ReactFunctionPage({
    };
 
    return (
-      <div className={styles.container}>
-         <div className={styles.header}>
+      <>
+         <div className={styles.content}>
             <div className={styles.descriptionContainer}>
                <p>{fn.description.complex}</p>
             </div>
-         </div>
-         <div className={styles.content}>
             <div className={styles.titleContent}>
                <h3>Parâmetros</h3>
                {fn.parameters.length > 0 ? (
@@ -95,6 +85,6 @@ export default function ReactFunctionPage({
                </div>
             )}
          </div>
-      </div>
+      </>
    );
 }
