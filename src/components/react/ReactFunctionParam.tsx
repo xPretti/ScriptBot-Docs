@@ -8,20 +8,10 @@ interface Props {
    typeLink?: string;
 }
 
-export default function ReactFunctionParam({
-   type,
-   name,
-   comment,
-   value,
-   typeLink = "/fundamentals/types",
-}: Props) {
+export default function ReactFunctionParam({ type, name, comment, value, typeLink = "/fundamentals/types" }: Props) {
    return (
       <div className={styles.param}>
-         {value ? (
-            <p className={styles.optional}>Optional</p>
-         ) : (
-            <p className={styles.required}>Required</p>
-         )}
+         {value ? <p className={styles.optional}>Optional</p> : <p className={styles.required}>Obrigatório</p>}
          <p className={styles.text}>
             <a href={typeLink}>
                <span className={styles.type}>{type}</span>

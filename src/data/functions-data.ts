@@ -1,10 +1,7 @@
 import { ENUM_FUNCTION_CATEGORY_TYPE } from "src/enums/function-enums";
 import type { FunctionPlaceholderInterface } from "../interfaces/placeholder-interface";
 
-export const FUNCTION_MAPPING: Map<
-   ENUM_FUNCTION_CATEGORY_TYPE,
-   Map<string, FunctionPlaceholderInterface>
-> = new Map();
+export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, FunctionPlaceholderInterface>> = new Map();
 
 [
    // DEBUGS
@@ -30,8 +27,7 @@ export const FUNCTION_MAPPING: Map<
                type: "string",
             },
             name: "text2",
-            comment:
-               "Segundo parametro de texto que será concatenado ao primeiro.",
+            comment: "Segundo parametro de texto que será concatenado ao primeiro.",
             value: '""',
          },
          {
@@ -39,26 +35,20 @@ export const FUNCTION_MAPPING: Map<
                type: "string",
             },
             name: "text...63",
-            comment:
-               "Outro parametro de texto que será concatenado, máximo de 63 parametros.",
+            comment: "Outro parametro de texto que será concatenado, máximo de 63 parametros.",
             value: '""',
          },
       ],
-      examples: [
-         'Log["Hello World!"]',
-         'Log["Symbol: ", SYMBOL, " CurrentTime: ", TIME_CURRENT]',
-      ],
+      examples: ['Log["Hello World!"]', 'Log["Symbol: ", SYMBOL, " CurrentTime: ", TIME_CURRENT]'],
       returns: {
          success: {
-            message:
-               "Retorna um valor boolean (true) em caso de sucesso de execução.",
+            message: "Retorna um valor boolean (true) em caso de sucesso de execução.",
             type: {
                type: "bool",
             },
          },
          error: {
-            message:
-               "Retorna um valor boolean (false) em caso de erro de execução.",
+            message: "Retorna um valor boolean (false) em caso de erro de execução.",
             type: {
                type: "bool",
             },
@@ -71,8 +61,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Imprime um texto nas logs do Metatrader.",
-         complex:
-            "Esta função é usada para imprimir um texto nas logs do Metatrader, muito utilizada para depurar o código.",
+         complex: "Esta função é usada para imprimir um texto nas logs do Metatrader, muito utilizada para depurar o código.",
       },
       parameters: [
          {
@@ -87,8 +76,7 @@ export const FUNCTION_MAPPING: Map<
                type: "string",
             },
             name: "text2",
-            comment:
-               "Segundo parametro de texto que será concatenado ao primeiro.",
+            comment: "Segundo parametro de texto que será concatenado ao primeiro.",
             value: '""',
          },
          {
@@ -96,26 +84,20 @@ export const FUNCTION_MAPPING: Map<
                type: "string",
             },
             name: "text...63",
-            comment:
-               "Outro parametro de texto que será concatenado, máximo de 63 parametros.",
+            comment: "Outro parametro de texto que será concatenado, máximo de 63 parametros.",
             value: '""',
          },
       ],
-      examples: [
-         'Print["Hello World!"]',
-         'Print["Symbol: ", SYMBOL, " CurrentTime: ", TIME_CURRENT]',
-      ],
+      examples: ['Print["Hello World!"]', 'Print["Symbol: ", SYMBOL, " CurrentTime: ", TIME_CURRENT]'],
       returns: {
          success: {
-            message:
-               "Retorna um valor boolean (true) em caso de sucesso de execução.",
+            message: "Retorna um valor boolean (true) em caso de sucesso de execução.",
             type: {
                type: "bool",
             },
          },
          error: {
-            message:
-               "Retorna um valor boolean (false) em caso de erro de execução.",
+            message: "Retorna um valor boolean (false) em caso de erro de execução.",
             type: {
                type: "bool",
             },
@@ -201,10 +183,7 @@ export const FUNCTION_MAPPING: Map<
             value: "0",
          },
       ],
-      examples: [
-         "IND1[buffer, candle]",
-         "CLOSE[1] <= IND7[0, 1] && CLOSE[0] >= IND7[1, 1]",
-      ],
+      examples: ["IND1[buffer, candle]", "CLOSE[1] <= IND7[0, 1] && CLOSE[0] >= IND7[1, 1]"],
       returns: {
          success: {
             message: "Retorna o valor do buffer do indicador do tipo double.",
@@ -227,22 +206,19 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
-         complex:
-            "Esta função permite remover todas as variáveis criadas pelo usuário.",
+         complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
       parameters: [],
       examples: ['GetDouble["Count"] >= 10 -> ClearDouble[];'],
       returns: {
          success: {
-            message:
-               "Retorna um boolean (true) se as variáveis foram removidas.",
+            message: "Retorna um boolean (true) se as variáveis foram removidas.",
             type: {
                type: "bool",
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se as variáveis não foram removidas ou não existem.",
+            message: "Retorna um boolean (false) se as variáveis não foram removidas ou não existem.",
             type: {
                type: "bool",
             },
@@ -255,22 +231,19 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
-         complex:
-            "Esta função permite remover todas as variáveis criadas pelo usuário.",
+         complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
       parameters: [],
       examples: ['GetInt["Count"] >= 10 -> ClearInt[];'],
       returns: {
          success: {
-            message:
-               "Retorna um boolean (true) se as variáveis foram removidas.",
+            message: "Retorna um boolean (true) se as variáveis foram removidas.",
             type: {
                type: "bool",
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se as variáveis não foram removidas ou não existem.",
+            message: "Retorna um boolean (false) se as variáveis não foram removidas ou não existem.",
             type: {
                type: "bool",
             },
@@ -283,22 +256,19 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
-         complex:
-            "Esta função permite remover todas as variáveis criadas pelo usuário.",
+         complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
       parameters: [],
       examples: ['GetInt["Count"] >= 10 -> ClearString[];'],
       returns: {
          success: {
-            message:
-               "Retorna um boolean (true) se as variáveis foram removidas.",
+            message: "Retorna um boolean (true) se as variáveis foram removidas.",
             type: {
                type: "bool",
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se as variáveis não foram removidas ou não existem.",
+            message: "Retorna um boolean (false) se as variáveis não foram removidas ou não existem.",
             type: {
                type: "bool",
             },
@@ -338,8 +308,7 @@ export const FUNCTION_MAPPING: Map<
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            message: "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
             type: {
                type: "bool",
             },
@@ -379,8 +348,7 @@ export const FUNCTION_MAPPING: Map<
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            message: "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
             type: {
                type: "bool",
             },
@@ -420,8 +388,7 @@ export const FUNCTION_MAPPING: Map<
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            message: "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
             type: {
                type: "bool",
             },
@@ -434,8 +401,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o valor de uma variável criada pelo usuário.",
-         complex:
-            "Esta função retorna o valor de uma variável criada pelo usuário.",
+         complex: "Esta função retorna o valor de uma variável criada pelo usuário.",
       },
       parameters: [
          {
@@ -468,8 +434,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o valor de uma variável criada pelo usuário.",
-         complex:
-            "Esta função retorna o valor de uma variável criada pelo usuário.",
+         complex: "Esta função retorna o valor de uma variável criada pelo usuário.",
       },
       parameters: [
          {
@@ -502,8 +467,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o valor de uma variável criada pelo usuário.",
-         complex:
-            "Esta função retorna o valor de uma variável criada pelo usuário.",
+         complex: "Esta função retorna o valor de uma variável criada pelo usuário.",
       },
       parameters: [
          {
@@ -556,8 +520,7 @@ export const FUNCTION_MAPPING: Map<
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome.",
+            message: "Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome.",
             type: {
                type: "bool",
             },
@@ -590,8 +553,7 @@ export const FUNCTION_MAPPING: Map<
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome.",
+            message: "Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome.",
             type: {
                type: "bool",
             },
@@ -624,8 +586,7 @@ export const FUNCTION_MAPPING: Map<
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome.",
+            message: "Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome.",
             type: {
                type: "bool",
             },
@@ -638,8 +599,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Substitui o valor de uma variável caso ela exista.",
-         complex:
-            "Esta função permite substituir o valor de uma variável caso não exista.",
+         complex: "Esta função permite substituir o valor de uma variável caso não exista.",
       },
       parameters: [
          {
@@ -666,8 +626,7 @@ export const FUNCTION_MAPPING: Map<
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            message: "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
             type: {
                type: "bool",
             },
@@ -680,8 +639,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Substitui o valor de uma variável caso ela exista.",
-         complex:
-            "Esta função permite substituir o valor de uma variável caso não exista.",
+         complex: "Esta função permite substituir o valor de uma variável caso não exista.",
       },
       parameters: [
          {
@@ -708,8 +666,7 @@ export const FUNCTION_MAPPING: Map<
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            message: "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
             type: {
                type: "bool",
             },
@@ -722,8 +679,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Substitui o valor de uma variável caso ela exista.",
-         complex:
-            "Esta função permite substituir o valor de uma variável caso não exista.",
+         complex: "Esta função permite substituir o valor de uma variável caso não exista.",
       },
       parameters: [
          {
@@ -750,8 +706,7 @@ export const FUNCTION_MAPPING: Map<
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            message: "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
             type: {
                type: "bool",
             },
@@ -764,8 +719,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Define o valor de uma variável ou cria uma nova.",
-         complex:
-            "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
+         complex: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
       },
       parameters: [
          {
@@ -786,15 +740,13 @@ export const FUNCTION_MAPPING: Map<
       examples: ['SetDouble["Name", 777]'],
       returns: {
          success: {
-            message:
-               "Retorna um boolean (true) se a variável foi criada ou atualizada.",
+            message: "Retorna um boolean (true) se a variável foi criada ou atualizada.",
             type: {
                type: "bool",
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
+            message: "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
             type: {
                type: "bool",
             },
@@ -807,8 +759,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Define o valor de uma variável ou cria uma nova.",
-         complex:
-            "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
+         complex: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
       },
       parameters: [
          {
@@ -829,15 +780,13 @@ export const FUNCTION_MAPPING: Map<
       examples: ['SetInt["Name", 777]'],
       returns: {
          success: {
-            message:
-               "Retorna um boolean (true) se a variável foi criada ou atualizada.",
+            message: "Retorna um boolean (true) se a variável foi criada ou atualizada.",
             type: {
                type: "bool",
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
+            message: "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
             type: {
                type: "bool",
             },
@@ -850,8 +799,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Define o valor de uma variável ou cria uma nova.",
-         complex:
-            "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
+         complex: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
       },
       parameters: [
          {
@@ -872,15 +820,13 @@ export const FUNCTION_MAPPING: Map<
       examples: ['SetString["Name", "my other text"]'],
       returns: {
          success: {
-            message:
-               "Retorna um boolean (true) se a variável foi criada ou atualizada.",
+            message: "Retorna um boolean (true) se a variável foi criada ou atualizada.",
             type: {
                type: "bool",
             },
          },
          error: {
-            message:
-               "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
+            message: "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
             type: {
                type: "bool",
             },
@@ -1143,8 +1089,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Direction",
       aliases: "DIR",
       description: {
-         simple:
-            "Retorna a direção de uma vela (-1 = Negativa, 0 = Neutra, 1 = Positiva).",
+         simple: "Retorna a direção de uma vela (-1 = Negativa, 0 = Neutra, 1 = Positiva).",
          complex:
             "Esta função retorna a direção simplificada de uma vela, ou seja, se a vela é positiva ou negativa. (-1 = Negativa, 0 = Neutra, 1 = Positiva)",
       },
@@ -1174,11 +1119,7 @@ export const FUNCTION_MAPPING: Map<
             value: "SYMBOL",
          },
       ],
-      examples: [
-         "Direction[1]",
-         'Direction[1, M5, "EURUSD"]',
-         "DIR[1] == 1 // Check if the candle is positive/buying",
-      ],
+      examples: ["Direction[1]", 'Direction[1, M5, "EURUSD"]', "DIR[1] == 1 // Check if the candle is positive/buying"],
       returns: {
          success: {
             message: "Retorna a direção da vela.",
@@ -1250,8 +1191,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o index da vela.",
-         complex:
-            "Esta função retorna o identificador da vela, usado para obter o index utilizando o horário especificado.",
+         complex: "Esta função retorna o identificador da vela, usado para obter o index utilizando o horário especificado.",
       },
       parameters: [
          {
@@ -1422,8 +1362,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "TICKV",
       description: {
          simple: "Retorna o volume de uma vela.",
-         complex:
-            "Esta função retorna o volume de uma vela com base nos dados de tick.",
+         complex: "Esta função retorna o volume de uma vela com base nos dados de tick.",
       },
       parameters: [
          {
@@ -1688,8 +1627,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "Count",
       description: {
          simple: "Retorna a quantidade de passos que ocorreram.",
-         complex:
-            "Esta função calcula a quantidade de passos realizados e arredonda o resultado para o inteiro mais próximo de zero.",
+         complex: "Esta função calcula a quantidade de passos realizados e arredonda o resultado para o inteiro mais próximo de zero.",
       },
       parameters: [
          {
@@ -1728,10 +1666,8 @@ export const FUNCTION_MAPPING: Map<
       name: "CountStepGradual",
       aliases: "CountGrad",
       description: {
-         simple:
-            "Retorna a quantidade de passos que ocorreram de forma gradual.",
-         complex:
-            "Esta função calcula a quantidade de passos realizados de forma gradual e arredonda o resultado para o inteiro mais próximo de zero.",
+         simple: "Retorna a quantidade de passos que ocorreram de forma gradual.",
+         complex: "Esta função calcula a quantidade de passos realizados de forma gradual e arredonda o resultado para o inteiro mais próximo de zero.",
       },
       parameters: [
          {
@@ -1778,10 +1714,8 @@ export const FUNCTION_MAPPING: Map<
       name: "Division",
       aliases: "Divi",
       description: {
-         simple:
-            "Retorna a divisão entre dois valores, permitindo que o denominador seja zero.",
-         complex:
-            "Esta função retorna a divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
+         simple: "Retorna a divisão entre dois valores, permitindo que o denominador seja zero.",
+         complex: "Esta função retorna a divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
       },
       parameters: [
          {
@@ -1820,10 +1754,8 @@ export const FUNCTION_MAPPING: Map<
       name: "RestDivision",
       aliases: "RDivi",
       description: {
-         simple:
-            "Retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero.",
-         complex:
-            "Esta função retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
+         simple: "Retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero.",
+         complex: "Esta função retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
       },
       parameters: [
          {
@@ -1862,10 +1794,8 @@ export const FUNCTION_MAPPING: Map<
       name: "Percent",
       aliases: "",
       description: {
-         simple:
-            "Retorna a variação percentual de value até target, com value sendo o valor base.",
-         complex:
-            "Esta função retorna a variação percentual de value até target, com value sendo o valor base.",
+         simple: "Retorna a variação percentual de value até target, com value sendo o valor base.",
+         complex: "Esta função retorna a variação percentual de value até target, com value sendo o valor base.",
       },
       parameters: [
          {
@@ -1923,10 +1853,7 @@ export const FUNCTION_MAPPING: Map<
             comment: "O valor percentual que será retornado.",
          },
       ],
-      examples: [
-         "PercentOfValue[100, 20] // Return 20.0",
-         "PercentOfValue[200, 50] // Return 100.0",
-      ],
+      examples: ["PercentOfValue[100, 20] // Return 20.0", "PercentOfValue[200, 50] // Return 100.0"],
       returns: {
          success: {
             message: "Retorna a quantidade percentual.",
@@ -1948,8 +1875,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna a quantidade percentual de acerto.",
-         complex:
-            "Esta função retorna a quantidade percentual de acerto entre gain e loss. A variação sempre será de 0% a 100%.",
+         complex: "Esta função retorna a quantidade percentual de acerto entre gain e loss. A variação sempre será de 0% a 100%.",
       },
       parameters: [
          {
@@ -1967,10 +1893,7 @@ export const FUNCTION_MAPPING: Map<
             comment: "O valor de quantidade de perda.",
          },
       ],
-      examples: [
-         "HitPercent[30, 70] // Is 30% of hit percent",
-         "HitPercent[30, 100] // Is 23,07% of hit percent",
-      ],
+      examples: ["HitPercent[30, 70] // Is 30% of hit percent", "HitPercent[30, 100] // Is 23,07% of hit percent"],
       returns: {
          success: {
             message: "Retorna a quantidade percentual de acerto.",
@@ -1992,8 +1915,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "FixPrice",
       description: {
          simple: "Retorna o valor correto de um preço.",
-         complex:
-            "Esta função corrige preços inválidos, convertendo-os para valores válidos conforme o passo do mercado.",
+         complex: "Esta função corrige preços inválidos, convertendo-os para valores válidos conforme o passo do mercado.",
       },
       parameters: [
          {
@@ -2034,8 +1956,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna um valor inteiro aleatório entre dois valores.",
-         complex:
-            "Esta função retorna um valor inteiro aleatório entre dois valores.",
+         complex: "Esta função retorna um valor inteiro aleatório entre dois valores.",
       },
       parameters: [
          {
@@ -2108,8 +2029,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o valor arredondado para cima.",
-         complex:
-            "Esta função retorna o valor arredondado para cima, garantindo que o resultado seja sempre o próximo inteiro maior ou igual.",
+         complex: "Esta função retorna o valor arredondado para cima, garantindo que o resultado seja sempre o próximo inteiro maior ou igual.",
       },
       parameters: [
          {
@@ -2120,11 +2040,7 @@ export const FUNCTION_MAPPING: Map<
             comment: "O valor para ser arredondado.",
          },
       ],
-      examples: [
-         "RoundUp[10.7] // 11",
-         "RoundUp[10.3] // 11",
-         "RoundUp[Close[0]/2]",
-      ],
+      examples: ["RoundUp[10.7] // 11", "RoundUp[10.3] // 11", "RoundUp[Close[0]/2]"],
       returns: {
          success: {
             message: "Retorna o valor arredondado.",
@@ -2146,8 +2062,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o valor arredondado para baixo.",
-         complex:
-            "Esta função retorna o valor arredondado para baixo, garantindo que o resultado seja sempre o próximo inteiro menor ou igual.",
+         complex: "Esta função retorna o valor arredondado para baixo, garantindo que o resultado seja sempre o próximo inteiro menor ou igual.",
       },
       parameters: [
          {
@@ -2158,11 +2073,7 @@ export const FUNCTION_MAPPING: Map<
             comment: "O valor para ser arredondado.",
          },
       ],
-      examples: [
-         "RoundDown[10.7] // 10",
-         "RoundDown[10.3] // 10",
-         "RoundDown[Close[0]/2]",
-      ],
+      examples: ["RoundDown[10.7] // 10", "RoundDown[10.3] // 10", "RoundDown[Close[0]/2]"],
       returns: {
          success: {
             message: "Retorna o valor arredondado.",
@@ -2184,8 +2095,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o maior valor entre dois números.",
-         complex:
-            "Esta função retorna o maior valor entre dois números fornecidos.",
+         complex: "Esta função retorna o maior valor entre dois números fornecidos.",
       },
       parameters: [
          {
@@ -2225,8 +2135,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o menor valor entre dois números.",
-         complex:
-            "Esta função retorna o menor valor entre dois números fornecidos.",
+         complex: "Esta função retorna o menor valor entre dois números fornecidos.",
       },
       parameters: [
          {
@@ -2278,10 +2187,7 @@ export const FUNCTION_MAPPING: Map<
             comment: "o valor da chance.",
          },
       ],
-      examples: [
-         "IsChance[10] // It contains 10% chance of returning true.",
-         "IsChance[60]",
-      ],
+      examples: ["IsChance[10] // It contains 10% chance of returning true.", "IsChance[60]"],
       returns: {
          success: {
             message: "Retorna verdadeiro caso a chance seja atingida.",
@@ -2303,8 +2209,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "Decimal",
       description: {
          simple: "Retorna o número de casas decimais de um valor.",
-         complex:
-            "Esta função retorna a quantidade de casas decimais presentes em um número, indicando seu nível de precisão.",
+         complex: "Esta função retorna a quantidade de casas decimais presentes em um número, indicando seu nível de precisão.",
       },
       parameters: [
          {
@@ -2338,8 +2243,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "GetVol",
       description: {
          simple: "Retorna o volume que a ordem será executada.",
-         complex:
-            "Esta função retorna o volume que a ordem será colocada no mercado.",
+         complex: "Esta função retorna o volume que a ordem será colocada no mercado.",
       },
       parameters: [],
       examples: [],
@@ -2379,8 +2283,7 @@ export const FUNCTION_MAPPING: Map<
       examples: ["SetVol[10]"],
       returns: {
          success: {
-            message:
-               "Retorna true se o volume for alterado com sucesso, ou false caso contrário.",
+            message: "Retorna true se o volume for alterado com sucesso, ou false caso contrário.",
             type: {
                type: "bool",
             },
@@ -2400,8 +2303,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "Pos",
       description: {
          simple: "Retorna o valor absoluto de um número.",
-         complex:
-            "Esta função retorna o valor absoluto de um número, ou seja, o seu valor sem sinal (sempre positivo).",
+         complex: "Esta função retorna o valor absoluto de um número, ou seja, o seu valor sem sinal (sempre positivo).",
       },
       parameters: [
          {
@@ -2437,8 +2339,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "Neg",
       description: {
          simple: "Retorna o valor negativo de um número.",
-         complex:
-            "Esta função retorna o valor negativo de um número, ou seja, o seu valor com sinal (sempre negativo).",
+         complex: "Esta função retorna o valor negativo de um número, ou seja, o seu valor com sinal (sempre negativo).",
       },
       parameters: [
          {
@@ -2473,8 +2374,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ToTime",
       aliases: "",
       description: {
-         simple:
-            "Retorna o horário em forma de texto simples para data em segundos.",
+         simple: "Retorna o horário em forma de texto simples para data em segundos.",
          complex:
             "Esta função retorna o horário em forma de texto para número em segundos. Com esta função você pode acessar a vela do dia usando um horário em forma de texto, por exemplo '13:00'.",
       },
@@ -2517,8 +2417,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "TMod",
       description: {
          simple: "Retorna o horário modificado.",
-         complex:
-            "Esta função permite modificar um horário passado de referencia.",
+         complex: "Esta função permite modificar um horário passado de referencia.",
       },
       parameters: [
          {
@@ -2602,8 +2501,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "TFormat",
       description: {
          simple: "Retorna o horário em forma de texto.",
-         complex:
-            "Esta função transforma um valor em segundos em uma representação textual de horário.",
+         complex: "Esta função transforma um valor em segundos em uma representação textual de horário.",
       },
       parameters: [
          {
@@ -2614,9 +2512,7 @@ export const FUNCTION_MAPPING: Map<
             comment: "o valor do horário.",
          },
       ],
-      examples: [
-         `ToTimeFormat[TIME_CURRENT] // It would be similar to: "1970.01.01 19:00:00"`,
-      ],
+      examples: [`ToTimeFormat[TIME_CURRENT] // It would be similar to: "1970.01.01 19:00:00"`],
       returns: {
          success: {
             message: "Retorna o horário em forma de texto.",
@@ -2638,8 +2534,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "Format",
       description: {
          simple: "Retorna uma nova string formatada.",
-         complex:
-            "Esta função permite modificar um texto, formatando-o de acordo com os parâmetros definidos internamente.",
+         complex: "Esta função permite modificar um texto, formatando-o de acordo com os parâmetros definidos internamente.",
       },
       parameters: [
          {
@@ -2662,8 +2557,7 @@ export const FUNCTION_MAPPING: Map<
                type: "any",
             },
             name: "param...63",
-            comment:
-               "Os demais parametros que serão formatados. Não pode ser mais de 63.",
+            comment: "Os demais parametros que serão formatados. Não pode ser mais de 63.",
             value: '""',
          },
       ],
@@ -2705,11 +2599,7 @@ export const FUNCTION_MAPPING: Map<
             comment: "o valor a ser convertido.",
          },
       ],
-      examples: [
-         "ToInt[10.5] // Is 10",
-         `ToInt["9999"] // Is 9999`,
-         `ToInt["My age 30"] // To convert to zero`,
-      ],
+      examples: ["ToInt[10.5] // Is 10", `ToInt["9999"] // Is 9999`, `ToInt["My age 30"] // To convert to zero`],
       returns: {
          success: {
             message: "Retorna o valor convertido para inteiro.",
@@ -2732,8 +2622,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o último preço de negociação.",
-         complex:
-            "Esta função retorna o valor do último preço de negociação para o símbolo especificado.",
+         complex: "Esta função retorna o valor do último preço de negociação para o símbolo especificado.",
       },
       parameters: [
          {
@@ -2761,8 +2650,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "LastH",
       description: {
          simple: "Retorna o maior preço do último negócio.",
-         complex:
-            "Esta função retorna o maior preço registrado no último negócio do símbolo informado.",
+         complex: "Esta função retorna o maior preço registrado no último negócio do símbolo informado.",
       },
       parameters: [
          {
@@ -2790,8 +2678,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "LastL",
       description: {
          simple: "Retorna o menor preço do último negócio.",
-         complex:
-            "Esta função retorna o menor preço registrado no último negócio do símbolo informado.",
+         complex: "Esta função retorna o menor preço registrado no último negócio do símbolo informado.",
       },
       parameters: [
          {
@@ -2819,8 +2706,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o preço de venda (ask).",
-         complex:
-            "Esta função retorna o preço de venda (ask) atual do símbolo especificado.",
+         complex: "Esta função retorna o preço de venda (ask) atual do símbolo especificado.",
       },
       parameters: [
          {
@@ -2848,8 +2734,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "AskH",
       description: {
          simple: "Retorna o maior preço de venda (ask).",
-         complex:
-            "Esta função retorna o maior valor de ask registrado no dia para o símbolo especificado.",
+         complex: "Esta função retorna o maior valor de ask registrado no dia para o símbolo especificado.",
       },
       parameters: [
          {
@@ -2877,8 +2762,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "AskL",
       description: {
          simple: "Retorna o menor preço de venda (ask).",
-         complex:
-            "Esta função retorna o menor valor de ask registrado no dia para o símbolo especificado.",
+         complex: "Esta função retorna o menor valor de ask registrado no dia para o símbolo especificado.",
       },
       parameters: [
          {
@@ -2906,8 +2790,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o preço de compra (bid).",
-         complex:
-            "Esta função retorna o preço de compra (bid) atual do símbolo especificado.",
+         complex: "Esta função retorna o preço de compra (bid) atual do símbolo especificado.",
       },
       parameters: [
          {
@@ -2935,8 +2818,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "BidH",
       description: {
          simple: "Retorna o maior preço de compra (bid).",
-         complex:
-            "Esta função retorna o maior valor de bid registrado no dia para o símbolo especificado.",
+         complex: "Esta função retorna o maior valor de bid registrado no dia para o símbolo especificado.",
       },
       parameters: [
          {
@@ -2964,8 +2846,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "BidL",
       description: {
          simple: "Retorna o menor preço de compra (bid).",
-         complex:
-            "Esta função retorna o menor valor de bid registrado no dia para o símbolo especificado.",
+         complex: "Esta função retorna o menor valor de bid registrado no dia para o símbolo especificado.",
       },
       parameters: [
          {
@@ -2993,8 +2874,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "LastT",
       description: {
          simple: "Retorna o horário do último negócio.",
-         complex:
-            "Esta função retorna o horário da última negociação para o símbolo especificado.",
+         complex: "Esta função retorna o horário da última negociação para o símbolo especificado.",
       },
       parameters: [
          {
@@ -3022,15 +2902,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DayST",
       description: {
          simple: "Retorna o horário de início do pregão no dia especificado.",
-         complex:
-            "Esta função retorna o horário de abertura do pregão para o ativo no dia informado. Pode variar conforme o ativo e o mercado.",
+         complex: "Esta função retorna o horário de abertura do pregão para o ativo no dia informado. Pode variar conforme o ativo e o mercado.",
       },
       parameters: [
          {
             type: { type: "int" },
             name: "day",
-            comment:
-               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+            comment: "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
          },
          {
             type: { type: "string" },
@@ -3056,17 +2934,14 @@ export const FUNCTION_MAPPING: Map<
       name: "DayEndTime",
       aliases: "DayET",
       description: {
-         simple:
-            "Retorna o horário de encerramento do pregão no dia especificado.",
-         complex:
-            "Esta função retorna o horário de fechamento do pregão para o ativo no dia informado.",
+         simple: "Retorna o horário de encerramento do pregão no dia especificado.",
+         complex: "Esta função retorna o horário de fechamento do pregão para o ativo no dia informado.",
       },
       parameters: [
          {
             type: { type: "int" },
             name: "day",
-            comment:
-               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+            comment: "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
          },
          {
             type: { type: "string" },
@@ -3093,15 +2968,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DaySC",
       description: {
          simple: "Retorna a vela (candle) de início do dia.",
-         complex:
-            "Esta função retorna o identificador da primeira vela (candle) do dia para o ativo especificado.",
+         complex: "Esta função retorna o identificador da primeira vela (candle) do dia para o ativo especificado.",
       },
       parameters: [
          {
             type: { type: "int" },
             name: "day",
-            comment:
-               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+            comment: "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
          },
          {
             type: { type: "string" },
@@ -3128,15 +3001,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DayEC",
       description: {
          simple: "Retorna a vela (candle) de fim do dia.",
-         complex:
-            "Esta função retorna o identificador da última vela (candle) do dia para o ativo especificado.",
+         complex: "Esta função retorna o identificador da última vela (candle) do dia para o ativo especificado.",
       },
       parameters: [
          {
             type: { type: "int" },
             name: "day",
-            comment:
-               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+            comment: "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
          },
          {
             type: { type: "string" },
@@ -3163,15 +3034,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DayH",
       description: {
          simple: "Retorna o maior preço do dia.",
-         complex:
-            "Esta função retorna o maior valor de preço negociado no dia, para o timeframe e símbolo informados.",
+         complex: "Esta função retorna o maior valor de preço negociado no dia, para o timeframe e símbolo informados.",
       },
       parameters: [
          {
             type: { type: "int" },
             name: "day",
-            comment:
-               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+            comment: "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
          },
          {
             type: {
@@ -3207,15 +3076,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DayL",
       description: {
          simple: "Retorna o menor preço do dia.",
-         complex:
-            "Esta função retorna o menor valor de preço negociado no dia, para o timeframe e símbolo informados.",
+         complex: "Esta função retorna o menor valor de preço negociado no dia, para o timeframe e símbolo informados.",
       },
       parameters: [
          {
             type: { type: "int" },
             name: "day",
-            comment:
-               "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
+            comment: "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc.",
          },
          {
             type: {
@@ -3280,18 +3147,14 @@ export const FUNCTION_MAPPING: Map<
             value: "-1",
          },
       ],
-      examples: [
-         "IsTime[TIME_CURRENT, 10] // Returns true if the hour is 10",
-         "IsTime[TIME_CURRENT, -1, 30] // Returns true if the minute is 30",
-      ],
+      examples: ["IsTime[TIME_CURRENT, 10] // Returns true if the hour is 10", "IsTime[TIME_CURRENT, -1, 30] // Returns true if the minute is 30"],
       returns: {
          success: {
             message: "Retorna true se o horário corresponder aos critérios.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna false se não corresponder ou houver erro nos parâmetros.",
+            message: "Retorna false se não corresponder ou houver erro nos parâmetros.",
             type: { type: "bool" },
          },
       },
@@ -3302,8 +3165,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "STime",
       description: {
          simple: "Retorna o horário atual do símbolo.",
-         complex:
-            "Esta função retorna o horário atual do ativo (símbolo) no mercado correspondente.",
+         complex: "Esta função retorna o horário atual do ativo (símbolo) no mercado correspondente.",
       },
       parameters: [
          {
@@ -3331,8 +3193,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "TLeft",
       description: {
          simple: "Retorna o tempo restante da vela atual.",
-         complex:
-            "Esta função retorna quanto tempo falta para o término da vela atual no timeframe e símbolo especificados.",
+         complex: "Esta função retorna quanto tempo falta para o término da vela atual no timeframe e símbolo especificados.",
       },
       parameters: [
          {
@@ -3369,8 +3230,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DayW",
       description: {
          simple: "Retorna o dia da semana.",
-         complex:
-            "Esta função retorna o dia da semana (0 = domingo, 1 = segunda, ..., 6 = sábado) do símbolo informado.",
+         complex: "Esta função retorna o dia da semana (0 = domingo, 1 = segunda, ..., 6 = sábado) do símbolo informado.",
       },
       parameters: [
          {
@@ -3398,8 +3258,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DayY",
       description: {
          simple: "Retorna o dia do ano.",
-         complex:
-            "Esta função retorna o número do dia no ano (1 a 366) com base no horário atual do símbolo.",
+         complex: "Esta função retorna o número do dia no ano (1 a 366) com base no horário atual do símbolo.",
       },
       parameters: [
          {
@@ -3427,8 +3286,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o mês atual.",
-         complex:
-            "Esta função retorna o número do mês atual (1 a 12) com base no horário atual do símbolo.",
+         complex: "Esta função retorna o número do mês atual (1 a 12) com base no horário atual do símbolo.",
       },
       parameters: [
          {
@@ -3456,8 +3314,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o ano atual.",
-         complex:
-            "Esta função retorna o número do ano atual com base no horário do símbolo.",
+         complex: "Esta função retorna o número do ano atual com base no horário do símbolo.",
       },
       parameters: [
          {
@@ -3485,8 +3342,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "StartT",
       description: {
          simple: "Retorna o horário inicial de referência.",
-         complex:
-            "Esta função retorna o horário de início conforme o método informado. Pode representar abertura do dia, semana, mês, etc.",
+         complex: "Esta função retorna o horário de início conforme o método informado. Pode representar abertura do dia, semana, mês, etc.",
       },
       parameters: [
          {
@@ -3522,8 +3378,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "ValueT",
       description: {
          simple: "Converte o horário em valor numérico baseado no método.",
-         complex:
-            "Esta função retorna um valor numérico representando o tempo, conforme o método especificado. Podendo ser segundos, minutos, horas, etc..",
+         complex: "Esta função retorna um valor numérico representando o tempo, conforme o método especificado. Podendo ser segundos, minutos, horas, etc..",
       },
       parameters: [
          {
@@ -3558,10 +3413,8 @@ export const FUNCTION_MAPPING: Map<
       name: "AllTotal",
       aliases: "ATotal",
       description: {
-         simple:
-            "Retorna a quantidade total de negociações do tipo especificado.",
-         complex:
-            "Esta função retorna o total de negociações abertas do tipo especificado, considerando os filtros fornecidos.",
+         simple: "Retorna a quantidade total de negociações do tipo especificado.",
+         complex: "Esta função retorna o total de negociações abertas do tipo especificado, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3607,8 +3460,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -3619,8 +3471,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "ATotalBuy",
       description: {
          simple: "Retorna a quantidade total de negociações de compra.",
-         complex:
-            "Esta função retorna o total de negociações de compra abertas, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de negociações de compra abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3658,8 +3509,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -3670,8 +3520,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "ATotalSell",
       description: {
          simple: "Retorna a quantidade total de negociações de venda.",
-         complex:
-            "Esta função retorna o total de negociações de venda abertas, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de negociações de venda abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3709,8 +3558,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -3721,8 +3569,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "ATotalAll",
       description: {
          simple: "Retorna a quantidade total de todas as negociações.",
-         complex:
-            "Esta função retorna o total de todas as negociações abertas, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de todas as negociações abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3760,8 +3607,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -3772,8 +3618,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PTotal",
       description: {
          simple: "Retorna a quantidade total de posições do tipo especificado.",
-         complex:
-            "Esta função retorna o total de posições abertas do tipo especificado, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de posições abertas do tipo especificado, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3819,8 +3664,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -3831,8 +3675,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PTotalBuy",
       description: {
          simple: "Retorna a quantidade total de posições de compra.",
-         complex:
-            "Esta função retorna o total de posições de compra abertas, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de posições de compra abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3866,13 +3709,11 @@ export const FUNCTION_MAPPING: Map<
       examples: ['PosTotalBuy[-1, 123456, H1, "PETR4"]'],
       returns: {
          success: {
-            message:
-               "Retorna o total de posições de compra conforme os filtros.",
+            message: "Retorna o total de posições de compra conforme os filtros.",
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -3883,8 +3724,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PTotalSell",
       description: {
          simple: "Retorna a quantidade total de posições de venda.",
-         complex:
-            "Esta função retorna o total de posições de venda abertas, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de posições de venda abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3918,13 +3758,11 @@ export const FUNCTION_MAPPING: Map<
       examples: ['PosTotalSell[-1, 123456, D1, "ITUB4"]'],
       returns: {
          success: {
-            message:
-               "Retorna o total de posições de venda conforme os filtros.",
+            message: "Retorna o total de posições de venda conforme os filtros.",
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -3935,8 +3773,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PTotalAll",
       description: {
          simple: "Retorna a quantidade total de todas as posições.",
-         complex:
-            "Esta função retorna o total de todas as posições abertas, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de todas as posições abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3970,13 +3807,11 @@ export const FUNCTION_MAPPING: Map<
       examples: ['PosTotalAll[-1, 123456, W1, "BBDC4"]'],
       returns: {
          success: {
-            message:
-               "Retorna o total de todas as posições conforme os filtros.",
+            message: "Retorna o total de todas as posições conforme os filtros.",
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -3987,8 +3822,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OTotal",
       description: {
          simple: "Retorna a quantidade total de ordens do tipo especificado.",
-         complex:
-            "Esta função retorna o total de ordens pendentes do tipo especificado, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de ordens pendentes do tipo especificado, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4034,8 +3868,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -4046,8 +3879,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OTotalBuy",
       description: {
          simple: "Retorna a quantidade total de ordens de compra.",
-         complex:
-            "Esta função retorna o total de ordens de compra pendentes, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de ordens de compra pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4085,8 +3917,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -4097,8 +3928,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OTotalSell",
       description: {
          simple: "Retorna a quantidade total de ordens de venda.",
-         complex:
-            "Esta função retorna o total de ordens de venda pendentes, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de ordens de venda pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4136,8 +3966,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -4148,8 +3977,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OTotalAll",
       description: {
          simple: "Retorna a quantidade total de todas as ordens.",
-         complex:
-            "Esta função retorna o total de todas as ordens pendentes, considerando os filtros fornecidos.",
+         complex: "Esta função retorna o total de todas as ordens pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4187,8 +4015,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se não houver resultados ou erro nos parâmetros.",
+            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
             type: { type: "int" },
          },
       },
@@ -4199,8 +4026,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PTicket",
       description: {
          simple: "Retorna o ticket de uma posição.",
-         complex:
-            "Esta função retorna o ticket de uma posição aberta usando os parâmetros informados.",
+         complex: "Esta função retorna o ticket de uma posição aberta usando os parâmetros informados.",
       },
       parameters: [
          {
@@ -4230,17 +4056,14 @@ export const FUNCTION_MAPPING: Map<
             value: "REAL",
          },
       ],
-      examples: [
-         "PosTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente",
-      ],
+      examples: ["PosTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
       returns: {
          success: {
             message: "Retorna o ticket da posição.",
             type: { type: "ulong" },
          },
          error: {
-            message:
-               "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            message: "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
             type: { type: "ulong" },
          },
       },
@@ -4250,8 +4073,7 @@ export const FUNCTION_MAPPING: Map<
       name: "PosDouble",
       aliases: "",
       description: {
-         simple:
-            "Retorna o valor de uma propriedade numérica (double) de uma posição.",
+         simple: "Retorna o valor de uma propriedade numérica (double) de uma posição.",
          complex:
             "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma posição aberta, identificada pelo seu ticket.",
       },
@@ -4267,8 +4089,7 @@ export const FUNCTION_MAPPING: Map<
                typeLink: "/fundamentals/enumerators#position-property-double",
             },
             name: "property",
-            comment:
-               "Propriedade da posição: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura).",
+            comment: "Propriedade da posição: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura).",
          },
       ],
       examples: [
@@ -4281,8 +4102,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "double" },
          },
          error: {
-            message:
-               "Retorna 0.0 se a posição não existir ou a propriedade for inválida.",
+            message: "Retorna 0.0 se a posição não existir ou a propriedade for inválida.",
             type: { type: "double" },
          },
       },
@@ -4293,8 +4113,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade inteira de uma posição.",
-         complex:
-            "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma posição aberta, identificada pelo seu ticket.",
+         complex: "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma posição aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -4308,8 +4127,7 @@ export const FUNCTION_MAPPING: Map<
                typeLink: "/fundamentals/enumerators#position-property-int",
             },
             name: "property",
-            comment:
-               "Propriedade da posição: 'TYPE_TIME' (timestamp de abertura), 'TYPE_MAGIC' (número mágico).",
+            comment: "Propriedade da posição: 'TYPE_TIME' (timestamp de abertura), 'TYPE_MAGIC' (número mágico).",
          },
       ],
       examples: [
@@ -4322,8 +4140,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se a posição não existir ou a propriedade for inválida.",
+            message: "Retorna 0 se a posição não existir ou a propriedade for inválida.",
             type: { type: "int" },
          },
       },
@@ -4334,8 +4151,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade textual de uma posição.",
-         complex:
-            "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma posição aberta, identificada pelo seu ticket.",
+         complex: "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma posição aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -4349,8 +4165,7 @@ export const FUNCTION_MAPPING: Map<
                typeLink: "/fundamentals/enumerators#position-property-string",
             },
             name: "property",
-            comment:
-               "Propriedade da posição: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação).",
+            comment: "Propriedade da posição: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação).",
          },
       ],
       examples: [
@@ -4363,8 +4178,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
          },
          error: {
-            message:
-               "Retorna uma string vazia se a posição não existir ou a propriedade for inválida.",
+            message: "Retorna uma string vazia se a posição não existir ou a propriedade for inválida.",
             type: { type: "string" },
          },
       },
@@ -4375,8 +4189,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PCurrent",
       description: {
          simple: "Retorna o preço atual de uma posição aberta.",
-         complex:
-            "Esta função retorna o preço atual de uma posição aberta identificada pelo ticket.",
+         complex: "Esta função retorna o preço atual de uma posição aberta identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4403,8 +4216,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PO",
       description: {
          simple: "Retorna o preço de abertura de uma posição.",
-         complex:
-            "Esta função retorna o preço de abertura de uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o preço de abertura de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4431,8 +4243,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PProfit",
       description: {
          simple: "Retorna o lucro atual de uma posição.",
-         complex:
-            "Esta função retorna o lucro ou prejuízo atual (em moeda do ativo) de uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o lucro ou prejuízo atual (em moeda do ativo) de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4459,8 +4270,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PSL",
       description: {
          simple: "Retorna o preço do Stop Loss de uma posição.",
-         complex:
-            "Esta função retorna o preço definido para o Stop Loss de uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o preço definido para o Stop Loss de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4476,8 +4286,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "double" },
          },
          error: {
-            message:
-               "Retorna 0 se a posição não tiver Stop Loss definido ou não for encontrada.",
+            message: "Retorna 0 se a posição não tiver Stop Loss definido ou não for encontrada.",
             type: { type: "double" },
          },
       },
@@ -4488,8 +4297,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PSWAP",
       description: {
          simple: "Retorna o valor do swap acumulado de uma posição.",
-         complex:
-            "Esta função retorna o valor total de swap acumulado para uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o valor total de swap acumulado para uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4516,8 +4324,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PTP",
       description: {
          simple: "Retorna o preço do Take Profit de uma posição.",
-         complex:
-            "Esta função retorna o preço definido para o Take Profit de uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o preço definido para o Take Profit de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4533,8 +4340,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "double" },
          },
          error: {
-            message:
-               "Retorna 0 se a posição não tiver Take Profit definido ou não for encontrada.",
+            message: "Retorna 0 se a posição não tiver Take Profit definido ou não for encontrada.",
             type: { type: "double" },
          },
       },
@@ -4545,8 +4351,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PVol",
       description: {
          simple: "Retorna o volume de uma posição.",
-         complex:
-            "Esta função retorna o volume (tamanho) de uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o volume (tamanho) de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4601,8 +4406,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PMagic",
       description: {
          simple: "Retorna o número mágico de uma posição.",
-         complex:
-            "Esta função retorna o número mágico (identificador do robô) de uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o número mágico (identificador do robô) de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4629,8 +4433,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PReason",
       description: {
          simple: "Retorna o motivo de abertura de uma posição.",
-         complex:
-            "Esta função retorna o código que indica o motivo pelo qual a posição foi aberta.",
+         complex: "Esta função retorna o código que indica o motivo pelo qual a posição foi aberta.",
       },
       parameters: [
          {
@@ -4658,8 +4461,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PT",
       description: {
          simple: "Retorna o horário de abertura de uma posição.",
-         complex:
-            "Esta função retorna o horário de abertura de uma posição no formato datetime.",
+         complex: "Esta função retorna o horário de abertura de uma posição no formato datetime.",
       },
       parameters: [
          {
@@ -4685,10 +4487,8 @@ export const FUNCTION_MAPPING: Map<
       name: "PosTimeMsc",
       aliases: "PTMsc",
       description: {
-         simple:
-            "Retorna o horário de abertura de uma posição em milissegundos.",
-         complex:
-            "Esta função retorna o horário de abertura de uma posição no formato datetime em milissegundos desde 01/01/1970.",
+         simple: "Retorna o horário de abertura de uma posição em milissegundos.",
+         complex: "Esta função retorna o horário de abertura de uma posição no formato datetime em milissegundos desde 01/01/1970.",
       },
       parameters: [
          {
@@ -4715,8 +4515,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PTUpdate",
       description: {
          simple: "Retorna o horário da última atualização de uma posição.",
-         complex:
-            "Esta função retorna o horário da última atualização (modificação) de uma posição no formato datetime.",
+         complex: "Esta função retorna o horário da última atualização (modificação) de uma posição no formato datetime.",
       },
       parameters: [
          {
@@ -4742,10 +4541,8 @@ export const FUNCTION_MAPPING: Map<
       name: "PosTimeUpdateMsc",
       aliases: "PTUpdateMsc",
       description: {
-         simple:
-            "Retorna o horário da última atualização de uma posição em milissegundos.",
-         complex:
-            "Esta função retorna o horário da última atualização de uma posição no formato datetime em milissegundos desde 01/01/1970.",
+         simple: "Retorna o horário da última atualização de uma posição em milissegundos.",
+         complex: "Esta função retorna o horário da última atualização de uma posição no formato datetime em milissegundos desde 01/01/1970.",
       },
       parameters: [
          {
@@ -4772,8 +4569,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PType",
       description: {
          simple: "Retorna o tipo de uma posição (compra/venda).",
-         complex:
-            "Esta função retorna o tipo da posição (0 para compra, 1 para venda) identificada pelo ticket.",
+         complex: "Esta função retorna o tipo da posição (0 para compra, 1 para venda) identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4800,8 +4596,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PSymbol",
       description: {
          simple: "Retorna o símbolo do ativo de uma posição.",
-         complex:
-            "Esta função retorna o símbolo do ativo negociado em uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o símbolo do ativo negociado em uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4828,8 +4623,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PComment",
       description: {
          simple: "Retorna o comentário associado a uma posição.",
-         complex:
-            "Esta função retorna o comentário/texto descritivo associado a uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o comentário/texto descritivo associado a uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4856,8 +4650,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "PExternal",
       description: {
          simple: "Retorna o ID externo de uma posição.",
-         complex:
-            "Esta função retorna o identificador externo (gerado pelo servidor) de uma posição identificada pelo ticket.",
+         complex: "Esta função retorna o identificador externo (gerado pelo servidor) de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -4884,8 +4677,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OTicket",
       description: {
          simple: "Retorna o ticket de uma ordem.",
-         complex:
-            "Esta função retorna o ticket de uma ordem aberta usando os parâmetros informados.",
+         complex: "Esta função retorna o ticket de uma ordem aberta usando os parâmetros informados.",
       },
       parameters: [
          {
@@ -4915,17 +4707,14 @@ export const FUNCTION_MAPPING: Map<
             value: "REAL",
          },
       ],
-      examples: [
-         "OrderTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente",
-      ],
+      examples: ["OrderTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
       returns: {
          success: {
             message: "Retorna o ticket da ordem.",
             type: { type: "ulong" },
          },
          error: {
-            message:
-               "Retorna 0 se nenhuma ordem for encontrada com os parâmetros informados.",
+            message: "Retorna 0 se nenhuma ordem for encontrada com os parâmetros informados.",
             type: { type: "ulong" },
          },
       },
@@ -4935,8 +4724,7 @@ export const FUNCTION_MAPPING: Map<
       name: "OrderDouble",
       aliases: "",
       description: {
-         simple:
-            "Retorna o valor de uma propriedade numérica (double) de uma ordem.",
+         simple: "Retorna o valor de uma propriedade numérica (double) de uma ordem.",
          complex:
             "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma ordem aberta, identificada pelo seu ticket.",
       },
@@ -4952,8 +4740,7 @@ export const FUNCTION_MAPPING: Map<
                typeLink: "/fundamentals/enumerators#order-property-double",
             },
             name: "property",
-            comment:
-               "Propriedade da ordem: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura).",
+            comment: "Propriedade da ordem: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura).",
          },
       ],
       examples: [
@@ -4966,8 +4753,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "double" },
          },
          error: {
-            message:
-               "Retorna 0.0 se a ordem não existir ou a propriedade for inválida.",
+            message: "Retorna 0.0 se a ordem não existir ou a propriedade for inválida.",
             type: { type: "double" },
          },
       },
@@ -4978,8 +4764,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade inteira de uma ordem.",
-         complex:
-            "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma ordem aberta, identificada pelo seu ticket.",
+         complex: "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma ordem aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -4993,8 +4778,7 @@ export const FUNCTION_MAPPING: Map<
                typeLink: "/fundamentals/enumerators#order-property-int",
             },
             name: "property",
-            comment:
-               "Propriedade da ordem: 'TYPE_TIME_SETUP' (timestamp de abertura), 'TYPE_MAGIC' (número mágico).",
+            comment: "Propriedade da ordem: 'TYPE_TIME_SETUP' (timestamp de abertura), 'TYPE_MAGIC' (número mágico).",
          },
       ],
       examples: [
@@ -5007,8 +4791,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "int" },
          },
          error: {
-            message:
-               "Retorna 0 se a ordem não existir ou a propriedade for inválida.",
+            message: "Retorna 0 se a ordem não existir ou a propriedade for inválida.",
             type: { type: "int" },
          },
       },
@@ -5019,8 +4802,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade textual de uma ordem.",
-         complex:
-            "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma ordem aberta, identificada pelo seu ticket.",
+         complex: "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma ordem aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -5034,8 +4816,7 @@ export const FUNCTION_MAPPING: Map<
                typeLink: "/fundamentals/enumerators#order-property-string",
             },
             name: "property",
-            comment:
-               "Propriedade da ordem: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação).",
+            comment: "Propriedade da ordem: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação).",
          },
       ],
       examples: [
@@ -5048,8 +4829,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "string" },
          },
          error: {
-            message:
-               "Retorna uma string vazia se a ordem não existir ou a propriedade for inválida.",
+            message: "Retorna uma string vazia se a ordem não existir ou a propriedade for inválida.",
             type: { type: "string" },
          },
       },
@@ -5060,8 +4840,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OVolInit",
       description: {
          simple: "Retorna o volume inicial de uma ordem pendente.",
-         complex:
-            "Esta função retorna o volume inicial especificado quando a ordem pendente foi criada.",
+         complex: "Esta função retorna o volume inicial especificado quando a ordem pendente foi criada.",
       },
       parameters: [
          {
@@ -5088,8 +4867,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OVol",
       description: {
          simple: "Retorna o volume atual de uma ordem.",
-         complex:
-            "Esta função retorna o volume atual (tamanho) de uma ordem, que pode ter sido modificado após a criação.",
+         complex: "Esta função retorna o volume atual (tamanho) de uma ordem, que pode ter sido modificado após a criação.",
       },
       parameters: [
          {
@@ -5116,8 +4894,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OO",
       description: {
          simple: "Retorna o preço de abertura de uma ordem.",
-         complex:
-            "Esta função retorna o preço de abertura especificado para uma ordem pendente.",
+         complex: "Esta função retorna o preço de abertura especificado para uma ordem pendente.",
       },
       parameters: [
          {
@@ -5144,8 +4921,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OSL",
       description: {
          simple: "Retorna o preço do Stop Loss de uma ordem.",
-         complex:
-            "Esta função retorna o preço definido para o Stop Loss de uma ordem pendente.",
+         complex: "Esta função retorna o preço definido para o Stop Loss de uma ordem pendente.",
       },
       parameters: [
          {
@@ -5161,8 +4937,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "double" },
          },
          error: {
-            message:
-               "Retorna 0 se a ordem não tiver Stop Loss definido ou não for encontrada.",
+            message: "Retorna 0 se a ordem não tiver Stop Loss definido ou não for encontrada.",
             type: { type: "double" },
          },
       },
@@ -5173,8 +4948,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OTP",
       description: {
          simple: "Retorna o preço do Take Profit de uma ordem.",
-         complex:
-            "Esta função retorna o preço definido para o Take Profit de uma ordem pendente.",
+         complex: "Esta função retorna o preço definido para o Take Profit de uma ordem pendente.",
       },
       parameters: [
          {
@@ -5190,8 +4964,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "double" },
          },
          error: {
-            message:
-               "Retorna 0 se a ordem não tiver Take Profit definido ou não for encontrada.",
+            message: "Retorna 0 se a ordem não tiver Take Profit definido ou não for encontrada.",
             type: { type: "double" },
          },
       },
@@ -5202,8 +4975,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OCurrent",
       description: {
          simple: "Retorna o preço atual de uma ordem pendente.",
-         complex:
-            "Esta função retorna o preço atual (de mercado) para o ativo da ordem pendente.",
+         complex: "Esta função retorna o preço atual (de mercado) para o ativo da ordem pendente.",
       },
       parameters: [
          {
@@ -5230,8 +5002,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OSLLimit",
       description: {
          simple: "Retorna o preço de ativação para ordens Stop Limit.",
-         complex:
-            "Esta função retorna o preço de ativação especificado para ordens do tipo Stop Limit.",
+         complex: "Esta função retorna o preço de ativação especificado para ordens do tipo Stop Limit.",
       },
       parameters: [
          {
@@ -5247,8 +5018,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "double" },
          },
          error: {
-            message:
-               "Retorna 0 se a ordem não for do tipo Stop Limit ou não for encontrada.",
+            message: "Retorna 0 se a ordem não for do tipo Stop Limit ou não for encontrada.",
             type: { type: "double" },
          },
       },
@@ -5259,8 +5029,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OSetup",
       description: {
          simple: "Retorna a data/hora de criação da ordem.",
-         complex:
-            "Esta função retorna o momento em que a ordem foi criada no formato datetime.",
+         complex: "Esta função retorna o momento em que a ordem foi criada no formato datetime.",
       },
       parameters: [
          {
@@ -5287,8 +5056,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OType",
       description: {
          simple: "Retorna o tipo de uma ordem.",
-         complex:
-            "Esta função retorna o tipo da ordem (compra/venda, stop/limit, etc) conforme enumerador de tipos de ordem.",
+         complex: "Esta função retorna o tipo da ordem (compra/venda, stop/limit, etc) conforme enumerador de tipos de ordem.",
       },
       parameters: [
          {
@@ -5316,8 +5084,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OState",
       description: {
          simple: "Retorna o estado atual de uma ordem.",
-         complex:
-            "Esta função retorna o estado atual da ordem conforme enumerador de estados.",
+         complex: "Esta função retorna o estado atual da ordem conforme enumerador de estados.",
       },
       parameters: [
          {
@@ -5345,8 +5112,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OTExpira",
       description: {
          simple: "Retorna a data/hora de expiração de uma ordem.",
-         complex:
-            "Esta função retorna o momento em que a ordem pendente irá expirar (se aplicável) no formato datetime.",
+         complex: "Esta função retorna o momento em que a ordem pendente irá expirar (se aplicável) no formato datetime.",
       },
       parameters: [
          {
@@ -5362,8 +5128,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "datetime" },
          },
          error: {
-            message:
-               "Retorna 0 se a ordem não tiver expiração ou não for encontrada.",
+            message: "Retorna 0 se a ordem não tiver expiração ou não for encontrada.",
             type: { type: "datetime" },
          },
       },
@@ -5373,10 +5138,8 @@ export const FUNCTION_MAPPING: Map<
       name: "OrderDone",
       aliases: "ODone",
       description: {
-         simple:
-            "Retorna a data/hora de execução ou cancelamento de uma ordem.",
-         complex:
-            "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato datetime.",
+         simple: "Retorna a data/hora de execução ou cancelamento de uma ordem.",
+         complex: "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato datetime.",
       },
       parameters: [
          {
@@ -5392,8 +5155,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "datetime" },
          },
          error: {
-            message:
-               "Retorna 0 se a ordem ainda estiver pendente ou não for encontrada.",
+            message: "Retorna 0 se a ordem ainda estiver pendente ou não for encontrada.",
             type: { type: "datetime" },
          },
       },
@@ -5404,8 +5166,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OSetupMsc",
       description: {
          simple: "Retorna a data/hora de criação da ordem em milissegundos.",
-         complex:
-            "Esta função retorna o momento em que a ordem foi criada no formato timestamp em milissegundos desde 01/01/1970.",
+         complex: "Esta função retorna o momento em que a ordem foi criada no formato timestamp em milissegundos desde 01/01/1970.",
       },
       parameters: [
          {
@@ -5431,10 +5192,8 @@ export const FUNCTION_MAPPING: Map<
       name: "OrderDoneMsc",
       aliases: "ODoneMsc",
       description: {
-         simple:
-            "Retorna a data/hora de execução ou cancelamento em milissegundos.",
-         complex:
-            "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato timestamp em milissegundos desde 01/01/1970.",
+         simple: "Retorna a data/hora de execução ou cancelamento em milissegundos.",
+         complex: "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato timestamp em milissegundos desde 01/01/1970.",
       },
       parameters: [
          {
@@ -5450,8 +5209,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "long" },
          },
          error: {
-            message:
-               "Retorna 0 se a ordem ainda estiver pendente ou não for encontrada.",
+            message: "Retorna 0 se a ordem ainda estiver pendente ou não for encontrada.",
             type: { type: "long" },
          },
       },
@@ -5462,8 +5220,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OFilling",
       description: {
          simple: "Retorna a política de preenchimento de uma ordem.",
-         complex:
-            "Esta função retorna o tipo de política de preenchimento (FOK, IOC, etc) conforme enumerador de tipos de preenchimento.",
+         complex: "Esta função retorna o tipo de política de preenchimento (FOK, IOC, etc) conforme enumerador de tipos de preenchimento.",
       },
       parameters: [
          {
@@ -5491,8 +5248,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OT",
       description: {
          simple: "Retorna a data/hora da última modificação da ordem.",
-         complex:
-            "Esta função retorna o momento da última modificação da ordem no formato datetime.",
+         complex: "Esta função retorna o momento da última modificação da ordem no formato datetime.",
       },
       parameters: [
          {
@@ -5519,8 +5275,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OMagic",
       description: {
          simple: "Retorna o número mágico de uma ordem.",
-         complex:
-            "Esta função retorna o número mágico (identificador personalizado do robô) associado a uma ordem.",
+         complex: "Esta função retorna o número mágico (identificador personalizado do robô) associado a uma ordem.",
       },
       parameters: [
          {
@@ -5547,8 +5302,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OReason",
       description: {
          simple: "Retorna o motivo de criação da ordem.",
-         complex:
-            "Esta função retorna o código que indica o motivo pelo qual a ordem foi criada (manual, EA, etc).",
+         complex: "Esta função retorna o código que indica o motivo pelo qual a ordem foi criada (manual, EA, etc).",
       },
       parameters: [
          {
@@ -5560,8 +5314,7 @@ export const FUNCTION_MAPPING: Map<
       examples: ["OrderReason[Ticket[0]]"],
       returns: {
          success: {
-            message:
-               "Retorna o código do motivo de criação. (0: Desktop, 1: Mobile, 2: Web, 3: Expert, 4: Stop Loss, 5: Take Profit, 6: Stop Out) ",
+            message: "Retorna o código do motivo de criação. (0: Desktop, 1: Mobile, 2: Web, 3: Expert, 4: Stop Loss, 5: Take Profit, 6: Stop Out) ",
             type: { type: "int" },
          },
          error: {
@@ -5576,8 +5329,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OId",
       description: {
          simple: "Retorna o ID da ordem no sistema.",
-         complex:
-            "Esta função retorna o identificador único da ordem no sistema de negociação.",
+         complex: "Esta função retorna o identificador único da ordem no sistema de negociação.",
       },
       parameters: [
          {
@@ -5604,8 +5356,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OById",
       description: {
          simple: "Retorna o ticket da ordem pelo ID do sistema.",
-         complex:
-            "Esta função retorna o número do ticket correspondente a um ID de ordem no sistema.",
+         complex: "Esta função retorna o número do ticket correspondente a um ID de ordem no sistema.",
       },
       parameters: [
          {
@@ -5632,8 +5383,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OSymbol",
       description: {
          simple: "Retorna o símbolo do ativo de uma ordem.",
-         complex:
-            "Esta função retorna o símbolo do ativo negociado em uma ordem.",
+         complex: "Esta função retorna o símbolo do ativo negociado em uma ordem.",
       },
       parameters: [
          {
@@ -5660,8 +5410,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "OComment",
       description: {
          simple: "Retorna o comentário associado a uma ordem.",
-         complex:
-            "Esta função retorna o comentário/texto descritivo associado a uma ordem.",
+         complex: "Esta função retorna o comentário/texto descritivo associado a uma ordem.",
       },
       parameters: [
          {
@@ -5689,8 +5438,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DTicket",
       description: {
          simple: "Retorna o ticket de uma posição fechada.",
-         complex:
-            "Esta função retorna o ticket de uma posição fechada usando os parâmetros informados.",
+         complex: "Esta função retorna o ticket de uma posição fechada usando os parâmetros informados.",
       },
       parameters: [
          {
@@ -5731,8 +5479,7 @@ export const FUNCTION_MAPPING: Map<
                typeLink: "/fundamentals/enumerators#market-get",
             },
             name: "profitType",
-            comment:
-               "Tipo de retorno de lucro: 'TYPE_POSITIVE', 'TYPE_NEGATIVE'",
+            comment: "Tipo de retorno de lucro: 'TYPE_POSITIVE', 'TYPE_NEGATIVE'",
             value: "TYPE_ALL",
          },
          {
@@ -5758,8 +5505,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "ulong" },
          },
          error: {
-            message:
-               "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            message: "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
             type: { type: "ulong" },
          },
       },
@@ -5770,8 +5516,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DProfit",
       description: {
          simple: "Retorna o lucro/prejuízo de um negócio.",
-         complex:
-            "Esta função retorna o valor do lucro ou prejuízo (em moeda do ativo) de um negócio específico.",
+         complex: "Esta função retorna o valor do lucro ou prejuízo (em moeda do ativo) de um negócio específico.",
       },
       parameters: [
          {
@@ -5798,8 +5543,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DO",
       description: {
          simple: "Retorna o preço de abertura de um negócio.",
-         complex:
-            "Esta função retorna o preço de abertura de um negócio específico.",
+         complex: "Esta função retorna o preço de abertura de um negócio específico.",
       },
       parameters: [
          {
@@ -5826,8 +5570,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DComm",
       description: {
          simple: "Retorna o valor da comissão de um negócio.",
-         complex:
-            "Esta função retorna o valor da comissão cobrada em um negócio específico.",
+         complex: "Esta função retorna o valor da comissão cobrada em um negócio específico.",
       },
       parameters: [
          {
@@ -5854,8 +5597,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DFee",
       description: {
          simple: "Retorna o valor da taxa de um negócio.",
-         complex:
-            "Esta função retorna o valor da taxa cobrada em um negócio específico.",
+         complex: "Esta função retorna o valor da taxa cobrada em um negócio específico.",
       },
       parameters: [
          {
@@ -5882,8 +5624,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DSL",
       description: {
          simple: "Retorna o preço do stop loss de um negócio.",
-         complex:
-            "Esta função retorna o preço do stop loss definido para um negócio específico.",
+         complex: "Esta função retorna o preço do stop loss definido para um negócio específico.",
       },
       parameters: [
          {
@@ -5910,8 +5651,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DTP",
       description: {
          simple: "Retorna o preço do take profit de um negócio.",
-         complex:
-            "Esta função retorna o preço do take profit definido para um negócio específico.",
+         complex: "Esta função retorna o preço do take profit definido para um negócio específico.",
       },
       parameters: [
          {
@@ -5938,8 +5678,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DSwap",
       description: {
          simple: "Retorna o valor do swap de um negócio.",
-         complex:
-            "Esta função retorna o valor do swap acumulado para um negócio específico.",
+         complex: "Esta função retorna o valor do swap acumulado para um negócio específico.",
       },
       parameters: [
          {
@@ -5966,8 +5705,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DVol",
       description: {
          simple: "Retorna o volume de um negócio.",
-         complex:
-            "Esta função retorna o volume negociado em um negócio específico.",
+         complex: "Esta função retorna o volume negociado em um negócio específico.",
       },
       parameters: [
          {
@@ -5994,8 +5732,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DMagic",
       description: {
          simple: "Retorna o número mágico de um negócio.",
-         complex:
-            "Esta função retorna o identificador mágico (número de referência) associado a um negócio específico.",
+         complex: "Esta função retorna o identificador mágico (número de referência) associado a um negócio específico.",
       },
       parameters: [
          {
@@ -6022,8 +5759,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DReason",
       description: {
          simple: "Retorna o motivo da execução de um negócio.",
-         complex:
-            "Esta função retorna o código que indica o motivo pelo qual o negócio foi executado.",
+         complex: "Esta função retorna o código que indica o motivo pelo qual o negócio foi executado.",
       },
       parameters: [
          {
@@ -6051,8 +5787,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DOrder",
       description: {
          simple: "Retorna o ticket da ordem associada a um negócio.",
-         complex:
-            "Esta função retorna o número do ticket da ordem que gerou o negócio.",
+         complex: "Esta função retorna o número do ticket da ordem que gerou o negócio.",
       },
       parameters: [
          {
@@ -6079,8 +5814,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DId",
       description: {
          simple: "Retorna o ID de um negócio.",
-         complex:
-            "Esta função retorna o identificador único (ID) de um negócio específico.",
+         complex: "Esta função retorna o identificador único (ID) de um negócio específico.",
       },
       parameters: [
          {
@@ -6107,8 +5841,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DEntry",
       description: {
          simple: "Retorna o tipo de entrada de um negócio.",
-         complex:
-            "Esta função retorna um código que indica o tipo de entrada de um negócio.",
+         complex: "Esta função retorna um código que indica o tipo de entrada de um negócio.",
       },
       parameters: [
          {
@@ -6120,8 +5853,7 @@ export const FUNCTION_MAPPING: Map<
       examples: ["DealEntry[Ticket[0]]"],
       returns: {
          success: {
-            message:
-               "Retorna o código do tipo de entrada. (0=Entrada, 1=Saída, 2=Reversão, 3=Fechamento por oposta)",
+            message: "Retorna o código do tipo de entrada. (0=Entrada, 1=Saída, 2=Reversão, 3=Fechamento por oposta)",
             type: { type: "int" },
          },
          error: {
@@ -6136,8 +5868,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DOut",
       description: {
          simple: "Retorna se o negócio é uma saída.",
-         complex:
-            "Esta função indica se o negócio atual representa uma saída no sistema.",
+         complex: "Esta função indica se o negócio atual representa uma saída no sistema.",
       },
       parameters: [
          {
@@ -6153,8 +5884,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna false se o negócio for uma entrada ou se o negócio não for encontrado.",
+            message: "Retorna false se o negócio for uma entrada ou se o negócio não for encontrado.",
             type: { type: "bool" },
          },
       },
@@ -6165,8 +5895,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DIn",
       description: {
          simple: "Retorna se o negócio é uma posição de entrada.",
-         complex:
-            "Esta função indica se o negócio atual representa uma posição de entrada no sistema.",
+         complex: "Esta função indica se o negócio atual representa uma posição de entrada no sistema.",
       },
       parameters: [
          {
@@ -6182,8 +5911,7 @@ export const FUNCTION_MAPPING: Map<
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna false se o negócio for uma saída ou se o negócio não for encontrado.",
+            message: "Retorna false se o negócio for uma saída ou se o negócio não for encontrado.",
             type: { type: "bool" },
          },
       },
@@ -6194,8 +5922,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DT",
       description: {
          simple: "Retorna a data/hora de execução de um negócio.",
-         complex:
-            "Esta função retorna a data e hora (em formato datetime) quando o negócio foi executado.",
+         complex: "Esta função retorna a data e hora (em formato datetime) quando o negócio foi executado.",
       },
       parameters: [
          {
@@ -6221,10 +5948,8 @@ export const FUNCTION_MAPPING: Map<
       name: "DealTimeMsc",
       aliases: "DTMsc",
       description: {
-         simple:
-            "Retorna o tempo de execução de negociações em milissegundos desde 01.01.1970",
-         complex:
-            "Esta função retorna o tempo de execução de negociações em milissegundos desde 01.01.1970",
+         simple: "Retorna o tempo de execução de negociações em milissegundos desde 01.01.1970",
+         complex: "Esta função retorna o tempo de execução de negociações em milissegundos desde 01.01.1970",
       },
       parameters: [
          {
@@ -6236,8 +5961,7 @@ export const FUNCTION_MAPPING: Map<
       examples: ["DealTimeMsc[Ticket[0]]"],
       returns: {
          success: {
-            message:
-               "Retorna a data/hora em milissegundos da execução do negócio.",
+            message: "Retorna a data/hora em milissegundos da execução do negócio.",
             type: { type: "long" },
          },
          error: {
@@ -6280,8 +6004,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DComment",
       description: {
          simple: "Retorna o comentário associado a um negócio.",
-         complex:
-            "Esta função retorna o comentário/texto descritivo associado a um negócio específico.",
+         complex: "Esta função retorna o comentário/texto descritivo associado a um negócio específico.",
       },
       parameters: [
          {
@@ -6308,8 +6031,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DExternal",
       description: {
          simple: "Retorna o ID externo de um negócio.",
-         complex:
-            "Esta função retorna identificador de negócios em um sistema de negociação externo (na troca).",
+         complex: "Esta função retorna identificador de negócios em um sistema de negociação externo (na troca).",
       },
       parameters: [
          {
@@ -6336,8 +6058,7 @@ export const FUNCTION_MAPPING: Map<
       aliases: "DSymbol",
       description: {
          simple: "Retorna o símbolo de um negócio.",
-         complex:
-            "Esta função retorna o nome do símbolo no qual o negócio foi executado.",
+         complex: "Esta função retorna o nome do símbolo no qual o negócio foi executado.",
       },
       parameters: [
          {
@@ -6731,18 +6452,14 @@ export const FUNCTION_MAPPING: Map<
             comment: "Número do ticket que identifica a posição a ser fechada.",
          },
       ],
-      examples: [
-         "PosClose[PosTicket[0]] // Fecha completamente a ultima posição aberta",
-      ],
+      examples: ["PosClose[PosTicket[0]] // Fecha completamente a ultima posição aberta"],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a posição for fechada com sucesso.",
+            message: "Retorna verdadeiro (true) se a posição for fechada com sucesso.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a posição não for encontrada ou não puder ser fechada.",
+            message: "Retorna falso (false) se a posição não for encontrada ou não puder ser fechada.",
             type: { type: "bool" },
          },
       },
@@ -6753,15 +6470,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Fecha parcialmente uma posição aberta.",
-         complex:
-            "Esta função fecha parcialmente uma posição aberta no mercado, reduzindo seu volume pelo valor especificado.",
+         complex: "Esta função fecha parcialmente uma posição aberta no mercado, reduzindo seu volume pelo valor especificado.",
       },
       parameters: [
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a posição a ser parcialmente fechada.",
+            comment: "Número do ticket que identifica a posição a ser parcialmente fechada.",
          },
          {
             type: { type: "double" },
@@ -6769,18 +6484,14 @@ export const FUNCTION_MAPPING: Map<
             comment: "Volume/lote a ser fechado.",
          },
       ],
-      examples: [
-         "PosClosePartial[PosTicket[0], 0.5] // Fecha 0.5 lotes da ultima posição aberta",
-      ],
+      examples: ["PosClosePartial[PosTicket[0], 0.5] // Fecha 0.5 lotes da ultima posição aberta"],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a posição for parcialmente fechada com sucesso.",
+            message: "Retorna verdadeiro (true) se a posição for parcialmente fechada com sucesso.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a posição não for encontrada, o volume for inválido ou não puder ser fechada.",
+            message: "Retorna falso (false) se a posição não for encontrada, o volume for inválido ou não puder ser fechada.",
             type: { type: "bool" },
          },
       },
@@ -6791,29 +6502,23 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Cancela uma ordem pendente.",
-         complex:
-            "Esta função cancela uma ordem pendente (limit/stop) identificada pelo seu ticket.",
+         complex: "Esta função cancela uma ordem pendente (limit/stop) identificada pelo seu ticket.",
       },
       parameters: [
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a ordem pendente a ser cancelada.",
+            comment: "Número do ticket que identifica a ordem pendente a ser cancelada.",
          },
       ],
-      examples: [
-         "OrderClose[OrderTicket[0]] // Cancela a ultima ordem pendente",
-      ],
+      examples: ["OrderClose[OrderTicket[0]] // Cancela a ultima ordem pendente"],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a ordem for cancelada com sucesso.",
+            message: "Retorna verdadeiro (true) se a ordem for cancelada com sucesso.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a ordem não for encontrada ou não puder ser cancelada.",
+            message: "Retorna falso (false) se a ordem não for encontrada ou não puder ser cancelada.",
             type: { type: "bool" },
          },
       },
@@ -6824,15 +6529,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Fecha todas as posições abertas.",
-         complex:
-            "Esta função fecha todas as posições abertas no mercado, podendo ser filtradas por símbolo.",
+         complex: "Esta função fecha todas as posições abertas no mercado, podendo ser filtradas por símbolo.",
       },
       parameters: [
          {
             type: { type: "string" },
             name: "symbol",
-            comment:
-               "Símbolo do ativo (opcional - vazio fecha todas as posições do ativo atual).",
+            comment: "Símbolo do ativo (opcional - vazio fecha todas as posições do ativo atual).",
             value: "REAL",
          },
       ],
@@ -6857,15 +6560,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Fecha todas as posições de compra abertas.",
-         complex:
-            "Esta função fecha todas as posições de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo.",
+         complex: "Esta função fecha todas as posições de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo.",
       },
       parameters: [
          {
             type: { type: "string" },
             name: "symbol",
-            comment:
-               "Símbolo do ativo (opcional - vazio fecha todas as posições de compra do ativo atual).",
+            comment: "Símbolo do ativo (opcional - vazio fecha todas as posições de compra do ativo atual).",
             value: "REAL",
          },
       ],
@@ -6875,8 +6576,7 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna o número de posições de compra fechadas com sucesso.",
+            message: "Retorna o número de posições de compra fechadas com sucesso.",
             type: { type: "int" },
          },
          error: {
@@ -6891,15 +6591,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Fecha todas as posições de venda abertas.",
-         complex:
-            "Esta função fecha todas as posições de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo.",
+         complex: "Esta função fecha todas as posições de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo.",
       },
       parameters: [
          {
             type: { type: "string" },
             name: "symbol",
-            comment:
-               "Símbolo do ativo (opcional - vazio fecha todas as posições de venda do ativo atual).",
+            comment: "Símbolo do ativo (opcional - vazio fecha todas as posições de venda do ativo atual).",
             value: "REAL",
          },
       ],
@@ -6909,8 +6607,7 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna o número de posições de venda fechadas com sucesso.",
+            message: "Retorna o número de posições de venda fechadas com sucesso.",
             type: { type: "int" },
          },
          error: {
@@ -6924,8 +6621,7 @@ export const FUNCTION_MAPPING: Map<
       name: "PosModify",
       aliases: "",
       description: {
-         simple:
-            "Modifica os níveis de take profit e stop loss de uma posição aberta.",
+         simple: "Modifica os níveis de take profit e stop loss de uma posição aberta.",
          complex:
             "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
       },
@@ -6933,8 +6629,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a posição a ser modificada.",
+            comment: "Número do ticket que identifica a posição a ser modificada.",
          },
          {
             type: {
@@ -6963,13 +6658,11 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },
@@ -6980,15 +6673,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Modifica apenas o take profit de uma posição aberta.",
-         complex:
-            "Esta função permite alterar somente o nível de take profit de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
+         complex: "Esta função permite alterar somente o nível de take profit de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a posição a ser modificada.",
+            comment: "Número do ticket que identifica a posição a ser modificada.",
          },
          {
             type: {
@@ -7011,13 +6702,11 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },
@@ -7028,15 +6717,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Modifica apenas o stop loss de uma posição aberta.",
-         complex:
-            "Esta função permite alterar somente o nível de stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
+         complex: "Esta função permite alterar somente o nível de stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a posição a ser modificada.",
+            comment: "Número do ticket que identifica a posição a ser modificada.",
          },
          {
             type: {
@@ -7059,13 +6746,11 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },
@@ -7075,8 +6760,7 @@ export const FUNCTION_MAPPING: Map<
       name: "OrderModify",
       aliases: "",
       description: {
-         simple:
-            "Modifica os níveis de take profit e stop loss de uma ordem aberta.",
+         simple: "Modifica os níveis de take profit e stop loss de uma ordem aberta.",
          complex:
             "Esta função permite alterar os níveis de take profit e/ou stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
@@ -7084,8 +6768,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a ordem a ser modificada.",
+            comment: "Número do ticket que identifica a ordem a ser modificada.",
          },
          {
             type: {
@@ -7120,13 +6803,11 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },
@@ -7137,15 +6818,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Modifica apenas o take profit de uma ordem aberta.",
-         complex:
-            "Esta função permite alterar somente o nível de take profit de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         complex: "Esta função permite alterar somente o nível de take profit de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a ordem a ser modificada.",
+            comment: "Número do ticket que identifica a ordem a ser modificada.",
          },
          {
             type: {
@@ -7168,13 +6847,11 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },
@@ -7185,15 +6862,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Modifica apenas o stop loss de uma ordem aberta.",
-         complex:
-            "Esta função permite alterar somente o nível de stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         complex: "Esta função permite alterar somente o nível de stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a ordem a ser modificada.",
+            comment: "Número do ticket que identifica a ordem a ser modificada.",
          },
          {
             type: {
@@ -7216,13 +6891,11 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },
@@ -7233,15 +6906,13 @@ export const FUNCTION_MAPPING: Map<
       aliases: "",
       description: {
          simple: "Modifica apenas o preço de uma ordem aberta.",
-         complex:
-            "Esta função permite alterar somente o preço de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         complex: "Esta função permite alterar somente o preço de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a ordem a ser modificada.",
+            comment: "Número do ticket que identifica a ordem a ser modificada.",
          },
          {
             type: { type: "double" },
@@ -7249,18 +6920,14 @@ export const FUNCTION_MAPPING: Map<
             comment: "Valor do novo preço.",
          },
       ],
-      examples: [
-         "OrderModifyPrice[123456, 1.11500] // Altera preço para 1.11500",
-      ],
+      examples: ["OrderModifyPrice[123456, 1.11500] // Altera preço para 1.11500"],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },
@@ -7270,8 +6937,7 @@ export const FUNCTION_MAPPING: Map<
       name: "Modify",
       aliases: "",
       description: {
-         simple:
-            "Modifica os níveis de take profit e stop loss de uma posição ou ordem aberta.",
+         simple: "Modifica os níveis de take profit e stop loss de uma posição ou ordem aberta.",
          complex:
             "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
@@ -7279,8 +6945,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a posição a ser modificada.",
+            comment: "Número do ticket que identifica a posição a ser modificada.",
          },
          {
             type: {
@@ -7309,13 +6974,11 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },
@@ -7325,8 +6988,7 @@ export const FUNCTION_MAPPING: Map<
       name: "ModifyTake",
       aliases: "",
       description: {
-         simple:
-            "Modifica apenas o take profit de uma posição ou ordem aberta.",
+         simple: "Modifica apenas o take profit de uma posição ou ordem aberta.",
          complex:
             "Esta função permite alterar somente o nível de take profit de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
@@ -7334,8 +6996,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a posição a ser modificada.",
+            comment: "Número do ticket que identifica a posição a ser modificada.",
          },
          {
             type: {
@@ -7358,13 +7019,11 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },
@@ -7382,8 +7041,7 @@ export const FUNCTION_MAPPING: Map<
          {
             type: { type: "ulong" },
             name: "ticket",
-            comment:
-               "Número do ticket que identifica a posição a ser modificada.",
+            comment: "Número do ticket que identifica a posição a ser modificada.",
          },
          {
             type: {
@@ -7406,13 +7064,11 @@ export const FUNCTION_MAPPING: Map<
       ],
       returns: {
          success: {
-            message:
-               "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
             type: { type: "bool" },
          },
          error: {
-            message:
-               "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            message: "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
             type: { type: "bool" },
          },
       },

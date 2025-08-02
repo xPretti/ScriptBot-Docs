@@ -2,7 +2,7 @@
    display: flex;
    flex-direction: row;
    align-items: center;
-   gap: 0.5em;
+   gap: 0.5rem;
    margin-top: 0;
    width: auto !important;
    max-width: auto;
@@ -58,28 +58,20 @@
    padding: 0 5px;
    border-radius: 5px;
    font-size: 12px;
-   width: 75px;
-   min-width: 75px;
+   width: 80px;
+   min-width: 80px;
    height: 22px;
    text-wrap: nowrap;
 }
 
 .required {
    color: var(--sl-color-function-required);
-   background-color: color-mix(
-      in srgb,
-      var(--sl-color-function-required) 10%,
-      transparent 100%
-   );
+   background-color: color-mix(in srgb, var(--sl-color-function-required) 10%, transparent 100%);
    border: 1px solid var(--sl-color-function-required);
 }
 
 .optional {
    color: var(--sl-color-function-optional);
-   background-color: color-mix(
-      in srgb,
-      var(--sl-color-function-optional) 10%,
-      transparent 100%
-   );
+   background-color: color-mix(in srgb, var(--sl-color-function-optional) 10%, transparent 100%);
    border: 1px solid var(--sl-color-function-optional);
 }

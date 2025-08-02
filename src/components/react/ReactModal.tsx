@@ -13,8 +13,6 @@ export default function ReactModal({ isOpen, onClose, children }: Props) {
    useEffect(() => {
       if (isOpen) {
          document.body.style.overflow = "hidden";
-      } else {
-         document.body.style.overflow = "";
       }
       return () => {
          document.body.style.overflow = "";
@@ -32,8 +30,8 @@ export default function ReactModal({ isOpen, onClose, children }: Props) {
    return createPortal(
       <div className={styles.container} onClick={handleClickClose}>
          <div className={styles.backdrop}>
-            <div className={styles.wrapper} onClick={handleClickClose}>
-               <div className={styles.content}>{children}</div>
+            <div className={styles.content} onClick={handleClickClose}>
+               {children}
             </div>
          </div>
       </div>,

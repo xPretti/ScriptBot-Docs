@@ -2,19 +2,20 @@
    display: flex;
    flex-direction: column;
    width: 100%;
+   max-height: 100%;
    border-radius: 8px;
    background-color: var(--sl-color-modal-bg);
    border: 1px solid var(--sl-color-modal-border);
-   gap: 2em;
    overflow: hidden;
 }
 
 .header {
    display: flex;
+   width: 100%;
    flex-direction: column;
-   gap: 0.5em;
+   gap: 0.5rem;
    border-bottom: 1px solid var(--sl-color-modal-header-shadow);
-   padding: 10px 20px 0 20px;
+   padding: 10px 20px;
    background-color: var(--sl-color-modal-header);
 }
 
@@ -51,24 +52,50 @@
    color: var(--sl-color-accent-high);
 }
 
+.body {
+   display: flex;
+   padding: 20px;
+   overflow: hidden;
+}
+
 .content {
    display: flex;
    flex-direction: column;
-   gap: 2em;
-   padding: 0 20px 20px 20px;
+   gap: 2rem;
+   width: 100%;
+   overflow-y: scroll;
+   padding-right: 1.5rem;
+}
+
+.content::-webkit-scrollbar {
+   width: 7px;
+}
+
+.content::-webkit-scrollbar-track {
+   background: var(--sl-color-gray-6);
+   border-radius: 3px;
+}
+
+/* Barra que se move */
+.content::-webkit-scrollbar-thumb {
+   background-color: var(--sl-color-gray-4);
+   border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-button {
+   display: none;
 }
 
 .descriptionContainer {
    display: flex;
    align-items: center;
    border-radius: 5px;
-   padding-bottom: 1rem;
 }
 
 .titleContent {
    display: flex;
    flex-direction: column;
-   gap: 0.25em;
+   gap: 0.25rem;
 }
 
 .examplesTypes {
@@ -77,11 +104,7 @@
    padding: 10px;
    border-radius: 5px;
    border: 1px solid var(--sl-color-function-description);
-   background-color: color-mix(
-      in srgb,
-      var(--sl-color-function-description) 50%,
-      transparent 100%
-   );
+   background-color: color-mix(in srgb, var(--sl-color-function-description) 50%, transparent 100%);
 }
 
 .examplesTypes ol {
@@ -90,21 +113,21 @@
 }
 
 .examplesTypes ol li::marker {
-   /* color: var(--sl-color-function-type); */
    font-weight: bold;
 }
 
 .returnsTypes {
    display: flex;
    flex-direction: column;
-   gap: 0.5em;
+   gap: 0.5rem;
 }
 
 .footer {
    display: flex;
+   width: 100%;
    align-items: center;
    justify-content: flex-end;
-   padding: 20px 20px 20px 20px;
+   padding: 20px;
    border-top: 1px solid var(--sl-color-modal-header-shadow);
    background-color: var(--sl-color-modal-header);
    gap: 0.8rem;
@@ -114,7 +137,7 @@
    color: var(--sl-color-gray-1);
    background-color: var(--sl-color-gray-5);
    cursor: pointer;
-   padding: 2px 15px 2px 15px;
+   padding: 2px 15px;
    border-radius: 5px;
    text-decoration: none;
    font-weight: 500;
@@ -129,6 +152,6 @@
    .paramsTypes {
       display: flex;
       flex-direction: column;
-      gap: 0.5em;
+      gap: 0.5rem;
    }
 }
