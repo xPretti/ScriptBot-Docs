@@ -1,4 +1,4 @@
-import styles from "./ReactFunctionParam.module.css";
+import styles from "./ReactFnParam.module.css";
 
 interface Props {
    type: string;
@@ -8,7 +8,7 @@ interface Props {
    typeLink?: string;
 }
 
-export default function ReactFunctionParam({ type, name, comment, value, typeLink = "/fundamentals/types" }: Props) {
+export default function ReactFnParam({ type, name, comment, value, typeLink = "/fundamentals/types" }: Props) {
    return (
       <div className={styles.param}>
          {value ? <p className={styles.optional}>Optional</p> : <p className={styles.required}>Obrigatório</p>}

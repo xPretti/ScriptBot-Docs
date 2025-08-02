@@ -1,4 +1,4 @@
-import styles from "./ReactFunctionReturn.module.css";
+import styles from "./ReactFnReturn.module.css";
 
 interface Props {
    title: string;
@@ -7,12 +7,7 @@ interface Props {
    typeLink?: string;
 }
 
-export default function ReactFunctionReturn({
-   title,
-   message,
-   type,
-   typeLink = "/fundamentals/types",
-}: Props) {
+export default function ReactFnReturn({ title, message, type, typeLink = "/fundamentals/types" }: Props) {
    if (!message) return null;
 
    return (

@@ -1,8 +1,6 @@
 ---
 import { buildFunctionsSidebar } from "@src/utils/functions-sidebar-utils";
-export const { sidebarGroups, pages } = buildFunctionsSidebar(
-   "/placeholders/functions/types/"
-);
+export const { sidebarGroups, pages } = buildFunctionsSidebar("/placeholders/functions/types/");
 
 export async function getStaticPaths() {
    return pages.map((page) => ({
@@ -20,7 +18,7 @@ const { category, types } = Astro.params;
 const { desc } = Astro.props;
 
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
-import ReactFunctionPage from "@src/components/react/ReactFunctionPage";
+import ReactFnPage from "@src/components/react/functions/ReactFnPage";
 ---
 
 <StarlightPage
@@ -32,5 +30,5 @@ import ReactFunctionPage from "@src/components/react/ReactFunctionPage";
       },
    ]}
 >
-   <ReactFunctionPage fnCategory={category} fnName={types} />
+   <ReactFnPage fnCategory={category} fnName={types} />
 </StarlightPage>

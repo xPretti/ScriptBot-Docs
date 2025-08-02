@@ -2,105 +2,105 @@
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import CodeVar from "@components/CodeVar.astro";
 import { Icon } from "@astrojs/starlight/components";
-import ReactFunctionModal from "./react/ReactFunctionModal";
+import ReactFnModal from "./react/functions/ReactFnModal";
 
 const { category } = Astro.props;
 
 const elements = FUNCTION_MAPPING.get(category) && Array.from(FUNCTION_MAPPING.get(category)!.values());
 
 const containsAliases =
-  elements &&
-  elements.find((fn) => {
-    return fn.aliases;
-  });
+   elements &&
+   elements.find((fn) => {
+      return fn.aliases;
+   });
 ---
 
 {
-  elements && (
-    <table>
-      <thead>
-        <tr>
-          <th>FUNÇÕES</th>
-          {containsAliases && <th class="aliases">ALIASES</th>}
-          <th>RETORNOS</th>
-        </tr>
-      </thead>
-      <tbody>
-        {elements.map((fn) => (
-          <tr>
-            <td>
-              <div class="name-container">
-                {fn.aliases && (
-                  <div class="aliases-mobile">
-                    <CodeVar>{fn.aliases}</CodeVar>
-                  </div>
-                )}
-                <CodeVar>{fn.name}</CodeVar>
-              </div>
-            </td>
-            {containsAliases && <td class="aliases">{fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}</td>}
-            <td>
-              <ReactFunctionModal client:visible fnCategory={fn.category} fnName={fn.name}>
-                <div class="description">
-                  <p class="text">{fn.description.simple}</p>
-                  <Icon class="redirect-icon" name="open-book" size="1.5rem" />
-                </div>
-              </ReactFunctionModal>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  )
+   elements && (
+      <table>
+         <thead>
+            <tr>
+               <th>FUNÇÕES</th>
+               {containsAliases && <th class="aliases">ALIASES</th>}
+               <th>RETORNOS</th>
+            </tr>
+         </thead>
+         <tbody>
+            {elements.map((fn) => (
+               <tr>
+                  <td>
+                     <div class="name-container">
+                        {fn.aliases && (
+                           <div class="aliases-mobile">
+                              <CodeVar>{fn.aliases}</CodeVar>
+                           </div>
+                        )}
+                        <CodeVar>{fn.name}</CodeVar>
+                     </div>
+                  </td>
+                  {containsAliases && <td class="aliases">{fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}</td>}
+                  <td>
+                     <ReactFnModal client:visible fnCategory={fn.category} fnName={fn.name}>
+                        <div class="description">
+                           <p class="text">{fn.description.simple}</p>
+                           <Icon class="redirect-icon" name="open-book" size="1.5rem" />
+                        </div>
+                     </ReactFnModal>
+                  </td>
+               </tr>
+            ))}
+         </tbody>
+      </table>
+   )
 }
 
 <!-- Estilos -->
 <style>
-  td {
-    height: 3rem;
-    vertical-align: middle;
-  }
-  p,
-  svg {
-    margin: 0;
-    padding: 0;
-  }
-  .description {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    align-items: center;
-  }
+   td {
+      height: 3rem;
+      vertical-align: middle;
+   }
+   p,
+   svg {
+      margin: 0;
+      padding: 0;
+   }
+   .description {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      align-items: center;
+   }
 
-  .redirect-icon {
-    display: inline-block;
-    opacity: 0.1;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    right: 10px;
-  }
+   .redirect-icon {
+      display: inline-block;
+      opacity: 0.1;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 10px;
+   }
 
-  .aliases-mobile {
-    display: none;
-  }
-  @media (max-width: 950px) {
-    .aliases {
+   .aliases-mobile {
       display: none;
-    }
-    .aliases-mobile {
-      display: block;
-    }
-  }
+   }
+   @media (max-width: 950px) {
+      .aliases {
+         display: none;
+      }
+      .aliases-mobile {
+         display: block;
+      }
+   }
 
-  @media (pointer: fine) {
-    .description:hover .text,
-    .description:hover .redirect-icon {
-      color: var(--sl-color-accent-high);
-      opacity: 1;
-      transition: opacity 0.2s ease-in-out;
-      cursor: pointer;
-    }
-  }
+   @media (pointer: fine) {
+      .description:hover .text,
+      .description:hover .redirect-icon {
+         color: var(--sl-color-accent-high);
+         opacity: 1;
+         transition: opacity 0.2s ease-in-out;
+         cursor: pointer;
+      }
+   }
 </style>

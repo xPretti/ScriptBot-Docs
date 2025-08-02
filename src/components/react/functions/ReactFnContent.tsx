@@ -1,10 +1,10 @@
 import styles from "./ReactFnContent.module.css";
 
-import ReactFunctionParam from "./ReactFunctionParam";
-import ReactFunctionReturn from "./ReactFunctionReturn";
+import ReactFnParam from "./ReactFnParam";
+import ReactFnReturn from "./ReactFnReturn";
 import type { FunctionPlaceholderInterface } from "@src/interfaces/placeholder-interface";
 import { getFunctionExample } from "@src/utils/functions-comp-utils";
-import ReactCode from "./ReactCode";
+import ReactCode from "../ReactCode";
 
 export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterface }) {
    if (!fn) return null;
@@ -31,7 +31,7 @@ export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterfac
                {fn.parameters.length > 0 ? (
                   <div className={styles.paramsTypes}>
                      {fn.parameters.map((param, index) => (
-                        <ReactFunctionParam
+                        <ReactFnParam
                            key={index}
                            type={param.type.type}
                            name={param.name}
@@ -54,13 +54,13 @@ export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterfac
                   <h3>Retornos</h3>
                   {fn.returns.error || fn.returns.success ? (
                      <div className={styles.returnsTypes}>
-                        <ReactFunctionReturn
+                        <ReactFnReturn
                            title="Em caso de sucesso:"
                            message={fn.returns.success?.message}
                            type={fn.returns.success?.type.type}
                            typeLink={fn.returns.success?.type.typeLink}
                         />
-                        <ReactFunctionReturn
+                        <ReactFnReturn
                            title="Em caso de erro:"
                            message={fn.returns.error?.message}
                            type={fn.returns.error?.type.type}
@@ -68,7 +68,7 @@ export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterfac
                         />
                      </div>
                   ) : (
-                     <ReactFunctionReturn
+                     <ReactFnReturn
                         title="Em caso de sucesso ou erro:"
                         message="Esta função executa uma ação, mas não retorna nenhum valor ao ser executada."
                         type="void"

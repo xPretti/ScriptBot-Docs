@@ -134,8 +134,9 @@
 }
 
 .redirectBtn {
-   color: var(--sl-color-gray-1);
-   background-color: var(--sl-color-gray-5);
+   /* color: var(--sl-color-gray-1); */
+   color: #ffffff;
+   background-color: var(--sl-color-gray-4);
    cursor: pointer;
    padding: 2px 15px;
    border-radius: 5px;

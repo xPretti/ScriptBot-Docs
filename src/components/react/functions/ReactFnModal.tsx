@@ -1,22 +1,14 @@
 import { useState } from "react";
-import ReactModal from "./ReactModal";
+import ReactModal from "../ReactModal";
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
-import styles from "./ReactFunctionModal.module.css";
+import styles from "./ReactFnModal.module.css";
 
 import { X } from "lucide-react";
 import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
 import ReactFnContent from "./ReactFnContent";
 
-export default function ReactFunctionModal({
-   fnCategory,
-   fnName,
-   children,
-}: {
-   fnCategory: ENUM_FUNCTION_CATEGORY_TYPE;
-   fnName: string;
-   children: React.ReactNode;
-}) {
+export default function ReactFnModal({ fnCategory, fnName, children }: { fnCategory: ENUM_FUNCTION_CATEGORY_TYPE; fnName: string; children: React.ReactNode }) {
    const [isOpen, setIsOpen] = useState(false);
 
    const fn = FUNCTION_MAPPING.get(fnCategory)?.get(fnName);
