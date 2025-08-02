@@ -9,17 +9,6 @@
    cursor: pointer;
 }
 
-.close {
-   color: var(--sl-color-gray-2);
-   cursor: pointer;
-   width: 32px;
-   height: 32px;
-}
-
-.close:hover {
-   color: var(--sl-color-accent-high);
-}
-
 .content {
    display: flex;
    flex-direction: column;
