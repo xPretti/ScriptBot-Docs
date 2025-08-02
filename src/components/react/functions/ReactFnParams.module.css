@@ -12,7 +12,7 @@
 
 .param a:hover {
    text-decoration: underline;
-   text-decoration-color: var(--sl-color-function-type);
+   text-decoration-color: var(--my-color-function-type);
 }
 
 .param td {
@@ -27,7 +27,7 @@
 
 .type {
    font-weight: bold;
-   color: var(--sl-color-function-type);
+   color: var(--my-color-function-type);
 }
 
 .text {
@@ -39,7 +39,7 @@
 }
 
 .comment p {
-   color: var(--sl-color-function-comment);
+   color: var(--my-color-function-comment);
    overflow: hidden;
 }
 
@@ -49,5 +49,5 @@
 
 .value {
    text-wrap: nowrap;
-   color: var(--sl-color-function-value);
+   color: var(--my-color-function-value);
 }

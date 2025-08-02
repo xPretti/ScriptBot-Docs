@@ -21,28 +21,23 @@
    --sl-content-width: 55rem;
 
    /* My colors */
-   --sl-color-row-hover: #ececec;
-   --sl-color-function-description: #eeeeee;
-   --sl-color-function-type: #515bee;
-   --sl-color-function-comment: #69a170;
-   --sl-color-function-value: #51b4ee;
-   --sl-color-function-required: #ee5151;
-   --sl-color-function-optional: #51b4ee;
-
-   --sl-color-modal-header: #f8f8f8;
-   --sl-color-modal-header-shadow: var(--sl-color-gray-5);
-   --sl-color-modal-bg: #ffffff;
-   --sl-color-modal-border: #a7a7a7;
-
-   --sl-color-mermaid-bg: #e6e6e6;
-
-   --sl-color-preview-title: #333333;
-
-   --sl-color-img-frame-border: #c0c0c0;
-
-   --sl-color-scrollbar-bg: #f5f5f5;
-   --sl-color-scrollbar-thumb: #cacaca;
-   --sl-color-scrollbar-thumb-hover: #979797;
+   --my-color-row-hover: #ececec;
+   --my-color-function-description: #eeeeee;
+   --my-color-function-type: #515bee;
+   --my-color-function-comment: #69a170;
+   --my-color-function-value: #51b4ee;
+   --my-color-function-required: #ee5151;
+   --my-color-function-optional: #51b4ee;
+   --my-color-modal-header: #f8f8f8;
+   --my-color-modal-header-shadow: var(--sl-color-gray-5);
+   --my-color-modal-bg: #ffffff;
+   --my-color-modal-border: #a7a7a7;
+   --my-color-mermaid-bg: #e6e6e6;
+   --my-color-preview-title: #333333;
+   --my-color-img-frame-border: #c0c0c0;
+   --my-color-scrollbar-bg: #f5f5f5;
+   --my-color-scrollbar-thumb: #cacaca;
+   --my-color-scrollbar-thumb-hover: #979797;
 }
 
 /* Light mode colors. */
@@ -60,21 +55,18 @@
    --sl-color-black: #191919;
 
    /* My colors */
-   --sl-color-function-description: #252525;
-   --sl-color-row-hover: #252525;
-   --sl-color-modal-header: #252525;
-   --sl-color-modal-header-shadow: var(--sl-color-gray-5);
-   --sl-color-modal-bg: #191919;
-   --sl-color-modal-border: var(--sl-color-gray-5);
-   --sl-color-mermaid-bg: #2e2e2e;
-
-   --sl-color-img-frame-border: #131313;
-
-   --sl-color-preview-title: #dadada;
-
-   --sl-color-scrollbar-bg: #2b2b2b;
-   --sl-color-scrollbar-thumb: #414141;
-   --sl-color-scrollbar-thumb-hover: #4e4e4e;
+   --my-color-function-description: #252525;
+   --my-color-row-hover: #252525;
+   --my-color-modal-header: #252525;
+   --my-color-modal-header-shadow: var(--sl-color-gray-5);
+   --my-color-modal-bg: #191919;
+   --my-color-modal-border: var(--sl-color-gray-5);
+   --my-color-mermaid-bg: #2e2e2e;
+   --my-color-img-frame-border: #131313;
+   --my-color-preview-title: #dadada;
+   --my-color-scrollbar-bg: #2b2b2b;
+   --my-color-scrollbar-thumb: #414141;
+   --my-color-scrollbar-thumb-hover: #4e4e4e;
 
    /* code highlighting */
    --code-text-color: #f1f1f1ff;
@@ -116,14 +108,7 @@
    -webkit-tap-highlight-color: transparent;
 }
 
-/* remover esses css de vars, usar o component */
-.variable-abbr,
-.variable {
-   text-wrap: nowrap;
-   border-radius: 2px;
-   padding: 0.3rem 0.8rem;
-}
-
+/* Customização das tabelas */
 th {
    padding: 8px;
 }
@@ -149,10 +134,27 @@ td:last-child {
    width: 100%;
 }
 
-/* tr:hover > td {
-   background-color: var(--sl-color-row-hover);
-} */
+/* Customização da barra de rolagem */
+::-webkit-scrollbar {
+   width: 8px;
+}
 
+::-webkit-scrollbar-track {
+   background: var(--my-color-scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--my-color-scrollbar-thumb);
+   /* border-radius: 5px; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: var(--my-color-scrollbar-thumb-hover);
+}
+
+/* 
+ * STARLIGHT
+*/
 .pagination-links a {
    box-shadow: none;
 }
@@ -185,7 +187,9 @@ td:last-child {
    border-radius: 10px;
 }
 
-/* mermaid */
+/* 
+ * MERMAID
+ */
 .mermaid {
    background-color: transparent !important;
 }
@@ -199,23 +203,5 @@ td:last-child {
    padding: 0 10px !important;
    border-radius: 15px;
    overflow: hidden;
-   background-color: var(--sl-color-mermaid-bg) !important;
-}
-
-/* scrollbar */
-::-webkit-scrollbar {
-   width: 8px;
-}
-
-::-webkit-scrollbar-track {
-   background: var(--sl-color-scrollbar-bg);
-}
-
-::-webkit-scrollbar-thumb {
-   background: var(--sl-color-scrollbar-thumb);
-   /* border-radius: 5px; */
-}
-
-::-webkit-scrollbar-thumb:hover {
-   background: var(--sl-color-scrollbar-thumb-hover);
+   background-color: var(--my-color-mermaid-bg) !important;
 }

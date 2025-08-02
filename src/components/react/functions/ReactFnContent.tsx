@@ -17,6 +17,7 @@ export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterfac
       if (fn.examples.length > 0) {
          result += `\n\n//Other examples\n${fn.examples.join("\n")}`;
       }
+
       return result;
    };
 

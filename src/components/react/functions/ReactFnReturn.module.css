@@ -9,23 +9,19 @@
    flex-direction: column;
    border-radius: 5px;
    overflow: hidden;
-   border: 1px solid var(--sl-color-function-description);
+   border: 1px solid var(--my-color-function-description);
 }
 
 .value {
-   background-color: color-mix(
-      in srgb,
-      var(--sl-color-function-description) 50%,
-      transparent 100%
-   );
+   background-color: color-mix(in srgb, var(--my-color-function-description) 50%, transparent 100%);
    padding: 10px;
-   color: var(--sl-color-function-return);
+   color: var(--my-color-function-return);
 }
 
 .title {
    display: flex;
    gap: 0.5em;
-   background-color: var(--sl-color-function-description);
+   background-color: var(--my-color-function-description);
    padding: 2px 5px 2px 10px;
    width: 100%;
    text-align: center;
@@ -45,7 +41,7 @@
 
 .returnContainer a:hover {
    text-decoration: underline;
-   text-decoration-color: var(--sl-color-function-type);
+   text-decoration-color: var(--my-color-function-type);
 }
 
 .typeContainer {
@@ -56,5 +52,5 @@
 
 .type {
    font-weight: bold;
-   color: var(--sl-color-function-type);
+   color: var(--my-color-function-type);
 }

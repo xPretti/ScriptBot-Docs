@@ -33,8 +33,8 @@
    flex-direction: column;
    padding: 10px;
    border-radius: 5px;
-   border: 1px solid var(--sl-color-function-description);
-   background-color: color-mix(in srgb, var(--sl-color-function-description) 50%, transparent 100%);
+   border: 1px solid var(--my-color-function-description);
+   background-color: color-mix(in srgb, var(--my-color-function-description) 50%, transparent 100%);
 }
 
 .examplesTypes ol {
@@ -43,7 +43,7 @@
 }
 
 .examplesTypes ol li::marker {
-   /* color: var(--sl-color-function-type); */
+   /* color: var(--my-color-function-type); */
    font-weight: bold;
 }
 

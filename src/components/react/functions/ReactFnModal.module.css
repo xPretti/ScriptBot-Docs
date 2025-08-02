@@ -4,8 +4,8 @@
    width: 100%;
    max-height: 100%;
    border-radius: 8px;
-   background-color: var(--sl-color-modal-bg);
-   border: 1px solid var(--sl-color-modal-border);
+   background-color: var(--my-color-modal-bg);
+   border: 1px solid var(--my-color-modal-border);
    overflow: hidden;
 }
 
@@ -14,9 +14,9 @@
    width: 100%;
    flex-direction: column;
    gap: 0.5rem;
-   border-bottom: 1px solid var(--sl-color-modal-header-shadow);
+   border-bottom: 1px solid var(--my-color-modal-header-shadow);
    padding: 10px 20px;
-   background-color: var(--sl-color-modal-header);
+   background-color: var(--my-color-modal-header);
 }
 
 .headerTop {
@@ -103,8 +103,8 @@
    flex-direction: column;
    padding: 10px;
    border-radius: 5px;
-   border: 1px solid var(--sl-color-function-description);
-   background-color: color-mix(in srgb, var(--sl-color-function-description) 50%, transparent 100%);
+   border: 1px solid var(--my-color-function-description);
+   background-color: color-mix(in srgb, var(--my-color-function-description) 50%, transparent 100%);
 }
 
 .examplesTypes ol {
@@ -128,8 +128,8 @@
    align-items: center;
    justify-content: flex-end;
    padding: 20px;
-   border-top: 1px solid var(--sl-color-modal-header-shadow);
-   background-color: var(--sl-color-modal-header);
+   border-top: 1px solid var(--my-color-modal-header-shadow);
+   background-color: var(--my-color-modal-header);
    gap: 0.8rem;
 }
 
