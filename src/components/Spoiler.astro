@@ -1,5 +1,5 @@
 ---
-const { title, open = false } = Astro.props;
+const { title = "Spoiler", open = false } = Astro.props;
 ---
 
 <div class="spoiler-container">
@@ -28,6 +28,7 @@ const { title, open = false } = Astro.props;
    .spoiler-title {
       padding: 0;
       margin: 0;
+      user-select: none;
    }
 
    .spoiler[open] .spoiler-title {
