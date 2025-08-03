@@ -1,7 +1,5 @@
 /* Dark mode colors. */
 :root {
-   --sl-text-h1: 2.625rem;
-
    --sl-color-accent-low: #ee6a6a;
    --sl-color-accent: #ee6a6a;
    /* Cor Principal */
@@ -42,31 +40,6 @@
 
 /* Light mode colors. */
 :root[data-theme="dark"] {
-   /* --sl-color-accent-low: #ffffff;
-   --sl-color-accent-high: #ee6a6a;
-   --sl-color-white: #ffffff;
-   --sl-color-gray-1: #f3f3f3;
-   --sl-color-gray-2: #c5c5c5;
-   --sl-color-gray-3: #949494;
-   --sl-color-gray-4: #5c5c5c;
-   --sl-color-gray-5: #414141;
-   --sl-color-gray-6: #252525;
-   --sl-color-gray-7: #1d1d1d;
-   --sl-color-black: #191919;
-
-   --my-color-function-description: #252525;
-   --my-color-row-hover: #252525;
-   --my-color-modal-header: #252525;
-   --my-color-modal-header-shadow: var(--sl-color-gray-5);
-   --my-color-modal-bg: #191919;
-   --my-color-modal-border: var(--sl-color-gray-5);
-   --my-color-mermaid-bg: #2e2e2e;
-   --my-color-img-frame-border: #131313;
-   --my-color-preview-title: #dadada;
-   --my-color-scrollbar-bg: #2b2b2b;
-   --my-color-scrollbar-thumb: #414141;
-   --my-color-scrollbar-thumb-hover: #4e4e4e; */
-
    --sl-color-accent-low: #eb8484;
    --sl-color-accent: #eb8484;
    --sl-color-accent-high: #eb8484;
