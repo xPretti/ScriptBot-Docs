@@ -1,0 +1,31 @@
+---
+title: Tipos de dados
+sidebar:
+   order: 0
+---
+
+import CodeVar from "@components/CodeVar.astro";
+
+Nesta página, você encontrará os tipos de dados primitivos disponíveis no ScriptBot. Esses tipos são utilizados como parâmetros e valores de retorno em funções, permitindo o controle preciso sobre o tipo de informação manipulada no projeto. Cada tipo possui uma finalidade específica, abrangendo desde números inteiros e caracteres até valores booleanos e horários.
+
+## Tipos de dados
+
+> Esses tipos primitivos são usadados como retornos e parâmetros de funções.
+
+| TIPOS                       | RETORNOS                                                                                   |
+| --------------------------- | ------------------------------------------------------------------------------------------ |
+| <CodeVar>void</CodeVar>     | Representa um valor vazio, sem retorno.                                                    |
+| <CodeVar>any</CodeVar>      | Representa qualquer valor. Seja um int, double, string, etc.                               |
+| <CodeVar>int</CodeVar>      | Representa um inteiro com sinal (-2147483648 até 2147483647).                              |
+| <CodeVar>uint</CodeVar>     | Representa um inteiro positivo (0 até 4294967295).                                         |
+| <CodeVar>datetime</CodeVar> | Representa um horário em segundos.                                                         |
+| <CodeVar>long</CodeVar>     | Representa um inteiro com sinal de 64 bits (-9223372036854775808 até 9223372036854775807). |
+| <CodeVar>ulong</CodeVar>    | Representa um inteiro sem sinal de 64 bits (0 até 18446744073709551615).                   |
+| <CodeVar>char</CodeVar>     | Representa um caractere Unicode.                                                           |
+| <CodeVar>uchar</CodeVar>    | Representa um caractere sem sinal.                                                         |
+| <CodeVar>short</CodeVar>    | Representa um inteiro com sinal de 16 bits (-32768 até 32767).                             |
+| <CodeVar>ushort</CodeVar>   | Representa um inteiro sem sinal de 16 bits (0 até 65535).                                  |
+| <CodeVar>float</CodeVar>    | Representa um número de ponto flutuante de precisão simples (7 dígitos).                   |
+| <CodeVar>double</CodeVar>   | Representa um número de ponto flutuante de precisão dupla (15-16 dígitos).                 |
+| <CodeVar>string</CodeVar>   | Representa uma sequência de caracteres Unicode.                                            |
+| <CodeVar>bool</CodeVar>     | Representa um valor lógico (true ou false).                                                |

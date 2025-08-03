@@ -10,13 +10,16 @@
    --sl-color-gray-3: #616161;
    --sl-color-gray-4: #919191;
    --sl-color-gray-5: #c9c9c9;
-   /* Bordas de Cartoes */
    --sl-color-gray-6: #e4e3e3;
-   /* Linhas de janelas */
-   --sl-color-gray-7: #ffffff; /* #f5f5f5 */
-   /* Header */
+   --sl-color-gray-7: #f7f7f7;
    --sl-color-black: #ffffff;
    --sl-content-width: 55rem;
+
+   --sl-color-hairline: var(--sl-color-gray-6);
+   --sl-color-hairline-shade: var(--sl-color-gray-6);
+   --sl-color-bg: var(--sl-color-black);
+   --sl-color-bg-nav: #fcfcfc;
+   --sl-color-bg-sidebar: var(--sl-color-bg-nav);
 
    /* My colors */
    --my-color-row-hover: #ececec;
@@ -26,7 +29,7 @@
    --my-color-function-value: #51b4ee;
    --my-color-function-required: #ee5151;
    --my-color-function-optional: #51b4ee;
-   --my-color-modal-header: #f8f8f8;
+   --my-color-modal-header: var(--sl-color-bg-nav);
    --my-color-modal-header-shadow: var(--sl-color-gray-5);
    --my-color-modal-bg: #ffffff;
    --my-color-modal-border: #a7a7a7;
@@ -42,7 +45,7 @@
 :root[data-theme="dark"] {
    --sl-color-accent-low: #eb8484;
    --sl-color-accent: #eb8484;
-   --sl-color-accent-high: #eb8484;
+   --sl-color-accent-high: #ee6a6a;
    --sl-color-white: #ffffff;
    --sl-color-gray-1: #f0f2f6;
    --sl-color-gray-2: #d1d8e2;
@@ -52,18 +55,22 @@
    --sl-color-gray-6: #303846;
    --sl-color-gray-7: #252d38;
    --sl-color-black: #1c212a;
-   --sl-color-hairline-shade: #212731;
+   --sl-color-hairline: #323b47;
+   --sl-color-hairline-shade: #323b47;
+   --sl-color-bg: var(--sl-color-black);
+   --sl-color-bg-nav: #232933;
+   --sl-color-bg-sidebar: var(--sl-color-bg-nav);
 
    --my-color-function-description: #303846;
    --my-color-row-hover: #303846;
-   --my-color-modal-header: #303846;
+   --my-color-modal-header: var(--sl-color-bg-nav);
    --my-color-modal-header-shadow: var(--sl-color-gray-5);
    --my-color-modal-bg: #1c212a;
    --my-color-modal-border: var(--sl-color-gray-5);
    --my-color-mermaid-bg: #363f4e;
    --my-color-img-frame-border: #171b23;
    --my-color-preview-title: #d8dde6;
-   --my-color-scrollbar-bg: #363d49;
+   --my-color-scrollbar-bg: #252b36;
    --my-color-scrollbar-thumb: #4d5665;
    --my-color-scrollbar-thumb-hover: #5a6373;
 

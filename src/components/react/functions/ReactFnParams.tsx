@@ -1,4 +1,3 @@
-import { useWindowDimensions } from "@src/hooks/useWindowDimensions";
 import styles from "./ReactFnParams.module.css";
 
 import type { FunctionParameter } from "@src/@types/functions-type";
