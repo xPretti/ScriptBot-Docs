@@ -41,10 +41,17 @@ export default defineConfig({
          ],
          sidebar: [
             {
-               label: "Indicators",
-               autogenerate: { directory: "indicators" },
+               label: "Settings",
+               autogenerate: { directory: "settings" },
                translations: {
-                  pt: "Indicadores",
+                  pt: "Configurações",
+               },
+            },
+            {
+               label: "Conditions",
+               autogenerate: { directory: "conditions" },
+               translations: {
+                  pt: "Condições",
                },
             },
             {
@@ -62,10 +69,10 @@ export default defineConfig({
                },
             },
             {
-               label: "Conditions",
-               autogenerate: { directory: "conditions" },
+               label: "Indicators",
+               autogenerate: { directory: "indicators" },
                translations: {
-                  pt: "Condições",
+                  pt: "Indicadores",
                },
             },
             {

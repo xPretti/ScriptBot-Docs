@@ -10,9 +10,7 @@ import { ColorUtils } from "../utils/color-utils";
             <p
                class="color-name"
                style={{
-                  color: ColorUtils.hexToBlackOrWhite(
-                     ColorUtils.invertHexColor(color.value)
-                  ),
+                  color: ColorUtils.hexToBlackOrWhite(ColorUtils.invertHexColor(color.value)),
                }}
             >
                {color.name}
@@ -50,5 +48,11 @@ import { ColorUtils } from "../utils/color-utils";
       justify-content: center;
       align-items: center;
       height: 100%;
+   }
+
+   @media (max-width: 950px) {
+      .color-item {
+         width: 180px;
+      }
    }
 </style>
