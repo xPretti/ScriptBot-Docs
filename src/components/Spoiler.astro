@@ -3,7 +3,10 @@ const { title = "Spoiler", open = false } = Astro.props;
 ---
 
 <div class="spoiler-container">
-   <details class="spoiler" open={open}>
+   <details
+      class="spoiler"
+      open={open}
+   >
       <summary class="spoiler-title">{title}</summary>
       <div class="spoiler-content">
          <slot />
@@ -22,7 +25,7 @@ const { title = "Spoiler", open = false } = Astro.props;
 
    .spoiler {
       border: none;
-      padding: 0 0 0 5px;
+      padding: 0 5px;
    }
 
    .spoiler-title {
