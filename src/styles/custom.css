@@ -143,6 +143,7 @@ td:last-child {
 /* Customização da barra de rolagem */
 ::-webkit-scrollbar {
    width: 8px;
+   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -213,4 +214,12 @@ td:last-child {
    border-radius: 15px;
    overflow: hidden;
    background-color: var(--my-color-mermaid-bg) !important;
+}
+
+/* 
+* ZOOM 
+*/
+.starlight-image-zoom-dialog img {
+   z-index: 1;
+   max-height: 90%;
 }

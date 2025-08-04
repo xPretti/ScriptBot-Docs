@@ -1,0 +1,81 @@
+---
+import CodeVar from "./CodeVar.astro";
+import Spoiler from "./Spoiler.astro";
+import { Zoom } from "starlight-image-zoom/components";
+
+const { type = "UNKNOWN", instance = "0, SYMBOL, CURRENT", params = "" } = Astro.props;
+---
+
+<div class="container">
+   <table class="table">
+      <tbody>
+         <tr>
+            <td class="param">Nome:</td>
+            <td><CodeVar>{type}</CodeVar></td>
+         </tr>
+         <tr>
+            <td class="param">Instância:</td>
+            <td><CodeVar>{instance}</CodeVar></td>
+         </tr>
+         {
+            params && (
+               <tr>
+                  <td class="param">Parâmetros:</td>
+                  <td>
+                     <CodeVar>{params}</CodeVar>
+                  </td>
+               </tr>
+            )
+         }
+      </tbody>
+   </table>
+   <Spoiler title="Imagens">
+      <div class="content">
+         <h5 class="img-title">M1</h5>
+         <div class="img">
+            <Zoom label={type}>
+               <img
+                  src=`/src/assets/inds/${type}.png`
+                  alt={type}
+               />
+            </Zoom>
+         </div>
+      </div>
+   </Spoiler>
+</div>
+
+<style>
+   div,
+   img {
+      margin: 0;
+   }
+
+   .table {
+      /* margin: 0.5rem 0; */
+      /* background: var(--sl-color-gray-7); */
+      border-radius: 0.3125rem;
+      /* border: 1px solid var(--sl-color-gray-6); */
+      /* padding: 0.5rem 1rem; */
+      padding: 5px 0;
+   }
+
+   .table td {
+      padding: 0 0.5rem 0 0;
+      border: none;
+      vertical-align: top;
+   }
+
+   .param {
+      white-space: nowrap;
+      user-select: none;
+   }
+
+   .img-title {
+      text-align: center;
+   }
+   .img {
+      border-radius: 10px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+   }
+</style>

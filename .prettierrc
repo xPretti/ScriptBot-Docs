@@ -2,6 +2,7 @@
   "tabWidth": 3,
   "useTabs": false,
   "printWidth": 160,
-  "objectWrap": "preserve"
-
+  "objectWrap": "preserve",
+  "bracketSameLine": false,
+  "singleAttributePerLine": true
 }
