@@ -2,7 +2,7 @@
 const { title = "Spoiler", open = false } = Astro.props;
 ---
 
-<div class="spoiler-container">
+<div class="container">
    <details
       class="spoiler"
       open={open}
@@ -16,31 +16,35 @@ const { title = "Spoiler", open = false } = Astro.props;
 
 <!-- Estilos -->
 <style>
-   .spoiler-container {
-      background-color: color-mix(in srgb, var(--my-color-function-description) 50%, transparent 100%);
-      padding: 10px;
+   .container {
+      background-color: var(--my-color-spoiler-bg);
+      padding: 0;
       border-radius: 5px;
-      border: 1px solid var(--my-color-function-description);
+      border: 1px solid var(--my-color-spoiler-border);
+      overflow: hidden;
    }
-
    .spoiler {
       border: none;
-      padding: 0 5px;
+      /* padding: 0 5px; */
+      padding: 0;
    }
 
    .spoiler-title {
-      padding: 0;
       margin: 0;
       user-select: none;
+      padding: 10px;
+      background-color: var(--my-color-spoiler-bg-header);
    }
 
    .spoiler[open] .spoiler-title {
-      padding: 0;
       margin: 0;
       color: var(--sl-color-accent-high);
+      background-color: var(--my-color-spoiler-bg-header);
    }
 
    .spoiler-content {
-      margin-top: 8px;
+      padding: 10px;
+      margin: 0;
+      border-top: 1px solid var(--my-color-spoiler-border);
    }
 </style>

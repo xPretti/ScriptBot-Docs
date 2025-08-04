@@ -39,6 +39,9 @@
    --my-color-scrollbar-bg: #f5f5f5;
    --my-color-scrollbar-thumb: #cacaca;
    --my-color-scrollbar-thumb-hover: #979797;
+   --my-color-spoiler-bg: #f9f9f9;
+   --my-color-spoiler-border: #e4e3e3;
+   --my-color-spoiler-bg-header: var(--my-color-spoiler-bg);
 }
 
 /* Light mode colors. */
@@ -73,6 +76,9 @@
    --my-color-scrollbar-bg: #252b36;
    --my-color-scrollbar-thumb: #4d5665;
    --my-color-scrollbar-thumb-hover: #5a6373;
+   --my-color-spoiler-bg: #1f242d;
+   --my-color-spoiler-border: #303846;
+   --my-color-spoiler-bg-header: var(--my-color-spoiler-bg);
 
    /* code highlighting */
    --code-text-color: #f1f1f1ff;
