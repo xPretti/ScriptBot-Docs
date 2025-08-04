@@ -64,7 +64,7 @@ export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterfac
                         title="Em caso de sucesso ou erro:"
                         message="Esta função executa uma ação, mas não retorna nenhum valor ao ser executada."
                         type="void"
-                        typeLink="/fundamentals/types"
+                        typeLink="/references/types"
                      />
                   )}
                </div>

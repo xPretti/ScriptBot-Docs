@@ -6,14 +6,17 @@ export default function ReactFnParams({ params }: { params: FunctionParameter[] 
    if (!params) return null;
 
    const getTypeLink = (p: string | undefined) => {
-      return p ? p : "/fundamentals/types";
+      return p ? p : "/references/types";
    };
 
    return (
       <table className={styles.table}>
          <tbody>
             {params.map((param, index) => (
-               <tr key={index} className={styles.param}>
+               <tr
+                  key={index}
+                  className={styles.param}
+               >
                   <td>
                      <a href={getTypeLink(param.type.typeLink)}>
                         <span className={styles.type}>{param.type.type}</span>

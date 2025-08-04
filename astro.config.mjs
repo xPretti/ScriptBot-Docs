@@ -48,17 +48,17 @@ export default defineConfig({
                },
             },
             {
-               label: "Conditions",
-               autogenerate: { directory: "conditions" },
+               label: "Architecture",
+               autogenerate: { directory: "architecture" },
                translations: {
-                  pt: "Condições",
+                  pt: "Arquitetura",
                },
             },
             {
-               label: "Fundamentals",
-               autogenerate: { directory: "fundamentals" },
+               label: "References",
+               autogenerate: { directory: "references" },
                translations: {
-                  pt: "Fundamentos",
+                  pt: "Referências",
                },
             },
             {
@@ -73,13 +73,6 @@ export default defineConfig({
                autogenerate: { directory: "indicators" },
                translations: {
                   pt: "Indicadores",
-               },
-            },
-            {
-               label: "Fragments",
-               autogenerate: { directory: "fragments" },
-               translations: {
-                  pt: "Fragmentos",
                },
             },
          ],

@@ -1,7 +1,7 @@
 ---
 title: Filtros
 sidebar:
-  order: 1
+   order: 1
 ---
 
 import ImgFrame from "@components/ImgFrame.astro";
@@ -14,12 +14,12 @@ Os filtros são um sistema avançado de validação em camadas, baseado em regra
 
 Diversos filtros podem ser criados para compras e vendas, cada um com configurações personalizáveis:
 
-- Definir como obrigatório ou opcional;
-- Atribuir um peso personalizado;
-- Estabelecer condições lógicas baseadas em indicadores ou sinais de mercado;
-- Escolher diferentes métodos de validação.
+-  Definir como obrigatório ou opcional;
+-  Atribuir um peso personalizado;
+-  Estabelecer condições lógicas baseadas em indicadores ou sinais de mercado;
+-  Escolher diferentes métodos de validação.
 
-Os filtros são acionados automaticamente após o [Gatilho de Confirmação](/conditions/triggers), iniciando a análise para autorizar ou não a entrada no mercado.
+Os filtros são acionados automaticamente após o [Gatilho de Confirmação](/architecture/triggers), iniciando a análise para autorizar ou não a entrada no mercado.
 
 ## Para que servem?
 
@@ -29,10 +29,10 @@ O sistema funciona com base na soma dos pesos dos filtros validados. Quando esse
 
 Em resumo, os filtros servem para:
 
-- Evitar entradas impulsivas ou fora dos critérios definidos;
-- Apoiar decisões com validações objetivas e consistentes;
-- Adicionar camadas de verificação que aumentam a segurança da estratégia;
-- Organizar e simplificar validações complexas, especialmente quando há múltiplas condições envolvidas.
+-  Evitar entradas impulsivas ou fora dos critérios definidos;
+-  Apoiar decisões com validações objetivas e consistentes;
+-  Adicionar camadas de verificação que aumentam a segurança da estratégia;
+-  Organizar e simplificar validações complexas, especialmente quando há múltiplas condições envolvidas.
 
 ## Configurando os filtros
 
@@ -44,21 +44,21 @@ Cada filtro pode ser configurado de forma personalizada, de acordo com as necess
 
 ### Geral
 
-- **[01] - Peso mínimo de validação**: Define o valor mínimo que a soma dos pesos dos filtros deve atingir para que o sistema autorize a entrada da ordem.
+-  **[01] - Peso mínimo de validação**: Define o valor mínimo que a soma dos pesos dos filtros deve atingir para que o sistema autorize a entrada da ordem.
 
 ### Filtro
 
-- **[01] - Tipo**: Define o comportamento do filtro durante a validação. As opções são:
-  - **Desativado**: O filtro é ignorado no processo de validação.
-  - **Obrigatório**:
-    - O filtro é sempre executado e deve ser validado com sucesso para que a ordem seja autorizada.
-    - Este filtro também contribui para a pontuação total quando validado com sucesso.
-  - **Opcional**:
-    - O filtro é executado apenas se a soma total dos pesos ainda não tiver atingido o valor necessário.
-    - Seu resultado contribui para a pontuação, seja validado ou não.
-- **[02] - Peso de Sucesso**: Valor somado à pontuação total caso o filtro seja validado com sucesso.
-- **[03] - Peso de Falha**: Valor somado à pontuação caso o filtro não seja validado. Pode ser zero, positivo ou negativo, conforme a estratégia adotada.
-- **[04 & 05] - Cálculos de Validação**: São expressões condicionais que o sistema executa quando o filtro for chamado.
+-  **[01] - Tipo**: Define o comportamento do filtro durante a validação. As opções são:
+   -  **Desativado**: O filtro é ignorado no processo de validação.
+   -  **Obrigatório**:
+      -  O filtro é sempre executado e deve ser validado com sucesso para que a ordem seja autorizada.
+      -  Este filtro também contribui para a pontuação total quando validado com sucesso.
+   -  **Opcional**:
+      -  O filtro é executado apenas se a soma total dos pesos ainda não tiver atingido o valor necessário.
+      -  Seu resultado contribui para a pontuação, seja validado ou não.
+-  **[02] - Peso de Sucesso**: Valor somado à pontuação total caso o filtro seja validado com sucesso.
+-  **[03] - Peso de Falha**: Valor somado à pontuação caso o filtro não seja validado. Pode ser zero, positivo ou negativo, conforme a estratégia adotada.
+-  **[04 & 05] - Cálculos de Validação**: São expressões condicionais que o sistema executa quando o filtro for chamado.
 
 ## Entendendo os filtros
 

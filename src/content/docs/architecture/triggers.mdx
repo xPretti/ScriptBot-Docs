@@ -1,7 +1,7 @@
 ---
 title: Gatilhos
 sidebar:
-  order: 0
+   order: 0
 ---
 
 import ImgFrame from "@components/ImgFrame.astro";
@@ -17,9 +17,9 @@ Um gatilho é um ponto de execução automatizado que verifica, em intervalos re
 
 No ScriptBot, os gatilhos são o mecanismo central de controle sobre ordens e posições, permitindo que o robô atue de forma autônoma, seguindo as regras definidas pelo usuário. Os principais tipos de gatilhos são:
 
-- **Gatilhos de entrada:** disparam ordens de compra ou venda quando a condição de entrada for satisfeita;
-- **Gatilhos de saída:** executam a saída do mercado, encerrando uma posição ou cancelando uma ordem;
-- **Gatilhos de atualização:** ajustam ordens ou posições existentes, com base em condições atualizadas do mercado.
+-  **Gatilhos de entrada:** disparam ordens de compra ou venda quando a condição de entrada for satisfeita;
+-  **Gatilhos de saída:** executam a saída do mercado, encerrando uma posição ou cancelando uma ordem;
+-  **Gatilhos de atualização:** ajustam ordens ou posições existentes, com base em condições atualizadas do mercado.
 
 Há diferentes tipos de gatilhos, cada um com um papel específico no fluxo da estratégia. Eles oferecem controle granular e flexibilidade para automatizar decisões com precisão e segurança.
 
@@ -77,7 +77,7 @@ O fluxo de execução é composto por quatro etapas principais, organizadas sequ
 4. **FILTROS**
    - Os filtros aplicam múltiplas camadas de validações para aumentar a **confiabilidade** da estratégia.
    - Cada filtro realiza uma **validação específica** e pode ter **pesos diferentes**, permitindo uma análise mais refinada.
-   - A documentação completa sobre os filtros podem ser encontradas em [Filtros](/conditions/filters).
+   - A documentação completa sobre os filtros podem ser encontradas em [Filtros](/architecture/filters).
    - **Opcional**: se não estiver configurado, o fluxo segue diretamente para **ENVIO DO PEDIDO**.
 5. **ENVIO DO PEDIDO**
    - Etapa final do fluxo.

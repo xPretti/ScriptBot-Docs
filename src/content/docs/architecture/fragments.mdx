@@ -1,0 +1,86 @@
+---
+title: Fragmentos
+sidebar:
+   order: 0
+---
+
+import { Aside } from "@astrojs/starlight/components";
+import ImgFrame from "@components/ImgFrame.astro";
+
+Nesta página, você vai conhecer os fragmentos disponíveis no ScriptBot: para que servem, como funcionam e de que forma podem facilitar suas automatizações. Entenda também como esses recursos aceleram o desenvolvimento de estratégias de forma prática e eficiente.
+
+## O que são fragmentos?
+
+Os fragmentos (anteriormente chamados de “variáveis modeláveis”) são blocos de dados usados no ScriptBot para armazenar informações que podem ser aplicadas em qualquer parte da estratégia, como expressões lógicas, filtros, indicadores e eventos.
+
+Eles ajudam a organizar melhor a construção das estratégias e facilitam o reaproveitamento de expressões. Além disso, os fragmentos resolvem uma limitação importante: a impossibilidade de realizar otimizações no Backtest do MetaTrader 5, causada pela forma como expressões e indicadores eram carregados. Essa restrição foi superada com a introdução dos fragmentos.
+
+Durante a inicialização da estratégia, os fragmentos são automaticamente convertidos em valores fixos, já incorporados à lógica final. Isso melhora o desempenho e impede alterações durante a execução.
+
+### Tipos de fragmentos
+
+Abaixo estão os principais tipos de fragmentos disponíveis:
+
+-  **INTEGER**: Números inteiros
+-  **DOUBLE**: Números decimais (ponto flutuante)
+-  **STRING**: Textos, expressões ou qualquer outro valor
+-  **TIMEFRAME**: Períodos gráficos (como M1, H1, etc)
+
+<ImgFrame>![Fragmentos](@src/assets/Fragments.png)</ImgFrame>
+
+## Usando fragmentos na expressão lógica
+
+Para utilizar um fragmento é simples, basta utilizar o nome do fragmento na sua expressão lógica, como por exemplo:
+
+```java
+CLOSE[0] > CLOSE[1] && STR0
+```
+
+Se, por exemplo, o fragmento **STR0** tiver o valor `ALL_PROFIT_OPEN >= 50`, a expressão lógica será automaticamente convertida, durante a inicialização, para:
+
+```java
+CLOSE[0] > CLOSE[1] && ALL_PROFIT_OPEN >= 50
+```
+
+## Usando fragmentos nos indicadores
+
+Os fragmentos podem ser utilizados em parâmetros de indicadores, como mostrado na imagem abaixo:
+
+<ImgFrame>![Fragmentos](@src/assets/Ind0.png)</ImgFrame>
+
+Podemos observar o uso dos fragmentos **TF0**, **INT0** e **INT1**. Esses fragmentos serão automaticamente convertidos durante a inicialização, o que permite realizar otimizações de estratégias usando o Backtest do MetaTrader 5 ou simplesmente facilitar a manutenção da estratégia.
+
+## Usando fragmentos com parâmetros
+
+Os fragmentos não são apenas simples armazenadores de dados, eles também podem funcionar como funções, aceitando parâmetros que tornam seu comportamento dinâmico.
+
+A possibilidade de utilizar parâmetros em fragmentos do tipo STRING os torna ainda mais versáteis, permitindo que atuem como verdadeiras funções de conversão. Isso possibilita modificar o comportamento do fragmento de acordo com os parâmetros fornecidos, tornando as expressões mais flexíveis e dinâmicas.
+
+### Definição do fragmento
+
+Vamos definir o fragmento **STR0** com o seguinte valor: `ALL_PROFIT_OPEN >= @0 && @1`. <br/>
+O caracter `@` indica que será um parametro e `0` e `1` indicam os indices dos parâmetros. O indice deve ser maior ou igual a zero, sendo zero o primeiro parâmetro.
+
+<ImgFrame>![Fragmentos](@src/assets/StrParam.png)</ImgFrame>
+
+### Uso sem parâmetros
+
+Abaixo está um exemplo de uso do fragmento sem parâmetros:
+
+```java
+CLOSE[0] > CLOSE[1] && STR0
+```
+
+O fragmento **STR0** será automaticamente convertido para `CLOSE[0] > CLOSE[1] && ALL_PROFIT_OPEN >= @0 && @1`, o que causará um erro na compilação da expressão lógica devido à ausência dos parâmetros necessários. Esse erro acontece porque, na definição do fragmento, os parâmetros `@0` e `@1` foram declarados como obrigatórios.
+
+### Uso com parâmetros
+
+Abaixo está um exemplo de uso do fragmento com parâmetros:
+
+```java
+CLOSE[0] > CLOSE[1] && STR0[50, Print["My age is: ", INT0]]
+```
+
+O fragmento **STR0** será convertido para `CLOSE[0] > CLOSE[1] && ALL_PROFIT_OPEN >= 50 && Print["My age is: ", INT0]`. Nenhum erro ocorrerá, pois todos os parâmetros foram fornecidos corretamente.
+
+De modo geral, o uso de parâmetros permite criar expressões mais complexas e flexíveis. Além disso, possibilita modificar o comportamento da expressão de forma dinâmica, conforme os valores passados.

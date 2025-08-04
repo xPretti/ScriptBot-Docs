@@ -7,7 +7,7 @@ interface Props {
    typeLink?: string;
 }
 
-export default function ReactFnReturn({ title, message, type, typeLink = "/fundamentals/types" }: Props) {
+export default function ReactFnReturn({ title, message, type, typeLink = "/references/types" }: Props) {
    if (!message) return null;
 
    return (

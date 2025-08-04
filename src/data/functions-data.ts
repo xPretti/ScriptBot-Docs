@@ -853,7 +853,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -903,7 +903,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -953,7 +953,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1003,7 +1003,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1053,7 +1053,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1104,7 +1104,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1154,7 +1154,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1204,7 +1204,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1267,7 +1267,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1325,7 +1325,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1375,7 +1375,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -1426,7 +1426,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico de referência.",
@@ -3045,7 +3045,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico.",
@@ -3087,7 +3087,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "O tempo gráfico.",
@@ -3199,7 +3199,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3348,7 +3348,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIME_HISTORIC",
-               typeLink: "/fundamentals/enumerators#time-historic",
+               typeLink: "/references/enumerators#time-historic",
             },
             name: "method",
             comment: "Método de cálculo (ex: 'TYPE_DAY', 'TYPE_WEEK' ...).",
@@ -3389,7 +3389,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIME_TYPE",
-               typeLink: "/fundamentals/enumerators#time-type",
+               typeLink: "/references/enumerators#time-type",
             },
             name: "method",
             comment: "Método de retorno. (ex: 'TYPE_SEC', 'TYPE_MIN' ...).",
@@ -3420,7 +3420,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/enumerators#trade",
+               typeLink: "/references/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -3440,7 +3440,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3489,7 +3489,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3538,7 +3538,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3587,7 +3587,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3624,7 +3624,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/enumerators#trade",
+               typeLink: "/references/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de posição: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -3644,7 +3644,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3693,7 +3693,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3742,7 +3742,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3791,7 +3791,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3828,7 +3828,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/enumerators#trade",
+               typeLink: "/references/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de ordem: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -3848,7 +3848,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3897,7 +3897,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3946,7 +3946,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -3995,7 +3995,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIMEFRAME",
-               typeLink: "/fundamentals/enumerators#timeframes",
+               typeLink: "/references/enumerators#timeframes",
             },
             name: "timeframe",
             comment: "Tempo gráfico.",
@@ -4037,7 +4037,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/enumerators#trade",
+               typeLink: "/references/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -4086,7 +4086,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_POS_DOUBLE",
-               typeLink: "/fundamentals/enumerators#position-property-double",
+               typeLink: "/references/enumerators#position-property-double",
             },
             name: "property",
             comment: "Propriedade da posição: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura).",
@@ -4124,7 +4124,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_POS_INT",
-               typeLink: "/fundamentals/enumerators#position-property-int",
+               typeLink: "/references/enumerators#position-property-int",
             },
             name: "property",
             comment: "Propriedade da posição: 'TYPE_TIME' (timestamp de abertura), 'TYPE_MAGIC' (número mágico).",
@@ -4162,7 +4162,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_POS_STRING",
-               typeLink: "/fundamentals/enumerators#position-property-string",
+               typeLink: "/references/enumerators#position-property-string",
             },
             name: "property",
             comment: "Propriedade da posição: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação).",
@@ -4688,7 +4688,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/enumerators#trade",
+               typeLink: "/references/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
@@ -4737,7 +4737,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_ORDER_DOUBLE",
-               typeLink: "/fundamentals/enumerators#order-property-double",
+               typeLink: "/references/enumerators#order-property-double",
             },
             name: "property",
             comment: "Propriedade da ordem: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura).",
@@ -4775,7 +4775,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_ORDER_INT",
-               typeLink: "/fundamentals/enumerators#order-property-int",
+               typeLink: "/references/enumerators#order-property-int",
             },
             name: "property",
             comment: "Propriedade da ordem: 'TYPE_TIME_SETUP' (timestamp de abertura), 'TYPE_MAGIC' (número mágico).",
@@ -4813,7 +4813,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_ORDER_STRING",
-               typeLink: "/fundamentals/enumerators#order-property-string",
+               typeLink: "/references/enumerators#order-property-string",
             },
             name: "property",
             comment: "Propriedade da ordem: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação).",
@@ -5449,7 +5449,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE",
-               typeLink: "/fundamentals/enumerators#trade",
+               typeLink: "/references/enumerators#trade",
             },
             name: "type",
             comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'",
@@ -5458,7 +5458,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_MARKET_ACTION",
-               typeLink: "/fundamentals/enumerators#market-action",
+               typeLink: "/references/enumerators#market-action",
             },
             name: "actionType",
             comment: "Tipo de fechamento: 'TYPE_IN', 'TYPE_OUT', 'TYPE_ALL'.",
@@ -5467,7 +5467,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TIME_HISTORIC",
-               typeLink: "/fundamentals/enumerators#time-historic",
+               typeLink: "/references/enumerators#time-historic",
             },
             name: "dateType",
             comment: "Tipo de data de inicio: 'TYPE_DAY', 'TYPE_WEEK'",
@@ -5476,7 +5476,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_MARKET_GET",
-               typeLink: "/fundamentals/enumerators#market-get",
+               typeLink: "/references/enumerators#market-get",
             },
             name: "profitType",
             comment: "Tipo de retorno de lucro: 'TYPE_POSITIVE', 'TYPE_NEGATIVE'",
@@ -6634,7 +6634,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/enumerators#trade-modify",
+               typeLink: "/references/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -6684,7 +6684,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/enumerators#trade-modify",
+               typeLink: "/references/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -6728,7 +6728,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/enumerators#trade-modify",
+               typeLink: "/references/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -6773,7 +6773,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/enumerators#trade-modify",
+               typeLink: "/references/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -6829,7 +6829,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/enumerators#trade-modify",
+               typeLink: "/references/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -6873,7 +6873,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/enumerators#trade-modify",
+               typeLink: "/references/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -6950,7 +6950,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/enumerators#trade-modify",
+               typeLink: "/references/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -7001,7 +7001,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/enumerators#trade-modify",
+               typeLink: "/references/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
@@ -7046,7 +7046,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: {
                type: "ENUM_TRADE_MODIFY",
-               typeLink: "/fundamentals/enumerators#trade-modify",
+               typeLink: "/references/enumerators#trade-modify",
             },
             name: "method",
             comment: "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'.",
