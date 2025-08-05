@@ -5,6 +5,125 @@ sidebar:
 ---
 
 import { Aside } from "@astrojs/starlight/components";
+import { Steps } from "@astrojs/starlight/components";
 import ImgFrame from "@components/ImgFrame.astro";
+import Spoiler from "@components/Spoiler.astro";
+import Preview from "@components/Preview.astro";
+import FreeMark from "@components/FreeMark.astro";
 
-..
+Nesta página, você irá aprender tudo sobre os indicadores e como eles podem ser utilizados em estratégias no ScriptBot.
+
+## O que é um indicador?
+
+Os indicadores são ferramentas analíticas essenciais para apoiar a tomada de decisão no mercado financeiro. Eles podem ser aplicados visualmente, diretamente nos gráficos, ou de forma automatizada, integrando seus dados a estratégias operacionais por meio de expressões lógicas no ScriptBot.
+
+Esses indicadores são especialmente úteis na criação de filtros e na definição de pontos de entrada mais precisos. Além disso, possibilitam análises mais avançadas, que não seriam viáveis utilizando apenas expressões lógicas, trazendo maior flexibilidade e robustez às estratégias.
+
+## Indicador \{#indicator\}
+
+Os indicadores são de extrema importância no desenvolvimento de estratégias no ScriptBot. Com eles, é possível analisar o comportamento do mercado, identificar tendências, detectar sinais de entrada e saída, além de otimizar a tomada de decisões automatizadas.
+
+### Parâmetros:
+
+-  **[01] Nome ou Diretório**:
+   -  Define o nome ou diretório do indicador:
+-  **[02] Parâmetros da Instância**:
+   -  Parâmetros da instancia do indicador, separados por vírgula.
+   -  **Valor padrão**: 0, SYMBOL, CURRENT
+-  **[03] Parâmetros do Indicador**:
+   -  Parâmetros do indicador, se houver e separados por vírgula.
+-  **[04] Carregamento forçado**:
+   -  O indicador é carregado imediatamente, mesmo que o indicador não seja utilizado.
+
+### Tipos de Indicadores
+
+No ScriptBot, existem dois tipos de indicadores:
+
+-  **Indicadores internos**
+   -  São indicadores nativos do MetaTrader 5.
+   -  Sua instalação é simples, feita apenas pelo nome do indicador.
+   -  Você pode consultar a lista completa acessando: [Lista de Indicadores](/references/indicators/)
+-  **Indicadores externos**
+   -  Desenvolvidos por terceiros, não fazem parte do MetaTrader 5 por padrão.
+   -  A instalação requer o caminho completo do arquivo. Por exemplo: **"Market/Ultra ZigZag.ex5"**
+   -  Podem ser encontrados no [MQL5 Market](https://www.mql5.com/pt/market/mt5/indicator), na [MQL5 CodeBase](https://www.mql5.com/pt/code/mt5/indicators) ou ainda ser criados pelo próprio usuário.
+
+### Instalando um Indicador
+
+O processo de instalação varia conforme o tipo de indicador, mas em ambos os casos é simples, embora exija atenção.
+
+Abaixo, você encontrará as duas formas de instalar um indicador:
+
+{/* prettier-ignore */}
+<Spoiler title="Indicadores Internos">
+   <Steps>
+      1. A instalação de um indicador interno é extremamente simples.  
+         O primeiro passo é escolher um indicador na [Lista de Indicadores](/references/indicators/).  
+      2. Com o indicador escolhido, basta adicioná-lo na configuração do robô.
+         <ImgFrame>![Internal Alligator](@src/assets/IndAlligator.png)</ImgFrame>
+         No exemplo acima, o indicador [Alligator](/references/indicators/#alligator) foi adicionado na configuração do robô.
+      3. Pronto! O indicador já está instalado, agora basta continuar com a configuração dos parâmetros.
+   </Steps>
+</Spoiler>
+
+{/* prettier-ignore */}
+<Spoiler title="Indicadores Externos">
+   <Steps>
+      1. Baixe o Indicador  
+         É possível baixar de qualquer fonte. Algumas das mais populares são:  
+         <ul style="margin: 0;">  
+            <li>Baixado do [MQL5 Market](https://www.mql5.com/pt/market/mt5/indicator)</li>
+            <li>Encontrado na [MQL5 CodeBase](https://www.mql5.com/pt/code/mt5/indicators)</li>
+            <li>Criado por você</li>
+         </ul>
+      2. Identifique o caminho completo onde o indicador está salvo.
+         <ImgFrame center>![External Alligator](@src/assets/IndAlligatorExternalExplorer.png)</ImgFrame>
+         **Exemplo:** `Examples/Alligator`  
+         **PS**: Não é necessário incluir o diretório `Indicadores` antes de `Examples`, isso é intencional. O ScriptBot reconhece que todos os indicadores ficam dentro dessa pasta padrão.  
+      3. Adicione o indicador na configuração do robô.  
+         <ImgFrame center>![External Alligator](@src/assets/IndAlligatorExternal.png)</ImgFrame>  
+         **Resultado:** `Examples/Alligator.ex5`  
+         **Importante:**  
+         <ul style="margin: 0;">  
+            <li>O caminho deve estar idêntico ao do arquivo, respeitando letras maiúsculas/minúsculas, espaços e pontuação.</li>
+            <li>No final do caminho, adicione a extensão `.ex5`, apenas para evitar problemas.</li>
+         </ul>
+      4. Pronto! O indicador já está instalado, agora basta continuar com a configuração dos parâmetros.
+   </Steps>
+</Spoiler>
+
+### Parâmetros da Instância
+
+Os parâmetros da instância do indicador são obrigatórios e de extrema importância para o seu funcionamento adequado.
+
+Eles servem como diretrizes que definem o comportamento do indicador, como: em qual janela ele será inserido, qual ativo será analisado e qual o período (tempo gráfico) será utilizado para obter os dados.
+
+Esses parâmetros permitem que o indicador seja flexível, adaptando-se a diferentes contextos de análise. Por exemplo, é possível aplicar o indicador a diferentes ativos ou intervalos de tempo, sem a necessidade de alterar o esses dados diretamente no gráfico em operação, apenas modificando os parâmetros da instância.
+
+{/* prettier-ignore */}
+<Preview title="Entendendo os Parâmetros:"> 
+   <FreeMark>
+      0, SYMBOL, CURRENT
+      |    |        |-\> Período de Análise: [Lista de Períodos](/references/constants/#periods)
+      |    |----------\> Tipo de Ativo: [Lista de Ativos](/references/constants/#symbols)
+      |---------------\> Janela de Análise: [Lista de Janelas](/references/constants/#windows)
+   </FreeMark>
+</Preview>
+
+### Parâmetros do Indicador
+
+Os parâmetros dos indicadores não são obrigatórios. Caso nenhum parâmetro seja informado, o indicador será iniciado com os valores padrão.
+
+Se optar por configurar os parâmetros manualmente, é fundamental respeitar a ordem correta. A sequência dos parâmetros deve seguir exatamente a estrutura esperada pelo indicador, caso contrário, ele poderá funcionar de forma incorreta ou de forma inesperada.
+
+Para identificar os parâmetros corretamente, basta adicionar o indicador ao gráfico. O layout da janela de parâmetros pode variar, e o indicador pode apresentar dois formatos diferentes de entrada de dados, dependendo da sua implementação.
+
+<Preview title="Primeiro Formato:">
+   <ImgFrame center>![Type 01](@src/assets/IndParamsType1.png)</ImgFrame>
+</Preview>
+
+<Preview title="Segundo Formato:">
+   <ImgFrame center>![Type 01](@src/assets/IndParamsType2.png)</ImgFrame>
+</Preview>
+
+Além da configuração manual por texto, também é possível carregar parâmetros por meio de arquivos `.set`. Esses arquivos armazenam previamente os valores dos parâmetros e podem ser carregados automaticamente durante a inicialização do indicador.

@@ -1,0 +1,35 @@
+---
+const { input = "UNKNOWN", value = "" } = Astro.props;
+---
+
+<tr class="row">
+   <td class="param">{input}</td>
+   <td>
+      <div class="value">{value}</div>
+   </td>
+</tr>
+
+<style>
+   .param {
+      white-space: nowrap;
+      user-select: none;
+   }
+
+   .row {
+      margin-top: 10px !important;
+   }
+
+   .row td {
+      padding: 0.2rem 0.5rem 0 0;
+      border: none;
+      vertical-align: top;
+   }
+
+   .value {
+      width: fit-content;
+      padding: 0 5px;
+      border-radius: 5px;
+      background-color: var(--my-color-param-value-bg);
+      border: 1px solid var(--my-color-param-value-border);
+   }
+</style>

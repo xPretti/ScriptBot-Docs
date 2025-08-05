@@ -42,6 +42,8 @@
    --my-color-spoiler-bg: #f9f9f9;
    --my-color-spoiler-border: #e4e3e3;
    --my-color-spoiler-bg-header: var(--my-color-spoiler-bg);
+   --my-color-param-value-bg: var(--my-color-spoiler-bg);
+   --my-color-param-value-border: var(--my-color-spoiler-border);
 }
 
 /* Light mode colors. */
@@ -79,6 +81,8 @@
    --my-color-spoiler-bg: #1f242d;
    --my-color-spoiler-border: #303846;
    --my-color-spoiler-bg-header: var(--my-color-spoiler-bg);
+   --my-color-param-value-bg: var(--my-color-spoiler-bg);
+   --my-color-param-value-border: var(--my-color-spoiler-border);
 
    /* code highlighting */
    --code-text-color: #f1f1f1ff;
@@ -201,6 +205,10 @@ td:last-child {
 
 .starlight-aside {
    border-radius: 10px;
+}
+
+.tablist-wrapper a[role="tab"] {
+   padding: 0 1.5rem 0 0;
 }
 
 /* 

@@ -1,7 +1,6 @@
 ---
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import CodeVar from "@components/CodeVar.astro";
-import { Icon } from "@astrojs/starlight/components";
 import { BookOpenText } from "lucide-react";
 import ReactFnModal from "./react/functions/ReactFnModal";
 
@@ -41,7 +40,11 @@ const containsAliases =
                   </td>
                   {containsAliases && <td class="aliases">{fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}</td>}
                   <td>
-                     <ReactFnModal client:visible fnCategory={fn.category} fnName={fn.name}>
+                     <ReactFnModal
+                        client:visible
+                        fnCategory={fn.category}
+                        fnName={fn.name}
+                     >
                         <div class="description">
                            <p class="text">{fn.description.simple}</p>
                            {/* <Icon class="redirect-icon" name="open-book" size="1.5rem" /> */}
