@@ -16,7 +16,7 @@ import FreeMark from "@components/FreeMark.astro";
 import Params from "@components/Params.astro";
 import Param from "@components/Param.astro";
 
-Nesta página, você irá aprender tudo sobre os indicadores e como eles podem ser utilizados em estratégias no ScriptBot.
+Nesta página, você irá aprender a como instalar um indicador no ScriptBot.
 
 ## O que é um indicador?
 
@@ -173,3 +173,56 @@ Veja, por exemplo, a seguinte configuração fictícia:
 </Preview>
 
 Observe que o parâmetro `#CLOE[0] > OPEN[0, M5]#` utiliza o operador `#`. Nesse caso, todo o conteúdo entre os símbolos `#` é interpretado como texto literal, sem qualquer tipo de modificação ou interpretação adicional.
+
+### Set por Arquivo
+
+O carregamento por arquivo .set pode não ser um processo simples, mas é fundamental para configurar corretamente os parâmetros de alguns indicadores. Embora para a maioria dos indicadores essa etapa não seja necessária, há casos em que eles possuem muitos parâmetros ou configurações complexas, tornando inviável a instalação manual tradicional. Nesses casos, utilizar arquivos .set é a maneira mais eficiente e prática de garantir a configuração adequada.
+
+**Antes de começar, é importante entender algumas limitações:**
+
+-  Alguns indicadores do MetaTrader 5 não permitem que suas configurações sejam salvas.
+-  No MT5, existe um limite máximo de parâmetros que um robô pode carregar. Se o arquivo `.set` contiver mais de 62 parâmetros, o robô carregará apenas os primeiros 62. Caso esse limite seja ultrapassado, uma mensagem de erro será exibida. O indicador ainda será carregado, mas os parâmetros excedentes serão ignorados e pode ocorrer um comportamento diferente do esperado.
+
+#### Salvando o Arquivo set
+
+{/* prettier-ignore */}
+<Steps>
+   1. Primeiro, escolhemos um indicador, configuramos suas opções e salvamos o arquivo `.set` em um local de nossa preferência no computador.  
+      Salve o arquivo com um nome descritivo, por exemplo:  
+      ```text
+      my-set-alligator.set
+      ```
+   2. Antes de mover o arquivo `.set` para a pasta correta, execute pelo menos uma vez o robô em um ambiente de teste (como o testador de estratégia do MetaTrader).  
+      Isso é necessário para que o sistema crie automaticamente as pastas internas do robô, incluindo a pasta onde os sets serão armazenados.
+   3. Agora que o arquivo está salvo e as pastas do robô foram criadas, vamos mover o arquivo `.set` para o local correto:  
+      Existe duas formas diferentes de fazer isso:  
+      <Spoiler title="Localizando a pasta padrão:"> 
+         ```java  
+            C:\Users\{username}\AppData\Roaming\MetaQuotes\Terminal\Common\Files\ScriptBot\Sets
+         ```
+         **Atenção**: Substitua `{username}` pelo nome do seu usuário do Windows.  
+      </Spoiler>
+      <Spoiler title="Acessando usando o executador: Windows + R"> 
+         ```java  
+            %appdata%\MetaQuotes\Terminal\Common\Files\ScriptBot\Sets
+         ```
+         <ImgFrame center>![Windows + R](@src/assets/WinExe.png)</ImgFrame>
+      </Spoiler>
+      Independendo da forma escolhida, copie o arquivo `.set` para a pasta de sets que foi localizada.
+   4. Com o arquivo `.set` no lugar certo, agora é hora de carregá-lo dentro do robô.  
+      Em vez de preencher os parâmetros manualmente, digite o nome exato do arquivo, incluindo a extensão `.set` nos parâmetros do indicador.  
+      Isso fará com que o robô carregue automaticamente todos os parâmetros configurados no arquivo.  
+      Exemplo visual:  
+      <ImgFrame>![Alligator Set](@src/assets/IndAlligatorSet.png)</ImgFrame>
+   5. Pronto! O indicador já está com os parâmetros devidamente configurados.
+</Steps>
+
+#### Usando Fragmentos
+
+Para utilizar os [Fragmentos](/architecture/fragments), é necessário abrir o arquivo .set. Nele, você pode alterar os valores e substituir pelos nomes dos fragmentos.  
+Os arquivos .set salvos pelo Backtest podem apresentar parâmetros com várias barras (`||`), o que pode parecer confuso.  
+No entanto, tudo que estiver depois das barras são totalmente descartáveis e podem ser removidas sem causar qualquer erro de execução.
+
+O exemplo abaixo mostra como utilizar fragmentos em um arquivo .set:
+
+<ImgFrame>![Alligator Fragment](@src/assets/IndSetSaveBt.png)</ImgFrame>
