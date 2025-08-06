@@ -58,10 +58,10 @@ A possibilidade de utilizar parâmetros em fragmentos do tipo STRING os torna ai
 
 ### Definição do fragmento
 
-Vamos definir o fragmento **STR0** com o seguinte valor: `ALL_PROFIT_OPEN >= @0 && @1`. <br/>
-O caracter `@` indica que será um parametro e `0` e `1` indicam os indices dos parâmetros. O indice deve ser maior ou igual a zero, sendo zero o primeiro parâmetro.
+Vamos definir o fragmento **STR0** com o seguinte valor: `ALL_PROFIT_OPEN >= {0} && {1}`.  
+Os caracteres `{` e `}` delimitam os parâmetros. Dentro das chaves, você deve informar o índice do parâmetro, começando em zero. O índice `{0}` representa o primeiro parâmetro, `{1}` o segundo, e assim por diante.
 
-<ImgFrame>![Fragmentos](@src/assets/StrParam.png)</ImgFrame>
+<ImgFrame>![Fragmentos](@src/assets/FragmentStrParam.png)</ImgFrame>
 
 ### Uso sem parâmetros
 
@@ -71,7 +71,7 @@ Abaixo está um exemplo de uso do fragmento sem parâmetros:
 CLOSE[0] > CLOSE[1] && STR0
 ```
 
-O fragmento **STR0** será automaticamente convertido para `CLOSE[0] > CLOSE[1] && ALL_PROFIT_OPEN >= @0 && @1`, o que causará um erro na compilação da expressão lógica devido à ausência dos parâmetros necessários. Esse erro acontece porque, na definição do fragmento, os parâmetros `@0` e `@1` foram declarados como obrigatórios.
+O fragmento **STR0** será automaticamente convertido para `CLOSE[0] > CLOSE[1] && ALL_PROFIT_OPEN >= {0} && {1}`, o que causará um erro na compilação da expressão lógica devido à ausência dos parâmetros necessários. Esse erro acontece porque, na definição do fragmento, os parâmetros `{0}` e `{1}` foram declarados como obrigatórios.
 
 ### Uso com parâmetros
 

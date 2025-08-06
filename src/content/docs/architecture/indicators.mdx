@@ -2,6 +2,9 @@
 title: Indicadores
 sidebar:
    order: 0
+tableOfContents:
+   minHeadingLevel: 2
+   maxHeadingLevel: 4
 ---
 
 import { Aside } from "@astrojs/starlight/components";
@@ -10,6 +13,8 @@ import ImgFrame from "@components/ImgFrame.astro";
 import Spoiler from "@components/Spoiler.astro";
 import Preview from "@components/Preview.astro";
 import FreeMark from "@components/FreeMark.astro";
+import Params from "@components/Params.astro";
+import Param from "@components/Param.astro";
 
 Nesta página, você irá aprender tudo sobre os indicadores e como eles podem ser utilizados em estratégias no ScriptBot.
 
@@ -52,7 +57,7 @@ No ScriptBot, existem dois tipos de indicadores:
 
 O processo de instalação varia conforme o tipo de indicador, mas em ambos os casos é simples, embora exija atenção.
 
-Abaixo, você encontrará as duas formas de instalar um indicador:
+Abaixo, você pode ver as duas formas de instalar um indicador:
 
 {/* prettier-ignore */}
 <Spoiler title="Indicadores Internos">
@@ -114,16 +119,57 @@ Esses parâmetros permitem que o indicador seja flexível, adaptando-se a difere
 
 Os parâmetros dos indicadores não são obrigatórios. Caso nenhum parâmetro seja informado, o indicador será iniciado com os valores padrão.
 
-Se optar por configurar os parâmetros manualmente, é fundamental respeitar a ordem correta. A sequência dos parâmetros deve seguir exatamente a estrutura esperada pelo indicador, caso contrário, ele poderá funcionar de forma incorreta ou de forma inesperada.
+Se optar por configurar os parâmetros manualmente, é fundamental respeitar a ordem correta. A sequência dos parâmetros deve seguir exatamente a estrutura esperada pelo indicador, caso contrário, ele poderá funcionar de forma incorreta.
 
 Para identificar os parâmetros corretamente, basta adicionar o indicador ao gráfico. O layout da janela de parâmetros pode variar, e o indicador pode apresentar dois formatos diferentes de entrada de dados, dependendo da sua implementação.
 
-<Preview title="Primeiro Formato:">
-   <ImgFrame center>![Type 01](@src/assets/IndParamsType1.png)</ImgFrame>
+**Primeiro formato:**
+
+<ImgFrame>![Type 01](@src/assets/IndParamsType1.png)</ImgFrame>
+
+**Segundo formato:**
+
+<ImgFrame>![Type 01](@src/assets/IndParamsType2.png)</ImgFrame>
+
+#### Ordens dos Parâmetros
+
+Agora que sabemos a ordem correta em que os argumentos devem ser adicionados, é importante observar que o indicador Alligator possui dois parâmetros que utilizam enumerações: um para o método de média móvel (**Moving average method**) e outro para o tipo de preço a ser aplicado (**Applied price**).
+
+Os parâmetros devem ser adicionados na ordem correta, conforme mostra a imagem abaixo:
+
+<ImgFrame center>![External Alligator](@src/assets/IndAlligatorExternal.png)</ImgFrame>
+
+{/* prettier-ignore */}
+<Preview title="Entendendo os Parâmetros:"> 
+   <FreeMark>
+      13, 8, 8, 5, 5, 3, SMOOTHED, MEDIAN
+      |   |  |  |  |  |      |        |-> Applied price: [Lista de Preços](/references/enumerators/#prices)
+      |   |  |  |  |  |      |----------> Moving average method: [Lista de Metodos](/references/enumerators/#methods)
+      |   |  |  |  |  |-----------------> Lips shift
+      |   |  |  |  |--------------------> Lips period
+      |   |  |  |-----------------------> Teeth shift
+      |   |  |--------------------------> Teeth period
+      |   |-----------------------------> Jaws shift
+      |---------------------------------> Jaws period
+   </FreeMark>
 </Preview>
 
-<Preview title="Segundo Formato:">
-   <ImgFrame center>![Type 01](@src/assets/IndParamsType2.png)</ImgFrame>
+#### Parâmetros de Texto
+
+Muitos indicadores podem incluir parâmetros do tipo texto, utilizados para armazenar expressões, nomes, descrições ou outras informações.
+
+Para facilitar o uso desses parâmetros, foi introduzido o operador `#`. Esse operador é exclusivo para parâmetros de indicadores e atua como um delimitador de sequência, garantindo que todo o conteúdo entre os símbolos `#` seja tratado como texto literal, sem sofrer qualquer tipo de interpretação ou modificação.
+
+Veja, por exemplo, a seguinte configuração fictícia:
+
+{/* prettier-ignore */}
+<Preview title="Entendendo os Parâmetros:"> 
+   <Params>
+      <Param input="[01] Nome ou Diretório:">Examples/ExpIndicator.ex5</Param>
+      <Param input="[02] Parâmetros da Instância:">0, SYMBOL, CURRENT</Param>
+      <Param input="[03] Parâmetros do Indicador:">22, 0, <span style={{ color: "#3dbb1eff" }}>#CLOE[0] > OPEN[0, M5]#</span>, SMOOTHED, MEDIAN</Param>
+      <Param input="[04] Carregamento forçado:">false</Param>
+   </Params>
 </Preview>
 
-Além da configuração manual por texto, também é possível carregar parâmetros por meio de arquivos `.set`. Esses arquivos armazenam previamente os valores dos parâmetros e podem ser carregados automaticamente durante a inicialização do indicador.
+Observe que o parâmetro `#CLOE[0] > OPEN[0, M5]#` utiliza o operador `#`. Nesse caso, todo o conteúdo entre os símbolos `#` é interpretado como texto literal, sem qualquer tipo de modificação ou interpretação adicional.

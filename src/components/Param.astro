@@ -1,11 +1,11 @@
 ---
-const { input = "UNKNOWN", value = "" } = Astro.props;
+const { input = "UNKNOWN" } = Astro.props;
 ---
 
 <tr class="row">
    <td class="param">{input}</td>
    <td>
-      <div class="value">{value}</div>
+      <div class="value"><slot /></div>
    </td>
 </tr>
 
@@ -31,5 +31,12 @@ const { input = "UNKNOWN", value = "" } = Astro.props;
       border-radius: 5px;
       background-color: var(--my-color-param-value-bg);
       border: 1px solid var(--my-color-param-value-border);
+   }
+
+   table tr:nth-child(odd) {
+      background-color: #f2f2f2; /* Linhas ímpares */
+   }
+   table tr:nth-child(even) {
+      background-color: #ffffff; /* Linhas pares */
    }
 </style>
