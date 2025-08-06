@@ -11,6 +11,10 @@ import starlightImageZoom from "starlight-image-zoom";
 import react from "@astrojs/react";
 
 export default defineConfig({
+   // site: "https://docs.botrading.net",
+   // base: "/scriptbot",
+   // base: "/a",
+
    markdown: {
       rehypePlugins: [[rehypeHeadingIds, { headingIdCompat: true }]],
       remarkPlugins: [remarkCustomHeaderId],
@@ -68,13 +72,6 @@ export default defineConfig({
                   pt: "Espaços reservados",
                },
             },
-            {
-               label: "Indicators",
-               autogenerate: { directory: "indicators" },
-               translations: {
-                  pt: "Indicadores",
-               },
-            },
          ],
          customCss: ["./src/styles/custom.css"],
       }),
@@ -94,6 +91,7 @@ export default defineConfig({
             "@enums": path.resolve("./src/enums"),
             "@services": path.resolve("./src/services"),
             "@models": path.resolve("./src/models"),
+            "@configs": path.resolve("./src/configs"),
          },
       },
    },

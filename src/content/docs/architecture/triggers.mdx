@@ -8,12 +8,13 @@ import ImgFrame from "@components/ImgFrame.astro";
 import Preview from "@components/Preview.astro";
 import { Aside } from "@astrojs/starlight/components";
 import { Steps } from "@astrojs/starlight/components";
+import BaseLink from "@components/BaseLink.astro";
 
 Nesta página, você encontrará informações sobre os gatilhos de entrada, saída e atualização disponíveis no ScriptBot.
 
 ## O que é um gatilho?
 
-Um gatilho é um ponto de execução automatizado que verifica, em intervalos regulares, uma condição lógica definida pelo usuário. Essas condições são expressas por meio de expressões lógicas e avaliadas conforme a [frequência configurada](/settings/frequencies).
+Um gatilho é um ponto de execução automatizado que verifica, em intervalos regulares, uma condição lógica definida pelo usuário. Essas condições são expressas por meio de expressões lógicas e avaliadas conforme a <BaseLink href="/architecture/frequencies">Frequência Configurada</BaseLink>.
 
 No ScriptBot, os gatilhos são o mecanismo central de controle sobre ordens e posições, permitindo que o robô atue de forma autônoma, seguindo as regras definidas pelo usuário. Os principais tipos de gatilhos são:
 
@@ -77,7 +78,7 @@ O fluxo de execução é composto por quatro etapas principais, organizadas sequ
 4. **FILTROS**
    - Os filtros aplicam múltiplas camadas de validações para aumentar a **confiabilidade** da estratégia.
    - Cada filtro realiza uma **validação específica** e pode ter **pesos diferentes**, permitindo uma análise mais refinada.
-   - A documentação completa sobre os filtros podem ser encontradas em [Filtros](/architecture/filters).
+   - A documentação completa sobre os filtros podem ser encontradas em <BaseLink href="/architecture/filters">Filtros</BaseLink>.
    - **Opcional**: se não estiver configurado, o fluxo segue diretamente para **ENVIO DO PEDIDO**.
 5. **ENVIO DO PEDIDO**
    - Etapa final do fluxo.
@@ -88,7 +89,7 @@ O fluxo de execução é composto por quatro etapas principais, organizadas sequ
 
 {/* prettier-ignore */}
 <Aside type="tip">
-  Confira a página de [Configurações de Operações](/settings/operations) para complementar seu entendimento sobre os gatilhos e dar os primeiros passos na criação da sua estratégia.
+  Confira a página de <BaseLink href="/settings/operations">Configurações de Operações</BaseLink> para complementar seu entendimento sobre os gatilhos e dar os primeiros passos na criação da sua estratégia.
 </Aside>
 
 ## Gatilhos de saída
@@ -170,7 +171,7 @@ O fluxo é resumido nas seguintes etapas:
    - Garante que cada item seja processado individualmente, mantendo o controle do avanço.
 2. **SELEÇÃO DA ORDEM OU POSIÇÃO**  
    - Etapa responsável por selecionar a próxima ordem ou posição a ser processada.  
-   - Responsável por alimentar as [Variáveis Locais,](/placeholders/variables/#positions-and-orders).  
+   - Responsável por alimentar as <BaseLink href="/placeholders/variables/#positions-and-orders">Variáveis Locais</BaseLink>.  
    - Essa seleção alimenta a etapa seguinte: **SAÍDA INDIVIDUAL**.
 3. **SAÍDA INDIVIDUAL**  
    - Realiza a verificação principal para determinar se a ordem ou posição pode ser encerrada.  
@@ -215,7 +216,7 @@ O fluxo é resumido nas seguintes etapas:
    - Garante que cada item seja processado individualmente, mantendo o controle do avanço.
 2. **SELEÇÃO DA ORDEM OU POSIÇÃO**  
    - Etapa responsável por selecionar a próxima ordem ou posição a ser processada.  
-   - Responsável por alimentar as [Variáveis Locais,](/placeholders/variables/#positions-and-orders).  
+   - Responsável por alimentar as <BaseLink href="/placeholders/variables/#positions-and-orders">Variáveis Locais</BaseLink>.  
    - Essa seleção alimenta a etapa seguinte: **ATUALIZADOR INDIVIDUAL**.
 3. **ATUALIZADOR INDIVIDUAL**  
    - Realiza os cálculos condicionais da ordem ou posição.  

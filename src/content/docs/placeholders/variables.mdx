@@ -6,6 +6,7 @@ import CodeVar from "@components/CodeVar.astro";
 import VarTable from "@components/VarTable.astro";
 import { ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/variable-enums";
 import { Aside } from "@astrojs/starlight/components";
+import BaseLink from "@components/BaseLink.astro";
 
 Variáveis são identificadores que armazenam dados dinâmicos utilizados em
 operações e expressões lógicas. Elas representam valores que podem mudar ao
@@ -21,7 +22,7 @@ comportamento.
 
 {/* prettier-ignore */}
 <Aside type="tip">
-  Nos [Eventos](/references/events/#order-events), como no `OnPositionModify()`, as variáveis locais
+  Nos <BaseLink href="/references/events/#order-events">Eventos</BaseLink>, como no `OnPositionModify()`, as variáveis locais
   possuem duas versões: uma com o sufixo **\_OLD** e outra sem sufixo.
   <br />
   As variáveis com o sufixo **_OLD** contêm o valor **antes** da modificação, enquanto
@@ -68,17 +69,18 @@ comportamento.
 
 {/* prettier-ignore */}
 <Aside type="tip">
-  Variáveis de Ordens e Posições fechadas possuem 4 diferentes versões:  
-  **_WEEK** que retorna a soma total da semana,  
-  **_MONTH** que retorna a soma total do mês,  
-  **_YEAR** que retorna a soma total do ano,  
-  e as normais sem sufixo, que retornam o total do dia.
+  As variáveis de Ordens e Posições fechadas possuem quatro versões, que indicam diferentes períodos de tempo:  
+  * **\_WEEK**: soma total da **semana**  
+  * **\_MONTH**: soma total do **mês**  
+  * **\_YEAR**: soma total do **ano**  
+  * (sem sufixo): soma total do **dia**  
   <br />
-  Para usar basta adicionar o sufixo ao final da variável.  
-  Por exemplo: `ALL_VOLUME_WEEK`, `ALL_GAIN_YEAR`
+  Para utilizá-las, basta adicionar o sufixo correspondente ao final da variável.  
+  Exemplos: `ALL_VOLUME_WEEK`, `ALL_GAIN_YEAR`.  
   <br />
-  As siglas seguem o mesmo padrão, adicionando o sufixo ao final da variável.  
-  Por exemplo: `AVOL_WEEK`, `AGAIN_YEAR`
+  No caso dos **aliases**, os sufixos são aplicados em formato reduzido:  
+  Exemplos: `AVOLW` (ALL\_VOLUME\_WEEK), `AGAINY` (ALL\_GAIN\_YEAR)  
+  Sufixos disponíveis: `W` (semana), `M` (mês), `Y` (ano).
 </Aside>
 
 ## Sinais \{#signals\}

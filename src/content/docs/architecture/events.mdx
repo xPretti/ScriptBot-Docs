@@ -1,7 +1,7 @@
 ---
 title: Eventos
 sidebar:
-   order: 1
+   order: 0
    badge:
       text: Beta
       variant: caution
@@ -11,6 +11,7 @@ import ImgFrame from "@components/ImgFrame.astro";
 import { Aside } from "@astrojs/starlight/components";
 import Preview from "@components/Preview.astro";
 import { Steps } from "@astrojs/starlight/components";
+import BaseLink from "@components/BaseLink.astro";
 
 Nesta página, você encontrará informações sobre os eventos, para que servem e como eles podem ser utilizados em estratégias no ScriptBot.
 
@@ -45,7 +46,7 @@ Cada evento pode ser configurado de forma personalizada, de acordo com as necess
 
 ### Evento
 
--  **[01] - Tipo**: Define o tipo do evento que será ouvido. Acesse a [Lista de Eventos](/references/events/)
+-  **[01] - Tipo**: Define o tipo do evento que será ouvido. Acesse a <BaseLink href="/references/events/">Lista de Eventos</BaseLink>
 -  **[02 & 03] - Cálculos de Validação**: São expressões condicionais que o sistema executa quando o evento for chamado.
 -  **[04] - Executar em caso de sucesso**: Ações que serão executadas quando o evento for validado.
 -  **[05] - Executar em caso de falha**: Ações que serão executadas quando o evento falhar.

@@ -1,4 +1,6 @@
+import { BASE_URL } from "@src/configs/config";
 import styles from "./ReactFnReturn.module.css";
+import { getUrl } from "@src/utils/url-utils";
 
 interface Props {
    title: string;
@@ -7,8 +9,10 @@ interface Props {
    typeLink?: string;
 }
 
-export default function ReactFnReturn({ title, message, type, typeLink = "/references/types" }: Props) {
+export default function ReactFnReturn({ title, message, type, typeLink = `/references/types` }: Props) {
    if (!message) return null;
+
+   typeLink = getUrl(typeLink);
 
    return (
       <div className={styles.returnContainer}>

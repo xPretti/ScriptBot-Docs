@@ -15,6 +15,7 @@ import Preview from "@components/Preview.astro";
 import FreeMark from "@components/FreeMark.astro";
 import Params from "@components/Params.astro";
 import Param from "@components/Param.astro";
+import BaseLink from "@components/BaseLink.astro";
 
 Nesta página, você irá aprender a como instalar um indicador no ScriptBot.
 
@@ -47,7 +48,7 @@ No ScriptBot, existem dois tipos de indicadores:
 -  **Indicadores internos**
    -  São indicadores nativos do MetaTrader 5.
    -  Sua instalação é simples, feita apenas pelo nome do indicador.
-   -  Você pode consultar a lista completa acessando: [Lista de Indicadores](/references/indicators/)
+   -  Você pode consultar a lista completa acessando: <BaseLink href="/references/indicators/">Lista de Indicadores</BaseLink>
 -  **Indicadores externos**
    -  Desenvolvidos por terceiros, não fazem parte do MetaTrader 5 por padrão.
    -  A instalação requer o caminho completo do arquivo. Por exemplo: **"Market/Ultra ZigZag.ex5"**
@@ -63,10 +64,10 @@ Abaixo, você pode ver as duas formas de instalar um indicador:
 <Spoiler title="Indicadores Internos">
    <Steps>
       1. A instalação de um indicador interno é extremamente simples.  
-         O primeiro passo é escolher um indicador na [Lista de Indicadores](/references/indicators/).  
+         O primeiro passo é escolher um indicador na <BaseLink href="/references/indicators/">Lista de Indicadores</BaseLink>.  
       2. Com o indicador escolhido, basta adicioná-lo na configuração do robô.
          <ImgFrame>![Internal Alligator](@src/assets/IndAlligator.png)</ImgFrame>
-         No exemplo acima, o indicador [Alligator](/references/indicators/#alligator) foi adicionado na configuração do robô.
+         No exemplo acima, o indicador <BaseLink href="/references/indicators/#alligator">Alligator</BaseLink> foi adicionado na configuração do robô.
       3. Pronto! O indicador já está instalado, agora basta continuar com a configuração dos parâmetros.
    </Steps>
 </Spoiler>
@@ -109,9 +110,9 @@ Esses parâmetros permitem que o indicador seja flexível, adaptando-se a difere
 <Preview title="Entendendo os Parâmetros:"> 
    <FreeMark>
       0, SYMBOL, CURRENT
-      |    |        |-\> Período de Análise: [Lista de Períodos](/references/constants/#periods)
-      |    |----------\> Tipo de Ativo: [Lista de Ativos](/references/constants/#symbols)
-      |---------------\> Janela de Análise: [Lista de Janelas](/references/constants/#windows)
+      |    |        |-\> Período de Análise: <BaseLink href="/references/enumerators/#timeframes">Lista de Períodos</BaseLink>
+      |    |----------\> Tipo de Ativo: <BaseLink href="/references/constants/#symbols">Lista de Ativos</BaseLink>
+      |---------------\> Janela de Análise: <BaseLink href="/references/constants/#windows">Lista de Janelas</BaseLink>
    </FreeMark>
 </Preview>
 
@@ -143,8 +144,8 @@ Os parâmetros devem ser adicionados na ordem correta, conforme mostra a imagem 
 <Preview title="Entendendo os Parâmetros:"> 
    <FreeMark>
       13, 8, 8, 5, 5, 3, SMOOTHED, MEDIAN
-      |   |  |  |  |  |      |        |-> Applied price: [Lista de Preços](/references/enumerators/#prices)
-      |   |  |  |  |  |      |----------> Moving average method: [Lista de Metodos](/references/enumerators/#methods)
+      |   |  |  |  |  |      |        |-> Applied price: <BaseLink href="/references/enumerators/#prices">Lista de Preços</BaseLink>
+      |   |  |  |  |  |      |----------> Moving average method: <BaseLink href="/references/enumerators/#methods">Lista de Metodos</BaseLink>
       |   |  |  |  |  |-----------------> Lips shift
       |   |  |  |  |--------------------> Lips period
       |   |  |  |-----------------------> Teeth shift
@@ -219,7 +220,7 @@ O carregamento por arquivo .set pode não ser um processo simples, mas é fundam
 
 #### Usando Fragmentos
 
-Para utilizar os [Fragmentos](/architecture/fragments), é necessário abrir o arquivo .set. Nele, você pode alterar os valores e substituir pelos nomes dos fragmentos.  
+Para utilizar os <BaseLink href="/architecture/fragments">Fragmentos</BaseLink> em um arquivo .set, é necessário abrir o arquivo .set. Nele, você pode alterar os valores e substituir pelos nomes dos fragmentos.  
 Os arquivos .set salvos pelo Backtest podem apresentar parâmetros com várias barras (`||`), o que pode parecer confuso.  
 No entanto, tudo que estiver depois das barras são totalmente descartáveis e podem ser removidas sem causar qualquer erro de execução.
 

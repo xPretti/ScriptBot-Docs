@@ -7,6 +7,8 @@ import styles from "./ReactFnModal.module.css";
 import { X } from "lucide-react";
 import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
 import ReactFnContent from "./ReactFnContent";
+import { BASE_URL } from "@src/configs/config";
+import { getUrl } from "@src/utils/url-utils";
 
 export default function ReactFnModal({ fnCategory, fnName, children }: { fnCategory: ENUM_FUNCTION_CATEGORY_TYPE; fnName: string; children: React.ReactNode }) {
    const [isOpen, setIsOpen] = useState(false);
@@ -19,10 +21,16 @@ export default function ReactFnModal({ fnCategory, fnName, children }: { fnCateg
 
    return (
       <>
-         <div className={styles.description} onClick={() => setIsOpen(true)}>
+         <div
+            className={styles.description}
+            onClick={() => setIsOpen(true)}
+         >
             {children}
          </div>
-         <ReactModal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+         <ReactModal
+            isOpen={isOpen}
+            onClose={() => setIsOpen(false)}
+         >
             <div className={styles.container}>
                <div className={styles.header}>
                   <div className={styles.headerTop}>
@@ -30,7 +38,10 @@ export default function ReactFnModal({ fnCategory, fnName, children }: { fnCateg
                         <h1>{fn.name}[...]</h1>
                      </div>
                      <div className={styles.headerButtons}>
-                        <X className={styles.close} onClick={() => setIsOpen(false)} />
+                        <X
+                           className={styles.close}
+                           onClick={() => setIsOpen(false)}
+                        />
                      </div>
                   </div>
                </div>
@@ -40,7 +51,10 @@ export default function ReactFnModal({ fnCategory, fnName, children }: { fnCateg
                   </div>
                </div>
                <div className={styles.footer}>
-                  <a href={`/placeholders/functions/types/${fnCategory}/${fnName}`} className={styles.redirectBtn}>
+                  <a
+                     href={getUrl(`/placeholders/functions/types/${fnCategory}/${fnName}`)}
+                     className={styles.redirectBtn}
+                  >
                      Página da função
                   </a>
                </div>

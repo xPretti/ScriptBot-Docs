@@ -1,12 +1,14 @@
+import { BASE_URL } from "@src/configs/config";
 import styles from "./ReactFnParams.module.css";
 
 import type { FunctionParameter } from "@src/@types/functions-type";
+import { getUrl } from "@src/utils/url-utils";
 
 export default function ReactFnParams({ params }: { params: FunctionParameter[] }) {
    if (!params) return null;
 
    const getTypeLink = (p: string | undefined) => {
-      return p ? p : "/references/types";
+      return p ? getUrl(p) : getUrl("/references/types");
    };
 
    return (
