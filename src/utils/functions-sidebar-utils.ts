@@ -3,30 +3,28 @@ import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import { getFunctionCategoryLabel } from "@src/enums/function-enums";
 
 export function buildFunctionsSidebar(path: string) {
-   const pages = Array.from(FUNCTION_MAPPING.entries()).flatMap(
-      ([categoryKey, functionsMap]) =>
-         Array.from(functionsMap.values()).map((fn) => ({
-            label: `${fn.name}`,
-            link: `${path}${categoryKey}/${fn.name}`,
-            category: fn.category,
-            categoryLabel: getFunctionCategoryLabel[fn.category](),
-            description: fn.description.simple,
-         }))
+   const pages = Array.from(FUNCTION_MAPPING.entries()).flatMap(([categoryKey, functionsMap]) =>
+      Array.from(functionsMap.values()).map((fn) => ({
+         label: `${fn.name}`,
+         link: `${path}${categoryKey}/${fn.name}`,
+         category: fn.category,
+         categoryLabel: getFunctionCategoryLabel[fn.category](),
+         description: fn.description.simple,
+      }))
    );
 
    const pagesWithCategory = pages.filter((p) => p.category);
    const pagesWithoutCategory = pages.filter((p) => !p.category);
 
-   const categorizedPages: Record<string, { label: string; link: string }[]> =
-      pagesWithCategory.reduce((acc, page) => {
-         const category = page.categoryLabel!;
-         if (!acc[category]) acc[category] = [];
-         acc[category].push({
-            label: page.label,
-            link: page.link,
-         });
-         return acc;
-      }, {} as Record<string, { label: string; link: string }[]>);
+   const categorizedPages: Record<string, { label: string; link: string }[]> = pagesWithCategory.reduce((acc, page) => {
+      const category = page.categoryLabel!;
+      if (!acc[category]) acc[category] = [];
+      acc[category].push({
+         label: page.label,
+         link: page.link,
+      });
+      return acc;
+   }, {} as Record<string, { label: string; link: string }[]>);
 
    const sidebarGroups = [
       ...Object.entries(categorizedPages).map(([category, items]) => ({
