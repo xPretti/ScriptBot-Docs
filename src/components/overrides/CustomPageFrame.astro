@@ -1,0 +1,22 @@
+---
+import OriginalPageFrame from "@astrojs/starlight/components/PageFrame.astro";
+import HeadingHighlighter from "../behaviours/HeadingHighlighter.astro";
+const { hasSidebar, ...props } = Astro.props;
+---
+
+<OriginalPageFrame
+   {hasSidebar}
+   {...props}
+>
+   <slot
+      name="header"
+      slot="header"
+   />
+   <slot
+      name="sidebar"
+      slot="sidebar"
+   />
+   <slot />
+
+   <HeadingHighlighter />
+</OriginalPageFrame>

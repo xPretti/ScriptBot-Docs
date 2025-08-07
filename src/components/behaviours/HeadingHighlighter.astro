@@ -1,0 +1,27 @@
+---
+
+---
+
+<style is:global>
+   .sl-heading-wrapper.highlighted-title * {
+      color: var(--sl-color-accent-high);
+   }
+</style>
+
+<script>
+   function applyHeadingHighlight() {
+      document.querySelectorAll(".sl-heading-wrapper.highlighted-title").forEach((el) => el.classList.remove("highlighted-title"));
+
+      const hash = decodeURIComponent(window.location.hash);
+      if (!hash || !hash.startsWith("#")) return;
+
+      const heading = document.querySelector(hash);
+      if (!heading) return;
+
+      const wrapper = heading.closest(".sl-heading-wrapper");
+      if (wrapper) wrapper.classList.add("highlighted-title");
+   }
+
+   window.addEventListener("DOMContentLoaded", applyHeadingHighlight);
+   window.addEventListener("hashchange", applyHeadingHighlight);
+</script>

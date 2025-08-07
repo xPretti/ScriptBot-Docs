@@ -74,6 +74,9 @@ export default defineConfig({
             },
          ],
          customCss: ["./src/styles/custom.css"],
+         components: {
+            PageFrame: "./src/components/overrides/CustomPageFrame.astro",
+         },
       }),
       mdx({
          optimize: true,
