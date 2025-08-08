@@ -47,6 +47,9 @@
    --my-color-tooltip-bg: #fbfbfc;
    --my-color-tooltip-border: #c9c9c9;
    --my-color-tooltip-text: #1b1b1b;
+   --my-color-return-header: #dddddd;
+   --my-color-return-content: #f1f1f1;
+   --my-color-return-border: #dddddd;
 }
 
 /* Light mode colors. */
@@ -89,6 +92,9 @@
    --my-color-tooltip-bg: #1c2129;
    --my-color-tooltip-border: #4d5665;
    --my-color-tooltip-text: #ffffff;
+   --my-color-return-header: #303846;
+   --my-color-return-content: #232933;
+   --my-color-return-border: #303846;
 
    /* code highlighting */
    --code-text-color: #f1f1f1ff;
