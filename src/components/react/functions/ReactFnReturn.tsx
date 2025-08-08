@@ -1,18 +1,17 @@
 import { BASE_URL } from "@src/configs/config";
 import styles from "./ReactFnReturn.module.css";
 import { getUrl } from "@src/utils/url-utils";
+import ReactFnParamType from "./ReactFnParamType";
+import type { FunctionType } from "@src/@types/functions-type";
 
 interface Props {
    title: string;
    message?: string;
-   type?: string;
-   typeLink?: string;
+   type?: FunctionType;
 }
 
-export default function ReactFnReturn({ title, message, type, typeLink = `/references/types` }: Props) {
+export default function ReactFnReturn({ title, message, type }: Props) {
    if (!message) return null;
-
-   typeLink = getUrl(typeLink);
 
    return (
       <div className={styles.returnContainer}>
@@ -23,12 +22,12 @@ export default function ReactFnReturn({ title, message, type, typeLink = `/refer
                </div>
                <div className={styles.value}>
                   <p>{message}</p>
-                  <div className={styles.typeContainer}>
-                     <span>Retorno:</span>
-                     <a href={typeLink}>
-                        <p className={styles.type}>{type}</p>
-                     </a>
-                  </div>
+                  {type && (
+                     <div className={styles.typeContainer}>
+                        <span>Retorno:</span>
+                        <ReactFnParamType param={type} />
+                     </div>
+                  )}
                </div>
             </div>
          )}

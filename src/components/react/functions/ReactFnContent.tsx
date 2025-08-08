@@ -49,22 +49,19 @@ export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterfac
                         <ReactFnReturn
                            title="Em caso de sucesso:"
                            message={fn.returns.success?.message}
-                           type={fn.returns.success?.type.type}
-                           typeLink={fn.returns.success?.type.typeLink}
+                           type={fn.returns.success?.type}
                         />
                         <ReactFnReturn
                            title="Em caso de erro:"
                            message={fn.returns.error?.message}
-                           type={fn.returns.error?.type.type}
-                           typeLink={fn.returns.error?.type.typeLink}
+                           type={fn.returns.error?.type}
                         />
                      </div>
                   ) : (
                      <ReactFnReturn
                         title="Em caso de sucesso ou erro:"
                         message="Esta função executa uma ação, mas não retorna nenhum valor ao ser executada."
-                        type="void"
-                        typeLink="/references/types"
+                        type={{ type: "void", typeLink: "/references/types" }}
                      />
                   )}
                </div>

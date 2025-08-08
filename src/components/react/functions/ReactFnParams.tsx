@@ -2,14 +2,10 @@ import { BASE_URL } from "@src/configs/config";
 import styles from "./ReactFnParams.module.css";
 
 import type { FunctionParameter } from "@src/@types/functions-type";
-import { getUrl } from "@src/utils/url-utils";
+import ReactFnParamType from "./ReactFnParamType";
 
 export default function ReactFnParams({ params }: { params: FunctionParameter[] }) {
    if (!params) return null;
-
-   const getTypeLink = (p: string | undefined) => {
-      return p ? getUrl(p) : getUrl("/references/types");
-   };
 
    return (
       <table className={styles.table}>
@@ -20,9 +16,7 @@ export default function ReactFnParams({ params }: { params: FunctionParameter[] 
                   className={styles.param}
                >
                   <td>
-                     <a href={getTypeLink(param.type.typeLink)}>
-                        <span className={styles.type}>{param.type.type}</span>
-                     </a>
+                     <ReactFnParamType param={param.type} />
                   </td>
                   <td className={styles.variable}>{param.value ? <span> {param.name} </span> : <span> {param.name}; </span>}</td>
 

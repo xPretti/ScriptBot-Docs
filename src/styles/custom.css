@@ -44,6 +44,9 @@
    --my-color-spoiler-bg-header: var(--my-color-spoiler-bg);
    --my-color-param-value-bg: var(--my-color-spoiler-bg);
    --my-color-param-value-border: var(--my-color-spoiler-border);
+   --my-color-tooltip-bg: #fbfbfc;
+   --my-color-tooltip-border: #c9c9c9;
+   --my-color-tooltip-text: #1b1b1b;
 }
 
 /* Light mode colors. */
@@ -83,6 +86,9 @@
    --my-color-spoiler-bg-header: var(--my-color-spoiler-bg);
    --my-color-param-value-bg: var(--my-color-spoiler-bg);
    --my-color-param-value-border: var(--my-color-spoiler-border);
+   --my-color-tooltip-bg: #1c2129;
+   --my-color-tooltip-border: #4d5665;
+   --my-color-tooltip-text: #ffffff;
 
    /* code highlighting */
    --code-text-color: #f1f1f1ff;

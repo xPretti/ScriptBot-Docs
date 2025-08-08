@@ -1,0 +1,8 @@
+.type {
+   font-weight: bold;
+   color: var(--my-color-function-type);
+}
+
+.text {
+   white-space: pre-wrap;
+}

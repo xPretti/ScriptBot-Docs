@@ -1,0 +1,15 @@
+.tooltip {
+   position: absolute;
+   background: var(--my-color-tooltip-bg);
+   border: 1px solid var(--my-color-tooltip-border);
+   color: var(--my-color-tooltip-text);
+   padding: 0.1rem 0.5rem;
+   border-radius: 4px;
+   font-size: 14px;
+   max-width: 80%;
+   z-index: 100;
+}
+
+.tooltipContainer {
+   display: inline-block;
+}
