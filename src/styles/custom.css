@@ -4,6 +4,7 @@
    --sl-color-accent: #ee6a6a;
    /* Cor Principal */
    --sl-color-accent-high: #ee6a6a;
+   --sl-color-banner-text: var(--sl-color-black);
    --sl-color-white: #191919;
    --sl-color-gray-1: #2c2c2c;
    --sl-color-gray-2: #414141;
@@ -57,6 +58,7 @@
    --sl-color-accent-low: #eb8484;
    --sl-color-accent: #eb8484;
    --sl-color-accent-high: #ee6a6a;
+   --sl-color-banner-text: var(--sl-color-white);
    --sl-color-white: #ffffff;
    --sl-color-gray-1: #f0f2f6;
    --sl-color-gray-2: #d1d8e2;

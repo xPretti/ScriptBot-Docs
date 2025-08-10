@@ -34,7 +34,7 @@ export default defineConfig({
          favicon: "./favicon.ico",
          title: "ScriptBot",
          logo: {
-            src: "./src/assets/Botrading.png",
+            src: "./src/assets/ScriptBot.png",
          },
          social: [
             {
@@ -70,6 +70,20 @@ export default defineConfig({
                autogenerate: { directory: "placeholders" },
                translations: {
                   pt: "Espaços reservados",
+               },
+            },
+            {
+               label: "Resources",
+               autogenerate: { directory: "resources" },
+               translations: {
+                  pt: "Recursos",
+               },
+            },
+            {
+               label: "Knowledge",
+               autogenerate: { directory: "knowledge" },
+               translations: {
+                  pt: "Base de Conhecimento",
                },
             },
          ],
