@@ -12,7 +12,7 @@ hero:
         link: /architecture/triggers/
         icon: right-arrow
       - text: Download
-        link: https://github.com/astronaut/my-project
+        link: /resources/downloads
         icon: download
         variant: secondary
 banner:
@@ -25,7 +25,7 @@ banner:
 
 <!-- O ScriptBot foi desenvolvido com a finalidade de otimizar processos de automação no MetaTrader. Criado para aprimorar, simplificar e automatizar a criação de estratégias, ele reúne um conjunto robusto de recursos, incluindo gatilhos baseados em expressões lógicas, mecanismos de eventos, filtros inteligentes, integração total com indicadores e diversos subsistemas avançados. Com o ScriptBot, o trader transforma ideias em operações automatizadas de forma prática, flexível e totalmente personalizada, tornando possível construir um operacional completo e eficiente, sem depender de programação avançada. -->
 
-## Características
+## Recursos Principais
 
 -  Suporte a múltiplos ativos, permitindo obter dados de vários mercados simultaneamente
 -  Controle de risco para proteger seus investimentos
@@ -39,11 +39,3 @@ banner:
 -  Monitore e controle o robô por meio de um painel fácil de usar
 -  Tenha acesso a diversos subsistemas para funcionalidades extras
 -  Controle total de envio das ordens e definição de alvos
-
-## Para quem o ScriptBot foi desenvolvido
-
-O ScriptBot foi criado para atender a diferentes perfis de usuários, garantindo que tanto iniciantes quanto especialistas possam tirar o máximo proveito da ferramenta.
-
-**Usuários comuns:** Mesmo sem experiência em programação, usuários comuns podem criar, testar e colocar suas estratégias para rodar automaticamente de forma rápida, simples e segura.
-
-**Programadores:** Para quem tem experiência com código, o ScriptBot oferece toda a flexibilidade necessária para desenvolver protótipos funcionais e validar suas estratégias com agilidade.

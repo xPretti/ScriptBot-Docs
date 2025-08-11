@@ -14,7 +14,7 @@
    --sl-color-gray-6: #e4e3e3;
    --sl-color-gray-7: #f7f7f7;
    --sl-color-black: #ffffff;
-   --sl-content-width: 55rem;
+   --sl-content-width: 58rem;
 
    --sl-color-hairline: var(--sl-color-gray-6);
    --sl-color-hairline-shade: var(--sl-color-gray-6);
@@ -51,6 +51,7 @@
    --my-color-return-header: #dddddd;
    --my-color-return-content: #f1f1f1;
    --my-color-return-border: #dddddd;
+   --my-color-button-text-primary: #ffffff;
 }
 
 /* Light mode colors. */
@@ -97,6 +98,7 @@
    --my-color-return-header: #303846;
    --my-color-return-content: #232933;
    --my-color-return-border: #303846;
+   --my-color-button-text-primary: #ffffff;
 
    /* code highlighting */
    --code-text-color: #f1f1f1ff;
@@ -231,6 +233,10 @@ td:last-child {
 
 .sl-steps > li {
    padding-bottom: 1.5rem;
+}
+
+.sl-link-button.primary {
+   color: var(--my-color-button-text-primary);
 }
 
 /* 

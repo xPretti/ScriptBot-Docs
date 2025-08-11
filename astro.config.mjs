@@ -90,6 +90,7 @@ export default defineConfig({
          customCss: ["./src/styles/custom.css"],
          components: {
             PageFrame: "./src/components/overrides/CustomPageFrame.astro",
+            Header: "./src/components/overrides/CustomHeader.astro",
          },
       }),
       mdx({
