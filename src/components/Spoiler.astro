@@ -36,6 +36,11 @@ const { title = "Spoiler", open = false } = Astro.props;
       background-color: var(--my-color-spoiler-bg-header);
    }
 
+   .spoiler[open] .spoiler-title:hover,
+   .spoiler-title:hover {
+      background-color: var(--my-color-spoiler-bg-header-hover);
+   }
+
    .spoiler[open] .spoiler-title {
       margin: 0;
       color: var(--sl-color-accent-high);
