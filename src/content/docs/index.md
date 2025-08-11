@@ -17,7 +17,7 @@ hero:
         variant: secondary
 banner:
    content: |
-      ScriptBot 2.0 Dev Build está disponível!
+      ScriptBot v2 Dev Build está disponível!
       <a href="/resources/downloads">Confira</a>
 ---
 

@@ -1,0 +1,131 @@
+---
+import { Download } from "lucide-react";
+
+const { title, version, versionType, language, downloadUrl } = Astro.props;
+---
+
+<div>
+   <div class="download-card">
+      <div class="card-content">
+         <div class="text-content">
+            <div class="title-wrapper">
+               <h3 class="title">{title}</h3>
+               <p class="stability">Unstable</p>
+            </div>
+            <div class="meta-data">
+               <p><span class="label">Version:</span> <span class="value">{version}</span></p>
+               <p><span class="label">Type:</span> <span class="value">{versionType}</span></p>
+               <p><span class="label">Language:</span> <span class="value">{language}</span></p>
+            </div>
+         </div>
+         <div class="download-section">
+            <a
+               href={downloadUrl}
+               download={`${title} ${version} ${versionType} ${language}.${downloadUrl?.split(".").pop()}`}
+               class="download-button"
+            >
+               <p>Download</p>
+               <div class="download-icon">
+                  <Download />
+               </div>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<style>
+   .download-card * {
+      margin: 0;
+   }
+   .download-card {
+      background-color: var(--my-color-spoiler-bg);
+      border: 1px solid var(--my-color-spoiler-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      overflow: hidden;
+   }
+
+   .card-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 1.5rem;
+   }
+
+   .title-wrapper {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+   }
+
+   .stability {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 0.8rem;
+      background-color: #ad3d3d;
+      border: 1px solid #862c2c;
+      border-radius: 4px;
+      padding: 0 0.5rem;
+   }
+
+   .download-section {
+      display: flex;
+      align-items: start !important;
+      align-self: center;
+      justify-content: flex-end !important;
+   }
+
+   .download-button {
+      display: flex;
+      align-items: center;
+      background-color: var(--sl-color-accent);
+      border: 1px solid color-mix(in srgb, var(--sl-color-accent) 100%, black 10%);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: pointer;
+      gap: 0.5rem;
+      padding: 0.25rem 0.5rem;
+   }
+
+   .download-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+   }
+
+   .download-button:hover {
+      opacity: 0.8;
+   }
+
+   .text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .meta-data {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+   }
+
+   .label {
+      font-weight: 600;
+   }
+
+   .value {
+      font-weight: 400;
+      text-wrap: nowrap;
+   }
+
+   @media (max-width: 400px) {
+      .meta-data {
+         flex-direction: column;
+         gap: 0;
+      }
+   }
+</style>
