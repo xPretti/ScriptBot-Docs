@@ -1,10 +1,7 @@
 import { ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/variable-enums";
 import type { VariablePlaceholderInterface } from "@src/interfaces/placeholder-interface";
 
-export const VARIABLE_MAPPING: Map<
-   ENUM_VARIABLE_CATEGORY_TYPE,
-   Map<string, VariablePlaceholderInterface>
-> = new Map();
+export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, VariablePlaceholderInterface>> = new Map();
 
 [
    // Local Position
@@ -133,8 +130,7 @@ export const VARIABLE_MAPPING: Map<
       name: "_FLAG_CLIENT",
       aliases: "",
       description: {
-         simple:
-            "Retorna se o pedido foi adicionado usando expressões lógicas (como Buy(), Sell(), etc.).",
+         simple: "Retorna se o pedido foi adicionado usando expressões lógicas (como Buy(), Sell(), etc.).",
       },
    },
    {
@@ -142,8 +138,7 @@ export const VARIABLE_MAPPING: Map<
       name: "_FLAG_SA",
       aliases: "",
       description: {
-         simple:
-            "Retorna se o pedido foi adicionado pelo subsistema de Preço Médio Simples.",
+         simple: "Retorna se o pedido foi adicionado pelo subsistema de Preço Médio Simples.",
       },
    },
 
@@ -177,8 +172,7 @@ export const VARIABLE_MAPPING: Map<
       name: "_TRIG_PRICE",
       aliases: "",
       description: {
-         simple:
-            "Retorna o preço do gatilho, caso ele seja um gatilho de preço.",
+         simple: "Retorna o preço do gatilho, caso ele seja um gatilho de preço.",
       },
    },
    {
@@ -379,6 +373,38 @@ export const VARIABLE_MAPPING: Map<
    },
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      name: "DAY_OF_WEEK",
+      aliases: "DAYW",
+      description: {
+         simple: "Retorna o dia da semana.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      name: "DAY_OF_YEAR",
+      aliases: "DAYY",
+      description: {
+         simple: "Retorna o dia do ano.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      name: "MONTH",
+      aliases: "",
+      description: {
+         simple: "Retorna o mês atual.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      name: "YEAR",
+      aliases: "",
+      description: {
+         simple: "Retorna o ano atual.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
       name: "LAST",
       aliases: "",
       description: {
@@ -399,6 +425,14 @@ export const VARIABLE_MAPPING: Map<
       aliases: "LASTL",
       description: {
          simple: "Retorna a mínima do dia.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      name: "LAST_TIME",
+      aliases: "LASTT",
+      description: {
+         simple: "Retorna o último tempo comercializado.",
       },
    },
    {
@@ -462,8 +496,7 @@ export const VARIABLE_MAPPING: Map<
       name: "REAL",
       aliases: "",
       description: {
-         simple:
-            "Retorna o ativo real, o ativo que as ordens serão executadas.",
+         simple: "Retorna o ativo real, o ativo que as ordens serão executadas.",
       },
    },
 
@@ -521,8 +554,7 @@ export const VARIABLE_MAPPING: Map<
       name: "ALL_OPEN",
       aliases: "AOPEN",
       description: {
-         simple:
-            "Retorna a quantidade de pedidos abertos, tanto de posições quanto de ordens.",
+         simple: "Retorna a quantidade de pedidos abertos, tanto de posições quanto de ordens.",
       },
    },
    {
@@ -640,8 +672,7 @@ export const VARIABLE_MAPPING: Map<
       name: "BUY_GAIN_PROFIT",
       aliases: "BGAINP",
       description: {
-         simple:
-            "Retorna o total de profit ganho em compras ignorando as perdas.",
+         simple: "Retorna o total de profit ganho em compras ignorando as perdas.",
       },
    },
    {
@@ -649,8 +680,7 @@ export const VARIABLE_MAPPING: Map<
       name: "SELL_GAIN_PROFIT",
       aliases: "SGAINP",
       description: {
-         simple:
-            "Retorna o total de profit ganho em vendas ignorando as perdas.",
+         simple: "Retorna o total de profit ganho em vendas ignorando as perdas.",
       },
    },
    {
@@ -666,8 +696,7 @@ export const VARIABLE_MAPPING: Map<
       name: "BUY_LOSS_PROFIT",
       aliases: "BLOSSP",
       description: {
-         simple:
-            "Retorna o total de profit perdido em compras ignorando os ganhos.",
+         simple: "Retorna o total de profit perdido em compras ignorando os ganhos.",
       },
    },
    {
@@ -675,8 +704,7 @@ export const VARIABLE_MAPPING: Map<
       name: "SELL_LOSS_PROFIT",
       aliases: "SLOSSP",
       description: {
-         simple:
-            "Retorna o total de profit perdido em vendas ignorando os ganhos.",
+         simple: "Retorna o total de profit perdido em vendas ignorando os ganhos.",
       },
    },
    {
@@ -854,8 +882,7 @@ export const VARIABLE_MAPPING: Map<
       name: "SIG_LAST",
       aliases: "SIGL",
       description: {
-         simple:
-            "Retorna o tipo do último sinal. (-1 = Nenhum, 0 = Compra, 1 = Venda)",
+         simple: "Retorna o tipo do último sinal. (-1 = Nenhum, 0 = Compra, 1 = Venda)",
       },
    },
    {
@@ -919,8 +946,7 @@ export const VARIABLE_MAPPING: Map<
       name: "SIG_LAST_CONFIRM",
       aliases: "SIGLC",
       description: {
-         simple:
-            "Retorna o tipo do último sinal confirmado. (-1 = Nenhum, 0 = Compra, 1 = Venda)",
+         simple: "Retorna o tipo do último sinal confirmado. (-1 = Nenhum, 0 = Compra, 1 = Venda)",
       },
    },
    {
