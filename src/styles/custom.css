@@ -55,7 +55,6 @@
    --my-color-button-text-primary: #ffffff;
 }
 
-/* Light mode colors. */
 :root[data-theme="dark"] {
    --sl-color-accent-low: #eb8484;
    --sl-color-accent: #eb8484;
@@ -75,6 +74,19 @@
    --sl-color-bg: var(--sl-color-black);
    --sl-color-bg-nav: #232933;
    --sl-color-bg-sidebar: var(--sl-color-bg-nav);
+
+   --sl-color-blue-high: #5b6bff;
+   --sl-color-blue: #5b6bff;
+   --sl-color-blue-low: #28328654;
+   --sl-color-orange-high: #ffb274;
+   --sl-color-orange: #ffb274;
+   --sl-color-orange-low: #86522854;
+   --sl-color-purple-high: #ce64ff;
+   --sl-color-purple: #ce64ff;
+   --sl-color-purple-low: #68288654;
+   --sl-color-red-high: #fd6666;
+   --sl-color-red: #fd6666;
+   --sl-color-red-low: #86282854;
 
    --my-color-function-description: #303846;
    --my-color-row-hover: #303846;
@@ -222,7 +234,7 @@ td:last-child {
 }
 
 .starlight-aside {
-   border-radius: 10px;
+   border-radius: 6px;
 }
 
 .tablist-wrapper a[role="tab"] {
@@ -239,6 +251,14 @@ td:last-child {
 
 .sl-link-button.primary {
    color: var(--my-color-button-text-primary);
+}
+
+.card {
+   border-radius: 5px;
+}
+.card:hover {
+   background-color: var(--sl-color-gray-7);
+   border-color: var(--sl-color-gray-3);
 }
 
 /* 
