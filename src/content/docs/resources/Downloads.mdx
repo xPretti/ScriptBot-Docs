@@ -6,6 +6,7 @@ tableOfContents: false
 Nesta página, você encontrará os downloads do ScriptBot.
 
 import DownloadCard from "@components/DownloadCard.astro";
+import Frame from "@components/Frame.astro";
 import { Aside } from "@astrojs/starlight/components";
 
 ## Dev-Build versions
@@ -19,10 +20,17 @@ import { Aside } from "@astrojs/starlight/components";
 <br />
 <br />
 
-<DownloadCard
-   title="ScriptBot MT5"
-   version="2.0"
-   versionType="Dev-Build"
-   language="PT_BR"
-   downloadUrl="/downloads/ScriptBot MT5 PT_BR.ex5"
-></DownloadCard>
+{/* prettier-ignore */}
+{/* <DownloadCard
+title="ScriptBot MT5"
+version="2.0"
+versionType="Dev-Build"
+language="PT_BR"
+downloadUrl="/downloads/ScriptBot MT5 PT_BR.ex5"
+
+> </DownloadCard> */}
+
+{/* prettier-ignore */}
+<Frame>
+   Os downloads e changelogs podem ser encontrados em nosso [Grupo de Discord](https://discord.botrading.net).
+</Frame>
