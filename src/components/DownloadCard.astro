@@ -21,7 +21,7 @@ const { title, version, versionType, language, downloadUrl } = Astro.props;
          <div class="download-section">
             <a
                href={downloadUrl}
-               download={`${title} ${version} ${versionType} ${language}.${downloadUrl?.split(".").pop()}`}
+               download={`${title} ${language}.${downloadUrl?.split(".").pop()}`}
                class="download-button"
             >
                <p>Download</p>
