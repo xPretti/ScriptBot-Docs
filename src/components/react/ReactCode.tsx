@@ -179,7 +179,6 @@ export default function ReactCode({ children, language }: Props) {
          language={language}
          showLineNumbers={true}
          showInlineLineNumbers={true}
-         wrapLongLines={true}
          wrapLines={true}
          style={theme}
          className={styles.code}
