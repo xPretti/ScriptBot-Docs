@@ -3410,6 +3410,93 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    // TRADES
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "PosAveragePrice",
+      aliases: "PAverage",
+      description: {
+         simple: "Retorna o preço médio das posições.",
+         complex: "Esta função retorna o preço médio ponderado das posições abertas de acordo com os parâmetros fornecidos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/references/enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+      ],
+      examples: ['PosAveragePrice[TYPE_ALL, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o preço médio das posições abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "PosAverageDir",
+      aliases: "PAverageDir",
+      description: {
+         simple: "Retorna a direção média das posições abertas.",
+         complex:
+            "Esta função calcula e retorna a direção predominante das posições abertas, considerando o tipo de trade. Útil para identificar rapidamente a tendência predominante das operações em andamento, seja de compra, venda ou equilíbrio.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/references/enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+      ],
+      examples: ['PosAverageDir[TYPE_ALL, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna a direção até a média: (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma posição for encontrada ou se houver equilíbrio perfeito entre compras e vendas (preço estagnado).",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllTotal",
       aliases: "ATotal",
       description: {
@@ -5428,93 +5515,6 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          error: {
             message: "Retorna string vazia se a ordem não for encontrada.",
             type: { type: "string" },
-         },
-      },
-   },
-   {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "PosAveragePrice",
-      aliases: "PAverage",
-      description: {
-         simple: "Retorna o preço médio das posições.",
-         complex: "Esta função retorna o preço médio ponderado das posições abertas de acordo com os parâmetros fornecidos.",
-      },
-      parameters: [
-         {
-            type: {
-               type: "ENUM_TRADE",
-               typeLink: "/references/enumerators#trade",
-            },
-            name: "type",
-            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
-            value: "TYPE_ALL",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
-         {
-            type: { type: "ulong" },
-            name: "magic",
-            comment: "Número mágico para filtrar as operações.",
-            value: "MAGIC",
-         },
-      ],
-      examples: ['PosAveragePrice[TYPE_ALL, "EURUSD"]'],
-      returns: {
-         success: {
-            message: "Retorna o preço médio das posições abertas.",
-            type: { type: "double" },
-         },
-         error: {
-            message: "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
-            type: { type: "double" },
-         },
-      },
-   },
-   {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "PosAverageDir",
-      aliases: "PAverageDir",
-      description: {
-         simple: "Retorna a direção média das posições abertas.",
-         complex:
-            "Esta função calcula e retorna a direção predominante das posições abertas, considerando o tipo de trade. Útil para identificar rapidamente a tendência predominante das operações em andamento, seja de compra, venda ou equilíbrio.",
-      },
-      parameters: [
-         {
-            type: {
-               type: "ENUM_TRADE",
-               typeLink: "/references/enumerators#trade",
-            },
-            name: "type",
-            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
-            value: "TYPE_ALL",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
-         {
-            type: { type: "ulong" },
-            name: "magic",
-            comment: "Número mágico para filtrar as operações.",
-            value: "MAGIC",
-         },
-      ],
-      examples: ['PosAverageDir[TYPE_ALL, "EURUSD"]'],
-      returns: {
-         success: {
-            message: "Retorna a direção até a média: (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
-            type: { type: "int" },
-         },
-         error: {
-            message: "Retorna 0 se nenhuma posição for encontrada ou se houver equilíbrio perfeito entre compras e vendas (preço estagnado).",
-            type: { type: "int" },
          },
       },
    },
