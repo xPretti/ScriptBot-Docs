@@ -621,7 +621,54 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
          simple: "Retorna a quantidade de ordens de venda abertas.",
       },
    },
-
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      name: "ALL_AVERAGE_PRICE",
+      aliases: "AAVERAGE",
+      description: {
+         simple: "Retorna o preço médio de todas as posições abertas.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      name: "ALL_AVERAGE_DIR",
+      aliases: "AAVERAGEDIR",
+      description: {
+         simple: "Retorna a direção média das posições abertas. (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      name: "BUY_AVERAGE_PRICE",
+      aliases: "BAVERAGE",
+      description: {
+         simple: "Retorna o preço médio das posições de compra abertas.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      name: "BUY_AVERAGE_DIR",
+      aliases: "BAVERAGEDIR",
+      description: {
+         simple: "Retorna a direção média das posições de compra abertas.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      name: "SELL_AVERAGE_PRICE",
+      aliases: "SAVERAGE",
+      description: {
+         simple: "Retorna o preço médio das posições de venda abertas.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      name: "SELL_AVERAGE_DIR",
+      aliases: "SAVERAGEDIR",
+      description: {
+         simple: "Retorna a direção média das posições de venda abertas.",
+      },
+   },
    // CLOSED TRADES
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,

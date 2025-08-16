@@ -4079,7 +4079,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
@@ -4094,7 +4094,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       ],
       examples: [
          "PosDouble[123456, TYPE_VOLUME] // Retorna o volume/lotes da posição",
-         "PosDouble[Ticket[0], TYPE_OPEN] // Retorna o preço de abertura da posição",
+         "PosDouble[PosTicket[0], TYPE_OPEN] // Retorna o preço de abertura da posição",
       ],
       returns: {
          success: {
@@ -4117,7 +4117,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
@@ -4132,7 +4132,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       ],
       examples: [
          "PosInt[123456, TYPE_TIME] // Retorna o timestamp de abertura da posição",
-         "PosInt[Ticket[0], TYPE_MAGIC] // Retorna o número mágico da posição",
+         "PosInt[PosTicket[0], TYPE_MAGIC] // Retorna o número mágico da posição",
       ],
       returns: {
          success: {
@@ -4155,7 +4155,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
@@ -4170,7 +4170,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       ],
       examples: [
          "PosString[123456, TYPE_SYMBOL] // Retorna o símbolo do ativo da posição",
-         "PosString[Ticket[0], TYPE_COMMENT] // Retorna o comentário da posição",
+         "PosString[PosTicket[0], TYPE_COMMENT] // Retorna o comentário da posição",
       ],
       returns: {
          success: {
@@ -4193,12 +4193,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosCurrent[Ticket[0]]"],
+      examples: ["PosCurrent[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço atual da posição.",
@@ -4220,12 +4220,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosOpen[Ticket[0]]"],
+      examples: ["PosOpen[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço de abertura da posição.",
@@ -4247,12 +4247,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosProfit[Ticket[0]]"],
+      examples: ["PosProfit[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o lucro/prejuízo atual da posição.",
@@ -4274,12 +4274,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosStop[Ticket[0]]"],
+      examples: ["PosStop[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço do Stop Loss.",
@@ -4301,12 +4301,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosSwap[Ticket[0]]"],
+      examples: ["PosSwap[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o valor acumulado de swap.",
@@ -4328,12 +4328,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosTake[Ticket[0]]"],
+      examples: ["PosTake[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço do Take Profit.",
@@ -4355,12 +4355,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosVolume[Ticket[0]]"],
+      examples: ["PosVolume[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o volume da posição.",
@@ -4383,12 +4383,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosIdentifier[Ticket[0]]"],
+      examples: ["PosIdentifier[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o ticket da posição.",
@@ -4410,12 +4410,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosMagic[Ticket[0]]"],
+      examples: ["PosMagic[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o número mágico da posição.",
@@ -4437,12 +4437,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosReason[Ticket[0]]"],
+      examples: ["PosReason[PosTicket[0]]"],
       returns: {
          success: {
             message:
@@ -4465,12 +4465,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosTime[Ticket[0]]"],
+      examples: ["PosTime[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o datetime de abertura da posição.",
@@ -4492,12 +4492,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosTimeMsc[Ticket[0]]"],
+      examples: ["PosTimeMsc[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o timestamp em milissegundos.",
@@ -4519,12 +4519,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosTimeUpdate[Ticket[0]]"],
+      examples: ["PosTimeUpdate[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o datetime da última atualização.",
@@ -4546,12 +4546,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosTimeUpdateMsc[Ticket[0]]"],
+      examples: ["PosTimeUpdateMsc[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o timestamp em milissegundos.",
@@ -4573,12 +4573,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosType[Ticket[0]]"],
+      examples: ["PosType[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna 0 (compra) ou 1 (venda).",
@@ -4600,12 +4600,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosSymbol[Ticket[0]]"],
+      examples: ["PosSymbol[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o símbolo do ativo.",
@@ -4627,12 +4627,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosComment[Ticket[0]]"],
+      examples: ["PosComment[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o comentário da posição.",
@@ -4654,12 +4654,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a posição.",
          },
       ],
-      examples: ["PosExternal[Ticket[0]]"],
+      examples: ["PosExternal[PosTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o ID externo da posição.",
@@ -4730,7 +4730,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
@@ -4745,7 +4745,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       ],
       examples: [
          "OrderDouble[123456, TYPE_VOLUME] // Retorna o volume/lotes da ordem",
-         "OrderDouble[Ticket[0], TYPE_OPEN] // Retorna o preço de abertura da ordem",
+         "OrderDouble[OrderTicket[0], TYPE_OPEN] // Retorna o preço de abertura da ordem",
       ],
       returns: {
          success: {
@@ -4768,7 +4768,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
@@ -4783,7 +4783,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       ],
       examples: [
          "OrderInt[123456, TYPE_TIME_SETUP] // Retorna o timestamp de abertura da ordem",
-         "OrderInt[Ticket[0], TYPE_MAGIC] // Retorna o número mágico da ordem",
+         "OrderInt[OrderTicket[0], TYPE_MAGIC] // Retorna o número mágico da ordem",
       ],
       returns: {
          success: {
@@ -4806,7 +4806,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
@@ -4821,7 +4821,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       ],
       examples: [
          "OrderString[123456, TYPE_SYMBOL] // Retorna o símbolo do ativo da ordem",
-         "OrderString[Ticket[0], TYPE_COMMENT] // Retorna o comentário da ordem",
+         "OrderString[OrderTicket[0], TYPE_COMMENT] // Retorna o comentário da ordem",
       ],
       returns: {
          success: {
@@ -4844,12 +4844,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderVolumeInit[Ticket[0]]"],
+      examples: ["OrderVolumeInit[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o volume inicial da ordem.",
@@ -4871,12 +4871,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderVolume[Ticket[0]]"],
+      examples: ["OrderVolume[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o volume atual da ordem.",
@@ -4898,12 +4898,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderOpen[Ticket[0]]"],
+      examples: ["OrderOpen[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço de abertura da ordem.",
@@ -4925,12 +4925,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderStop[Ticket[0]]"],
+      examples: ["OrderStop[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço do Stop Loss.",
@@ -4952,12 +4952,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderTake[Ticket[0]]"],
+      examples: ["OrderTake[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço do Take Profit.",
@@ -4979,12 +4979,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderCurrent[Ticket[0]]"],
+      examples: ["OrderCurrent[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço atual do ativo da ordem.",
@@ -5006,12 +5006,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderStopLimit[Ticket[0]]"],
+      examples: ["OrderStopLimit[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço de ativação da Stop Limit.",
@@ -5033,12 +5033,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderSetup[Ticket[0]]"],
+      examples: ["OrderSetup[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o datetime de criação da ordem.",
@@ -5060,12 +5060,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderType[Ticket[0]]"],
+      examples: ["OrderType[OrderTicket[0]]"],
       returns: {
          success: {
             message:
@@ -5088,12 +5088,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderState[Ticket[0]]"],
+      examples: ["OrderState[OrderTicket[0]]"],
       returns: {
          success: {
             message:
@@ -5116,12 +5116,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderTimeExpiration[Ticket[0]]"],
+      examples: ["OrderTimeExpiration[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o datetime de expiração da ordem.",
@@ -5143,12 +5143,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderDone[Ticket[0]]"],
+      examples: ["OrderDone[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o datetime de execução/cancelamento.",
@@ -5170,12 +5170,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderSetupMsc[Ticket[0]]"],
+      examples: ["OrderSetupMsc[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o timestamp em milissegundos.",
@@ -5197,12 +5197,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderDoneMsc[Ticket[0]]"],
+      examples: ["OrderDoneMsc[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o timestamp em milissegundos.",
@@ -5224,12 +5224,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderFilling[Ticket[0]]"],
+      examples: ["OrderFilling[OrderTicket[0]]"],
       returns: {
          success: {
             message:
@@ -5252,12 +5252,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderTime[Ticket[0]]"],
+      examples: ["OrderTime[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o datetime da última modificação.",
@@ -5279,12 +5279,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderMagic[Ticket[0]]"],
+      examples: ["OrderMagic[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o número mágico da ordem.",
@@ -5306,12 +5306,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderReason[Ticket[0]]"],
+      examples: ["OrderReason[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o código do motivo de criação. (0: Desktop, 1: Mobile, 2: Web, 3: Expert, 4: Stop Loss, 5: Take Profit, 6: Stop Out) ",
@@ -5333,12 +5333,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderId[Ticket[0]]"],
+      examples: ["OrderId[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o ID da ordem.",
@@ -5360,7 +5360,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "ID da ordem no sistema.",
          },
@@ -5387,12 +5387,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderSymbol[Ticket[0]]"],
+      examples: ["OrderSymbol[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o símbolo do ativo.",
@@ -5414,12 +5414,12 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       },
       parameters: [
          {
-            type: { type: "int" },
+            type: { type: "ulong" },
             name: "ticket",
             comment: "Número do ticket que identifica a ordem.",
          },
       ],
-      examples: ["OrderComment[Ticket[0]]"],
+      examples: ["OrderComment[OrderTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o comentário da ordem.",
@@ -5428,6 +5428,93 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          error: {
             message: "Retorna string vazia se a ordem não for encontrada.",
             type: { type: "string" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "PosAveragePrice",
+      aliases: "PAverage",
+      description: {
+         simple: "Retorna o preço médio das posições.",
+         complex: "Esta função retorna o preço médio ponderado das posições abertas de acordo com os parâmetros fornecidos.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/references/enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+      ],
+      examples: ['PosAveragePrice[TYPE_ALL, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna o preço médio das posições abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "PosAverageDir",
+      aliases: "PAverageDir",
+      description: {
+         simple: "Retorna a direção média das posições abertas.",
+         complex:
+            "Esta função calcula e retorna a direção predominante das posições abertas, considerando o tipo de trade. Útil para identificar rapidamente a tendência predominante das operações em andamento, seja de compra, venda ou equilíbrio.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/references/enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+      ],
+      examples: ['PosAverageDir[TYPE_ALL, "EURUSD"]'],
+      returns: {
+         success: {
+            message: "Retorna a direção até a média: (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma posição for encontrada ou se houver equilíbrio perfeito entre compras e vendas (preço estagnado).",
+            type: { type: "int" },
          },
       },
    },
@@ -5525,7 +5612,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealProfit[Ticket[0]]"],
+      examples: ["DealProfit[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o valor do lucro/prejuízo do negócio.",
@@ -5552,7 +5639,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealOpen[Ticket[0]]"],
+      examples: ["DealOpen[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço de abertura do negócio.",
@@ -5579,7 +5666,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealCommission[Ticket[0]]"],
+      examples: ["DealCommission[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o valor da comissão do negócio.",
@@ -5606,7 +5693,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealFee[Ticket[0]]"],
+      examples: ["DealFee[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o valor da taxa do negócio.",
@@ -5633,7 +5720,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealStop[Ticket[0]]"],
+      examples: ["DealStop[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço do stop loss do negócio.",
@@ -5660,7 +5747,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealTake[Ticket[0]]"],
+      examples: ["DealTake[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o preço do take profit do negócio.",
@@ -5687,7 +5774,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealSwap[Ticket[0]]"],
+      examples: ["DealSwap[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o valor do swap do negócio.",
@@ -5714,7 +5801,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealVolume[Ticket[0]]"],
+      examples: ["DealVolume[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o volume do negócio.",
@@ -5741,7 +5828,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealMagic[Ticket[0]]"],
+      examples: ["DealMagic[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o número mágico do negócio.",
@@ -5768,7 +5855,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealReason[Ticket[0]]"],
+      examples: ["DealReason[DealTicket[0]]"],
       returns: {
          success: {
             message:
@@ -5796,7 +5883,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealOrder[Ticket[0]]"],
+      examples: ["DealOrder[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o ticket da ordem associada.",
@@ -5823,7 +5910,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealId[Ticket[0]]"],
+      examples: ["DealId[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o ID do negócio.",
@@ -5850,7 +5937,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealEntry[Ticket[0]]"],
+      examples: ["DealEntry[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o código do tipo de entrada. (0=Entrada, 1=Saída, 2=Reversão, 3=Fechamento por oposta)",
@@ -5877,7 +5964,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealOut[Ticket[0]]"],
+      examples: ["DealOut[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna true se o negócio for uma saída.",
@@ -5904,7 +5991,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealIn[Ticket[0]]"],
+      examples: ["DealIn[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna true se o negócio for uma entrada.",
@@ -5931,7 +6018,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealTime[Ticket[0]]"],
+      examples: ["DealTime[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna a data/hora da execução do negócio.",
@@ -5958,7 +6045,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealTimeMsc[Ticket[0]]"],
+      examples: ["DealTimeMsc[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna a data/hora em milissegundos da execução do negócio.",
@@ -5985,7 +6072,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealType[Ticket[0]]"],
+      examples: ["DealType[DealTicket[0]]"],
       returns: {
          success: {
             message:
@@ -6013,7 +6100,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealComment[Ticket[0]]"],
+      examples: ["DealComment[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o comentário do negócio.",
@@ -6040,7 +6127,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealExternal[Ticket[0]]"],
+      examples: ["DealExternal[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o ID externo do negócio.",
@@ -6067,7 +6154,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número do ticket que identifica o negócio.",
          },
       ],
-      examples: ["DealSymbol[Ticket[0]]"],
+      examples: ["DealSymbol[DealTicket[0]]"],
       returns: {
          success: {
             message: "Retorna o símbolo do negócio.",
