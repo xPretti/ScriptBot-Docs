@@ -3483,10 +3483,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             value: "MAGIC",
          },
       ],
-      examples: ['PosAverageDir[TYPE_ALL, "EURUSD"]'],
+      examples: ['PosAverageDir[TYPE_ALL, "EURUSD"]', 'PosAverageDir[TYPE_ALL, "EURUSD"] == 1 // Indica que existe mais compras do que vendas.'],
       returns: {
          success: {
-            message: "Retorna a direção até a média: (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
+            message: "Retorna a direção média das posições abertas. (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
             type: { type: "int" },
          },
          error: {

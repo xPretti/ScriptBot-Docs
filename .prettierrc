@@ -4,5 +4,6 @@
   "printWidth": 160,
   "objectWrap": "preserve",
   "bracketSameLine": false,
-  "singleAttributePerLine": true
+  "singleAttributePerLine": true,
+  "endOfLine": "auto"
 }
