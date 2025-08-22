@@ -11,12 +11,10 @@ export enum ENUM_FUNCTION_CATEGORY_TYPE {
    OPEN_TRADE = "opentrade",
    CLOSE_TRADE = "closetrade",
    TRADE = "trade",
+   GLOBAL_VARIABLE = "globalvariable",
 }
 
-export const getFunctionCategoryLabel: Record<
-   ENUM_FUNCTION_CATEGORY_TYPE,
-   () => string
-> = {
+export const getFunctionCategoryLabel: Record<ENUM_FUNCTION_CATEGORY_TYPE, () => string> = {
    [ENUM_FUNCTION_CATEGORY_TYPE.INDICATOR]: () => "Indicadores",
    [ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE]: () => "Variáveis de usuário",
    [ENUM_FUNCTION_CATEGORY_TYPE.CANDLE]: () => "Candles",
@@ -29,4 +27,5 @@ export const getFunctionCategoryLabel: Record<
    [ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE]: () => "Negociações abertas",
    [ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE]: () => "Negociações fechadas",
    [ENUM_FUNCTION_CATEGORY_TYPE.TRADE]: () => "Negociações",
+   [ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE]: () => "Variáveis globais",
 };

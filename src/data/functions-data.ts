@@ -203,7 +203,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearDouble",
-      aliases: "",
+      aliases: "CleDou",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
          complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
@@ -228,7 +228,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearInt",
-      aliases: "",
+      aliases: "CleInt",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
          complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
@@ -253,7 +253,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearString",
-      aliases: "",
+      aliases: "CleStr",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
          complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
@@ -278,7 +278,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "CreateDouble",
-      aliases: "",
+      aliases: "CreDou",
       description: {
          simple: "Cria uma variável caso ela não exista.",
          complex: "Esta função permite criar uma variável caso não exista.",
@@ -318,7 +318,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "CreateInt",
-      aliases: "",
+      aliases: "CreInt",
       description: {
          simple: "Cria uma variável caso ela não exista.",
          complex: "Esta função permite criar uma variável caso não exista.",
@@ -358,7 +358,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "CreateString",
-      aliases: "",
+      aliases: "CreStr",
       description: {
          simple: "Cria uma variável caso ela não exista.",
          complex: "Esta função permite criar uma variável caso não exista.",
@@ -398,7 +398,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "GetDouble",
-      aliases: "",
+      aliases: "GetDou",
       description: {
          simple: "Retorna o valor de uma variável criada pelo usuário.",
          complex: "Esta função retorna o valor de uma variável criada pelo usuário.",
@@ -464,7 +464,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "GetString",
-      aliases: "",
+      aliases: "GetStr",
       description: {
          simple: "Retorna o valor de uma variável criada pelo usuário.",
          complex: "Esta função retorna o valor de uma variável criada pelo usuário.",
@@ -497,7 +497,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "RemoveDouble",
-      aliases: "",
+      aliases: "RemDou",
       description: {
          simple: "Remove uma variável caso ela exista.",
          complex: "Esta função permite remover uma variável caso ela exista.",
@@ -530,7 +530,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "RemoveInt",
-      aliases: "",
+      aliases: "RemInt",
       description: {
          simple: "Remove uma variável caso ela exista.",
          complex: "Esta função permite remover uma variável caso ela exista.",
@@ -563,7 +563,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "RemoveString",
-      aliases: "",
+      aliases: "RemStr",
       description: {
          simple: "Remove uma variável caso ela exista.",
          complex: "Esta função permite remover uma variável caso ela exista.",
@@ -596,7 +596,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ReplaceDouble",
-      aliases: "",
+      aliases: "RepDou",
       description: {
          simple: "Substitui o valor de uma variável caso ela exista.",
          complex: "Esta função permite substituir o valor de uma variável caso não exista.",
@@ -636,7 +636,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ReplaceInt",
-      aliases: "",
+      aliases: "RepInt",
       description: {
          simple: "Substitui o valor de uma variável caso ela exista.",
          complex: "Esta função permite substituir o valor de uma variável caso não exista.",
@@ -676,7 +676,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ReplaceString",
-      aliases: "",
+      aliases: "RepStr",
       description: {
          simple: "Substitui o valor de uma variável caso ela exista.",
          complex: "Esta função permite substituir o valor de uma variável caso não exista.",
@@ -716,7 +716,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "SetDouble",
-      aliases: "",
+      aliases: "SetDou",
       description: {
          simple: "Define o valor de uma variável ou cria uma nova.",
          complex: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
@@ -796,7 +796,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "SetString",
-      aliases: "",
+      aliases: "SetStr",
       description: {
          simple: "Define o valor de uma variável ou cria uma nova.",
          complex: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
@@ -830,6 +830,307 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             type: {
                type: "bool",
             },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      name: "AddDouble",
+      aliases: "AddDou",
+      description: {
+         simple: "Adiciona um valor double a uma variável existente.",
+         complex: "Esta função adiciona um valor double ao valor atual de uma variável. Se a variável não existir, ela será criada com o valor especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome da variável.",
+         },
+         {
+            type: { type: "double" },
+            name: "value",
+            comment: "Valor double a ser adicionado.",
+         },
+      ],
+      examples: ['AddDouble("saldo", 15.75)'],
+      returns: {
+         success: {
+            message: "Retorna true se o valor foi adicionado/criado com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se ocorrer um erro na operação.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      name: "AddInt",
+      aliases: "",
+      description: {
+         simple: "Adiciona um valor inteiro a uma variável existente.",
+         complex: "Esta função adiciona um valor inteiro ao valor atual de uma variável. Se a variável não existir, ela será criada com o valor especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome da variável.",
+         },
+         {
+            type: { type: "int" },
+            name: "value",
+            comment: "Valor inteiro a ser adicionado.",
+         },
+      ],
+      examples: ['AddInt("contador", 5)'],
+      returns: {
+         success: {
+            message: "Retorna true se o valor foi adicionado/criado com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se ocorrer um erro na operação.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   //GLOBAL
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      name: "GetGlobal",
+      aliases: "GetG",
+      description: {
+         simple: "Obtém o valor de uma variável global do tipo double.",
+         complex: "Esta função retorna o valor armazenado em uma variável global do tipo double. Se a variável não existir, retorna 0.0.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome da variável global.",
+         },
+      ],
+      examples: ['GetGlobal("minha_variavel")'],
+      returns: {
+         success: {
+            message: "Retorna o valor double da variável global.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se a variável não existir.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      name: "CreateGlobal",
+      aliases: "CreG",
+      description: {
+         simple: "Cria uma nova variável global do tipo double.",
+         complex: "Esta função cria uma nova variável global do tipo double com o valor especificado. Retorna false se a variável já existir.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome da variável global.",
+         },
+         {
+            type: { type: "double" },
+            name: "value",
+            comment: "Valor inicial da variável.",
+         },
+      ],
+      examples: ['CreateGlobal("nova_variavel", 123.45)'],
+      returns: {
+         success: {
+            message: "Retorna true se a variável foi criada com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a variável já existir ou ocorrer um erro.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      name: "ReplaceGlobal",
+      aliases: "RepG",
+      description: {
+         simple: "Substitui o valor de uma variável global existente.",
+         complex: "Esta função substitui o valor de uma variável global do tipo double existente. Retorna false se a variável não existir.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome da variável global.",
+         },
+         {
+            type: { type: "double" },
+            name: "value",
+            comment: "Novo valor da variável.",
+         },
+      ],
+      examples: ['ReplaceGlobal("minha_variavel", 678.90)'],
+      returns: {
+         success: {
+            message: "Retorna true se o valor foi substituído com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a variável não existir ou ocorrer um erro.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      name: "GetGlobalTime",
+      aliases: "GetGT",
+      description: {
+         simple: "Obtém o timestamp do último acesso de uma variável global.",
+         complex: "Esta função retorna o timestamp do último acesso (leitura ou escrita) de uma variável global do tipo double.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome da variável global.",
+         },
+      ],
+      examples: ['GetGlobalTime("minha_variavel")'],
+      returns: {
+         success: {
+            message: "Retorna o timestamp do último acesso da variável.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna 0 se a variável não existir.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      name: "SetGlobal",
+      aliases: "SetG",
+      description: {
+         simple: "Define o valor de uma variável global (cria se não existir).",
+         complex: "Esta função define o valor de uma variável global do tipo double. Se a variável não existir, ela será criada.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome da variável global.",
+         },
+         {
+            type: { type: "double" },
+            name: "value",
+            comment: "Valor a ser definido.",
+         },
+      ],
+      examples: ['SetGlobal("minha_variavel", 555.55)'],
+      returns: {
+         success: {
+            message: "Retorna true se o valor foi definido com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se ocorrer um erro.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      name: "AddGlobal",
+      aliases: "AddG",
+      description: {
+         simple: "Adiciona um valor a uma variável global existente.",
+         complex: "Esta função adiciona um valor ao valor atual de uma variável global do tipo double. A variável deve existir previamente.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome da variável global.",
+         },
+         {
+            type: { type: "double" },
+            name: "value",
+            comment: "Valor a ser adicionado.",
+         },
+      ],
+      examples: ['AddGlobal("contador", 1.0)'],
+      returns: {
+         success: {
+            message: "Retorna true se o valor foi adicionado com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a variável não existir ou ocorrer um erro.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      name: "RemoveGlobal",
+      aliases: "RemG",
+      description: {
+         simple: "Remove uma variável global do tipo double.",
+         complex: "Esta função remove uma variável global do tipo double do sistema. Retorna false se a variável não existir.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome da variável global a ser removida.",
+         },
+      ],
+      examples: ['RemoveGlobal("variavel_antiga")'],
+      returns: {
+         success: {
+            message: "Retorna true se a variável foi removida com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se a variável não existir ou ocorrer um erro.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      name: "ClearGlobal",
+      aliases: "CleG",
+      description: {
+         simple: "Limpa variáveis globais com um prefixo específico.",
+         complex: "Esta função remove todas as variáveis globais do tipo double que começam com o prefixo especificado.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "prefix",
+            comment: "Prefixo das variáveis a serem removidas.",
+         },
+      ],
+      examples: ['ClearGlobal("temp_")'],
+      returns: {
+         success: {
+            message: "Retorna true se as variáveis foram removidas com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna false se ocorrer um erro.",
+            type: { type: "bool" },
          },
       },
    },
