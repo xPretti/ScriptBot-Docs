@@ -623,48 +623,48 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
    },
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
-      name: "ALL_AVERAGE_PRICE",
-      aliases: "AAVERAGE",
+      name: "ALL_AVG_PRICE",
+      aliases: "AAVG",
       description: {
          simple: "Retorna o preço médio de todas as posições abertas.",
       },
    },
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
-      name: "ALL_AVERAGE_DIR",
-      aliases: "AAVERAGEDIR",
+      name: "ALL_AVG_DIR",
+      aliases: "AAVGDIR",
       description: {
          simple: "Retorna a direção média das posições abertas. (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
       },
    },
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
-      name: "BUY_AVERAGE_PRICE",
-      aliases: "BAVERAGE",
+      name: "BUY_AVG_PRICE",
+      aliases: "BAVG",
       description: {
          simple: "Retorna o preço médio das posições de compra abertas.",
       },
    },
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
-      name: "BUY_AVERAGE_DIR",
-      aliases: "BAVERAGEDIR",
+      name: "BUY_AVG_DIR",
+      aliases: "BAVGDIR",
       description: {
          simple: "Retorna a direção média das posições de compra abertas.",
       },
    },
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
-      name: "SELL_AVERAGE_PRICE",
-      aliases: "SAVERAGE",
+      name: "SELL_AVG_PRICE",
+      aliases: "SAVG",
       description: {
          simple: "Retorna o preço médio das posições de venda abertas.",
       },
    },
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
-      name: "SELL_AVERAGE_DIR",
-      aliases: "SAVERAGEDIR",
+      name: "SELL_AVG_DIR",
+      aliases: "SAVGDIR",
       description: {
          simple: "Retorna a direção média das posições de venda abertas.",
       },

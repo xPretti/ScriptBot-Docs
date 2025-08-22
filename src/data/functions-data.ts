@@ -3410,20 +3410,1050 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    // TRADES
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "PosAveragePrice",
-      aliases: "PAverage",
+      name: "AllVolumeOpen",
+      aliases: "AVolO",
       description: {
-         simple: "Retorna o preço médio das posições.",
-         complex: "Esta função retorna o preço médio ponderado das posições abertas de acordo com os parâmetros fornecidos.",
+         simple: "Retorna o volume total de todas as posições e ordens abertas.",
+         complex: "Esta função retorna o volume total combinado de todas as posições e ordens abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['AllVolumeOpen["PETR4", 123456, -1, H1]'],
+      returns: {
+         success: {
+            message: "Retorna o volume total de todas as posições e ordens abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver posições e ordens abertas.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "BuyVolumeOpen",
+      aliases: "BVolO",
+      description: {
+         simple: "Retorna o volume total das posições e ordens de compra abertas.",
+         complex: "Esta função retorna o volume total combinado de todas as posições e ordens de compra abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['BuyVolumeOpen["VALE3", 123456, -1, D1]'],
+      returns: {
+         success: {
+            message: "Retorna o volume total das posições e ordens de compra abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver posições e ordens de compra abertas.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "SellVolumeOpen",
+      aliases: "SVolO",
+      description: {
+         simple: "Retorna o volume total das posições e ordens de venda abertas.",
+         complex: "Esta função retorna o volume total combinado de todas as posições e ordens de venda abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['SellVolumeOpen["ITUB4", 123456, -1, W1]'],
+      returns: {
+         success: {
+            message: "Retorna o volume total das posições e ordens de venda abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver posições e ordens de venda abertas.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "AllPosVolumeOpen",
+      aliases: "APVolO",
+      description: {
+         simple: "Retorna o volume total de todas as posições abertas.",
+         complex: "Esta função retorna o volume total combinado de todas as posições abertas.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['AllPosVolumeOpen["BBAS3", 123456, -1, MN1]'],
+      returns: {
+         success: {
+            message: "Retorna o volume total de todas as posições abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver posições abertas.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "BuyPosVolumeOpen",
+      aliases: "BPVolO",
+      description: {
+         simple: "Retorna o volume total das posições de compra abertas.",
+         complex: "Esta função retorna o volume total combinado de todas as posições de compra abertas.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['BuyPosVolumeOpen["PETR4", 123456, -1, H4]'],
+      returns: {
+         success: {
+            message: "Retorna o volume total das posições de compra abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver posições de compra abertas.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "SellPosVolumeOpen",
+      aliases: "SPVolO",
+      description: {
+         simple: "Retorna o volume total das posições de venda abertas.",
+         complex: "Esta função retorna o volume total combinado de todas as posições de venda abertas.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['SellPosVolumeOpen["VALE3", 123456, -1, D1]'],
+      returns: {
+         success: {
+            message: "Retorna o volume total das posições de venda abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver posições de venda abertas.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "AllOrderVolumeOpen",
+      aliases: "AOVolO",
+      description: {
+         simple: "Retorna o volume total de todas as ordens pendentes.",
+         complex: "Esta função retorna o volume total combinado de todas as ordens pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['AllOrderVolumeOpen["ITUB4", 123456, -1, W1]'],
+      returns: {
+         success: {
+            message: "Retorna o volume total de todas as ordens pendentes.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver ordens pendentes.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "BuyOrderVolumeOpen",
+      aliases: "BOVolO",
+      description: {
+         simple: "Retorna o volume total das ordens de compra pendentes.",
+         complex: "Esta função retorna o volume total combinado de todas as ordens de compra pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['BuyOrderVolumeOpen["BBAS3", 123456, -1, MN1]'],
+      returns: {
+         success: {
+            message: "Retorna o volume total das ordens de compra pendentes.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver ordens de compra pendentes.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "SellOrderVolumeOpen",
+      aliases: "SOVolO",
+      description: {
+         simple: "Retorna o volume total das ordens de venda pendentes.",
+         complex: "Esta função retorna o volume total combinado de todas as ordens de venda pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['SellOrderVolumeOpen["PETR4", 123456, -1, H1]'],
+      returns: {
+         success: {
+            message: "Retorna o volume total das ordens de venda pendentes.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver ordens de venda pendentes.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "AllOpen",
+      aliases: "AOpen",
+      description: {
+         simple: "Retorna a quantidade total de posições e ordens abertas.",
+         complex: "Esta função retorna o total combinado de posições abertas e ordens pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['AllOpen["VALE3", 123456, -1, D1]'],
+      returns: {
+         success: {
+            message: "Retorna a quantidade total de posições e ordens abertas.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se não houver posições ou ordens abertas.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "BuyOpen",
+      aliases: "BOpen",
+      description: {
+         simple: "Retorna a quantidade total de posições e ordens de compra abertas.",
+         complex: "Esta função retorna o total combinado de posições de compra abertas e ordens de compra pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['BuyOpen["ITUB4", 123456, -1, W1]'],
+      returns: {
+         success: {
+            message: "Retorna a quantidade total de posições e ordens de compra abertas.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se não houver posições ou ordens de compra abertas.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "SellOpen",
+      aliases: "SOpen",
+      description: {
+         simple: "Retorna a quantidade total de posições e ordens de venda abertas.",
+         complex: "Esta função retorna o total combinado de posições de venda abertas e ordens de venda pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['SellOpen["BBAS3", 123456, -1, MN1]'],
+      returns: {
+         success: {
+            message: "Retorna a quantidade total de posições e ordens de venda abertas.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se não houver posições ou ordens de venda abertas.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "AllPosOpen",
+      aliases: "APosO",
+      description: {
+         simple: "Retorna a quantidade total de posições abertas.",
+         complex: "Esta função retorna o total de posições abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['AllPosOpen["PETR4", 123456, -1, H4]'],
+      returns: {
+         success: {
+            message: "Retorna a quantidade total de posições abertas.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se não houver posições abertas.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "BuyPosOpen",
+      aliases: "BPosO",
+      description: {
+         simple: "Retorna a quantidade total de posições de compra abertas.",
+         complex: "Esta função retorna o total de posições de compra abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['BuyPosOpen["VALE3", 123456, -1, D1]'],
+      returns: {
+         success: {
+            message: "Retorna a quantidade total de posições de compra abertas.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se não houver posições de compra abertas.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "SellPosOpen",
+      aliases: "SPosO",
+      description: {
+         simple: "Retorna a quantidade total de posições de venda abertas.",
+         complex: "Esta função retorna o total de posições de venda abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['SellPosOpen["ITUB4", 123456, -1, W1]'],
+      returns: {
+         success: {
+            message: "Retorna a quantidade total de posições de venda abertas.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se não houver posições de venda abertas.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "AllOrderOpen",
+      aliases: "AOrderO",
+      description: {
+         simple: "Retorna a quantidade total de ordens pendentes.",
+         complex: "Esta função retorna o total de ordens pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['AllOrderOpen["BBAS3", 123456, -1, MN1]'],
+      returns: {
+         success: {
+            message: "Retorna a quantidade total de ordens pendentes.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se não houver ordens pendentes.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "BuyOrderOpen",
+      aliases: "BOrderO",
+      description: {
+         simple: "Retorna a quantidade total de ordens de compra pendentes.",
+         complex: "Esta função retorna o total de ordens de compra pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['BuyOrderOpen["PETR4", 123456, -1, H1]'],
+      returns: {
+         success: {
+            message: "Retorna a quantidade total de ordens de compra pendentes.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se não houver ordens de compra pendentes.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "SellOrderOpen",
+      aliases: "SOrderO",
+      description: {
+         simple: "Retorna a quantidade total de ordens de venda pendentes.",
+         complex: "Esta função retorna o total de ordens de venda pendentes, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['SellOrderOpen["VALE3", 123456, -1, D1]'],
+      returns: {
+         success: {
+            message: "Retorna a quantidade total de ordens de venda pendentes.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se não houver ordens de venda pendentes.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "AllProfitOpen",
+      aliases: "AProfitO",
+      description: {
+         simple: "Retorna o lucro/prejuízo total de todas as posições abertas.",
+         complex: "Esta função retorna o lucro/prejuízo total combinado de todas as posições abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['AllProfitOpen["ITUB4", 123456, -1, W1]'],
+      returns: {
+         success: {
+            message: "Retorna o lucro/prejuízo total de todas as posições abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver posições abertas.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "BuyProfitOpen",
+      aliases: "BProfitO",
+      description: {
+         simple: "Retorna o lucro/prejuízo total das posições de compra abertas.",
+         complex: "Esta função retorna o lucro/prejuízo total combinado de todas as posições de compra abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['BuyProfitOpen["BBAS3", 123456, -1, MN1]'],
+      returns: {
+         success: {
+            message: "Retorna o lucro/prejuízo total das posições de compra abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver posições de compra abertas.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "SellProfitOpen",
+      aliases: "SProfitO",
+      description: {
+         simple: "Retorna o lucro/prejuízo total das posições de venda abertas.",
+         complex: "Esta função retorna o lucro/prejuízo total combinado de todas as posições de venda abertas, considerando os filtros fornecidos.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "int" },
+            name: "candle",
+            comment: "Índice da vela de inicio (-1 para todas).",
+            value: "-1",
+         },
+         {
+            type: {
+               type: "ENUM_TIMEFRAME",
+               typeLink: "/references/enumerators#timeframes",
+            },
+            name: "timeframe",
+            comment: "Tempo gráfico.",
+            value: "CURRENT",
+         },
+      ],
+      examples: ['SellProfitOpen["PETR4", 123456, -1, H4]'],
+      returns: {
+         success: {
+            message: "Retorna o lucro/prejuízo total das posições de venda abertas.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 se não houver posições de venda abertas.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "AvgPrice",
+      aliases: "PAvgP",
+      description: {
+         simple: "Retorna o preço médio das posições abertas.",
+         complex:
+            "Esta função retorna o preço médio ponderado pelo volume de todas as posições abertas, considerando o tipo de operação e os filtros fornecidos.",
       },
       parameters: [
          {
             type: {
-               type: "ENUM_TRADE",
-               typeLink: "/references/enumerators#trade",
+               type: "ENUM_POSITION_TYPE",
+               typeLink: "/references/enumerators#position-type",
             },
             name: "type",
-            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            comment: "Tipo de posição (COMPRA/VENDA/TODAS).",
             value: "TYPE_ALL",
          },
          {
@@ -3439,35 +4469,34 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             value: "MAGIC",
          },
       ],
-      examples: ['PosAveragePrice[TYPE_ALL, "EURUSD"]'],
+      examples: ['AvgPrice(POSITION_TYPE_BUY, "VALE3", 123456)'],
       returns: {
          success: {
             message: "Retorna o preço médio das posições abertas.",
             type: { type: "double" },
          },
          error: {
-            message: "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            message: "Retorna 0.0 se não houver posições abertas.",
             type: { type: "double" },
          },
       },
    },
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "PosAverageDir",
-      aliases: "PAverageDir",
+      name: "AvgDir",
+      aliases: "PAvgDir",
       description: {
          simple: "Retorna a direção média das posições abertas.",
-         complex:
-            "Esta função calcula e retorna a direção predominante das posições abertas, considerando o tipo de trade. Útil para identificar rapidamente a tendência predominante das operações em andamento, seja de compra, venda ou equilíbrio.",
+         complex: "Esta função retorna a direção média ponderada das posições abertas, considerando o tipo de operação e os filtros fornecidos.",
       },
       parameters: [
          {
             type: {
-               type: "ENUM_TRADE",
-               typeLink: "/references/enumerators#trade",
+               type: "ENUM_POSITION_TYPE",
+               typeLink: "/references/enumerators#position-type",
             },
             name: "type",
-            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            comment: "Tipo de posição (COMPRA/VENDA/TODAS).",
             value: "TYPE_ALL",
          },
          {
@@ -3483,40 +4512,32 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             value: "MAGIC",
          },
       ],
-      examples: ['PosAverageDir[TYPE_ALL, "EURUSD"]', 'PosAverageDir[TYPE_ALL, "EURUSD"] == 1 // Indica que existe mais compras do que vendas.'],
+      examples: ['AvgDir(POSITION_TYPE_SELL, "ITUB4", 123456)'],
       returns: {
          success: {
-            message: "Retorna a direção média das posições abertas. (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
-            type: { type: "int" },
+            message: "Retorna a direção média das posições abertas.",
+            type: { type: "double" },
          },
          error: {
-            message: "Retorna 0 se nenhuma posição for encontrada ou se houver equilíbrio perfeito entre compras e vendas (preço estagnado).",
-            type: { type: "int" },
+            message: "Retorna 0.0 se não houver posições abertas.",
+            type: { type: "double" },
          },
       },
    },
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "AllTotal",
-      aliases: "ATotal",
+      name: "AllAvgPrice",
+      aliases: "AAvgPrice",
       description: {
-         simple: "Retorna a quantidade total de negociações do tipo especificado.",
-         complex: "Esta função retorna o total de negociações abertas do tipo especificado, considerando os filtros fornecidos.",
+         simple: "Retorna o preço médio de todas as posições abertas.",
+         complex: "Esta função retorna o preço médio ponderado pelo volume de todas as posições abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
-            type: {
-               type: "ENUM_TRADE",
-               typeLink: "/references/enumerators#trade",
-            },
-            name: "type",
-            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
-         },
-         {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
          },
          {
             type: { type: "ulong" },
@@ -3524,48 +4545,33 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número mágico para filtrar as operações.",
             value: "MAGIC",
          },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
       ],
-      examples: ['AllTotal[TYPE_BUY, -1, 123456, M5, "PETR4"]'],
+      examples: ['AllAvgPrice("BBAS3", 123456)'],
       returns: {
          success: {
-            message: "Retorna o total de trades conforme os filtros.",
-            type: { type: "int" },
+            message: "Retorna o preço médio de todas as posições abertas.",
+            type: { type: "double" },
          },
          error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
+            message: "Retorna 0.0 se não houver posições abertas.",
+            type: { type: "double" },
          },
       },
    },
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "AllTotalBuy",
-      aliases: "ATotalBuy",
+      name: "BuyAvgPrice",
+      aliases: "BAvgPrice",
       description: {
-         simple: "Retorna a quantidade total de negociações de compra.",
-         complex: "Esta função retorna o total de negociações de compra abertas, considerando os filtros fornecidos.",
+         simple: "Retorna o preço médio das posições de compra abertas.",
+         complex: "Esta função retorna o preço médio ponderado pelo volume de todas as posições de compra abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
          },
          {
             type: { type: "ulong" },
@@ -3573,48 +4579,33 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número mágico para filtrar as operações.",
             value: "MAGIC",
          },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
       ],
-      examples: ['AllTotalBuy[-1, 123456, M5, "PETR4"]'],
+      examples: ['BuyAvgPrice("PETR4", 123456)'],
       returns: {
          success: {
-            message: "Retorna o total de trades de compra conforme os filtros.",
-            type: { type: "int" },
+            message: "Retorna o preço médio das posições de compra abertas.",
+            type: { type: "double" },
          },
          error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
+            message: "Retorna 0.0 se não houver posições de compra abertas.",
+            type: { type: "double" },
          },
       },
    },
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "AllTotalSell",
-      aliases: "ATotalSell",
+      name: "SellAvgPrice",
+      aliases: "SAvgPrice",
       description: {
-         simple: "Retorna a quantidade total de negociações de venda.",
-         complex: "Esta função retorna o total de negociações de venda abertas, considerando os filtros fornecidos.",
+         simple: "Retorna o preço médio das posições de venda abertas.",
+         complex: "Esta função retorna o preço médio ponderado pelo volume de todas as posições de venda abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
          },
          {
             type: { type: "ulong" },
@@ -3622,48 +4613,33 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número mágico para filtrar as operações.",
             value: "MAGIC",
          },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
       ],
-      examples: ['AllTotalSell[-1, 123456, M5, "PETR4"]'],
+      examples: ['SellAvgPrice("VALE3", 123456)'],
       returns: {
          success: {
-            message: "Retorna o total de trades de venda conforme os filtros.",
-            type: { type: "int" },
+            message: "Retorna o preço médio das posições de venda abertas.",
+            type: { type: "double" },
          },
          error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
+            message: "Retorna 0.0 se não houver posições de venda abertas.",
+            type: { type: "double" },
          },
       },
    },
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "AllTotalAll",
-      aliases: "ATotalAll",
+      name: "AllAvgDir",
+      aliases: "AAvgDir",
       description: {
-         simple: "Retorna a quantidade total de todas as negociações.",
-         complex: "Esta função retorna o total de todas as negociações abertas, considerando os filtros fornecidos.",
+         simple: "Retorna a direção média de todas as posições abertas.",
+         complex: "Esta função retorna a direção média ponderada de todas as posições abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
          },
          {
             type: { type: "ulong" },
@@ -3671,56 +4647,33 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número mágico para filtrar as operações.",
             value: "MAGIC",
          },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
       ],
-      examples: ['AllTotalAll[-1, 123456, M5, "PETR4"]'],
+      examples: ['AllAvgDir("ITUB4", 123456)'],
       returns: {
          success: {
-            message: "Retorna o total de todos os trades conforme os filtros.",
-            type: { type: "int" },
+            message: "Retorna a direção média de todas as posições abertas.",
+            type: { type: "double" },
          },
          error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
+            message: "Retorna 0.0 se não houver posições abertas.",
+            type: { type: "double" },
          },
       },
    },
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "PosTotal",
-      aliases: "PTotal",
+      name: "BuyAvgDir",
+      aliases: "BAvgDir",
       description: {
-         simple: "Retorna a quantidade total de posições do tipo especificado.",
-         complex: "Esta função retorna o total de posições abertas do tipo especificado, considerando os filtros fornecidos.",
+         simple: "Retorna a direção média das posições de compra abertas.",
+         complex: "Esta função retorna a direção média ponderada de todas as posições de compra abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
-            type: {
-               type: "ENUM_TRADE",
-               typeLink: "/references/enumerators#trade",
-            },
-            name: "type",
-            comment: "Tipo de posição: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
-         },
-         {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
          },
          {
             type: { type: "ulong" },
@@ -3728,48 +4681,33 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número mágico para filtrar as operações.",
             value: "MAGIC",
          },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
       ],
-      examples: ['PosTotal[TYPE_SELL, -1, 123456, M15, "VALE3"]'],
+      examples: ['BuyAvgDir("BBAS3", 123456)'],
       returns: {
          success: {
-            message: "Retorna o total de posições conforme os filtros.",
-            type: { type: "int" },
+            message: "Retorna a direção média das posições de compra abertas.",
+            type: { type: "double" },
          },
          error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
+            message: "Retorna 0.0 se não houver posições de compra abertas.",
+            type: { type: "double" },
          },
       },
    },
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "PosTotalBuy",
-      aliases: "PTotalBuy",
+      name: "SellAvgDir",
+      aliases: "SAvgDir",
       description: {
-         simple: "Retorna a quantidade total de posições de compra.",
-         complex: "Esta função retorna o total de posições de compra abertas, considerando os filtros fornecidos.",
+         simple: "Retorna a direção média das posições de venda abertas.",
+         complex: "Esta função retorna a direção média ponderada de todas as posições de venda abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
          },
          {
             type: { type: "ulong" },
@@ -3777,336 +4715,20 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Número mágico para filtrar as operações.",
             value: "MAGIC",
          },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
       ],
-      examples: ['PosTotalBuy[-1, 123456, H1, "PETR4"]'],
+      examples: ['SellAvgDir("PETR4", 123456)'],
       returns: {
          success: {
-            message: "Retorna o total de posições de compra conforme os filtros.",
-            type: { type: "int" },
+            message: "Retorna a direção média das posições de venda abertas.",
+            type: { type: "double" },
          },
          error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
+            message: "Retorna 0.0 se não houver posições de venda abertas.",
+            type: { type: "double" },
          },
       },
    },
-   {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "PosTotalSell",
-      aliases: "PTotalSell",
-      description: {
-         simple: "Retorna a quantidade total de posições de venda.",
-         complex: "Esta função retorna o total de posições de venda abertas, considerando os filtros fornecidos.",
-      },
-      parameters: [
-         {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
-         },
-         {
-            type: { type: "ulong" },
-            name: "magic",
-            comment: "Número mágico para filtrar as operações.",
-            value: "MAGIC",
-         },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
-      ],
-      examples: ['PosTotalSell[-1, 123456, D1, "ITUB4"]'],
-      returns: {
-         success: {
-            message: "Retorna o total de posições de venda conforme os filtros.",
-            type: { type: "int" },
-         },
-         error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
-         },
-      },
-   },
-   {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "PosTotalAll",
-      aliases: "PTotalAll",
-      description: {
-         simple: "Retorna a quantidade total de todas as posições.",
-         complex: "Esta função retorna o total de todas as posições abertas, considerando os filtros fornecidos.",
-      },
-      parameters: [
-         {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
-         },
-         {
-            type: { type: "ulong" },
-            name: "magic",
-            comment: "Número mágico para filtrar as operações.",
-            value: "MAGIC",
-         },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
-      ],
-      examples: ['PosTotalAll[-1, 123456, W1, "BBDC4"]'],
-      returns: {
-         success: {
-            message: "Retorna o total de todas as posições conforme os filtros.",
-            type: { type: "int" },
-         },
-         error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
-         },
-      },
-   },
-   {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "OrderTotal",
-      aliases: "OTotal",
-      description: {
-         simple: "Retorna a quantidade total de ordens do tipo especificado.",
-         complex: "Esta função retorna o total de ordens pendentes do tipo especificado, considerando os filtros fornecidos.",
-      },
-      parameters: [
-         {
-            type: {
-               type: "ENUM_TRADE",
-               typeLink: "/references/enumerators#trade",
-            },
-            name: "type",
-            comment: "Tipo de ordem: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
-         },
-         {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
-         },
-         {
-            type: { type: "ulong" },
-            name: "magic",
-            comment: "Número mágico para filtrar as operações.",
-            value: "MAGIC",
-         },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
-      ],
-      examples: ['OrderTotal[TYPE_BUY, -1, 123456, M30, "ABEV3"]'],
-      returns: {
-         success: {
-            message: "Retorna o total de ordens conforme os filtros.",
-            type: { type: "int" },
-         },
-         error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
-         },
-      },
-   },
-   {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "OrderTotalBuy",
-      aliases: "OTotalBuy",
-      description: {
-         simple: "Retorna a quantidade total de ordens de compra.",
-         complex: "Esta função retorna o total de ordens de compra pendentes, considerando os filtros fornecidos.",
-      },
-      parameters: [
-         {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
-         },
-         {
-            type: { type: "ulong" },
-            name: "magic",
-            comment: "Número mágico para filtrar as operações.",
-            value: "MAGIC",
-         },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
-      ],
-      examples: ['OrderTotalBuy[-1, 123456, H4, "WEGE3"]'],
-      returns: {
-         success: {
-            message: "Retorna o total de ordens de compra conforme os filtros.",
-            type: { type: "int" },
-         },
-         error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
-         },
-      },
-   },
-   {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "OrderTotalSell",
-      aliases: "OTotalSell",
-      description: {
-         simple: "Retorna a quantidade total de ordens de venda.",
-         complex: "Esta função retorna o total de ordens de venda pendentes, considerando os filtros fornecidos.",
-      },
-      parameters: [
-         {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
-         },
-         {
-            type: { type: "ulong" },
-            name: "magic",
-            comment: "Número mágico para filtrar as operações.",
-            value: "MAGIC",
-         },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
-      ],
-      examples: ['OrderTotalSell[-1, 123456, D1, "LREN3"]'],
-      returns: {
-         success: {
-            message: "Retorna o total de ordens de venda conforme os filtros.",
-            type: { type: "int" },
-         },
-         error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
-         },
-      },
-   },
-   {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
-      name: "OrderTotalAll",
-      aliases: "OTotalAll",
-      description: {
-         simple: "Retorna a quantidade total de todas as ordens.",
-         complex: "Esta função retorna o total de todas as ordens pendentes, considerando os filtros fornecidos.",
-      },
-      parameters: [
-         {
-            type: { type: "int" },
-            name: "candle",
-            comment: "Índice da vela de inicio (-1 para todas).",
-            value: "-1",
-         },
-         {
-            type: { type: "ulong" },
-            name: "magic",
-            comment: "Número mágico para filtrar as operações.",
-            value: "MAGIC",
-         },
-         {
-            type: {
-               type: "ENUM_TIMEFRAME",
-               typeLink: "/references/enumerators#timeframes",
-            },
-            name: "timeframe",
-            comment: "Tempo gráfico.",
-            value: "CURRENT",
-         },
-         {
-            type: { type: "string" },
-            name: "symbol",
-            comment: "Símbolo do ativo.",
-            value: "REAL",
-         },
-      ],
-      examples: ['OrderTotalAll[-1, 123456, MN1, "BBAS3"]'],
-      returns: {
-         success: {
-            message: "Retorna o total de todas as ordens conforme os filtros.",
-            type: { type: "int" },
-         },
-         error: {
-            message: "Retorna 0 se não houver resultados ou erro nos parâmetros.",
-            type: { type: "int" },
-         },
-      },
-   },
+   //
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTicket",

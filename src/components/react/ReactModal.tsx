@@ -28,9 +28,15 @@ export default function ReactModal({ isOpen, onClose, children }: Props) {
    };
 
    return createPortal(
-      <div className={styles.container} onClick={handleClickClose}>
+      <div
+         className={styles.container}
+         onClick={handleClickClose}
+      >
          <div className={styles.backdrop}>
-            <div className={styles.content} onClick={handleClickClose}>
+            <div
+               className={styles.content}
+               onClick={handleClickClose}
+            >
                {children}
             </div>
          </div>
