@@ -3689,7 +3689,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          },
          {
             type: {
-               type: "ENUM_TIME_TYPE",
+               type: "ENUM_TIME",
                typeLink: "/references/enumerators#time-type",
             },
             name: "method",

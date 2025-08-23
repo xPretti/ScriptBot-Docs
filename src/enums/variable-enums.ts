@@ -8,10 +8,7 @@ export enum ENUM_VARIABLE_CATEGORY_TYPE {
    SIGNAL = "signal",
 }
 
-export const getVariableCategoryLabel: Record<
-   ENUM_VARIABLE_CATEGORY_TYPE,
-   () => string
-> = {
+export const getVariableCategoryLabel: Record<ENUM_VARIABLE_CATEGORY_TYPE, () => string> = {
    [ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION]: () => "Posição local",
    [ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER]: () => "Gatilho local",
    [ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT]: () => "Contas",

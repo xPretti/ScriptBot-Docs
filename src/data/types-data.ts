@@ -21,7 +21,7 @@ export const TYPES_MAPPING: Map<string, TypesType> = new Map([
    ["ENUM_TIMEFRAME", { desc: "Representa um intervalo de tempo: \n'M1', 'M5', 'M15', 'M30', 'H1', 'H4', 'D1'." }],
    ["ENUM_TIME_HISTORIC", { desc: "Representa um tipo de histórico: \n'TYPE_DAY', 'TYPE_WEEK', 'TYPE_MONTH', 'TYPE_YEAR', 'TYPE_ALL'" }],
    [
-      "ENUM_TIME_TYPE",
+      "ENUM_TIME",
       { desc: "Representa um tipo de horário: \n'TYPE_SEC', 'TYPE_MIN', 'TYPE_HOUR', 'TYPE_DAY', 'TYPE_DAY_WEEK', 'TYPE_DAY_YEAR','TYPE_MONTH', 'TYPE_YEAR'" },
    ],
    [
