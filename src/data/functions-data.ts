@@ -7545,8 +7545,14 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: { type: "string" },
             name: "symbol",
-            comment: "Símbolo do ativo (opcional - vazio fecha todas as posições do ativo atual).",
+            comment: "Símbolo do ativo.",
             value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
          },
       ],
       examples: [
@@ -7576,8 +7582,14 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: { type: "string" },
             name: "symbol",
-            comment: "Símbolo do ativo (opcional - vazio fecha todas as posições de compra do ativo atual).",
+            comment: "Símbolo do ativo.",
             value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
          },
       ],
       examples: [
@@ -7607,8 +7619,14 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          {
             type: { type: "string" },
             name: "symbol",
-            comment: "Símbolo do ativo (opcional - vazio fecha todas as posições de venda do ativo atual).",
+            comment: "Símbolo do ativo.",
             value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
          },
       ],
       examples: [
@@ -7622,6 +7640,117 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          },
          error: {
             message: "Retorna 0 se nenhuma posição de venda for fechada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "OrderCloseAll",
+      aliases: "",
+      description: {
+         simple: "Fecha todas as ordens abertas.",
+         complex: "Esta função fecha todas as ordens abertas no mercado, podendo ser filtradas por símbolo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+      ],
+      examples: [
+         "OrderCloseAll[] // Fecha todas as ordens abertas em todos os símbolos",
+         "OrderCloseAll[EURUSD] // Fecha todas as ordens abertas somente no EURUSD",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o número de ordens fechadas com sucesso.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma ordem for fechada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "OrderBuyCloseAll",
+      aliases: "",
+      description: {
+         simple: "Fecha todas as ordens de compra abertas.",
+         complex: "Esta função fecha todas as ordens de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+      ],
+      examples: [
+         "OrderBuyCloseAll[] // Fecha todas as ordens de compra em todos os símbolos",
+         "OrderBuyCloseAll[EURUSD] // Fecha todas as ordens de compra somente no EURUSD",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o número de ordens de compra fechadas com sucesso.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma ordem de compra for fechada.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      name: "OrderSellCloseAll",
+      aliases: "",
+      description: {
+         simple: "Fecha todas as ordens de venda abertas.",
+         complex: "Esta função fecha todas as ordens de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+      ],
+      examples: [
+         "OrderSellCloseAll[] // Fecha todas as ordens de venda em todos os símbolos",
+         "OrderSellCloseAll[EURUSD] // Fecha todas as ordens de venda somente no EURUSD",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o número de ordens de venda fechadas com sucesso.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma ordem de venda for fechada.",
             type: { type: "int" },
          },
       },

@@ -493,6 +493,14 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
    },
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      name: "MAGIC",
+      aliases: "",
+      description: {
+         simple: "Retorna o id (magic number) que o robô está operando.",
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
       name: "REAL",
       aliases: "",
       description: {
