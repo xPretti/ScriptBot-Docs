@@ -2580,6 +2580,14 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             name: "value",
             comment: "o valor do volume.",
          },
+         {
+            type: {
+               type: "double",
+            },
+            name: "defaultValue",
+            comment: "o valor padrão do volume.",
+            value: "VOLUME_MIN",
+         },
       ],
       examples: ["SetVol[10]"],
       returns: {
