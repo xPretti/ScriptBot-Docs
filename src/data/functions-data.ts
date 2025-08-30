@@ -1601,8 +1601,8 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    },
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
-      name: "MaxLow",
-      aliases: "MaxL",
+      name: "MinLow",
+      aliases: "MinL",
       description: {
          simple: "Retorna o preço mínimo entre duas posições de velas.",
          complex:
@@ -1641,7 +1641,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             value: "SYMBOL",
          },
       ],
-      examples: ["MaxLow[0, 20]", 'MaxLow[0, 20, M5, "EURUSD"]'],
+      examples: ["MinLow[0, 20]", 'MinLow[0, 20, M5, "EURUSD"]'],
       returns: {
          success: {
             message: "Retorna o preço da menor vela.",
