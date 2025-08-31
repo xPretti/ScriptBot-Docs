@@ -16,9 +16,15 @@ export const TYPES_MAPPING: Map<string, TypesType> = new Map([
    ["double", { desc: "Representa um número de ponto flutuante de precisão dupla (15-16 dígitos)." }],
    ["string", { desc: "Representa uma sequência de caracteres Unicode." }],
    ["bool", { desc: "Representa um valor lógico (true ou false)." }],
+   ["color", { desc: "Representa um valor de cor clrRed, clrGreen, clrBlue..." }],
 
    ["ENUM_TRADE", { desc: "Representa o tipo de trade: \n'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'." }],
-   ["ENUM_TIMEFRAME", { desc: "Representa um intervalo de tempo: \n'M1', 'M5', 'M15', 'M30', 'H1', 'H4', 'D1'." }],
+   [
+      "ENUM_TIMEFRAME",
+      {
+         desc: "Representa um intervalo de tempo: \n'CURRENT', 'M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M10', 'M12', 'M15', 'M20', 'M30', 'H1', 'H2', 'H3', 'H4', 'H6', 'H8', 'H12', 'D1', 'W1', 'MN1'.",
+      },
+   ],
    ["ENUM_TIME_HISTORIC", { desc: "Representa um tipo de histórico: \n'TYPE_DAY', 'TYPE_WEEK', 'TYPE_MONTH', 'TYPE_YEAR', 'TYPE_ALL'" }],
    [
       "ENUM_TIME",
@@ -51,4 +57,5 @@ export const TYPES_MAPPING: Map<string, TypesType> = new Map([
    ["ENUM_MARKET_ACTION", { desc: "Representa o tipo de fechamento: \n'TYPE_IN', 'TYPE_OUT', 'TYPE_ALL'." }],
    ["ENUM_MARKET_GET", { desc: "Representa o tipo de retorno: \n'TYPE_POSITIVE', 'TYPE_NEGATIVE', 'TYPE_ALL'." }],
    ["ENUM_TRADE_MODIFY", { desc: "Representa o tipo de modificação: \n'TYPE_PRICE', 'TYPE_POINT'." }],
+   ["ENUM_LINE_STYLE", { desc: "Representa o estilo de linha de um objeto: \n'TYPE_SOLID', 'TYPE_DASH', 'TYPE_DOT', 'TYPE_DASHDOT', 'TYPE_DASHDOTDOT'." }],
 ]);

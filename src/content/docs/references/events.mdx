@@ -45,7 +45,7 @@ Para entender, leia <BaseLink href="/architecture/events/">O que é um evento</B
 
 ## Eventos de gatilhos \{#triggers\}
 
-> Eventos de gatilhos são ocorrências que acontecem quando uma condição ou expressão lógica é executada.  
+> Eventos de gatilho são ocorrências que acontecem quando uma condição ou expressão lógica é avaliada nos cálculos de REQUISITO, ENTRADA, CONFIRMAÇÃO, SAÍDA...  
 > Variáveis de manipulação: <BaseLink href="/architecture/triggers">Gatilhos</BaseLink>
 
 | EVENTOS                                             | DESCRIÇÃO                                                                          |
@@ -67,9 +67,9 @@ Para entender, leia <BaseLink href="/architecture/events/">O que é um evento</B
 | <CodeVar>OnFilter()</CodeVar>                       | Ocorre quando uma condição de filtro é atendida com sucesso.                       |
 | <CodeVar>OnFilterFailed()</CodeVar>                 | Ocorre quando uma condição de filtro é atendida sem sucesso.                       |
 
-## Eventos de ordens \{#order-events\}
+## Eventos de transações \{#trades\}
 
-> Eventos de ordens são ocorrências de transações de operações realizadas pelo robô.  
+> Eventos de ordens são ocorrências de transações de operações realizadas pelo robô, estes eventos são chamados sempre que uma ordem ou posição for criada, removida ou modificada.  
 > Variáveis de manipulação: <BaseLink href="/placeholders/variables/#positions-and-orders">Posições e Ordens</BaseLink>
 
 | EVENTOS                               | DESCRIÇÃO                                                 |

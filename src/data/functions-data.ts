@@ -203,7 +203,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearDouble",
-      aliases: "CleDou",
+      aliases: "ClrDou",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
          complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
@@ -228,7 +228,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearInt",
-      aliases: "CleInt",
+      aliases: "ClrInt",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
          complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
@@ -253,7 +253,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearString",
-      aliases: "CleStr",
+      aliases: "ClrStr",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
          complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
@@ -1110,7 +1110,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "ClearGlobal",
-      aliases: "CleG",
+      aliases: "ClrG",
       description: {
          simple: "Limpa variáveis globais com um prefixo específico.",
          complex: "Esta função remove todas as variáveis globais do tipo double que começam com o prefixo especificado.",
@@ -8216,6 +8216,443 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          },
          error: {
             message: "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+
+   // BASIC OBJECTS
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjHLine",
+      aliases: "ObjHL",
+      description: {
+         simple: "Cria uma linha horizontal no gráfico.",
+         complex: "Permite desenhar uma linha horizontal em um preço específico no gráfico, com personalização de cor, espessura e estilo de linha.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Identificador único da linha no gráfico.",
+         },
+         {
+            type: { type: "double" },
+            name: "price",
+            comment: "Preço em que a linha horizontal será desenhada.",
+         },
+         {
+            type: { type: "color", typeLink: "/references/constants#colors" },
+            name: "clr",
+            comment: "Cor da linha.",
+            value: "clrRed",
+         },
+         {
+            type: { type: "int" },
+            name: "width",
+            comment: "Espessura da linha.",
+            value: "1",
+         },
+         {
+            type: { type: "ENUM_LINE_STYLE", typeLink: "/references/enumerators#line-style" },
+            name: "style",
+            comment: "Estilo da linha (sólida, tracejada, etc.).",
+            value: "TYPE_SOLID",
+         },
+      ],
+      examples: [
+         'ObjHLine["LinhaSL", 1.11500] // Cria linha vermelha sólida no preço 1.11500',
+         'ObjHL["LinhaTP", 1.12000, clrBlue, 2, TYPE_DASH] // Linha azul tracejada mais espessa',
+      ],
+      returns: {
+         success: {
+            message: "Retorna o preço da linha criada.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 caso a criação falhe.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjVLine",
+      aliases: "ObjVL",
+      description: {
+         simple: "Cria uma linha vertical no gráfico.",
+         complex: "Permite desenhar uma linha vertical em um ponto de tempo específico no gráfico, com personalização de cor, espessura e estilo de linha.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Identificador único da linha no gráfico.",
+         },
+         {
+            type: { type: "datetime" },
+            name: "value",
+            comment: "Data e hora em que a linha vertical será desenhada.",
+         },
+         {
+            type: { type: "color", typeLink: "/references/constants#colors" },
+            name: "clr",
+            comment: "Cor da linha.",
+            value: "clrRed",
+         },
+         {
+            type: { type: "int" },
+            name: "width",
+            comment: "Espessura da linha.",
+            value: "1",
+         },
+         {
+            type: { type: "ENUM_LINE_STYLE", typeLink: "/references/enumerators#line-style" },
+            name: "style",
+            comment: "Estilo da linha (sólida, tracejada, etc.).",
+            value: "TYPE_SOLID",
+         },
+      ],
+      examples: [
+         'ObjVLine["InicioSessao", TIME_CURRENT] // Linha vermelha no início da sessão',
+         'ObjVLine["Fechamento", TIME_CURRENT, clrBlue, 2, TYPE_DOT] // Linha azul pontilhada na hora atual',
+      ],
+      returns: {
+         success: {
+            message: "Retorna o tempo associado à linha criada.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna 0 em caso de falha.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjTrendLine",
+      aliases: "ObjTL",
+      description: {
+         simple: "Cria uma linha de tendência no gráfico.",
+         complex:
+            "Permite desenhar uma linha de tendência conectando dois pontos de preço em tempos diferentes, com personalização de cor, espessura e estilo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Identificador único da linha de tendência.",
+         },
+         {
+            type: { type: "datetime" },
+            name: "time1",
+            comment: "Tempo do ponto inicial.",
+         },
+         {
+            type: { type: "double" },
+            name: "price1",
+            comment: "Preço do ponto inicial.",
+         },
+         {
+            type: { type: "datetime" },
+            name: "time2",
+            comment: "Tempo do ponto final.",
+         },
+         {
+            type: { type: "double" },
+            name: "price2",
+            comment: "Preço do ponto final.",
+         },
+         {
+            type: { type: "color", typeLink: "/references/constants#colors" },
+            name: "clr",
+            comment: "Cor da linha.",
+            value: "clrRed",
+         },
+         {
+            type: { type: "int" },
+            name: "width",
+            comment: "Espessura da linha.",
+            value: "1",
+         },
+         {
+            type: { type: "ENUM_LINE_STYLE", typeLink: "/references/enumerators#line-style" },
+            name: "style",
+            comment: "Estilo da linha.",
+            value: "TYPE_SOLID",
+         },
+      ],
+      examples: [
+         'ObjTrendLine["Suporte", Time[10], Low[10], Time[0], Low[0]] // Linha de suporte conectando mínimos',
+         'ObjTrendLine["Resistencia", Time[20], High[20], Time[0], High[0], clrBlue, 2, TYPE_DASH] // Linha de resistência tracejada azul',
+      ],
+      returns: {
+         success: {
+            message: "Retorna o preço atual da linha criada.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 caso a criação falhe.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjRemove",
+      aliases: "ObjRem",
+      description: {
+         simple: "Remove um objeto do gráfico.",
+         complex: "Permite remover um objeto gráfico previamente criado no gráfico, identificado pelo seu nome.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome do objeto a ser removido.",
+         },
+      ],
+      examples: ["ObjRemove['LinhaSL'] // Remove a linha chamada LinhaSL", "ObjRemove['Resistencia'] // Remove objeto chamado Resistencia"],
+      returns: {
+         success: {
+            message: "Retorna verdadeiro (true) se o objeto foi removido com sucesso.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna falso (false) se o objeto não existir ou a remoção falhar.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjClear",
+      aliases: "ObjClr",
+      description: {
+         simple: "Remove múltiplos objetos do gráfico.",
+         complex: "Remove todos os objetos cujo nome inicie com um prefixo específico e opcionalmente por tipo.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "prefix",
+            comment: "Prefixo dos objetos a serem removidos.",
+         },
+         {
+            type: { type: "int" },
+            name: "type",
+            comment: "Tipo de objeto a remover (-1 remove todos os tipos).",
+            value: "-1",
+         },
+      ],
+      examples: [
+         'ObjClear["Linha"] // Remove todos os objetos que começam com "Linha"',
+         'ObjClear["Sinal", OBJ_TREND] // Remove somente objetos de tendência com prefixo "Sinal"',
+      ],
+      returns: {
+         success: {
+            message: "Retorna o número de objetos removidos.",
+            type: { type: "int" },
+         },
+         error: {
+            message: "Retorna 0 se nenhum objeto foi removido.",
+            type: { type: "int" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjExist",
+      aliases: "ObjEx",
+      description: {
+         simple: "Verifica se um objeto existe no gráfico.",
+         complex: "Permite verificar a existência de um objeto no gráfico através do seu nome.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome do objeto a ser verificado.",
+         },
+      ],
+      examples: ['ObjExist["LinhaSL"] // Retorna true se a linha existir", "ObjExist["Resistencia"] // Retorna false se não houver objeto com este nome'],
+      returns: {
+         success: {
+            message: "Retorna verdadeiro (true) se o objeto existe.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna falso (false) se o objeto não existir.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjGetTime",
+      aliases: "ObjGT",
+      description: {
+         simple: "Obtém o tempo associado a um objeto.",
+         complex: "Permite recuperar a coordenada de tempo de um ponto de um objeto gráfico, especificando índice e buffer.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome do objeto.",
+         },
+         {
+            type: { type: "int" },
+            name: "index",
+            comment: "Índice do ponto (valor negativo indica o valor de criação).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "buffer",
+            comment: "Número do buffer a ser acessado.",
+            value: "0",
+         },
+      ],
+      examples: [
+         'ObjGetTime["LinhaSL"] // Obtém o tempo associado à linha',
+         'ObjGetTime["Suporte", 0] // Obtém o tempo do primeiro ponto do objeto Suporte',
+         'ObjGetTime["Suporte", 1] // Obtém o tempo do segundo ponto do objeto Suporte',
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor datetime correspondente ao ponto do objeto.",
+            type: { type: "datetime" },
+         },
+         error: {
+            message: "Retorna 0 caso não encontre o objeto.",
+            type: { type: "datetime" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjGetPrice",
+      aliases: "ObjGP",
+      description: {
+         simple: "Obtém o preço associado a um objeto.",
+         complex: "Permite recuperar a coordenada de preço de um ponto de um objeto gráfico, especificando índice e buffer.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome do objeto.",
+         },
+         {
+            type: { type: "int" },
+            name: "index",
+            comment: "Índice do ponto (valor negativo indica o valor de criação).",
+            value: "-1",
+         },
+         {
+            type: { type: "int" },
+            name: "buffer",
+            comment: "Número do buffer a ser acessado.",
+            value: "0",
+         },
+      ],
+      examples: [
+         'ObjGetPrice["LinhaSL"] // Obtém o preço associado à linha',
+         'ObjSetTime["Resistencia", 0] // Obtém o preço do primeiro ponto do objeto Resistencia',
+         'ObjSetTime["Resistencia", 1] // Obtém o preço do segundo ponto do objeto Resistencia',
+      ],
+      returns: {
+         success: {
+            message: "Retorna o valor double correspondente ao ponto do objeto.",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Retorna 0.0 caso não encontre o objeto.",
+            type: { type: "double" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjSetTime",
+      aliases: "ObjST",
+      description: {
+         simple: "Define o tempo de um ponto de um objeto.",
+         complex: "Permite modificar a coordenada de tempo de um ponto específico de um objeto gráfico.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome do objeto.",
+         },
+         {
+            type: { type: "datetime" },
+            name: "time",
+            comment: "Novo valor de tempo para o ponto do objeto.",
+         },
+         {
+            type: { type: "int" },
+            name: "buffer",
+            comment: "Número do buffer a ser modificado.",
+            value: "0",
+         },
+      ],
+      examples: [
+         'ObjSetTime["LinhaSL", TIME_CURRENT] // Define o tempo atual para a linha',
+         'ObjSetTime["LinhaSL", TIME_CURRENT, 0] // Ajusta o tempo do primeiro ponto ou linha',
+         'ObjSetTime["Suporte", TIME_CURRENT, 1] // Ajusta o tempo do segundo ponto ou linha',
+      ],
+      returns: {
+         success: {
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna falso (false) caso falhe.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      name: "ObjSetPrice",
+      aliases: "ObjSP",
+      description: {
+         simple: "Define o preço de um ponto de um objeto.",
+         complex: "Permite modificar a coordenada de preço de um ponto específico de um objeto gráfico.",
+      },
+      parameters: [
+         {
+            type: { type: "string" },
+            name: "name",
+            comment: "Nome do objeto.",
+         },
+         {
+            type: { type: "double" },
+            name: "price",
+            comment: "Novo valor de preço para o ponto do objeto.",
+         },
+         {
+            type: { type: "int" },
+            name: "buffer",
+            comment: "Número do buffer a ser modificado.",
+            value: "0",
+         },
+      ],
+      examples: [
+         'ObjSetPrice["LinhaSL", 1.11500] // Define novo preço para a linha',
+         'ObjSetPrice["Resistencia", 1.12000, 0] // Ajusta o preço do primeiro ponto ou linha',
+         'ObjSetPrice["Resistencia", 1.12000, 1] // Ajusta o preço do segundo ponto ou linha',
+      ],
+      returns: {
+         success: {
+            message: "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Retorna falso (false) caso falhe.",
             type: { type: "bool" },
          },
       },
