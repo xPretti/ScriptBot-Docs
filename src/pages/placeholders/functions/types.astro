@@ -7,8 +7,15 @@ import CodeVar from "@src/components/CodeVar.astro";
 ---
 
 <StarlightPage
-   frontmatter={{ title: "Functions" }}
+   frontmatter={{
+      title: "Functions",
+      next: {
+         link: "/placeholders/functions/types/debug/Log/",
+         label: "Log",
+      },
+   }}
    sidebar={[
+      { label: "Início", link: "/" },
       {
          label: "Functions",
          items: sidebarGroups,
@@ -28,7 +35,10 @@ import CodeVar from "@src/components/CodeVar.astro";
                   <CodeVar>{p.label}</CodeVar>
                </td>
                <td>
-                  <a class="function-item" href={p.link}>
+                  <a
+                     class="function-item"
+                     href={p.link}
+                  >
                      {p.description}
                   </a>
                </td>

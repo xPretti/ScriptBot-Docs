@@ -44,6 +44,7 @@ export default defineConfig({
             },
          ],
          sidebar: [
+            { label: "Início", link: "/" },
             {
                label: "Settings",
                autogenerate: { directory: "settings" },
@@ -86,6 +87,7 @@ export default defineConfig({
                   pt: "Base de Conhecimento",
                },
             },
+            { label: "Funções", link: "/placeholders/functions/types" },
          ],
          customCss: ["./src/styles/custom.css"],
          components: {

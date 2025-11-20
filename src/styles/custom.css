@@ -5,6 +5,7 @@
    /* Cor Principal */
    --sl-color-accent-high: #ee6a6a;
    --sl-color-banner-text: var(--sl-color-black);
+   --sl-color-white-fixed: #ffffff;
    --sl-color-white: #191919;
    --sl-color-gray-1: #2c2c2c;
    --sl-color-gray-2: #414141;
@@ -215,7 +216,7 @@ td:last-child {
    background-color: transparent;
 }
 
-.top-level li:has(> a[aria-current="page"]) {
+.top-level details ul > li:has(> a[aria-current="page"]) {
    border-inline-start: 1px solid var(--sl-color-accent-high);
 }
 

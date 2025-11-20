@@ -1,0 +1,28 @@
+---
+const { filePath = "/pdf/docs.pdf", fileName = "ScriptBot_Docs.pdf", label = "Baixar PDF" } = Astro.props;
+---
+
+<a
+   href={filePath}
+   download={fileName}
+>
+   <button class="button">
+      {label}
+   </button>
+</a>
+
+<!-- Estilos -->
+<style>
+   .button {
+      cursor: pointer;
+      background-color: var(--sl-color-accent);
+      padding: 5px 20px;
+      border: 1px solid var(--sl-color-accent);
+      border-radius: 8px;
+      overflow: hidden;
+      color: var(--sl-color-white-fixed);
+   }
+   .button:hover {
+      opacity: 0.8;
+   }
+</style>
