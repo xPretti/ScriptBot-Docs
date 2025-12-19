@@ -18,7 +18,7 @@ const shouldRenderSearch = config.pagefind || config.components.Search !== "@ast
    <div class="title-wrapper sl-flex">
       <SiteTitle />
    </div>
-   <div class="sl-flex print:hidden">
+   <div class="sl-flex print:hidden search-wrapper">
       {shouldRenderSearch && <Search />}
    </div>
    <div class="sl-hidden md:sl-flex print:hidden right-group">
@@ -34,6 +34,11 @@ const shouldRenderSearch = config.pagefind || config.components.Search !== "@ast
 </div>
 
 <style>
+   .search-wrapper {
+      display: flex;
+      justify-content: center;
+   }
+
    @layer starlight.core {
       .header {
          display: flex;
