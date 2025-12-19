@@ -288,3 +288,7 @@ td:last-child {
    z-index: 1;
    max-height: 90%;
 }
+
+.sidebar-content {
+   margin-bottom: 25px;
+}
