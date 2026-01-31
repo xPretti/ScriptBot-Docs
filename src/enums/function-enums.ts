@@ -13,6 +13,7 @@ export enum ENUM_FUNCTION_CATEGORY_TYPE {
    TRADE = "trade",
    GLOBAL_VARIABLE = "globalvariable",
    BASIC_OBJECTS = "basicobjects",
+   LOGICS = "logics",
 }
 
 export const getFunctionCategoryLabel: Record<ENUM_FUNCTION_CATEGORY_TYPE, () => string> = {
@@ -30,4 +31,5 @@ export const getFunctionCategoryLabel: Record<ENUM_FUNCTION_CATEGORY_TYPE, () =>
    [ENUM_FUNCTION_CATEGORY_TYPE.TRADE]: () => "Negociações",
    [ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE]: () => "Variáveis globais",
    [ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS]: () => "Objetos básicos",
+   [ENUM_FUNCTION_CATEGORY_TYPE.LOGICS]: () => "Lógicas",
 };

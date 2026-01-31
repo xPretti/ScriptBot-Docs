@@ -104,6 +104,98 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          },
       },
    },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUG,
+      name: "See",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor informado e exibe esse valor no log para depuração.",
+         complex:
+            "Retorna o valor de uma expressão ou função, exibindo esse valor no log do robô para fins de depuração. A função não altera o resultado retornado, funcionando apenas como uma camada de visualização para acompanhar a execução do código.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "any",
+            },
+            name: "value",
+            comment: "Valor da expressão ou função a ser exibido no log.",
+         },
+         {
+            type: {
+               type: "string",
+            },
+            name: "label",
+            comment: "Rótulo para identificar o valor a ser exibido no log.",
+            value: '""',
+         },
+      ],
+      examples: ["See[PosTicket[0]]", 'See[PosTicket[0], "Ticket 0"]'],
+      returns: {
+         success: {
+            message: "Retorna o valor do primeiro parâmetro.",
+            type: {
+               type: "any",
+            },
+         },
+         error: {
+            message: "Retorna o valor do primeiro parâmetro.",
+            type: {
+               type: "any",
+            },
+         },
+      },
+   },
+   // DEBUGS
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.LOGICS,
+      name: "Seq",
+      aliases: "",
+      description: {
+         simple: "Executa múltiplas expressões em sequência.",
+         complex: "Esta função é usada para executar múltiplas expressões em sequência, garantindo que cada uma seja avaliada na ordem especificada.",
+      },
+      parameters: [
+         {
+            type: {
+               type: "any",
+            },
+            name: "expression1",
+            comment: "Primeira expressão a ser executada.",
+         },
+         {
+            type: {
+               type: "any",
+            },
+            name: "expression2",
+            comment: "Segunda expressão a ser executada.",
+            value: '""',
+         },
+         {
+            type: {
+               type: "any",
+            },
+            name: "expression...63",
+            comment: "Outro parametro de expressão que será executado após a segunda, máximo de 63 parametros.",
+            value: '""',
+         },
+      ],
+      examples: ["Seq[Buy[...], Sell[...], PosCloseAll[...]]"],
+      returns: {
+         success: {
+            message: "Retorna um valor boolean (true) em caso de sucesso de todas as expressões executadas.",
+            type: {
+               type: "bool",
+            },
+         },
+         error: {
+            message: "Retorna um valor boolean (false) em caso de uma expressão falhar.",
+            type: {
+               type: "bool",
+            },
+         },
+      },
+   },
    // INDICATORS
    {
       category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATOR,
@@ -5043,8 +5135,9 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       name: "PosTicket",
       aliases: "PTicket",
       description: {
-         simple: "Retorna o ticket de uma posição.",
-         complex: "Esta função retorna o ticket de uma posição aberta usando os parâmetros informados.",
+         simple: "Retorna o ticket da posição aberta mais próxima do índice informado.",
+         complex:
+            "Esta função retorna o ticket da posição aberta mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de posições abertas, será retornado o ticket da última posição disponível (a de maior índice).",
       },
       parameters: [
          {
@@ -5075,6 +5168,54 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          },
       ],
       examples: ["PosTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
+      returns: {
+         success: {
+            message: "Retorna o ticket da posição.",
+            type: { type: "ulong" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            type: { type: "ulong" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "PosTicketExact",
+      aliases: "PTicketE",
+      description: {
+         simple: "Retorna o ticket da posição aberta no índice informado ou 0, caso não exista.",
+         complex: "Esta função retorna o ticket de uma posição aberta no índice exato informado. Caso não exista uma posição nesse índice, a função retorna 0.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "index",
+            comment: "Indice da posição. Começando com 0 para a mais atual.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/references/enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+      ],
+      examples: ["PosTicketExact[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
       returns: {
          success: {
             message: "Retorna o ticket da posição.",
@@ -5694,8 +5835,9 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       name: "OrderTicket",
       aliases: "OTicket",
       description: {
-         simple: "Retorna o ticket de uma ordem.",
-         complex: "Esta função retorna o ticket de uma ordem aberta usando os parâmetros informados.",
+         simple: "Retorna o ticket da ordem aberta mais próxima do índice informado.",
+         complex:
+            "Esta função retorna o ticket da ordem aberta mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de ordens abertas, será retornado o ticket da última ordem disponível (a de maior índice).",
       },
       parameters: [
          {
@@ -5726,6 +5868,54 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          },
       ],
       examples: ["OrderTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
+      returns: {
+         success: {
+            message: "Retorna o ticket da ordem.",
+            type: { type: "ulong" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma ordem for encontrada com os parâmetros informados.",
+            type: { type: "ulong" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      name: "OrderTicketExact",
+      aliases: "OTicketE",
+      description: {
+         simple: "Retorna o ticket da ordem aberta no índice informado ou 0, caso não exista.",
+         complex: "Esta função retorna o ticket de uma ordem aberta no índice exato informado. Caso não exista uma ordem nesse índice, a função retorna 0.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "index",
+            comment: "Indice da ordem. Começando com 0 para a mais atual.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/references/enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+      ],
+      examples: ["OrderTicketExact[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
       returns: {
          success: {
             message: "Retorna o ticket da ordem.",
@@ -6455,8 +6645,9 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       name: "DealTicket",
       aliases: "DTicket",
       description: {
-         simple: "Retorna o ticket de uma posição fechada.",
-         complex: "Esta função retorna o ticket de uma posição fechada usando os parâmetros informados.",
+         simple: "Retorna o ticket da posição fechada mais próxima do índice informado.",
+         complex:
+            "Esta função retorna o ticket da posição fechada mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de posições fechadas, será retornado o ticket da última posição disponível (a de maior índice).",
       },
       parameters: [
          {
@@ -6516,6 +6707,85 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       examples: [
          "DealTicket[0, TYPE_BUY, TYPE_IN] // Retorna o ticket da última posição de compra (ordem de abertura).",
          "DealTicket[0, TYPE_BUY, TYPE_OUT] // Retorna o ticket da última posição de compra (ordem que fechou).",
+      ],
+      returns: {
+         success: {
+            message: "Retorna o ticket da posição.",
+            type: { type: "ulong" },
+         },
+         error: {
+            message: "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            type: { type: "ulong" },
+         },
+      },
+   },
+   {
+      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      name: "DealTicketExact",
+      aliases: "DTicketE",
+      description: {
+         simple: "Retorna o ticket da posição fechada no índice informado ou 0, caso não exista.",
+         complex:
+            "Esta função retorna o ticket de uma posição fechada no índice exato informado. Caso não exista uma posição nesse índice, a função retorna 0.",
+      },
+      parameters: [
+         {
+            type: { type: "int" },
+            name: "index",
+            comment: "Indice da posição. Começando com 0 para a mais atual.",
+         },
+         {
+            type: {
+               type: "ENUM_TRADE",
+               typeLink: "/references/enumerators#trade",
+            },
+            name: "type",
+            comment: "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'",
+            value: "TYPE_ALL",
+         },
+         {
+            type: {
+               type: "ENUM_MARKET_ACTION",
+               typeLink: "/references/enumerators#market-action",
+            },
+            name: "actionType",
+            comment: "Tipo de fechamento: 'TYPE_IN', 'TYPE_OUT', 'TYPE_ALL'.",
+            value: "TYPE_ALL",
+         },
+         {
+            type: {
+               type: "ENUM_TIME_HISTORIC",
+               typeLink: "/references/enumerators#time-historic",
+            },
+            name: "dateType",
+            comment: "Tipo de data de inicio: 'TYPE_DAY', 'TYPE_WEEK'",
+            value: "TYPE_DAY",
+         },
+         {
+            type: {
+               type: "ENUM_MARKET_GET",
+               typeLink: "/references/enumerators#market-get",
+            },
+            name: "profitType",
+            comment: "Tipo de retorno de lucro: 'TYPE_POSITIVE', 'TYPE_NEGATIVE'",
+            value: "TYPE_ALL",
+         },
+         {
+            type: { type: "ulong" },
+            name: "magic",
+            comment: "Número mágico para filtrar as operações.",
+            value: "MAGIC",
+         },
+         {
+            type: { type: "string" },
+            name: "symbol",
+            comment: "Símbolo do ativo.",
+            value: "REAL",
+         },
+      ],
+      examples: [
+         "DealTicketExact[0, TYPE_BUY, TYPE_IN] // Retorna o ticket da última posição de compra (ordem de abertura).",
+         "DealTicketExact[0, TYPE_BUY, TYPE_OUT] // Retorna o ticket da última posição de compra (ordem que fechou).",
       ],
       returns: {
          success: {
