@@ -41,6 +41,6 @@ export default function ReactModal({ isOpen, onClose, children }: Props) {
             </div>
          </div>
       </div>,
-      document.body
+      document.body,
    );
 }
