@@ -56,6 +56,8 @@
    --my-color-return-content: #f1f1f1;
    --my-color-return-border: #dddddd;
    --my-color-button-text-primary: #ffffff;
+   --my-color-codevar: #e4e3e3;
+   --my-color-codevar-hover: #d3d3d3;
 }
 
 :root[data-theme="dark"] {
@@ -116,6 +118,8 @@
    --my-color-return-content: #232933;
    --my-color-return-border: #303846;
    --my-color-button-text-primary: #ffffff;
+   --my-color-codevar: #4d5665;
+   --my-color-codevar-hover: #606b7e;
 
    /* code highlighting */
    --code-text-color: #f1f1f1ff;
@@ -158,6 +162,9 @@
 }
 
 /* Customização das tabelas */
+table {
+   overflow: visible;
+}
 th {
    padding: 8px;
 }

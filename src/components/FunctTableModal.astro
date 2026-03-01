@@ -32,13 +32,13 @@ const containsAliases =
                      <div class="name-container">
                         {fn.aliases && (
                            <div class="aliases-mobile">
-                              <CodeVar>{fn.aliases}</CodeVar>
+                              <CodeVar copy={fn.aliases}>{fn.aliases}</CodeVar>
                            </div>
                         )}
-                        <CodeVar>{fn.name}</CodeVar>
+                        <CodeVar copy={fn.name}>{fn.name}</CodeVar>
                      </div>
                   </td>
-                  {containsAliases && <td class="aliases">{fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}</td>}
+                  {containsAliases && <td class="aliases">{fn.aliases && <CodeVar copy={fn.aliases}>{fn.aliases}</CodeVar>}</td>}
                   <td>
                      <ReactFnModal
                         client:visible

@@ -4,9 +4,7 @@ import { VARIABLE_MAPPING } from "@src/data/variables-data";
 
 const { category } = Astro.props;
 
-const elements =
-   VARIABLE_MAPPING.get(category) &&
-   Array.from(VARIABLE_MAPPING.get(category)!.values());
+const elements = VARIABLE_MAPPING.get(category) && Array.from(VARIABLE_MAPPING.get(category)!.values());
 
 const containsAliases =
    elements &&
@@ -32,17 +30,13 @@ const containsAliases =
                      <div class="name-container">
                         {fn.aliases && (
                            <div class="aliases-mobile">
-                              <CodeVar>{fn.aliases}</CodeVar>
+                              <CodeVar copy={fn.aliases}>{fn.aliases}</CodeVar>
                            </div>
                         )}
-                        <CodeVar>{fn.name}</CodeVar>
+                        <CodeVar copy={fn.name}>{fn.name}</CodeVar>
                      </div>
                   </td>
-                  {containsAliases && (
-                     <td class="aliases">
-                        {fn.aliases && <CodeVar>{fn.aliases}</CodeVar>}
-                     </td>
-                  )}
+                  {containsAliases && <td class="aliases">{fn.aliases && <CodeVar copy={fn.aliases}>{fn.aliases}</CodeVar>}</td>}
                   <td>
                      <p>{fn.description.simple}</p>
                   </td>
