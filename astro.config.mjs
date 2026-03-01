@@ -73,13 +73,13 @@ export default defineConfig({
                   pt: "Espaços reservados",
                },
             },
-            {
-               label: "Resources",
-               autogenerate: { directory: "resources" },
-               translations: {
-                  pt: "Recursos",
-               },
-            },
+            // {
+            //    label: "Resources",
+            //    autogenerate: { directory: "resources" },
+            //    translations: {
+            //       pt: "Recursos",
+            //    },
+            // },
             {
                label: "Knowledge",
                autogenerate: { directory: "knowledge" },
@@ -87,12 +87,19 @@ export default defineConfig({
                   pt: "Base de Conhecimento",
                },
             },
-            { label: "Funções", link: "/placeholders/functions/types" },
+            {
+               label: "Pages",
+               translations: {
+                  pt: "Páginas",
+               },
+               items: [{ label: "Funções", link: "/placeholders/functions/types" }],
+            },
          ],
          customCss: ["./src/styles/custom.css"],
          components: {
             PageFrame: "./src/components/overrides/CustomPageFrame.astro",
             Header: "./src/components/overrides/CustomHeader.astro",
+            ThemeSelect: "./src/components/overrides/ThemeSelect.astro",
          },
       }),
       mdx({

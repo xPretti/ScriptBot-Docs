@@ -1,5 +1,7 @@
 /* Dark mode colors. */
 :root {
+   --sl-text-2xl: 1.4375rem;
+
    --sl-color-accent-low: #ee6a6a;
    --sl-color-accent: #ee6a6a;
    /* Cor Principal */

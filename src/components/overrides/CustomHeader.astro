@@ -25,10 +25,12 @@ const shouldRenderSearch = config.pagefind || config.components.Search !== "@ast
       <div class="sl-flex header-buttons">
          <HeaderButtons />
       </div>
-      <div class="sl-flex social-icons">
+      <div class="sl-flex header-buttons">
          <SocialIcons />
       </div>
-      <ThemeSelect />
+      <div class="sl-flex header-buttons">
+         <ThemeSelect />
+      </div>
       <LanguageSelect />
    </div>
 </div>
@@ -58,17 +60,18 @@ const shouldRenderSearch = config.pagefind || config.components.Search !== "@ast
       }
 
       .header-buttons,
-      .right-group,
-      .social-icons {
-         gap: 1rem;
+      .right-group {
          align-items: center;
       }
 
-      .header-buttons,
-      .social-icons::after {
+      .header-buttons {
          content: "";
          height: 2rem;
          border-inline-end: 1px solid var(--sl-color-gray-5);
+      }
+
+      .header-buttons:last-of-type {
+         border-inline-end: none;
       }
 
       .header-buttons {
@@ -88,7 +91,8 @@ const shouldRenderSearch = config.pagefind || config.components.Search !== "@ast
                (
                      100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) - (2 * var(--__toc-width, var(--sl-nav-pad-x))) -
                         var(--sl-content-inline-start, 0rem) - var(--sl-content-width)
-                  ) / 2
+                  ) /
+                  2
             );
             display: grid;
             grid-template-columns:
