@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-
 import styles from "./CopyText.module.css";
 
 interface CopyTextProps {
@@ -37,13 +36,13 @@ export default function CopyText({ text, children }: CopyTextProps) {
    }, []);
 
    return (
-      <span
+      <code
+         className={styles.code}
          onClick={handleCopy}
-         className={styles.wrapper}
-         title="Clique para copiar"
+         title="Click to clipboard"
       >
          {children}
-         {copied && <span className={styles.tooltip}>Copiado!</span>}
-      </span>
+         {copied && <span className={styles.tooltip}>Copied!</span>}
+      </code>
    );
 }

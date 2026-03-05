@@ -7,33 +7,9 @@ const slotContent = await Astro.slots.render("default");
 const textToCopy = copy ?? slotContent?.trim();
 ---
 
-{
-   textToCopy ? (
-      <CopyText
-         text={textToCopy}
-         client:load
-      >
-         <code class="variable">
-            <slot />
-         </code>
-      </CopyText>
-   ) : (
-      <code class="variable">
-         <slot />
-      </code>
-   )
-}
-
-<style>
-   .variable {
-      text-wrap: nowrap;
-      border-radius: 2px;
-      padding: 0.3rem 0.8rem;
-      position: relative;
-      background-color: var(--my-color-codevar);
-   }
-
-   .variable:hover {
-      background-color: var(--my-color-codevar-hover);
-   }
-</style>
+<CopyText
+   text={textToCopy}
+   client:load
+>
+   <slot />
+</CopyText>
