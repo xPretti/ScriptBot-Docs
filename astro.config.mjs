@@ -87,19 +87,14 @@ export default defineConfig({
                   pt: "Base de Conhecimento",
                },
             },
-            {
-               label: "Pages",
-               translations: {
-                  pt: "Páginas",
-               },
-               items: [{ label: "Funções", link: "/placeholders/functions/types" }],
-            },
          ],
          customCss: ["./src/styles/custom.css"],
          components: {
             PageFrame: "./src/components/overrides/CustomPageFrame.astro",
             Header: "./src/components/overrides/CustomHeader.astro",
             ThemeSelect: "./src/components/overrides/ThemeSelect.astro",
+            ContentPanel: "./src/components/overrides/ContentPanel.astro",
+            PageTitle: "./src/components/overrides/PageTitle.astro",
          },
       }),
       mdx({

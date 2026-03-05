@@ -5,6 +5,7 @@ sidebar:
 tableOfContents:
    minHeadingLevel: 2
    maxHeadingLevel: 4
+description: "Esta página apresenta os indicadores como ferramentas essenciais para a tomada de decisão, explica suas formas de aplicação no ScriptBot e destaca sua importância na criação de filtros, entradas mais precisas e análises avançadas."
 ---
 
 import { Aside } from "@astrojs/starlight/components";
@@ -31,28 +32,28 @@ Os indicadores são de extrema importância no desenvolvimento de estratégias n
 
 ### Parâmetros:
 
--  **[01] Nome ou Diretório**:
-   -  Define o nome ou diretório do indicador:
--  **[02] Parâmetros da Instância**:
-   -  Parâmetros da instancia do indicador, separados por vírgula.
-   -  **Valor padrão**: 0, SYMBOL, CURRENT
--  **[03] Parâmetros do Indicador**:
-   -  Parâmetros do indicador, se houver e separados por vírgula.
--  **[04] Carregamento forçado**:
-   -  O indicador é carregado imediatamente, mesmo que o indicador não seja utilizado.
+- **[01] Nome ou Diretório**:
+   - Define o nome ou diretório do indicador:
+- **[02] Parâmetros da Instância**:
+   - Parâmetros da instancia do indicador, separados por vírgula.
+   - **Valor padrão**: 0, SYMBOL, CURRENT
+- **[03] Parâmetros do Indicador**:
+   - Parâmetros do indicador, se houver e separados por vírgula.
+- **[04] Carregamento forçado**:
+   - O indicador é carregado imediatamente, mesmo que o indicador não seja utilizado.
 
 ### Tipos de Indicadores
 
 No ScriptBot, existem dois tipos de indicadores:
 
--  **Indicadores internos**
-   -  São indicadores nativos do MetaTrader 5.
-   -  Sua instalação é simples, feita apenas pelo nome do indicador.
-   -  Você pode consultar a lista completa acessando: <BaseLink href="/references/indicators/">Lista de Indicadores</BaseLink>
--  **Indicadores externos**
-   -  Desenvolvidos por terceiros, não fazem parte do MetaTrader 5 por padrão.
-   -  A instalação requer o caminho completo do arquivo. Por exemplo: **"Market/Ultra ZigZag.ex5"**
-   -  Podem ser encontrados no [MQL5 Market](https://www.mql5.com/pt/market/mt5/indicator), na [MQL5 CodeBase](https://www.mql5.com/pt/code/mt5/indicators) ou ainda ser criados pelo próprio usuário.
+- **Indicadores internos**
+   - São indicadores nativos do MetaTrader 5.
+   - Sua instalação é simples, feita apenas pelo nome do indicador.
+   - Você pode consultar a lista completa acessando: <BaseLink href="/references/indicators/">Lista de Indicadores</BaseLink>
+- **Indicadores externos**
+   - Desenvolvidos por terceiros, não fazem parte do MetaTrader 5 por padrão.
+   - A instalação requer o caminho completo do arquivo. Por exemplo: **"Market/Ultra ZigZag.ex5"**
+   - Podem ser encontrados no [MQL5 Market](https://www.mql5.com/pt/market/mt5/indicator), na [MQL5 CodeBase](https://www.mql5.com/pt/code/mt5/indicators) ou ainda ser criados pelo próprio usuário.
 
 ### Instalando um Indicador
 
@@ -181,8 +182,8 @@ O carregamento por arquivo .set pode não ser um processo simples, mas é fundam
 
 **Antes de começar, é importante entender algumas limitações:**
 
--  Alguns indicadores do MetaTrader 5 não permitem que suas configurações sejam salvas.
--  No MT5, existe um limite máximo de parâmetros que um robô pode carregar. Se o arquivo `.set` contiver mais de 62 parâmetros, o robô carregará apenas os primeiros 62. Caso esse limite seja ultrapassado, uma mensagem de erro será exibida. O indicador ainda será carregado, mas os parâmetros excedentes serão ignorados e pode ocorrer um comportamento diferente do esperado.
+- Alguns indicadores do MetaTrader 5 não permitem que suas configurações sejam salvas.
+- No MT5, existe um limite máximo de parâmetros que um robô pode carregar. Se o arquivo `.set` contiver mais de 62 parâmetros, o robô carregará apenas os primeiros 62. Caso esse limite seja ultrapassado, uma mensagem de erro será exibida. O indicador ainda será carregado, mas os parâmetros excedentes serão ignorados e pode ocorrer um comportamento diferente do esperado.
 
 #### Salvando o Arquivo set
 

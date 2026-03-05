@@ -1,0 +1,80 @@
+---
+import { PAGE_TITLE_ID } from "node_modules/@astrojs/starlight/constants";
+
+import { ExternalLink } from "lucide-react";
+
+const entry = Astro.locals.starlightRoute?.entry;
+const pageLink = entry?.data?.pageLink;
+
+const description = entry?.data?.description;
+---
+
+<h1 id={PAGE_TITLE_ID}>{Astro.locals.starlightRoute.entry.data.title}</h1>
+{
+   pageLink && (
+      <a
+         class="pageLink btn"
+         href={pageLink.href}
+      >
+         <span class="label">{pageLink.label}</span>
+         <div class="icon">
+            <ExternalLink size={"100%"} />
+         </div>
+      </a>
+   )
+}
+{description && <p>{description}</p>}
+
+<style>
+   @layer starlight.core {
+      h1 {
+         margin-top: 1rem;
+         font-size: var(--sl-text-h1);
+         line-height: var(--sl-line-height-headings);
+         font-weight: 600;
+         color: var(--sl-color-white);
+      }
+   }
+
+   .pageLink {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-top: 12px;
+   }
+
+   .btn {
+      text-decoration: none;
+      font-weight: 400;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.4rem;
+      color: var(--sl-color-white);
+   }
+
+   .btn:hover {
+      background: none;
+      color: var(--sl-color-accent);
+   }
+
+   .icon {
+      display: inline-flex;
+      margin-left: 0.5rem;
+      width: 21px;
+      height: 21px;
+   }
+
+   @media (max-width: 390px) {
+      .label {
+         display: none;
+      }
+      .pageLink {
+         margin-top: 7px;
+      }
+      .icon {
+         width: 24px;
+         height: 24px;
+      }
+   }
+</style>
