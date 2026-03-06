@@ -13,7 +13,8 @@
       document.querySelectorAll(".sl-heading-wrapper.highlighted-title").forEach((el) => el.classList.remove("highlighted-title"));
 
       const hash = decodeURIComponent(window.location.hash);
-      if (!hash || !hash.startsWith("#")) return;
+
+      if (!hash) return;
 
       const heading = document.querySelector(hash);
       if (!heading) return;
@@ -22,6 +23,13 @@
       if (wrapper) wrapper.classList.add("highlighted-title");
    }
 
-   window.addEventListener("DOMContentLoaded", applyHeadingHighlight);
    window.addEventListener("hashchange", applyHeadingHighlight);
+   window.addEventListener("popstate", applyHeadingHighlight);
+
+   const observer = new MutationObserver(applyHeadingHighlight);
+
+   observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+   });
 </script>
