@@ -5,8 +5,8 @@ import mdx from "@astrojs/mdx";
 import path from "node:path";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import remarkCustomHeaderId from "remark-custom-header-id";
-import mermaid from "astro-mermaid";
 import starlightImageZoom from "starlight-image-zoom";
+import rehypeMermaid from "rehype-mermaid";
 
 import react from "@astrojs/react";
 
@@ -16,12 +16,87 @@ export default defineConfig({
    // base: "/a",
 
    markdown: {
-      rehypePlugins: [[rehypeHeadingIds, { headingIdCompat: true }]],
+      rehypePlugins: [
+         [rehypeHeadingIds, { headingIdCompat: true }],
+         [
+            rehypeMermaid,
+            {
+               strategy: "inline-svg",
+               mermaidConfig: {
+                  theme: "base",
+                  themeVariables: {
+                     edgeLabelBackground: "#000000",
+                     tertiaryColor: "#000000",
+                     fontFamily: "sans-serif",
+                  },
+                  themeCSS: `
+                           /* Aqui as variáveis funcionam perfeitamente! */
+                           :root {
+                              --mermaid-font-family: var(--sl-font-system) !important;
+                           }
+
+                           /* Estilização das Labels (o que você tinha antes) */
+                           .labelBkg, .edgeLabel p { 
+                              border-radius: 15px !important; 
+                              padding: 2px 10px !important;
+                              background-color: var(--my-color-mermaid-bg, #2d3436) !important;
+                              color: var(--sl-color-white) !important;
+                           }
+
+                           /* Remove o fundo padrão chato do Mermaid */
+                           .edgeLabel rect { 
+                              fill: transparent !important; 
+                              stroke: none !important; 
+                           }
+
+                           .edgePaths path {
+                              stroke: var(--sl-color-white) !important;
+                           }
+
+                           .marker.marker {
+                              fill: var(--sl-color-white) !important;
+                              stroke: var(--sl-color-white) !important;
+                           }
+
+                           /* Aplica a fonte do Starlight globalmente no SVG */
+                           text {
+                              font-family: var(--sl-font-system) !important;
+                           }
+
+                           .label-container, 
+                           .label-container path,
+                           [id^="mermaid-"] .label-container {
+                              fill: var(--my-color-mermaid-node-bg, #2d3436) !important;
+                              background-color: var(--my-color-mermaid-bg, #2d3436) !important;
+                              stroke: var(--sl-color-gray-5) !important; /* Cor da borda, se quiser mudar */
+                           }
+
+                           /* Se for um retângulo simples */
+                           .node rect {
+                              fill: var(--my-color-mermaid-node-bg, #2d3436) !important;
+                           }
+                           
+                           .nodeLabel {
+                              color: var(--sl-color-white) !important;
+                           }
+
+                           .text path {
+                              fill: var(--sl-color-gray-5) !important;
+                              stroke: var(--sl-color-gray-5) !important;
+                           }
+                           `,
+                  flowchart: {
+                     htmlLabels: true,
+                     curve: "basis",
+                  },
+               },
+            },
+         ],
+      ],
       remarkPlugins: [remarkCustomHeaderId],
    },
 
    integrations: [
-      mermaid(),
       starlight({
          plugins: [starlightImageZoom()],
          defaultLocale: "root",

@@ -38,6 +38,7 @@
    --my-color-modal-bg: #ffffff;
    --my-color-modal-border: #a7a7a7;
    --my-color-mermaid-bg: #e6e6e6;
+   --my-color-mermaid-node-bg: #e6e6e6;
    --my-color-preview-title: #333333;
    --my-color-img-frame-border: #c0c0c0;
    --my-color-scrollbar-bg: #f5f5f5;
@@ -100,6 +101,7 @@
    --my-color-modal-bg: #1c212a;
    --my-color-modal-border: var(--sl-color-gray-5);
    --my-color-mermaid-bg: #363f4e;
+   --my-color-mermaid-node-bg: #1b2029;
    --my-color-img-frame-border: #171b23;
    --my-color-preview-title: #d8dde6;
    --my-color-scrollbar-bg: #252b36;
@@ -269,25 +271,6 @@ td:last-child {
 .card:hover {
    background-color: var(--sl-color-gray-7);
    border-color: var(--sl-color-gray-3);
-}
-
-/* 
- * MERMAID
- */
-.mermaid {
-   background-color: transparent !important;
-}
-
-.labelBkg {
-   border-radius: 15px;
-   overflow: hidden;
-}
-
-.edgeLabel p {
-   padding: 0 10px !important;
-   border-radius: 15px;
-   overflow: hidden;
-   background-color: var(--my-color-mermaid-bg) !important;
 }
 
 /* 
