@@ -10,6 +10,7 @@ import Preview from "@components/Preview.astro";
 import { Aside } from "@astrojs/starlight/components";
 import { Steps } from "@astrojs/starlight/components";
 import BaseLink from "@components/BaseLink.astro";
+import MermaidSyntax from "@components/MermaidSyntax.astro";
 
 Nesta página, você encontrará informações sobre os gatilhos de entrada, saída e atualização disponíveis no ScriptBot.
 
@@ -39,7 +40,7 @@ O fluxo de operações do ScriptBot segue a seguinte ordem:
 
 <Preview>
 
-```mermaid
+<MermaidSyntax code={`
 flowchart TD
     A["PRE-REQUISITO"] -- TRUE --- n1["ENTRADA"]
     n1 -- TRUE --- n2["CONFIRMAÇÃO"]
@@ -54,8 +55,7 @@ flowchart TD
     n3@{ shape: terminal}
     n4@{ shape: hex}
     style n3 stroke:#FF6D00,color:#FF6D00
-
-```
+    `} />
 
 </Preview>
 
@@ -113,11 +113,13 @@ O fluxo de saída segue a seguinte ordem:
 
 <Preview>
 
-```mermaid
+<MermaidSyntax
+   code={`
 flowchart TD
     A["SAIDA"] -- TRUE --- n3["FECHAMENTO TOTAL"]
     n3@{ shape: hex}
-```
+    `}
+/>
 
 </Preview>
 
@@ -147,7 +149,8 @@ O fluxo de saída segue a seguinte ordem:
 
 <Preview>
 
-```mermaid
+<MermaidSyntax
+   code={`
 flowchart TD
     n5["ITERADOR"] --- n4["Small Circle"]
     A["SAIDA INDIVIDUAL"] -- TRUE --- n3["FECHAMENTO"]
@@ -158,7 +161,8 @@ flowchart TD
     n3@{ shape: hex}
     n5@{ shape: loop-limit}
     n4@{ shape: sm-circ}
-```
+    `}
+/>
 
 </Preview>
 
@@ -196,14 +200,16 @@ O fluxo de atualização segue a seguinte ordem:
 
 <Preview>
 
-```mermaid
+<MermaidSyntax
+   code={`
 flowchart TD
     n5["ITERADOR"] --- n4["Small Circle"] & n6>"ORDEM OU POSIÇÃO"]
     A["ATUALIZADOR INDIVIDUAL"] --- n4
     n6 --- A
     n5@{ shape: loop-limit}
     n4@{ shape: sm-circ}
-```
+    `}
+/>
 
 </Preview>
 

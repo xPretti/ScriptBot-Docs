@@ -5,7 +5,6 @@ import mdx from "@astrojs/mdx";
 import path from "node:path";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import remarkCustomHeaderId from "remark-custom-header-id";
-import mermaid from "astro-mermaid";
 import starlightImageZoom from "starlight-image-zoom";
 
 import react from "@astrojs/react";
@@ -21,7 +20,6 @@ export default defineConfig({
    },
 
    integrations: [
-      mermaid(),
       starlight({
          plugins: [starlightImageZoom()],
          defaultLocale: "root",

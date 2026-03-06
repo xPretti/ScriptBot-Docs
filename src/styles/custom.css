@@ -241,6 +241,10 @@ td:last-child {
    .top-level li:has(> a[aria-current="false"]:hover) {
       background-color: color-mix(in srgb, var(--sl-color-hairline-light) 50%, transparent 100%);
    }
+
+   .top-level details li:has(> a):hover {
+      background-color: color-mix(in srgb, var(--sl-color-hairline-light) 50%, transparent 100%);
+   }
 }
 
 .starlight-aside {
@@ -269,25 +273,6 @@ td:last-child {
 .card:hover {
    background-color: var(--sl-color-gray-7);
    border-color: var(--sl-color-gray-3);
-}
-
-/* 
- * MERMAID
- */
-.mermaid {
-   background-color: transparent !important;
-}
-
-.labelBkg {
-   border-radius: 15px;
-   overflow: hidden;
-}
-
-.edgeLabel p {
-   padding: 0 10px !important;
-   border-radius: 15px;
-   overflow: hidden;
-   background-color: var(--my-color-mermaid-bg) !important;
 }
 
 /* 

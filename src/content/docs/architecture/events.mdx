@@ -13,6 +13,7 @@ import { Aside } from "@astrojs/starlight/components";
 import Preview from "@components/Preview.astro";
 import { Steps } from "@astrojs/starlight/components";
 import BaseLink from "@components/BaseLink.astro";
+import MermaidSyntax from "@components/MermaidSyntax.astro";
 
 Nesta página, você encontrará informações sobre os eventos, para que servem e como eles podem ser utilizados em estratégias no ScriptBot.
 
@@ -66,7 +67,8 @@ O fluxo da execução segue a seguinte ordem:
 
 <Preview>
 
-```mermaid
+<MermaidSyntax
+   code={`
 flowchart TD
     A["OnDay()"] --> n1
     n1["DayOfWeek[] == 0"] -- TRUE --- n3["Print[Today is Monday]"]
@@ -75,7 +77,8 @@ flowchart TD
     n3@{ shape: braces}
     n4@{ shape: braces}
     A@{ shape: event}
-```
+    `}
+/>
 
 </Preview>
 

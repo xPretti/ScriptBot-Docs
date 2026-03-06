@@ -1,0 +1,28 @@
+---
+import ReactMermaid from "./react/ReactMermaid";
+
+const { code } = Astro.props;
+---
+
+<ReactMermaid
+   client:visible
+   code={code}
+/>
+
+<style is:global>
+   .mermaid {
+      background-color: transparent !important;
+   }
+
+   .labelBkg {
+      border-radius: 15px;
+      overflow: hidden;
+   }
+
+   .edgeLabel p {
+      padding: 0 10px !important;
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: var(--my-color-mermaid-bg) !important;
+   }
+</style>

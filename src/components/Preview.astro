@@ -2,7 +2,7 @@
 const { title } = Astro.props;
 ---
 
-<div class="container">
+<div class="preview-container">
    {
       title && (
          <div class="header">
@@ -17,7 +17,7 @@ const { title } = Astro.props;
 
 <!-- Estilos -->
 <style>
-   .container {
+   .preview-container {
       background-color: var(--my-color-spoiler-bg);
       padding: 0;
       /* border-radius: 5px; */
@@ -30,8 +30,17 @@ const { title } = Astro.props;
       border-bottom: 1px solid var(--my-color-spoiler-border);
    }
    .content {
-      /* background-color: aqua; */
       margin: 0;
       padding: 0.7rem;
+   }
+</style>
+
+<style is:global>
+   .preview-container .content .flowchart {
+      margin: auto;
+   }
+
+   .preview-container .content div:has(.flowchart) {
+      margin-top: 0;
    }
 </style>
