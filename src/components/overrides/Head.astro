@@ -6,7 +6,7 @@ import ProgressBar from "astro-vtbot/components/ProgressBar.astro";
 ---
 
 <VtbotStarlight
-   transition:animate="fade"
+   transition:animate="none"
    replaceSidebarContent
    retainCurrentPageMarker
 >
@@ -21,5 +21,9 @@ import ProgressBar from "astro-vtbot/components/ProgressBar.astro";
    .swup-progress-bar {
       background: var(--sl-color-accent);
       height: 2px;
+   }
+
+   @view-transition {
+      navigation: none;
    }
 </style>

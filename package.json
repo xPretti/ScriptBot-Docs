@@ -11,14 +11,14 @@
       "pdf": "npm run build && start \"preview\" npm run preview && npx wait-on http-get://localhost:4321 && echo Y | npx starlight-to-pdf http://localhost:4321/settings/coming-soon -p ./public/pdf --filename docs --pdf-outline --contents-links internal --exclude '/knowledge/faq/' -e '/resources/downloads/' --no-contents"
    },
    "dependencies": {
-      "@astrojs/mdx": "^4.3.0",
-      "@astrojs/react": "^4.3.0",
-      "@astrojs/starlight": "^0.34.4",
+      "@astrojs/mdx": "^4.3.13",
+      "@astrojs/react": "^4.4.2",
+      "@astrojs/starlight": "^0.37.6",
       "@floating-ui/react": "^0.27.15",
       "@lucide/astro": "^0.525.0",
       "@types/react": "^19.1.8",
       "@types/react-dom": "^19.1.6",
-      "astro": "^5.6.1",
+      "astro": "^5.18.0",
       "astro-breadcrumbs": "^3.3.3",
       "astro-mermaid": "^1.0.4",
       "lucide-react": "^0.525.0",
