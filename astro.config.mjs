@@ -95,6 +95,7 @@ export default defineConfig({
             ThemeSelect: "./src/components/overrides/ThemeSelect.astro",
             ContentPanel: "./src/components/overrides/ContentPanel.astro",
             PageTitle: "./src/components/overrides/PageTitle.astro",
+            Head: "./src/components/overrides/Head.astro",
          },
       }),
       mdx({

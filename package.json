@@ -33,6 +33,7 @@
       "starlight-theme-rapide": "^0.5.1"
    },
    "devDependencies": {
-      "@types/node": "^24.0.10"
+      "@types/node": "^24.0.10",
+      "astro-vtbot": "^2.1.11"
    }
 }
