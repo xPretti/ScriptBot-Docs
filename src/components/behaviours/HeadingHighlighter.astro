@@ -25,4 +25,11 @@
 
    window.addEventListener("hashchange", applyHeadingHighlight);
    window.addEventListener("popstate", applyHeadingHighlight);
+
+   const observer = new MutationObserver(applyHeadingHighlight);
+
+   observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+   });
 </script>
