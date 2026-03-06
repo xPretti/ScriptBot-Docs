@@ -190,6 +190,10 @@ td:last-child {
    width: 100%;
 }
 
+td div {
+   margin-top: 0;
+}
+
 /* Customização da barra de rolagem */
 ::-webkit-scrollbar {
    width: 8px;
