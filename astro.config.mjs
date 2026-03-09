@@ -30,8 +30,7 @@ export default defineConfig({
                svgStrokeWidth: 1,
                borderRadius: "50",
                showProgressRing: true,
-               progressRingColor: "#ff6b6b",
-               showOnHomepage: false,
+               showOnHomepage: true,
             }),
          ],
          defaultLocale: "root",
@@ -44,7 +43,8 @@ export default defineConfig({
          favicon: "./favicon.ico",
          title: "ScriptBot",
          logo: {
-            src: "./src/assets/ScriptBot.png",
+            dark: "./src/assets/ScriptBot.png",
+            light: "./src/assets/ScriptBot.png",
          },
          social: [
             {
