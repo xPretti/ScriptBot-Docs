@@ -6,14 +6,11 @@ import path from "node:path";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import remarkCustomHeaderId from "remark-custom-header-id";
 import starlightImageZoom from "starlight-image-zoom";
+import starlightScrollToTop from "starlight-scroll-to-top";
 
 import react from "@astrojs/react";
 
 export default defineConfig({
-   // site: "https://docs.botrading.net",
-   // base: "/scriptbot",
-   // base: "/a",
-
    markdown: {
       rehypePlugins: [[rehypeHeadingIds, { headingIdCompat: true }]],
       remarkPlugins: [remarkCustomHeaderId],
@@ -21,7 +18,22 @@ export default defineConfig({
 
    integrations: [
       starlight({
-         plugins: [starlightImageZoom()],
+         plugins: [
+            starlightImageZoom(),
+            starlightScrollToTop({
+               position: "right",
+               tooltipText: "Back to top",
+               showTooltip: false,
+               smoothScroll: true,
+               threshold: 10,
+               svgPath: "M12 5V19M7 10L12 5L17 10",
+               svgStrokeWidth: 1,
+               borderRadius: "50",
+               showProgressRing: true,
+               progressRingColor: "#ff6b6b",
+               showOnHomepage: false,
+            }),
+         ],
          defaultLocale: "root",
          locales: {
             root: {

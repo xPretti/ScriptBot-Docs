@@ -2,10 +2,10 @@
 :root {
    --sl-text-2xl: 1.4375rem;
 
-   --sl-color-accent-low: #ee6a6a;
-   --sl-color-accent: #ee6a6a;
+   --sl-color-accent-low: #ec5656;
+   --sl-color-accent: #f16868;
+   --sl-color-accent-high: #e46868;
    /* Cor Principal */
-   --sl-color-accent-high: #ee6a6a;
    --sl-color-banner-text: var(--sl-color-black);
    --sl-color-white-fixed: #ffffff;
    --sl-color-white: #191919;
@@ -61,9 +61,10 @@
 }
 
 :root[data-theme="dark"] {
-   --sl-color-accent-low: #eb8484;
-   --sl-color-accent: #eb8484;
-   --sl-color-accent-high: #ee6a6a;
+   --sl-color-accent-low: #e08c8c;
+   --sl-color-accent: #e06767;
+   --sl-color-accent-high: #d46262;
+
    --sl-color-banner-text: var(--sl-color-white);
    --sl-color-white: #ffffff;
    --sl-color-gray-1: #f0f2f6;
@@ -285,4 +286,36 @@ td div {
 .starlight-image-zoom-dialog img {
    z-index: 1;
    max-height: 90%;
+}
+
+/**
+* ScrollToTop Button
+*/
+.scroll-to-top-button {
+   background: transparent !important;
+   border: none !important;
+   width: 50px !important;
+   height: 50px !important;
+   box-shadow: none !important;
+   color: var(--sl-color-white) !important;
+   transform: scale(1) !important;
+   transition: transform 0.2s ease-in-out;
+}
+
+.scroll-to-top-button:hover {
+   transform: scale(1.2) !important;
+   transition: transform 0.2s ease-in-out;
+}
+
+.scroll-progress-ring {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transform: rotate(0deg);
+}
+
+.scroll-progress-ring circle {
+   stroke: var(--sl-color-white) !important;
 }
