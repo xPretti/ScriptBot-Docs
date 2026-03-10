@@ -225,7 +225,8 @@ td div {
    transition: color 0.15s ease-in-out;
 }
 
-.top-level a[aria-current="page"] {
+.top-level a[aria-current="page"],
+.top-level .large:hover {
    color: var(--sl-color-accent-high);
    background-color: transparent;
 }
