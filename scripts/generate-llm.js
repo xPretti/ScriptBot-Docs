@@ -102,6 +102,7 @@ function init() {
       output += `\n\n---\n\n# ${title}\n\n${md}\n`;
    }
 
+   fs.writeFileSync("dist/llms.txt", "\ufeff" + output, "utf8");
    fs.writeFileSync("dist/llms-full.txt", "\ufeff" + output, "utf8");
 
    console.log("LLM file generated");
