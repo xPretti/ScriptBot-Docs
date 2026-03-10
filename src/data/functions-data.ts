@@ -636,7 +636,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
             comment: "Nome da variável.",
          },
       ],
-      examples: ['RemoveInt["Name"'],
+      examples: ['RemoveInt["Name"]'],
       returns: {
          success: {
             message: "Retorna um boolean (true) se a variável foi removida..",

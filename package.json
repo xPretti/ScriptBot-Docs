@@ -5,10 +5,11 @@
    "scripts": {
       "dev": "astro dev --host",
       "start": "astro dev",
-      "build": "astro build",
+      "build": "astro build && npm run llm",
       "preview": "astro preview --host",
       "astro": "astro",
-      "pdf": "npm run build && start \"preview\" npm run preview && npx wait-on http-get://localhost:4321 && echo Y | npx starlight-to-pdf http://localhost:4321/settings/coming-soon -p ./public/pdf --filename docs --pdf-outline --contents-links internal --exclude '/knowledge/faq/' -e '/resources/downloads/' --no-contents"
+      "pdf": "npm run build && start \"preview\" npm run preview && npx wait-on http-get://localhost:4321 && echo Y | npx starlight-to-pdf http://localhost:4321/settings/coming-soon -p ./public/pdf --filename docs --pdf-outline --contents-links internal --exclude '/knowledge/faq/' -e '/resources/downloads/' --no-contents",
+      "llm": "node scripts/generate-llm.js"
    },
    "dependencies": {
       "@astrojs/mdx": "^4.3.13",
@@ -20,6 +21,10 @@
       "@types/react-dom": "^19.1.6",
       "astro": "^5.18.0",
       "astro-breadcrumbs": "^3.3.3",
+      "axios": "^1.13.6",
+      "cheerio": "^1.2.0",
+      "fs-extra": "^11.3.4",
+      "glob": "^13.0.6",
       "lucide-react": "^0.525.0",
       "mermaid": "^11.12.3",
       "react": "^19.1.0",
@@ -31,7 +36,8 @@
       "sharp": "^0.34.2",
       "starlight-image-zoom": "^0.13.0",
       "starlight-scroll-to-top": "^0.4.0",
-      "starlight-theme-rapide": "^0.5.1"
+      "starlight-theme-rapide": "^0.5.1",
+      "turndown": "^7.2.2"
    },
    "devDependencies": {
       "@types/node": "^24.0.10",

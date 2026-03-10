@@ -97,6 +97,21 @@ export default defineConfig({
                   pt: "Base de Conhecimento",
                },
             },
+            {
+               label: "LLM Resources",
+               translations: {
+                  pt: "Recursos para LLMs",
+               },
+               items: [
+                  {
+                     label: "Page llms-full.txt",
+                     link: "/llms-full.txt",
+                     translations: {
+                        pt: "Página llms-full.txt",
+                     },
+                  },
+               ],
+            },
          ],
          customCss: ["./src/styles/custom.css"],
          components: {

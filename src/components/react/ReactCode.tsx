@@ -177,7 +177,7 @@ export default function ReactCode({ children, language }: Props) {
    return (
       <SyntaxHighlighter
          language={language}
-         showLineNumbers={true}
+         showLineNumbers={false}
          showInlineLineNumbers={true}
          wrapLines={true}
          style={theme}
