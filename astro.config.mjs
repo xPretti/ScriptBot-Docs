@@ -7,7 +7,6 @@ import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import remarkCustomHeaderId from "remark-custom-header-id";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightScrollToTop from "starlight-scroll-to-top";
-import starlightLlmsTxt from "starlight-llms-txt";
 
 import react from "@astrojs/react";
 
@@ -32,9 +31,6 @@ export default defineConfig({
                borderRadius: "50",
                showProgressRing: true,
                showOnHomepage: true,
-            }),
-            starlightLlmsTxt({
-               projectName: "ScriptBot",
             }),
          ],
          defaultLocale: "root",
