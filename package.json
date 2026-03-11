@@ -9,7 +9,7 @@
       "preview": "astro preview --host",
       "astro": "astro",
       "pdf": "npm run build && start \"preview\" npm run preview && npx wait-on http-get://localhost:4321 && echo Y | npx starlight-to-pdf http://localhost:4321/settings/coming-soon -p ./public/pdf --filename docs --pdf-outline --contents-links internal --exclude '/knowledge/faq/' -e '/resources/downloads/' --no-contents",
-      "llm": "node scripts/generate-llm.js"
+      "llm": "node scripts/generate-llm-index.js"
    },
    "dependencies": {
       "@astrojs/mdx": "^4.3.13",

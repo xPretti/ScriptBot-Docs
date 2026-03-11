@@ -104,6 +104,13 @@ export default defineConfig({
                },
                items: [
                   {
+                     label: "Page llms.txt",
+                     link: "/llms.txt",
+                     translations: {
+                        pt: "Página llms.txt",
+                     },
+                  },
+                  {
                      label: "Page llms-full.txt",
                      link: "/llms-full.txt",
                      translations: {
