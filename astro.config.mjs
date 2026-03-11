@@ -54,7 +54,6 @@ export default defineConfig({
             },
          ],
          sidebar: [
-            { label: "Início", link: "/" },
             {
                label: "Settings",
                autogenerate: { directory: "settings" },
@@ -128,6 +127,7 @@ export default defineConfig({
             ContentPanel: "./src/components/overrides/ContentPanel.astro",
             PageTitle: "./src/components/overrides/PageTitle.astro",
             Head: "./src/components/overrides/Head.astro",
+            Sidebar: "./src/components/overrides/Sidebar.astro",
          },
       }),
       mdx({

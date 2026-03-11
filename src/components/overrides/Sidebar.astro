@@ -1,0 +1,46 @@
+---
+import MobileMenuFooter from "virtual:starlight/components/MobileMenuFooter";
+import SidebarPersister from "@astrojs/starlight/components/SidebarPersister.astro";
+import SidebarSublist from "@astrojs/starlight/components/SidebarSublist.astro";
+import SidebarSearch from "../SidebarSearch.astro";
+import SidebarTabs from "../SidebarTabs.astro";
+
+const { sidebar } = Astro.locals.starlightRoute;
+
+const navItems = [
+   { label: "Início", href: "/" },
+   { label: "Funções", href: "/placeholders/functions/types" },
+];
+---
+
+<SidebarPersister>
+   <div class="sidebar-header">
+      <SidebarSearch />
+      <SidebarTabs tabs={navItems} />
+   </div>
+   <SidebarSublist sublist={sidebar} />
+</SidebarPersister>
+
+<div class="md:sl-hidden">
+   <MobileMenuFooter />
+</div>
+
+<style>
+   .sidebar-header {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      padding: 20px 0;
+      background-color: var(--sl-color-bg-nav);
+   }
+</style>
+
+<style is:global>
+   .sidebar-content {
+      padding-top: 0 !important;
+      gap: 0 !important;
+   }
+   .top-level {
+      padding-bottom: 20px !important;
+   }
+</style>
