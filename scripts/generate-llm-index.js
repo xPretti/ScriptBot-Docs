@@ -7,7 +7,7 @@ import path from "path";
 const turndown = new TurndownService({ headingStyle: "atx", codeBlockStyle: "fenced" });
 const SITE = "https://sb.botrading.net";
 const DIST_PATH = "dist";
-const DOCS_REL_PATH = "docs";
+const DOCS_REL_PATH = "llms";
 const BOM = "\ufeff";
 
 function clean(md) {
@@ -97,7 +97,7 @@ function init() {
    fs.outputFileSync(path.join(DIST_PATH, "llms-full.txt"), BOM + fullOutput, "utf8");
    fs.outputFileSync(path.join(DIST_PATH, "llms.txt"), BOM + indexOutput, "utf8");
 
-   console.log("Feito! Caminhos agora seguem o padrão /pasta/index.md");
+   console.log("Documentação gerada com sucesso!");
 }
 
 init();
