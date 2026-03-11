@@ -58,10 +58,10 @@ function init() {
 
    const files = globSync(`${DIST_PATH}/**/*.html`);
 
-   let fullOutput = "# Documentation\n> Full documentation for LLMs\n\n";
-   let indexOutput = "# Botrading Documentation\n\n";
+   let fullOutput = "# LLMs.txt for ScriptBot\n> Full documentation for LLMs\n\n";
+   let indexOutput = "# LLMs.txt for ScriptBot\n\n";
    indexOutput += `> Use [llms-full.txt](${SITE}/llms-full.txt) for the complete documentation.\n\n`;
-   indexOutput += "## Documentation Pages\n\n";
+   indexOutput += "## Key Pages\n";
 
    for (const file of files) {
       if (file.includes("404.html")) continue;
