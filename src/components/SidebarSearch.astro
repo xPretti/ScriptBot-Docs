@@ -15,18 +15,20 @@ import { Search } from "lucide-react";
       />
    </div>
 
-   <div
-      id="sidebar-no-results"
-      class="no-results hidden"
-   >
-      <p>Nenhum resultado encontrado.</p>
-      <button
-         type="button"
-         id="open-global-search"
-         class="global-search-btn"
+   <div class="results-wrapper">
+      <div
+         id="sidebar-no-results"
+         class="no-results hidden"
       >
-         Pesquisar em todo o site
-      </button>
+         <p>Nenhum resultado encontrado.</p>
+         <button
+            type="button"
+            id="open-global-search"
+            class="global-search-btn"
+         >
+            Pesquisar em todo o site
+         </button>
+      </div>
    </div>
 
    <div class="sidebar-content">
@@ -65,8 +67,13 @@ import { Search } from "lucide-react";
       display: inline-flex;
       align-items: center;
    }
+   .results-wrapper {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+   }
    .no-results {
-      margin-top: 15px;
+      width: 100%;
       padding: 1.5rem 1rem;
       text-align: center;
       font-size: var(--sl-text-xs);
