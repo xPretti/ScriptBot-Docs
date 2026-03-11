@@ -1,5 +1,4 @@
 ---
-// SidebarTabs.astro
 interface TabItem {
    label: string;
    href: string;
@@ -11,8 +10,14 @@ interface Props {
 
 const { tabs } = Astro.props;
 
-// Obtém o caminho da URL atual (ex: "/demos" ou "/")
-const pathname = Astro.url.pathname.replace(/\/$/, "");
+const pathname = Astro.url.pathname;
+const sortedTabs = [...tabs].sort((a, b) => b.href.length - a.href.length);
+
+const activeTab =
+   sortedTabs.find((tab) => {
+      if (tab.href === "/") return pathname === "/";
+      return pathname.startsWith(tab.href);
+   }) || tabs[0];
 ---
 
 <div class="custom-tabs-container">
@@ -22,8 +27,7 @@ const pathname = Astro.url.pathname.replace(/\/$/, "");
    >
       {
          tabs.map((tab) => {
-            const tabHref = tab.href.replace(/\/$/, "");
-            const isActive = pathname === tabHref || (pathname === "" && tabHref === "");
+            const isActive = tab.href === activeTab.href;
 
             return (
                <li
@@ -48,11 +52,11 @@ const pathname = Astro.url.pathname.replace(/\/$/, "");
 </div>
 
 <style>
+   /* Seus estilos originais permanecem aqui */
    .custom-tabs-container {
       border-bottom: 1px solid var(--sl-color-gray-5);
       background-color: transparent;
    }
-
    .tabs-list {
       display: flex;
       gap: 1.5rem;
@@ -60,13 +64,11 @@ const pathname = Astro.url.pathname.replace(/\/$/, "");
       margin: 0 !important;
       padding: 0 !important;
    }
-
    .tab-item {
       position: relative;
       display: flex;
       align-items: center;
    }
-
    .tab-link {
       display: flex;
       align-items: center;
@@ -78,15 +80,10 @@ const pathname = Astro.url.pathname.replace(/\/$/, "");
       text-decoration: none !important;
       transition: color 0.2s ease;
    }
-
-   .tab-link:hover {
-      color: var(--sl-color-accent);
-   }
-
+   .tab-link:hover,
    .tab-link.is-active {
       color: var(--sl-color-accent);
    }
-
    .active-indicator {
       position: absolute;
       bottom: -1px;
