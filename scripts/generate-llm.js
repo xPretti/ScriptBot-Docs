@@ -4,20 +4,34 @@ import { load } from "cheerio";
 import TurndownService from "turndown";
 import path from "path";
 
-const turndown = new TurndownService({ headingStyle: "atx", codeBlockStyle: "fenced" });
-const SITE = "https://sb.botrading.net";
-const DIST_PATH = "dist";
-const DOCS_REL_PATH = "llms";
-const BOM = "\ufeff";
+// --- Configurações ---
+const CONFIG = {
+   SITE: "https://sb.botrading.net",
+   DIST_PATH: "dist",
+   DOCS_REL_PATH: "llms",
+   BOM: "\ufeff",
+   TITLE: "ScriptBot",
+   DESCRIPTION: "Full documentation of ScriptBot",
+};
+
+const TEMPLATES = {
+   full: `# ${CONFIG.TITLE}\n> ${CONFIG.DESCRIPTION}\n\n`,
+   index: `# ${CONFIG.TITLE}\n\n> Use [llms-full.txt](${CONFIG.SITE}/llms-full.txt) for the complete documentation.\n\n## Docs\n\n`,
+};
+
+const turndown = new TurndownService({
+   headingStyle: "atx",
+   codeBlockStyle: "fenced",
+});
 
 function clean(md) {
    return md
-      .replace(/\n([^\n]+)\n[-=]{3,}/g, "\n## $1")
+      .replace(/\n([^\n]+)\n[-=]{3,}/g, "\n## $1") // Converte underlines para H2
       .replace(/\\=/g, "=")
       .replace(/\\/g, "")
-      .replace(/\]\(\/([^\s)]+?)\/?\)/g, (match, p1) => {
+      .replace(/\]\(\/([^\s)]+?)\/?\)/g, (_, p1) => {
          const cleanPath = p1.endsWith("/index") ? p1 : p1.replace(/\/$/, "");
-         return `](${SITE}/${DOCS_REL_PATH}/${cleanPath}/index.md)`;
+         return `](${CONFIG.SITE}/${CONFIG.DOCS_REL_PATH}/${cleanPath}/index.md)`;
       })
       .replace(/\|\s*\|\s*/g, "| |")
       .replace(/\s*\|\s*/g, " | ")
@@ -36,32 +50,31 @@ function convertTables($) {
             $(tr)
                .find("th, td")
                .each((_, td) => {
-                  const text = $(td).text().trim().replace(/\s+/g, " ");
-                  cols.push(text);
+                  cols.push($(td).text().trim().replace(/\s+/g, " "));
                });
             if (cols.length === 0) return;
-            lines.push(cols.length === 1 ? cols[0] : `${cols[0]} | ${cols[1]}`);
+            lines.push(cols.length === 1 ? cols[0] : cols.join(" | "));
          });
-      $(table).replaceWith("<pre>" + lines.join("\n") + "</pre>");
+      $(table).replaceWith(`<pre>${lines.join("\n")}</pre>`);
    });
 }
 
-function init() {
-   console.log("Gerando documentação com padrão /index.md...");
+// --- Processo Principal ---
 
-   if (!fs.existsSync(DIST_PATH)) {
+function init() {
+   console.log(`Gerando documentação para LLMs em: ${CONFIG.DIST_PATH}`);
+
+   if (!fs.existsSync(CONFIG.DIST_PATH)) {
       console.error("Erro: Pasta 'dist' não encontrada.");
       process.exit(1);
    }
 
-   fs.removeSync(path.join(DIST_PATH, DOCS_REL_PATH));
+   // Limpa a pasta de destino
+   fs.removeSync(path.join(CONFIG.DIST_PATH, CONFIG.DOCS_REL_PATH));
 
-   const files = globSync(`${DIST_PATH}/**/*.html`);
-
-   let fullOutput = "# LLMs.txt for ScriptBot\n> Full documentation for LLMs\n\n";
-   let indexOutput = "# LLMs.txt for ScriptBot\n\n";
-   indexOutput += `> Use [llms-full.txt](${SITE}/llms-full.txt) for the complete documentation.\n\n`;
-   indexOutput += "## Key Pages\n";
+   const files = globSync(`${CONFIG.DIST_PATH}/**/*.html`);
+   let fullOutput = TEMPLATES.full;
+   let indexOutput = TEMPLATES.index;
 
    for (const file of files) {
       if (file.includes("404.html")) continue;
@@ -69,33 +82,37 @@ function init() {
       const html = fs.readFileSync(file, "utf8");
       const $ = load(html);
 
+      // Cleanup HTML
       $("script, style, nav, footer, aside").remove();
       convertTables($);
 
       const content = $(".sl-markdown-content").html() || $("article").html() || $("main").html();
       if (!content) continue;
 
-      let md = clean(turndown.turndown(content));
-      const title = $("title").text().replace(/\|.*/, "").trim();
+      const title = $("title").text().split("|")[0].trim();
+      const mdContent = clean(turndown.turndown(content));
 
-      let relativePath = path.relative(DIST_PATH, file).replace(".html", "");
-
+      // Gerencia caminhos
+      let relativePath = path.relative(CONFIG.DIST_PATH, file).replace(".html", "");
       if (!relativePath.endsWith("index")) {
          relativePath = path.join(relativePath, "index");
       }
 
-      const mdFilePath = path.join(DIST_PATH, DOCS_REL_PATH, `${relativePath}.md`);
-
-      fs.outputFileSync(mdFilePath, BOM + `# ${title}\n\n${md}`, "utf8");
-
-      fullOutput += `\n\n---\n\n# ${title}\n\n${md}\n`;
-
+      const mdFilePath = path.join(CONFIG.DIST_PATH, CONFIG.DOCS_REL_PATH, `${relativePath}.md`);
       const urlPath = relativePath.replace(/\\/g, "/");
-      indexOutput += `- [${title}](${SITE}/${DOCS_REL_PATH}/${urlPath}.md)\n`;
+
+      // Arquivo Individual
+      const finalMd = `${CONFIG.BOM}# ${title}\n\n${mdContent}`;
+      fs.outputFileSync(mdFilePath, finalMd, "utf8");
+
+      // Acumula para os índices
+      fullOutput += `\n\n---\n\n# ${title}\n\n${mdContent}\n`;
+      indexOutput += `- [${title}](${CONFIG.SITE}/${CONFIG.DOCS_REL_PATH}/${urlPath}.md)\n`;
    }
 
-   fs.outputFileSync(path.join(DIST_PATH, "llms-full.txt"), BOM + fullOutput, "utf8");
-   fs.outputFileSync(path.join(DIST_PATH, "llms.txt"), BOM + indexOutput, "utf8");
+   // Grava arquivos finais
+   fs.outputFileSync(path.join(CONFIG.DIST_PATH, "llms-full.txt"), CONFIG.BOM + fullOutput, "utf8");
+   fs.outputFileSync(path.join(CONFIG.DIST_PATH, "llms.txt"), CONFIG.BOM + indexOutput, "utf8");
 
    console.log("Documentação gerada com sucesso!");
 }
