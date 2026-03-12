@@ -37,8 +37,16 @@ const containsAliases =
                      </div>
                   </td>
                   {containsAliases && <td class="aliases">{fn.aliases && <CodeVar copy={fn.aliases}>{fn.aliases}</CodeVar>}</td>}
-                  <td>
-                     <p>{fn.description.simple}</p>
+                  <td class="description">
+                     <p title={fn.description.full}>{fn.description.simple}</p>
+                     {fn.version && (
+                        <span
+                           class="version"
+                           title={fn.version}
+                        >
+                           {fn.version}+
+                        </span>
+                     )}
                   </td>
                </tr>
             ))}
@@ -68,5 +76,18 @@ const containsAliases =
       .aliases-mobile {
          display: block;
       }
+   }
+   .description {
+      position: relative;
+   }
+   .version {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      color: var(--sl-color-red);
+      font-size: 15px;
+      font-weight: semi-bold;
    }
 </style>

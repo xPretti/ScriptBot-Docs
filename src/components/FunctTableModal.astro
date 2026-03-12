@@ -1,7 +1,7 @@
 ---
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import CodeVar from "@components/CodeVar.astro";
-import { BookOpenText } from "lucide-react";
+import { Eye } from "lucide-react";
 import ReactFnModal from "./react/functions/ReactFnModal";
 
 const { category } = Astro.props;
@@ -46,9 +46,27 @@ const containsAliases =
                         fnName={fn.name}
                      >
                         <div class="description">
-                           <p class="text">{fn.description.simple}</p>
-                           <div class="redirect-icon">
-                              <BookOpenText size="1.5rem" />
+                           <p
+                              class="text"
+                              title={fn.description.full}
+                           >
+                              {fn.description.simple}
+                           </p>
+                           <div class="badge-wrapper">
+                              {fn.version && (
+                                 <span
+                                    class="version"
+                                    title={fn.version}
+                                 >
+                                    {fn.version}+
+                                 </span>
+                              )}
+                              <div class="redirect-icon">
+                                 <Eye
+                                    size="1.5rem"
+                                    strokeWidth="1.1px"
+                                 />
+                              </div>
                            </div>
                         </div>
                      </ReactFnModal>
@@ -83,16 +101,30 @@ const containsAliases =
       color: var(--sl-color-accent);
    }
 
+   .badge-wrapper {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+   }
+
+   .version {
+      display: inline-block;
+      color: var(--sl-color-red);
+      font-size: 15px;
+      font-weight: semi-bold;
+   }
+
    .redirect-icon {
       margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0.1;
-      position: absolute;
       height: 100%;
-      top: 0;
-      right: 10px;
    }
 
    .aliases-mobile {

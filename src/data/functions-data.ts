@@ -11,8 +11,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Imprime um texto nas Logs do ScriptBot.",
-         complex:
-            "Esta função é usada para imprimir um texto nas Logs do ScriptBot, ela é útil quando queremos separar textos de debug das Logs do Metatrader.",
+         full: "Esta função é usada para imprimir um texto nas Logs do ScriptBot, ela é útil quando queremos separar textos de debug das Logs do Metatrader.",
       },
       parameters: [
          {
@@ -61,7 +60,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Imprime um texto nas logs do Metatrader.",
-         complex: "Esta função é usada para imprimir um texto nas logs do Metatrader, muito utilizada para depurar o código.",
+         full: "Esta função é usada para imprimir um texto nas logs do Metatrader, muito utilizada para depurar o código.",
       },
       parameters: [
          {
@@ -110,8 +109,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor informado e exibe esse valor no log para depuração.",
-         complex:
-            "Retorna o valor de uma expressão ou função, exibindo esse valor no log do robô para fins de depuração. A função não altera o resultado retornado, funcionando apenas como uma camada de visualização para acompanhar a execução do código.",
+         full: "Retorna o valor de uma expressão ou função, exibindo esse valor no log do robô para fins de depuração. A função não altera o resultado retornado, funcionando apenas como uma camada de visualização para acompanhar a execução do código.",
       },
       parameters: [
          {
@@ -151,9 +149,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.LOGICS,
       name: "Seq",
       aliases: "",
+      version: "2.15",
       description: {
          simple: "Executa múltiplas expressões em sequência.",
-         complex: "Esta função é usada para executar múltiplas expressões em sequência, garantindo que cada uma seja avaliada na ordem especificada.",
+         full: "Esta função é usada para executar múltiplas expressões em sequência, garantindo que cada uma seja avaliada na ordem especificada.",
       },
       parameters: [
          {
@@ -203,8 +202,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "IND",
       description: {
          simple: "Retorna o valor do buffer de um indicador.",
-         complex:
-            "Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico.",
+         full: "Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico.",
       },
       parameters: [
          {
@@ -254,8 +252,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "IND'X'",
       description: {
          simple: "Retorna o valor do buffer de um indicador.",
-         complex:
-            "Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico. Esta função é prefixada, sendo necessário substituir o 'x' por um valor entre 0 e 20, onde 'x' representa a categoria em que o indicador está configurado nas definições do robô.",
+         full: "Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico. Esta função é prefixada, sendo necessário substituir o 'x' por um valor entre 0 e 20, onde 'x' representa a categoria em que o indicador está configurado nas definições do robô.",
       },
       parameters: [
          {
@@ -298,7 +295,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "ClrDou",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
-         complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
+         full: "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
       parameters: [],
       examples: ['GetDouble["Count"] >= 10 -> ClearDouble[];'],
@@ -323,7 +320,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "ClrInt",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
-         complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
+         full: "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
       parameters: [],
       examples: ['GetInt["Count"] >= 10 -> ClearInt[];'],
@@ -348,7 +345,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "ClrStr",
       description: {
          simple: "Remove todas as variáveis criadas pelo usuário.",
-         complex: "Esta função permite remover todas as variáveis criadas pelo usuário.",
+         full: "Esta função permite remover todas as variáveis criadas pelo usuário.",
       },
       parameters: [],
       examples: ['GetInt["Count"] >= 10 -> ClearString[];'],
@@ -373,7 +370,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "CreDou",
       description: {
          simple: "Cria uma variável caso ela não exista.",
-         complex: "Esta função permite criar uma variável caso não exista.",
+         full: "Esta função permite criar uma variável caso não exista.",
       },
       parameters: [
          {
@@ -413,7 +410,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "CreInt",
       description: {
          simple: "Cria uma variável caso ela não exista.",
-         complex: "Esta função permite criar uma variável caso não exista.",
+         full: "Esta função permite criar uma variável caso não exista.",
       },
       parameters: [
          {
@@ -453,7 +450,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "CreStr",
       description: {
          simple: "Cria uma variável caso ela não exista.",
-         complex: "Esta função permite criar uma variável caso não exista.",
+         full: "Esta função permite criar uma variável caso não exista.",
       },
       parameters: [
          {
@@ -493,7 +490,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "GetDou",
       description: {
          simple: "Retorna o valor de uma variável criada pelo usuário.",
-         complex: "Esta função retorna o valor de uma variável criada pelo usuário.",
+         full: "Esta função retorna o valor de uma variável criada pelo usuário.",
       },
       parameters: [
          {
@@ -526,7 +523,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor de uma variável criada pelo usuário.",
-         complex: "Esta função retorna o valor de uma variável criada pelo usuário.",
+         full: "Esta função retorna o valor de uma variável criada pelo usuário.",
       },
       parameters: [
          {
@@ -559,7 +556,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "GetStr",
       description: {
          simple: "Retorna o valor de uma variável criada pelo usuário.",
-         complex: "Esta função retorna o valor de uma variável criada pelo usuário.",
+         full: "Esta função retorna o valor de uma variável criada pelo usuário.",
       },
       parameters: [
          {
@@ -592,7 +589,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "RemDou",
       description: {
          simple: "Remove uma variável caso ela exista.",
-         complex: "Esta função permite remover uma variável caso ela exista.",
+         full: "Esta função permite remover uma variável caso ela exista.",
       },
       parameters: [
          {
@@ -625,7 +622,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "RemInt",
       description: {
          simple: "Remove uma variável caso ela exista.",
-         complex: "Esta função permite remover uma variável caso ela exista.",
+         full: "Esta função permite remover uma variável caso ela exista.",
       },
       parameters: [
          {
@@ -658,7 +655,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "RemStr",
       description: {
          simple: "Remove uma variável caso ela exista.",
-         complex: "Esta função permite remover uma variável caso ela exista.",
+         full: "Esta função permite remover uma variável caso ela exista.",
       },
       parameters: [
          {
@@ -691,7 +688,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "RepDou",
       description: {
          simple: "Substitui o valor de uma variável caso ela exista.",
-         complex: "Esta função permite substituir o valor de uma variável caso não exista.",
+         full: "Esta função permite substituir o valor de uma variável caso não exista.",
       },
       parameters: [
          {
@@ -731,7 +728,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "RepInt",
       description: {
          simple: "Substitui o valor de uma variável caso ela exista.",
-         complex: "Esta função permite substituir o valor de uma variável caso não exista.",
+         full: "Esta função permite substituir o valor de uma variável caso não exista.",
       },
       parameters: [
          {
@@ -771,7 +768,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "RepStr",
       description: {
          simple: "Substitui o valor de uma variável caso ela exista.",
-         complex: "Esta função permite substituir o valor de uma variável caso não exista.",
+         full: "Esta função permite substituir o valor de uma variável caso não exista.",
       },
       parameters: [
          {
@@ -811,7 +808,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "SetDou",
       description: {
          simple: "Define o valor de uma variável ou cria uma nova.",
-         complex: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
+         full: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
       },
       parameters: [
          {
@@ -851,7 +848,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Define o valor de uma variável ou cria uma nova.",
-         complex: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
+         full: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
       },
       parameters: [
          {
@@ -891,7 +888,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "SetStr",
       description: {
          simple: "Define o valor de uma variável ou cria uma nova.",
-         complex: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
+         full: "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído.",
       },
       parameters: [
          {
@@ -931,7 +928,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "AddDou",
       description: {
          simple: "Adiciona um valor double a uma variável existente.",
-         complex: "Esta função adiciona um valor double ao valor atual de uma variável. Se a variável não existir, ela será criada com o valor especificado.",
+         full: "Esta função adiciona um valor double ao valor atual de uma variável. Se a variável não existir, ela será criada com o valor especificado.",
       },
       parameters: [
          {
@@ -961,9 +958,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
       name: "AddInt",
       aliases: "",
+      version: "2.06",
       description: {
          simple: "Adiciona um valor inteiro a uma variável existente.",
-         complex: "Esta função adiciona um valor inteiro ao valor atual de uma variável. Se a variável não existir, ela será criada com o valor especificado.",
+         full: "Esta função adiciona um valor inteiro ao valor atual de uma variável. Se a variável não existir, ela será criada com o valor especificado.",
       },
       parameters: [
          {
@@ -994,9 +992,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "GetGlobal",
       aliases: "GetG",
+      version: "2.06",
       description: {
          simple: "Obtém o valor de uma variável global do tipo double.",
-         complex: "Esta função retorna o valor armazenado em uma variável global do tipo double. Se a variável não existir, retorna 0.0.",
+         full: "Esta função retorna o valor armazenado em uma variável global do tipo double. Se a variável não existir, retorna 0.0.",
       },
       parameters: [
          {
@@ -1021,9 +1020,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "CreateGlobal",
       aliases: "CreG",
+      version: "2.06",
       description: {
          simple: "Cria uma nova variável global do tipo double.",
-         complex: "Esta função cria uma nova variável global do tipo double com o valor especificado. Retorna false se a variável já existir.",
+         full: "Esta função cria uma nova variável global do tipo double com o valor especificado. Retorna false se a variável já existir.",
       },
       parameters: [
          {
@@ -1053,9 +1053,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "ReplaceGlobal",
       aliases: "RepG",
+      version: "2.06",
       description: {
          simple: "Substitui o valor de uma variável global existente.",
-         complex: "Esta função substitui o valor de uma variável global do tipo double existente. Retorna false se a variável não existir.",
+         full: "Esta função substitui o valor de uma variável global do tipo double existente. Retorna false se a variável não existir.",
       },
       parameters: [
          {
@@ -1085,9 +1086,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "GetGlobalTime",
       aliases: "GetGT",
+      version: "2.06",
       description: {
          simple: "Obtém o timestamp do último acesso de uma variável global.",
-         complex: "Esta função retorna o timestamp do último acesso (leitura ou escrita) de uma variável global do tipo double.",
+         full: "Esta função retorna o timestamp do último acesso (leitura ou escrita) de uma variável global do tipo double.",
       },
       parameters: [
          {
@@ -1112,9 +1114,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "SetGlobal",
       aliases: "SetG",
+      version: "2.06",
       description: {
          simple: "Define o valor de uma variável global (cria se não existir).",
-         complex: "Esta função define o valor de uma variável global do tipo double. Se a variável não existir, ela será criada.",
+         full: "Esta função define o valor de uma variável global do tipo double. Se a variável não existir, ela será criada.",
       },
       parameters: [
          {
@@ -1144,9 +1147,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "AddGlobal",
       aliases: "AddG",
+      version: "2.06",
       description: {
          simple: "Adiciona um valor a uma variável global existente.",
-         complex: "Esta função adiciona um valor ao valor atual de uma variável global do tipo double. A variável deve existir previamente.",
+         full: "Esta função adiciona um valor ao valor atual de uma variável global do tipo double. A variável deve existir previamente.",
       },
       parameters: [
          {
@@ -1176,9 +1180,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "RemoveGlobal",
       aliases: "RemG",
+      version: "2.06",
       description: {
          simple: "Remove uma variável global do tipo double.",
-         complex: "Esta função remove uma variável global do tipo double do sistema. Retorna false se a variável não existir.",
+         full: "Esta função remove uma variável global do tipo double do sistema. Retorna false se a variável não existir.",
       },
       parameters: [
          {
@@ -1203,9 +1208,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "ClearGlobal",
       aliases: "ClrG",
+      version: "2.06",
       description: {
          simple: "Limpa variáveis globais com um prefixo específico.",
-         complex: "Esta função remove todas as variáveis globais do tipo double que começam com o prefixo especificado.",
+         full: "Esta função remove todas as variáveis globais do tipo double que começam com o prefixo especificado.",
       },
       parameters: [
          {
@@ -1233,7 +1239,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "O",
       description: {
          simple: "Retorna o preço de abertura de uma vela.",
-         complex: "Esta função retorna o preço de abertura de uma vela.",
+         full: "Esta função retorna o preço de abertura de uma vela.",
       },
       parameters: [
          {
@@ -1283,7 +1289,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "C",
       description: {
          simple: "Retorna o preço de fechamento de uma vela.",
-         complex: "Esta função retorna o preço de fechamento de uma vela.",
+         full: "Esta função retorna o preço de fechamento de uma vela.",
       },
       parameters: [
          {
@@ -1333,7 +1339,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "H",
       description: {
          simple: "Retorna o preço da máxima de uma vela.",
-         complex: "Esta função retorna o preço da máxima de uma vela.",
+         full: "Esta função retorna o preço da máxima de uma vela.",
       },
       parameters: [
          {
@@ -1383,7 +1389,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "L",
       description: {
          simple: "Retorna o preço da mínima de uma vela.",
-         complex: "Esta função retorna o preço da mínima de uma vela.",
+         full: "Esta função retorna o preço da mínima de uma vela.",
       },
       parameters: [
          {
@@ -1433,7 +1439,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "T",
       description: {
          simple: "Retorna o horário de abertura de uma vela.",
-         complex: "Esta função retorna o horário de abertura de uma vela.",
+         full: "Esta função retorna o horário de abertura de uma vela.",
       },
       parameters: [
          {
@@ -1483,8 +1489,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DIR",
       description: {
          simple: "Retorna a direção de uma vela (-1 = Negativa, 0 = Neutra, 1 = Positiva).",
-         complex:
-            "Esta função retorna a direção simplificada de uma vela, ou seja, se a vela é positiva ou negativa. (-1 = Negativa, 0 = Neutra, 1 = Positiva)",
+         full: "Esta função retorna a direção simplificada de uma vela, ou seja, se a vela é positiva ou negativa. (-1 = Negativa, 0 = Neutra, 1 = Positiva)",
       },
       parameters: [
          {
@@ -1534,7 +1539,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "SPD",
       description: {
          simple: "Retorna a quantidade de spread de uma vela.",
-         complex: "Esta função retorna a quantidade de spread de uma vela.",
+         full: "Esta função retorna a quantidade de spread de uma vela.",
       },
       parameters: [
          {
@@ -1584,7 +1589,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o index da vela.",
-         complex: "Esta função retorna o identificador da vela, usado para obter o index utilizando o horário especificado.",
+         full: "Esta função retorna o identificador da vela, usado para obter o index utilizando o horário especificado.",
       },
       parameters: [
          {
@@ -1639,8 +1644,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "MaxH",
       description: {
          simple: "Retorna o preço máximo entre duas posições de velas.",
-         complex:
-            "Esta função retorna o maior preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da maior vela encontrada nesse intervalo.",
+         full: "Esta função retorna o maior preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da maior vela encontrada nesse intervalo.",
       },
       parameters: [
          {
@@ -1697,8 +1701,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "MinL",
       description: {
          simple: "Retorna o preço mínimo entre duas posições de velas.",
-         complex:
-            "Esta função retorna o menor preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da menor vela encontrada nesse intervalo.",
+         full: "Esta função retorna o menor preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da menor vela encontrada nesse intervalo.",
       },
       parameters: [
          {
@@ -1755,7 +1758,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "TICKV",
       description: {
          simple: "Retorna o volume de uma vela.",
-         complex: "Esta função retorna o volume de uma vela com base nos dados de tick.",
+         full: "Esta função retorna o volume de uma vela com base nos dados de tick.",
       },
       parameters: [
          {
@@ -1805,8 +1808,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "REALV",
       description: {
          simple: "Retorna o volume de uma vela usando os dados reais.",
-         complex:
-            "Esta função retorna o volume de uma vela com base em dados reais. Em alguns mercados, no entanto, o volume pode ser constantemente zero devido à ausência de dados de volume no feed de dados, seja por limitações da corretora, do tipo de ativo (como forex, que muitas vezes não fornece volume real), ou pela forma como o volume é calculado e disponibilizado.",
+         full: "Esta função retorna o volume de uma vela com base em dados reais. Em alguns mercados, no entanto, o volume pode ser constantemente zero devido à ausência de dados de volume no feed de dados, seja por limitações da corretora, do tipo de ativo (como forex, que muitas vezes não fornece volume real), ou pela forma como o volume é calculado e disponibilizado.",
       },
       parameters: [
          {
@@ -1857,7 +1859,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "Med",
       description: {
          simple: "Retorna a media entre dois valores.",
-         complex: "Esta função retorna a media entre dois valores.",
+         full: "Esta função retorna a media entre dois valores.",
       },
       parameters: [
          {
@@ -1897,7 +1899,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "TickTP",
       description: {
          simple: "Retorna o valor de tick convertido em pontos.",
-         complex: "Esta função retorna o valor de tick convertido em pontos.",
+         full: "Esta função retorna o valor de tick convertido em pontos.",
       },
       parameters: [
          {
@@ -1938,7 +1940,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "MoneyTP",
       description: {
          simple: "Retorna o valor na moeda convertida em pontos.",
-         complex: "Esta função retorna o valor na moeda convertida em pontos.",
+         full: "Esta função retorna o valor na moeda convertida em pontos.",
       },
       parameters: [
          {
@@ -1979,7 +1981,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PipTP",
       description: {
          simple: "Retorna o valor do pip convertido em pontos.",
-         complex: "Esta função retorna o valor do pip convertido em pontos.",
+         full: "Esta função retorna o valor do pip convertido em pontos.",
       },
       parameters: [
          {
@@ -2020,7 +2022,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "Count",
       description: {
          simple: "Retorna a quantidade de passos que ocorreram.",
-         complex: "Esta função calcula a quantidade de passos realizados e arredonda o resultado para o inteiro mais próximo de zero.",
+         full: "Esta função calcula a quantidade de passos realizados e arredonda o resultado para o inteiro mais próximo de zero.",
       },
       parameters: [
          {
@@ -2060,7 +2062,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "CountGrad",
       description: {
          simple: "Retorna a quantidade de passos que ocorreram de forma gradual.",
-         complex: "Esta função calcula a quantidade de passos realizados de forma gradual e arredonda o resultado para o inteiro mais próximo de zero.",
+         full: "Esta função calcula a quantidade de passos realizados de forma gradual e arredonda o resultado para o inteiro mais próximo de zero.",
       },
       parameters: [
          {
@@ -2108,7 +2110,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "Divi",
       description: {
          simple: "Retorna a divisão entre dois valores, permitindo que o denominador seja zero.",
-         complex: "Esta função retorna a divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
+         full: "Esta função retorna a divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
       },
       parameters: [
          {
@@ -2148,7 +2150,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "RDivi",
       description: {
          simple: "Retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero.",
-         complex: "Esta função retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
+         full: "Esta função retorna o resto da divisão entre dois valores, permitindo que o denominador seja zero e evitando divisões por zero.",
       },
       parameters: [
          {
@@ -2188,7 +2190,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna a variação percentual de value até target, com value sendo o valor base.",
-         complex: "Esta função retorna a variação percentual de value até target, com value sendo o valor base.",
+         full: "Esta função retorna a variação percentual de value até target, com value sendo o valor base.",
       },
       parameters: [
          {
@@ -2228,7 +2230,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PercentValue",
       description: {
          simple: "Retorna a quantidade percentual de um valor.",
-         complex: "Esta função retorna a quantidade percentual de um valor.",
+         full: "Esta função retorna a quantidade percentual de um valor.",
       },
       parameters: [
          {
@@ -2268,7 +2270,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna a quantidade percentual de acerto.",
-         complex: "Esta função retorna a quantidade percentual de acerto entre gain e loss. A variação sempre será de 0% a 100%.",
+         full: "Esta função retorna a quantidade percentual de acerto entre gain e loss. A variação sempre será de 0% a 100%.",
       },
       parameters: [
          {
@@ -2308,7 +2310,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "FixPrice",
       description: {
          simple: "Retorna o valor correto de um preço.",
-         complex: "Esta função corrige preços inválidos, convertendo-os para valores válidos conforme o passo do mercado.",
+         full: "Esta função corrige preços inválidos, convertendo-os para valores válidos conforme o passo do mercado.",
       },
       parameters: [
          {
@@ -2349,7 +2351,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna um valor inteiro aleatório entre dois valores.",
-         complex: "Esta função retorna um valor inteiro aleatório entre dois valores.",
+         full: "Esta função retorna um valor inteiro aleatório entre dois valores.",
       },
       parameters: [
          {
@@ -2389,7 +2391,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor arredondado.",
-         complex: "Esta função retorna o valor arredondado.",
+         full: "Esta função retorna o valor arredondado.",
       },
       parameters: [
          {
@@ -2422,7 +2424,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor arredondado para cima.",
-         complex: "Esta função retorna o valor arredondado para cima, garantindo que o resultado seja sempre o próximo inteiro maior ou igual.",
+         full: "Esta função retorna o valor arredondado para cima, garantindo que o resultado seja sempre o próximo inteiro maior ou igual.",
       },
       parameters: [
          {
@@ -2455,7 +2457,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor arredondado para baixo.",
-         complex: "Esta função retorna o valor arredondado para baixo, garantindo que o resultado seja sempre o próximo inteiro menor ou igual.",
+         full: "Esta função retorna o valor arredondado para baixo, garantindo que o resultado seja sempre o próximo inteiro menor ou igual.",
       },
       parameters: [
          {
@@ -2488,7 +2490,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o maior valor entre dois números.",
-         complex: "Esta função retorna o maior valor entre dois números fornecidos.",
+         full: "Esta função retorna o maior valor entre dois números fornecidos.",
       },
       parameters: [
          {
@@ -2528,7 +2530,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o menor valor entre dois números.",
-         complex: "Esta função retorna o menor valor entre dois números fornecidos.",
+         full: "Esta função retorna o menor valor entre dois números fornecidos.",
       },
       parameters: [
          {
@@ -2568,8 +2570,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "Chance",
       description: {
          simple: "Retorna verdadeiro com base em uma chance percentual.",
-         complex:
-            "Esta função retorna verdadeiro com base em uma chance percentual entre 0 e 100. Por exemplo, ao passar 30, há aproximadamente 30% de chance de retornar verdadeiro.",
+         full: "Esta função retorna verdadeiro com base em uma chance percentual entre 0 e 100. Por exemplo, ao passar 30, há aproximadamente 30% de chance de retornar verdadeiro.",
       },
       parameters: [
          {
@@ -2602,7 +2603,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "Decimal",
       description: {
          simple: "Retorna o número de casas decimais de um valor.",
-         complex: "Esta função retorna a quantidade de casas decimais presentes em um número, indicando seu nível de precisão.",
+         full: "Esta função retorna a quantidade de casas decimais presentes em um número, indicando seu nível de precisão.",
       },
       parameters: [
          {
@@ -2636,7 +2637,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "GetVol",
       description: {
          simple: "Retorna o volume que a ordem será executada.",
-         complex: "Esta função retorna o volume que a ordem será colocada no mercado.",
+         full: "Esta função retorna o volume que a ordem será colocada no mercado.",
       },
       parameters: [],
       examples: [],
@@ -2661,8 +2662,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "SetVol",
       description: {
          simple: "Define o novo volume da ordem.",
-         complex:
-            "Esta função define o novo volume utilizado no sistema de envio de ordens. Ela altera diretaemente o valor no gerenciador de volume, portanto, é importante considerar o método de cálculo do mesmo.",
+         full: "Esta função define o novo volume utilizado no sistema de envio de ordens. Ela altera diretaemente o valor no gerenciador de volume, portanto, é importante considerar o método de cálculo do mesmo.",
       },
       parameters: [
          {
@@ -2704,7 +2704,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "Pos",
       description: {
          simple: "Retorna o valor absoluto de um número.",
-         complex: "Esta função retorna o valor absoluto de um número, ou seja, o seu valor sem sinal (sempre positivo).",
+         full: "Esta função retorna o valor absoluto de um número, ou seja, o seu valor sem sinal (sempre positivo).",
       },
       parameters: [
          {
@@ -2740,7 +2740,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "Neg",
       description: {
          simple: "Retorna o valor negativo de um número.",
-         complex: "Esta função retorna o valor negativo de um número, ou seja, o seu valor com sinal (sempre negativo).",
+         full: "Esta função retorna o valor negativo de um número, ou seja, o seu valor com sinal (sempre negativo).",
       },
       parameters: [
          {
@@ -2776,8 +2776,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o horário em forma de texto simples para data em segundos.",
-         complex:
-            "Esta função retorna o horário em forma de texto para número em segundos. Com esta função você pode acessar a vela do dia usando um horário em forma de texto, por exemplo '13:00'.",
+         full: "Esta função retorna o horário em forma de texto para número em segundos. Com esta função você pode acessar a vela do dia usando um horário em forma de texto, por exemplo '13:00'.",
       },
       parameters: [
          {
@@ -2818,7 +2817,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "TMod",
       description: {
          simple: "Retorna o horário modificado.",
-         complex: "Esta função permite modificar um horário passado de referencia.",
+         full: "Esta função permite modificar um horário passado de referencia.",
       },
       parameters: [
          {
@@ -2902,7 +2901,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "TFormat",
       description: {
          simple: "Retorna o horário em forma de texto.",
-         complex: "Esta função transforma um valor em segundos em uma representação textual de horário.",
+         full: "Esta função transforma um valor em segundos em uma representação textual de horário.",
       },
       parameters: [
          {
@@ -2935,7 +2934,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "Format",
       description: {
          simple: "Retorna uma nova string formatada.",
-         complex: "Esta função permite modificar um texto, formatando-o de acordo com os parâmetros definidos internamente.",
+         full: "Esta função permite modificar um texto, formatando-o de acordo com os parâmetros definidos internamente.",
       },
       parameters: [
          {
@@ -2988,8 +2987,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor convertido para inteiro.",
-         complex:
-            "Esta função retorna o valor convertido para inteiro. Se o valor for uma string, ele será convertido para zero. Caso seja um número decimal, será arredondado para o inteiro mais próximo.",
+         full: "Esta função retorna o valor convertido para inteiro. Se o valor for uma string, ele será convertido para zero. Caso seja um número decimal, será arredondado para o inteiro mais próximo.",
       },
       parameters: [
          {
@@ -3023,7 +3021,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o último preço de negociação.",
-         complex: "Esta função retorna o valor do último preço de negociação para o símbolo especificado.",
+         full: "Esta função retorna o valor do último preço de negociação para o símbolo especificado.",
       },
       parameters: [
          {
@@ -3051,7 +3049,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "LastH",
       description: {
          simple: "Retorna o maior preço do último negócio.",
-         complex: "Esta função retorna o maior preço registrado no último negócio do símbolo informado.",
+         full: "Esta função retorna o maior preço registrado no último negócio do símbolo informado.",
       },
       parameters: [
          {
@@ -3079,7 +3077,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "LastL",
       description: {
          simple: "Retorna o menor preço do último negócio.",
-         complex: "Esta função retorna o menor preço registrado no último negócio do símbolo informado.",
+         full: "Esta função retorna o menor preço registrado no último negócio do símbolo informado.",
       },
       parameters: [
          {
@@ -3107,7 +3105,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o preço de venda (ask).",
-         complex: "Esta função retorna o preço de venda (ask) atual do símbolo especificado.",
+         full: "Esta função retorna o preço de venda (ask) atual do símbolo especificado.",
       },
       parameters: [
          {
@@ -3135,7 +3133,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "AskH",
       description: {
          simple: "Retorna o maior preço de venda (ask).",
-         complex: "Esta função retorna o maior valor de ask registrado no dia para o símbolo especificado.",
+         full: "Esta função retorna o maior valor de ask registrado no dia para o símbolo especificado.",
       },
       parameters: [
          {
@@ -3163,7 +3161,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "AskL",
       description: {
          simple: "Retorna o menor preço de venda (ask).",
-         complex: "Esta função retorna o menor valor de ask registrado no dia para o símbolo especificado.",
+         full: "Esta função retorna o menor valor de ask registrado no dia para o símbolo especificado.",
       },
       parameters: [
          {
@@ -3191,7 +3189,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o preço de compra (bid).",
-         complex: "Esta função retorna o preço de compra (bid) atual do símbolo especificado.",
+         full: "Esta função retorna o preço de compra (bid) atual do símbolo especificado.",
       },
       parameters: [
          {
@@ -3219,7 +3217,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "BidH",
       description: {
          simple: "Retorna o maior preço de compra (bid).",
-         complex: "Esta função retorna o maior valor de bid registrado no dia para o símbolo especificado.",
+         full: "Esta função retorna o maior valor de bid registrado no dia para o símbolo especificado.",
       },
       parameters: [
          {
@@ -3247,7 +3245,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "BidL",
       description: {
          simple: "Retorna o menor preço de compra (bid).",
-         complex: "Esta função retorna o menor valor de bid registrado no dia para o símbolo especificado.",
+         full: "Esta função retorna o menor valor de bid registrado no dia para o símbolo especificado.",
       },
       parameters: [
          {
@@ -3275,7 +3273,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "LastT",
       description: {
          simple: "Retorna o horário do último negócio.",
-         complex: "Esta função retorna o horário da última negociação para o símbolo especificado.",
+         full: "Esta função retorna o horário da última negociação para o símbolo especificado.",
       },
       parameters: [
          {
@@ -3303,7 +3301,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DayST",
       description: {
          simple: "Retorna o horário de início do pregão no dia especificado.",
-         complex: "Esta função retorna o horário de abertura do pregão para o ativo no dia informado. Pode variar conforme o ativo e o mercado.",
+         full: "Esta função retorna o horário de abertura do pregão para o ativo no dia informado. Pode variar conforme o ativo e o mercado.",
       },
       parameters: [
          {
@@ -3336,7 +3334,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DayET",
       description: {
          simple: "Retorna o horário de encerramento do pregão no dia especificado.",
-         complex: "Esta função retorna o horário de fechamento do pregão para o ativo no dia informado.",
+         full: "Esta função retorna o horário de fechamento do pregão para o ativo no dia informado.",
       },
       parameters: [
          {
@@ -3369,7 +3367,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DaySC",
       description: {
          simple: "Retorna a vela (candle) de início do dia.",
-         complex: "Esta função retorna o identificador da primeira vela (candle) do dia para o ativo especificado.",
+         full: "Esta função retorna o identificador da primeira vela (candle) do dia para o ativo especificado.",
       },
       parameters: [
          {
@@ -3402,7 +3400,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DayEC",
       description: {
          simple: "Retorna a vela (candle) de fim do dia.",
-         complex: "Esta função retorna o identificador da última vela (candle) do dia para o ativo especificado.",
+         full: "Esta função retorna o identificador da última vela (candle) do dia para o ativo especificado.",
       },
       parameters: [
          {
@@ -3435,7 +3433,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DayH",
       description: {
          simple: "Retorna o maior preço do dia.",
-         complex: "Esta função retorna o maior valor de preço negociado no dia, para o timeframe e símbolo informados.",
+         full: "Esta função retorna o maior valor de preço negociado no dia, para o timeframe e símbolo informados.",
       },
       parameters: [
          {
@@ -3477,7 +3475,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DayL",
       description: {
          simple: "Retorna o menor preço do dia.",
-         complex: "Esta função retorna o menor valor de preço negociado no dia, para o timeframe e símbolo informados.",
+         full: "Esta função retorna o menor valor de preço negociado no dia, para o timeframe e símbolo informados.",
       },
       parameters: [
          {
@@ -3520,8 +3518,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Verifica se o tempo corresponde aos critérios informados.",
-         complex:
-            "Esta função verifica se o horário de referência corresponde aos valores fornecidos para hora, minuto e segundo. Caso algum dos valores seja -1, ele será ignorado no critério.",
+         full: "Esta função verifica se o horário de referência corresponde aos valores fornecidos para hora, minuto e segundo. Caso algum dos valores seja -1, ele será ignorado no critério.",
       },
       parameters: [
          {
@@ -3566,7 +3563,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "STime",
       description: {
          simple: "Retorna o horário atual do símbolo.",
-         complex: "Esta função retorna o horário atual do ativo (símbolo) no mercado correspondente.",
+         full: "Esta função retorna o horário atual do ativo (símbolo) no mercado correspondente.",
       },
       parameters: [
          {
@@ -3594,7 +3591,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "TLeft",
       description: {
          simple: "Retorna o tempo restante da vela atual.",
-         complex: "Esta função retorna quanto tempo falta para o término da vela atual no timeframe e símbolo especificados.",
+         full: "Esta função retorna quanto tempo falta para o término da vela atual no timeframe e símbolo especificados.",
       },
       parameters: [
          {
@@ -3631,7 +3628,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DayW",
       description: {
          simple: "Retorna o dia da semana.",
-         complex: "Esta função retorna o dia da semana (0 = domingo, 1 = segunda, ..., 6 = sábado) do símbolo informado.",
+         full: "Esta função retorna o dia da semana (0 = domingo, 1 = segunda, ..., 6 = sábado) do símbolo informado.",
       },
       parameters: [
          {
@@ -3659,7 +3656,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DayY",
       description: {
          simple: "Retorna o dia do ano.",
-         complex: "Esta função retorna o número do dia no ano (1 a 366) com base no horário atual do símbolo.",
+         full: "Esta função retorna o número do dia no ano (1 a 366) com base no horário atual do símbolo.",
       },
       parameters: [
          {
@@ -3687,7 +3684,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o mês atual.",
-         complex: "Esta função retorna o número do mês atual (1 a 12) com base no horário atual do símbolo.",
+         full: "Esta função retorna o número do mês atual (1 a 12) com base no horário atual do símbolo.",
       },
       parameters: [
          {
@@ -3715,7 +3712,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o ano atual.",
-         complex: "Esta função retorna o número do ano atual com base no horário do símbolo.",
+         full: "Esta função retorna o número do ano atual com base no horário do símbolo.",
       },
       parameters: [
          {
@@ -3743,7 +3740,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "StartT",
       description: {
          simple: "Retorna o horário inicial de referência.",
-         complex: "Esta função retorna o horário de início conforme o método informado. Pode representar abertura do dia, semana, mês, etc.",
+         full: "Esta função retorna o horário de início conforme o método informado. Pode representar abertura do dia, semana, mês, etc.",
       },
       parameters: [
          {
@@ -3779,7 +3776,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "ValueT",
       description: {
          simple: "Converte o horário em valor numérico baseado no método.",
-         complex: "Esta função retorna um valor numérico representando o tempo, conforme o método especificado. Podendo ser segundos, minutos, horas, etc..",
+         full: "Esta função retorna um valor numérico representando o tempo, conforme o método especificado. Podendo ser segundos, minutos, horas, etc..",
       },
       parameters: [
          {
@@ -3813,9 +3810,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllVolumeOpen",
       aliases: "AVolO",
+      version: "2.05",
       description: {
          simple: "Retorna o volume total de todas as posições e ordens abertas.",
-         complex: "Esta função retorna o volume total combinado de todas as posições e ordens abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o volume total combinado de todas as posições e ordens abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3862,9 +3860,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyVolumeOpen",
       aliases: "BVolO",
+      version: "2.05",
       description: {
          simple: "Retorna o volume total das posições e ordens de compra abertas.",
-         complex: "Esta função retorna o volume total combinado de todas as posições e ordens de compra abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o volume total combinado de todas as posições e ordens de compra abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3911,9 +3910,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellVolumeOpen",
       aliases: "SVolO",
+      version: "2.05",
       description: {
          simple: "Retorna o volume total das posições e ordens de venda abertas.",
-         complex: "Esta função retorna o volume total combinado de todas as posições e ordens de venda abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o volume total combinado de todas as posições e ordens de venda abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -3960,9 +3960,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllPosVolumeOpen",
       aliases: "APVolO",
+      version: "2.05",
       description: {
          simple: "Retorna o volume total de todas as posições abertas.",
-         complex: "Esta função retorna o volume total combinado de todas as posições abertas.",
+         full: "Esta função retorna o volume total combinado de todas as posições abertas.",
       },
       parameters: [
          {
@@ -4009,9 +4010,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyPosVolumeOpen",
       aliases: "BPVolO",
+      version: "2.05",
       description: {
          simple: "Retorna o volume total das posições de compra abertas.",
-         complex: "Esta função retorna o volume total combinado de todas as posições de compra abertas.",
+         full: "Esta função retorna o volume total combinado de todas as posições de compra abertas.",
       },
       parameters: [
          {
@@ -4058,9 +4060,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellPosVolumeOpen",
       aliases: "SPVolO",
+      version: "2.05",
       description: {
          simple: "Retorna o volume total das posições de venda abertas.",
-         complex: "Esta função retorna o volume total combinado de todas as posições de venda abertas.",
+         full: "Esta função retorna o volume total combinado de todas as posições de venda abertas.",
       },
       parameters: [
          {
@@ -4107,9 +4110,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllOrderVolumeOpen",
       aliases: "AOVolO",
+      version: "2.05",
       description: {
          simple: "Retorna o volume total de todas as ordens pendentes.",
-         complex: "Esta função retorna o volume total combinado de todas as ordens pendentes, considerando os filtros fornecidos.",
+         full: "Esta função retorna o volume total combinado de todas as ordens pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4156,9 +4160,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyOrderVolumeOpen",
       aliases: "BOVolO",
+      version: "2.05",
       description: {
          simple: "Retorna o volume total das ordens de compra pendentes.",
-         complex: "Esta função retorna o volume total combinado de todas as ordens de compra pendentes, considerando os filtros fornecidos.",
+         full: "Esta função retorna o volume total combinado de todas as ordens de compra pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4205,9 +4210,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellOrderVolumeOpen",
       aliases: "SOVolO",
+      version: "2.05",
       description: {
          simple: "Retorna o volume total das ordens de venda pendentes.",
-         complex: "Esta função retorna o volume total combinado de todas as ordens de venda pendentes, considerando os filtros fornecidos.",
+         full: "Esta função retorna o volume total combinado de todas as ordens de venda pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4254,9 +4260,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllOpen",
       aliases: "AOpen",
+      version: "2.05",
       description: {
          simple: "Retorna a quantidade total de posições e ordens abertas.",
-         complex: "Esta função retorna o total combinado de posições abertas e ordens pendentes, considerando os filtros fornecidos.",
+         full: "Esta função retorna o total combinado de posições abertas e ordens pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4303,9 +4310,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyOpen",
       aliases: "BOpen",
+      version: "2.05",
       description: {
          simple: "Retorna a quantidade total de posições e ordens de compra abertas.",
-         complex: "Esta função retorna o total combinado de posições de compra abertas e ordens de compra pendentes, considerando os filtros fornecidos.",
+         full: "Esta função retorna o total combinado de posições de compra abertas e ordens de compra pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4352,9 +4360,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellOpen",
       aliases: "SOpen",
+      version: "2.05",
       description: {
          simple: "Retorna a quantidade total de posições e ordens de venda abertas.",
-         complex: "Esta função retorna o total combinado de posições de venda abertas e ordens de venda pendentes, considerando os filtros fornecidos.",
+         full: "Esta função retorna o total combinado de posições de venda abertas e ordens de venda pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4401,9 +4410,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllPosOpen",
       aliases: "APosO",
+      version: "2.05",
       description: {
          simple: "Retorna a quantidade total de posições abertas.",
-         complex: "Esta função retorna o total de posições abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o total de posições abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4450,9 +4460,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyPosOpen",
       aliases: "BPosO",
+      version: "2.05",
       description: {
          simple: "Retorna a quantidade total de posições de compra abertas.",
-         complex: "Esta função retorna o total de posições de compra abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o total de posições de compra abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4499,9 +4510,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellPosOpen",
       aliases: "SPosO",
+      version: "2.05",
       description: {
          simple: "Retorna a quantidade total de posições de venda abertas.",
-         complex: "Esta função retorna o total de posições de venda abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o total de posições de venda abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4548,9 +4560,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllOrderOpen",
       aliases: "AOrderO",
+      version: "2.05",
       description: {
          simple: "Retorna a quantidade total de ordens pendentes.",
-         complex: "Esta função retorna o total de ordens pendentes, considerando os filtros fornecidos.",
+         full: "Esta função retorna o total de ordens pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4597,9 +4610,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyOrderOpen",
       aliases: "BOrderO",
+      version: "2.05",
       description: {
          simple: "Retorna a quantidade total de ordens de compra pendentes.",
-         complex: "Esta função retorna o total de ordens de compra pendentes, considerando os filtros fornecidos.",
+         full: "Esta função retorna o total de ordens de compra pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4646,9 +4660,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellOrderOpen",
       aliases: "SOrderO",
+      version: "2.05",
       description: {
          simple: "Retorna a quantidade total de ordens de venda pendentes.",
-         complex: "Esta função retorna o total de ordens de venda pendentes, considerando os filtros fornecidos.",
+         full: "Esta função retorna o total de ordens de venda pendentes, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4695,9 +4710,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllProfitOpen",
       aliases: "AProfitO",
+      version: "2.05",
       description: {
          simple: "Retorna o lucro/prejuízo total de todas as posições abertas.",
-         complex: "Esta função retorna o lucro/prejuízo total combinado de todas as posições abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o lucro/prejuízo total combinado de todas as posições abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4744,9 +4760,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyProfitOpen",
       aliases: "BProfitO",
+      version: "2.05",
       description: {
          simple: "Retorna o lucro/prejuízo total das posições de compra abertas.",
-         complex: "Esta função retorna o lucro/prejuízo total combinado de todas as posições de compra abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o lucro/prejuízo total combinado de todas as posições de compra abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4793,9 +4810,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellProfitOpen",
       aliases: "SProfitO",
+      version: "2.05",
       description: {
          simple: "Retorna o lucro/prejuízo total das posições de venda abertas.",
-         complex: "Esta função retorna o lucro/prejuízo total combinado de todas as posições de venda abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o lucro/prejuízo total combinado de todas as posições de venda abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4842,10 +4860,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AvgPrice",
       aliases: "PAvgP",
+      version: "2.05",
       description: {
          simple: "Retorna o preço médio das posições abertas.",
-         complex:
-            "Esta função retorna o preço médio ponderado pelo volume de todas as posições abertas, considerando o tipo de operação e os filtros fornecidos.",
+         full: "Esta função retorna o preço médio ponderado pelo volume de todas as posições abertas, considerando o tipo de operação e os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4886,9 +4904,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AvgDir",
       aliases: "PAvgDir",
+      version: "2.05",
       description: {
          simple: "Retorna a direção média das posições abertas.",
-         complex: "Esta função retorna a direção média ponderada das posições abertas, considerando o tipo de operação e os filtros fornecidos.",
+         full: "Esta função retorna a direção média ponderada das posições abertas, considerando o tipo de operação e os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4929,9 +4948,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllAvgPrice",
       aliases: "AAvgPrice",
+      version: "2.05",
       description: {
          simple: "Retorna o preço médio de todas as posições abertas.",
-         complex: "Esta função retorna o preço médio ponderado pelo volume de todas as posições abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o preço médio ponderado pelo volume de todas as posições abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4963,9 +4983,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyAvgPrice",
       aliases: "BAvgPrice",
+      version: "2.05",
       description: {
          simple: "Retorna o preço médio das posições de compra abertas.",
-         complex: "Esta função retorna o preço médio ponderado pelo volume de todas as posições de compra abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o preço médio ponderado pelo volume de todas as posições de compra abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -4997,9 +5018,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellAvgPrice",
       aliases: "SAvgPrice",
+      version: "2.05",
       description: {
          simple: "Retorna o preço médio das posições de venda abertas.",
-         complex: "Esta função retorna o preço médio ponderado pelo volume de todas as posições de venda abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna o preço médio ponderado pelo volume de todas as posições de venda abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -5031,9 +5053,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllAvgDir",
       aliases: "AAvgDir",
+      version: "2.05",
       description: {
          simple: "Retorna a direção média de todas as posições abertas.",
-         complex: "Esta função retorna a direção média ponderada de todas as posições abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna a direção média ponderada de todas as posições abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -5065,9 +5088,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyAvgDir",
       aliases: "BAvgDir",
+      version: "2.05",
       description: {
          simple: "Retorna a direção média das posições de compra abertas.",
-         complex: "Esta função retorna a direção média ponderada de todas as posições de compra abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna a direção média ponderada de todas as posições de compra abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -5099,9 +5123,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellAvgDir",
       aliases: "SAvgDir",
+      version: "2.05",
       description: {
          simple: "Retorna a direção média das posições de venda abertas.",
-         complex: "Esta função retorna a direção média ponderada de todas as posições de venda abertas, considerando os filtros fornecidos.",
+         full: "Esta função retorna a direção média ponderada de todas as posições de venda abertas, considerando os filtros fornecidos.",
       },
       parameters: [
          {
@@ -5136,8 +5161,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PTicket",
       description: {
          simple: "Retorna o ticket da posição aberta mais próxima do índice informado.",
-         complex:
-            "Esta função retorna o ticket da posição aberta mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de posições abertas, será retornado o ticket da última posição disponível (a de maior índice).",
+         full: "Esta função retorna o ticket da posição aberta mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de posições abertas, será retornado o ticket da última posição disponível (a de maior índice).",
       },
       parameters: [
          {
@@ -5183,9 +5207,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTicketExact",
       aliases: "PTicketE",
+      version: "2.15",
       description: {
          simple: "Retorna o ticket da posição aberta no índice informado ou 0, caso não exista.",
-         complex: "Esta função retorna o ticket de uma posição aberta no índice exato informado. Caso não exista uma posição nesse índice, a função retorna 0.",
+         full: "Esta função retorna o ticket de uma posição aberta no índice exato informado. Caso não exista uma posição nesse índice, a função retorna 0.",
       },
       parameters: [
          {
@@ -5233,8 +5258,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade numérica (double) de uma posição.",
-         complex:
-            "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma posição aberta, identificada pelo seu ticket.",
+         full: "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma posição aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -5272,7 +5296,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade inteira de uma posição.",
-         complex: "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma posição aberta, identificada pelo seu ticket.",
+         full: "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma posição aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -5310,7 +5334,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade textual de uma posição.",
-         complex: "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma posição aberta, identificada pelo seu ticket.",
+         full: "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma posição aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -5348,7 +5372,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PCurrent",
       description: {
          simple: "Retorna o preço atual de uma posição aberta.",
-         complex: "Esta função retorna o preço atual de uma posição aberta identificada pelo ticket.",
+         full: "Esta função retorna o preço atual de uma posição aberta identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5375,7 +5399,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PO",
       description: {
          simple: "Retorna o preço de abertura de uma posição.",
-         complex: "Esta função retorna o preço de abertura de uma posição identificada pelo ticket.",
+         full: "Esta função retorna o preço de abertura de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5402,7 +5426,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PProfit",
       description: {
          simple: "Retorna o lucro atual de uma posição.",
-         complex: "Esta função retorna o lucro ou prejuízo atual (em moeda do ativo) de uma posição identificada pelo ticket.",
+         full: "Esta função retorna o lucro ou prejuízo atual (em moeda do ativo) de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5429,7 +5453,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PSL",
       description: {
          simple: "Retorna o preço do Stop Loss de uma posição.",
-         complex: "Esta função retorna o preço definido para o Stop Loss de uma posição identificada pelo ticket.",
+         full: "Esta função retorna o preço definido para o Stop Loss de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5456,7 +5480,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PSWAP",
       description: {
          simple: "Retorna o valor do swap acumulado de uma posição.",
-         complex: "Esta função retorna o valor total de swap acumulado para uma posição identificada pelo ticket.",
+         full: "Esta função retorna o valor total de swap acumulado para uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5483,7 +5507,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PTP",
       description: {
          simple: "Retorna o preço do Take Profit de uma posição.",
-         complex: "Esta função retorna o preço definido para o Take Profit de uma posição identificada pelo ticket.",
+         full: "Esta função retorna o preço definido para o Take Profit de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5510,7 +5534,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PVol",
       description: {
          simple: "Retorna o volume de uma posição.",
-         complex: "Esta função retorna o volume (tamanho) de uma posição identificada pelo ticket.",
+         full: "Esta função retorna o volume (tamanho) de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5537,8 +5561,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PIdent",
       description: {
          simple: "Retorna o identificador único de uma posição.",
-         complex:
-            "Esta função retorna o identificador da posição, um valor único atribuído a cada nova posição aberta, que permanece inalterado durante toda a sua existência. Alterações na posição não modificam esse identificador.",
+         full: "Esta função retorna o identificador da posição, um valor único atribuído a cada nova posição aberta, que permanece inalterado durante toda a sua existência. Alterações na posição não modificam esse identificador.",
       },
       parameters: [
          {
@@ -5565,7 +5588,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PMagic",
       description: {
          simple: "Retorna o número mágico de uma posição.",
-         complex: "Esta função retorna o número mágico (identificador do robô) de uma posição identificada pelo ticket.",
+         full: "Esta função retorna o número mágico (identificador do robô) de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5592,7 +5615,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PReason",
       description: {
          simple: "Retorna o motivo de abertura de uma posição.",
-         complex: "Esta função retorna o código que indica o motivo pelo qual a posição foi aberta.",
+         full: "Esta função retorna o código que indica o motivo pelo qual a posição foi aberta.",
       },
       parameters: [
          {
@@ -5620,7 +5643,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PT",
       description: {
          simple: "Retorna o horário de abertura de uma posição.",
-         complex: "Esta função retorna o horário de abertura de uma posição no formato datetime.",
+         full: "Esta função retorna o horário de abertura de uma posição no formato datetime.",
       },
       parameters: [
          {
@@ -5647,7 +5670,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PTMsc",
       description: {
          simple: "Retorna o horário de abertura de uma posição em milissegundos.",
-         complex: "Esta função retorna o horário de abertura de uma posição no formato datetime em milissegundos desde 01/01/1970.",
+         full: "Esta função retorna o horário de abertura de uma posição no formato datetime em milissegundos desde 01/01/1970.",
       },
       parameters: [
          {
@@ -5674,7 +5697,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PTUpdate",
       description: {
          simple: "Retorna o horário da última atualização de uma posição.",
-         complex: "Esta função retorna o horário da última atualização (modificação) de uma posição no formato datetime.",
+         full: "Esta função retorna o horário da última atualização (modificação) de uma posição no formato datetime.",
       },
       parameters: [
          {
@@ -5701,7 +5724,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PTUpdateMsc",
       description: {
          simple: "Retorna o horário da última atualização de uma posição em milissegundos.",
-         complex: "Esta função retorna o horário da última atualização de uma posição no formato datetime em milissegundos desde 01/01/1970.",
+         full: "Esta função retorna o horário da última atualização de uma posição no formato datetime em milissegundos desde 01/01/1970.",
       },
       parameters: [
          {
@@ -5728,7 +5751,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PType",
       description: {
          simple: "Retorna o tipo de uma posição (compra/venda).",
-         complex: "Esta função retorna o tipo da posição (0 para compra, 1 para venda) identificada pelo ticket.",
+         full: "Esta função retorna o tipo da posição (0 para compra, 1 para venda) identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5755,7 +5778,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PSymbol",
       description: {
          simple: "Retorna o símbolo do ativo de uma posição.",
-         complex: "Esta função retorna o símbolo do ativo negociado em uma posição identificada pelo ticket.",
+         full: "Esta função retorna o símbolo do ativo negociado em uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5782,7 +5805,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PComment",
       description: {
          simple: "Retorna o comentário associado a uma posição.",
-         complex: "Esta função retorna o comentário/texto descritivo associado a uma posição identificada pelo ticket.",
+         full: "Esta função retorna o comentário/texto descritivo associado a uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5809,7 +5832,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "PExternal",
       description: {
          simple: "Retorna o ID externo de uma posição.",
-         complex: "Esta função retorna o identificador externo (gerado pelo servidor) de uma posição identificada pelo ticket.",
+         full: "Esta função retorna o identificador externo (gerado pelo servidor) de uma posição identificada pelo ticket.",
       },
       parameters: [
          {
@@ -5836,8 +5859,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OTicket",
       description: {
          simple: "Retorna o ticket da ordem aberta mais próxima do índice informado.",
-         complex:
-            "Esta função retorna o ticket da ordem aberta mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de ordens abertas, será retornado o ticket da última ordem disponível (a de maior índice).",
+         full: "Esta função retorna o ticket da ordem aberta mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de ordens abertas, será retornado o ticket da última ordem disponível (a de maior índice).",
       },
       parameters: [
          {
@@ -5883,9 +5905,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTicketExact",
       aliases: "OTicketE",
+      version: "2.15",
       description: {
          simple: "Retorna o ticket da ordem aberta no índice informado ou 0, caso não exista.",
-         complex: "Esta função retorna o ticket de uma ordem aberta no índice exato informado. Caso não exista uma ordem nesse índice, a função retorna 0.",
+         full: "Esta função retorna o ticket de uma ordem aberta no índice exato informado. Caso não exista uma ordem nesse índice, a função retorna 0.",
       },
       parameters: [
          {
@@ -5933,8 +5956,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade numérica (double) de uma ordem.",
-         complex:
-            "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma ordem aberta, identificada pelo seu ticket.",
+         full: "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma ordem aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -5972,7 +5994,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade inteira de uma ordem.",
-         complex: "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma ordem aberta, identificada pelo seu ticket.",
+         full: "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma ordem aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -6010,7 +6032,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Retorna o valor de uma propriedade textual de uma ordem.",
-         complex: "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma ordem aberta, identificada pelo seu ticket.",
+         full: "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma ordem aberta, identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -6048,7 +6070,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OVolInit",
       description: {
          simple: "Retorna o volume inicial de uma ordem pendente.",
-         complex: "Esta função retorna o volume inicial especificado quando a ordem pendente foi criada.",
+         full: "Esta função retorna o volume inicial especificado quando a ordem pendente foi criada.",
       },
       parameters: [
          {
@@ -6075,7 +6097,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OVol",
       description: {
          simple: "Retorna o volume atual de uma ordem.",
-         complex: "Esta função retorna o volume atual (tamanho) de uma ordem, que pode ter sido modificado após a criação.",
+         full: "Esta função retorna o volume atual (tamanho) de uma ordem, que pode ter sido modificado após a criação.",
       },
       parameters: [
          {
@@ -6102,7 +6124,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OO",
       description: {
          simple: "Retorna o preço de abertura de uma ordem.",
-         complex: "Esta função retorna o preço de abertura especificado para uma ordem pendente.",
+         full: "Esta função retorna o preço de abertura especificado para uma ordem pendente.",
       },
       parameters: [
          {
@@ -6129,7 +6151,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OSL",
       description: {
          simple: "Retorna o preço do Stop Loss de uma ordem.",
-         complex: "Esta função retorna o preço definido para o Stop Loss de uma ordem pendente.",
+         full: "Esta função retorna o preço definido para o Stop Loss de uma ordem pendente.",
       },
       parameters: [
          {
@@ -6156,7 +6178,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OTP",
       description: {
          simple: "Retorna o preço do Take Profit de uma ordem.",
-         complex: "Esta função retorna o preço definido para o Take Profit de uma ordem pendente.",
+         full: "Esta função retorna o preço definido para o Take Profit de uma ordem pendente.",
       },
       parameters: [
          {
@@ -6183,7 +6205,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OCurrent",
       description: {
          simple: "Retorna o preço atual de uma ordem pendente.",
-         complex: "Esta função retorna o preço atual (de mercado) para o ativo da ordem pendente.",
+         full: "Esta função retorna o preço atual (de mercado) para o ativo da ordem pendente.",
       },
       parameters: [
          {
@@ -6210,7 +6232,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OSLLimit",
       description: {
          simple: "Retorna o preço de ativação para ordens Stop Limit.",
-         complex: "Esta função retorna o preço de ativação especificado para ordens do tipo Stop Limit.",
+         full: "Esta função retorna o preço de ativação especificado para ordens do tipo Stop Limit.",
       },
       parameters: [
          {
@@ -6237,7 +6259,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OSetup",
       description: {
          simple: "Retorna a data/hora de criação da ordem.",
-         complex: "Esta função retorna o momento em que a ordem foi criada no formato datetime.",
+         full: "Esta função retorna o momento em que a ordem foi criada no formato datetime.",
       },
       parameters: [
          {
@@ -6264,7 +6286,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OType",
       description: {
          simple: "Retorna o tipo de uma ordem.",
-         complex: "Esta função retorna o tipo da ordem (compra/venda, stop/limit, etc) conforme enumerador de tipos de ordem.",
+         full: "Esta função retorna o tipo da ordem (compra/venda, stop/limit, etc) conforme enumerador de tipos de ordem.",
       },
       parameters: [
          {
@@ -6292,7 +6314,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OState",
       description: {
          simple: "Retorna o estado atual de uma ordem.",
-         complex: "Esta função retorna o estado atual da ordem conforme enumerador de estados.",
+         full: "Esta função retorna o estado atual da ordem conforme enumerador de estados.",
       },
       parameters: [
          {
@@ -6320,7 +6342,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OTExpira",
       description: {
          simple: "Retorna a data/hora de expiração de uma ordem.",
-         complex: "Esta função retorna o momento em que a ordem pendente irá expirar (se aplicável) no formato datetime.",
+         full: "Esta função retorna o momento em que a ordem pendente irá expirar (se aplicável) no formato datetime.",
       },
       parameters: [
          {
@@ -6347,7 +6369,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "ODone",
       description: {
          simple: "Retorna a data/hora de execução ou cancelamento de uma ordem.",
-         complex: "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato datetime.",
+         full: "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato datetime.",
       },
       parameters: [
          {
@@ -6374,7 +6396,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OSetupMsc",
       description: {
          simple: "Retorna a data/hora de criação da ordem em milissegundos.",
-         complex: "Esta função retorna o momento em que a ordem foi criada no formato timestamp em milissegundos desde 01/01/1970.",
+         full: "Esta função retorna o momento em que a ordem foi criada no formato timestamp em milissegundos desde 01/01/1970.",
       },
       parameters: [
          {
@@ -6401,7 +6423,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "ODoneMsc",
       description: {
          simple: "Retorna a data/hora de execução ou cancelamento em milissegundos.",
-         complex: "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato timestamp em milissegundos desde 01/01/1970.",
+         full: "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato timestamp em milissegundos desde 01/01/1970.",
       },
       parameters: [
          {
@@ -6428,7 +6450,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OFilling",
       description: {
          simple: "Retorna a política de preenchimento de uma ordem.",
-         complex: "Esta função retorna o tipo de política de preenchimento (FOK, IOC, etc) conforme enumerador de tipos de preenchimento.",
+         full: "Esta função retorna o tipo de política de preenchimento (FOK, IOC, etc) conforme enumerador de tipos de preenchimento.",
       },
       parameters: [
          {
@@ -6456,7 +6478,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OT",
       description: {
          simple: "Retorna a data/hora da última modificação da ordem.",
-         complex: "Esta função retorna o momento da última modificação da ordem no formato datetime.",
+         full: "Esta função retorna o momento da última modificação da ordem no formato datetime.",
       },
       parameters: [
          {
@@ -6483,7 +6505,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OMagic",
       description: {
          simple: "Retorna o número mágico de uma ordem.",
-         complex: "Esta função retorna o número mágico (identificador personalizado do robô) associado a uma ordem.",
+         full: "Esta função retorna o número mágico (identificador personalizado do robô) associado a uma ordem.",
       },
       parameters: [
          {
@@ -6510,7 +6532,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OReason",
       description: {
          simple: "Retorna o motivo de criação da ordem.",
-         complex: "Esta função retorna o código que indica o motivo pelo qual a ordem foi criada (manual, EA, etc).",
+         full: "Esta função retorna o código que indica o motivo pelo qual a ordem foi criada (manual, EA, etc).",
       },
       parameters: [
          {
@@ -6537,7 +6559,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OId",
       description: {
          simple: "Retorna o ID da ordem no sistema.",
-         complex: "Esta função retorna o identificador único da ordem no sistema de negociação.",
+         full: "Esta função retorna o identificador único da ordem no sistema de negociação.",
       },
       parameters: [
          {
@@ -6564,7 +6586,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OById",
       description: {
          simple: "Retorna o ticket da ordem pelo ID do sistema.",
-         complex: "Esta função retorna o número do ticket correspondente a um ID de ordem no sistema.",
+         full: "Esta função retorna o número do ticket correspondente a um ID de ordem no sistema.",
       },
       parameters: [
          {
@@ -6591,7 +6613,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OSymbol",
       description: {
          simple: "Retorna o símbolo do ativo de uma ordem.",
-         complex: "Esta função retorna o símbolo do ativo negociado em uma ordem.",
+         full: "Esta função retorna o símbolo do ativo negociado em uma ordem.",
       },
       parameters: [
          {
@@ -6618,7 +6640,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "OComment",
       description: {
          simple: "Retorna o comentário associado a uma ordem.",
-         complex: "Esta função retorna o comentário/texto descritivo associado a uma ordem.",
+         full: "Esta função retorna o comentário/texto descritivo associado a uma ordem.",
       },
       parameters: [
          {
@@ -6646,8 +6668,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DTicket",
       description: {
          simple: "Retorna o ticket da posição fechada mais próxima do índice informado.",
-         complex:
-            "Esta função retorna o ticket da posição fechada mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de posições fechadas, será retornado o ticket da última posição disponível (a de maior índice).",
+         full: "Esta função retorna o ticket da posição fechada mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de posições fechadas, será retornado o ticket da última posição disponível (a de maior índice).",
       },
       parameters: [
          {
@@ -6723,10 +6744,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTicketExact",
       aliases: "DTicketE",
+      version: "2.15",
       description: {
          simple: "Retorna o ticket da posição fechada no índice informado ou 0, caso não exista.",
-         complex:
-            "Esta função retorna o ticket de uma posição fechada no índice exato informado. Caso não exista uma posição nesse índice, a função retorna 0.",
+         full: "Esta função retorna o ticket de uma posição fechada no índice exato informado. Caso não exista uma posição nesse índice, a função retorna 0.",
       },
       parameters: [
          {
@@ -6804,7 +6825,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DProfit",
       description: {
          simple: "Retorna o lucro/prejuízo de um negócio.",
-         complex: "Esta função retorna o valor do lucro ou prejuízo (em moeda do ativo) de um negócio específico.",
+         full: "Esta função retorna o valor do lucro ou prejuízo (em moeda do ativo) de um negócio específico.",
       },
       parameters: [
          {
@@ -6831,7 +6852,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DO",
       description: {
          simple: "Retorna o preço de abertura de um negócio.",
-         complex: "Esta função retorna o preço de abertura de um negócio específico.",
+         full: "Esta função retorna o preço de abertura de um negócio específico.",
       },
       parameters: [
          {
@@ -6858,7 +6879,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DComm",
       description: {
          simple: "Retorna o valor da comissão de um negócio.",
-         complex: "Esta função retorna o valor da comissão cobrada em um negócio específico.",
+         full: "Esta função retorna o valor da comissão cobrada em um negócio específico.",
       },
       parameters: [
          {
@@ -6885,7 +6906,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DFee",
       description: {
          simple: "Retorna o valor da taxa de um negócio.",
-         complex: "Esta função retorna o valor da taxa cobrada em um negócio específico.",
+         full: "Esta função retorna o valor da taxa cobrada em um negócio específico.",
       },
       parameters: [
          {
@@ -6912,7 +6933,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DSL",
       description: {
          simple: "Retorna o preço do stop loss de um negócio.",
-         complex: "Esta função retorna o preço do stop loss definido para um negócio específico.",
+         full: "Esta função retorna o preço do stop loss definido para um negócio específico.",
       },
       parameters: [
          {
@@ -6939,7 +6960,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DTP",
       description: {
          simple: "Retorna o preço do take profit de um negócio.",
-         complex: "Esta função retorna o preço do take profit definido para um negócio específico.",
+         full: "Esta função retorna o preço do take profit definido para um negócio específico.",
       },
       parameters: [
          {
@@ -6966,7 +6987,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DSwap",
       description: {
          simple: "Retorna o valor do swap de um negócio.",
-         complex: "Esta função retorna o valor do swap acumulado para um negócio específico.",
+         full: "Esta função retorna o valor do swap acumulado para um negócio específico.",
       },
       parameters: [
          {
@@ -6993,7 +7014,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DVol",
       description: {
          simple: "Retorna o volume de um negócio.",
-         complex: "Esta função retorna o volume negociado em um negócio específico.",
+         full: "Esta função retorna o volume negociado em um negócio específico.",
       },
       parameters: [
          {
@@ -7020,7 +7041,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DMagic",
       description: {
          simple: "Retorna o número mágico de um negócio.",
-         complex: "Esta função retorna o identificador mágico (número de referência) associado a um negócio específico.",
+         full: "Esta função retorna o identificador mágico (número de referência) associado a um negócio específico.",
       },
       parameters: [
          {
@@ -7047,7 +7068,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DReason",
       description: {
          simple: "Retorna o motivo da execução de um negócio.",
-         complex: "Esta função retorna o código que indica o motivo pelo qual o negócio foi executado.",
+         full: "Esta função retorna o código que indica o motivo pelo qual o negócio foi executado.",
       },
       parameters: [
          {
@@ -7075,7 +7096,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DOrder",
       description: {
          simple: "Retorna o ticket da ordem associada a um negócio.",
-         complex: "Esta função retorna o número do ticket da ordem que gerou o negócio.",
+         full: "Esta função retorna o número do ticket da ordem que gerou o negócio.",
       },
       parameters: [
          {
@@ -7102,7 +7123,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DId",
       description: {
          simple: "Retorna o ID de um negócio.",
-         complex: "Esta função retorna o identificador único (ID) de um negócio específico.",
+         full: "Esta função retorna o identificador único (ID) de um negócio específico.",
       },
       parameters: [
          {
@@ -7129,7 +7150,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DEntry",
       description: {
          simple: "Retorna o tipo de entrada de um negócio.",
-         complex: "Esta função retorna um código que indica o tipo de entrada de um negócio.",
+         full: "Esta função retorna um código que indica o tipo de entrada de um negócio.",
       },
       parameters: [
          {
@@ -7156,7 +7177,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DOut",
       description: {
          simple: "Retorna se o negócio é uma saída.",
-         complex: "Esta função indica se o negócio atual representa uma saída no sistema.",
+         full: "Esta função indica se o negócio atual representa uma saída no sistema.",
       },
       parameters: [
          {
@@ -7183,7 +7204,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DIn",
       description: {
          simple: "Retorna se o negócio é uma posição de entrada.",
-         complex: "Esta função indica se o negócio atual representa uma posição de entrada no sistema.",
+         full: "Esta função indica se o negócio atual representa uma posição de entrada no sistema.",
       },
       parameters: [
          {
@@ -7210,7 +7231,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DT",
       description: {
          simple: "Retorna a data/hora de execução de um negócio.",
-         complex: "Esta função retorna a data e hora (em formato datetime) quando o negócio foi executado.",
+         full: "Esta função retorna a data e hora (em formato datetime) quando o negócio foi executado.",
       },
       parameters: [
          {
@@ -7237,7 +7258,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DTMsc",
       description: {
          simple: "Retorna o tempo de execução de negociações em milissegundos desde 01.01.1970",
-         complex: "Esta função retorna o tempo de execução de negociações em milissegundos desde 01.01.1970",
+         full: "Esta função retorna o tempo de execução de negociações em milissegundos desde 01.01.1970",
       },
       parameters: [
          {
@@ -7264,7 +7285,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DType",
       description: {
          simple: "Retorna o tipo de um negócio.",
-         complex: "Esta função retorna o tipo do negócio.",
+         full: "Esta função retorna o tipo do negócio.",
       },
       parameters: [
          {
@@ -7292,7 +7313,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DComment",
       description: {
          simple: "Retorna o comentário associado a um negócio.",
-         complex: "Esta função retorna o comentário/texto descritivo associado a um negócio específico.",
+         full: "Esta função retorna o comentário/texto descritivo associado a um negócio específico.",
       },
       parameters: [
          {
@@ -7319,7 +7340,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DExternal",
       description: {
          simple: "Retorna o ID externo de um negócio.",
-         complex: "Esta função retorna identificador de negócios em um sistema de negociação externo (na troca).",
+         full: "Esta função retorna identificador de negócios em um sistema de negociação externo (na troca).",
       },
       parameters: [
          {
@@ -7346,7 +7367,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "DSymbol",
       description: {
          simple: "Retorna o símbolo de um negócio.",
-         complex: "Esta função retorna o nome do símbolo no qual o negócio foi executado.",
+         full: "Esta função retorna o nome do símbolo no qual o negócio foi executado.",
       },
       parameters: [
          {
@@ -7374,8 +7395,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Abre uma posição de compra no mercado.",
-         complex:
-            "Esta função abre uma posição de compra no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (compra imediata ou pendente) é definido automaticamente.",
+         full: "Esta função abre uma posição de compra no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (compra imediata ou pendente) é definido automaticamente.",
       },
       parameters: [
          {
@@ -7435,8 +7455,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Abre uma posição de venda no mercado.",
-         complex:
-            "Esta função abre uma posição de venda no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (venda imediata ou pendente) é definido automaticamente.",
+         full: "Esta função abre uma posição de venda no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (venda imediata ou pendente) é definido automaticamente.",
       },
       parameters: [
          {
@@ -7496,8 +7515,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Abre uma posição de compra no mercado atual.",
-         complex:
-            "Esta função abre uma posição de compra no preço de mercado atual (Ask), com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
+         full: "Esta função abre uma posição de compra no preço de mercado atual (Ask), com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
       },
       parameters: [
          {
@@ -7552,8 +7570,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Abre uma posição de venda no mercado atual.",
-         complex:
-            "Esta função abre uma posição de venda no preço de mercado atual (Bid), com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
+         full: "Esta função abre uma posição de venda no preço de mercado atual (Bid), com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
       },
       parameters: [
          {
@@ -7608,8 +7625,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Coloca uma ordem pendente de compra.",
-         complex:
-            "Esta função coloca uma ordem pendente de compra (Buy Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
+         full: "Esta função coloca uma ordem pendente de compra (Buy Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
       },
       parameters: [
          {
@@ -7669,8 +7685,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Coloca uma ordem pendente de venda.",
-         complex:
-            "Esta função coloca uma ordem pendente de venda (Sell Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
+         full: "Esta função coloca uma ordem pendente de venda (Sell Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado.",
       },
       parameters: [
          {
@@ -7730,8 +7745,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Fecha uma posição aberta completamente.",
-         complex:
-            "Esta função fecha completamente uma posição aberta no mercado, identificada pelo seu ticket. O fechamento é feito ao preço atual de mercado.",
+         full: "Esta função fecha completamente uma posição aberta no mercado, identificada pelo seu ticket. O fechamento é feito ao preço atual de mercado.",
       },
       parameters: [
          {
@@ -7758,7 +7772,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Fecha parcialmente uma posição aberta.",
-         complex: "Esta função fecha parcialmente uma posição aberta no mercado, reduzindo seu volume pelo valor especificado.",
+         full: "Esta função fecha parcialmente uma posição aberta no mercado, reduzindo seu volume pelo valor especificado.",
       },
       parameters: [
          {
@@ -7790,7 +7804,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Cancela uma ordem pendente.",
-         complex: "Esta função cancela uma ordem pendente (limit/stop) identificada pelo seu ticket.",
+         full: "Esta função cancela uma ordem pendente (limit/stop) identificada pelo seu ticket.",
       },
       parameters: [
          {
@@ -7817,7 +7831,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Fecha todas as posições abertas.",
-         complex: "Esta função fecha todas as posições abertas no mercado, podendo ser filtradas por símbolo.",
+         full: "Esta função fecha todas as posições abertas no mercado, podendo ser filtradas por símbolo.",
       },
       parameters: [
          {
@@ -7854,7 +7868,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Fecha todas as posições de compra abertas.",
-         complex: "Esta função fecha todas as posições de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo.",
+         full: "Esta função fecha todas as posições de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo.",
       },
       parameters: [
          {
@@ -7891,7 +7905,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Fecha todas as posições de venda abertas.",
-         complex: "Esta função fecha todas as posições de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo.",
+         full: "Esta função fecha todas as posições de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo.",
       },
       parameters: [
          {
@@ -7926,9 +7940,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
       name: "OrderCloseAll",
       aliases: "",
+      version: "2.08",
       description: {
          simple: "Fecha todas as ordens abertas.",
-         complex: "Esta função fecha todas as ordens abertas no mercado, podendo ser filtradas por símbolo.",
+         full: "Esta função fecha todas as ordens abertas no mercado, podendo ser filtradas por símbolo.",
       },
       parameters: [
          {
@@ -7963,9 +7978,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
       name: "OrderBuyCloseAll",
       aliases: "",
+      version: "2.08",
       description: {
          simple: "Fecha todas as ordens de compra abertas.",
-         complex: "Esta função fecha todas as ordens de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo.",
+         full: "Esta função fecha todas as ordens de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo.",
       },
       parameters: [
          {
@@ -8000,9 +8016,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
       name: "OrderSellCloseAll",
       aliases: "",
+      version: "2.08",
       description: {
          simple: "Fecha todas as ordens de venda abertas.",
-         complex: "Esta função fecha todas as ordens de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo.",
+         full: "Esta função fecha todas as ordens de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo.",
       },
       parameters: [
          {
@@ -8039,8 +8056,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica os níveis de take profit e stop loss de uma posição aberta.",
-         complex:
-            "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8090,7 +8106,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica apenas o take profit de uma posição aberta.",
-         complex: "Esta função permite alterar somente o nível de take profit de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar somente o nível de take profit de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8134,7 +8150,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica apenas o stop loss de uma posição aberta.",
-         complex: "Esta função permite alterar somente o nível de stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar somente o nível de stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8178,8 +8194,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica os níveis de take profit e stop loss de uma ordem aberta.",
-         complex:
-            "Esta função permite alterar os níveis de take profit e/ou stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar os níveis de take profit e/ou stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8235,7 +8250,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica apenas o take profit de uma ordem aberta.",
-         complex: "Esta função permite alterar somente o nível de take profit de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar somente o nível de take profit de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8279,7 +8294,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica apenas o stop loss de uma ordem aberta.",
-         complex: "Esta função permite alterar somente o nível de stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar somente o nível de stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8323,7 +8338,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica apenas o preço de uma ordem aberta.",
-         complex: "Esta função permite alterar somente o preço de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar somente o preço de uma ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8355,8 +8370,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica os níveis de take profit e stop loss de uma posição ou ordem aberta.",
-         complex:
-            "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8406,8 +8420,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica apenas o take profit de uma posição ou ordem aberta.",
-         complex:
-            "Esta função permite alterar somente o nível de take profit de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar somente o nível de take profit de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8451,8 +8464,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       aliases: "",
       description: {
          simple: "Modifica apenas o stop loss de uma posição ou ordem aberta.",
-         complex:
-            "Esta função permite alterar somente o nível de stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
+         full: "Esta função permite alterar somente o nível de stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo.",
       },
       parameters: [
          {
@@ -8496,9 +8508,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjHLine",
       aliases: "ObjHL",
+      version: "2.10",
       description: {
          simple: "Cria uma linha horizontal no gráfico.",
-         complex: "Permite desenhar uma linha horizontal em um preço específico no gráfico, com personalização de cor, espessura e estilo de linha.",
+         full: "Permite desenhar uma linha horizontal em um preço específico no gráfico, com personalização de cor, espessura e estilo de linha.",
       },
       parameters: [
          {
@@ -8549,9 +8562,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjVLine",
       aliases: "ObjVL",
+      version: "2.10",
       description: {
          simple: "Cria uma linha vertical no gráfico.",
-         complex: "Permite desenhar uma linha vertical em um ponto de tempo específico no gráfico, com personalização de cor, espessura e estilo de linha.",
+         full: "Permite desenhar uma linha vertical em um ponto de tempo específico no gráfico, com personalização de cor, espessura e estilo de linha.",
       },
       parameters: [
          {
@@ -8602,10 +8616,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjTrendLine",
       aliases: "ObjTL",
+      version: "2.10",
       description: {
          simple: "Cria uma linha de tendência no gráfico.",
-         complex:
-            "Permite desenhar uma linha de tendência conectando dois pontos de preço em tempos diferentes, com personalização de cor, espessura e estilo.",
+         full: "Permite desenhar uma linha de tendência conectando dois pontos de preço em tempos diferentes, com personalização de cor, espessura e estilo.",
       },
       parameters: [
          {
@@ -8671,9 +8685,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjRemove",
       aliases: "ObjRem",
+      version: "2.10",
       description: {
          simple: "Remove um objeto do gráfico.",
-         complex: "Permite remover um objeto gráfico previamente criado no gráfico, identificado pelo seu nome.",
+         full: "Permite remover um objeto gráfico previamente criado no gráfico, identificado pelo seu nome.",
       },
       parameters: [
          {
@@ -8698,9 +8713,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjClear",
       aliases: "ObjClr",
+      version: "2.10",
       description: {
          simple: "Remove múltiplos objetos do gráfico.",
-         complex: "Remove todos os objetos cujo nome inicie com um prefixo específico e opcionalmente por tipo.",
+         full: "Remove todos os objetos cujo nome inicie com um prefixo específico e opcionalmente por tipo.",
       },
       parameters: [
          {
@@ -8734,9 +8750,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjExist",
       aliases: "ObjEx",
+      version: "2.10",
       description: {
          simple: "Verifica se um objeto existe no gráfico.",
-         complex: "Permite verificar a existência de um objeto no gráfico através do seu nome.",
+         full: "Permite verificar a existência de um objeto no gráfico através do seu nome.",
       },
       parameters: [
          {
@@ -8761,9 +8778,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjGetTime",
       aliases: "ObjGT",
+      version: "2.10",
       description: {
          simple: "Obtém o tempo associado a um objeto.",
-         complex: "Permite recuperar a coordenada de tempo de um ponto de um objeto gráfico, especificando índice e buffer.",
+         full: "Permite recuperar a coordenada de tempo de um ponto de um objeto gráfico, especificando índice e buffer.",
       },
       parameters: [
          {
@@ -8804,9 +8822,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjGetPrice",
       aliases: "ObjGP",
+      version: "2.10",
       description: {
          simple: "Obtém o preço associado a um objeto.",
-         complex: "Permite recuperar a coordenada de preço de um ponto de um objeto gráfico, especificando índice e buffer.",
+         full: "Permite recuperar a coordenada de preço de um ponto de um objeto gráfico, especificando índice e buffer.",
       },
       parameters: [
          {
@@ -8847,9 +8866,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjSetTime",
       aliases: "ObjST",
+      version: "2.10",
       description: {
          simple: "Define o tempo de um ponto de um objeto.",
-         complex: "Permite modificar a coordenada de tempo de um ponto específico de um objeto gráfico.",
+         full: "Permite modificar a coordenada de tempo de um ponto específico de um objeto gráfico.",
       },
       parameters: [
          {
@@ -8889,9 +8909,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
       category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjSetPrice",
       aliases: "ObjSP",
+      version: "2.10",
       description: {
          simple: "Define o preço de um ponto de um objeto.",
-         complex: "Permite modificar a coordenada de preço de um ponto específico de um objeto gráfico.",
+         full: "Permite modificar a coordenada de preço de um ponto específico de um objeto gráfico.",
       },
       parameters: [
          {

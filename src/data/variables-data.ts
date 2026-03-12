@@ -633,6 +633,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
       name: "ALL_AVG_PRICE",
       aliases: "AAVG",
+      version: "2.05",
       description: {
          simple: "Retorna o preço médio de todas as posições abertas.",
       },
@@ -641,6 +642,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
       name: "ALL_AVG_DIR",
       aliases: "AAVGDIR",
+      version: "2.05",
       description: {
          simple: "Retorna a direção média das posições abertas. (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
       },
@@ -649,6 +651,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
       name: "BUY_AVG_PRICE",
       aliases: "BAVG",
+      version: "2.05",
       description: {
          simple: "Retorna o preço médio das posições de compra abertas.",
       },
@@ -657,6 +660,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
       name: "BUY_AVG_DIR",
       aliases: "BAVGDIR",
+      version: "2.05",
       description: {
          simple: "Retorna a direção média das posições de compra abertas.",
       },
@@ -665,6 +669,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
       name: "SELL_AVG_PRICE",
       aliases: "SAVG",
+      version: "2.05",
       description: {
          simple: "Retorna o preço médio das posições de venda abertas.",
       },
@@ -673,6 +678,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
       category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
       name: "SELL_AVG_DIR",
       aliases: "SAVGDIR",
+      version: "2.05",
       description: {
          simple: "Retorna a direção média das posições de venda abertas.",
       },

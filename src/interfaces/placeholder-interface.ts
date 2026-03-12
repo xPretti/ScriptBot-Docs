@@ -5,6 +5,7 @@ import type { ENUM_FUNCTION_CATEGORY_TYPE, ENUM_VARIABLE_CATEGORY_TYPE } from "@
 export interface PlaceholderInterface {
    name: string;
    aliases: string;
+   version?: string;
    description: PlaceholderDescription;
 }
 

@@ -25,7 +25,7 @@ export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterfac
       <>
          <div className={styles.content}>
             <div className={styles.descriptionContainer}>
-               <p>{fn.description.complex}</p>
+               <p>{fn.description.full}</p>
             </div>
             <div className={styles.titleContent}>
                <h3>Parâmetros</h3>
