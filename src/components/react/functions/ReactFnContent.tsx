@@ -5,6 +5,7 @@ import type { FunctionPlaceholderInterface } from "@src/interfaces/placeholder-i
 import { getFunctionExample } from "@src/utils/functions-comp-utils";
 import ReactCode from "../ReactCode";
 import ReactFnParams from "./ReactFnParams";
+import CopyText from "../CopyText";
 
 export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterface }) {
    if (!fn) return null;
@@ -24,8 +25,30 @@ export default function ReactFnContent({ fn }: { fn: FunctionPlaceholderInterfac
    return (
       <>
          <div className={styles.content}>
+            {fn.version && (
+               <div className={styles.versionContainer}>
+                  <h4 className={styles.version}>Disponível a partir da versão {fn.version}</h4>
+               </div>
+            )}
             <div className={styles.descriptionContainer}>
                <p>{fn.description.full}</p>
+            </div>
+            <div className={`${styles.titleContentName} ${styles.titleContent}`}>
+               <h3>Função</h3>
+               <p>
+                  Nome da função:{" "}
+                  <CopyText text={fn.name}>
+                     <span>{fn.name}</span>
+                  </CopyText>
+               </p>
+               {fn.aliases !== "" && (
+                  <p>
+                     Aliases:{" "}
+                     <CopyText text={fn.aliases}>
+                        <span>{fn.aliases}</span>
+                     </CopyText>
+                  </p>
+               )}
             </div>
             <div className={styles.titleContent}>
                <h3>Parâmetros</h3>

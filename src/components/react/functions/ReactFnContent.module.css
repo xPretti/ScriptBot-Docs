@@ -16,6 +16,11 @@
    gap: 2em;
 }
 
+.version {
+   font-size: 16px;
+   color: var(--sl-color-accent);
+}
+
 .descriptionContainer {
    display: flex;
    align-items: center;
@@ -27,6 +32,10 @@
    flex-direction: column;
    gap: 0.2rem;
    overflow: hidden;
+}
+
+.titleContentName {
+   overflow: visible;
 }
 
 .examplesTypes {

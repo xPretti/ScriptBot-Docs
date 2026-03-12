@@ -320,3 +320,10 @@ td div {
 .scroll-progress-ring circle {
    stroke: var(--sl-color-white) !important;
 }
+
+.sidebar-version-badge {
+   background: none;
+   border: none;
+   display: inline-block;
+   color: var(--sl-color-accent);
+}

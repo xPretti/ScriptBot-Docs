@@ -1,3 +1,4 @@
+import { version } from "os";
 import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
@@ -8,6 +9,7 @@ export type FunctionPage = {
    link: string;
    category: ENUM_FUNCTION_CATEGORY_TYPE;
    description: string;
+   version?: string;
 };
 
 export function getFunctionPages(path: string): FunctionPage[] {
@@ -17,6 +19,7 @@ export function getFunctionPages(path: string): FunctionPage[] {
          link: `${path}${categoryKey}/${fn.name}`,
          category: fn.category,
          description: fn.description.simple,
+         version: fn.version,
       })),
    );
 }
@@ -36,11 +39,12 @@ export function buildFunctionsSidebar(pages: FunctionPage[], translation?: Trans
          acc[category].push({
             label: page.label,
             link: page.link,
+            badge: page.version ? { text: `${page.version}+`, class: "sidebar-version-badge" } : undefined,
          });
 
          return acc;
       },
-      {} as Record<string, { label: string; link: string }[]>,
+      {} as Record<string, { label: string; link: string; badge?: { text: string; class: string } }[]>,
    );
 
    const sidebarGroups = Object.entries(categorizedPages).map(([category, items]) => ({

@@ -3,6 +3,7 @@ import { buildFunctionsSidebar, getFunctionPages } from "@src/utils/functions-si
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
 import CodeVar from "@src/components/CodeVar.astro";
 import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTranslationSystem";
+import { pathHasLocale } from "astro:i18n";
 
 const pages = getFunctionPages("/placeholders/functions/types/");
 
@@ -41,12 +42,20 @@ const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(
                <td>
                   <CodeVar>{p.label}</CodeVar>
                </td>
-               <td>
+               <td class="description">
                   <a
                      class="function-item"
                      href={p.link}
                   >
                      {p.description}
+                     {p.version && (
+                        <span
+                           class="version"
+                           title={p.version}
+                        >
+                           {p.version}+
+                        </span>
+                     )}
                   </a>
                </td>
             </tr>
@@ -78,5 +87,18 @@ const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(
 
    .function-item:hover {
       color: var(--sl-color-accent-high);
+   }
+   .description {
+      position: relative;
+   }
+   .version {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      color: var(--sl-color-accent);
+      font-size: 15px;
+      font-weight: semi-bold;
    }
 </style>
