@@ -2,7 +2,7 @@ import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
 import styles from "./ReactFnPage.module.css";
 
-import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
+import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import ReactFnContent from "./ReactFnContent";
 
 export default function ReactFnPage({ fnCategory, fnName }: { fnCategory: ENUM_FUNCTION_CATEGORY_TYPE | string; fnName: string }) {

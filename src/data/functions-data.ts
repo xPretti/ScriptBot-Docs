@@ -1,4 +1,4 @@
-import { ENUM_FUNCTION_CATEGORY_TYPE } from "src/enums/function-enums";
+import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import type { FunctionPlaceholderInterface } from "../interfaces/placeholder-interface";
 
 export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, FunctionPlaceholderInterface>> = new Map();

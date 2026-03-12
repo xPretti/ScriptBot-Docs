@@ -17,3 +17,15 @@ export const ENUM_FUNCTION_CATEGORY_TYPE = {
 } as const;
 
 export type ENUM_FUNCTION_CATEGORY_TYPE = (typeof ENUM_FUNCTION_CATEGORY_TYPE)[keyof typeof ENUM_FUNCTION_CATEGORY_TYPE];
+
+export const ENUM_VARIABLE_CATEGORY_TYPE = {
+   LOCAL_POSITION: "localposition",
+   LOCAL_TRIGGER: "localtrigger",
+   ACCOUNT: "account",
+   MARKET: "market",
+   OPEN_TRADE: "opentrade",
+   CLOSE_TRADE: "closetrade",
+   SIGNAL: "signal",
+} as const;
+
+export type ENUM_VARIABLE_CATEGORY_TYPE = (typeof ENUM_VARIABLE_CATEGORY_TYPE)[keyof typeof ENUM_VARIABLE_CATEGORY_TYPE];

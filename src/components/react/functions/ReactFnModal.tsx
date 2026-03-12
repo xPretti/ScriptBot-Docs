@@ -5,7 +5,7 @@ import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import styles from "./ReactFnModal.module.css";
 
 import { X } from "lucide-react";
-import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/function-enums";
+import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import ReactFnContent from "./ReactFnContent";
 import { BASE_URL } from "@src/configs/config";
 import { getUrl } from "@src/utils/url-utils";

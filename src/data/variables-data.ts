@@ -1,4 +1,4 @@
-import { ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/variable-enums";
+import { ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import type { VariablePlaceholderInterface } from "@src/interfaces/placeholder-interface";
 
 export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, VariablePlaceholderInterface>> = new Map();

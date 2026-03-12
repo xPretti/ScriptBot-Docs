@@ -1,4 +1,4 @@
-import { ENUM_FUNCTION_CATEGORY_TYPE } from "src/enums/function-enums";
+import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
 type TranslateFn = (key: string) => string;
