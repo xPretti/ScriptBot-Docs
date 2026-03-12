@@ -1,12 +1,14 @@
-export enum ENUM_VARIABLE_CATEGORY_TYPE {
-   LOCAL_POSITION = "localposition",
-   LOCAL_TRIGGER = "localtrigger",
-   ACCOUNT = "account",
-   MARKET = "market",
-   OPEN_TRADE = "opentrade",
-   CLOSE_TRADE = "closetrade",
-   SIGNAL = "signal",
-}
+export const ENUM_VARIABLE_CATEGORY_TYPE = {
+   LOCAL_POSITION: "localposition",
+   LOCAL_TRIGGER: "localtrigger",
+   ACCOUNT: "account",
+   MARKET: "market",
+   OPEN_TRADE: "opentrade",
+   CLOSE_TRADE: "closetrade",
+   SIGNAL: "signal",
+} as const;
+
+export type ENUM_VARIABLE_CATEGORY_TYPE = (typeof ENUM_VARIABLE_CATEGORY_TYPE)[keyof typeof ENUM_VARIABLE_CATEGORY_TYPE];
 
 export const getVariableCategoryLabel: Record<ENUM_VARIABLE_CATEGORY_TYPE, () => string> = {
    [ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION]: () => "Posição local",

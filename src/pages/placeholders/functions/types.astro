@@ -1,27 +1,30 @@
 ---
-import { buildFunctionsSidebar } from "@src/utils/functions-sidebar-utils";
-export const { sidebarGroups, pages } = buildFunctionsSidebar("/placeholders/functions/types/");
-
+import { buildFunctionsSidebar, getFunctionPages } from "@src/utils/functions-sidebar-utils";
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
 import CodeVar from "@src/components/CodeVar.astro";
+import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTranslationSystem";
+
+const pages = getFunctionPages("/placeholders/functions/types/");
+
+const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(key as I18nKeys));
 ---
 
 <StarlightPage
    frontmatter={{
-      title: "Funções",
-      description: "Lista de todas as funções disponíveis.",
+      title: Astro.locals?.t("placeholder.function.title" as I18nKeys),
+      description: Astro.locals?.t("placeholder.function.description" as I18nKeys),
       pageLink: {
-         label: "Ir para categorias",
+         label: Astro.locals?.t("placeholder.function.pagelink.categories" as I18nKeys),
          href: "/placeholders/functions/",
       },
       next: {
          link: "/placeholders/functions/types/debug/Log/",
-         label: "Log",
+         label: pages[0].label,
       },
    }}
    sidebar={[
       {
-         label: "Functions",
+         label: Astro.locals?.t("placeholder.function.title" as I18nKeys),
          items: sidebarGroups,
       },
    ]}

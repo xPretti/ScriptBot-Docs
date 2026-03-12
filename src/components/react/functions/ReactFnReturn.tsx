@@ -2,7 +2,7 @@ import { BASE_URL } from "@src/configs/config";
 import styles from "./ReactFnReturn.module.css";
 import { getUrl } from "@src/utils/url-utils";
 import ReactFnParamType from "./ReactFnParamType";
-import type { FunctionType } from "@src/@types/functions-type";
+import type { FunctionType } from "@src/types/functions-type";
 
 interface Props {
    title: string;

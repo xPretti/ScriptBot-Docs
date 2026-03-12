@@ -1,7 +1,7 @@
 import { BASE_URL } from "@src/configs/config";
 import styles from "./ReactFnParams.module.css";
 
-import type { FunctionParameter } from "@src/@types/functions-type";
+import type { FunctionParameter } from "@src/types/functions-type";
 import ReactFnParamType from "./ReactFnParamType";
 
 export default function ReactFnParams({ params }: { params: FunctionParameter[] }) {

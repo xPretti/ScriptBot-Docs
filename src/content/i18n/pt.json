@@ -1,0 +1,21 @@
+{
+   "placeholder.function.title": "Funções",
+   "placeholder.function.description": "Lista de todas as funções disponíveis.",
+   "placeholder.function.pagelink.categories": "Ir para categorias",
+
+   "placeholder.function.indicator": "Indicadores",
+   "placeholder.function.uservariable": "Variáveis de usuário",
+   "placeholder.function.candle": "Candles",
+   "placeholder.function.debug": "Depuradores",
+   "placeholder.function.math": "Matemáticas",
+   "placeholder.function.account": "Contas",
+   "placeholder.function.converter": "Conversores",
+   "placeholder.function.market": "Mercados",
+   "placeholder.function.time": "Tempos",
+   "placeholder.function.opentrade": "Negociações abertas",
+   "placeholder.function.closetrade": "Negociações fechadas",
+   "placeholder.function.trade": "Negociações",
+   "placeholder.function.globalvariable": "Variáveis globais",
+   "placeholder.function.basicobjects": "Objetos básicos",
+   "placeholder.function.logics": "Lógicas"
+}

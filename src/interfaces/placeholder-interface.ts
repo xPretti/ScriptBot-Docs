@@ -1,8 +1,5 @@
-import type {
-   FunctionParameter,
-   FunctionReturns,
-} from "@src/@types/functions-type";
-import type { PlaceholderDescription } from "@src/@types/placeholder-type";
+import type { FunctionParameter, FunctionReturns } from "@src/types/functions-type";
+import type { PlaceholderDescription } from "@src/types/placeholder-type";
 import type { ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/variable-enums";
 import type { ENUM_FUNCTION_CATEGORY_TYPE } from "src/enums/function-enums";
 

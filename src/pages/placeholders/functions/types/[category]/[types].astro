@@ -1,6 +1,10 @@
 ---
-import { buildFunctionsSidebar } from "@src/utils/functions-sidebar-utils";
-export const { sidebarGroups, pages } = buildFunctionsSidebar("/placeholders/functions/types/");
+import { buildFunctionsSidebar, getFunctionPages } from "@src/utils/functions-sidebar-utils";
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+import ReactFnPage from "@src/components/react/functions/ReactFnPage";
+import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTranslationSystem";
+
+export const pages = getFunctionPages("/placeholders/functions/types/");
 
 export async function getStaticPaths() {
    return pages.map((page) => ({
@@ -17,15 +21,14 @@ export async function getStaticPaths() {
 const { category, types } = Astro.params;
 const { desc } = Astro.props;
 
-import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
-import ReactFnPage from "@src/components/react/functions/ReactFnPage";
+const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(key as I18nKeys));
 ---
 
 <StarlightPage
    frontmatter={{ title: `${types}`, description: desc }}
    sidebar={[
       {
-         label: "Functions",
+         label: Astro.locals?.t("placeholder.function.title" as I18nKeys),
          items: sidebarGroups,
       },
    ]}

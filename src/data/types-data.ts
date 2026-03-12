@@ -1,4 +1,4 @@
-import type { TypesType } from "@src/@types/types-type";
+import type { TypesType } from "@src/types/types-type";
 
 export const TYPES_MAPPING: Map<string, TypesType> = new Map([
    ["void", { desc: "Representa um valor vazio, sem retorno." }],

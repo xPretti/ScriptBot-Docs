@@ -1,6 +1,6 @@
 import { getUrl } from "@src/utils/url-utils";
 import styles from "./ReactFnParamType.module.css";
-import type { FunctionType } from "@src/@types/functions-type";
+import type { FunctionType } from "@src/types/functions-type";
 import ReactTooltip from "../tooltip/ReactTooltip";
 import { TYPES_MAPPING } from "@src/data/types-data";
 
