@@ -1,9 +1,7 @@
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
-import styles from "./ReactFnPage.module.css";
-
 import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
-import ReactFnContent from "./ReactFnContent";
+import PlaceholderContent from "../PlaceholderContent";
 
 export default function ReactFnPage({ fnCategory, fnName }: { fnCategory: ENUM_FUNCTION_CATEGORY_TYPE | string; fnName: string }) {
    const fn = FUNCTION_MAPPING.get(fnCategory as ENUM_FUNCTION_CATEGORY_TYPE)?.get(fnName);
@@ -14,7 +12,7 @@ export default function ReactFnPage({ fnCategory, fnName }: { fnCategory: ENUM_F
 
    return (
       <>
-         <ReactFnContent fn={fn} />
+         <PlaceholderContent item={fn} />
       </>
    );
 }

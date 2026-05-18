@@ -1,0 +1,11 @@
+.content p,
+.content h3,
+.content div {
+   margin: 0;
+}
+.content {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+}

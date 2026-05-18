@@ -1,10 +1,9 @@
-import { BASE_URL } from "@src/configs/config";
-import styles from "./ReactFnParams.module.css";
+import PlaceholderParam from "./PlaceholderParam";
+import styles from "./PlaceholderParams.module.css";
 
 import type { FunctionParameter } from "@src/types/functions-type";
-import ReactFnParamType from "./ReactFnParamType";
 
-export default function ReactFnParams({ params }: { params: FunctionParameter[] }) {
+export default function PlaceholderParams({ params }: { params: FunctionParameter[] }) {
    if (!params) return null;
 
    return (
@@ -16,7 +15,7 @@ export default function ReactFnParams({ params }: { params: FunctionParameter[] 
                   className={styles.param}
                >
                   <td>
-                     <ReactFnParamType param={param.type} />
+                     <PlaceholderParam param={param.type} />
                   </td>
                   <td className={styles.variable}>{param.value ? <span> {param.name} </span> : <span> {param.name}; </span>}</td>
 

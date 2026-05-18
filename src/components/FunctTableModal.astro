@@ -2,7 +2,7 @@
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import CodeVar from "@components/CodeVar.astro";
 import { Eye } from "lucide-react";
-import ReactFnModal from "./react/functions/ReactFnModal";
+import PlaceholderModal from "./react/placeholders/modal/PlaceholderModal";
 
 const { category } = Astro.props;
 
@@ -40,7 +40,7 @@ const containsAliases =
                   </td>
                   {containsAliases && <td class="aliases">{fn.aliases && <CodeVar copy={fn.aliases}>{fn.aliases}</CodeVar>}</td>}
                   <td>
-                     <ReactFnModal
+                     <PlaceholderModal
                         client:visible
                         fnCategory={fn.category}
                         fnName={fn.name}
@@ -69,7 +69,7 @@ const containsAliases =
                               </div>
                            </div>
                         </div>
-                     </ReactFnModal>
+                     </PlaceholderModal>
                   </td>
                </tr>
             ))}

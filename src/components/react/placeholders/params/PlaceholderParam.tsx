@@ -1,14 +1,14 @@
 import { getUrl } from "@src/utils/url-utils";
-import styles from "./ReactFnParamType.module.css";
+import styles from "./PlaceholderParam.module.css";
 import type { FunctionType } from "@src/types/functions-type";
-import ReactTooltip from "../tooltip/ReactTooltip";
+import ReactTooltip from "../../tooltip/ReactTooltip";
 import { TYPES_MAPPING } from "@src/data/types-data";
 
-interface ReactFnParamTypeProps {
+interface PlaceholderParamProps {
    param: FunctionType;
 }
 
-export default function ReactFnParamType({ param }: ReactFnParamTypeProps) {
+export default function PlaceholderParam({ param }: PlaceholderParamProps) {
    const getTypeLink = (p: string | undefined) => {
       return p ? getUrl(p) : getUrl("/references/types");
    };

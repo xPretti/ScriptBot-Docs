@@ -1,16 +1,24 @@
 import { useState } from "react";
-import ReactModal from "../ReactModal";
+import ReactModal from "./ReactModal";
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
-import styles from "./ReactFnModal.module.css";
+import styles from "./PlaceholderModal.module.css";
 
 import { X } from "lucide-react";
 import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
-import ReactFnContent from "./ReactFnContent";
 import { BASE_URL } from "@src/configs/config";
 import { getUrl } from "@src/utils/url-utils";
+import PlaceholderContent from "../PlaceholderContent";
 
-export default function ReactFnModal({ fnCategory, fnName, children }: { fnCategory: ENUM_FUNCTION_CATEGORY_TYPE; fnName: string; children: React.ReactNode }) {
+export default function PlaceholderModal({
+   fnCategory,
+   fnName,
+   children,
+}: {
+   fnCategory: ENUM_FUNCTION_CATEGORY_TYPE;
+   fnName: string;
+   children: React.ReactNode;
+}) {
    const [isOpen, setIsOpen] = useState(false);
 
    const fn = FUNCTION_MAPPING.get(fnCategory)?.get(fnName);
@@ -47,7 +55,7 @@ export default function ReactFnModal({ fnCategory, fnName, children }: { fnCateg
                </div>
                <div className={styles.body}>
                   <div className={styles.content}>
-                     <ReactFnContent fn={fn} />
+                     <PlaceholderContent item={fn} />
                   </div>
                </div>
                <div className={styles.footer}>

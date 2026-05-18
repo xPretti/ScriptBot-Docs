@@ -1,7 +1,5 @@
-import { BASE_URL } from "@src/configs/config";
-import styles from "./ReactFnReturn.module.css";
-import { getUrl } from "@src/utils/url-utils";
-import ReactFnParamType from "./ReactFnParamType";
+import PlaceholderParam from "../params/PlaceholderParam";
+import styles from "./PlaceholderReturn.module.css";
 import type { FunctionType } from "@src/types/functions-type";
 
 interface Props {
@@ -10,7 +8,7 @@ interface Props {
    type?: FunctionType;
 }
 
-export default function ReactFnReturn({ title, message, type }: Props) {
+export default function PlaceholderReturn({ title, message, type }: Props) {
    if (!message) return null;
 
    return (
@@ -25,7 +23,7 @@ export default function ReactFnReturn({ title, message, type }: Props) {
                   {type && (
                      <div className={styles.typeContainer}>
                         <span>Retorno:</span>
-                        <ReactFnParamType param={type} />
+                        <PlaceholderParam param={type} />
                      </div>
                   )}
                </div>

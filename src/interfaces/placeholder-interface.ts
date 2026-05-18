@@ -11,8 +11,8 @@ export interface PlaceholderInterface {
 
 export interface FunctionPlaceholderInterface extends PlaceholderInterface {
    category: ENUM_FUNCTION_CATEGORY_TYPE;
-   parameters: FunctionParameter[];
-   examples: string[];
+   parameters?: FunctionParameter[];
+   examples?: string[];
    returns?: FunctionReturns;
 }
 
