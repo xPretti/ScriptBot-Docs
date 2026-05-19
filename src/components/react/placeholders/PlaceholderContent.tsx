@@ -7,14 +7,14 @@ import ParametersSection from "./sections/ParametersSection";
 import ReturnsSection from "./sections/ReturnsSection";
 import VersionSection from "./sections/VersionSection";
 
-import type { FunctionPlaceholderInterface } from "@src/interfaces/placeholder-interface";
+import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
 
 interface Props {
-   item: FunctionPlaceholderInterface;
-   type?: "function" | "variable";
+   item: PlaceholderInterface;
+   type: "function" | "variable";
 }
 
-export default function PlaceholderContent({ item, type = "function" }: Props) {
+export default function PlaceholderContent({ item, type }: Props) {
    if (!item) return null;
 
    return (

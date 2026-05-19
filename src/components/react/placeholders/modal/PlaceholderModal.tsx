@@ -5,26 +5,30 @@ import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import styles from "./PlaceholderModal.module.css";
 
 import { X } from "lucide-react";
-import type { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
-import { BASE_URL } from "@src/configs/config";
+import type { ENUM_FUNCTION_CATEGORY_TYPE, ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { getUrl } from "@src/utils/url-utils";
 import PlaceholderContent from "../PlaceholderContent";
+import { VARIABLE_MAPPING } from "@src/data/variables-data";
 
 export default function PlaceholderModal({
-   fnCategory,
-   fnName,
+   isFunction,
+   category,
+   name,
    children,
 }: {
-   fnCategory: ENUM_FUNCTION_CATEGORY_TYPE;
-   fnName: string;
+   isFunction: boolean;
+   category: string;
+   name: string;
    children: React.ReactNode;
 }) {
    const [isOpen, setIsOpen] = useState(false);
 
-   const fn = FUNCTION_MAPPING.get(fnCategory)?.get(fnName);
+   const fn = isFunction
+      ? FUNCTION_MAPPING.get(category as ENUM_FUNCTION_CATEGORY_TYPE)?.get(name)
+      : VARIABLE_MAPPING.get(category as ENUM_VARIABLE_CATEGORY_TYPE)?.get(name);
 
    if (!fn) {
-      return <div>Função não encontrada ${fnName}</div>;
+      return <div>Função não encontrada ${name}</div>;
    }
 
    return (
@@ -55,12 +59,15 @@ export default function PlaceholderModal({
                </div>
                <div className={styles.body}>
                   <div className={styles.content}>
-                     <PlaceholderContent item={fn} />
+                     <PlaceholderContent
+                        item={fn}
+                        type={isFunction ? "function" : "variable"}
+                     />
                   </div>
                </div>
                <div className={styles.footer}>
                   <a
-                     href={getUrl(`/placeholders/functions/types/${fnCategory}/${fnName}`)}
+                     href={getUrl(`/placeholders/functions/types/${category}/${name}`)}
                      className={styles.redirectBtn}
                   >
                      Página da função

@@ -6,7 +6,7 @@ pageLink:
 description: "Funções são blocos de instruções que executam ações e recebem parâmetros, permitindo criar regras e estratégias flexíveis e personalizadas."
 ---
 
-import FunctTableModal from "@components/FunctTableModal.astro";
+import PlaceholderTable from "@components/PlaceholderTable.astro";
 import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { Aside } from "@astrojs/starlight/components";
 
@@ -20,73 +20,109 @@ estratégias personalizadas.
 
 > Essas funções permitem executar comandos de depuração.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.DEBUG} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.DEBUG}
+/>
 
 ## Logicas \{#logics\}
 
 > Essas funções permitem executar lógicas que facilitam o desenvolvimento de expressões e fluxo de validações.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.LOGICS} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.LOGICS}
+/>
 
 ## Indicadores \{#indicators\}
 
 > Essas funções permitem acessar os valores dos buffers de um indicador, como preços, sinais, cores.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.INDICATOR} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.INDICATOR}
+/>
 
 ## Candles \{#candles\}
 
 > Essas funções permitem acessar os valores das velas, como preços de abertura, fechamento etc.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.CANDLE} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.CANDLE}
+/>
 
 ## Mercado \{#market\}
 
 > Essas funções fornecem dados de mercado semelhantes aos preços das velas, mas com escopo mais abrangente para representar diferentes aspectos do mercado.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.MARKET} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.MARKET}
+/>
 
 ## Matemática \{#math\}
 
 > Estas são funções matemáticas utilizadas para realizar operações numéricas, como comparação de valores, cálculo de casas decimais e geração de resultados baseados em probabilidade.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.MATH} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.MATH}
+/>
 
 ## Conta \{#account\}
 
 > Estas funções estão relacionadas aos dados da conta e permitem tanto recuperar quanto atualizar essas informações.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.ACCOUNT} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.ACCOUNT}
+/>
 
 ## Tempo \{#time\}
 
 > Estas funções auxiliam em operações relacionadas a datas e horários, como conversões, cálculos, formatações e retornos.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.TIME} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.TIME}
+/>
 
 ## Posições e Ordens abertas \{#open-trades\}
 
 > Estas funções permitem obter informações sobre posições e ordens abertas, como quantidades, preços, volumes, etc.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE}
+/>
 
 ## Posições fechadas \{#closed-trades\}
 
 > Estas funções permitem obter informações sobre posições fechadas, como quantidades, preços, volumes, etc.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE}
+/>
 
 ## Conversores \{#converters\}
 
 > Estas funções de conversão permitem transformar valores entre diversos formatos, como converter números positivos em negativos e transformar strings em datas, entre outras operações.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER}
+/>
 
 ## Variáveis do usuário \{#user-variables\}
 
 > Essas variáveis permitem que o usuário crie suas próprias variáveis personalizadas.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE}
+/>
 
 ## Variáveis globais \{#global-variables\}
 
@@ -94,16 +130,25 @@ estratégias personalizadas.
 > Lembre-se: por serem globais, qualquer programa pode alterar seus valores, o que pode gerar conflitos.  
 > As variáveis permanecem disponíveis por até quatro semanas; caso não sejam utilizadas nesse período, o sistema as removerá automaticamente.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE}
+/>
 
 ## Trades \{#trades\}
 
 > Estas funções permitem abrir, gerenciar e fechar posições de trade, incluindo ordens.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.TRADE} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.TRADE}
+/>
 
 ## Objetos básicos \{#basic-objects\}
 
 > Estas funções permitem criar e manipular objetos básicos do MetaTrader 5.
 
-<FunctTableModal category={ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS} />
+<PlaceholderTable
+   type="function"
+   category={ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS}
+/>

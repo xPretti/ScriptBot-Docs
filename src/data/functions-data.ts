@@ -1,7 +1,7 @@
 import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
-import type { FunctionPlaceholderInterface } from "../interfaces/placeholder-interface";
+import type { PlaceholderInterface } from "../interfaces/placeholder-interface";
 
-export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, FunctionPlaceholderInterface>> = new Map();
+export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, PlaceholderInterface>> = new Map();
 
 [
    // DEBUGS
@@ -8948,10 +8948,10 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Func
          },
       },
    },
-].forEach((fn: FunctionPlaceholderInterface) => {
-   const existing = FUNCTION_MAPPING.get(fn.category);
+].forEach((fn: PlaceholderInterface) => {
+   const existing = FUNCTION_MAPPING.get(fn.category as ENUM_FUNCTION_CATEGORY_TYPE);
    if (!existing) {
-      FUNCTION_MAPPING.set(fn.category, new Map([[fn.name, fn]]));
+      FUNCTION_MAPPING.set(fn.category as ENUM_FUNCTION_CATEGORY_TYPE, new Map([[fn.name, fn]]));
    } else {
       existing.set(fn.name, fn);
    }

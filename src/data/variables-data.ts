@@ -1,7 +1,7 @@
 import { ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
-import type { VariablePlaceholderInterface } from "@src/interfaces/placeholder-interface";
+import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
 
-export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, VariablePlaceholderInterface>> = new Map();
+export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, PlaceholderInterface>> = new Map();
 
 [
    // Local Position
@@ -1074,10 +1074,10 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Vari
          simple: "Retorna o preço do último sinal de venda confirmado.",
       },
    },
-].forEach((fn: VariablePlaceholderInterface) => {
-   const existing = VARIABLE_MAPPING.get(fn.category);
+].forEach((fn: PlaceholderInterface) => {
+   const existing = VARIABLE_MAPPING.get(fn.category as ENUM_VARIABLE_CATEGORY_TYPE);
    if (!existing) {
-      VARIABLE_MAPPING.set(fn.category, new Map([[fn.name, fn]]));
+      VARIABLE_MAPPING.set(fn.category as ENUM_VARIABLE_CATEGORY_TYPE, new Map([[fn.name, fn]]));
    } else {
       existing.set(fn.name, fn);
    }

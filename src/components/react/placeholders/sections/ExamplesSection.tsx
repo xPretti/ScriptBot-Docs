@@ -1,14 +1,14 @@
-import type { FunctionPlaceholderInterface } from "@src/interfaces/placeholder-interface";
+import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
 
 import Section from "../../shared/Section";
 import ReactCode from "../../shared/ReactCode";
 import { getFunctionExample } from "@src/utils/functions-comp-utils";
 
 interface Props {
-   item: FunctionPlaceholderInterface;
+   item: PlaceholderInterface;
 }
 
-function buildExamples(fn: FunctionPlaceholderInterface) {
+function buildExamples(fn: PlaceholderInterface) {
    let result = "//Default example:\n" + getFunctionExample(fn);
 
    if (fn.aliases) {

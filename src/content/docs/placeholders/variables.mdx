@@ -4,7 +4,7 @@ description: "Variáveis são identificadores que armazenam dados usados em oper
 ---
 
 import CodeVar from "@components/CodeVar.astro";
-import VarTable from "@components/VarTable.astro";
+import PlaceholderTable from "@components/PlaceholderTable.astro";
 import { ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { Aside } from "@astrojs/starlight/components";
 import BaseLink from "@components/BaseLink.astro";
@@ -19,7 +19,7 @@ comportamento.
 > Essas variáveis são definidas previamente e utilizadas como parâmetros fixos
 > durante a execução de gatilhos ou eventos de posição.
 
-<VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION} />
+<PlaceholderTable category={ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION} />
 
 {/* prettier-ignore */}
 <Aside type="tip">
@@ -39,34 +39,34 @@ comportamento.
 > Essas variáveis funcionam como parâmetros locais e imutáveis, configurados
 > previamente à ativação de um gatilho.
 
-<VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER} />
+<PlaceholderTable category={ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER} />
 
 ## Conta: \{#account\}
 
 > Essas variáveis contêm dados da conta, incluindo saldo disponível, margens
 > operacionais, limites de operação e informações da corretora.
 
-<VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT} />
+<PlaceholderTable category={ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT} />
 
 ## Mercado \{#market\}
 
 > Essas variáveis contêm dados do mercado, incluindo preços de entrada, ativos
 > envolvidos e horários de negociação.
 
-<VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.MARKET} />
+<PlaceholderTable category={ENUM_VARIABLE_CATEGORY_TYPE.MARKET} />
 
 ## Posições e Ordens abertas \{#open-trades\}
 
 > Essas variáveis contém os dados de ordens e posições que ainda não foram
 > encerradas, permitindo o acompanhamento em tempo real.
 
-<VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE} />
+<PlaceholderTable category={ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE} />
 
 ## Posições e Ordens fechadas \{#closed-trades\}
 
 > Essas variáveis contém os dados de ordens e posições que foram encerradas.
 
-<VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE} />
+<PlaceholderTable category={ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE} />
 
 {/* prettier-ignore */}
 <Aside type="tip">
@@ -89,4 +89,4 @@ comportamento.
 > Essas variáveis guardam as informações dos sinais, que são definidos com base
 > nos gatilhos de entrada e confirmação.
 
-<VarTable category={ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL} />
+<PlaceholderTable category={ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL} />

@@ -3,10 +3,13 @@ import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import CodeVar from "@components/CodeVar.astro";
 import { Eye } from "lucide-react";
 import PlaceholderModal from "./react/placeholders/modal/PlaceholderModal";
+import { VARIABLE_MAPPING } from "@src/data/variables-data";
 
-const { category } = Astro.props;
+const { type, category } = Astro.props;
 
-const elements = FUNCTION_MAPPING.get(category) && Array.from(FUNCTION_MAPPING.get(category)!.values());
+const MAPPING = type === "function" ? FUNCTION_MAPPING : VARIABLE_MAPPING;
+
+const elements = MAPPING.get(category) && Array.from(MAPPING.get(category)!.values());
 
 const containsAliases =
    elements &&
@@ -20,7 +23,7 @@ const containsAliases =
       <table>
          <thead>
             <tr>
-               <th>FUNÇÕES</th>
+               <th>PLACEHOLDERS</th>
                {containsAliases && <th class="aliases">ALIASES</th>}
                <th>RETORNOS</th>
             </tr>
@@ -42,8 +45,9 @@ const containsAliases =
                   <td>
                      <PlaceholderModal
                         client:visible
-                        fnCategory={fn.category}
-                        fnName={fn.name}
+                        isFunction={type === "function"}
+                        category={fn.category}
+                        name={fn.name}
                      >
                         <div class="description">
                            <p

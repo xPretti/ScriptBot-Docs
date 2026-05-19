@@ -1,11 +1,11 @@
-import type { FunctionPlaceholderInterface } from "@src/interfaces/placeholder-interface";
+import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
 
 import styles from "./InfoSection.module.css";
 import Section from "../../shared/Section";
 import CopyText from "../../shared/CopyText";
 
 interface Props {
-   item: FunctionPlaceholderInterface;
+   item: PlaceholderInterface;
    type: "function" | "variable";
 }
 
