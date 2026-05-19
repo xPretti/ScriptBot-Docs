@@ -1,31 +1,31 @@
 ---
-import { buildFunctionsSidebar, getFunctionPages } from "@src/utils/functions-sidebar-utils";
+import { buildFunctionsSidebar, getFunctionPages, getVariablePages } from "@src/utils/functions-sidebar-utils";
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
 import CodeVar from "@src/components/CodeVar.astro";
 import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTranslationSystem";
 import { pathHasLocale } from "astro:i18n";
 
-const pages = getFunctionPages("/placeholders/functions/types/");
+const pages = getVariablePages("/placeholders/variables/types/");
 
-const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.function." + key) as I18nKeys));
+const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.variable." + key) as I18nKeys));
 ---
 
 <StarlightPage
    frontmatter={{
-      title: Astro.locals?.t("placeholder.function.title" as I18nKeys),
-      description: Astro.locals?.t("placeholder.function.description" as I18nKeys),
+      title: Astro.locals?.t("placeholder.variable.title" as I18nKeys),
+      description: Astro.locals?.t("placeholder.variable.description" as I18nKeys),
       pageLink: {
-         label: Astro.locals?.t("placeholder.function.pagelink.categories" as I18nKeys),
-         href: "/placeholders/functions/",
+         label: Astro.locals?.t("placeholder.variable.pagelink.categories" as I18nKeys),
+         href: "/placeholders/variables/",
       },
       next: {
-         link: "/placeholders/functions/types/debug/Log/",
+         link: "/placeholders/variables/types/localposition/_TICKET",
          label: pages[0].label,
       },
    }}
    sidebar={[
       {
-         label: Astro.locals?.t("placeholder.function.title" as I18nKeys),
+         label: Astro.locals?.t("placeholder.variable.title" as I18nKeys),
          items: sidebarGroups,
       },
    ]}

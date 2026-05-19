@@ -1,10 +1,10 @@
 ---
-import { buildFunctionsSidebar, getFunctionPages } from "@src/utils/functions-sidebar-utils";
+import { buildFunctionsSidebar, getFunctionPages, getVariablePages } from "@src/utils/functions-sidebar-utils";
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
 import PlaceholderPage from "@src/components/react/placeholders/page/PlaceholderPage";
 import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTranslationSystem";
 
-export const pages = getFunctionPages("/placeholders/functions/types/");
+export const pages = getVariablePages("/placeholders/variables/types/");
 
 export async function getStaticPaths() {
    return pages.map((page) => ({
@@ -21,21 +21,21 @@ export async function getStaticPaths() {
 const { category, types } = Astro.params;
 const { desc } = Astro.props;
 
-const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.function." + key) as I18nKeys));
+const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.variable." + key) as I18nKeys));
 ---
 
 <StarlightPage
    frontmatter={{ title: `${types}`, description: desc }}
    sidebar={[
       {
-         label: Astro.locals?.t("placeholder.function.title" as I18nKeys),
+         label: Astro.locals?.t("placeholder.variable.title" as I18nKeys),
          items: sidebarGroups,
       },
    ]}
 >
    <PlaceholderPage
       client:visible
-      type="function"
+      type="variable"
       category={category}
       name={types}
    />

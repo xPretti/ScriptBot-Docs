@@ -1,18 +1,31 @@
 import { version } from "os";
 import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
+import { VARIABLE_MAPPING } from "@src/data/variables-data";
 
 type TranslateFn = (key: string) => string;
 
-export type FunctionPage = {
+export type PlaceholderPage = {
    label: string;
    link: string;
-   category: ENUM_FUNCTION_CATEGORY_TYPE;
+   category: string;
    description: string;
    version?: string;
 };
 
-export function getFunctionPages(path: string): FunctionPage[] {
+export function getVariablePages(path: string): PlaceholderPage[] {
+   return Array.from(VARIABLE_MAPPING.entries()).flatMap(([categoryKey, functionsMap]) =>
+      Array.from(functionsMap.values()).map((fn) => ({
+         label: fn.name,
+         link: `${path}${categoryKey}/${fn.name}`,
+         category: fn.category,
+         description: fn.description.simple,
+         version: fn.version,
+      })),
+   );
+}
+
+export function getFunctionPages(path: string): PlaceholderPage[] {
    return Array.from(FUNCTION_MAPPING.entries()).flatMap(([categoryKey, functionsMap]) =>
       Array.from(functionsMap.values()).map((fn) => ({
          label: fn.name,
@@ -24,9 +37,9 @@ export function getFunctionPages(path: string): FunctionPage[] {
    );
 }
 
-export function buildFunctionsSidebar(pages: FunctionPage[], translation?: TranslateFn) {
-   const translateCategory = (category: ENUM_FUNCTION_CATEGORY_TYPE) => {
-      const key = `placeholder.function.${category}`;
+export function buildFunctionsSidebar(pages: PlaceholderPage[], translation?: TranslateFn) {
+   const translateCategory = (category: string) => {
+      const key = `${category}`;
       return translation ? translation(key) : key;
    };
 

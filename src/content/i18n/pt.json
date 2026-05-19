@@ -2,7 +2,6 @@
    "placeholder.function.title": "Funções",
    "placeholder.function.description": "Lista de todas as funções disponíveis.",
    "placeholder.function.pagelink.categories": "Ir para categorias",
-
    "placeholder.function.indicator": "Indicadores",
    "placeholder.function.uservariable": "Variáveis de usuário",
    "placeholder.function.candle": "Candles",
@@ -17,5 +16,16 @@
    "placeholder.function.trade": "Negociações",
    "placeholder.function.globalvariable": "Variáveis globais",
    "placeholder.function.basicobjects": "Objetos básicos",
-   "placeholder.function.logics": "Lógicas"
+   "placeholder.function.logics": "Lógicas",
+
+   "placeholder.variable.title": "Variáveis",
+   "placeholder.variable.description": "Lista de todas as variáveis disponíveis.",
+   "placeholder.variable.pagelink.categories": "Ir para categorias",
+   "placeholder.variable.localposition": "Parâmetros locais",
+   "placeholder.variable.localtrigger": "Parâmetros de gatilho",
+   "placeholder.variable.account": "Contas",
+   "placeholder.variable.market": "Mercados",
+   "placeholder.variable.opentrade": "Negociações abertas",
+   "placeholder.variable.closetrade": "Negociações fechadas",
+   "placeholder.variable.signal": "Sinais"
 }
