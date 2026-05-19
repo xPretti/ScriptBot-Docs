@@ -25,7 +25,14 @@ const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(
 ---
 
 <StarlightPage
-   frontmatter={{ title: `${types}`, description: desc }}
+   frontmatter={{
+      title: `${types}`,
+      description: desc,
+      pageLink: {
+         label: Astro.locals?.t("placeholder.variable.pagelink.categories" as I18nKeys),
+         href: "/placeholders/variables/",
+      },
+   }}
    sidebar={[
       {
          label: Astro.locals?.t("placeholder.variable.title" as I18nKeys),

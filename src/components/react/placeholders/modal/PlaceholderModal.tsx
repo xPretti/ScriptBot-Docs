@@ -11,24 +11,32 @@ import PlaceholderContent from "../PlaceholderContent";
 import { VARIABLE_MAPPING } from "@src/data/variables-data";
 
 export default function PlaceholderModal({
-   isFunction,
+   type,
    category,
    name,
    children,
 }: {
-   isFunction: boolean;
+   type: "function" | "variable";
    category: string;
    name: string;
    children: React.ReactNode;
 }) {
    const [isOpen, setIsOpen] = useState(false);
 
-   const fn = isFunction
-      ? FUNCTION_MAPPING.get(category as ENUM_FUNCTION_CATEGORY_TYPE)?.get(name)
-      : VARIABLE_MAPPING.get(category as ENUM_VARIABLE_CATEGORY_TYPE)?.get(name);
+   const typeText = type === "function" ? "Função" : "Variável";
+   const url = type === "function" ? "/placeholders/functions/types" : "/placeholders/variables/types";
+
+   const fn =
+      type === "function"
+         ? FUNCTION_MAPPING.get(category as ENUM_FUNCTION_CATEGORY_TYPE)?.get(name)
+         : VARIABLE_MAPPING.get(category as ENUM_VARIABLE_CATEGORY_TYPE)?.get(name);
 
    if (!fn) {
-      return <div>Função não encontrada ${name}</div>;
+      return (
+         <div>
+            {typeText} não encontrada ${name}
+         </div>
+      );
    }
 
    return (
@@ -61,16 +69,16 @@ export default function PlaceholderModal({
                   <div className={styles.content}>
                      <PlaceholderContent
                         item={fn}
-                        type={isFunction ? "function" : "variable"}
+                        type={type}
                      />
                   </div>
                </div>
                <div className={styles.footer}>
                   <a
-                     href={getUrl(`/placeholders/functions/types/${category}/${name}`)}
+                     href={getUrl(`${url}/${category}/${name}`)}
                      className={styles.redirectBtn}
                   >
-                     Página da função
+                     Página da {typeText.toLowerCase()}
                   </a>
                </div>
             </div>
