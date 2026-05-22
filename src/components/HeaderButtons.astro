@@ -1,13 +1,18 @@
 ---
-
+import { ArrowDownToLine } from "lucide-react";
 ---
 
 <div class="header-buttons">
    <a
       class="downloads"
       href="/resources/downloads"
-      >Download</a
    >
+      Download
+      <ArrowDownToLine
+         strokeWidth={2}
+         size={22}
+      />
+   </a>
 </div>
 
 <style>
@@ -18,13 +23,15 @@
    }
 
    .downloads {
-      color: #ffff;
+      color: var(--sl-color-white);
       text-decoration: none;
       font-weight: 400;
-      background-color: var(--sl-color-accent);
-      border: 1px solid var(--sl-color-accent);
+      border: 1px solid var(--sl-color-white);
       padding: 0 0.5rem;
       border-radius: 0.4rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
    }
 
    .downloads:hover {

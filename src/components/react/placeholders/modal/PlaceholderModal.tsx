@@ -4,7 +4,7 @@ import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
 import styles from "./PlaceholderModal.module.css";
 
-import { X } from "lucide-react";
+import { SquareArrowOutUpRight, X } from "lucide-react";
 import type { ENUM_FUNCTION_CATEGORY_TYPE, ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { getUrl } from "@src/utils/url-utils";
 import PlaceholderContent from "../PlaceholderContent";
@@ -39,6 +39,8 @@ export default function PlaceholderModal({
       );
    }
 
+   const typeName = type === "function" ? fn.name + "[...]" : fn.name;
+
    return (
       <>
          <div
@@ -55,7 +57,7 @@ export default function PlaceholderModal({
                <div className={styles.header}>
                   <div className={styles.headerTop}>
                      <div className={styles.headerTitle}>
-                        <h1>{fn.name}[...]</h1>
+                        <h2>{typeName}</h2>
                      </div>
                      <div className={styles.headerButtons}>
                         <X
@@ -79,6 +81,7 @@ export default function PlaceholderModal({
                      className={styles.redirectBtn}
                   >
                      Página da {typeText.toLowerCase()}
+                     <SquareArrowOutUpRight height={22} />
                   </a>
                </div>
             </div>

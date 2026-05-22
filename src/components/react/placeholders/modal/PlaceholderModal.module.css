@@ -143,17 +143,18 @@
 .redirectBtn {
    /* color: var(--sl-color-gray-1); */
    color: #ffffff;
-   background-color: var(--sl-color-gray-4);
    cursor: pointer;
    padding: 2px 15px;
    border-radius: 5px;
    text-decoration: none;
    font-weight: 500;
+   display: inline-flex;
+   align-items: center;
+   gap: 5px;
 }
 
 .redirectBtn:hover {
-   color: #ffffff;
-   background-color: var(--sl-color-accent-high);
+   color: var(--sl-color-accent-high);
 }
 
 @media (max-width: 800px) {

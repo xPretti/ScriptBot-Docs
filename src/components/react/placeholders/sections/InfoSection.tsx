@@ -15,16 +15,16 @@ export default function InfoSection({ item, type }: Props) {
    return (
       <Section title={typeText}>
          <div className={styles.info}>
-            <p>
-               Nome:{" "}
+            <p className={styles.name}>
+               <span>Nome:</span>
                <CopyText text={item.name}>
                   <span>{item.name}</span>
                </CopyText>
             </p>
 
             {!!item.aliases && (
-               <p>
-                  Aliases:{" "}
+               <p className={styles.name}>
+                  <span>Alias:</span>
                   <CopyText text={item.aliases}>
                      <span>{item.aliases}</span>
                   </CopyText>

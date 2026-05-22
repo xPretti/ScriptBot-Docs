@@ -5,10 +5,17 @@ sidebar:
 description: "Esta página apresenta a lista de indicadores disponíveis no ScriptBot, incluindo os indicadores internos fornecidos pela plataforma MetaTrader 5."
 ---
 
+import { Aside } from "@astrojs/starlight/components";
 import CodeVar from "@components/CodeVar.astro";
 import Indicator from "@components/Indicator.astro";
+import BaseLink from "@components/BaseLink.astro";
 
 Nesta página, você encontrará a lista de indicadores disponíveis no ScriptBot. Ela inclui indicadores internos fornecidos pela própria plataforma MetaTrader 5.
+
+<Aside>
+   Para aprender a instalar um indicador ou obter informações sobre os parametros de um indicador visite a
+   <BaseLink href="/architecture/indicators">página de indicadores</BaseLink>.
+</Aside>
 
 ## Accelerator Oscillator
 
