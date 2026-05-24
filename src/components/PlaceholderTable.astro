@@ -33,12 +33,12 @@ const containsAliases =
                <tr>
                   <td>
                      <div class="name-container">
+                        <CodeVar copy={fn.name}>{fn.name}</CodeVar>
                         {fn.aliases && (
                            <div class="aliases-mobile">
                               <CodeVar copy={fn.aliases}>{fn.aliases}</CodeVar>
                            </div>
                         )}
-                        <CodeVar copy={fn.name}>{fn.name}</CodeVar>
                      </div>
                   </td>
                   {containsAliases && <td class="aliases">{fn.aliases && <CodeVar copy={fn.aliases}>{fn.aliases}</CodeVar>}</td>}
@@ -139,6 +139,7 @@ const containsAliases =
       }
       .aliases-mobile {
          display: block;
+         margin-top: 5px;
       }
    }
 
