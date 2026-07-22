@@ -28,9 +28,11 @@ export default function PlaceholderContent({ item, type }: Props) {
             type={type}
          />
 
-         <div className={styles.parametersContainer}>
-            <ParametersSection params={item.parameters} />
-         </div>
+         {item?.parameters?.length && (
+            <div className={styles.parametersContainer}>
+               <ParametersSection params={item.parameters} />
+            </div>
+         )}
 
          <ExamplesSection item={item} />
 
