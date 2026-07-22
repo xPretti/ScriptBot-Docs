@@ -11,6 +11,9 @@ import starlightScrollToTop from "starlight-scroll-to-top";
 import react from "@astrojs/react";
 
 export default defineConfig({
+   experimental: {
+      contentIntellisense: true,
+   },
    markdown: {
       rehypePlugins: [[rehypeHeadingIds, { headingIdCompat: true }]],
       remarkPlugins: [remarkCustomHeaderId],

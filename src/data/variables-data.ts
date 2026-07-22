@@ -4,6 +4,65 @@ import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface
 export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, PlaceholderInterface>> = new Map();
 
 [
+   // OPERADORES
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.OPERATOR,
+      name: "TRUE",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor booleano verdadeiro.",
+         full: "Representa uma condição logicamente verdadeira (TRUE ou 1), utilizada para validações e comparações em regras de negociação.",
+      },
+      returns: {
+         success: {
+            message: "Retorna o valor lógico true.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Não se aplica.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.OPERATOR,
+      name: "FALSE",
+      aliases: "",
+      description: {
+         simple: "Retorna o valor booleano falso.",
+         full: "Representa uma condição logicamente falsa (FALSE ou 0), utilizada para negar verificações ou indicar falha na validação de regras.",
+      },
+      returns: {
+         success: {
+            message: "Retorna o valor lógico false.",
+            type: { type: "bool" },
+         },
+         error: {
+            message: "Não se aplica.",
+            type: { type: "bool" },
+         },
+      },
+   },
+   {
+      category: ENUM_VARIABLE_CATEGORY_TYPE.OPERATOR,
+      name: "EMPTY",
+      aliases: "",
+      version: "2.25",
+      description: {
+         simple: "Representa o valor vazio de um indicador no MT5.",
+         full: "Indica a ausência de valor em um indicador. No MetaTrader 5, essa constante é equivalente ao DOUBLE_MAX (1.7976931348623158e+308), utilizada para sinalizar buffers não preenchidos.",
+      },
+      returns: {
+         success: {
+            message: "Retorna o valor constante de ausência de dado (DOUBLE_MAX).",
+            type: { type: "double" },
+         },
+         error: {
+            message: "Não se aplica.",
+            type: { type: "double" },
+         },
+      },
+   },
    // Local Position
    {
       category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,

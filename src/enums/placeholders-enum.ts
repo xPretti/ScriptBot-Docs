@@ -26,6 +26,7 @@ export const ENUM_VARIABLE_CATEGORY_TYPE = {
    OPEN_TRADE: "opentrade",
    CLOSE_TRADE: "closetrade",
    SIGNAL: "signal",
+   OPERATOR: "operator",
 } as const;
 
 export type ENUM_VARIABLE_CATEGORY_TYPE = (typeof ENUM_VARIABLE_CATEGORY_TYPE)[keyof typeof ENUM_VARIABLE_CATEGORY_TYPE];

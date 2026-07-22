@@ -27,5 +27,6 @@
    "placeholder.variable.market": "Mercados",
    "placeholder.variable.opentrade": "Negociações abertas",
    "placeholder.variable.closetrade": "Negociações fechadas",
-   "placeholder.variable.signal": "Sinais"
+   "placeholder.variable.signal": "Sinais",
+   "placeholder.variable.operator": "Operadores"
 }
