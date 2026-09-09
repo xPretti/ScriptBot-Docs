@@ -142,7 +142,7 @@
 
 .redirectBtn {
    /* color: var(--sl-color-gray-1); */
-   color: #ffffff;
+   color: var(--sl-color-white);
    cursor: pointer;
    padding: 2px 15px;
    border-radius: 5px;
