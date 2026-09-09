@@ -7,6 +7,7 @@ type TranslateFn = (key: string) => string;
 
 export type PlaceholderPage = {
    label: string;
+   aliases?: string;
    link: string;
    category: string;
    description: string;
@@ -17,6 +18,7 @@ export function getVariablePages(path: string): PlaceholderPage[] {
    return Array.from(VARIABLE_MAPPING.entries()).flatMap(([categoryKey, functionsMap]) =>
       Array.from(functionsMap.values()).map((fn) => ({
          label: fn.name,
+         aliases: fn.aliases,
          link: `${path}${categoryKey}/${fn.name}`,
          category: fn.category,
          description: fn.description.simple,
@@ -29,6 +31,7 @@ export function getFunctionPages(path: string): PlaceholderPage[] {
    return Array.from(FUNCTION_MAPPING.entries()).flatMap(([categoryKey, functionsMap]) =>
       Array.from(functionsMap.values()).map((fn) => ({
          label: fn.name,
+         aliases: fn.aliases,
          link: `${path}${categoryKey}/${fn.name}`,
          category: fn.category,
          description: fn.description.simple,

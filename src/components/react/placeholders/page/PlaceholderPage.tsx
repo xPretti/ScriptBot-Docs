@@ -1,7 +1,7 @@
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
 import type { ENUM_FUNCTION_CATEGORY_TYPE, ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
-import PlaceholderContent from "../PlaceholderContent";
+import PlaceholderContent from "../content/PlaceholderContent";
 import { VARIABLE_MAPPING } from "@src/data/variables-data";
 
 export default function PlaceholderPage({ type, category, name }: { type: "function" | "variable"; category: string; name: string }) {

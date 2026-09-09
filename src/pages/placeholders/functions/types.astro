@@ -34,6 +34,7 @@ const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(
    <table>
       <tr>
          <th>VARIÁVEIS</th>
+         <th>ALIASES</th>
          <th>RETORNOS</th>
       </tr>
       {
@@ -41,6 +42,9 @@ const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(
             <tr>
                <td>
                   <CodeVar>{p.label}</CodeVar>
+               </td>
+               <td>
+                  <CodeVar>{p.aliases}</CodeVar>
                </td>
                <td class="description">
                   <a

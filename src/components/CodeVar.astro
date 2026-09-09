@@ -7,9 +7,13 @@ const slotContent = await Astro.slots.render("default");
 const textToCopy = copy ?? slotContent?.trim();
 ---
 
-<CopyText
-   text={textToCopy}
-   client:load
->
-   <slot />
-</CopyText>
+{
+   textToCopy && (
+      <CopyText
+         text={textToCopy}
+         client:load
+      >
+         <slot />
+      </CopyText>
+   )
+}
