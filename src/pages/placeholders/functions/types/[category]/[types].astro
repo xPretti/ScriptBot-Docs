@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 const { category, types } = Astro.params;
 const { desc } = Astro.props;
 
-const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.function." + key) as I18nKeys));
+const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.category." + key) as I18nKeys));
 ---
 
 <StarlightPage

@@ -6,7 +6,7 @@ import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTrans
 
 const pages = getVariablePages("/placeholders/variables/types/");
 
-const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.variable." + key) as I18nKeys));
+const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.category." + key) as I18nKeys));
 ---
 
 <StarlightPage
