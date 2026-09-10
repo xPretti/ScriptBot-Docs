@@ -1,6 +1,6 @@
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 
-import type { ENUM_PLACEHOLDER_CATEGORY_TYPE, ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
+import type { ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import PlaceholderContent from "../content/PlaceholderContent";
 import { VARIABLE_MAPPING } from "@src/data/variables-data";
 
