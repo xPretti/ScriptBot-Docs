@@ -1,12 +1,12 @@
-import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
+import { ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import type { PlaceholderInterface } from "../interfaces/placeholder-interface";
 
-export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, PlaceholderInterface>> = new Map();
+export const FUNCTION_MAPPING: Map<ENUM_PLACEHOLDER_CATEGORY_TYPE, Map<string, PlaceholderInterface>> = new Map();
 
 [
    // DEBUGS
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUG,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.DEBUG,
       name: "Log",
       aliases: "",
       description: {
@@ -55,7 +55,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUG,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.DEBUG,
       name: "Print",
       aliases: "",
       description: {
@@ -104,7 +104,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.DEBUG,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.DEBUG,
       name: "See",
       aliases: "",
       description: {
@@ -146,7 +146,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // DEBUGS
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.LOGICS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOGICS,
       name: "Seq",
       aliases: "",
       version: "2.15",
@@ -197,7 +197,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // INDICATORS
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATOR,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.INDICATOR,
       name: "Indicator",
       aliases: "IND",
       description: {
@@ -247,7 +247,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.INDICATOR,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.INDICATOR,
       name: "Indicator'X'",
       aliases: "IND'X'",
       description: {
@@ -290,7 +290,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // USER VARIABLES
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearDouble",
       aliases: "ClrDou",
       description: {
@@ -315,7 +315,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearInt",
       aliases: "ClrInt",
       description: {
@@ -340,7 +340,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "ClearString",
       aliases: "ClrStr",
       description: {
@@ -365,7 +365,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "CreateDouble",
       aliases: "CreDou",
       description: {
@@ -405,7 +405,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "CreateInt",
       aliases: "CreInt",
       description: {
@@ -445,7 +445,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "CreateString",
       aliases: "CreStr",
       description: {
@@ -485,7 +485,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "GetDouble",
       aliases: "GetDou",
       description: {
@@ -518,7 +518,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "GetInt",
       aliases: "",
       description: {
@@ -551,7 +551,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "GetString",
       aliases: "GetStr",
       description: {
@@ -584,7 +584,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "RemoveDouble",
       aliases: "RemDou",
       description: {
@@ -617,7 +617,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "RemoveInt",
       aliases: "RemInt",
       description: {
@@ -650,7 +650,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "RemoveString",
       aliases: "RemStr",
       description: {
@@ -683,7 +683,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "ReplaceDouble",
       aliases: "RepDou",
       description: {
@@ -723,7 +723,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "ReplaceInt",
       aliases: "RepInt",
       description: {
@@ -763,7 +763,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "ReplaceString",
       aliases: "RepStr",
       description: {
@@ -803,7 +803,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "SetDouble",
       aliases: "SetDou",
       description: {
@@ -843,7 +843,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "SetInt",
       aliases: "",
       description: {
@@ -883,7 +883,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "SetString",
       aliases: "SetStr",
       description: {
@@ -923,7 +923,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "AddDouble",
       aliases: "AddDou",
       description: {
@@ -955,7 +955,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.USER_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE,
       name: "AddInt",
       aliases: "",
       version: "2.06",
@@ -989,7 +989,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    //GLOBAL
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "GetGlobal",
       aliases: "GetG",
       version: "2.06",
@@ -1017,7 +1017,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "CreateGlobal",
       aliases: "CreG",
       version: "2.06",
@@ -1050,7 +1050,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "ReplaceGlobal",
       aliases: "RepG",
       version: "2.06",
@@ -1083,7 +1083,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "GetGlobalTime",
       aliases: "GetGT",
       version: "2.06",
@@ -1111,7 +1111,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "SetGlobal",
       aliases: "SetG",
       version: "2.06",
@@ -1144,7 +1144,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "AddGlobal",
       aliases: "AddG",
       version: "2.06",
@@ -1177,7 +1177,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "RemoveGlobal",
       aliases: "RemG",
       version: "2.06",
@@ -1205,7 +1205,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.GLOBAL_VARIABLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.GLOBAL_VARIABLE,
       name: "ClearGlobal",
       aliases: "ClrG",
       version: "2.06",
@@ -1234,7 +1234,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    //CANDLE
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "Open",
       aliases: "O",
       description: {
@@ -1284,7 +1284,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "Close",
       aliases: "C",
       description: {
@@ -1334,7 +1334,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "High",
       aliases: "H",
       description: {
@@ -1384,7 +1384,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "Low",
       aliases: "L",
       description: {
@@ -1434,7 +1434,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "Time",
       aliases: "T",
       description: {
@@ -1484,7 +1484,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "Direction",
       aliases: "DIR",
       description: {
@@ -1534,7 +1534,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "Spread",
       aliases: "SPD",
       description: {
@@ -1584,7 +1584,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "Candle",
       aliases: "",
       description: {
@@ -1639,7 +1639,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "MaxHigh",
       aliases: "MaxH",
       description: {
@@ -1696,7 +1696,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "MinLow",
       aliases: "MinL",
       description: {
@@ -1753,7 +1753,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "TickVolume",
       aliases: "TICKV",
       description: {
@@ -1803,7 +1803,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CANDLE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE,
       name: "RealVolume",
       aliases: "REALV",
       description: {
@@ -1854,7 +1854,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // MATH
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "Median",
       aliases: "Med",
       description: {
@@ -1894,7 +1894,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "TickToPoint",
       aliases: "TickTP",
       description: {
@@ -1935,7 +1935,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "MoneyToPoint",
       aliases: "MoneyTP",
       description: {
@@ -1976,7 +1976,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "PipToPoint",
       aliases: "PipTP",
       description: {
@@ -2017,7 +2017,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "CountStep",
       aliases: "Count",
       description: {
@@ -2057,7 +2057,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "CountStepGradual",
       aliases: "CountGrad",
       description: {
@@ -2105,7 +2105,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "Division",
       aliases: "Divi",
       description: {
@@ -2145,7 +2145,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "RestDivision",
       aliases: "RDivi",
       description: {
@@ -2185,7 +2185,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "Percent",
       aliases: "",
       description: {
@@ -2225,7 +2225,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "PercentOfValue",
       aliases: "PercentValue",
       description: {
@@ -2265,7 +2265,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "HitPercent",
       aliases: "",
       description: {
@@ -2305,7 +2305,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "CorrectPrice",
       aliases: "FixPrice",
       description: {
@@ -2346,7 +2346,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "Random",
       aliases: "",
       description: {
@@ -2386,7 +2386,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "Round",
       aliases: "",
       description: {
@@ -2419,7 +2419,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "RoundUp",
       aliases: "",
       description: {
@@ -2452,7 +2452,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "RoundDown",
       aliases: "",
       description: {
@@ -2485,7 +2485,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "Max",
       aliases: "",
       description: {
@@ -2525,7 +2525,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "Min",
       aliases: "",
       description: {
@@ -2565,7 +2565,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "IsChance",
       aliases: "Chance",
       description: {
@@ -2598,7 +2598,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MATH,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH,
       name: "Decimals",
       aliases: "Decimal",
       description: {
@@ -2632,7 +2632,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // CONTA
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "GetVolume",
       aliases: "GetVol",
       description: {
@@ -2657,7 +2657,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "SetVolume",
       aliases: "SetVol",
       description: {
@@ -2699,7 +2699,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // CONVERSORES
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CONVERTER,
       name: "ToPositive",
       aliases: "Pos",
       description: {
@@ -2735,7 +2735,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CONVERTER,
       name: "ToNegative",
       aliases: "Neg",
       description: {
@@ -2771,7 +2771,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CONVERTER,
       name: "ToTime",
       aliases: "",
       description: {
@@ -2812,7 +2812,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CONVERTER,
       name: "ToTimeModify",
       aliases: "TMod",
       description: {
@@ -2896,7 +2896,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CONVERTER,
       name: "ToTimeFormat",
       aliases: "TFormat",
       description: {
@@ -2929,7 +2929,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CONVERTER,
       name: "ToFormat",
       aliases: "Format",
       description: {
@@ -2982,7 +2982,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CONVERTER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CONVERTER,
       name: "ToInt",
       aliases: "",
       description: {
@@ -3016,7 +3016,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // MERCADO
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "Last",
       aliases: "",
       description: {
@@ -3044,7 +3044,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "LastHigh",
       aliases: "LastH",
       description: {
@@ -3072,7 +3072,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "LastLow",
       aliases: "LastL",
       description: {
@@ -3100,7 +3100,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "Ask",
       aliases: "",
       description: {
@@ -3128,7 +3128,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "AskHigh",
       aliases: "AskH",
       description: {
@@ -3156,7 +3156,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "AskLow",
       aliases: "AskL",
       description: {
@@ -3184,7 +3184,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "Bid",
       aliases: "",
       description: {
@@ -3212,7 +3212,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "BidHigh",
       aliases: "BidH",
       description: {
@@ -3240,7 +3240,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "BidLow",
       aliases: "BidL",
       description: {
@@ -3268,7 +3268,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "LastTime",
       aliases: "LastT",
       description: {
@@ -3296,7 +3296,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "DayStartTime",
       aliases: "DayST",
       description: {
@@ -3329,7 +3329,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "DayEndTime",
       aliases: "DayET",
       description: {
@@ -3362,7 +3362,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "DayStartCandle",
       aliases: "DaySC",
       description: {
@@ -3395,7 +3395,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "DayEndCandle",
       aliases: "DayEC",
       description: {
@@ -3428,7 +3428,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "DayHigh",
       aliases: "DayH",
       description: {
@@ -3470,7 +3470,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "DayLow",
       aliases: "DayL",
       description: {
@@ -3513,7 +3513,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // TEMPO
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME,
       name: "IsTime",
       aliases: "",
       description: {
@@ -3558,7 +3558,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME,
       name: "SymbolTime",
       aliases: "STime",
       description: {
@@ -3586,7 +3586,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME,
       name: "TimeLeft",
       aliases: "TLeft",
       description: {
@@ -3623,7 +3623,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME,
       name: "DayOfWeek",
       aliases: "DayW",
       description: {
@@ -3651,7 +3651,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME,
       name: "DayOfYear",
       aliases: "DayY",
       description: {
@@ -3679,7 +3679,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME,
       name: "Month",
       aliases: "",
       description: {
@@ -3707,7 +3707,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME,
       name: "Year",
       aliases: "",
       description: {
@@ -3735,7 +3735,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME,
       name: "StartTime",
       aliases: "StartT",
       description: {
@@ -3771,7 +3771,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TIME,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME,
       name: "ValueOfTime",
       aliases: "ValueT",
       description: {
@@ -3807,7 +3807,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // TRADES
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllVolumeOpen",
       aliases: "AVolO",
       version: "2.05",
@@ -3857,7 +3857,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyVolumeOpen",
       aliases: "BVolO",
       version: "2.05",
@@ -3907,7 +3907,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellVolumeOpen",
       aliases: "SVolO",
       version: "2.05",
@@ -3957,7 +3957,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllPosVolumeOpen",
       aliases: "APVolO",
       version: "2.05",
@@ -4007,7 +4007,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyPosVolumeOpen",
       aliases: "BPVolO",
       version: "2.05",
@@ -4057,7 +4057,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellPosVolumeOpen",
       aliases: "SPVolO",
       version: "2.05",
@@ -4107,7 +4107,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllOrderVolumeOpen",
       aliases: "AOVolO",
       version: "2.05",
@@ -4157,7 +4157,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyOrderVolumeOpen",
       aliases: "BOVolO",
       version: "2.05",
@@ -4207,7 +4207,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellOrderVolumeOpen",
       aliases: "SOVolO",
       version: "2.05",
@@ -4257,7 +4257,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllOpen",
       aliases: "AOpen",
       version: "2.05",
@@ -4307,7 +4307,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyOpen",
       aliases: "BOpen",
       version: "2.05",
@@ -4357,7 +4357,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellOpen",
       aliases: "SOpen",
       version: "2.05",
@@ -4407,7 +4407,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllPosOpen",
       aliases: "APosO",
       version: "2.05",
@@ -4457,7 +4457,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyPosOpen",
       aliases: "BPosO",
       version: "2.05",
@@ -4507,7 +4507,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellPosOpen",
       aliases: "SPosO",
       version: "2.05",
@@ -4557,7 +4557,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllOrderOpen",
       aliases: "AOrderO",
       version: "2.05",
@@ -4607,7 +4607,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyOrderOpen",
       aliases: "BOrderO",
       version: "2.05",
@@ -4657,7 +4657,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellOrderOpen",
       aliases: "SOrderO",
       version: "2.05",
@@ -4707,7 +4707,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllProfitOpen",
       aliases: "AProfitO",
       version: "2.05",
@@ -4757,7 +4757,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyProfitOpen",
       aliases: "BProfitO",
       version: "2.05",
@@ -4807,7 +4807,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellProfitOpen",
       aliases: "SProfitO",
       version: "2.05",
@@ -4857,7 +4857,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AvgPrice",
       aliases: "PAvgP",
       version: "2.05",
@@ -4901,7 +4901,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AvgDir",
       aliases: "PAvgDir",
       version: "2.05",
@@ -4945,7 +4945,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllAvgPrice",
       aliases: "AAvgPrice",
       version: "2.05",
@@ -4980,7 +4980,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyAvgPrice",
       aliases: "BAvgPrice",
       version: "2.05",
@@ -5015,7 +5015,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellAvgPrice",
       aliases: "SAvgPrice",
       version: "2.05",
@@ -5050,7 +5050,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "AllAvgDir",
       aliases: "AAvgDir",
       version: "2.05",
@@ -5085,7 +5085,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BuyAvgDir",
       aliases: "BAvgDir",
       version: "2.05",
@@ -5120,7 +5120,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SellAvgDir",
       aliases: "SAvgDir",
       version: "2.05",
@@ -5156,7 +5156,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    //
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTicket",
       aliases: "PTicket",
       description: {
@@ -5204,7 +5204,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTicketExact",
       aliases: "PTicketE",
       version: "2.15",
@@ -5253,7 +5253,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosDouble",
       aliases: "",
       description: {
@@ -5291,7 +5291,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosInt",
       aliases: "",
       description: {
@@ -5329,7 +5329,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosString",
       aliases: "",
       description: {
@@ -5367,7 +5367,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosCurrent",
       aliases: "PCurrent",
       description: {
@@ -5394,7 +5394,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosOpen",
       aliases: "PO",
       description: {
@@ -5421,7 +5421,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosProfit",
       aliases: "PProfit",
       description: {
@@ -5448,7 +5448,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosStop",
       aliases: "PSL",
       description: {
@@ -5475,7 +5475,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosSwap",
       aliases: "PSWAP",
       description: {
@@ -5502,7 +5502,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTake",
       aliases: "PTP",
       description: {
@@ -5529,7 +5529,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosVolume",
       aliases: "PVol",
       description: {
@@ -5556,7 +5556,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosIdentifier",
       aliases: "PIdent",
       description: {
@@ -5583,7 +5583,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosMagic",
       aliases: "PMagic",
       description: {
@@ -5610,7 +5610,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosReason",
       aliases: "PReason",
       description: {
@@ -5638,7 +5638,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTime",
       aliases: "PT",
       description: {
@@ -5665,7 +5665,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTimeMsc",
       aliases: "PTMsc",
       description: {
@@ -5692,7 +5692,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTimeUpdate",
       aliases: "PTUpdate",
       description: {
@@ -5719,7 +5719,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosTimeUpdateMsc",
       aliases: "PTUpdateMsc",
       description: {
@@ -5746,7 +5746,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosType",
       aliases: "PType",
       description: {
@@ -5773,7 +5773,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosSymbol",
       aliases: "PSymbol",
       description: {
@@ -5800,7 +5800,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosComment",
       aliases: "PComment",
       description: {
@@ -5827,7 +5827,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "PosExternal",
       aliases: "PExternal",
       description: {
@@ -5854,7 +5854,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTicket",
       aliases: "OTicket",
       description: {
@@ -5902,7 +5902,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTicketExact",
       aliases: "OTicketE",
       version: "2.15",
@@ -5951,7 +5951,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderDouble",
       aliases: "",
       description: {
@@ -5989,7 +5989,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderInt",
       aliases: "",
       description: {
@@ -6027,7 +6027,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderString",
       aliases: "",
       description: {
@@ -6065,7 +6065,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderVolumeInit",
       aliases: "OVolInit",
       description: {
@@ -6092,7 +6092,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderVolume",
       aliases: "OVol",
       description: {
@@ -6119,7 +6119,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderOpen",
       aliases: "OO",
       description: {
@@ -6146,7 +6146,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderStop",
       aliases: "OSL",
       description: {
@@ -6173,7 +6173,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTake",
       aliases: "OTP",
       description: {
@@ -6200,7 +6200,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderCurrent",
       aliases: "OCurrent",
       description: {
@@ -6227,7 +6227,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderStopLimit",
       aliases: "OSLLimit",
       description: {
@@ -6254,7 +6254,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderSetup",
       aliases: "OSetup",
       description: {
@@ -6281,7 +6281,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderType",
       aliases: "OType",
       description: {
@@ -6309,7 +6309,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderState",
       aliases: "OState",
       description: {
@@ -6337,7 +6337,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTimeExpiration",
       aliases: "OTExpira",
       description: {
@@ -6364,7 +6364,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderDone",
       aliases: "ODone",
       description: {
@@ -6391,7 +6391,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderSetupMsc",
       aliases: "OSetupMsc",
       description: {
@@ -6418,7 +6418,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderDoneMsc",
       aliases: "ODoneMsc",
       description: {
@@ -6445,7 +6445,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderFilling",
       aliases: "OFilling",
       description: {
@@ -6473,7 +6473,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderTime",
       aliases: "OT",
       description: {
@@ -6500,7 +6500,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderMagic",
       aliases: "OMagic",
       description: {
@@ -6527,7 +6527,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderReason",
       aliases: "OReason",
       description: {
@@ -6554,7 +6554,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderId",
       aliases: "OId",
       description: {
@@ -6581,7 +6581,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderById",
       aliases: "OById",
       description: {
@@ -6608,7 +6608,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderSymbol",
       aliases: "OSymbol",
       description: {
@@ -6635,7 +6635,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "OrderComment",
       aliases: "OComment",
       description: {
@@ -6663,7 +6663,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // DEALS
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTicket",
       aliases: "DTicket",
       description: {
@@ -6741,7 +6741,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTicketExact",
       aliases: "DTicketE",
       version: "2.15",
@@ -6820,7 +6820,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealProfit",
       aliases: "DProfit",
       description: {
@@ -6847,7 +6847,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealOpen",
       aliases: "DO",
       description: {
@@ -6874,7 +6874,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealCommission",
       aliases: "DComm",
       description: {
@@ -6901,7 +6901,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealFee",
       aliases: "DFee",
       description: {
@@ -6928,7 +6928,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealStop",
       aliases: "DSL",
       description: {
@@ -6955,7 +6955,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTake",
       aliases: "DTP",
       description: {
@@ -6982,7 +6982,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealSwap",
       aliases: "DSwap",
       description: {
@@ -7009,7 +7009,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealVolume",
       aliases: "DVol",
       description: {
@@ -7036,7 +7036,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealMagic",
       aliases: "DMagic",
       description: {
@@ -7063,7 +7063,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealReason",
       aliases: "DReason",
       description: {
@@ -7091,7 +7091,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealOrder",
       aliases: "DOrder",
       description: {
@@ -7118,7 +7118,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealId",
       aliases: "DId",
       description: {
@@ -7145,7 +7145,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealEntry",
       aliases: "DEntry",
       description: {
@@ -7172,7 +7172,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealOut",
       aliases: "DOut",
       description: {
@@ -7199,7 +7199,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealIn",
       aliases: "DIn",
       description: {
@@ -7226,7 +7226,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTime",
       aliases: "DT",
       description: {
@@ -7253,7 +7253,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealTimeMsc",
       aliases: "DTMsc",
       description: {
@@ -7280,7 +7280,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealType",
       aliases: "DType",
       description: {
@@ -7308,7 +7308,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealComment",
       aliases: "DComment",
       description: {
@@ -7335,7 +7335,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealExternal",
       aliases: "DExternal",
       description: {
@@ -7362,7 +7362,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "DealSymbol",
       aliases: "DSymbol",
       description: {
@@ -7390,7 +7390,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
    },
    // TRADE
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "BuyAuto",
       aliases: "",
       description: {
@@ -7450,7 +7450,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "SellAuto",
       aliases: "",
       description: {
@@ -7510,7 +7510,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "Buy",
       aliases: "",
       description: {
@@ -7565,7 +7565,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "Sell",
       aliases: "",
       description: {
@@ -7620,7 +7620,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "BuyOrder",
       aliases: "",
       description: {
@@ -7680,7 +7680,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "SellOrder",
       aliases: "",
       description: {
@@ -7740,7 +7740,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "PosClose",
       aliases: "",
       description: {
@@ -7767,7 +7767,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "PosClosePartial",
       aliases: "",
       description: {
@@ -7799,7 +7799,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "OrderClose",
       aliases: "",
       description: {
@@ -7826,7 +7826,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "PosCloseAll",
       aliases: "",
       description: {
@@ -7863,7 +7863,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "PosBuyCloseAll",
       aliases: "",
       description: {
@@ -7900,7 +7900,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "PosSellCloseAll",
       aliases: "",
       description: {
@@ -7937,7 +7937,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "OrderCloseAll",
       aliases: "",
       version: "2.08",
@@ -7975,7 +7975,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "OrderBuyCloseAll",
       aliases: "",
       version: "2.08",
@@ -8013,7 +8013,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "OrderSellCloseAll",
       aliases: "",
       version: "2.08",
@@ -8051,7 +8051,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "PosModify",
       aliases: "",
       description: {
@@ -8101,7 +8101,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "PosModifyTake",
       aliases: "",
       description: {
@@ -8145,7 +8145,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "PosModifyStop",
       aliases: "",
       description: {
@@ -8189,7 +8189,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "OrderModify",
       aliases: "",
       description: {
@@ -8245,7 +8245,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "OrderModifyTake",
       aliases: "",
       description: {
@@ -8289,7 +8289,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "OrderModifyStop",
       aliases: "",
       description: {
@@ -8333,7 +8333,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "OrderModifyPrice",
       aliases: "",
       description: {
@@ -8365,7 +8365,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "Modify",
       aliases: "",
       description: {
@@ -8415,7 +8415,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "ModifyTake",
       aliases: "",
       description: {
@@ -8459,7 +8459,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE,
       name: "ModifyStop",
       aliases: "",
       description: {
@@ -8505,7 +8505,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
 
    // BASIC OBJECTS
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjHLine",
       aliases: "ObjHL",
       version: "2.10",
@@ -8559,7 +8559,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjVLine",
       aliases: "ObjVL",
       version: "2.10",
@@ -8613,7 +8613,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjTrendLine",
       aliases: "ObjTL",
       version: "2.10",
@@ -8682,7 +8682,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjRemove",
       aliases: "ObjRem",
       version: "2.10",
@@ -8710,7 +8710,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjClear",
       aliases: "ObjClr",
       version: "2.10",
@@ -8747,7 +8747,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjExist",
       aliases: "ObjEx",
       version: "2.10",
@@ -8775,7 +8775,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjGetTime",
       aliases: "ObjGT",
       version: "2.10",
@@ -8819,7 +8819,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjGetPrice",
       aliases: "ObjGP",
       version: "2.10",
@@ -8863,7 +8863,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjSetTime",
       aliases: "ObjST",
       version: "2.10",
@@ -8906,7 +8906,7 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_FUNCTION_CATEGORY_TYPE.BASIC_OBJECTS,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS,
       name: "ObjSetPrice",
       aliases: "ObjSP",
       version: "2.10",
@@ -8949,9 +8949,9 @@ export const FUNCTION_MAPPING: Map<ENUM_FUNCTION_CATEGORY_TYPE, Map<string, Plac
       },
    },
 ].forEach((fn: PlaceholderInterface) => {
-   const existing = FUNCTION_MAPPING.get(fn.category as ENUM_FUNCTION_CATEGORY_TYPE);
+   const existing = FUNCTION_MAPPING.get(fn.category as ENUM_PLACEHOLDER_CATEGORY_TYPE);
    if (!existing) {
-      FUNCTION_MAPPING.set(fn.category as ENUM_FUNCTION_CATEGORY_TYPE, new Map([[fn.name, fn]]));
+      FUNCTION_MAPPING.set(fn.category as ENUM_PLACEHOLDER_CATEGORY_TYPE, new Map([[fn.name, fn]]));
    } else {
       existing.set(fn.name, fn);
    }

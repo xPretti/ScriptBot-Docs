@@ -9,8 +9,7 @@ import PlaceholderModal from "./modal/PlaceholderModal";
 import styles from "./PlaceholderTable.module.css";
 
 import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
-
-type PlaceholderType = "function" | "variable";
+import type { PlaceholderType } from "@src/types/placeholder-type";
 
 type Props = {
    type: PlaceholderType;

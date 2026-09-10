@@ -1,12 +1,12 @@
-import { ENUM_VARIABLE_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
+import { ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
 
-export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, PlaceholderInterface>> = new Map();
+export const VARIABLE_MAPPING: Map<ENUM_PLACEHOLDER_CATEGORY_TYPE, Map<string, PlaceholderInterface>> = new Map();
 
 [
    // OPERADORES
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPERATOR,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPERATOR,
       name: "TRUE",
       aliases: "",
       description: {
@@ -25,7 +25,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPERATOR,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPERATOR,
       name: "FALSE",
       aliases: "",
       description: {
@@ -44,7 +44,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPERATOR,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPERATOR,
       name: "EMPTY",
       aliases: "",
       version: "2.25",
@@ -65,7 +65,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
    },
    // Local Position
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_TICKET",
       aliases: "",
       description: {
@@ -84,7 +84,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_REQUEST",
       aliases: "",
       description: {
@@ -103,7 +103,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_PARENT",
       aliases: "",
       description: {
@@ -122,7 +122,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_MAGIC",
       aliases: "",
       description: {
@@ -141,7 +141,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_SYMBOL",
       aliases: "",
       description: {
@@ -160,7 +160,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_TIME",
       aliases: "",
       description: {
@@ -179,7 +179,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_PRICE",
       aliases: "",
       description: {
@@ -198,7 +198,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_SL",
       aliases: "",
       description: {
@@ -217,7 +217,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_TP",
       aliases: "",
       description: {
@@ -236,7 +236,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_PROFIT",
       aliases: "",
       description: {
@@ -255,7 +255,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_VOLUME",
       aliases: "",
       description: {
@@ -274,7 +274,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_UPTIME",
       aliases: "",
       description: {
@@ -293,7 +293,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_TYPE",
       aliases: "",
       description: {
@@ -312,7 +312,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_COMMENT",
       aliases: "",
       description: {
@@ -331,7 +331,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_FLAG_CHILD",
       aliases: "",
       description: {
@@ -350,7 +350,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_FLAG_CLIENT",
       aliases: "",
       description: {
@@ -369,7 +369,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_POSITION,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION,
       name: "_FLAG_SA",
       aliases: "",
       description: {
@@ -390,7 +390,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
 
    // Local Trigger
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER,
       name: "_TRIG_TYPE",
       aliases: "",
       description: {
@@ -409,7 +409,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER,
       name: "_TRIG_IS_OPERATION",
       aliases: "",
       description: {
@@ -428,7 +428,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER,
       name: "_TRIG_OPERATION",
       aliases: "",
       description: {
@@ -447,7 +447,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER,
       name: "_TRIG_PRICE",
       aliases: "",
       description: {
@@ -466,7 +466,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER,
       name: "_TRIG_WEIGHT_MIN",
       aliases: "",
       description: {
@@ -485,7 +485,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER,
       name: "_TRIG_WEIGHT_VALIDATE",
       aliases: "",
       description: {
@@ -504,7 +504,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER,
       name: "_TRIG_VALIDS",
       aliases: "",
       description: {
@@ -523,7 +523,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER,
       name: "_TRIG_VALIDS_COM",
       aliases: "",
       description: {
@@ -542,7 +542,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.LOCAL_TRIGGER,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER,
       name: "_TRIG_VALIDS_REQ",
       aliases: "",
       description: {
@@ -563,7 +563,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
 
    // ACCOUNT
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "BALANCE",
       aliases: "BAL",
       description: {
@@ -582,7 +582,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "CREDIT",
       aliases: "CRED",
       description: {
@@ -601,7 +601,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "EQUITY",
       aliases: "EQT",
       description: {
@@ -620,7 +620,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "MARGIN",
       aliases: "",
       description: {
@@ -639,7 +639,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "MARGIN_FREE",
       aliases: "MARGF",
       description: {
@@ -658,7 +658,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "MARGIN_LEVEL",
       aliases: "MARGL",
       description: {
@@ -677,7 +677,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "MARGIN_INITIAL",
       aliases: "MARGI",
       description: {
@@ -696,7 +696,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "MARGIN_MAINTENANCE",
       aliases: "MARGM",
       description: {
@@ -715,7 +715,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "LOGIN",
       aliases: "",
       description: {
@@ -734,7 +734,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "NAME",
       aliases: "",
       description: {
@@ -753,7 +753,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "SERVER",
       aliases: "SRV",
       description: {
@@ -772,7 +772,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "CURRENCY",
       aliases: "CURR",
       description: {
@@ -791,7 +791,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "COMPANY",
       aliases: "COMP",
       description: {
@@ -810,7 +810,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.ACCOUNT,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT,
       name: "LIMIT_ORDER",
       aliases: "LIMITO",
       description: {
@@ -831,7 +831,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
 
    // MARKET
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "TOTAL_CANDLE",
       aliases: "TCANDLE",
       description: {
@@ -850,7 +850,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "TIME_LEFT",
       aliases: "TLEFT",
       description: {
@@ -869,7 +869,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "TIME_CURRENT",
       aliases: "TCURRENT",
       description: {
@@ -888,7 +888,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "TIME_LOCAL",
       aliases: "TLOCAL",
       description: {
@@ -907,7 +907,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "TIME_SERVER",
       aliases: "TSERVER",
       description: {
@@ -926,7 +926,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "DAY_OF_WEEK",
       aliases: "DAYW",
       description: {
@@ -945,7 +945,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "DAY_OF_YEAR",
       aliases: "DAYY",
       description: {
@@ -964,7 +964,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "MONTH",
       aliases: "",
       description: {
@@ -983,7 +983,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "YEAR",
       aliases: "",
       description: {
@@ -1002,7 +1002,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "LAST",
       aliases: "",
       description: {
@@ -1021,7 +1021,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "LAST_HIGH",
       aliases: "LASTH",
       description: {
@@ -1040,7 +1040,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "LAST_LOW",
       aliases: "LASTL",
       description: {
@@ -1059,7 +1059,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "LAST_TIME",
       aliases: "LASTT",
       description: {
@@ -1078,7 +1078,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "ASK",
       aliases: "",
       description: {
@@ -1097,7 +1097,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "ASK_HIGH",
       aliases: "ASKH",
       description: {
@@ -1116,7 +1116,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "ASK_LOW",
       aliases: "ASKL",
       description: {
@@ -1135,7 +1135,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "BID",
       aliases: "",
       description: {
@@ -1154,7 +1154,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "BID_HIGH",
       aliases: "BIDH",
       description: {
@@ -1173,7 +1173,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "BID_LOW",
       aliases: "BIDL",
       description: {
@@ -1192,7 +1192,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "SYMBOL",
       aliases: "",
       description: {
@@ -1211,7 +1211,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "MAGIC",
       aliases: "",
       description: {
@@ -1230,7 +1230,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.MARKET,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET,
       name: "REAL",
       aliases: "",
       description: {
@@ -1251,7 +1251,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
 
    // OPEN TRADES
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "ALL_VOLUME_OPEN",
       aliases: "AVOLO",
       description: {
@@ -1270,7 +1270,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BUY_VOLUME_OPEN",
       aliases: "BVOLO",
       description: {
@@ -1289,7 +1289,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SELL_VOLUME_OPEN",
       aliases: "SVOLO",
       description: {
@@ -1308,7 +1308,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "ALL_POS_OPEN",
       aliases: "APOSO",
       description: {
@@ -1327,7 +1327,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BUY_POS_OPEN",
       aliases: "BPOSO",
       description: {
@@ -1346,7 +1346,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SELL_POS_OPEN",
       aliases: "SPOSO",
       description: {
@@ -1365,7 +1365,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "ALL_OPEN",
       aliases: "AOPEN",
       description: {
@@ -1384,7 +1384,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BUY_OPEN",
       aliases: "BOPEN",
       description: {
@@ -1403,7 +1403,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SELL_OPEN",
       aliases: "SOPEN",
       description: {
@@ -1422,7 +1422,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "ALL_PROFIT_OPEN",
       aliases: "APROFITO",
       description: {
@@ -1441,7 +1441,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BUY_PROFIT_OPEN",
       aliases: "BPROFITO",
       description: {
@@ -1460,7 +1460,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SELL_PROFIT_OPEN",
       aliases: "SPROFITO",
       description: {
@@ -1479,7 +1479,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "ALL_ORDER_OPEN",
       aliases: "AORDERO",
       description: {
@@ -1498,7 +1498,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BUY_ORDER_OPEN",
       aliases: "BORDERO",
       description: {
@@ -1517,7 +1517,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SELL_ORDER_OPEN",
       aliases: "SORDERO",
       description: {
@@ -1536,7 +1536,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "ALL_AVG_PRICE",
       aliases: "AAVG",
       version: "2.05",
@@ -1556,7 +1556,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "ALL_AVG_DIR",
       aliases: "AAVGDIR",
       version: "2.05",
@@ -1576,7 +1576,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BUY_AVG_PRICE",
       aliases: "BAVG",
       version: "2.05",
@@ -1596,7 +1596,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "BUY_AVG_DIR",
       aliases: "BAVGDIR",
       version: "2.05",
@@ -1616,7 +1616,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SELL_AVG_PRICE",
       aliases: "SAVG",
       version: "2.05",
@@ -1636,7 +1636,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.OPEN_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE,
       name: "SELL_AVG_DIR",
       aliases: "SAVGDIR",
       version: "2.05",
@@ -1658,7 +1658,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
 
    // CLOSED TRADES
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "ALL_VOLUME",
       aliases: "AVOL",
       description: {
@@ -1677,7 +1677,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "BUY_VOLUME",
       aliases: "BVOL",
       description: {
@@ -1696,7 +1696,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "SELL_VOLUME",
       aliases: "SVOL",
       description: {
@@ -1715,7 +1715,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "ALL_PROFIT",
       aliases: "APROFIT",
       description: {
@@ -1734,7 +1734,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "BUY_PROFIT",
       aliases: "BPROFIT",
       description: {
@@ -1753,7 +1753,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "SELL_PROFIT",
       aliases: "SPROFIT",
       description: {
@@ -1772,7 +1772,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "ALL_GAIN_PROFIT",
       aliases: "AGAINP",
       description: {
@@ -1791,7 +1791,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "BUY_GAIN_PROFIT",
       aliases: "BGAINP",
       description: {
@@ -1810,7 +1810,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "SELL_GAIN_PROFIT",
       aliases: "SGAINP",
       description: {
@@ -1829,7 +1829,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "ALL_LOSS_PROFIT",
       aliases: "ALOSSP",
       description: {
@@ -1848,7 +1848,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "BUY_LOSS_PROFIT",
       aliases: "BLOSSP",
       description: {
@@ -1867,7 +1867,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "SELL_LOSS_PROFIT",
       aliases: "SLOSSP",
       description: {
@@ -1886,7 +1886,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "ALL_POS",
       aliases: "APOS",
       description: {
@@ -1905,7 +1905,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "BUY_POS",
       aliases: "BPOS",
       description: {
@@ -1924,7 +1924,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "SELL_POS",
       aliases: "SPOS",
       description: {
@@ -1943,7 +1943,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "ALL_GAIN",
       aliases: "AGAIN",
       description: {
@@ -1962,7 +1962,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "BUY_GAIN",
       aliases: "BGAIN",
       description: {
@@ -1981,7 +1981,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "SELL_GAIN",
       aliases: "SGAIN",
       description: {
@@ -2000,7 +2000,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "ALL_LOSS",
       aliases: "ALOSS",
       description: {
@@ -2019,7 +2019,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "BUY_LOSS",
       aliases: "BLOSS",
       description: {
@@ -2038,7 +2038,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "SELL_LOSS",
       aliases: "SLOSS",
       description: {
@@ -2057,7 +2057,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "ALL_COMMISSION",
       aliases: "ACOMM",
       description: {
@@ -2076,7 +2076,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "BUY_COMMISSION",
       aliases: "BCOMM",
       description: {
@@ -2095,7 +2095,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "SELL_COMMISSION",
       aliases: "SCOMM",
       description: {
@@ -2114,7 +2114,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "ALL_SWAP",
       aliases: "ASWAP",
       description: {
@@ -2133,7 +2133,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "BUY_SWAP",
       aliases: "BSWAP",
       description: {
@@ -2152,7 +2152,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "SELL_SWAP",
       aliases: "SSWAP",
       description: {
@@ -2171,7 +2171,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "TICKET",
       aliases: "",
       description: {
@@ -2190,7 +2190,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "TICKET_BUY",
       aliases: "TICKETB",
       description: {
@@ -2209,7 +2209,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "TICKET_SELL",
       aliases: "TICKETS",
       description: {
@@ -2228,7 +2228,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "GAIN_TICKET",
       aliases: "GTICKET",
       description: {
@@ -2247,7 +2247,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "GAIN_TICKET_BUY",
       aliases: "GTICKETB",
       description: {
@@ -2266,7 +2266,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "GAIN_TICKET_SELL",
       aliases: "GTICKETS",
       description: {
@@ -2285,7 +2285,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "LOSS_TICKET",
       aliases: "LTICKET",
       description: {
@@ -2304,7 +2304,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "LOSS_TICKET_BUY",
       aliases: "LTICKETB",
       description: {
@@ -2323,7 +2323,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.CLOSE_TRADE,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE,
       name: "LOSS_TICKET_SELL",
       aliases: "LTICKETS",
       description: {
@@ -2344,7 +2344,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
 
    // SIGNAL
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_TOTAL",
       aliases: "SIGTT",
       description: {
@@ -2363,7 +2363,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_BUY",
       aliases: "SIGB",
       description: {
@@ -2382,7 +2382,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_SELL",
       aliases: "SIGS",
       description: {
@@ -2401,7 +2401,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_LAST",
       aliases: "SIGL",
       description: {
@@ -2420,7 +2420,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_TIME",
       aliases: "SIGT",
       description: {
@@ -2439,7 +2439,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_TIME_BUY",
       aliases: "SIGTB",
       description: {
@@ -2458,7 +2458,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_TIME_SELL",
       aliases: "SIGTS",
       description: {
@@ -2477,7 +2477,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_PRICE",
       aliases: "SIGP",
       description: {
@@ -2496,7 +2496,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_PRICE_BUY",
       aliases: "SIGPB",
       description: {
@@ -2515,7 +2515,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_PRICE_SELL",
       aliases: "SIGPS",
       description: {
@@ -2534,7 +2534,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_TOTAL_CONFIRM",
       aliases: "SIGTC",
       description: {
@@ -2553,7 +2553,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_LAST_CONFIRM",
       aliases: "SIGLC",
       description: {
@@ -2572,7 +2572,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_BUY_CONFIRM",
       aliases: "SIGBC",
       description: {
@@ -2591,7 +2591,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_SELL_CONFIRM",
       aliases: "SIGSC",
       description: {
@@ -2610,7 +2610,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_TIME_LAST_CONFIRM",
       aliases: "SIGTLC",
       description: {
@@ -2629,7 +2629,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_TIME_BUY_CONFIRM",
       aliases: "SIGTBC",
       description: {
@@ -2648,7 +2648,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_TIME_SELL_CONFIRM",
       aliases: "SIGTSC",
       description: {
@@ -2667,7 +2667,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_PRICE_LAST_CONFIRM",
       aliases: "SIGPLC",
       description: {
@@ -2686,7 +2686,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_PRICE_BUY_CONFIRM",
       aliases: "SIGPBC",
       description: {
@@ -2705,7 +2705,7 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
    {
-      category: ENUM_VARIABLE_CATEGORY_TYPE.SIGNAL,
+      category: ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL,
       name: "SIG_PRICE_SELL_CONFIRM",
       aliases: "SIGPSC",
       description: {
@@ -2724,9 +2724,9 @@ export const VARIABLE_MAPPING: Map<ENUM_VARIABLE_CATEGORY_TYPE, Map<string, Plac
       },
    },
 ].forEach((fn: PlaceholderInterface) => {
-   const existing = VARIABLE_MAPPING.get(fn.category as ENUM_VARIABLE_CATEGORY_TYPE);
+   const existing = VARIABLE_MAPPING.get(fn.category as ENUM_PLACEHOLDER_CATEGORY_TYPE);
    if (!existing) {
-      VARIABLE_MAPPING.set(fn.category as ENUM_VARIABLE_CATEGORY_TYPE, new Map([[fn.name, fn]]));
+      VARIABLE_MAPPING.set(fn.category as ENUM_PLACEHOLDER_CATEGORY_TYPE, new Map([[fn.name, fn]]));
    } else {
       existing.set(fn.name, fn);
    }

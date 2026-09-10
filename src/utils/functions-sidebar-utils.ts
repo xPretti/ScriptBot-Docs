@@ -1,5 +1,3 @@
-import { version } from "os";
-import { ENUM_FUNCTION_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { FUNCTION_MAPPING } from "@src/data/functions-data";
 import { VARIABLE_MAPPING } from "@src/data/variables-data";
 

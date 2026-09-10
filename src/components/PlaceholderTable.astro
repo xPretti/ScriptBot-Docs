@@ -1,22 +1,11 @@
 ---
-import { FUNCTION_MAPPING } from "@src/data/functions-data";
-import { VARIABLE_MAPPING } from "@src/data/variables-data";
-
-import PlaceholderTable from "./react/placeholders/PlaceholderTable";
+import { PlaceholderLoader } from "./react/placeholders/PlaceholderLoader";
 
 const { type, category } = Astro.props;
-
-const MAPPING = type === "function" ? FUNCTION_MAPPING : VARIABLE_MAPPING;
-
-const elements = MAPPING.get(category) ? Array.from(MAPPING.get(category)!.values()) : [];
 ---
 
-{
-   elements.length > 0 && (
-      <PlaceholderTable
-         client:visible
-         type={type}
-         elements={elements}
-      />
-   )
-}
+<PlaceholderLoader
+   client:visible
+   type={type}
+   category={category}
+/>

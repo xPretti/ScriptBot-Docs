@@ -1,4 +1,4 @@
-export const ENUM_FUNCTION_CATEGORY_TYPE = {
+export const ENUM_PLACEHOLDER_CATEGORY_TYPE = {
    INDICATOR: "indicator",
    USER_VARIABLE: "uservariable",
    CANDLE: "candle",
@@ -14,19 +14,10 @@ export const ENUM_FUNCTION_CATEGORY_TYPE = {
    GLOBAL_VARIABLE: "globalvariable",
    BASIC_OBJECTS: "basicobjects",
    LOGICS: "logics",
-} as const;
-
-export type ENUM_FUNCTION_CATEGORY_TYPE = (typeof ENUM_FUNCTION_CATEGORY_TYPE)[keyof typeof ENUM_FUNCTION_CATEGORY_TYPE];
-
-export const ENUM_VARIABLE_CATEGORY_TYPE = {
    LOCAL_POSITION: "localposition",
    LOCAL_TRIGGER: "localtrigger",
-   ACCOUNT: "account",
-   MARKET: "market",
-   OPEN_TRADE: "opentrade",
-   CLOSE_TRADE: "closetrade",
    SIGNAL: "signal",
    OPERATOR: "operator",
 } as const;
 
-export type ENUM_VARIABLE_CATEGORY_TYPE = (typeof ENUM_VARIABLE_CATEGORY_TYPE)[keyof typeof ENUM_VARIABLE_CATEGORY_TYPE];
+export type ENUM_PLACEHOLDER_CATEGORY_TYPE = (typeof ENUM_PLACEHOLDER_CATEGORY_TYPE)[keyof typeof ENUM_PLACEHOLDER_CATEGORY_TYPE];
