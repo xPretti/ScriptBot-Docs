@@ -1,5 +1,5 @@
-import { FUNCTION_MAPPING } from "@src/data/functions-data";
-import { VARIABLE_MAPPING } from "@src/data/variables-data";
+import { FUNCTION_MAPPING } from "@src/data/placeholder-data";
+import { VARIABLE_MAPPING } from "@src/data/placeholder-data";
 
 type TranslateFn = (key: string) => string;
 

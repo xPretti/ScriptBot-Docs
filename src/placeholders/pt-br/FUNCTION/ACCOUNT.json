@@ -1,0 +1,70 @@
+[
+   {
+      "type": "function",
+      "category": "ACCOUNT",
+      "name": "GetVolume",
+      "aliases": "GetVol",
+      "description": {
+         "simple": "Retorna o volume que a ordem será executada.",
+         "full": "Esta função retorna o volume que a ordem será colocada no mercado."
+      },
+      "parameters": [],
+      "examples": [],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0.0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "ACCOUNT",
+      "name": "SetVolume",
+      "aliases": "SetVol",
+      "description": {
+         "simple": "Define o novo volume da ordem.",
+         "full": "Esta função define o novo volume utilizado no sistema de envio de ordens. Ela altera diretaemente o valor no gerenciador de volume, portanto, é importante considerar o método de cálculo do mesmo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "o valor do volume."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "defaultValue",
+            "comment": "o valor padrão do volume.",
+            "value": "VOLUME_MIN"
+         }
+      ],
+      "examples": ["SetVol[10]"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se o volume for alterado com sucesso, ou false caso contrário.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false em caso de erro ou falha.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   }
+]

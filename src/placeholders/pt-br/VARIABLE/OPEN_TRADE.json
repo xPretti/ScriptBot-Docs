@@ -1,0 +1,512 @@
+[
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "ALL_VOLUME_OPEN",
+      "aliases": "AVOLO",
+      "description": {
+         "simple": "Retorna a soma do volume total das posições.",
+         "full": "Calcula o somatório total de lotes em aberto somando posições compradas e vendidas no mercado para o ativo."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a soma acumulada dos volumes de todas as posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso não haja posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "BUY_VOLUME_OPEN",
+      "aliases": "BVOLO",
+      "description": {
+         "simple": "Retorna a soma do volume total das posições de compra.",
+         "full": "Retorna o volume financeiro ou de lotes agregados restrito estritamente a ordens que estão compradas atualmente."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório dos volumes das posições de compra em aberto.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe ou não haja compras abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "SELL_VOLUME_OPEN",
+      "aliases": "SVOLO",
+      "description": {
+         "simple": "Retorna a soma do volume total das posições de venda.",
+         "full": "Retorna o volume total agregado de lotes ou contratos posicionados estritamente na direção de Venda (Short) no mercado."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório dos volumes das posições de venda em aberto.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe ou não haja vendas abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "ALL_POS_OPEN",
+      "aliases": "APOSO",
+      "description": {
+         "simple": "Retorna a quantidade de posições abertas.",
+         "full": "Retorna o número inteiro total de ordens ativas executadas e que estão no mercado correndo risco flutuante."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a contagem total de posições de mercado ativas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso não haja posições abertas.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "BUY_POS_OPEN",
+      "aliases": "BPOSO",
+      "description": {
+         "simple": "Retorna a quantidade de posições abertas de compra.",
+         "full": "Retorna a contagem quantitativa inteira contendo o número de ordens de mercado ativas exclusivamente compradas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade de posições compradas ativas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "SELL_POS_OPEN",
+      "aliases": "SPOSO",
+      "description": {
+         "simple": "Retorna a quantidade de posições abertas de venda.",
+         "full": "Retorna a contagem quantitativa inteira contendo o número de ordens de mercado ativas exclusivamente vendidas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade de posições vendidas ativas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "ALL_OPEN",
+      "aliases": "AOPEN",
+      "description": {
+         "simple": "Retorna a quantidade de pedidos abertos, tanto de posições quanto de ordens.",
+         "full": "Retorna um somatório combinado indicando quantos registros ativos globais (posições de mercado + ordens pendentes limit/stop) existem."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório total de ordens pendentes e posições em aberto.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "BUY_OPEN",
+      "aliases": "BOPEN",
+      "description": {
+         "simple": "Retorna a quantidade de pedidos abertos de compra.",
+         "full": "Retorna a soma agregada de ordens pendentes de compra e posições ativas compradas que estão registradas no momento."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório de posições e ordens pendentes de compra.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "SELL_OPEN",
+      "aliases": "SOPEN",
+      "description": {
+         "simple": "Retorna a quantidade de pedidos abertos de venda.",
+         "full": "Retorna a soma agregada de ordens pendentes de venda e posições ativas vendidas que estão registradas no momento."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório de posições e ordens pendentes de venda.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "ALL_PROFIT_OPEN",
+      "aliases": "APROFITO",
+      "description": {
+         "simple": "Retorna a soma do lucro das posições abertas.",
+         "full": "Calcula a soma de rendimento financeiro bruto (lucro/prejuízo) flutuante de todas as ordens de mercado unificadas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o lucro flutuante líquido somado de todas as posições.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "BUY_PROFIT_OPEN",
+      "aliases": "BPROFITO",
+      "description": {
+         "simple": "Retorna a soma do lucro das posições de compra abertas.",
+         "full": "Exibe o balanço financeiro flutuante gerado em tempo real unicamente pelas operações na ponta compradora."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o lucro flutuante líquido das posições de compra.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "SELL_PROFIT_OPEN",
+      "aliases": "SPROFITO",
+      "description": {
+         "simple": "Retorna a soma do lucro das posições de venda abertas.",
+         "full": "Exibe o balanço financeiro flutuante gerado em tempo real unicamente pelas operações na ponta vendedora."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o lucro flutuante líquido das posições de venda.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "ALL_ORDER_OPEN",
+      "aliases": "AORDERO",
+      "description": {
+         "simple": "Retorna a quantidade de ordens abertas.",
+         "full": "Retorna o número de ordens pendentes estáticas no livro (como limits e stops) aguardando o preço atingir a cotação de acionamento."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de ordens de limite/stop pendentes no mercado.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) se não existirem ordens pendentes.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "BUY_ORDER_OPEN",
+      "aliases": "BORDERO",
+      "description": {
+         "simple": "Retorna a quantidade de ordens de compra abertas.",
+         "full": "Retorna a contagem exata de ordens de gatilho pendentes exclusivamente posicionadas na ponta compradora."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade de ordens limit/stop pendentes de compra.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "SELL_ORDER_OPEN",
+      "aliases": "SORDERO",
+      "description": {
+         "simple": "Retorna a quantidade de ordens de venda abertas.",
+         "full": "Retorna a contagem exata de ordens de gatilho pendentes exclusivamente posicionadas na ponta vendedora."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade de ordens limit/stop pendentes de venda.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "ALL_AVG_PRICE",
+      "aliases": "AAVG",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o preço médio de todas as posições abertas.",
+         "full": "Calcula o preço médio ponderado total de todas as posições ativas (independente de direção) com base nos volumes individuais."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o preço médio ponderado ponderando compras e vendas combinadas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "ALL_AVG_DIR",
+      "aliases": "AAVGDIR",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a direção média das posições abertas. (-1 = Venda, 0 = Equilíbrio e 1 = Compra).",
+         "full": "Calcula a força e direção líquida dominante no mercado, retornando 1 para dominância de compra, -1 para venda e 0 para hedge perfeito."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a direção dominante ponderada das operações ativas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) se houver equilíbrio perfeito ou erro.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "BUY_AVG_PRICE",
+      "aliases": "BAVG",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o preço médio das posições de compra abertas.",
+         "full": "Calcula e retorna a cotação média ponderada baseada no preço de entrada e volume de todas as ordens exclusivamente compradas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o preço médio ponderado exclusivamente das posições compradas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso não existam compras abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "BUY_AVG_DIR",
+      "aliases": "BAVGDIR",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a direção média das posições de compra abertas.",
+         "full": "Retorna o valor direcional padrão que atesta a orientação majoritária das ordens posicionadas em compra."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a direção representativa das compras abertas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "SELL_AVG_PRICE",
+      "aliases": "SAVG",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o preço médio das posições de venda abertas.",
+         "full": "Calcula e retorna a cotação média ponderada baseada no preço de entrada e volume de todas as ordens exclusivamente vendidas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o preço médio ponderado exclusivamente das posições vendidas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso não existam vendas abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "OPEN_TRADE",
+      "name": "SELL_AVG_DIR",
+      "aliases": "SAVGDIR",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a direção média das posições de venda abertas.",
+         "full": "Retorna o valor direcional padrão que atesta a orientação majoritária das ordens posicionadas em venda."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a direção representativa das vendas abertas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   }
+]

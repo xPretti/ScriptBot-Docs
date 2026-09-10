@@ -1,0 +1,866 @@
+[
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "ALL_VOLUME",
+      "aliases": "AVOL",
+      "description": {
+         "simple": "Retorna a soma total do volume.",
+         "full": "Retorna o volume financeiro ou quantitativo acumulado histórico de todas as transações finalizadas e liquidadas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório dos volumes executados de todas as posições encerradas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "BUY_VOLUME",
+      "aliases": "BVOL",
+      "description": {
+         "simple": "Retorna a soma do volume de compra.",
+         "full": "Retorna a quantidade volumétrica total histórica negociada restrita a operações de compra finalizadas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório dos volumes de posições de compra encerradas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "SELL_VOLUME",
+      "aliases": "SVOL",
+      "description": {
+         "simple": "Retorna a soma do volume de venda.",
+         "full": "Retorna a quantidade volumétrica total histórica negociada restrita a operações de venda finalizadas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório dos volumes de posições de venda encerradas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "ALL_PROFIT",
+      "aliases": "APROFIT",
+      "description": {
+         "simple": "Retorna o total do lucro.",
+         "full": "Retorna o lucro ou prejuízo final computado de todo o histórico fechado de ordens arquivadas na conta."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o saldo acumulado de lucro/prejuízo de todas as posições fechadas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "BUY_PROFIT",
+      "aliases": "BPROFIT",
+      "description": {
+         "simple": "Retorna o total do lucro de compra.",
+         "full": "Retorna o balanço financeiro líquido acumulado das operações passadas executadas unicamente na ponta de Compra."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o saldo de lucro líquido gerado por compras fechadas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "SELL_PROFIT",
+      "aliases": "SPROFIT",
+      "description": {
+         "simple": "Retorna o total do lucro de venda.",
+         "full": "Retorna o balanço financeiro líquido acumulado das operações passadas executadas unicamente na ponta de Venda."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o saldo de lucro líquido gerado por vendas fechadas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "ALL_GAIN_PROFIT",
+      "aliases": "AGAINP",
+      "description": {
+         "simple": "Retorna o total de profit ganho ignorando as perdas.",
+         "full": "Filtra e retorna a soma monetária de receitas provenientes estritamente de ordens finalizadas com ganho, isolando os prejuízos."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a soma financeira apenas das operações que fecharam positivas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "BUY_GAIN_PROFIT",
+      "aliases": "BGAINP",
+      "description": {
+         "simple": "Retorna o total de profit ganho em compras ignorando as perdas.",
+         "full": "Soma e retorna os rendimentos financeiros positivos oriundos unicamente de ordens de Compra de histórico."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a soma financeira das compras que fecharam no positivo.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "SELL_GAIN_PROFIT",
+      "aliases": "SGAINP",
+      "description": {
+         "simple": "Retorna o total de profit ganho em vendas ignorando as perdas.",
+         "full": "Soma e retorna os rendimentos financeiros positivos oriundos unicamente de ordens de Venda de histórico."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a soma financeira das vendas que fecharam no positivo.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "ALL_LOSS_PROFIT",
+      "aliases": "ALOSSP",
+      "description": {
+         "simple": "Retorna o total de profit perdido ignorando os ganhos.",
+         "full": "Filtra e retorna a soma absoluta de prejuízos de ordens encerradas no vermelho, ignorando os ganhos do histórico."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório financeiro exclusivo das posições encerradas com prejuízo.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "BUY_LOSS_PROFIT",
+      "aliases": "BLOSSP",
+      "description": {
+         "simple": "Retorna o total de profit perdido em compras ignorando os ganhos.",
+         "full": "Isola e soma os valores monetários de perdas incorridas em transações fechadas de Compra."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a soma dos prejuízos obtidos com operações de compra encerradas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "SELL_LOSS_PROFIT",
+      "aliases": "SLOSSP",
+      "description": {
+         "simple": "Retorna o total de profit perdido em vendas ignorando os ganhos.",
+         "full": "Isola e soma os valores monetários de perdas incorridas em transações fechadas de Venda."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a soma dos prejuízos obtidos com operações de venda encerradas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "ALL_POS",
+      "aliases": "APOS",
+      "description": {
+         "simple": "Retorna o total de posições.",
+         "full": "Retorna a contagem total numérica de posições liquidadas registradas na base de dados de histórico."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o total de posições fechadas acumuladas no histórico.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "BUY_POS",
+      "aliases": "BPOS",
+      "description": {
+         "simple": "Retorna o total de posições de compra.",
+         "full": "Retorna o número numérico de ordens de mercado compradas que já foram finalizadas e estão salvas no histórico."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número de posições de compra fechadas histórico.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "SELL_POS",
+      "aliases": "SPOS",
+      "description": {
+         "simple": "Retorna o total de posições de venda.",
+         "full": "Retorna o número numérico de ordens de mercado vendidas que já foram finalizadas e estão salvas no histórico."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número de posições de venda fechadas histórico.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "ALL_GAIN",
+      "aliases": "AGAIN",
+      "description": {
+         "simple": "Retorna o total de vitorias.",
+         "full": "Retorna a quantidade contada de operações de mercado liquidadas com resultado financeiro final positivo (Take Profits/Ganhos)."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a contagem de operações finalizadas no azul (ganho).",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "BUY_GAIN",
+      "aliases": "BGAIN",
+      "description": {
+         "simple": "Retorna o total de vitorias de compra.",
+         "full": "Retorna a quantidade contada de operações exclusivas de compra liquidadas com ganho no histórico."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade de compras finalizadas com lucro.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "SELL_GAIN",
+      "aliases": "SGAIN",
+      "description": {
+         "simple": "Retorna o total de vitorias de venda.",
+         "full": "Retorna a quantidade contada de operações exclusivas de venda liquidadas com ganho no histórico."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade de vendas finalizadas com lucro.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "ALL_LOSS",
+      "aliases": "ALOSS",
+      "description": {
+         "simple": "Retorna o total de derrotas.",
+         "full": "Retorna o número de transações liquidadas que resultaram em encerramento com balanço negativo (Stop Losses/Perdas)."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a contagem de operações encerradas em prejuízo (loss).",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "BUY_LOSS",
+      "aliases": "BLOSS",
+      "description": {
+         "simple": "Retorna o total de derrotas de compra.",
+         "full": "Retorna a quantidade contada de ordens na ponta compradora que finalizaram em prejuízo de acordo com os dados salvos."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade de compras finalizadas com prejuízo.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "SELL_LOSS",
+      "aliases": "SLOSS",
+      "description": {
+         "simple": "Retorna o total de derrotas de venda.",
+         "full": "Retorna a quantidade contada de ordens na ponta vendedora que finalizaram em prejuízo de acordo com os dados salvos."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade de vendas finalizadas com prejuízo.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "ALL_COMMISSION",
+      "aliases": "ACOMM",
+      "description": {
+         "simple": "Retorna o total de comissões.",
+         "full": "Soma o montante financeiro total descontado de taxas de corretagem e comissão retidas nas ordens arquivadas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o valor consolidado cobrado em comissões pela corretora.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "BUY_COMMISSION",
+      "aliases": "BCOMM",
+      "description": {
+         "simple": "Retorna o total de comissões de compra.",
+         "full": "Soma os valores financeiros pagos exclusivamente em comissão corretiva nas transações de compra históricas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o total das taxas de comissão geradas por compras.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "SELL_COMMISSION",
+      "aliases": "SCOMM",
+      "description": {
+         "simple": "Retorna o total de comissões de venda.",
+         "full": "Soma os valores financeiros pagos exclusivamente em comissão corretiva nas transações de venda históricas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o total das taxas de comissão geradas por vendas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "ALL_SWAP",
+      "aliases": "ASWAP",
+      "description": {
+         "simple": "Retorna o total de trocas.",
+         "full": "Retorna o valor financeiro acumulado das taxas de juros de rolagem noturna (Swap) cobradas ou pagas nas posições encerradas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o somatório dos swaps acumulados de posições de rolagem.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "BUY_SWAP",
+      "aliases": "BSWAP",
+      "description": {
+         "simple": "Retorna o total de trocas de compra.",
+         "full": "Retorna as taxas de rolagem noturna acumuladas atreladas unicamente ao histórico de ordens compradas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o acúmulo de swap específico das compras encerradas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "SELL_SWAP",
+      "aliases": "SSWAP",
+      "description": {
+         "simple": "Retorna o total de trocas de venda.",
+         "full": "Retorna as taxas de rolagem noturna acumuladas atreladas unicamente ao histórico de ordens vendidas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o acúmulo de swap específico das vendas encerradas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "TICKET",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o ticket da ultima posição.",
+         "full": "Retorna o número de identificação ticket da última operação encerrada de forma cronológica no histórico recente."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número do ticket da última operação fechada de qualquer tipo.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso não existam históricos.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "TICKET_BUY",
+      "aliases": "TICKETB",
+      "description": {
+         "simple": "Retorna o ticket da ultima compra.",
+         "full": "Retorna o identificador numérico ticket da última ordem de compra arquivada e fechada no sistema."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número do ticket da última operação de compra fechada.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "TICKET_SELL",
+      "aliases": "TICKETS",
+      "description": {
+         "simple": "Retorna o ticket da ultima venda.",
+         "full": "Retorna o identificador numérico ticket da última ordem de venda arquivada e fechada no sistema."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número do ticket da última operação de venda fechada.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "GAIN_TICKET",
+      "aliases": "GTICKET",
+      "description": {
+         "simple": "Retorna o ticket da ultima posição com ganho.",
+         "full": "Filtra e retorna o ticket da última ordem encerrada que gerou um retorno financeiro de ganho (lucro)."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o identificador numérico da última operação vencedora fechada.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "GAIN_TICKET_BUY",
+      "aliases": "GTICKETB",
+      "description": {
+         "simple": "Retorna o ticket da ultima compra com ganho.",
+         "full": "Retorna o número identificador da operação de compra cronologicamente mais recente que foi encerrada no azul."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o identificador numérico da última operação de compra vencedora.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "GAIN_TICKET_SELL",
+      "aliases": "GTICKETS",
+      "description": {
+         "simple": "Retorna o ticket da ultima venda com ganho.",
+         "full": "Retorna o número identificador da operação de venda cronologicamente mais recente que foi encerrada no azul."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o identificador numérico da última operação de venda vencedora.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "LOSS_TICKET",
+      "aliases": "LTICKET",
+      "description": {
+         "simple": "Retorna o ticket da ultima posição com perda.",
+         "full": "Filtra e retorna o ticket identificador da última ordem fechada com resultado financeiro negativo."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o identificador numérico da última operação perdedora finalizada.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "LOSS_TICKET_BUY",
+      "aliases": "LTICKETB",
+      "description": {
+         "simple": "Retorna o ticket da ultima compra com perda.",
+         "full": "Retorna o identificador numérico da última compra do histórico arquivado encerrada no vermelho."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o identificador numérico da última compra que fechou com perdas.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "CLOSE_TRADE",
+      "name": "LOSS_TICKET_SELL",
+      "aliases": "LTICKETS",
+      "description": {
+         "simple": "Retorna o ticket da ultima venda com perda.",
+         "full": "Retorna o identificador numérico da última venda do histórico arquivado encerrada no vermelho."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o identificador numérico da última venda que fechou com perdas.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   }
+]

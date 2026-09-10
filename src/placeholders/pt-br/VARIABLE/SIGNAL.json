@@ -1,0 +1,482 @@
+[
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_TOTAL",
+      "aliases": "SIGTT",
+      "description": {
+         "simple": "Retorna a soma de todos os sinais do dia.",
+         "full": "Retorna o volume total numérico de sinais analíticos de trade disparados pelos setups ao ulongo do dia corrente."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade inteira agregada de todos os sinais acionados hoje.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_BUY",
+      "aliases": "SIGB",
+      "description": {
+         "simple": "Retorna a soma de sinais de compra.",
+         "full": "Retorna a contagem quantitativa inteira restrita apenas a sinais de entrada gerados para a ponta compradora."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a contagem acumulada de sinais direcionados para compra.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_SELL",
+      "aliases": "SIGS",
+      "description": {
+         "simple": "Retorna a soma de sinais de venda.",
+         "full": "Retorna a contagem quantitativa inteira restrita apenas a sinais de entrada gerados para a ponta vendedora."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a contagem acumulada de sinais direcionados para venda.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_LAST",
+      "aliases": "SIGL",
+      "description": {
+         "simple": "Retorna o tipo do último sinal. (-1 = Nenhum, 0 = Compra, 1 = Venda)",
+         "full": "Retorna o enumerador que representa em qual direção (Compra ou Venda) o último sinal válido de trading foi disparado."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o tipo de trade correspondente ao último sinal ativo.",
+            "type": {
+               "type": "ENUM_TRADE"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor correspondente a nenhum ou erro.",
+            "type": {
+               "type": "ENUM_TRADE"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_TIME",
+      "aliases": "SIGT",
+      "description": {
+         "simple": "Retorna a hora do último sinal.",
+         "full": "Retorna o registro em formato datetime contendo a estampa de tempo em que o sinal analítico global mais recente ocorreu."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp exato do último sinal.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_TIME_BUY",
+      "aliases": "SIGTB",
+      "description": {
+         "simple": "Retorna a hora do último sinal de compra.",
+         "full": "Retorna a estampa de tempo em formato datetime em que as regras de estratégia geraram o último sinal de Compra."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp do momento do último acionamento de compra.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_TIME_SELL",
+      "aliases": "SIGTS",
+      "description": {
+         "simple": "Retorna a hora do último sinal de venda.",
+         "full": "Retorna a estampa de tempo em formato datetime em que as regras de estratégia geraram o último sinal de Venda."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp do momento do último acionamento de venda.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_PRICE",
+      "aliases": "SIGP",
+      "description": {
+         "simple": "Retorna o preço do último sinal.",
+         "full": "Retorna o patamar de preço e cotação do ativo que estava sendo negociado no instante do disparo do sinal mais recente."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do preço no instante em que o sinal foi disparado.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_PRICE_BUY",
+      "aliases": "SIGPB",
+      "description": {
+         "simple": "Retorna o preço do último sinal de compra.",
+         "full": "Retorna a cotação exata do ativo registrada no momento imediato do disparo do último sinal direcionado para Compra."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o patamar de preço no acionamento do último sinal de compra.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_PRICE_SELL",
+      "aliases": "SIGPS",
+      "description": {
+         "simple": "Retorna o preço do último sinal de venda.",
+         "full": "Retorna a cotação exata do ativo registrada no momento imediato do disparo do último sinal direcionado para Venda."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o patamar de preço no acionamento do último sinal de venda.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_TOTAL_CONFIRM",
+      "aliases": "SIGTC",
+      "description": {
+         "simple": "Retorna a soma de sinais confirmados.",
+         "full": "Retorna a contagem quantitativa total de sinais gerados que passaram com sucesso pelas checagens adicionais de confirmação."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a contagem total de sinais que passaram pelos critérios de confirmação.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_LAST_CONFIRM",
+      "aliases": "SIGLC",
+      "description": {
+         "simple": "Retorna o tipo do último sinal confirmado. (-1 = Nenhum, 0 = Compra, 1 = Venda)",
+         "full": "Retorna a direção em formato enumerador correspondente ao último sinal que teve sua confirmação ativada e validada pelo robô."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o tipo de trade correspondente ao último sinal validado.",
+            "type": {
+               "type": "ENUM_TRADE"
+            }
+         },
+         "error": {
+            "message": "Retorna valor correspondente a nenhum.",
+            "type": {
+               "type": "ENUM_TRADE"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_BUY_CONFIRM",
+      "aliases": "SIGBC",
+      "description": {
+         "simple": "Retorna a soma de sinais de compra confirmados.",
+         "full": "Retorna a contagem acumulada inteira restrita a sinais do tipo Compra que obtiveram a validação das regras de confirmação."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número acumulado de sinais de compra validados.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_SELL_CONFIRM",
+      "aliases": "SIGSC",
+      "description": {
+         "simple": "Retorna a soma de sinais de venda confirmados.",
+         "full": "Retorna a contagem acumulada inteira restrita a sinais do tipo Venda que obtiveram a validação das regras de confirmação."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número acumulado de sinais de venda validados.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_TIME_LAST_CONFIRM",
+      "aliases": "SIGTLC",
+      "description": {
+         "simple": "Retorna a hora do último sinal confirmado.",
+         "full": "Retorna a estampa de tempo datetime exata em que ocorreu a confirmação analítica bem-sucedida do sinal mais recente."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp da validação do último sinal com sucesso.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_TIME_BUY_CONFIRM",
+      "aliases": "SIGTBC",
+      "description": {
+         "simple": "Retorna a hora do último sinal de compra confirmado.",
+         "full": "Retorna o registro temporal datetime do exato momento da confirmação estrutural do último sinal de Compra."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp do momento em que a compra obteve confirmação.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_TIME_SELL_CONFIRM",
+      "aliases": "SIGTSC",
+      "description": {
+         "simple": "Retorna a hora do último sinal de venda confirmado.",
+         "full": "Retorna o registro temporal datetime do exato momento da confirmação estrutural do último sinal de Venda."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp do momento em que a venda obteve confirmação.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_PRICE_LAST_CONFIRM",
+      "aliases": "SIGPLC",
+      "description": {
+         "simple": "Retorna o preço do último sinal confirmado.",
+         "full": "Retorna o patamar de preço de mercado registrado na fração de segundo em que o sinal global foi validado."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o preço do mercado no instante da última validação.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_PRICE_BUY_CONFIRM",
+      "aliases": "SIGPBC",
+      "description": {
+         "simple": "Retorna o preço do último sinal de compra confirmado.",
+         "full": "Retorna a cotação de mercado observada exatamente quando a validação do último sinal de Compra foi confirmada."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o patamar de preço no instante em que a compra foi confirmada.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "SIGNAL",
+      "name": "SIG_PRICE_SELL_CONFIRM",
+      "aliases": "SIGPSC",
+      "description": {
+         "simple": "Retorna o preço do último sinal de venda confirmado.",
+         "full": "Retorna a cotação de mercado observada exatamente quando a validação do último sinal de Venda foi confirmada."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o patamar de preço no instante em que a venda foi confirmada.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   }
+]

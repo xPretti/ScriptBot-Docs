@@ -1,0 +1,338 @@
+[
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "BALANCE",
+      "aliases": "BAL",
+      "description": {
+         "simple": "Retorna o saldo da conta.",
+         "full": "Retorna o saldo financeiro líquido e consolidado da conta de negociação, desconsiderando variações de posições flutuantes abertas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o valor monetário do saldo da conta.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "CREDIT",
+      "aliases": "CRED",
+      "description": {
+         "simple": "Retorna o crédito da conta.",
+         "full": "Retorna a quantia financeira de fundos de crédito não sacáveis concedidos pela corretora para suporte de margem operacional."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do crédito concedido na conta.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "EQUITY",
+      "aliases": "EQT",
+      "description": {
+         "simple": "Retorna o patrimônio líquido da conta.",
+         "full": "Retorna o patrimônio líquido (Equity) flutuante atualizado instantaneamente, somando o saldo e o lucro/prejuízo das ordens em aberto."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o patrimônio líquido flutuante (Equity) em tempo real.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "MARGIN",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna a margem da conta.",
+         "full": "Retorna o montante de dinheiro colateral retido e exigido pela corretora para manter todas as posições atuais abertas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna os fundos reservados como margem de garantia.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "MARGIN_FREE",
+      "aliases": "MARGF",
+      "description": {
+         "simple": "Retorna a margem livre da conta.",
+         "full": "Retorna o valor disponível em conta livre de garantias, utilizável para a abertura de novos contratos ou saques ordinários."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o valor da margem livre disponível para abrir novas posições.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "MARGIN_LEVEL",
+      "aliases": "MARGL",
+      "description": {
+         "simple": "Retorna o nível de margem da conta.",
+         "full": "Retorna a relação percentual calculada entre o patrimônio líquido e a margem retida, servindo de termômetro contra chamadas de margem (Margin Call)."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o percentual do nível de margem da conta.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "MARGIN_INITIAL",
+      "aliases": "MARGI",
+      "description": {
+         "simple": "Retorna a margem inicial da conta.",
+         "full": "Retorna o valor mínimo exigido de fundos para iniciar a abertura de posições de acordo com os ativos pretendidos."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna os fundos necessários para a margem inicial exigida.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "MARGIN_MAINTENANCE",
+      "aliases": "MARGM",
+      "description": {
+         "simple": "Retorna a margem de manutenção da conta.",
+         "full": "Retorna a quantia mínima obrigatória que deve permanecer em conta para evitar a liquidação compulsória (Stop Out) das posições."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a margem mínima de manutenção da conta.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "LOGIN",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o número da conta.",
+         "full": "Retorna o identificador numérico de registro primário (Login) correspondente à conta ativa conectada à plataforma."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o identificador numérico de login da conta.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "NAME",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o nome do titular da conta.",
+         "full": "Retorna a sequência textual representando o nome completo do investidor cadastrado e proprietário da conta corrente de negociação."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o nome completo cadastrado na conta do usuário.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia (\"\") caso falhe.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "SERVER",
+      "aliases": "SRV",
+      "description": {
+         "simple": "Retorna o servidor da conta.",
+         "full": "Retorna o nome do servidor ativo da corretora no qual o terminal está conectado (ex: Broker-Demo, Broker-Live)."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o nome do servidor de negociação da corretora.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia (\"\") caso falhe.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "CURRENCY",
+      "aliases": "CURR",
+      "description": {
+         "simple": "Retorna a moeda da conta.",
+         "full": "Retorna o código internacional de três letras da moeda padrão utilizada para depósito e liquidação financeira na conta."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o código da moeda base da conta (ex: 'BRL', 'USD').",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia (\"\") caso falhe.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "COMPANY",
+      "aliases": "COMP",
+      "description": {
+         "simple": "Retorna a empresa/corretora da conta.",
+         "full": "Retorna a identificação textual jurídica da corretora ou instituição financeira responsável pela custódia e intermediação da conta."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o nome da empresa corretora que hospeda a conta.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia (\"\") caso falhe.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "ACCOUNT",
+      "name": "LIMIT_ORDER",
+      "aliases": "LIMITO",
+      "description": {
+         "simple": "Retorna o limite máximo de ordens da conta.",
+         "full": "Retorna o teto numérico máximo permitido contratualmente pela corretora para ordens pendentes simultâneas na mesma conta."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade limite de ordens permitidas simultaneamente.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   }
+]

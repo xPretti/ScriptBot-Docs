@@ -1,0 +1,410 @@
+[
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_TICKET",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o ticket do pedido.",
+         "full": "Retorna o número do ticket identificador único do pedido atual no escopo local, permitindo rastrear a operação diretamente no servidor."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número do ticket identificador do pedido.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe ou não encontre o ticket.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_REQUEST",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o ticket de solicitação do pedido.",
+         "full": "Retorna o número do ticket de requisição enviado originalmente ao servidor, útil para auditoria e checagem de status de ordens enviadas."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número do ticket da solicitação.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_PARENT",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o ticket da ordem-mãe, se houver.",
+         "full": "Retorna o ticket identificador da ordem-mãe (parent) que originou a posição ou ordem atual, ideal para estratégias que utilizam ordens parciais ou dependentes."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número do ticket da ordem-mãe correspondente.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) se não houver ordem-mãe associada.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_MAGIC",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o magic number do pedido.",
+         "full": "Retorna o Magic Number (número mágico identificador) atribuído ao pedido, permitindo isolar e gerenciar operações de robôs específicos."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número mágico (ID identificador do robô) do pedido.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_SYMBOL",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o ativo no qual o pedido foi criado.",
+         "full": "Retorna o código textual (string) correspondente ao ativo/símbolo de mercado no qual o pedido local foi gerado."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o nome do ativo/símbolo (ex: 'EURUSD', 'PETR4').",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia (\"\") caso falhe.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_TIME",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o horário de abertura do pedido.",
+         "full": "Retorna a data e o horário exatos em que o pedido local foi criado e registrado, mensurado em segundos a partir da época padrão."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a data e o horário de abertura em segundos.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_PRICE",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o preço de abertura do pedido.",
+         "full": "Retorna o preço exato de execução ou de envio configurado para o pedido no escopo local."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do preço de execução do pedido.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_SL",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o preço do stop loss do pedido.",
+         "full": "Retorna a cotação de preço definida como Stop Loss para a proteção da posição ou ordem local configurada."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o preço configurado para o Stop Loss.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver Stop Loss definido ou em caso de erro.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_TP",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o preço do take profit do pedido.",
+         "full": "Retorna a cotação de preço definida como Take Profit (alvo de ganho) para a saída automatizada da ordem local."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o preço configurado para o Take Profit.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver Take Profit definido ou em caso de erro.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_PROFIT",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o lucro atual da posição.",
+         "full": "Retorna o lucro ou prejuízo flutuante em tempo real calculado especificamente para esta posição no escopo local."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do lucro flutuante atual da posição.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_VOLUME",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o volume atual do pedido.",
+         "full": "Retorna a quantidade de lotes ou contratos atuais alocados para o pedido ou para a posição local selecionada."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade de lotes/volume atual do pedido.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_UPTIME",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o tempo, em segundos, que o pedido está aberto.",
+         "full": "Calcula e retorna o tempo total decorrido, medido em segundos, desde a abertura inicial do pedido até o momento presente."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o tempo total decorrido em segundos.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_TYPE",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o tipo do pedido (0 = Compra, 1 = Venda).",
+         "full": "Retorna o enumerador de tipo de trade correspondente à direção do pedido (Compra ou Venda) mapeado localmente."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o identificador do tipo de trade ('TYPE_BUY' ou 'TYPE_SELL').",
+            "type": {
+               "type": "ENUM_TRADE"
+            }
+         },
+         "error": {
+            "message": "Retorna um valor padrão inválido caso falhe.",
+            "type": {
+               "type": "ENUM_TRADE"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_COMMENT",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o comentário associado ao pedido.",
+         "full": "Retorna o texto de comentário ou etiqueta string personalizada que foi vinculada ao pedido no momento de sua criação."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o texto contido no comentário do pedido.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia (\"\") caso falhe.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_FLAG_CHILD",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna se o pedido é uma ordem filha secundária.",
+         "full": "Verifica e retorna um estado lógico indicando se o pedido foi derivado de um gerenciamento interno como uma ordem parcial/filha."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro se o pedido for uma ordem filha secundária.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso caso não seja uma ordem filha ou em caso de erro.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_FLAG_CLIENT",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna se o pedido foi adicionado usando expressões lógicas.",
+         "full": "Retorna um indicador booleano confirmando se a operação foi solicitada diretamente pelas funções programáticas do cliente (ex: Buy(), Sell())."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a operação foi adicionada via expressões lógicas do cliente.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) caso contrário.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_POSITION",
+      "name": "_FLAG_SA",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna se o pedido foi adicionado pelo subsistema de Preço Médio Simples.",
+         "full": "Retorna verdadeiro se a ordem ou posição local foi gerada e gerenciada de forma automatizada pelo subsistema de Preço Médio Simples (Simple Average)."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se o pedido foi originado pelo subsistema de Preço Médio Simples.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) caso contrário.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   }
+]

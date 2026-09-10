@@ -1,0 +1,3521 @@
+[
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AllVolumeOpen",
+      "aliases": "AVolO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o volume total de todas as posições e ordens abertas.",
+         "full": "Esta função retorna o volume total combinado de todas as posições e ordens abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["AllVolumeOpen[\"PETR4\", 123456, -1, H1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume total de todas as posições e ordens abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições e ordens abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "BuyVolumeOpen",
+      "aliases": "BVolO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o volume total das posições e ordens de compra abertas.",
+         "full": "Esta função retorna o volume total combinado de todas as posições e ordens de compra abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["BuyVolumeOpen[\"VALE3\", 123456, -1, D1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume total das posições e ordens de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições e ordens de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "SellVolumeOpen",
+      "aliases": "SVolO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o volume total das posições e ordens de venda abertas.",
+         "full": "Esta função retorna o volume total combinado de todas as posições e ordens de venda abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["SellVolumeOpen[\"ITUB4\", 123456, -1, W1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume total das posições e ordens de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições e ordens de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AllPosVolumeOpen",
+      "aliases": "APVolO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o volume total de todas as posições abertas.",
+         "full": "Esta função retorna o volume total combinado de todas as posições abertas."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["AllPosVolumeOpen[\"BBAS3\", 123456, -1, MN1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume total de todas as posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "BuyPosVolumeOpen",
+      "aliases": "BPVolO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o volume total das posições de compra abertas.",
+         "full": "Esta função retorna o volume total combinado de todas as posições de compra abertas."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["BuyPosVolumeOpen[\"PETR4\", 123456, -1, H4]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume total das posições de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "SellPosVolumeOpen",
+      "aliases": "SPVolO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o volume total das posições de venda abertas.",
+         "full": "Esta função retorna o volume total combinado de todas as posições de venda abertas."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["SellPosVolumeOpen[\"VALE3\", 123456, -1, D1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume total das posições de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AllOrderVolumeOpen",
+      "aliases": "AOVolO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o volume total de todas as ordens pendentes.",
+         "full": "Esta função retorna o volume total combinado de todas as ordens pendentes, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["AllOrderVolumeOpen[\"ITUB4\", 123456, -1, W1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume total de todas as ordens pendentes.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver ordens pendentes.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "BuyOrderVolumeOpen",
+      "aliases": "BOVolO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o volume total das ordens de compra pendentes.",
+         "full": "Esta função retorna o volume total combinado de todas as ordens de compra pendentes, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["BuyOrderVolumeOpen[\"BBAS3\", 123456, -1, MN1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume total das ordens de compra pendentes.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver ordens de compra pendentes.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "SellOrderVolumeOpen",
+      "aliases": "SOVolO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o volume total das ordens de venda pendentes.",
+         "full": "Esta função retorna o volume total combinado de todas as ordens de venda pendentes, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["SellOrderVolumeOpen[\"PETR4\", 123456, -1, H1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume total das ordens de venda pendentes.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver ordens de venda pendentes.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AllOpen",
+      "aliases": "AOpen",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a quantidade total de posições e ordens abertas.",
+         "full": "Esta função retorna o total combinado de posições abertas e ordens pendentes, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["AllOpen[\"VALE3\", 123456, -1, D1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de posições e ordens abertas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver posições ou ordens abertas.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "BuyOpen",
+      "aliases": "BOpen",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a quantidade total de posições e ordens de compra abertas.",
+         "full": "Esta função retorna o total combinado de posições de compra abertas e ordens de compra pendentes, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["BuyOpen[\"ITUB4\", 123456, -1, W1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de posições e ordens de compra abertas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver posições ou ordens de compra abertas.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "SellOpen",
+      "aliases": "SOpen",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a quantidade total de posições e ordens de venda abertas.",
+         "full": "Esta função retorna o total combinado de posições de venda abertas e ordens de venda pendentes, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["SellOpen[\"BBAS3\", 123456, -1, MN1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de posições e ordens de venda abertas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver posições ou ordens de venda abertas.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AllPosOpen",
+      "aliases": "APosO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a quantidade total de posições abertas.",
+         "full": "Esta função retorna o total de posições abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["AllPosOpen[\"PETR4\", 123456, -1, H4]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de posições abertas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver posições abertas.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "BuyPosOpen",
+      "aliases": "BPosO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a quantidade total de posições de compra abertas.",
+         "full": "Esta função retorna o total de posições de compra abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["BuyPosOpen[\"VALE3\", 123456, -1, D1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de posições de compra abertas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver posições de compra abertas.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "SellPosOpen",
+      "aliases": "SPosO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a quantidade total de posições de venda abertas.",
+         "full": "Esta função retorna o total de posições de venda abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["SellPosOpen[\"ITUB4\", 123456, -1, W1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de posições de venda abertas.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver posições de venda abertas.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AllOrderOpen",
+      "aliases": "AOrderO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a quantidade total de ordens pendentes.",
+         "full": "Esta função retorna o total de ordens pendentes, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["AllOrderOpen[\"BBAS3\", 123456, -1, MN1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de ordens pendentes.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver ordens pendentes.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "BuyOrderOpen",
+      "aliases": "BOrderO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a quantidade total de ordens de compra pendentes.",
+         "full": "Esta função retorna o total de ordens de compra pendentes, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["BuyOrderOpen[\"PETR4\", 123456, -1, H1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de ordens de compra pendentes.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver ordens de compra pendentes.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "SellOrderOpen",
+      "aliases": "SOrderO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a quantidade total de ordens de venda pendentes.",
+         "full": "Esta função retorna o total de ordens de venda pendentes, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["SellOrderOpen[\"VALE3\", 123456, -1, D1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a quantidade total de ordens de venda pendentes.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver ordens de venda pendentes.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AllProfitOpen",
+      "aliases": "AProfitO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o lucro/prejuízo total de todas as posições abertas.",
+         "full": "Esta função retorna o lucro/prejuízo total combinado de todas as posições abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["AllProfitOpen[\"ITUB4\", 123456, -1, W1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o lucro/prejuízo total de todas as posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "BuyProfitOpen",
+      "aliases": "BProfitO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o lucro/prejuízo total das posições de compra abertas.",
+         "full": "Esta função retorna o lucro/prejuízo total combinado de todas as posições de compra abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["BuyProfitOpen[\"BBAS3\", 123456, -1, MN1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o lucro/prejuízo total das posições de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "SellProfitOpen",
+      "aliases": "SProfitO",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o lucro/prejuízo total das posições de venda abertas.",
+         "full": "Esta função retorna o lucro/prejuízo total combinado de todas as posições de venda abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "candle",
+            "comment": "Índice da vela de inicio (-1 para todas).",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         }
+      ],
+      "examples": ["SellProfitOpen[\"PETR4\", 123456, -1, H4]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o lucro/prejuízo total das posições de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AvgPrice",
+      "aliases": "PAvgP",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o preço médio das posições abertas.",
+         "full": "Esta função retorna o preço médio ponderado pelo volume de todas as posições abertas, considerando o tipo de operação e os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ENUM_POSITION_TYPE",
+               "typeLink": "/references/enumerators#position-type"
+            },
+            "name": "type",
+            "comment": "Tipo de posição (COMPRA/VENDA/TODAS).",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": ["AvgPrice(POSITION_TYPE_BUY, \"VALE3\", 123456)"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço médio das posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AvgDir",
+      "aliases": "PAvgDir",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a direção média das posições abertas.",
+         "full": "Esta função retorna a direção média ponderada das posições abertas, considerando o tipo de operação e os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ENUM_POSITION_TYPE",
+               "typeLink": "/references/enumerators#position-type"
+            },
+            "name": "type",
+            "comment": "Tipo de posição (COMPRA/VENDA/TODAS).",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": ["AvgDir(POSITION_TYPE_SELL, \"ITUB4\", 123456)"],
+      "returns": {
+         "success": {
+            "message": "Retorna a direção média das posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AllAvgPrice",
+      "aliases": "AAvgPrice",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o preço médio de todas as posições abertas.",
+         "full": "Esta função retorna o preço médio ponderado pelo volume de todas as posições abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": ["AllAvgPrice(\"BBAS3\", 123456)"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço médio de todas as posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "BuyAvgPrice",
+      "aliases": "BAvgPrice",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o preço médio das posições de compra abertas.",
+         "full": "Esta função retorna o preço médio ponderado pelo volume de todas as posições de compra abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": ["BuyAvgPrice(\"PETR4\", 123456)"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço médio das posições de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "SellAvgPrice",
+      "aliases": "SAvgPrice",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna o preço médio das posições de venda abertas.",
+         "full": "Esta função retorna o preço médio ponderado pelo volume de todas as posições de venda abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": ["SellAvgPrice(\"VALE3\", 123456)"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço médio das posições de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "AllAvgDir",
+      "aliases": "AAvgDir",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a direção média de todas as posições abertas.",
+         "full": "Esta função retorna a direção média ponderada de todas as posições abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": ["AllAvgDir(\"ITUB4\", 123456)"],
+      "returns": {
+         "success": {
+            "message": "Retorna a direção média de todas as posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "BuyAvgDir",
+      "aliases": "BAvgDir",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a direção média das posições de compra abertas.",
+         "full": "Esta função retorna a direção média ponderada de todas as posições de compra abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": ["BuyAvgDir(\"BBAS3\", 123456)"],
+      "returns": {
+         "success": {
+            "message": "Retorna a direção média das posições de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições de compra abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "SellAvgDir",
+      "aliases": "SAvgDir",
+      "version": "2.05",
+      "description": {
+         "simple": "Retorna a direção média das posições de venda abertas.",
+         "full": "Esta função retorna a direção média ponderada de todas as posições de venda abertas, considerando os filtros fornecidos."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": ["SellAvgDir(\"PETR4\", 123456)"],
+      "returns": {
+         "success": {
+            "message": "Retorna a direção média das posições de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se não houver posições de venda abertas.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosTicket",
+      "aliases": "PTicket",
+      "description": {
+         "simple": "Retorna o ticket da posição aberta mais próxima do índice informado.",
+         "full": "Esta função retorna o ticket da posição aberta mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de posições abertas, será retornado o ticket da última posição disponível (a de maior índice)."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "index",
+            "comment": "Indice da posição. Começando com 0 para a mais atual."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators#trade"
+            },
+            "name": "type",
+            "comment": "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         }
+      ],
+      "examples": ["PosTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ticket da posição.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosTicketExact",
+      "aliases": "PTicketE",
+      "version": "2.15",
+      "description": {
+         "simple": "Retorna o ticket da posição aberta no índice informado ou 0, caso não exista.",
+         "full": "Esta função retorna o ticket de uma posição aberta no índice exato informado. Caso não exista uma posição nesse índice, a função retorna 0."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "index",
+            "comment": "Indice da posição. Começando com 0 para a mais atual."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators#trade"
+            },
+            "name": "type",
+            "comment": "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         }
+      ],
+      "examples": ["PosTicketExact[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ticket da posição.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosDouble",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o valor de uma propriedade numérica (double) de uma posição.",
+         "full": "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma posição aberta, identificada pelo seu ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         },
+         {
+            "type": {
+               "type": "ENUM_POS_DOUBLE",
+               "typeLink": "/references/enumerators#position-property-double"
+            },
+            "name": "property",
+            "comment": "Propriedade da posição: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura)."
+         }
+      ],
+      "examples": [
+         "PosDouble[123456, TYPE_VOLUME] // Retorna o volume/lotes da posição",
+         "PosDouble[PosTicket[0], TYPE_OPEN] // Retorna o preço de abertura da posição"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor da propriedade solicitada.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se a posição não existir ou a propriedade for inválida.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosInt",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o valor de uma propriedade inteira de uma posição.",
+         "full": "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma posição aberta, identificada pelo seu ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         },
+         {
+            "type": {
+               "type": "ENUM_POS_INT",
+               "typeLink": "/references/enumerators#position-property-int"
+            },
+            "name": "property",
+            "comment": "Propriedade da posição: 'TYPE_TIME' (timestamp de abertura), 'TYPE_MAGIC' (número mágico)."
+         }
+      ],
+      "examples": [
+         "PosInt[123456, TYPE_TIME] // Retorna o timestamp de abertura da posição",
+         "PosInt[PosTicket[0], TYPE_MAGIC] // Retorna o número mágico da posição"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor da propriedade solicitada.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não existir ou a propriedade for inválida.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosString",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o valor de uma propriedade textual de uma posição.",
+         "full": "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma posição aberta, identificada pelo seu ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         },
+         {
+            "type": {
+               "type": "ENUM_POS_STRING",
+               "typeLink": "/references/enumerators#position-property-string"
+            },
+            "name": "property",
+            "comment": "Propriedade da posição: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação)."
+         }
+      ],
+      "examples": [
+         "PosString[123456, TYPE_SYMBOL] // Retorna o símbolo do ativo da posição",
+         "PosString[PosTicket[0], TYPE_COMMENT] // Retorna o comentário da posição"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor da propriedade solicitada.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia se a posição não existir ou a propriedade for inválida.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosCurrent",
+      "aliases": "PCurrent",
+      "description": {
+         "simple": "Retorna o preço atual de uma posição aberta.",
+         "full": "Esta função retorna o preço atual de uma posição aberta identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosCurrent[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço atual da posição.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosOpen",
+      "aliases": "PO",
+      "description": {
+         "simple": "Retorna o preço de abertura de uma posição.",
+         "full": "Esta função retorna o preço de abertura de uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosOpen[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço de abertura da posição.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosProfit",
+      "aliases": "PProfit",
+      "description": {
+         "simple": "Retorna o lucro atual de uma posição.",
+         "full": "Esta função retorna o lucro ou prejuízo atual (em moeda do ativo) de uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosProfit[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o lucro/prejuízo atual da posição.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosStop",
+      "aliases": "PSL",
+      "description": {
+         "simple": "Retorna o preço do Stop Loss de uma posição.",
+         "full": "Esta função retorna o preço definido para o Stop Loss de uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosStop[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço do Stop Loss.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não tiver Stop Loss definido ou não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosSwap",
+      "aliases": "PSWAP",
+      "description": {
+         "simple": "Retorna o valor do swap acumulado de uma posição.",
+         "full": "Esta função retorna o valor total de swap acumulado para uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosSwap[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor acumulado de swap.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosTake",
+      "aliases": "PTP",
+      "description": {
+         "simple": "Retorna o preço do Take Profit de uma posição.",
+         "full": "Esta função retorna o preço definido para o Take Profit de uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosTake[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço do Take Profit.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não tiver Take Profit definido ou não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosVolume",
+      "aliases": "PVol",
+      "description": {
+         "simple": "Retorna o volume de uma posição.",
+         "full": "Esta função retorna o volume (tamanho) de uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosVolume[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume da posição.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosIdentifier",
+      "aliases": "PIdent",
+      "description": {
+         "simple": "Retorna o identificador único de uma posição.",
+         "full": "Esta função retorna o identificador da posição, um valor único atribuído a cada nova posição aberta, que permanece inalterado durante toda a sua existência. Alterações na posição não modificam esse identificador."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosIdentifier[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ticket da posição.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosMagic",
+      "aliases": "PMagic",
+      "description": {
+         "simple": "Retorna o número mágico de uma posição.",
+         "full": "Esta função retorna o número mágico (identificador do robô) de uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosMagic[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o número mágico da posição.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosReason",
+      "aliases": "PReason",
+      "description": {
+         "simple": "Retorna o motivo de abertura de uma posição.",
+         "full": "Esta função retorna o código que indica o motivo pelo qual a posição foi aberta."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosReason[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o código do motivo de abertura. 0: Terminal desktop. 1: Aplicativo móvel. 2: Plataforma web. 3: Expert Advisor, script ou outro código MQL5",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosTime",
+      "aliases": "PT",
+      "description": {
+         "simple": "Retorna o horário de abertura de uma posição.",
+         "full": "Esta função retorna o horário de abertura de uma posição no formato datetime."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosTime[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o datetime de abertura da posição.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosTimeMsc",
+      "aliases": "PTMsc",
+      "description": {
+         "simple": "Retorna o horário de abertura de uma posição em milissegundos.",
+         "full": "Esta função retorna o horário de abertura de uma posição no formato datetime em milissegundos desde 01/01/1970."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosTimeMsc[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp em milissegundos.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosTimeUpdate",
+      "aliases": "PTUpdate",
+      "description": {
+         "simple": "Retorna o horário da última atualização de uma posição.",
+         "full": "Esta função retorna o horário da última atualização (modificação) de uma posição no formato datetime."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosTimeUpdate[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o datetime da última atualização.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosTimeUpdateMsc",
+      "aliases": "PTUpdateMsc",
+      "description": {
+         "simple": "Retorna o horário da última atualização de uma posição em milissegundos.",
+         "full": "Esta função retorna o horário da última atualização de uma posição no formato datetime em milissegundos desde 01/01/1970."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosTimeUpdateMsc[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp em milissegundos.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a posição não for encontrada.",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosType",
+      "aliases": "PType",
+      "description": {
+         "simple": "Retorna o tipo de uma posição (compra/venda).",
+         "full": "Esta função retorna o tipo da posição (0 para compra, 1 para venda) identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosType[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna 0 (compra) ou 1 (venda).",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna -1 se a posição não for encontrada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosSymbol",
+      "aliases": "PSymbol",
+      "description": {
+         "simple": "Retorna o símbolo do ativo de uma posição.",
+         "full": "Esta função retorna o símbolo do ativo negociado em uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosSymbol[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o símbolo do ativo.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna string vazia se a posição não for encontrada.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosComment",
+      "aliases": "PComment",
+      "description": {
+         "simple": "Retorna o comentário associado a uma posição.",
+         "full": "Esta função retorna o comentário/texto descritivo associado a uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosComment[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o comentário da posição.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna string vazia se a posição não for encontrada.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "PosExternal",
+      "aliases": "PExternal",
+      "description": {
+         "simple": "Retorna o ID externo de uma posição.",
+         "full": "Esta função retorna o identificador externo (gerado pelo servidor) de uma posição identificada pelo ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição."
+         }
+      ],
+      "examples": ["PosExternal[PosTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ID externo da posição.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna string vazia se a posição não for encontrada.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderTicket",
+      "aliases": "OTicket",
+      "description": {
+         "simple": "Retorna o ticket da ordem aberta mais próxima do índice informado.",
+         "full": "Esta função retorna o ticket da ordem aberta mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de ordens abertas, será retornado o ticket da última ordem disponível (a de maior índice)."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "index",
+            "comment": "Indice da ordem. Começando com 0 para a mais atual."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators#trade"
+            },
+            "name": "type",
+            "comment": "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         }
+      ],
+      "examples": ["OrderTicket[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ticket da ordem.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma ordem for encontrada com os parâmetros informados.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderTicketExact",
+      "aliases": "OTicketE",
+      "version": "2.15",
+      "description": {
+         "simple": "Retorna o ticket da ordem aberta no índice informado ou 0, caso não exista.",
+         "full": "Esta função retorna o ticket de uma ordem aberta no índice exato informado. Caso não exista uma ordem nesse índice, a função retorna 0."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "index",
+            "comment": "Indice da ordem. Começando com 0 para a mais atual."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators#trade"
+            },
+            "name": "type",
+            "comment": "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'.",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         }
+      ],
+      "examples": ["OrderTicketExact[0, TYPE_BUY] // Retorna o ticket da compra mais recente"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ticket da ordem.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma ordem for encontrada com os parâmetros informados.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderDouble",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o valor de uma propriedade numérica (double) de uma ordem.",
+         "full": "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma ordem aberta, identificada pelo seu ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         },
+         {
+            "type": {
+               "type": "ENUM_ORDER_DOUBLE",
+               "typeLink": "/references/enumerators#order-property-double"
+            },
+            "name": "property",
+            "comment": "Propriedade da ordem: 'TYPE_VOLUME' (volume/lotes), 'TYPE_OPEN' (preço de abertura)."
+         }
+      ],
+      "examples": [
+         "OrderDouble[123456, TYPE_VOLUME] // Retorna o volume/lotes da ordem",
+         "OrderDouble[OrderTicket[0], TYPE_OPEN] // Retorna o preço de abertura da ordem"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor da propriedade solicitada.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se a ordem não existir ou a propriedade for inválida.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderInt",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o valor de uma propriedade inteira de uma ordem.",
+         "full": "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma ordem aberta, identificada pelo seu ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         },
+         {
+            "type": {
+               "type": "ENUM_ORDER_INT",
+               "typeLink": "/references/enumerators#order-property-int"
+            },
+            "name": "property",
+            "comment": "Propriedade da ordem: 'TYPE_TIME_SETUP' (timestamp de abertura), 'TYPE_MAGIC' (número mágico)."
+         }
+      ],
+      "examples": [
+         "OrderInt[123456, TYPE_TIME_SETUP] // Retorna o timestamp de abertura da ordem",
+         "OrderInt[OrderTicket[0], TYPE_MAGIC] // Retorna o número mágico da ordem"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor da propriedade solicitada.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não existir ou a propriedade for inválida.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderString",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o valor de uma propriedade textual de uma ordem.",
+         "full": "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma ordem aberta, identificada pelo seu ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         },
+         {
+            "type": {
+               "type": "ENUM_ORDER_STRING",
+               "typeLink": "/references/enumerators#order-property-string"
+            },
+            "name": "property",
+            "comment": "Propriedade da ordem: 'TYPE_SYMBOL' (símbolo do ativo), 'TYPE_COMMENT' (comentário da operação)."
+         }
+      ],
+      "examples": [
+         "OrderString[123456, TYPE_SYMBOL] // Retorna o símbolo do ativo da ordem",
+         "OrderString[OrderTicket[0], TYPE_COMMENT] // Retorna o comentário da ordem"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor da propriedade solicitada.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia se a ordem não existir ou a propriedade for inválida.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderVolumeInit",
+      "aliases": "OVolInit",
+      "description": {
+         "simple": "Retorna o volume inicial de uma ordem pendente.",
+         "full": "Esta função retorna o volume inicial especificado quando a ordem pendente foi criada."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderVolumeInit[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume inicial da ordem.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderVolume",
+      "aliases": "OVol",
+      "description": {
+         "simple": "Retorna o volume atual de uma ordem.",
+         "full": "Esta função retorna o volume atual (tamanho) de uma ordem, que pode ter sido modificado após a criação."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderVolume[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume atual da ordem.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderOpen",
+      "aliases": "OO",
+      "description": {
+         "simple": "Retorna o preço de abertura de uma ordem.",
+         "full": "Esta função retorna o preço de abertura especificado para uma ordem pendente."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderOpen[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço de abertura da ordem.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderStop",
+      "aliases": "OSL",
+      "description": {
+         "simple": "Retorna o preço do Stop Loss de uma ordem.",
+         "full": "Esta função retorna o preço definido para o Stop Loss de uma ordem pendente."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderStop[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço do Stop Loss.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não tiver Stop Loss definido ou não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderTake",
+      "aliases": "OTP",
+      "description": {
+         "simple": "Retorna o preço do Take Profit de uma ordem.",
+         "full": "Esta função retorna o preço definido para o Take Profit de uma ordem pendente."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderTake[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço do Take Profit.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não tiver Take Profit definido ou não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderCurrent",
+      "aliases": "OCurrent",
+      "description": {
+         "simple": "Retorna o preço atual de uma ordem pendente.",
+         "full": "Esta função retorna o preço atual (de mercado) para o ativo da ordem pendente."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderCurrent[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço atual do ativo da ordem.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderStopLimit",
+      "aliases": "OSLLimit",
+      "description": {
+         "simple": "Retorna o preço de ativação para ordens Stop Limit.",
+         "full": "Esta função retorna o preço de ativação especificado para ordens do tipo Stop Limit."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderStopLimit[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço de ativação da Stop Limit.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for do tipo Stop Limit ou não for encontrada.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderSetup",
+      "aliases": "OSetup",
+      "description": {
+         "simple": "Retorna a data/hora de criação da ordem.",
+         "full": "Esta função retorna o momento em que a ordem foi criada no formato datetime."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderSetup[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o datetime de criação da ordem.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderType",
+      "aliases": "OType",
+      "description": {
+         "simple": "Retorna o tipo de uma ordem.",
+         "full": "Esta função retorna o tipo da ordem (compra/venda, stop/limit, etc) conforme enumerador de tipos de ordem."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderType[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o código do tipo de ordem. (0: Compra mercado, 1: Venda mercado, 2: Buy Limit, 3: Sell Limit, 4: Buy Stop, 5: Sell Stop, 6: Buy Stop Limit, 7: Sell Stop Limit, 8: Fechar por oposta)",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderState",
+      "aliases": "OState",
+      "description": {
+         "simple": "Retorna o estado atual de uma ordem.",
+         "full": "Esta função retorna o estado atual da ordem conforme enumerador de estados."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderState[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o código do estado da ordem. (0: Verificando, 1: Aceita, 2: Cancelada, 3: Parcial, 4: Executada, 5: Rejeitada, 6: Expirada, 7: Registrando, 8: Modificando, 9: Cancelando)",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderTimeExpiration",
+      "aliases": "OTExpira",
+      "description": {
+         "simple": "Retorna a data/hora de expiração de uma ordem.",
+         "full": "Esta função retorna o momento em que a ordem pendente irá expirar (se aplicável) no formato datetime."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderTimeExpiration[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o datetime de expiração da ordem.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não tiver expiração ou não for encontrada.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderDone",
+      "aliases": "ODone",
+      "description": {
+         "simple": "Retorna a data/hora de execução ou cancelamento de uma ordem.",
+         "full": "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato datetime."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderDone[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o datetime de execução/cancelamento.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem ainda estiver pendente ou não for encontrada.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderSetupMsc",
+      "aliases": "OSetupMsc",
+      "description": {
+         "simple": "Retorna a data/hora de criação da ordem em milissegundos.",
+         "full": "Esta função retorna o momento em que a ordem foi criada no formato timestamp em milissegundos desde 01/01/1970."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderSetupMsc[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp em milissegundos.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderDoneMsc",
+      "aliases": "ODoneMsc",
+      "description": {
+         "simple": "Retorna a data/hora de execução ou cancelamento em milissegundos.",
+         "full": "Esta função retorna o momento em que a ordem foi executada ou cancelada no formato timestamp em milissegundos desde 01/01/1970."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderDoneMsc[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp em milissegundos.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem ainda estiver pendente ou não for encontrada.",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderFilling",
+      "aliases": "OFilling",
+      "description": {
+         "simple": "Retorna a política de preenchimento de uma ordem.",
+         "full": "Esta função retorna o tipo de política de preenchimento (FOK, IOC, etc) conforme enumerador de tipos de preenchimento."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderFilling[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o código da política de preenchimento. (0: FOK (tudo ou nada), 1: IOC (tudo/parcial), 2: BOC (só livro), 3: Return (parcial continua))",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderTime",
+      "aliases": "OT",
+      "description": {
+         "simple": "Retorna a data/hora da última modificação da ordem.",
+         "full": "Esta função retorna o momento da última modificação da ordem no formato datetime."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderTime[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o datetime da última modificação.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderMagic",
+      "aliases": "OMagic",
+      "description": {
+         "simple": "Retorna o número mágico de uma ordem.",
+         "full": "Esta função retorna o número mágico (identificador personalizado do robô) associado a uma ordem."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderMagic[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o número mágico da ordem.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderReason",
+      "aliases": "OReason",
+      "description": {
+         "simple": "Retorna o motivo de criação da ordem.",
+         "full": "Esta função retorna o código que indica o motivo pelo qual a ordem foi criada (manual, EA, etc)."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderReason[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o código do motivo de criação. (0: Desktop, 1: Mobile, 2: Web, 3: Expert, 4: Stop Loss, 5: Take Profit, 6: Stop Out) ",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderId",
+      "aliases": "OId",
+      "description": {
+         "simple": "Retorna o ID da ordem no sistema.",
+         "full": "Esta função retorna o identificador único da ordem no sistema de negociação."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderId[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ID da ordem.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderById",
+      "aliases": "OById",
+      "description": {
+         "simple": "Retorna o ticket da ordem pelo ID do sistema.",
+         "full": "Esta função retorna o número do ticket correspondente a um ID de ordem no sistema."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "ID da ordem no sistema."
+         }
+      ],
+      "examples": ["OrderById[987654]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o número do ticket da ordem.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a ordem não for encontrada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderSymbol",
+      "aliases": "OSymbol",
+      "description": {
+         "simple": "Retorna o símbolo do ativo de uma ordem.",
+         "full": "Esta função retorna o símbolo do ativo negociado em uma ordem."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderSymbol[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o símbolo do ativo.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna string vazia se a ordem não for encontrada.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "OPEN_TRADE",
+      "name": "OrderComment",
+      "aliases": "OComment",
+      "description": {
+         "simple": "Retorna o comentário associado a uma ordem.",
+         "full": "Esta função retorna o comentário/texto descritivo associado a uma ordem."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem."
+         }
+      ],
+      "examples": ["OrderComment[OrderTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o comentário da ordem.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna string vazia se a ordem não for encontrada.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   }
+]

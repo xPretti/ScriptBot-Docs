@@ -1,0 +1,622 @@
+[
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "Last",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o último preço de negociação.",
+         "full": "Esta função retorna o valor do último preço de negociação para o símbolo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Last[\"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o último preço.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "LastHigh",
+      "aliases": "LastH",
+      "description": {
+         "simple": "Retorna o maior preço do último negócio.",
+         "full": "Esta função retorna o maior preço registrado no último negócio do símbolo informado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["LastHigh[\"VALE3\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o maior preço do último negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "LastLow",
+      "aliases": "LastL",
+      "description": {
+         "simple": "Retorna o menor preço do último negócio.",
+         "full": "Esta função retorna o menor preço registrado no último negócio do símbolo informado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["LastLow[\"VALE3\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o menor preço do último negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "Ask",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o preço de venda (ask).",
+         "full": "Esta função retorna o preço de venda (ask) atual do símbolo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Ask[\"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço de venda.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "AskHigh",
+      "aliases": "AskH",
+      "description": {
+         "simple": "Retorna o maior preço de venda (ask).",
+         "full": "Esta função retorna o maior valor de ask registrado no dia para o símbolo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["AskHigh[\"ITUB4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o maior preço de venda.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "AskLow",
+      "aliases": "AskL",
+      "description": {
+         "simple": "Retorna o menor preço de venda (ask).",
+         "full": "Esta função retorna o menor valor de ask registrado no dia para o símbolo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["AskLow[\"ITUB4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o menor preço de venda.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "Bid",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o preço de compra (bid).",
+         "full": "Esta função retorna o preço de compra (bid) atual do símbolo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Bid[\"BBAS3\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço de compra.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "BidHigh",
+      "aliases": "BidH",
+      "description": {
+         "simple": "Retorna o maior preço de compra (bid).",
+         "full": "Esta função retorna o maior valor de bid registrado no dia para o símbolo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["BidHigh[\"BBAS3\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o maior preço de compra.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "BidLow",
+      "aliases": "BidL",
+      "description": {
+         "simple": "Retorna o menor preço de compra (bid).",
+         "full": "Esta função retorna o menor valor de bid registrado no dia para o símbolo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["BidLow[\"BBAS3\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o menor preço de compra.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "LastTime",
+      "aliases": "LastT",
+      "description": {
+         "simple": "Retorna o horário do último negócio.",
+         "full": "Esta função retorna o horário da última negociação para o símbolo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["LastTime[\"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o horário da última negociação.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se o símbolo for inválido.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "DayStartTime",
+      "aliases": "DayST",
+      "description": {
+         "simple": "Retorna o horário de início do pregão no dia especificado.",
+         "full": "Esta função retorna o horário de abertura do pregão para o ativo no dia informado. Pode variar conforme o ativo e o mercado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "day",
+            "comment": "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["DayStartTime[0, \"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o horário de abertura do pregão.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna null se os dados estiverem indisponíveis.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "DayEndTime",
+      "aliases": "DayET",
+      "description": {
+         "simple": "Retorna o horário de encerramento do pregão no dia especificado.",
+         "full": "Esta função retorna o horário de fechamento do pregão para o ativo no dia informado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "day",
+            "comment": "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["DayEndTime[0, \"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o horário de fechamento do pregão.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna null se os dados estiverem indisponíveis.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "DayStartCandle",
+      "aliases": "DaySC",
+      "description": {
+         "simple": "Retorna a vela (candle) de início do dia.",
+         "full": "Esta função retorna o identificador da primeira vela (candle) do dia para o ativo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "day",
+            "comment": "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["DayStartCandle[20250719, \"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a vela inicial do dia.",
+            "type": {
+               "type": "uint"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver vela no dia.",
+            "type": {
+               "type": "uint"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "DayEndCandle",
+      "aliases": "DayEC",
+      "description": {
+         "simple": "Retorna a vela (candle) de fim do dia.",
+         "full": "Esta função retorna o identificador da última vela (candle) do dia para o ativo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "day",
+            "comment": "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["DayEndCandle[0, \"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a última vela do dia.",
+            "type": {
+               "type": "uint"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se não houver vela no dia.",
+            "type": {
+               "type": "uint"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "DayHigh",
+      "aliases": "DayH",
+      "description": {
+         "simple": "Retorna o maior preço do dia.",
+         "full": "Esta função retorna o maior valor de preço negociado no dia, para o timeframe e símbolo informados."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "day",
+            "comment": "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["DayHigh[0, M5, \"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o maior preço do dia.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se não houver dados.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "MARKET",
+      "name": "DayLow",
+      "aliases": "DayL",
+      "description": {
+         "simple": "Retorna o menor preço do dia.",
+         "full": "Esta função retorna o menor valor de preço negociado no dia, para o timeframe e símbolo informados."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "day",
+            "comment": "O valor do dia, sendo 0 o dia atual, 1 o dia anterior, etc."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["DayLow[0, M5, \"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o menor preço do dia.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna zero se não houver dados.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   }
+]

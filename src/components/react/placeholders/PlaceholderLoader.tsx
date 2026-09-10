@@ -1,6 +1,6 @@
 import type { PlaceholderType } from "@src/types/placeholder-type";
-import { FUNCTION_MAPPING } from "@src/data/functions-data";
-import { VARIABLE_MAPPING } from "@src/data/variables-data";
+import { FUNCTION_MAPPING } from "@src/data/placeholder-data";
+import { VARIABLE_MAPPING } from "@src/data/placeholder-data";
 import type { ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import PlaceholderTable from "./PlaceholderTable";
 

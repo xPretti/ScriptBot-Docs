@@ -1,0 +1,895 @@
+[
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealTicket",
+      "aliases": "DTicket",
+      "description": {
+         "simple": "Retorna o ticket da posição fechada mais próxima do índice informado.",
+         "full": "Esta função retorna o ticket da posição fechada mais próxima do índice informado. Caso o índice solicitado seja maior que a quantidade de posições fechadas, será retornado o ticket da última posição disponível (a de maior índice)."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "index",
+            "comment": "Indice da posição. Começando com 0 para a mais atual."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators#trade"
+            },
+            "name": "type",
+            "comment": "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ENUM_MARKET_ACTION",
+               "typeLink": "/references/enumerators#market-action"
+            },
+            "name": "actionType",
+            "comment": "Tipo de fechamento: 'TYPE_IN', 'TYPE_OUT', 'TYPE_ALL'.",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIME_HISTORIC",
+               "typeLink": "/references/enumerators#time-historic"
+            },
+            "name": "dateType",
+            "comment": "Tipo de data de inicio: 'TYPE_DAY', 'TYPE_WEEK'",
+            "value": "TYPE_DAY"
+         },
+         {
+            "type": {
+               "type": "ENUM_MARKET_GET",
+               "typeLink": "/references/enumerators#market-get"
+            },
+            "name": "profitType",
+            "comment": "Tipo de retorno de lucro: 'TYPE_POSITIVE', 'TYPE_NEGATIVE'",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         }
+      ],
+      "examples": [
+         "DealTicket[0, TYPE_BUY, TYPE_IN] // Retorna o ticket da última posição de compra (ordem de abertura).",
+         "DealTicket[0, TYPE_BUY, TYPE_OUT] // Retorna o ticket da última posição de compra (ordem que fechou)."
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o ticket da posição.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealTicketExact",
+      "aliases": "DTicketE",
+      "version": "2.15",
+      "description": {
+         "simple": "Retorna o ticket da posição fechada no índice informado ou 0, caso não exista.",
+         "full": "Esta função retorna o ticket de uma posição fechada no índice exato informado. Caso não exista uma posição nesse índice, a função retorna 0."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "index",
+            "comment": "Indice da posição. Começando com 0 para a mais atual."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators#trade"
+            },
+            "name": "type",
+            "comment": "Tipo de trade: 'TYPE_BUY', 'TYPE_SELL', 'TYPE_ALL'",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ENUM_MARKET_ACTION",
+               "typeLink": "/references/enumerators#market-action"
+            },
+            "name": "actionType",
+            "comment": "Tipo de fechamento: 'TYPE_IN', 'TYPE_OUT', 'TYPE_ALL'.",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ENUM_TIME_HISTORIC",
+               "typeLink": "/references/enumerators#time-historic"
+            },
+            "name": "dateType",
+            "comment": "Tipo de data de inicio: 'TYPE_DAY', 'TYPE_WEEK'",
+            "value": "TYPE_DAY"
+         },
+         {
+            "type": {
+               "type": "ENUM_MARKET_GET",
+               "typeLink": "/references/enumerators#market-get"
+            },
+            "name": "profitType",
+            "comment": "Tipo de retorno de lucro: 'TYPE_POSITIVE', 'TYPE_NEGATIVE'",
+            "value": "TYPE_ALL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         }
+      ],
+      "examples": [
+         "DealTicketExact[0, TYPE_BUY, TYPE_IN] // Retorna o ticket da última posição de compra (ordem de abertura).",
+         "DealTicketExact[0, TYPE_BUY, TYPE_OUT] // Retorna o ticket da última posição de compra (ordem que fechou)."
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o ticket da posição.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma posição for encontrada com os parâmetros informados.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealProfit",
+      "aliases": "DProfit",
+      "description": {
+         "simple": "Retorna o lucro/prejuízo de um negócio.",
+         "full": "Esta função retorna o valor do lucro ou prejuízo (em moeda do ativo) de um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealProfit[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do lucro/prejuízo do negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealOpen",
+      "aliases": "DO",
+      "description": {
+         "simple": "Retorna o preço de abertura de um negócio.",
+         "full": "Esta função retorna o preço de abertura de um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealOpen[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço de abertura do negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealCommission",
+      "aliases": "DComm",
+      "description": {
+         "simple": "Retorna o valor da comissão de um negócio.",
+         "full": "Esta função retorna o valor da comissão cobrada em um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealCommission[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor da comissão do negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealFee",
+      "aliases": "DFee",
+      "description": {
+         "simple": "Retorna o valor da taxa de um negócio.",
+         "full": "Esta função retorna o valor da taxa cobrada em um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealFee[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor da taxa do negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealStop",
+      "aliases": "DSL",
+      "description": {
+         "simple": "Retorna o preço do stop loss de um negócio.",
+         "full": "Esta função retorna o preço do stop loss definido para um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealStop[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço do stop loss do negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealTake",
+      "aliases": "DTP",
+      "description": {
+         "simple": "Retorna o preço do take profit de um negócio.",
+         "full": "Esta função retorna o preço do take profit definido para um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealTake[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço do take profit do negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealSwap",
+      "aliases": "DSwap",
+      "description": {
+         "simple": "Retorna o valor do swap de um negócio.",
+         "full": "Esta função retorna o valor do swap acumulado para um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealSwap[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do swap do negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealVolume",
+      "aliases": "DVol",
+      "description": {
+         "simple": "Retorna o volume de um negócio.",
+         "full": "Esta função retorna o volume negociado em um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealVolume[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume do negócio.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealMagic",
+      "aliases": "DMagic",
+      "description": {
+         "simple": "Retorna o número mágico de um negócio.",
+         "full": "Esta função retorna o identificador mágico (número de referência) associado a um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealMagic[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o número mágico do negócio.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealReason",
+      "aliases": "DReason",
+      "description": {
+         "simple": "Retorna o motivo da execução de um negócio.",
+         "full": "Esta função retorna o código que indica o motivo pelo qual o negócio foi executado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealReason[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o código do motivo da execução. (0=Cliente, 1=Mobile, 2=Web, 3=Expert, 4=Stop Loss, 5=Take Profit, 6=Stop Out, 7=Rollover, 8=Margem, 9=Split, 10=Ação corporativa)",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna -1 se o negócio não for encontrado.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealOrder",
+      "aliases": "DOrder",
+      "description": {
+         "simple": "Retorna o ticket da ordem associada a um negócio.",
+         "full": "Esta função retorna o número do ticket da ordem que gerou o negócio."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealOrder[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ticket da ordem associada.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealId",
+      "aliases": "DId",
+      "description": {
+         "simple": "Retorna o ID de um negócio.",
+         "full": "Esta função retorna o identificador único (ID) de um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealId[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ID do negócio.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealEntry",
+      "aliases": "DEntry",
+      "description": {
+         "simple": "Retorna o tipo de entrada de um negócio.",
+         "full": "Esta função retorna um código que indica o tipo de entrada de um negócio."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealEntry[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o código do tipo de entrada. (0=Entrada, 1=Saída, 2=Reversão, 3=Fechamento por oposta)",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealOut",
+      "aliases": "DOut",
+      "description": {
+         "simple": "Retorna se o negócio é uma saída.",
+         "full": "Esta função indica se o negócio atual representa uma saída no sistema."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealOut[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se o negócio for uma saída.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se o negócio for uma entrada ou se o negócio não for encontrado.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealIn",
+      "aliases": "DIn",
+      "description": {
+         "simple": "Retorna se o negócio é uma posição de entrada.",
+         "full": "Esta função indica se o negócio atual representa uma posição de entrada no sistema."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealIn[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se o negócio for uma entrada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se o negócio for uma saída ou se o negócio não for encontrado.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealTime",
+      "aliases": "DT",
+      "description": {
+         "simple": "Retorna a data/hora de execução de um negócio.",
+         "full": "Esta função retorna a data e hora (em formato datetime) quando o negócio foi executado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealTime[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a data/hora da execução do negócio.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealTimeMsc",
+      "aliases": "DTMsc",
+      "description": {
+         "simple": "Retorna o tempo de execução de negociações em milissegundos desde 01.01.1970",
+         "full": "Esta função retorna o tempo de execução de negociações em milissegundos desde 01.01.1970"
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealTimeMsc[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna a data/hora em milissegundos da execução do negócio.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealType",
+      "aliases": "DType",
+      "description": {
+         "simple": "Retorna o tipo de um negócio.",
+         "full": "Esta função retorna o tipo do negócio."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealType[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o código do tipo de negócio. (0=Compra, 1=Venda, 2=Saldo, 3=Crédito, 4=Cobrança extra, 5=Correção, 6=Bônus, 7=Comissão extra, 8=Comissão diária, 9=Comissão mensal, 10=Comissão diária do agente, 11=Comissão mensal do agente, 12=Juros, 13=Compra cancelada, 14=Venda cancelada, 15=Dividendo, 16=Dividendo isento, 17=Imposto)",
+            "type": {
+               "type": "uint"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se o negócio não for encontrado.",
+            "type": {
+               "type": "uint"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealComment",
+      "aliases": "DComment",
+      "description": {
+         "simple": "Retorna o comentário associado a um negócio.",
+         "full": "Esta função retorna o comentário/texto descritivo associado a um negócio específico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealComment[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o comentário do negócio.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna string vazia se o negócio não for encontrado.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealExternal",
+      "aliases": "DExternal",
+      "description": {
+         "simple": "Retorna o ID externo de um negócio.",
+         "full": "Esta função retorna identificador de negócios em um sistema de negociação externo (na troca)."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealExternal[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ID externo do negócio.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna string vazia se o negócio não for encontrado.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CLOSE_TRADE",
+      "name": "DealSymbol",
+      "aliases": "DSymbol",
+      "description": {
+         "simple": "Retorna o símbolo de um negócio.",
+         "full": "Esta função retorna o nome do símbolo no qual o negócio foi executado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica o negócio."
+         }
+      ],
+      "examples": ["DealSymbol[DealTicket[0]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o símbolo do negócio.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna string vazia se o negócio não for encontrado.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   }
+]

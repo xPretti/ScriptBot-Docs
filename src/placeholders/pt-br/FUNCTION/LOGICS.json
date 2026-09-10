@@ -1,0 +1,53 @@
+[
+   {
+      "type": "function",
+      "category": "LOGICS",
+      "name": "Seq",
+      "aliases": "",
+      "version": "2.15",
+      "description": {
+         "simple": "Executa múltiplas expressões em sequência.",
+         "full": "Esta função é usada para executar múltiplas expressões em sequência, garantindo que cada uma seja avaliada na ordem especificada."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "any"
+            },
+            "name": "expression1",
+            "comment": "Primeira expressão a ser executada."
+         },
+         {
+            "type": {
+               "type": "any"
+            },
+            "name": "expression2",
+            "comment": "Segunda expressão a ser executada.",
+            "value": "\"\""
+         },
+         {
+            "type": {
+               "type": "any"
+            },
+            "name": "expression...63",
+            "comment": "Outro parametro de expressão que será executado após a segunda, máximo de 63 parametros.",
+            "value": "\"\""
+         }
+      ],
+      "examples": ["Seq[Buy[...], Sell[...], PosCloseAll[...]]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um valor boolean (true) em caso de sucesso de todas as expressões executadas.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um valor boolean (false) em caso de uma expressão falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   }
+]

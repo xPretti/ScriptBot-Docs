@@ -1,0 +1,325 @@
+[
+   {
+      "type": "function",
+      "category": "CONVERTER",
+      "name": "ToPositive",
+      "aliases": "Pos",
+      "description": {
+         "simple": "Retorna o valor absoluto de um número.",
+         "full": "Esta função retorna o valor absoluto de um número, ou seja, o seu valor sem sinal (sempre positivo)."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "o valor a ser convertido."
+         }
+      ],
+      "examples": [
+         "ToPositive[-10] // Is 10",
+         "ToPositive[Close[0]-Open[0]] // Result of the calculation \"close [0] -Open [0]\" will be positive even when \"Open\" is larger."
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor absoluto.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CONVERTER",
+      "name": "ToNegative",
+      "aliases": "Neg",
+      "description": {
+         "simple": "Retorna o valor negativo de um número.",
+         "full": "Esta função retorna o valor negativo de um número, ou seja, o seu valor com sinal (sempre negativo)."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "o valor a ser convertido."
+         }
+      ],
+      "examples": [
+         "ToNegative[10] // Is -10",
+         "ToNegative[Close[0]-Open[0]] // Result of the calculation \"close [0] -Open [0]\" will be negative even when \"Open\" is smaller."
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor negativo.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CONVERTER",
+      "name": "ToTime",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o horário em forma de texto simples para data em segundos.",
+         "full": "Esta função retorna o horário em forma de texto para número em segundos. Com esta função você pode acessar a vela do dia usando um horário em forma de texto, por exemplo '13:00'."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "time",
+            "comment": "o valor do horário."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["ToTime[\"19:00\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o horário em segundos.",
+            "type": {
+               "type": "uint"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo uint (0).",
+            "type": {
+               "type": "uint"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CONVERTER",
+      "name": "ToTimeModify",
+      "aliases": "TMod",
+      "description": {
+         "simple": "Retorna o horário modificado.",
+         "full": "Esta função permite modificar um horário passado de referencia."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "time",
+            "comment": "o valor do horário em segundos."
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "seconds",
+            "comment": "O valor de segundos a ser modificado ou -1 para ignorar.",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "minutes",
+            "comment": "O valor de minutos a ser modificado ou -1 para ignorar.",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "hours",
+            "comment": "O valor de horas a ser modificado ou -1 para ignorar.",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "day",
+            "comment": "O valor do dia a ser modificado ou -1 para ignorar.",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "month",
+            "comment": "O valor do mês a ser modificado ou -1 para ignorar.",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "year",
+            "comment": "O valor do ano a ser modificado ou -1 para ignorar.",
+            "value": "-1"
+         }
+      ],
+      "examples": [
+         "ToTimeModify[TIME_CURRENT, 50, 10, 12] // I would modify the seconds, minutes and hours.",
+         "ToTimeModify[TIME_CURRENT, -1, -1, -1, 10] // I would only change the day, the other data would remain the same."
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o novo horário em segundos.",
+            "type": {
+               "type": "uint"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo uint (0).",
+            "type": {
+               "type": "uint"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CONVERTER",
+      "name": "ToTimeFormat",
+      "aliases": "TFormat",
+      "description": {
+         "simple": "Retorna o horário em forma de texto.",
+         "full": "Esta função transforma um valor em segundos em uma representação textual de horário."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "time",
+            "comment": "o valor do horário."
+         }
+      ],
+      "examples": ["ToTimeFormat[TIME_CURRENT] // It would be similar to: \"1970.01.01 19:00:00\""],
+      "returns": {
+         "success": {
+            "message": "Retorna o horário em forma de texto.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna a string vazia.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CONVERTER",
+      "name": "ToFormat",
+      "aliases": "Format",
+      "description": {
+         "simple": "Retorna uma nova string formatada.",
+         "full": "Esta função permite modificar um texto, formatando-o de acordo com os parâmetros definidos internamente."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "text",
+            "comment": "o valor do texto."
+         },
+         {
+            "type": {
+               "type": "any"
+            },
+            "name": "param1",
+            "comment": "Primeiro parametro que será formatado.",
+            "value": "\"\""
+         },
+         {
+            "type": {
+               "type": "any"
+            },
+            "name": "param...63",
+            "comment": "Os demais parametros que serão formatados. Não pode ser mais de 63.",
+            "value": "\"\""
+         }
+      ],
+      "examples": [
+         "ToFormat[\"Hello, {0}!\", \"World\"]] // New text: \"Hello, World!\"",
+         "ToFormat[\"My text is {0} and my number is {1}!\", \"Metatrader is God\", 10]] // New text: \"My text is Metatrader is God and my number is 10!\"",
+         "ToFormat[\"My list: {0}, {1}, again {0}!\", \"Jujubas\", 777]] // New text: \"My list: Jujubas, 777, again Jujubas!\""
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o novo texto formatado.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna a string vazia.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CONVERTER",
+      "name": "ToInt",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o valor convertido para inteiro.",
+         "full": "Esta função retorna o valor convertido para inteiro. Se o valor for uma string, ele será convertido para zero. Caso seja um número decimal, será arredondado para o inteiro mais próximo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "any"
+            },
+            "name": "value",
+            "comment": "o valor a ser convertido."
+         }
+      ],
+      "examples": ["ToInt[10.5] // Is 10", "ToInt[\"9999\"] // Is 9999", "ToInt[\"My age 30\"] // To convert to zero"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor convertido para inteiro.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo int (0).",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   }
+]

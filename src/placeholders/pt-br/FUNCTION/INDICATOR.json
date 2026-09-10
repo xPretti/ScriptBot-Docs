@@ -1,0 +1,96 @@
+[
+   {
+      "type": "function",
+      "category": "INDICATOR",
+      "name": "Indicator",
+      "aliases": "IND",
+      "description": {
+         "simple": "Retorna o valor do buffer de um indicador.",
+         "full": "Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "id",
+            "comment": "Categoria que o indicador esta instalado.",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "buffer",
+            "comment": "Buffer do indicador que armazena o valor.",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referância para obter o preço do indicador.",
+            "value": "0"
+         }
+      ],
+      "examples": ["CLOSE[1] <= IND[7, 0, 1] && CLOSE[0] >= IND[7, 1, 1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do buffer do indicador do tipo double.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0.0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "INDICATOR",
+      "name": "Indicator'X'",
+      "aliases": "IND'X'",
+      "description": {
+         "simple": "Retorna o valor do buffer de um indicador.",
+         "full": "Esta função acessa diretamente o buffer de um indicador e retorna os valores armazenados, permitindo a leitura dos dados calculados pelo indicador em cada barra do gráfico. Esta função é prefixada, sendo necessário substituir o 'x' por um valor entre 0 e 20, onde 'x' representa a categoria em que o indicador está configurado nas definições do robô."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "buffer",
+            "comment": "Buffer do indicador que armazena o valor.",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referância para obter o preço do indicador.",
+            "value": "0"
+         }
+      ],
+      "examples": ["IND1[buffer, candle]", "CLOSE[1] <= IND7[0, 1] && CLOSE[0] >= IND7[1, 1]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do buffer do indicador do tipo double.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0.0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   }
+]

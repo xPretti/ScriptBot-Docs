@@ -1,0 +1,364 @@
+[
+   {
+      "type": "function",
+      "category": "TIME",
+      "name": "IsTime",
+      "aliases": "",
+      "description": {
+         "simple": "Verifica se o tempo corresponde aos critérios informados.",
+         "full": "Esta função verifica se o horário de referência corresponde aos valores fornecidos para hora, minuto e segundo. Caso algum dos valores seja -1, ele será ignorado no critério."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "datetime"
+            },
+            "name": "timeRef",
+            "comment": "Horário de referência."
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "hour",
+            "comment": "Hora (0 a 23) ou -1 para ignorar.",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "minute",
+            "comment": "Minuto (0 a 59) ou -1 para ignorar.",
+            "value": "-1"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "second",
+            "comment": "Segundo (0 a 59) ou -1 para ignorar.",
+            "value": "-1"
+         }
+      ],
+      "examples": ["IsTime[TIME_CURRENT, 10] // Returns true if the hour is 10", "IsTime[TIME_CURRENT, -1, 30] // Returns true if the minute is 30"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se o horário corresponder aos critérios.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se não corresponder ou houver erro nos parâmetros.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TIME",
+      "name": "SymbolTime",
+      "aliases": "STime",
+      "description": {
+         "simple": "Retorna o horário atual do símbolo.",
+         "full": "Esta função retorna o horário atual do ativo (símbolo) no mercado correspondente."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["SymbolTime[\"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o horário atual do ativo.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna null se o símbolo for inválido.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TIME",
+      "name": "TimeLeft",
+      "aliases": "TLeft",
+      "description": {
+         "simple": "Retorna o tempo restante da vela atual.",
+         "full": "Esta função retorna quanto tempo falta para o término da vela atual no timeframe e símbolo especificados."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "Tempo gráfico.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["TimeLeft[M5, \"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o tempo restante (em segundos) da vela atual.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna -1 se os parâmetros forem inválidos.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TIME",
+      "name": "DayOfWeek",
+      "aliases": "DayW",
+      "description": {
+         "simple": "Retorna o dia da semana.",
+         "full": "Esta função retorna o dia da semana (0 = domingo, 1 = segunda, ..., 6 = sábado) do símbolo informado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["DayOfWeek[\"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o número correspondente ao dia da semana.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna -1 se não for possível determinar o dia.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TIME",
+      "name": "DayOfYear",
+      "aliases": "DayY",
+      "description": {
+         "simple": "Retorna o dia do ano.",
+         "full": "Esta função retorna o número do dia no ano (1 a 366) com base no horário atual do símbolo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["DayOfYear[\"VALE3\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o dia do ano.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna -1 se o símbolo for inválido.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TIME",
+      "name": "Month",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o mês atual.",
+         "full": "Esta função retorna o número do mês atual (1 a 12) com base no horário atual do símbolo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Month[\"VALE3\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o número do mês.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna -1 se não for possível determinar o mês.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TIME",
+      "name": "Year",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o ano atual.",
+         "full": "Esta função retorna o número do ano atual com base no horário do símbolo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Year[\"VALE3\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o ano atual (ex: 2025).",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna -1 se não for possível determinar o ano.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TIME",
+      "name": "StartTime",
+      "aliases": "StartT",
+      "description": {
+         "simple": "Retorna o horário inicial de referência.",
+         "full": "Esta função retorna o horário de início conforme o método informado. Pode representar abertura do dia, semana, mês, etc."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ENUM_TIME_HISTORIC",
+               "typeLink": "/references/enumerators#time-historic"
+            },
+            "name": "method",
+            "comment": "Método de cálculo (ex: 'TYPE_DAY', 'TYPE_WEEK' ...)."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["StartTime[TYPE_DAY, \"PETR4\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o horário de início conforme o método.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna null se o método ou símbolo for inválido.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TIME",
+      "name": "ValueOfTime",
+      "aliases": "ValueT",
+      "description": {
+         "simple": "Converte o horário em valor numérico baseado no método.",
+         "full": "Esta função retorna um valor numérico representando o tempo, conforme o método especificado. Podendo ser segundos, minutos, horas, etc.."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "datetime"
+            },
+            "name": "time",
+            "comment": "Horário a ser convertido."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIME",
+               "typeLink": "/references/enumerators#time-type"
+            },
+            "name": "method",
+            "comment": "Método de retorno. (ex: 'TYPE_SEC', 'TYPE_MIN' ...)."
+         }
+      ],
+      "examples": ["ValueOfTime[TimeNow, TYPE_SEC]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor numérico correspondente ao horário.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna -1 se o horário ou método forem inválidos.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   }
+]

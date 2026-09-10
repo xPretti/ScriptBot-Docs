@@ -1,0 +1,530 @@
+[
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "TOTAL_CANDLE",
+      "aliases": "TCANDLE",
+      "description": {
+         "simple": "Retorna o total de candles.",
+         "full": "Retorna a quantidade de barras/candles acumulados no histórico carregado no gráfico para o ativo e período atuais."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o total de barras/candles disponíveis no histórico do gráfico.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso ocorra algum erro.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "TIME_LEFT",
+      "aliases": "TLEFT",
+      "description": {
+         "simple": "Retorna o tempo restante.",
+         "full": "Mapeia e retorna a contagem regressiva em segundos até o fechamento oficial do candle atual no timeframe selecionado."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o tempo restante para o fechamento do candle atual em segundos.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "TIME_CURRENT",
+      "aliases": "TCURRENT",
+      "description": {
+         "simple": "Retorna o tempo atual.",
+         "full": "Retorna o último registro de data e hora conhecido do mercado e enviado pelo servidor de negociação da plataforma."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a última hora conhecida do servidor de mercado.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "TIME_LOCAL",
+      "aliases": "TLOCAL",
+      "description": {
+         "simple": "Retorna o tempo local.",
+         "full": "Retorna o horário corrente lido diretamente no relógio interno do sistema operacional/máquina onde o terminal está rodando."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o horário atual da máquina local onde o robô está rodando.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "TIME_SERVER",
+      "aliases": "TSERVER",
+      "description": {
+         "simple": "Retorna o tempo do servidor.",
+         "full": "Retorna o horário exato do servidor da corretora, utilizado para sincronização de tarefas temporais e horários de negociação."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o horário exato sincronizado com o servidor da corretora.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "DAY_OF_WEEK",
+      "aliases": "DAYW",
+      "description": {
+         "simple": "Retorna o dia da semana.",
+         "full": "Retorna um index inteiro representando o dia atual da semana (sendo 0 para Domingo, 1 para Segunda, até 6 para Sábado)."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o dia da semana atual (0 para Domingo, 1 para Segunda, etc.).",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "-1 caso ocorra um erro.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "DAY_OF_YEAR",
+      "aliases": "DAYY",
+      "description": {
+         "simple": "Retorna o dia do ano.",
+         "full": "Retorna o número do dia ordinal do ano corrente variando de 1 a 366 conforme o calendário juliano/gregoriano."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o dia corrido do ano (de 1 a 366).",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "-1 caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "MONTH",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o mês atual.",
+         "full": "Retorna o número inteiro do mês do ano corrente (iniciando em 1 para Janeiro e encerrando em 12 para Dezembro)."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o número do mês atual (1 para Janeiro, 12 para Dezembro).",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "-1 caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "YEAR",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o ano atual.",
+         "full": "Retorna o valor em formato de quatro dígitos correspondente ao ano civil em andamento mapeado pela plataforma."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o ano atual com quatro dígitos (ex: 2026).",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "-1 caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "LAST",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o último preço comercializado.",
+         "full": "Retorna o preço da última transação comercializada de fato no livro de ofertas do ativo (Last price)."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do último preço negociado no mercado.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "LAST_HIGH",
+      "aliases": "LASTH",
+      "description": {
+         "simple": "Retorna a máxima do dia.",
+         "full": "Retorna a cotação máxima absoluta registrada em negócios de balcão ou mercado para o ativo durante a sessão atual."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o maior preço atingido no dia corrente.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "LAST_LOW",
+      "aliases": "LASTL",
+      "description": {
+         "simple": "Retorna a mínima do dia.",
+         "full": "Retorna a cotação mínima absoluta registrada em negócios para o ativo durante a sessão diária em vigor."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o menor preço atingido no dia corrente.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "LAST_TIME",
+      "aliases": "LASTT",
+      "description": {
+         "simple": "Retorna o último tempo comercializado.",
+         "full": "Retorna o horário do último negócio registrado no ativo na bolsa ou ambiente de balcão em formato datetime."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o horário da última negociação realizada.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "ASK",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o preço de compra.",
+         "full": "Retorna o preço de venda atual de mercado mais baixo disponível (Ask), que representa o preço pago para entrar comprado."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o preço de oferta atual de compra (Ask).",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "ASK_HIGH",
+      "aliases": "ASKH",
+      "description": {
+         "simple": "Retorna o preço máximo de compra.",
+         "full": "Retorna a cotação mais elevada atingida pela linha de Ask (compra) ao ulongo do dia operacional ativo."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o maior valor de Ask atingido no dia.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "ASK_LOW",
+      "aliases": "ASKL",
+      "description": {
+         "simple": "Retorna o preço mínimo de compra.",
+         "full": "Retorna a menor cotação registrada para a linha de Ask (compra) durante a sessão corrente de mercado."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o menor valor de Ask atingido no dia.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "BID",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o preço de venda.",
+         "full": "Retorna o preço de compra atual de mercado mais alto disponível (Bid), representando a cotação de execução imediata de uma venda."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o preço de oferta atual de venda (Bid).",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "BID_HIGH",
+      "aliases": "BIDH",
+      "description": {
+         "simple": "Retorna o preço máximo de venda.",
+         "full": "Retorna a maior cotação de oferta de venda (Bid) registrada durante a sessão financeira atual."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o maior valor de Bid atingido no dia.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "BID_LOW",
+      "aliases": "BIDL",
+      "description": {
+         "simple": "Retorna o preço mínimo de venda.",
+         "full": "Retorna o menor patamar de preço de oferta de venda (Bid) observado ao ulongo do dia operacional vigente."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o menor valor de Bid atingido no dia.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "SYMBOL",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o ativo que o robô está operando.",
+         "full": "Retorna o nome descritivo do ativo financeiro principal configurado no gráfico ativo onde o robô executa a rotina."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a string contendo o nome do ativo configurado no gráfico.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia (\"\") caso falhe.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "MAGIC",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o id (magic number) que o robô está operando.",
+         "full": "Retorna o Magic Number global configurado nas definições de mercado para identificar as ordens deste robô."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o identificador numérico (magic number) definido na estratégia.",
+            "type": {
+               "type": "ulong"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "ulong"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "MARKET",
+      "name": "REAL",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o ativo real, o ativo que as ordens serão executadas.",
+         "full": "Retorna a identificação string do ativo espelho ou real para o envio direto de ordens, util em contas cross-market."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o nome correspondente do ativo real mapeado para execução.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna uma string vazia (\"\") caso falhe.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   }
+]

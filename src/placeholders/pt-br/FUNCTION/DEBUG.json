@@ -1,0 +1,144 @@
+[
+   {
+      "type": "function",
+      "category": "DEBUG",
+      "name": "Log",
+      "aliases": "",
+      "description": {
+         "simple": "Imprime um texto nas Logs do ScriptBot.",
+         "full": "Esta função é usada para imprimir um texto nas Logs do ScriptBot, ela é útil quando queremos separar textos de debug das Logs do Metatrader."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "text1",
+            "comment": "Texto a ser impresso."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "text2",
+            "comment": "Segundo parametro de texto que será concatenado ao primeiro.",
+            "value": "\"\""
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "text...63",
+            "comment": "Outro parametro de texto que será concatenado, máximo de 63 parametros.",
+            "value": "\"\""
+         }
+      ],
+      "examples": ["Log[\"Hello World!\"]", "Log[\"Symbol: \", SYMBOL, \" CurrentTime: \", TIME_CURRENT]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um valor boolean (true) em caso de sucesso de execução.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um valor boolean (false) em caso de erro de execução.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "DEBUG",
+      "name": "Print",
+      "aliases": "",
+      "description": {
+         "simple": "Imprime um texto nas logs do Metatrader.",
+         "full": "Esta função é usada para imprimir um texto nas logs do Metatrader, muito utilizada para depurar o código."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "text1",
+            "comment": "Texto a ser impresso."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "text2",
+            "comment": "Segundo parametro de texto que será concatenado ao primeiro.",
+            "value": "\"\""
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "text...63",
+            "comment": "Outro parametro de texto que será concatenado, máximo de 63 parametros.",
+            "value": "\"\""
+         }
+      ],
+      "examples": ["Print[\"Hello World!\"]", "Print[\"Symbol: \", SYMBOL, \" CurrentTime: \", TIME_CURRENT]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um valor boolean (true) em caso de sucesso de execução.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um valor boolean (false) em caso de erro de execução.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "DEBUG",
+      "name": "See",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o valor informado e exibe esse valor no log para depuração.",
+         "full": "Retorna o valor de uma expressão ou função, exibindo esse valor no log do robô para fins de depuração. A função não altera o resultado retornado, funcionando apenas como uma camada de visualização para acompanhar a execução do código."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "any"
+            },
+            "name": "value",
+            "comment": "Valor da expressão ou função a ser exibido no log."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "label",
+            "comment": "Rótulo para identificar o valor a ser exibido no log.",
+            "value": "\"\""
+         }
+      ],
+      "examples": ["See[PosTicket[0]]", "See[PosTicket[0], \"Ticket 0\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor do primeiro parâmetro.",
+            "type": {
+               "type": "any"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor do primeiro parâmetro.",
+            "type": {
+               "type": "any"
+            }
+         }
+      }
+   }
+]

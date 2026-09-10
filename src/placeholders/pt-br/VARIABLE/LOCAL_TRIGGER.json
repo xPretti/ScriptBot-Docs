@@ -1,0 +1,218 @@
+[
+   {
+      "type": "variable",
+      "category": "LOCAL_TRIGGER",
+      "name": "_TRIG_TYPE",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o tipo do gatilho. (0 = Compra, 1 = Venda)",
+         "full": "Retorna a classificação direcional do gatilho configurado na estratégia local, indicando se sua natureza é de compra ou de venda."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o tipo de trade associado ao gatilho ('TYPE_BUY' ou 'TYPE_SELL').",
+            "type": {
+               "type": "ENUM_TRADE"
+            }
+         },
+         "error": {
+            "message": "Retorna um valor padrão ou inválido caso falhe.",
+            "type": {
+               "type": "ENUM_TRADE"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_TRIGGER",
+      "name": "_TRIG_IS_OPERATION",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna se o gatilho é uma operação boleana.",
+         "full": "Verifica e retorna se o gatilho atual se comporta com base em uma validação puramente lógica/booleana matemática combinada."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se for avaliado como uma operação boleana.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) caso contrário.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_TRIGGER",
+      "name": "_TRIG_OPERATION",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o resultado da operação. (0 = Falso, 1 = Verdadeiro)",
+         "full": "Retorna o resultado final da validação lógica e matemática avaliada pelas regras internas do gatilho local."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a operação lógica do gatilho for validada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se falhar ou não for validada.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_TRIGGER",
+      "name": "_TRIG_PRICE",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o preço do gatilho, caso ele seja um gatilho de preço.",
+         "full": "Retorna o patamar de preço alvo específico estipulado nas configurações do gatilho de cotação."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o patamar de preço definido no gatilho.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 caso não seja um gatilho de preço ou falhe.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_TRIGGER",
+      "name": "_TRIG_WEIGHT_MIN",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o peso mínimo do filtro.",
+         "full": "Retorna a pontuação ou peso mínimo exigido pelo sistema de filtros de gatilho para autorizar o disparo de uma operação."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o valor numérico do peso mínimo exigido.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_TRIGGER",
+      "name": "_TRIG_WEIGHT_VALIDATE",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o peso total validado do filtro.",
+         "full": "Retorna a soma acumulada dos pesos de todos os critérios e filtros que foram validados com sucesso no cálculo atual."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna o peso total que foi validado com sucesso.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_TRIGGER",
+      "name": "_TRIG_VALIDS",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna a quantidade de filtros validados.",
+         "full": "Retorna a contagem quantitativa total de filtros gerais vinculados ao gatilho que atenderam com sucesso aos requisitos de validação."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a contagem total de filtros validados com sucesso.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso nenhum filtro seja validado ou falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_TRIGGER",
+      "name": "_TRIG_VALIDS_COM",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna a quantidade de filtros complementares validados.",
+         "full": "Retorna a contagem quantitativa de filtros definidos como opcionais ou complementares que foram ativados positivamente."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a contagem de filtros complementares validados.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "variable",
+      "category": "LOCAL_TRIGGER",
+      "name": "_TRIG_VALIDS_REQ",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna a quantidade de filtros obrigatórios validados.",
+         "full": "Retorna o número exato de filtros classificados como estritamente obrigatórios (required) que foram validados pelo gatilho."
+      },
+      "returns": {
+         "success": {
+            "message": "Retorna a contagem de filtros obrigatórios validados.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna zero (0) caso falhe.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   }
+]

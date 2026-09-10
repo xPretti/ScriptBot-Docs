@@ -1,0 +1,1388 @@
+[
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "BuyAuto",
+      "aliases": "",
+      "description": {
+         "simple": "Abre uma posição de compra no mercado.",
+         "full": "Esta função abre uma posição de compra no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (compra imediata ou pendente) é definido automaticamente."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "price",
+            "comment": "Preço de entrada para a ordem de compra."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "volume",
+            "comment": "Volume/lote da operação."
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "tpPoints",
+            "comment": "Pontos para o take profit (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "slPoints",
+            "comment": "Pontos para o stop loss (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "comment",
+            "comment": "Comentário associado à ordem.",
+            "value": "\"SB-PlaceByFunction\""
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo (vazio para usar o símbolo atual).",
+            "value": "REAL"
+         }
+      ],
+      "examples": [
+         "BuyAuto[ASK, 0.1, 100, 50] // Compra 0.1 lote no preço atual com TP 100 pontos e SL 50 pontos",
+         "BuyAuto[ASK, 0.5] // Compra 0.5 lote sem TP/SL",
+         "BuyAuto[ASK, 0.5, TickToPoint[20], TickToPoint[20]] // Compra 0.5 lote com TP/SL em 20 ticks"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna true se a ordem for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a ordem não for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "SellAuto",
+      "aliases": "",
+      "description": {
+         "simple": "Abre uma posição de venda no mercado.",
+         "full": "Esta função abre uma posição de venda no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (venda imediata ou pendente) é definido automaticamente."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "price",
+            "comment": "Preço de entrada para a ordem de venda."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "volume",
+            "comment": "Volume/lote da operação."
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "tpPoints",
+            "comment": "Pontos para o take profit (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "slPoints",
+            "comment": "Pontos para o stop loss (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "comment",
+            "comment": "Comentário associado à ordem.",
+            "value": "\"SB-PlaceByFunction\""
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo (vazio para usar o símbolo atual).",
+            "value": "REAL"
+         }
+      ],
+      "examples": [
+         "SellAuto[BID, 0.1, 100, 50] // Venda 0.1 lote no preço atual com TP 100 pontos e SL 50 pontos",
+         "SellAuto[BID, 0.5] // Venda 0.5 lote sem TP/SL",
+         "SellAuto[BID, 0.5, TickToPoint[20], TickToPoint[20]] // Venda 0.5 lote com TP/SL em 20 ticks"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna true se a ordem for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a ordem não for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "Buy",
+      "aliases": "",
+      "description": {
+         "simple": "Abre uma posição de compra no mercado atual.",
+         "full": "Esta função abre uma posição de compra no preço de mercado atual (Ask), com parâmetros opcionais de take profit, stop loss e comentário personalizado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "volume",
+            "comment": "Volume/lote da operação."
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "tpPoints",
+            "comment": "Pontos para o take profit (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "slPoints",
+            "comment": "Pontos para o stop loss (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "comment",
+            "comment": "Comentário associado à ordem.",
+            "value": "\"SB-PlaceByFunction\""
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo (vazio para usar o símbolo atual).",
+            "value": "REAL"
+         }
+      ],
+      "examples": [
+         "Buy[0.1, 100, 50] // Compra 0.1 lote no preço de mercado com TP 100 pontos e SL 50 pontos",
+         "Buy[0.5] // Compra 0.5 lote sem TP/SL",
+         "Buy[0.5, TickToPoint[20], TickToPoint[20]] // Compra 0.5 lote com TP/SL em 20 ticks"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna true se a ordem for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a ordem não for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "Sell",
+      "aliases": "",
+      "description": {
+         "simple": "Abre uma posição de venda no mercado atual.",
+         "full": "Esta função abre uma posição de venda no preço de mercado atual (Bid), com parâmetros opcionais de take profit, stop loss e comentário personalizado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "volume",
+            "comment": "Volume/lote da operação."
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "tpPoints",
+            "comment": "Pontos para o take profit (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "slPoints",
+            "comment": "Pontos para o stop loss (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "comment",
+            "comment": "Comentário associado à ordem.",
+            "value": "\"SB-PlaceByFunction\""
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo (vazio para usar o símbolo atual).",
+            "value": "REAL"
+         }
+      ],
+      "examples": [
+         "Sell[0.1, 100, 50] // Vende 0.1 lote no preço de mercado com TP 100 pontos e SL 50 pontos",
+         "Sell[0.5] // Vende 0.5 lote sem TP/SL",
+         "Sell[0.5, TickToPoint[20], TickToPoint[20]] // Vende 0.5 lote com TP/SL em 20 ticks"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna true se a ordem for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a ordem não for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "BuyOrder",
+      "aliases": "",
+      "description": {
+         "simple": "Coloca uma ordem pendente de compra.",
+         "full": "Esta função coloca uma ordem pendente de compra (Buy Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "price",
+            "comment": "Preço de ativação para a ordem pendente."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "volume",
+            "comment": "Volume/lote da operação."
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "tpPoints",
+            "comment": "Pontos para o take profit (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "slPoints",
+            "comment": "Pontos para o stop loss (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "comment",
+            "comment": "Comentário associado à ordem.",
+            "value": "\"SB-PlaceByFunction\""
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo (vazio para usar o símbolo atual).",
+            "value": "REAL"
+         }
+      ],
+      "examples": [
+         "BuyOrder[1.12000, 0.1, 100, 50] // Ordem pendente de compra em 1.12000 com TP 100 pontos e SL 50 pontos",
+         "BuyOrder[1.11500, 0.5] // Ordem pendente de compra em 1.11500 sem TP/SL",
+         "BuyOrder[1.11500, 0.5, TickToPoint[20], TickToPoint[20]] // Ordem pendente de compra em 1.11500 com TP/SL em 20 ticks"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna true se a ordem for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a ordem não for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "SellOrder",
+      "aliases": "",
+      "description": {
+         "simple": "Coloca uma ordem pendente de venda.",
+         "full": "Esta função coloca uma ordem pendente de venda (Sell Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "price",
+            "comment": "Preço de ativação para a ordem pendente."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "volume",
+            "comment": "Volume/lote da operação."
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "tpPoints",
+            "comment": "Pontos para o take profit (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "slPoints",
+            "comment": "Pontos para o stop loss (0 para desativar).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "comment",
+            "comment": "Comentário associado à ordem.",
+            "value": "\"SB-PlaceByFunction\""
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo (vazio para usar o símbolo atual).",
+            "value": "REAL"
+         }
+      ],
+      "examples": [
+         "SellOrder[1.13000, 0.1, 100, 50] // Ordem pendente de venda em 1.13000 com TP 100 pontos e SL 50 pontos",
+         "SellOrder[1.13500, 0.5] // Ordem pendente de venda em 1.13500 sem TP/SL",
+         "SellOrder[1.13500, 0.5, TickToPoint[20], TickToPoint[20]] // Ordem pendente de venda em 1.13500 com TP/SL em 20 ticks"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna true se a ordem for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a ordem não for executada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "PosClose",
+      "aliases": "",
+      "description": {
+         "simple": "Fecha uma posição aberta completamente.",
+         "full": "Esta função fecha completamente uma posição aberta no mercado, identificada pelo seu ticket. O fechamento é feito ao preço atual de mercado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição a ser fechada."
+         }
+      ],
+      "examples": ["PosClose[PosTicket[0]] // Fecha completamente a ultima posição aberta"],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a posição for fechada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a posição não for encontrada ou não puder ser fechada.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "PosClosePartial",
+      "aliases": "",
+      "description": {
+         "simple": "Fecha parcialmente uma posição aberta.",
+         "full": "Esta função fecha parcialmente uma posição aberta no mercado, reduzindo seu volume pelo valor especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição a ser parcialmente fechada."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "volume",
+            "comment": "Volume/lote a ser fechado."
+         }
+      ],
+      "examples": ["PosClosePartial[PosTicket[0], 0.5] // Fecha 0.5 lotes da ultima posição aberta"],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a posição for parcialmente fechada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a posição não for encontrada, o volume for inválido ou não puder ser fechada.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "OrderClose",
+      "aliases": "",
+      "description": {
+         "simple": "Cancela uma ordem pendente.",
+         "full": "Esta função cancela uma ordem pendente (limit/stop) identificada pelo seu ticket."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem pendente a ser cancelada."
+         }
+      ],
+      "examples": ["OrderClose[OrderTicket[0]] // Cancela a ultima ordem pendente"],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a ordem for cancelada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a ordem não for encontrada ou não puder ser cancelada.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "PosCloseAll",
+      "aliases": "",
+      "description": {
+         "simple": "Fecha todas as posições abertas.",
+         "full": "Esta função fecha todas as posições abertas no mercado, podendo ser filtradas por símbolo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": [
+         "PosCloseAll[] // Fecha todas as posições abertas em todos os símbolos",
+         "PosCloseAll[EURUSD] // Fecha todas as posições abertas somente no EURUSD"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o número de posições fechadas com sucesso.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma posição for fechada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "PosBuyCloseAll",
+      "aliases": "",
+      "description": {
+         "simple": "Fecha todas as posições de compra abertas.",
+         "full": "Esta função fecha todas as posições de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": [
+         "PosBuyCloseAll[] // Fecha todas as posições de compra em todos os símbolos",
+         "PosBuyCloseAll[EURUSD] // Fecha todas as posições de compra somente no EURUSD"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o número de posições de compra fechadas com sucesso.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma posição de compra for fechada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "PosSellCloseAll",
+      "aliases": "",
+      "description": {
+         "simple": "Fecha todas as posições de venda abertas.",
+         "full": "Esta função fecha todas as posições de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": [
+         "PosSellCloseAll[] // Fecha todas as posições de venda em todos os símbolos",
+         "PosSellCloseAll[EURUSD] // Fecha todas as posições de venda somente no EURUSD"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o número de posições de venda fechadas com sucesso.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma posição de venda for fechada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "OrderCloseAll",
+      "aliases": "",
+      "version": "2.08",
+      "description": {
+         "simple": "Fecha todas as ordens abertas.",
+         "full": "Esta função fecha todas as ordens abertas no mercado, podendo ser filtradas por símbolo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": [
+         "OrderCloseAll[] // Fecha todas as ordens abertas em todos os símbolos",
+         "OrderCloseAll[EURUSD] // Fecha todas as ordens abertas somente no EURUSD"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o número de ordens fechadas com sucesso.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma ordem for fechada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "OrderBuyCloseAll",
+      "aliases": "",
+      "version": "2.08",
+      "description": {
+         "simple": "Fecha todas as ordens de compra abertas.",
+         "full": "Esta função fecha todas as ordens de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": [
+         "OrderBuyCloseAll[] // Fecha todas as ordens de compra em todos os símbolos",
+         "OrderBuyCloseAll[EURUSD] // Fecha todas as ordens de compra somente no EURUSD"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o número de ordens de compra fechadas com sucesso.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma ordem de compra for fechada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "OrderSellCloseAll",
+      "aliases": "",
+      "version": "2.08",
+      "description": {
+         "simple": "Fecha todas as ordens de venda abertas.",
+         "full": "Esta função fecha todas as ordens de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "Símbolo do ativo.",
+            "value": "REAL"
+         },
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "magic",
+            "comment": "Número mágico para filtrar as operações.",
+            "value": "MAGIC"
+         }
+      ],
+      "examples": [
+         "OrderSellCloseAll[] // Fecha todas as ordens de venda em todos os símbolos",
+         "OrderSellCloseAll[EURUSD] // Fecha todas as ordens de venda somente no EURUSD"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o número de ordens de venda fechadas com sucesso.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se nenhuma ordem de venda for fechada.",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "PosModify",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica os níveis de take profit e stop loss de uma posição aberta.",
+         "full": "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição a ser modificada."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE_MODIFY",
+               "typeLink": "/references/enumerators#trade-modify"
+            },
+            "name": "method",
+            "comment": "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "take",
+            "comment": "Valor do novo take. (0= ignora).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "stop",
+            "comment": "Valor do novo stop loss. (0= ignora).",
+            "value": "0"
+         }
+      ],
+      "examples": [
+         "PosModify[123456, TYPE_PRICE, 1.12500, 1.11500] // Altera TP para 1.12500 e SL para 1.11500 (valores absolutos)",
+         "PosModify[123456, TYPE_POINT, 300, 150] // Altera TP para +300 pontos e SL para -150 pontos do preço de abertura"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "PosModifyTake",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica apenas o take profit de uma posição aberta.",
+         "full": "Esta função permite alterar somente o nível de take profit de uma posição aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição a ser modificada."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE_MODIFY",
+               "typeLink": "/references/enumerators#trade-modify"
+            },
+            "name": "method",
+            "comment": "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "take",
+            "comment": "Valor do novo take profit (0 mantém inalterado).",
+            "value": "0"
+         }
+      ],
+      "examples": [
+         "PosModifyTake[123456, TYPE_PRICE, 1.12500] // Altera TP para 1.12500 (valor absoluto)",
+         "PosModifyTake[123456, TYPE_POINT, 300] // Altera TP para +300 pontos do preço de abertura"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "PosModifyStop",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica apenas o stop loss de uma posição aberta.",
+         "full": "Esta função permite alterar somente o nível de stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição a ser modificada."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE_MODIFY",
+               "typeLink": "/references/enumerators#trade-modify"
+            },
+            "name": "method",
+            "comment": "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "stop",
+            "comment": "Valor do novo stop loss (0 mantém inalterado).",
+            "value": "0"
+         }
+      ],
+      "examples": [
+         "PosModifyStop[123456, TYPE_PRICE, 1.11500] // Altera SL para 1.11500 (valor absoluto)",
+         "PosModifyStop[123456, TYPE_POINT, 150] // Altera SL para -150 pontos do preço de abertura"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a posição não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "OrderModify",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica os níveis de take profit e stop loss de uma ordem aberta.",
+         "full": "Esta função permite alterar os níveis de take profit e/ou stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem a ser modificada."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE_MODIFY",
+               "typeLink": "/references/enumerators#trade-modify"
+            },
+            "name": "method",
+            "comment": "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "take",
+            "comment": "Valor do novo take. (0= ignora).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "stop",
+            "comment": "Valor do novo stop loss. (0= ignora).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "price",
+            "comment": "Valor do novo preço. (0= ignora).",
+            "value": "0"
+         }
+      ],
+      "examples": [
+         "OrderModify[123456, TYPE_PRICE, 1.12500, 1.11500] // Altera TP para 1.12500 e SL para 1.11500 (valores absolutos)",
+         "OrderModify[123456, TYPE_POINT, 300, 150] // Altera TP para +300 pontos e SL para -150 pontos do preço de abertura"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "OrderModifyTake",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica apenas o take profit de uma ordem aberta.",
+         "full": "Esta função permite alterar somente o nível de take profit de uma ordem aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem a ser modificada."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE_MODIFY",
+               "typeLink": "/references/enumerators#trade-modify"
+            },
+            "name": "method",
+            "comment": "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "take",
+            "comment": "Valor do novo take profit (0 mantém inalterado).",
+            "value": "0"
+         }
+      ],
+      "examples": [
+         "OrderModifyTake[123456, TYPE_PRICE, 1.12500] // Altera TP para 1.12500 (valor absoluto)",
+         "OrderModifyTake[123456, TYPE_POINT, 300] // Altera TP para +300 pontos do preço de abertura"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "OrderModifyStop",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica apenas o stop loss de uma ordem aberta.",
+         "full": "Esta função permite alterar somente o nível de stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem a ser modificada."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE_MODIFY",
+               "typeLink": "/references/enumerators#trade-modify"
+            },
+            "name": "method",
+            "comment": "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "stop",
+            "comment": "Valor do novo stop loss (0 mantém inalterado).",
+            "value": "0"
+         }
+      ],
+      "examples": [
+         "OrderModifyStop[123456, TYPE_PRICE, 1.11500] // Altera SL para 1.11500 (valor absoluto)",
+         "OrderModifyStop[123456, TYPE_POINT, 150] // Altera SL para -150 pontos do preço de abertura"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "OrderModifyPrice",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica apenas o preço de uma ordem aberta.",
+         "full": "Esta função permite alterar somente o preço de uma ordem aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a ordem a ser modificada."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "price",
+            "comment": "Valor do novo preço."
+         }
+      ],
+      "examples": ["OrderModifyPrice[123456, 1.11500] // Altera preço para 1.11500"],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a ordem não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "Modify",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica os níveis de take profit e stop loss de uma posição ou ordem aberta.",
+         "full": "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição a ser modificada."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE_MODIFY",
+               "typeLink": "/references/enumerators#trade-modify"
+            },
+            "name": "method",
+            "comment": "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "take",
+            "comment": "Valor do novo take. (0= ignora).",
+            "value": "0"
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "stop",
+            "comment": "Valor do novo stop loss. (0= ignora).",
+            "value": "0"
+         }
+      ],
+      "examples": [
+         "Modify[123456, TYPE_PRICE, 1.12500, 1.11500] // Altera TP para 1.12500 e SL para 1.11500 (valores absolutos)",
+         "Modify[123456, TYPE_POINT, 300, 150] // Altera TP para +300 pontos e SL para -150 pontos do preço de abertura"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "ModifyTake",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica apenas o take profit de uma posição ou ordem aberta.",
+         "full": "Esta função permite alterar somente o nível de take profit de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição a ser modificada."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE_MODIFY",
+               "typeLink": "/references/enumerators#trade-modify"
+            },
+            "name": "method",
+            "comment": "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "take",
+            "comment": "Valor do novo take profit (0 mantém inalterado).",
+            "value": "0"
+         }
+      ],
+      "examples": [
+         "ModifyTake[123456, TYPE_PRICE, 1.12500] // Altera TP para 1.12500 (valor absoluto)",
+         "ModifyTake[123456, TYPE_POINT, 300] // Altera TP para +300 pontos do preço de abertura"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "TRADE",
+      "name": "ModifyStop",
+      "aliases": "",
+      "description": {
+         "simple": "Modifica apenas o stop loss de uma posição ou ordem aberta.",
+         "full": "Esta função permite alterar somente o nível de stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "ulong"
+            },
+            "name": "ticket",
+            "comment": "Número do ticket que identifica a posição a ser modificada."
+         },
+         {
+            "type": {
+               "type": "ENUM_TRADE_MODIFY",
+               "typeLink": "/references/enumerators#trade-modify"
+            },
+            "name": "method",
+            "comment": "Método de cálculo: 'TYPE_PRICE', 'TYPE_POINT'."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "stop",
+            "comment": "Valor do novo stop loss (0 mantém inalterado).",
+            "value": "0"
+         }
+      ],
+      "examples": [
+         "ModifyStop[123456, TYPE_PRICE, 1.11500] // Altera SL para 1.11500 (valor absoluto)",
+         "ModifyStop[123456, TYPE_POINT, 150] // Altera SL para -150 pontos do preço de abertura"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna verdadeiro (true) se a modificação for bem-sucedida.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna falso (false) se a posição ou ordem não for encontrada ou a modificação falhar.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   }
+]

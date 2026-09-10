@@ -1,0 +1,310 @@
+[
+   {
+      "type": "function",
+      "category": "GLOBAL_VARIABLE",
+      "name": "GetGlobal",
+      "aliases": "GetG",
+      "version": "2.06",
+      "description": {
+         "simple": "Obtém o valor de uma variável global do tipo double.",
+         "full": "Esta função retorna o valor armazenado em uma variável global do tipo double. Se a variável não existir, retorna 0.0."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "name",
+            "comment": "Nome da variável global."
+         }
+      ],
+      "examples": ["GetGlobal(\"minha_variavel\")"],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor double da variável global.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna 0.0 se a variável não existir.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "GLOBAL_VARIABLE",
+      "name": "CreateGlobal",
+      "aliases": "CreG",
+      "version": "2.06",
+      "description": {
+         "simple": "Cria uma nova variável global do tipo double.",
+         "full": "Esta função cria uma nova variável global do tipo double com o valor especificado. Retorna false se a variável já existir."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "name",
+            "comment": "Nome da variável global."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "Valor inicial da variável."
+         }
+      ],
+      "examples": ["CreateGlobal(\"nova_variavel\", 123.45)"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se a variável foi criada com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a variável já existir ou ocorrer um erro.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "GLOBAL_VARIABLE",
+      "name": "ReplaceGlobal",
+      "aliases": "RepG",
+      "version": "2.06",
+      "description": {
+         "simple": "Substitui o valor de uma variável global existente.",
+         "full": "Esta função substitui o valor de uma variável global do tipo double existente. Retorna false se a variável não existir."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "name",
+            "comment": "Nome da variável global."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "Novo valor da variável."
+         }
+      ],
+      "examples": ["ReplaceGlobal(\"minha_variavel\", 678.90)"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se o valor foi substituído com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a variável não existir ou ocorrer um erro.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "GLOBAL_VARIABLE",
+      "name": "GetGlobalTime",
+      "aliases": "GetGT",
+      "version": "2.06",
+      "description": {
+         "simple": "Obtém o timestamp do último acesso de uma variável global.",
+         "full": "Esta função retorna o timestamp do último acesso (leitura ou escrita) de uma variável global do tipo double."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "name",
+            "comment": "Nome da variável global."
+         }
+      ],
+      "examples": ["GetGlobalTime(\"minha_variavel\")"],
+      "returns": {
+         "success": {
+            "message": "Retorna o timestamp do último acesso da variável.",
+            "type": {
+               "type": "datetime"
+            }
+         },
+         "error": {
+            "message": "Retorna 0 se a variável não existir.",
+            "type": {
+               "type": "datetime"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "GLOBAL_VARIABLE",
+      "name": "SetGlobal",
+      "aliases": "SetG",
+      "version": "2.06",
+      "description": {
+         "simple": "Define o valor de uma variável global (cria se não existir).",
+         "full": "Esta função define o valor de uma variável global do tipo double. Se a variável não existir, ela será criada."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "name",
+            "comment": "Nome da variável global."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "Valor a ser definido."
+         }
+      ],
+      "examples": ["SetGlobal(\"minha_variavel\", 555.55)"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se o valor foi definido com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se ocorrer um erro.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "GLOBAL_VARIABLE",
+      "name": "AddGlobal",
+      "aliases": "AddG",
+      "version": "2.06",
+      "description": {
+         "simple": "Adiciona um valor a uma variável global existente.",
+         "full": "Esta função adiciona um valor ao valor atual de uma variável global do tipo double. A variável deve existir previamente."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "name",
+            "comment": "Nome da variável global."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "Valor a ser adicionado."
+         }
+      ],
+      "examples": ["AddGlobal(\"contador\", 1.0)"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se o valor foi adicionado com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a variável não existir ou ocorrer um erro.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "GLOBAL_VARIABLE",
+      "name": "RemoveGlobal",
+      "aliases": "RemG",
+      "version": "2.06",
+      "description": {
+         "simple": "Remove uma variável global do tipo double.",
+         "full": "Esta função remove uma variável global do tipo double do sistema. Retorna false se a variável não existir."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "name",
+            "comment": "Nome da variável global a ser removida."
+         }
+      ],
+      "examples": ["RemoveGlobal(\"variavel_antiga\")"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se a variável foi removida com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se a variável não existir ou ocorrer um erro.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "GLOBAL_VARIABLE",
+      "name": "ClearGlobal",
+      "aliases": "ClrG",
+      "version": "2.06",
+      "description": {
+         "simple": "Limpa variáveis globais com um prefixo específico.",
+         "full": "Esta função remove todas as variáveis globais do tipo double que começam com o prefixo especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "prefix",
+            "comment": "Prefixo das variáveis a serem removidas."
+         }
+      ],
+      "examples": ["ClearGlobal(\"temp_\")"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se as variáveis foram removidas com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se ocorrer um erro.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   }
+]

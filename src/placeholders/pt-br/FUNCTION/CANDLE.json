@@ -1,0 +1,633 @@
+[
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "Open",
+      "aliases": "O",
+      "description": {
+         "simple": "Retorna o preço de abertura de uma vela.",
+         "full": "Esta função retorna o preço de abertura de uma vela."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Open[1]", "Open[1, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço da vela.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0.0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "Close",
+      "aliases": "C",
+      "description": {
+         "simple": "Retorna o preço de fechamento de uma vela.",
+         "full": "Esta função retorna o preço de fechamento de uma vela."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Close[1]", "Close[1, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço da vela.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0.0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "High",
+      "aliases": "H",
+      "description": {
+         "simple": "Retorna o preço da máxima de uma vela.",
+         "full": "Esta função retorna o preço da máxima de uma vela."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["High[1]", "High[1, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço da vela.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0.0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "Low",
+      "aliases": "L",
+      "description": {
+         "simple": "Retorna o preço da mínima de uma vela.",
+         "full": "Esta função retorna o preço da mínima de uma vela."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Low[1]", "Low[1, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço da vela.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0.0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "Time",
+      "aliases": "T",
+      "description": {
+         "simple": "Retorna o horário de abertura de uma vela.",
+         "full": "Esta função retorna o horário de abertura de uma vela."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Time[1]", "Time[1, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o horário da vela.",
+            "type": {
+               "type": "uint"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo uint (0).",
+            "type": {
+               "type": "uint"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "Direction",
+      "aliases": "DIR",
+      "description": {
+         "simple": "Retorna a direção de uma vela (-1 = Negativa, 0 = Neutra, 1 = Positiva).",
+         "full": "Esta função retorna a direção simplificada de uma vela, ou seja, se a vela é positiva ou negativa. (-1 = Negativa, 0 = Neutra, 1 = Positiva)"
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Direction[1]", "Direction[1, M5, \"EURUSD\"]", "DIR[1] == 1 // Check if the candle is positive/buying"],
+      "returns": {
+         "success": {
+            "message": "Retorna a direção da vela.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo int (0).",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "Spread",
+      "aliases": "SPD",
+      "description": {
+         "simple": "Retorna a quantidade de spread de uma vela.",
+         "full": "Esta função retorna a quantidade de spread de uma vela."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["Spread[1]", "Spread[1, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o spread da vela.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo int (0).",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "Candle",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o index da vela.",
+         "full": "Esta função retorna o identificador da vela, usado para obter o index utilizando o horário especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "timeSeconds",
+            "comment": "O horário em segundos."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": [
+         "Candle[1]",
+         "Candle[1, M5, \"EURUSD\"]",
+         "Candle[ToTime[\"13:00\"]] // How to get the candle at 13:00 of the day",
+         "Candle[TIME_CURRENT-300] // How to get the last 5 minutes candles index"
+      ],
+      "returns": {
+         "success": {
+            "message": "Retorna o index da vela.",
+            "type": {
+               "type": "int"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo int (0).",
+            "type": {
+               "type": "int"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "MaxHigh",
+      "aliases": "MaxH",
+      "description": {
+         "simple": "Retorna o preço máximo entre duas posições de velas.",
+         "full": "Esta função retorna o maior preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da maior vela encontrada nesse intervalo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "startIndex",
+            "comment": "O index da primeira vela de referência."
+         },
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "endIndex",
+            "comment": "O index da ultima vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["MaxHigh[0, 20]", "MaxHigh[0, 20, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço da maior vela.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "MinLow",
+      "aliases": "MinL",
+      "description": {
+         "simple": "Retorna o preço mínimo entre duas posições de velas.",
+         "full": "Esta função retorna o menor preço entre duas posições. Ela realiza uma varredura do índice inicial até o índice final, identificando e retornando o preço da menor vela encontrada nesse intervalo."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "startIndex",
+            "comment": "O index da primeira vela de referência."
+         },
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "endIndex",
+            "comment": "O index da ultima vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["MinLow[0, 20]", "MinLow[0, 20, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o preço da menor vela.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo double (0).",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "TickVolume",
+      "aliases": "TICKV",
+      "description": {
+         "simple": "Retorna o volume de uma vela.",
+         "full": "Esta função retorna o volume de uma vela com base nos dados de tick."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["TickVolume[1]", "TickVolume[1, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume da vela.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo long (0).",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "CANDLE",
+      "name": "RealVolume",
+      "aliases": "REALV",
+      "description": {
+         "simple": "Retorna o volume de uma vela usando os dados reais.",
+         "full": "Esta função retorna o volume de uma vela com base em dados reais. Em alguns mercados, no entanto, o volume pode ser constantemente zero devido à ausência de dados de volume no feed de dados, seja por limitações da corretora, do tipo de ativo (como forex, que muitas vezes não fornece volume real), ou pela forma como o volume é calculado e disponibilizado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "uint"
+            },
+            "name": "candle",
+            "comment": "A vela de referência."
+         },
+         {
+            "type": {
+               "type": "ENUM_TIMEFRAME",
+               "typeLink": "/references/enumerators#timeframes"
+            },
+            "name": "timeframe",
+            "comment": "O tempo gráfico de referência.",
+            "value": "CURRENT"
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "symbol",
+            "comment": "O ativo de referência.",
+            "value": "SYMBOL"
+         }
+      ],
+      "examples": ["TickVolume[1]", "TickVolume[1, M5, \"EURUSD\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna o volume da vela.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna o valor padrão zero para o tipo long (0).",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   }
+]

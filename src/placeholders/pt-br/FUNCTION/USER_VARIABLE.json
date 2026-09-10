@@ -1,0 +1,736 @@
+[
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "ClearDouble",
+      "aliases": "ClrDou",
+      "description": {
+         "simple": "Remove todas as variáveis criadas pelo usuário.",
+         "full": "Esta função permite remover todas as variáveis criadas pelo usuário."
+      },
+      "parameters": [],
+      "examples": ["GetDouble[\"Count\"] >= 10 -> ClearDouble[];"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se as variáveis foram removidas.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se as variáveis não foram removidas ou não existem.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "ClearInt",
+      "aliases": "ClrInt",
+      "description": {
+         "simple": "Remove todas as variáveis criadas pelo usuário.",
+         "full": "Esta função permite remover todas as variáveis criadas pelo usuário."
+      },
+      "parameters": [],
+      "examples": ["GetInt[\"Count\"] >= 10 -> ClearInt[];"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se as variáveis foram removidas.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se as variáveis não foram removidas ou não existem.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "ClearString",
+      "aliases": "ClrStr",
+      "description": {
+         "simple": "Remove todas as variáveis criadas pelo usuário.",
+         "full": "Esta função permite remover todas as variáveis criadas pelo usuário."
+      },
+      "parameters": [],
+      "examples": ["GetInt[\"Count\"] >= 10 -> ClearString[];"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se as variáveis foram removidas.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se as variáveis não foram removidas ou não existem.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "CreateDouble",
+      "aliases": "CreDou",
+      "description": {
+         "simple": "Cria uma variável caso ela não exista.",
+         "full": "Esta função permite criar uma variável caso não exista."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "Valor da variável."
+         }
+      ],
+      "examples": ["CreateDouble[\"Name\", 777]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi criada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "CreateInt",
+      "aliases": "CreInt",
+      "description": {
+         "simple": "Cria uma variável caso ela não exista.",
+         "full": "Esta função permite criar uma variável caso não exista."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "value",
+            "comment": "Valor da variável."
+         }
+      ],
+      "examples": ["CreateInt[\"Name\", 777]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi criada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "CreateString",
+      "aliases": "CreStr",
+      "description": {
+         "simple": "Cria uma variável caso ela não exista.",
+         "full": "Esta função permite criar uma variável caso não exista."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "value",
+            "comment": "Valor da variável."
+         }
+      ],
+      "examples": ["CreateString[\"Name\", \"my text\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi criada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "GetDouble",
+      "aliases": "GetDou",
+      "description": {
+         "simple": "Retorna o valor de uma variável criada pelo usuário.",
+         "full": "Esta função retorna o valor de uma variável criada pelo usuário."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         }
+      ],
+      "examples": ["GetDouble[\"Name\""],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor armazenado na variável.",
+            "type": {
+               "type": "double"
+            }
+         },
+         "error": {
+            "message": "Retorna '0.0' caso a variável não exista.",
+            "type": {
+               "type": "double"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "GetInt",
+      "aliases": "",
+      "description": {
+         "simple": "Retorna o valor de uma variável criada pelo usuário.",
+         "full": "Esta função retorna o valor de uma variável criada pelo usuário."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         }
+      ],
+      "examples": ["GetInt[\"Name\""],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor armazenado na variável.",
+            "type": {
+               "type": "long"
+            }
+         },
+         "error": {
+            "message": "Retorna '0' caso a variável não exista.",
+            "type": {
+               "type": "long"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "GetString",
+      "aliases": "GetStr",
+      "description": {
+         "simple": "Retorna o valor de uma variável criada pelo usuário.",
+         "full": "Esta função retorna o valor de uma variável criada pelo usuário."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         }
+      ],
+      "examples": ["GetString[\"Name\""],
+      "returns": {
+         "success": {
+            "message": "Retorna o valor armazenado na variável.",
+            "type": {
+               "type": "string"
+            }
+         },
+         "error": {
+            "message": "Retorna valor vazio caso a variável não exista.",
+            "type": {
+               "type": "string"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "RemoveDouble",
+      "aliases": "RemDou",
+      "description": {
+         "simple": "Remove uma variável caso ela exista.",
+         "full": "Esta função permite remover uma variável caso ela exista."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         }
+      ],
+      "examples": ["RemoveDouble[\"Name\""],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi removida..",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "RemoveInt",
+      "aliases": "RemInt",
+      "description": {
+         "simple": "Remove uma variável caso ela exista.",
+         "full": "Esta função permite remover uma variável caso ela exista."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         }
+      ],
+      "examples": ["RemoveInt[\"Name\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi removida..",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "RemoveString",
+      "aliases": "RemStr",
+      "description": {
+         "simple": "Remove uma variável caso ela exista.",
+         "full": "Esta função permite remover uma variável caso ela exista."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         }
+      ],
+      "examples": ["RemoveString[\"Name\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi removida..",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável nao foi removida ou se não existia uma variável com esse nome.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "ReplaceDouble",
+      "aliases": "RepDou",
+      "description": {
+         "simple": "Substitui o valor de uma variável caso ela exista.",
+         "full": "Esta função permite substituir o valor de uma variável caso não exista."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "Valor da variável."
+         }
+      ],
+      "examples": ["ReplaceDouble[\"Name\", 888]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi criada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "ReplaceInt",
+      "aliases": "RepInt",
+      "description": {
+         "simple": "Substitui o valor de uma variável caso ela exista.",
+         "full": "Esta função permite substituir o valor de uma variável caso não exista."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "value",
+            "comment": "Valor da variável."
+         }
+      ],
+      "examples": ["ReplaceInt[\"Name\", 888]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi criada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "ReplaceString",
+      "aliases": "RepStr",
+      "description": {
+         "simple": "Substitui o valor de uma variável caso ela exista.",
+         "full": "Esta função permite substituir o valor de uma variável caso não exista."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "value",
+            "comment": "Valor da variável."
+         }
+      ],
+      "examples": ["ReplaceString[\"Name\", \"my other text\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi criada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou variavel já existente.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "SetDouble",
+      "aliases": "SetDou",
+      "description": {
+         "simple": "Define o valor de uma variável ou cria uma nova.",
+         "full": "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "Valor da variável."
+         }
+      ],
+      "examples": ["SetDouble[\"Name\", 777]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi criada ou atualizada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "SetInt",
+      "aliases": "",
+      "description": {
+         "simple": "Define o valor de uma variável ou cria uma nova.",
+         "full": "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "long"
+            },
+            "name": "value",
+            "comment": "Valor da variável."
+         }
+      ],
+      "examples": ["SetInt[\"Name\", 777]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi criada ou atualizada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "SetString",
+      "aliases": "SetStr",
+      "description": {
+         "simple": "Define o valor de uma variável ou cria uma nova.",
+         "full": "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "variable",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "value",
+            "comment": "Valor da variável."
+         }
+      ],
+      "examples": ["SetString[\"Name\", \"my other text\"]"],
+      "returns": {
+         "success": {
+            "message": "Retorna um boolean (true) se a variável foi criada ou atualizada.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna um boolean (false) se a variável não foi criada por conta de um erro ou o valor não foi atualizado.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "AddDouble",
+      "aliases": "AddDou",
+      "description": {
+         "simple": "Adiciona um valor double a uma variável existente.",
+         "full": "Esta função adiciona um valor double ao valor atual de uma variável. Se a variável não existir, ela será criada com o valor especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "name",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "double"
+            },
+            "name": "value",
+            "comment": "Valor double a ser adicionado."
+         }
+      ],
+      "examples": ["AddDouble(\"saldo\", 15.75)"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se o valor foi adicionado/criado com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se ocorrer um erro na operação.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   },
+   {
+      "type": "function",
+      "category": "USER_VARIABLE",
+      "name": "AddInt",
+      "aliases": "",
+      "version": "2.06",
+      "description": {
+         "simple": "Adiciona um valor inteiro a uma variável existente.",
+         "full": "Esta função adiciona um valor inteiro ao valor atual de uma variável. Se a variável não existir, ela será criada com o valor especificado."
+      },
+      "parameters": [
+         {
+            "type": {
+               "type": "string"
+            },
+            "name": "name",
+            "comment": "Nome da variável."
+         },
+         {
+            "type": {
+               "type": "int"
+            },
+            "name": "value",
+            "comment": "Valor inteiro a ser adicionado."
+         }
+      ],
+      "examples": ["AddInt(\"contador\", 5)"],
+      "returns": {
+         "success": {
+            "message": "Retorna true se o valor foi adicionado/criado com sucesso.",
+            "type": {
+               "type": "bool"
+            }
+         },
+         "error": {
+            "message": "Retorna false se ocorrer um erro na operação.",
+            "type": {
+               "type": "bool"
+            }
+         }
+      }
+   }
+]
