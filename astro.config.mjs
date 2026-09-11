@@ -39,8 +39,12 @@ export default defineConfig({
          defaultLocale: "root",
          locales: {
             root: {
-               label: "Português",
-               lang: "pt",
+               label: "Português do Brasil",
+               lang: "pt-BR",
+            },
+            en: {
+               label: "English",
+               lang: "en",
             },
          },
          favicon: "./favicon.ico",

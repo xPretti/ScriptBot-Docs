@@ -4,9 +4,12 @@ import styles from "./CopyText.module.css";
 interface CopyTextProps {
    text: string;
    children: React.ReactElement;
+
+   copiedText?: string;
+   clickToClipboardText?: string;
 }
 
-export default function CopyText({ text, children }: CopyTextProps) {
+export default function CopyText({ text, children, copiedText = "Copied!", clickToClipboardText = "Click to clipboard" }: CopyTextProps) {
    const [copied, setCopied] = useState(false);
    const timeoutRef = useRef<number | null>(null);
 
@@ -39,10 +42,10 @@ export default function CopyText({ text, children }: CopyTextProps) {
       <code
          className={styles.code}
          onClick={handleCopy}
-         title="Click to clipboard"
+         title={clickToClipboardText}
       >
          {children}
-         {copied && <span className={styles.tooltip}>Copied!</span>}
+         {copied && <span className={styles.tooltip}>{copiedText}</span>}
       </code>
    );
 }

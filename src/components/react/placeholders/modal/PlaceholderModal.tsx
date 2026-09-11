@@ -19,8 +19,6 @@ type Props = {
 export default function PlaceholderModal({ type, item, isOpen, onClose }: Props) {
    const typeText = type === "function" ? "Função" : "Variável";
 
-   const url = type === "function" ? "/placeholders/functions/types" : "/placeholders/variables/types";
-
    const typeName = type === "function" ? `${item.name}[...]` : item.name;
 
    return (
@@ -55,7 +53,7 @@ export default function PlaceholderModal({ type, item, isOpen, onClose }: Props)
 
             <div className={styles.footer}>
                <a
-                  href={getUrl(`${url}/${item.category}/${item.name}`)}
+                  href={`types/${item.category}/${item.name}`}
                   className={styles.redirectBtn}
                >
                   Página da {typeText.toLowerCase()}

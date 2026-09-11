@@ -1,0 +1,28 @@
+{
+   "placeholder.function.title": "Functions",
+   "placeholder.function.description": "List of all available functions.",
+   "placeholder.function.pagelink.categories": "Go to categories",
+   "placeholder.variable.title": "Variables",
+   "placeholder.variable.description": "List of all available variables.",
+   "placeholder.variable.pagelink.categories": "Go to categories",
+
+   "placeholder.category.indicator": "Indicators",
+   "placeholder.category.uservariable": "Variables",
+   "placeholder.category.candle": "Candles",
+   "placeholder.category.debug": "Debugging",
+   "placeholder.category.math": "Math",
+   "placeholder.category.converter": "Converters",
+   "placeholder.category.time": "Time",
+   "placeholder.category.trade": "Trades",
+   "placeholder.category.globalvariable": "Globals",
+   "placeholder.category.basicobjects": "Objects",
+   "placeholder.category.logics": "Logic",
+   "placeholder.category.localposition": "Position Returns",
+   "placeholder.category.localtrigger": "Trigger Returns",
+   "placeholder.category.account": "Account",
+   "placeholder.category.market": "Market",
+   "placeholder.category.opentrade": "Open Trades",
+   "placeholder.category.closetrade": "Closed Trades",
+   "placeholder.category.signal": "Signals",
+   "placeholder.category.operator": "Operators"
+}
