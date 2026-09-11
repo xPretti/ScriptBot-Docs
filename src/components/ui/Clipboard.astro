@@ -1,0 +1,100 @@
+---
+const { text, copiedText = "Copied!", clickToClipboardText = "Click to clipboard" } = Astro.props;
+---
+
+<code
+   class="copy-code"
+   data-text={text}
+   data-copied-text={copiedText}
+   title={clickToClipboardText}
+>
+   <slot />
+   <span class="tooltip">{copiedText}</span>
+</code>
+
+<script>
+   document.querySelectorAll(".copy-code").forEach((codeEl) => {
+      let timeoutId: number | null = null;
+
+      codeEl.addEventListener("click", async () => {
+         const textToCopy = codeEl.getAttribute("data-text");
+         if (!textToCopy) return;
+
+         try {
+            await navigator.clipboard.writeText(textToCopy);
+
+            codeEl.classList.add("copied");
+
+            if (timeoutId) clearTimeout(timeoutId);
+
+            timeoutId = window.setTimeout(() => {
+               codeEl.classList.remove("copied");
+            }, 2000);
+         } catch (error) {
+            console.error("Erro ao copiar:", error);
+         }
+      });
+   });
+</script>
+
+<style>
+   .copy-code {
+      display: block;
+      position: relative;
+      text-wrap: nowrap;
+      border-radius: 4px;
+      background: var(--my-color-codevar);
+      border: 1px solid var(--my-color-codevar);
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.2s ease;
+      height: 100%;
+      padding: 0.125rem 0.375rem;
+   }
+
+   .copy-code:hover {
+      background: none;
+      border: 1px var(--sl-color-gray-5);
+      border-style: dashed;
+   }
+
+   .tooltip {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin-left: 10px;
+      transform: translateY(-50%);
+      background: var(--sl-color-accent);
+      color: var(--sl-color-white-fixed);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      white-space: nowrap;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+
+      opacity: 0;
+      visibility: hidden;
+      transition:
+         opacity 0.2s ease,
+         visibility 0.2s ease;
+   }
+
+   .copy-code.copied .tooltip {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: transparent var(--sl-color-accent) transparent transparent;
+   }
+</style>
