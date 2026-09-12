@@ -1,0 +1,129 @@
+---
+interface Props {
+   id?: string;
+   delay?: number;
+}
+
+const { id = `tooltip-${Math.random().toString(36).substring(2, 9)}`, delay = 200 } = Astro.props;
+---
+
+<astro-tooltip
+   data-tooltip-id={id}
+   data-delay={delay}
+   class="tooltip-wrapper"
+>
+   <div class="tooltip-trigger">
+      <slot name="trigger" />
+   </div>
+
+   <div
+      id={id}
+      popover="manual"
+      class="tooltip-popover"
+   >
+      <slot name="content" />
+   </div>
+</astro-tooltip>
+
+<script>
+   class AstroTooltip extends HTMLElement {
+      private trigger: HTMLElement | null = null;
+      private popover: HTMLElement | null = null;
+      private hideTimeout: number | null = null;
+      private delay: number = 200;
+
+      connectedCallback() {
+         const tooltipId = this.dataset.tooltipId;
+         if (!tooltipId) return;
+
+         this.delay = Number(this.dataset.delay) || 200;
+         this.trigger = this.querySelector(".tooltip-trigger");
+         this.popover = this.querySelector(`#${tooltipId}`);
+
+         if (!this.trigger || !this.popover) return;
+
+         // Abrir ao entrar no trigger ou no próprio popover
+         this.trigger.addEventListener("mouseenter", this.show);
+         this.popover.addEventListener("mouseenter", this.cancelHide);
+
+         // Agendar fechamento ao sair com o mouse do trigger ou do popover
+         this.trigger.addEventListener("mouseleave", this.scheduleHide);
+         this.popover.addEventListener("mouseleave", this.scheduleHide);
+
+         // Ocultar imediatamente se houver scroll na página
+         window.addEventListener("wheel", this.hideImmediately, { passive: true });
+      }
+
+      disconnectedCallback() {
+         window.removeEventListener("wheel", this.hideImmediately);
+      }
+
+      private show = () => {
+         this.cancelHide();
+         if (!this.trigger || !this.popover) return;
+
+         // Alinha o tooltip logo acima do link/trigger
+         const rect = this.trigger.getBoundingClientRect();
+         this.popover.style.left = `${rect.left}px`;
+         this.popover.style.top = `${rect.top - 6}px`;
+
+         try {
+            this.popover.showPopover();
+         } catch (e) {
+            // Popover já aberto
+         }
+      };
+
+      private scheduleHide = () => {
+         this.cancelHide();
+         // Dá um tempo de tolêrancia para mover o cursor até o texto
+         this.hideTimeout = window.setTimeout(this.hideImmediately, this.delay);
+      };
+
+      private cancelHide = () => {
+         if (this.hideTimeout) {
+            clearTimeout(this.hideTimeout);
+            this.hideTimeout = null;
+         }
+      };
+
+      private hideImmediately = () => {
+         this.cancelHide();
+         if (!this.popover) return;
+         try {
+            this.popover.hidePopover();
+         } catch (e) {
+            // Popover já oculto
+         }
+      };
+   }
+
+   customElements.define("astro-tooltip", AstroTooltip);
+</script>
+
+<style>
+   .tooltip-wrapper {
+      display: inline-block;
+   }
+
+   .tooltip-popover {
+      margin: 0;
+      padding: 0.35rem 0.65rem;
+      position: fixed;
+      transform: translateY(-100%);
+      background: var(--my-color-tooltip-bg, #24292e);
+      border: 1px solid var(--my-color-tooltip-border, #444);
+      color: var(--my-color-tooltip-text, #fff);
+      border-radius: 4px;
+      font-size: 13px;
+      max-width: 320px;
+      z-index: 99999;
+
+      pointer-events: auto;
+      user-select: text;
+   }
+
+   .tooltip-popover:popover-open {
+      display: block;
+   }
+</style>

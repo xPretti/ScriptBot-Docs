@@ -1,0 +1,32 @@
+---
+import Code from "astro/components/Code.astro";
+
+const { language = "text", code } = Astro.props;
+---
+
+<div class="code-container">
+   <Code
+      code={code}
+      lang={language as any}
+   />
+</div>
+
+<style is:global>
+   .code-container pre {
+      background-color: var(--code-bg-color, #f1f1f1) !important;
+      color: var(--code-text-color, #333333) !important;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      font-size: 0.9em;
+      line-height: 1.5;
+      padding: 1em;
+      margin: 0.5em 0;
+      overflow-x: auto;
+      border-radius: 0.3em;
+      border: 1px solid var(--code-border-color, #ddd);
+   }
+
+   .code-container span[style*="color:#E1E4E8"],
+   .code-container .comment {
+      color: var(--sl-color-gray-2, #6a737d) !important;
+   }
+</style>

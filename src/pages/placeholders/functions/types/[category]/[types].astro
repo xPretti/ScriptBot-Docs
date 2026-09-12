@@ -1,8 +1,10 @@
 ---
 import { buildFunctionsSidebar, getFunctionPages } from "@src/utils/functions-sidebar-utils";
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
-import PlaceholderPage from "@src/components/react/placeholders/page/PlaceholderPage";
 import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTranslationSystem";
+import PlaceholderContent from "@src/components/placeholders/PlaceholderContent.astro";
+import { FUNCTION_MAPPING } from "@src/data/placeholder-data";
+import type { ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 
 export const pages = getFunctionPages("/placeholders/functions/types/");
 
@@ -20,6 +22,8 @@ export async function getStaticPaths() {
 
 const { category, types } = Astro.params;
 const { desc } = Astro.props;
+
+const element = FUNCTION_MAPPING.get(category as ENUM_PLACEHOLDER_CATEGORY_TYPE)?.get(types);
 
 const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.category." + key) as I18nKeys));
 ---
@@ -40,10 +44,5 @@ const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(
       },
    ]}
 >
-   <PlaceholderPage
-      client:visible
-      type="function"
-      category={category}
-      name={types}
-   />
+   <PlaceholderContent item={element} />
 </StarlightPage>

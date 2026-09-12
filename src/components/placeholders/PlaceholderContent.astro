@@ -1,0 +1,58 @@
+---
+import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
+
+import DescriptionSection from "./sections/DescriptionSection.astro";
+import ExamplesSection from "./sections/ExamplesSection.astro";
+import InfoSection from "./sections/InfoSection.astro";
+import ParametersSection from "./sections/ParametersSection.astro";
+import ReturnsSection from "./sections/ReturnsSection.astro";
+import VersionSection from "./sections/VersionSection.astro";
+
+interface Props {
+   item: PlaceholderInterface | null | undefined;
+}
+
+const { item } = Astro.props;
+const hasParameters = Boolean(item?.parameters?.length);
+---
+
+{
+   item && (
+      <div class="content">
+         <VersionSection version={item.version} />
+
+         <DescriptionSection description={item.description.full} />
+
+         <InfoSection item={item} />
+
+         {hasParameters && (
+            <div class="parametersContainer">
+               <ParametersSection params={item.parameters} />
+            </div>
+         )}
+
+         <ExamplesSection item={item} />
+
+         <ReturnsSection returns={item.returns} />
+      </div>
+   )
+}
+
+<style>
+   .content p,
+   .content h3,
+   .content div {
+      margin: 0;
+   }
+
+   .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+   }
+
+   .parametersContainer {
+      overflow-x: auto;
+   }
+</style>

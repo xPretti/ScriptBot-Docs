@@ -1,0 +1,56 @@
+---
+import { getUrl } from "@src/utils/url-utils";
+import type { FunctionType } from "@src/types/functions-type";
+import { TYPES_MAPPING } from "@src/data/types-data";
+import Tooltip from "@src/components/ui/Tooltip.astro";
+
+interface Props {
+   param: FunctionType;
+}
+
+const { param } = Astro.props;
+
+const getTypeLink = (p: string | undefined) => {
+   return p ? getUrl(p) : getUrl("/references/types");
+};
+
+const typeTooltip = TYPES_MAPPING.get(param.type);
+const linkHref = getTypeLink(param.typeLink);
+---
+
+{
+   !typeTooltip ? (
+      <a href={linkHref}>
+         <span class="type">{param.type}</span>
+      </a>
+   ) : (
+      <Tooltip>
+         <a
+            href={linkHref}
+            slot="trigger"
+         >
+            <span class="type">{param.type}</span>
+         </a>
+
+         <div slot="content">
+            <p class="text">{typeTooltip.desc}</p>
+         </div>
+      </Tooltip>
+   )
+}
+
+<style>
+   a {
+      text-decoration: none;
+   }
+   .type {
+      font-weight: bold;
+      color: var(--my-color-function-type);
+      text-decoration: none;
+   }
+
+   .text {
+      white-space: pre-wrap;
+      margin: 0;
+   }
+</style>

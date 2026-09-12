@@ -6,7 +6,7 @@ pageLink:
 description: "Funções são blocos de instruções que executam ações e recebem parâmetros, permitindo criar regras e estratégias flexíveis e personalizadas."
 ---
 
-import PlaceholderTable from "@components/PlaceholderTable.astro";
+import PlaceholderList from "@components/placeholders/PlaceholderList.astro";
 import { ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { Aside } from "@astrojs/starlight/components";
 
@@ -20,7 +20,7 @@ estratégias personalizadas.
 
 > Essas funções permitem executar comandos de depuração.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.DEBUG}
 />
@@ -29,7 +29,7 @@ estratégias personalizadas.
 
 > Essas funções permitem executar lógicas que facilitam o desenvolvimento de expressões e fluxo de validações.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.LOGICS}
 />
@@ -38,7 +38,7 @@ estratégias personalizadas.
 
 > Essas funções permitem acessar os valores dos buffers de um indicador, como preços, sinais, cores.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.INDICATOR}
 />
@@ -47,7 +47,7 @@ estratégias personalizadas.
 
 > Essas funções permitem acessar os valores das velas, como preços de abertura, fechamento etc.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.CANDLE}
 />
@@ -56,7 +56,7 @@ estratégias personalizadas.
 
 > Essas funções fornecem dados de mercado semelhantes aos preços das velas, mas com escopo mais abrangente para representar diferentes aspectos do mercado.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET}
 />
@@ -65,7 +65,7 @@ estratégias personalizadas.
 
 > Estas são funções matemáticas utilizadas para realizar operações numéricas, como comparação de valores, cálculo de casas decimais e geração de resultados baseados em probabilidade.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.MATH}
 />
@@ -74,7 +74,7 @@ estratégias personalizadas.
 
 > Estas funções estão relacionadas aos dados da conta e permitem tanto recuperar quanto atualizar essas informações.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT}
 />
@@ -83,7 +83,7 @@ estratégias personalizadas.
 
 > Estas funções auxiliam em operações relacionadas a datas e horários, como conversões, cálculos, formatações e retornos.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.TIME}
 />
@@ -92,7 +92,7 @@ estratégias personalizadas.
 
 > Estas funções permitem obter informações sobre posições e ordens abertas, como quantidades, preços, volumes, etc.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE}
 />
@@ -101,7 +101,7 @@ estratégias personalizadas.
 
 > Estas funções permitem obter informações sobre posições fechadas, como quantidades, preços, volumes, etc.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE}
 />
@@ -110,7 +110,7 @@ estratégias personalizadas.
 
 > Estas funções de conversão permitem transformar valores entre diversos formatos, como converter números positivos em negativos e transformar strings em datas, entre outras operações.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.CONVERTER}
 />
@@ -119,7 +119,7 @@ estratégias personalizadas.
 
 > Essas variáveis permitem que o usuário crie suas próprias variáveis personalizadas.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.USER_VARIABLE}
 />
@@ -130,7 +130,7 @@ estratégias personalizadas.
 > Lembre-se: por serem globais, qualquer programa pode alterar seus valores, o que pode gerar conflitos.  
 > As variáveis permanecem disponíveis por até quatro semanas; caso não sejam utilizadas nesse período, o sistema as removerá automaticamente.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.GLOBAL_VARIABLE}
 />
@@ -139,7 +139,7 @@ estratégias personalizadas.
 
 > Estas funções permitem abrir, gerenciar e fechar posições de trade, incluindo ordens.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.TRADE}
 />
@@ -148,7 +148,7 @@ estratégias personalizadas.
 
 > Estas funções permitem criar e manipular objetos básicos do MetaTrader 5.
 
-<PlaceholderTable
+<PlaceholderList
    type="function"
    category={ENUM_PLACEHOLDER_CATEGORY_TYPE.BASIC_OBJECTS}
 />

@@ -1,6 +1,7 @@
 import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
 
 export const getFunctionExample = (fn: PlaceholderInterface, isAlias = false) => {
+   if (!fn) return "";
    const name = isAlias ? fn.aliases : fn.name;
    if (!fn.parameters || !fn.parameters.length) {
       return name;

@@ -7,7 +7,7 @@ description: "Variáveis são identificadores que armazenam dados usados em oper
 ---
 
 import CodeVar from "@components/CodeVar.astro";
-import PlaceholderTable from "@components/PlaceholderTable.astro";
+import PlaceholderList from "@components/placeholders/PlaceholderList.astro";
 import { ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
 import { Aside } from "@astrojs/starlight/components";
 import BaseLink from "@components/BaseLink.astro";
@@ -22,14 +22,14 @@ comportamento.
 > Essas variáveis e constantes representam operadores lógicos, booleanos e valores especiais
 > utilizados para validação de regras, condições e buffers no MetaTrader 5.
 
-<PlaceholderTable category={ENUM_PLACEHOLDER_CATEGORY_TYPE.OPERATOR} />
+<PlaceholderList category={ENUM_PLACEHOLDER_CATEGORY_TYPE.OPERATOR} />
 
 ## Posições e Ordens: \{#positions-and-orders\}
 
 > Essas variáveis são definidas previamente e utilizadas como parâmetros fixos
 > durante a execução de gatilhos ou eventos de posição.
 
-<PlaceholderTable category={ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION} />
+<PlaceholderList category={ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_POSITION} />
 
 {/* prettier-ignore */}
 <Aside type="tip">
@@ -49,34 +49,34 @@ comportamento.
 > Essas variáveis funcionam como parâmetros locais e imutáveis, configurados
 > previamente à ativação de um gatilho.
 
-<PlaceholderTable category={ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER} />
+<PlaceholderList category={ENUM_PLACEHOLDER_CATEGORY_TYPE.LOCAL_TRIGGER} />
 
 ## Conta: \{#account\}
 
 > Essas variáveis contêm dados da conta, incluindo saldo disponível, margens
 > operacionais, limites de operação e informações da corretora.
 
-<PlaceholderTable category={ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT} />
+<PlaceholderList category={ENUM_PLACEHOLDER_CATEGORY_TYPE.ACCOUNT} />
 
 ## Mercado \{#market\}
 
 > Essas variáveis contêm dados do mercado, incluindo preços de entrada, ativos
 > envolvidos e horários de negociação.
 
-<PlaceholderTable category={ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET} />
+<PlaceholderList category={ENUM_PLACEHOLDER_CATEGORY_TYPE.MARKET} />
 
 ## Posições e Ordens abertas \{#open-trades\}
 
 > Essas variáveis contém os dados de ordens e posições que ainda não foram
 > encerradas, permitindo o acompanhamento em tempo real.
 
-<PlaceholderTable category={ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE} />
+<PlaceholderList category={ENUM_PLACEHOLDER_CATEGORY_TYPE.OPEN_TRADE} />
 
 ## Posições e Ordens fechadas \{#closed-trades\}
 
 > Essas variáveis contém os dados de ordens e posições que foram encerradas.
 
-<PlaceholderTable category={ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE} />
+<PlaceholderList category={ENUM_PLACEHOLDER_CATEGORY_TYPE.CLOSE_TRADE} />
 
 {/* prettier-ignore */}
 <Aside type="tip">
@@ -99,4 +99,4 @@ comportamento.
 > Essas variáveis guardam as informações dos sinais, que são definidos com base
 > nos gatilhos de entrada e confirmação.
 
-<PlaceholderTable category={ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL} />
+<PlaceholderList category={ENUM_PLACEHOLDER_CATEGORY_TYPE.SIGNAL} />

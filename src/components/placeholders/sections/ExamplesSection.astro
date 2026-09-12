@@ -1,14 +1,18 @@
+---
 import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
-
-import Section from "../../shared/Section";
-import ReactCode from "../../shared/ReactCode";
 import { getFunctionExample } from "@src/utils/functions-comp-utils";
+import Section from "@src/components/ui/Section.astro";
+import CodeBlock from "@src/components/ui/CodeBlock.astro";
 
 interface Props {
    item: PlaceholderInterface;
 }
 
+const { item } = Astro.props;
+
 function buildExamples(fn: PlaceholderInterface) {
+   if (!fn) return "";
+
    let result = "//Default example:\n" + getFunctionExample(fn);
 
    if (fn.aliases) {
@@ -22,10 +26,12 @@ function buildExamples(fn: PlaceholderInterface) {
    return result;
 }
 
-export default function ExamplesSection({ item }: Props) {
-   return (
-      <Section title="Exemplos">
-         <ReactCode language="java">{buildExamples(item)}</ReactCode>
-      </Section>
-   );
-}
+const codeContent = buildExamples(item);
+---
+
+<Section title="Exemplos">
+   <CodeBlock
+      language="java"
+      code={codeContent}
+   />
+</Section>

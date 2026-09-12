@@ -1,5 +1,5 @@
 ---
-import CopyText from "./react/shared/CopyText";
+import Clipboard from "./ui/Clipboard.astro";
 
 const { copy } = Astro.props;
 
@@ -9,11 +9,8 @@ const textToCopy = copy ?? slotContent?.trim();
 
 {
    textToCopy && (
-      <CopyText
-         text={textToCopy}
-         client:load
-      >
+      <Clipboard text={textToCopy}>
          <slot />
-      </CopyText>
+      </Clipboard>
    )
 }

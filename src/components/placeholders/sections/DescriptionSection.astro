@@ -1,0 +1,19 @@
+---
+const { description } = Astro.props;
+---
+
+{
+   description && (
+      <div class="container">
+         <p class="description">{description}</p>
+      </div>
+   )
+}
+
+<style>
+   .container {
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+   }
+</style>

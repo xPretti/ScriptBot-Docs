@@ -1,0 +1,26 @@
+---
+import type { PlaceholderType } from "@src/types/placeholder-type";
+import type { ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
+import { FUNCTION_MAPPING, VARIABLE_MAPPING } from "@src/data/placeholder-data";
+import PlaceholderTable from "./PlaceholderTable.astro";
+
+interface Props {
+   type: PlaceholderType;
+   category: ENUM_PLACEHOLDER_CATEGORY_TYPE;
+}
+
+const { type, category } = Astro.props;
+
+const MAPPING = type === "function" ? FUNCTION_MAPPING : VARIABLE_MAPPING;
+const categoryMap = MAPPING.get(category);
+const elements = categoryMap ? Array.from(categoryMap.values()) : [];
+---
+
+{
+   elements.length > 0 && (
+      <PlaceholderTable
+         type={type}
+         elements={elements}
+      />
+   )
+}

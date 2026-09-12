@@ -1,0 +1,79 @@
+---
+import PlaceholderParam from "./PlaceholderParam.astro";
+import type { FunctionParameter } from "@src/types/functions-type";
+
+interface Props {
+   params?: FunctionParameter[];
+}
+
+const { params } = Astro.props;
+---
+
+{
+   params && (
+      <table class="table">
+         <tbody>
+            {params.map((param) => (
+               <tr class="param">
+                  <td>
+                     <PlaceholderParam param={param.type} />
+                  </td>
+                  <td class="variable">{param.value ? <span> {param.name} </span> : <span> {param.name}; </span>}</td>
+                  <td class="value">{param.value && <span> = {param.value};</span>}</td>
+                  <td class="comment">
+                     <p> // {param.comment}</p>
+                  </td>
+               </tr>
+            ))}
+         </tbody>
+      </table>
+   )
+}
+
+<style>
+   .table {
+      width: 100%;
+      overflow-x: auto !important;
+   }
+
+   .param p {
+      margin: 0;
+   }
+
+   .param a {
+      text-decoration: none;
+   }
+
+   .param a:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--my-color-function-type);
+   }
+
+   .param td {
+      padding: 0 0.5rem 0 0;
+      border: none;
+      vertical-align: top;
+   }
+
+   .param td:empty {
+      padding: 0;
+   }
+
+   .comment {
+      min-width: 18.75rem;
+   }
+
+   .comment p {
+      color: var(--my-color-function-comment);
+      overflow: hidden;
+   }
+
+   .variable {
+      text-wrap: nowrap;
+   }
+
+   .value {
+      text-wrap: nowrap;
+      color: var(--my-color-function-value);
+   }
+</style>

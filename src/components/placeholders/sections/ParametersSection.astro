@@ -1,0 +1,20 @@
+---
+import Section from "@src/components/ui/Section.astro";
+import type { FunctionParameter } from "@src/types/functions-type";
+import PlaceholderParams from "../components/PlaceholderParams.astro";
+
+interface Props {
+   params?: FunctionParameter[];
+}
+
+const { params } = Astro.props;
+const hasParams = params && params.length > 0;
+---
+
+{
+   hasParams && (
+      <Section title="Parâmetros">
+         <PlaceholderParams params={params} />
+      </Section>
+   )
+}

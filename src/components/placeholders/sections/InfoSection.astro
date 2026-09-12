@@ -1,0 +1,50 @@
+---
+import Clipboard from "@src/components/ui/Clipboard.astro";
+import Section from "@src/components/ui/Section.astro";
+import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
+
+interface Props {
+   item: PlaceholderInterface;
+}
+
+const { item } = Astro.props;
+const typeText = item.type === "function" ? "Função" : "Variável";
+---
+
+<Section title={typeText}>
+   <div class="info">
+      <p class="name">
+         <span>Nome:</span>
+         <Clipboard text={item.name}>
+            <span>{item.name}</span>
+         </Clipboard>
+      </p>
+
+      {
+         item.aliases && (
+            <p class="name">
+               <span>Abreviação:</span>
+               <Clipboard text={item.aliases}>
+                  <span>{item.aliases}</span>
+               </Clipboard>
+            </p>
+         )
+      }
+   </div>
+</Section>
+
+<style>
+   .info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .name {
+      display: inline-flex;
+      flex-direction: column;
+      width: fit-content;
+      margin: 0;
+      gap: 0.2rem;
+   }
+</style>

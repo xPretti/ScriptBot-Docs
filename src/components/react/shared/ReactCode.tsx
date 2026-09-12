@@ -160,11 +160,12 @@ const theme = {
 };
 
 interface Props {
-   children: string | string[];
+   children?: string | string[];
    language: string;
+   code?: string;
 }
 
-export default function ReactCode({ children, language }: Props) {
+export default function ReactCode({ children, language, code }: Props) {
    if (!children) return null;
 
    const toText = (children: string | string[]) => {
@@ -173,6 +174,8 @@ export default function ReactCode({ children, language }: Props) {
       }
       return children.join("\n");
    };
+
+   children;
 
    return (
       <SyntaxHighlighter
@@ -183,7 +186,7 @@ export default function ReactCode({ children, language }: Props) {
          style={theme}
          className={styles.code}
       >
-         {toText(children)}
+         {code}
       </SyntaxHighlighter>
    );
 }

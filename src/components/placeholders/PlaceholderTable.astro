@@ -1,0 +1,175 @@
+---
+import { SquareArrowOutUpRight } from "@lucide/astro";
+import Clipboard from "../ui/Clipboard.astro";
+import { getUrl } from "@src/utils/url-utils";
+
+import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
+import type { PlaceholderType } from "@src/types/placeholder-type";
+
+interface Props {
+   type: PlaceholderType;
+   elements: PlaceholderInterface[];
+}
+
+const { elements } = Astro.props;
+const containsAliases = elements.some((fn) => fn.aliases);
+---
+
+<table class="table">
+   <thead>
+      <tr>
+         <th>PLACEHOLDERS</th>
+         {containsAliases && <th class="aliases">ALIASES</th>}
+         <th>RETORNOS</th>
+      </tr>
+   </thead>
+
+   <tbody>
+      {
+         elements.map((fn) => (
+            <tr>
+               <td>
+                  <div class="nameContainer">
+                     <Clipboard text={fn.name}>
+                        <p>{fn.name}</p>
+                     </Clipboard>
+
+                     {fn.aliases && (
+                        <div class="aliasesMobile">
+                           <Clipboard text={fn.aliases}>
+                              <p>{fn.aliases}</p>
+                           </Clipboard>
+                        </div>
+                     )}
+                  </div>
+               </td>
+
+               {containsAliases && (
+                  <td class="aliases">
+                     {fn.aliases && (
+                        <Clipboard text={fn.aliases}>
+                           <p>{fn.aliases}</p>
+                        </Clipboard>
+                     )}
+                  </td>
+               )}
+
+               <td>
+                  <a
+                     href={getUrl(`types/${fn.category}/${fn.name}`)}
+                     class="description"
+                  >
+                     <p
+                        class="text"
+                        title={fn.description.full}
+                     >
+                        {fn.description.simple}
+                     </p>
+
+                     <div class="badgeWrapper">
+                        {fn.version && (
+                           <span
+                              class="version"
+                              title={fn.version}
+                           >
+                              {fn.version}+
+                           </span>
+                        )}
+
+                        <div class="redirectIcon">
+                           <SquareArrowOutUpRight
+                              size="24"
+                              stroke-width={1.5}
+                           />
+                        </div>
+                     </div>
+                  </a>
+               </td>
+            </tr>
+         ))
+      }
+   </tbody>
+</table>
+
+<style>
+   .table td {
+      vertical-align: middle;
+   }
+
+   .table p,
+   .table :global(svg) {
+      margin: 0;
+      padding: 0;
+   }
+
+   .description {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      text-decoration: none;
+      cursor: pointer;
+   }
+
+   .description:active {
+      color: var(--sl-color-accent);
+   }
+
+   .badgeWrapper {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transform: translateY(-50%);
+   }
+
+   .version {
+      display: inline-block;
+      color: var(--sl-color-accent);
+      font-size: 15px;
+      font-weight: 600;
+   }
+
+   .redirectIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin: 0;
+      opacity: 0.1;
+   }
+
+   .aliasesMobile {
+      display: none;
+      margin-top: 5px;
+   }
+
+   @media (max-width: 950px) {
+      .aliases {
+         display: none;
+      }
+
+      .aliasesMobile {
+         display: block;
+      }
+   }
+
+   @media (pointer: fine) {
+      .description:hover .text,
+      .description:hover .redirectIcon {
+         color: var(--sl-color-accent);
+         opacity: 1;
+         transition: opacity 0.2s ease-in-out;
+      }
+   }
+</style>
