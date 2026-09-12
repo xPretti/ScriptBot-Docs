@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { item } = Astro.props;
-const typeText = item.type === "function" ? Astro.locals.t("placeholder.function.type") : Astro.locals.t("placeholder.variable.type");
+const typeText: string = item.type === "function" ? Astro.locals.t("placeholder.function.type") : Astro.locals.t("placeholder.variable.type");
 ---
 
 <Section title={typeText}>

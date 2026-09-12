@@ -1,14 +1,86 @@
 ---
-const { title } = Astro.props;
+import AnchorHeading from "@astrojs/starlight/components/AnchorHeading.astro";
+
+interface Props {
+   title: string;
+   depth?: number;
+}
+
+const { title, depth = 0 } = Astro.props;
+
+// Gera o slug exato para a âncora do id
+const slug = title
+   .toLowerCase()
+   .trim()
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "")
+   .replace(/[^a-z0-9 -]/g, "")
+   .replace(/\s+/g, "-");
 ---
 
-<section class="section">
-   <h3 class="title">{title}</h3>
+<section
+   class="section"
+   data-toc-depth={depth}
+>
+   <AnchorHeading
+      level="2"
+      id={slug}
+   >
+      {title}
+   </AnchorHeading>
 
    <div class="content">
       <slot />
    </div>
 </section>
+
+<script>
+   function setupDynamicTOC() {
+      const starlightTocs = document.querySelectorAll<HTMLElement>("starlight-toc");
+      if (!starlightTocs.length) return;
+
+      const dynamicSections = document.querySelectorAll<HTMLElement>(".section");
+
+      starlightTocs.forEach((starlightToc) => {
+         const ul = starlightToc.querySelector("ul");
+         if (!ul) return;
+
+         dynamicSections.forEach((section) => {
+            const heading = section.querySelector<HTMLHeadingElement>("h2[id]");
+            if (!heading) return;
+
+            const id = heading.id;
+            const text = heading.textContent?.replace("#", "").trim() || "";
+            const depth = section.dataset.tocDepth || "1";
+
+            if (!id || !text) return;
+
+            if (ul.querySelector(`a[href="#${id}"]`)) return;
+
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            const span = document.createElement("span");
+
+            a.href = `#${id}`;
+            span.textContent = text;
+
+            a.style.setProperty("--depth", depth);
+
+            a.style.paddingInline = `calc(${depth}rem + 0.5rem) 0.5rem`;
+
+            a.appendChild(span);
+            li.appendChild(a);
+            ul.appendChild(li);
+         });
+
+         if ("init" in starlightToc && typeof (starlightToc as any).init === "function") {
+            (starlightToc as any).init();
+         }
+      });
+   }
+   document.addEventListener("DOMContentLoaded", setupDynamicTOC);
+   document.addEventListener("astro:page-load", setupDynamicTOC);
+</script>
 
 <style>
    .section {
