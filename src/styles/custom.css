@@ -21,8 +21,8 @@
 
    --sl-color-hairline: var(--sl-color-gray-6);
    --sl-color-hairline-shade: var(--sl-color-gray-6);
-   --sl-color-bg: var(--sl-color-black);
-   --sl-color-bg-nav: #fcfcfc;
+   --sl-color-bg: #fcfcfc;
+   --sl-color-bg-nav: #fdfcfa;
    --sl-color-bg-sidebar: var(--sl-color-bg-nav);
 
    /* My colors */
@@ -58,6 +58,7 @@
    --my-color-button-text-primary: #ffffff;
    --my-color-codevar: #e4e3e3;
    --my-color-codevar-hover: #d3d3d3;
+   --my-scroll-to-top: var(--sl-color-white);
 }
 
 :root[data-theme="dark"] {
@@ -121,6 +122,7 @@
    --my-color-button-text-primary: #ffffff;
    --my-color-codevar: #4d5665;
    --my-color-codevar-hover: #606b7e;
+   --my-scroll-to-top: var(--sl-color-white);
 
    /* code highlighting */
    --code-text-color: #f1f1f1ff;
@@ -298,7 +300,7 @@ td div {
    width: 50px !important;
    height: 50px !important;
    box-shadow: none !important;
-   color: var(--sl-color-white) !important;
+   color: var(--my-scroll-to-top) !important;
    transform: scale(1) !important;
    transition: transform 0.2s ease-in-out;
 }
@@ -318,7 +320,7 @@ td div {
 }
 
 .scroll-progress-ring circle {
-   stroke: var(--sl-color-white) !important;
+   stroke: var(--my-scroll-to-top) !important;
 }
 
 .sidebar-version-badge {
