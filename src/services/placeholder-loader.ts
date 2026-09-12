@@ -4,7 +4,7 @@ import type { PlaceholderType } from "@src/types/placeholder-type";
 
 type PlaceholderMapping = Map<ENUM_PLACEHOLDER_CATEGORY_TYPE, Map<string, PlaceholderInterface>>;
 
-const PLACEHOLDER_FILES = import.meta.glob<unknown>("/src/placeholders/**/*.json", {
+const PLACEHOLDER_FILES = import.meta.glob<unknown>("/src/content/placeholders/**/*.json", {
    eager: true,
    import: "default",
 });
@@ -12,7 +12,7 @@ const PLACEHOLDER_FILES = import.meta.glob<unknown>("/src/placeholders/**/*.json
 export function loadPlaceholderMapping(type: PlaceholderType, locale = "pt-br"): PlaceholderMapping {
    const mapping: PlaceholderMapping = new Map();
 
-   const basePath = `/src/placeholders/${locale}/${type.toUpperCase()}/`;
+   const basePath = `/src/content/placeholders/${locale}/${type.toUpperCase()}/`;
 
    for (const [filePath, data] of Object.entries(PLACEHOLDER_FILES)) {
       if (!filePath.startsWith(basePath)) {
