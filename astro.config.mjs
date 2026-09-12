@@ -65,62 +65,62 @@ export default defineConfig({
                label: "Settings",
                autogenerate: { directory: "settings" },
                translations: {
-                  pt: "Configurações",
+                  "pt-BR": "Configurações",
                },
             },
             {
                label: "Architecture",
                autogenerate: { directory: "architecture" },
                translations: {
-                  pt: "Arquitetura",
+                  "pt-BR": "Arquitetura",
                },
             },
             {
                label: "References",
                autogenerate: { directory: "references" },
                translations: {
-                  pt: "Referências",
+                  "pt-BR": "Referências",
                },
             },
             {
                label: "Placeholders",
                autogenerate: { directory: "placeholders" },
                translations: {
-                  pt: "Espaços reservados",
+                  "pt-BR": "Espaços reservados",
                },
             },
             // {
             //    label: "Resources",
             //    autogenerate: { directory: "resources" },
             //    translations: {
-            //       pt: "Recursos",
+            //       'pt-BR': "Recursos",
             //    },
             // },
             {
                label: "Knowledge",
                autogenerate: { directory: "knowledge" },
                translations: {
-                  pt: "Base de Conhecimento",
+                  "pt-BR": "Base de Conhecimento",
                },
             },
             {
                label: "LLM Resources",
                translations: {
-                  pt: "Recursos para LLMs",
+                  "pt-BR": "Recursos para LLMs",
                },
                items: [
                   {
                      label: "Page llms.txt",
                      link: "/llms.txt",
                      translations: {
-                        pt: "Página llms.txt",
+                        "pt-BR": "Página llms.txt",
                      },
                   },
                   {
                      label: "Page llms-full.txt",
                      link: "/llms-full.txt",
                      translations: {
-                        pt: "Página llms-full.txt",
+                        "pt-BR": "Página llms-full.txt",
                      },
                   },
                ],
