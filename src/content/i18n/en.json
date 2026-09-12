@@ -16,7 +16,7 @@
    "placeholder.category.time": "Time",
    "placeholder.category.trade": "Trades",
    "placeholder.category.globalvariable": "Global Variables",
-   "placeholder.category.basicobjects": "Objects",
+   "placeholder.category.objects": "Objects",
    "placeholder.category.logics": "Logic",
    "placeholder.category.localposition": "Position Returns",
    "placeholder.category.localtrigger": "Trigger Returns",

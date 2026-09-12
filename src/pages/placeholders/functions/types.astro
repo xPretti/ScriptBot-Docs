@@ -3,6 +3,7 @@ import { buildFunctionsSidebar, getFunctionPages } from "@src/utils/functions-si
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
 import CodeVar from "@src/components/CodeVar.astro";
 import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTranslationSystem";
+import { getAbsolute } from "@src/utils/url-utils";
 
 const pages = getFunctionPages("/placeholders/functions/types/");
 
@@ -15,10 +16,10 @@ const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(
       description: Astro.locals?.t("placeholder.function.description" as I18nKeys),
       pageLink: {
          label: Astro.locals?.t("placeholder.function.pagelink.categories" as I18nKeys),
-         href: "/" + Astro.locals?.t.lng + "/placeholders/functions/",
+         href: getAbsolute(Astro.currentLocale, "/placeholders/functions/"),
       },
       next: {
-         link: "/placeholders/functions/types/debug/Log/",
+         link: getAbsolute(Astro.currentLocale, pages[0].link),
          label: pages[0].label,
       },
    }}

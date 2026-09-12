@@ -5,6 +5,7 @@ import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTrans
 import PlaceholderContent from "@src/components/placeholders/PlaceholderContent.astro";
 import { VARIABLE_MAPPING } from "@src/data/placeholder-data";
 import type { ENUM_PLACEHOLDER_CATEGORY_TYPE } from "@src/enums/placeholders-enum";
+import { getAbsolute } from "@src/utils/url-utils";
 
 export const pages = getVariablePages("/placeholders/variables/types/");
 
@@ -34,7 +35,7 @@ const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(
       description: desc,
       pageLink: {
          label: Astro.locals?.t("placeholder.variable.pagelink.categories" as I18nKeys),
-         href: "/" + Astro.locals?.t.lng + "/placeholders/variables/",
+         href: getAbsolute(Astro.currentLocale, "/placeholders/variables/"),
       },
    }}
    sidebar={[

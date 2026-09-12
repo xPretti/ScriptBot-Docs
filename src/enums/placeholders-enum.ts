@@ -12,7 +12,7 @@ export const ENUM_PLACEHOLDER_CATEGORY_TYPE = {
    CLOSE_TRADE: "closetrade",
    TRADE: "trade",
    GLOBAL_VARIABLE: "globalvariable",
-   BASIC_OBJECTS: "basicobjects",
+   OBJECTS: "objects",
    LOGICS: "logics",
    LOCAL_POSITION: "localposition",
    LOCAL_TRIGGER: "localtrigger",

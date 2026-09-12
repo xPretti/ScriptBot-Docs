@@ -1,7 +1,7 @@
 [
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjHLine",
       "aliases": "ObjHL",
       "version": "2.10",
@@ -72,7 +72,7 @@
    },
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjVLine",
       "aliases": "ObjVL",
       "version": "2.10",
@@ -143,7 +143,7 @@
    },
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjTrendLine",
       "aliases": "ObjTL",
       "version": "2.10",
@@ -235,7 +235,7 @@
    },
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjRemove",
       "aliases": "ObjRem",
       "version": "2.10",
@@ -270,7 +270,7 @@
    },
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjClear",
       "aliases": "ObjClr",
       "version": "2.10",
@@ -316,7 +316,7 @@
    },
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjExist",
       "aliases": "ObjEx",
       "version": "2.10",
@@ -353,7 +353,7 @@
    },
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjGetTime",
       "aliases": "ObjGT",
       "version": "2.10",
@@ -408,7 +408,7 @@
    },
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjGetPrice",
       "aliases": "ObjGP",
       "version": "2.10",
@@ -463,7 +463,7 @@
    },
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjSetTime",
       "aliases": "ObjST",
       "version": "2.10",
@@ -517,7 +517,7 @@
    },
    {
       "type": "function",
-      "category": "BASIC_OBJECTS",
+      "category": "OBJECTS",
       "name": "ObjSetPrice",
       "aliases": "ObjSP",
       "version": "2.10",
