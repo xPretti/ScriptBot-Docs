@@ -293,7 +293,7 @@ td div {
 * ScrollToTop Button
 */
 .scroll-to-top-button {
-   background: transparent !important;
+   background: var(--sl-color-bg) !important;
    border: none !important;
    width: 50px !important;
    height: 50px !important;
