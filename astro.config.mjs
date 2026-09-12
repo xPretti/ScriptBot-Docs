@@ -39,7 +39,7 @@ export default defineConfig({
          defaultLocale: "root",
          locales: {
             root: {
-               label: "Português do Brasil",
+               label: "Português",
                lang: "pt-BR",
             },
             en: {

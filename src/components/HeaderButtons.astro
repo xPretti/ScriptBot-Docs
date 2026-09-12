@@ -1,11 +1,12 @@
 ---
+import { getAbsolute } from "@src/utils/url-utils";
 import { ArrowDownToLine } from "lucide-react";
 ---
 
 <div class="header-buttons">
    <a
       class="downloads"
-      href="/resources/downloads"
+      href={getAbsolute(Astro.currentLocale, "/resources/downloads")}
    >
       <ArrowDownToLine
          strokeWidth={2}
