@@ -84,13 +84,15 @@
          "success": {
             "message": "Retorna o tipo de trade correspondente ao último sinal ativo.",
             "type": {
-               "type": "ENUM_TRADE"
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators/#trade"
             }
          },
          "error": {
             "message": "Retorna o valor correspondente a nenhum ou erro.",
             "type": {
-               "type": "ENUM_TRADE"
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators/#trade"
             }
          }
       }
@@ -276,13 +278,15 @@
          "success": {
             "message": "Retorna o tipo de trade correspondente ao último sinal validado.",
             "type": {
-               "type": "ENUM_TRADE"
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators/#trade"
             }
          },
          "error": {
             "message": "Retorna valor correspondente a nenhum.",
             "type": {
-               "type": "ENUM_TRADE"
+               "type": "ENUM_TRADE",
+               "typeLink": "/references/enumerators/#trade"
             }
          }
       }

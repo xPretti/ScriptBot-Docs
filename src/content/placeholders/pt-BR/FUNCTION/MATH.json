@@ -342,7 +342,6 @@
       "type": "function",
       "category": "MATH",
       "name": "Percent",
-      "aliases": "",
       "description": {
          "simple": "Retorna a variação percentual de value até target, com value sendo o valor base.",
          "full": "Esta função retorna a variação percentual de value até target, com value sendo o valor base."
@@ -424,7 +423,6 @@
       "type": "function",
       "category": "MATH",
       "name": "HitPercent",
-      "aliases": "",
       "description": {
          "simple": "Retorna a quantidade percentual de acerto.",
          "full": "Esta função retorna a quantidade percentual de acerto entre gain e loss. A variação sempre será de 0% a 100%."
@@ -507,7 +505,6 @@
       "type": "function",
       "category": "MATH",
       "name": "Random",
-      "aliases": "",
       "description": {
          "simple": "Retorna um valor inteiro aleatório entre dois valores.",
          "full": "Esta função retorna um valor inteiro aleatório entre dois valores."
@@ -548,7 +545,6 @@
       "type": "function",
       "category": "MATH",
       "name": "Round",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor arredondado.",
          "full": "Esta função retorna o valor arredondado."
@@ -582,7 +578,6 @@
       "type": "function",
       "category": "MATH",
       "name": "RoundUp",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor arredondado para cima.",
          "full": "Esta função retorna o valor arredondado para cima, garantindo que o resultado seja sempre o próximo inteiro maior ou igual."
@@ -616,7 +611,6 @@
       "type": "function",
       "category": "MATH",
       "name": "RoundDown",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor arredondado para baixo.",
          "full": "Esta função retorna o valor arredondado para baixo, garantindo que o resultado seja sempre o próximo inteiro menor ou igual."
@@ -650,7 +644,6 @@
       "type": "function",
       "category": "MATH",
       "name": "Max",
-      "aliases": "",
       "description": {
          "simple": "Retorna o maior valor entre dois números.",
          "full": "Esta função retorna o maior valor entre dois números fornecidos."
@@ -691,7 +684,6 @@
       "type": "function",
       "category": "MATH",
       "name": "Min",
-      "aliases": "",
       "description": {
          "simple": "Retorna o menor valor entre dois números.",
          "full": "Esta função retorna o menor valor entre dois números fornecidos."

@@ -3,7 +3,6 @@
       "type": "function",
       "category": "MARKET",
       "name": "Last",
-      "aliases": "",
       "description": {
          "simple": "Retorna o último preço de negociação.",
          "full": "Esta função retorna o valor do último preço de negociação para o símbolo especificado."
@@ -108,7 +107,6 @@
       "type": "function",
       "category": "MARKET",
       "name": "Ask",
-      "aliases": "",
       "description": {
          "simple": "Retorna o preço de venda (ask).",
          "full": "Esta função retorna o preço de venda (ask) atual do símbolo especificado."
@@ -213,7 +211,6 @@
       "type": "function",
       "category": "MARKET",
       "name": "Bid",
-      "aliases": "",
       "description": {
          "simple": "Retorna o preço de compra (bid).",
          "full": "Esta função retorna o preço de compra (bid) atual do símbolo especificado."

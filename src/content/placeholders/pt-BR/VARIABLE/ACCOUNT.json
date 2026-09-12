@@ -75,7 +75,6 @@
       "type": "variable",
       "category": "ACCOUNT",
       "name": "MARGIN",
-      "aliases": "",
       "description": {
          "simple": "Retorna a margem da conta.",
          "full": "Retorna o montante de dinheiro colateral retido e exigido pela corretora para manter todas as posições atuais abertas."
@@ -195,7 +194,6 @@
       "type": "variable",
       "category": "ACCOUNT",
       "name": "LOGIN",
-      "aliases": "",
       "description": {
          "simple": "Retorna o número da conta.",
          "full": "Retorna o identificador numérico de registro primário (Login) correspondente à conta ativa conectada à plataforma."
@@ -219,7 +217,6 @@
       "type": "variable",
       "category": "ACCOUNT",
       "name": "NAME",
-      "aliases": "",
       "description": {
          "simple": "Retorna o nome do titular da conta.",
          "full": "Retorna a sequência textual representando o nome completo do investidor cadastrado e proprietário da conta corrente de negociação."

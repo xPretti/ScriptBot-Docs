@@ -3,7 +3,6 @@
       "type": "variable",
       "category": "OPERATOR",
       "name": "TRUE",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor booleano verdadeiro.",
          "full": "Representa uma condição logicamente verdadeira (TRUE ou 1), utilizada para validações e comparações em regras de negociação."
@@ -27,7 +26,6 @@
       "type": "variable",
       "category": "OPERATOR",
       "name": "FALSE",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor booleano falso.",
          "full": "Representa uma condição logicamente falsa (FALSE ou 0), utilizada para negar verificações ou indicar falha na validação de regras."
@@ -51,7 +49,6 @@
       "type": "variable",
       "category": "OPERATOR",
       "name": "EMPTY",
-      "aliases": "",
       "version": "2.25",
       "description": {
          "simple": "Representa o valor vazio de um indicador no MT5.",

@@ -3,7 +3,6 @@
       "type": "function",
       "category": "LOGICS",
       "name": "Seq",
-      "aliases": "",
       "version": "2.15",
       "description": {
          "simple": "Executa múltiplas expressões em sequência.",

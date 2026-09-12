@@ -3,7 +3,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "BuyAuto",
-      "aliases": "",
       "description": {
          "simple": "Abre uma posição de compra no mercado.",
          "full": "Esta função abre uma posição de compra no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (compra imediata ou pendente) é definido automaticamente."
@@ -80,7 +79,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "SellAuto",
-      "aliases": "",
       "description": {
          "simple": "Abre uma posição de venda no mercado.",
          "full": "Esta função abre uma posição de venda no mercado, com opções de take profit, stop loss e comentário. O tipo de ordem (venda imediata ou pendente) é definido automaticamente."
@@ -157,7 +155,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "Buy",
-      "aliases": "",
       "description": {
          "simple": "Abre uma posição de compra no mercado atual.",
          "full": "Esta função abre uma posição de compra no preço de mercado atual (Ask), com parâmetros opcionais de take profit, stop loss e comentário personalizado."
@@ -227,7 +224,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "Sell",
-      "aliases": "",
       "description": {
          "simple": "Abre uma posição de venda no mercado atual.",
          "full": "Esta função abre uma posição de venda no preço de mercado atual (Bid), com parâmetros opcionais de take profit, stop loss e comentário personalizado."
@@ -297,7 +293,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "BuyOrder",
-      "aliases": "",
       "description": {
          "simple": "Coloca uma ordem pendente de compra.",
          "full": "Esta função coloca uma ordem pendente de compra (Buy Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado."
@@ -374,7 +369,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "SellOrder",
-      "aliases": "",
       "description": {
          "simple": "Coloca uma ordem pendente de venda.",
          "full": "Esta função coloca uma ordem pendente de venda (Sell Limit/Stop) com parâmetros opcionais de take profit, stop loss e comentário personalizado."
@@ -451,7 +445,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "PosClose",
-      "aliases": "",
       "description": {
          "simple": "Fecha uma posição aberta completamente.",
          "full": "Esta função fecha completamente uma posição aberta no mercado, identificada pelo seu ticket. O fechamento é feito ao preço atual de mercado."
@@ -485,7 +478,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "PosClosePartial",
-      "aliases": "",
       "description": {
          "simple": "Fecha parcialmente uma posição aberta.",
          "full": "Esta função fecha parcialmente uma posição aberta no mercado, reduzindo seu volume pelo valor especificado."
@@ -526,7 +518,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "OrderClose",
-      "aliases": "",
       "description": {
          "simple": "Cancela uma ordem pendente.",
          "full": "Esta função cancela uma ordem pendente (limit/stop) identificada pelo seu ticket."
@@ -560,7 +551,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "PosCloseAll",
-      "aliases": "",
       "description": {
          "simple": "Fecha todas as posições abertas.",
          "full": "Esta função fecha todas as posições abertas no mercado, podendo ser filtradas por símbolo."
@@ -606,7 +596,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "PosBuyCloseAll",
-      "aliases": "",
       "description": {
          "simple": "Fecha todas as posições de compra abertas.",
          "full": "Esta função fecha todas as posições de compra (Buy) abertas no mercado, podendo ser filtradas por símbolo."
@@ -652,7 +641,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "PosSellCloseAll",
-      "aliases": "",
       "description": {
          "simple": "Fecha todas as posições de venda abertas.",
          "full": "Esta função fecha todas as posições de venda (Sell) abertas no mercado, podendo ser filtradas por símbolo."
@@ -698,7 +686,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "OrderCloseAll",
-      "aliases": "",
       "version": "2.08",
       "description": {
          "simple": "Fecha todas as ordens abertas.",
@@ -745,7 +732,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "OrderBuyCloseAll",
-      "aliases": "",
       "version": "2.08",
       "description": {
          "simple": "Fecha todas as ordens de compra abertas.",
@@ -792,7 +778,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "OrderSellCloseAll",
-      "aliases": "",
       "version": "2.08",
       "description": {
          "simple": "Fecha todas as ordens de venda abertas.",
@@ -839,7 +824,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "PosModify",
-      "aliases": "",
       "description": {
          "simple": "Modifica os níveis de take profit e stop loss de uma posição aberta.",
          "full": "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo."
@@ -900,7 +884,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "PosModifyTake",
-      "aliases": "",
       "description": {
          "simple": "Modifica apenas o take profit de uma posição aberta.",
          "full": "Esta função permite alterar somente o nível de take profit de uma posição aberta existente, utilizando diferentes métodos de cálculo."
@@ -953,7 +936,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "PosModifyStop",
-      "aliases": "",
       "description": {
          "simple": "Modifica apenas o stop loss de uma posição aberta.",
          "full": "Esta função permite alterar somente o nível de stop loss de uma posição aberta existente, utilizando diferentes métodos de cálculo."
@@ -1006,7 +988,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "OrderModify",
-      "aliases": "",
       "description": {
          "simple": "Modifica os níveis de take profit e stop loss de uma ordem aberta.",
          "full": "Esta função permite alterar os níveis de take profit e/ou stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo."
@@ -1075,7 +1056,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "OrderModifyTake",
-      "aliases": "",
       "description": {
          "simple": "Modifica apenas o take profit de uma ordem aberta.",
          "full": "Esta função permite alterar somente o nível de take profit de uma ordem aberta existente, utilizando diferentes métodos de cálculo."
@@ -1128,7 +1108,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "OrderModifyStop",
-      "aliases": "",
       "description": {
          "simple": "Modifica apenas o stop loss de uma ordem aberta.",
          "full": "Esta função permite alterar somente o nível de stop loss de uma ordem aberta existente, utilizando diferentes métodos de cálculo."
@@ -1181,7 +1160,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "OrderModifyPrice",
-      "aliases": "",
       "description": {
          "simple": "Modifica apenas o preço de uma ordem aberta.",
          "full": "Esta função permite alterar somente o preço de uma ordem aberta existente, utilizando diferentes métodos de cálculo."
@@ -1222,7 +1200,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "Modify",
-      "aliases": "",
       "description": {
          "simple": "Modifica os níveis de take profit e stop loss de uma posição ou ordem aberta.",
          "full": "Esta função permite alterar os níveis de take profit e/ou stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo."
@@ -1283,7 +1260,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "ModifyTake",
-      "aliases": "",
       "description": {
          "simple": "Modifica apenas o take profit de uma posição ou ordem aberta.",
          "full": "Esta função permite alterar somente o nível de take profit de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo."
@@ -1336,7 +1312,6 @@
       "type": "function",
       "category": "TRADE",
       "name": "ModifyStop",
-      "aliases": "",
       "description": {
          "simple": "Modifica apenas o stop loss de uma posição ou ordem aberta.",
          "full": "Esta função permite alterar somente o nível de stop loss de uma posição ou ordem aberta existente, utilizando diferentes métodos de cálculo."

@@ -1773,7 +1773,6 @@
       "type": "function",
       "category": "OPEN_TRADE",
       "name": "PosDouble",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor de uma propriedade numérica (double) de uma posição.",
          "full": "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma posição aberta, identificada pelo seu ticket."
@@ -1818,7 +1817,6 @@
       "type": "function",
       "category": "OPEN_TRADE",
       "name": "PosInt",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor de uma propriedade inteira de uma posição.",
          "full": "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma posição aberta, identificada pelo seu ticket."
@@ -1863,7 +1861,6 @@
       "type": "function",
       "category": "OPEN_TRADE",
       "name": "PosString",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor de uma propriedade textual de uma posição.",
          "full": "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma posição aberta, identificada pelo seu ticket."
@@ -2639,7 +2636,6 @@
       "type": "function",
       "category": "OPEN_TRADE",
       "name": "OrderDouble",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor de uma propriedade numérica (double) de uma ordem.",
          "full": "Esta função retorna o valor de uma propriedade específica do tipo double (número com casas decimais) de uma ordem aberta, identificada pelo seu ticket."
@@ -2684,7 +2680,6 @@
       "type": "function",
       "category": "OPEN_TRADE",
       "name": "OrderInt",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor de uma propriedade inteira de uma ordem.",
          "full": "Esta função retorna o valor de uma propriedade específica do tipo inteiro de uma ordem aberta, identificada pelo seu ticket."
@@ -2729,7 +2724,6 @@
       "type": "function",
       "category": "OPEN_TRADE",
       "name": "OrderString",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor de uma propriedade textual de uma ordem.",
          "full": "Esta função retorna o valor de uma propriedade específica do tipo string (texto) de uma ordem aberta, identificada pelo seu ticket."

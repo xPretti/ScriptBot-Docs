@@ -3,7 +3,6 @@
       "type": "function",
       "category": "TIME",
       "name": "IsTime",
-      "aliases": "",
       "description": {
          "simple": "Verifica se o tempo corresponde aos critérios informados.",
          "full": "Esta função verifica se o horário de referência corresponde aos valores fornecidos para hora, minuto e segundo. Caso algum dos valores seja -1, ele será ignorado no critério."
@@ -210,7 +209,6 @@
       "type": "function",
       "category": "TIME",
       "name": "Month",
-      "aliases": "",
       "description": {
          "simple": "Retorna o mês atual.",
          "full": "Esta função retorna o número do mês atual (1 a 12) com base no horário atual do símbolo."
@@ -245,7 +243,6 @@
       "type": "function",
       "category": "TIME",
       "name": "Year",
-      "aliases": "",
       "description": {
          "simple": "Retorna o ano atual.",
          "full": "Esta função retorna o número do ano atual com base no horário do símbolo."

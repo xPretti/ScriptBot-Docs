@@ -171,7 +171,6 @@
       "type": "variable",
       "category": "MARKET",
       "name": "MONTH",
-      "aliases": "",
       "description": {
          "simple": "Retorna o mês atual.",
          "full": "Retorna o número inteiro do mês do ano corrente (iniciando em 1 para Janeiro e encerrando em 12 para Dezembro)."
@@ -195,7 +194,6 @@
       "type": "variable",
       "category": "MARKET",
       "name": "YEAR",
-      "aliases": "",
       "description": {
          "simple": "Retorna o ano atual.",
          "full": "Retorna o valor em formato de quatro dígitos correspondente ao ano civil em andamento mapeado pela plataforma."
@@ -219,7 +217,6 @@
       "type": "variable",
       "category": "MARKET",
       "name": "LAST",
-      "aliases": "",
       "description": {
          "simple": "Retorna o último preço comercializado.",
          "full": "Retorna o preço da última transação comercializada de fato no livro de ofertas do ativo (Last price)."
@@ -315,7 +312,6 @@
       "type": "variable",
       "category": "MARKET",
       "name": "ASK",
-      "aliases": "",
       "description": {
          "simple": "Retorna o preço de compra.",
          "full": "Retorna o preço de venda atual de mercado mais baixo disponível (Ask), que representa o preço pago para entrar comprado."
@@ -387,7 +383,6 @@
       "type": "variable",
       "category": "MARKET",
       "name": "BID",
-      "aliases": "",
       "description": {
          "simple": "Retorna o preço de venda.",
          "full": "Retorna o preço de compra atual de mercado mais alto disponível (Bid), representando a cotação de execução imediata de uma venda."
@@ -459,7 +454,6 @@
       "type": "variable",
       "category": "MARKET",
       "name": "SYMBOL",
-      "aliases": "",
       "description": {
          "simple": "Retorna o ativo que o robô está operando.",
          "full": "Retorna o nome descritivo do ativo financeiro principal configurado no gráfico ativo onde o robô executa a rotina."
@@ -483,7 +477,6 @@
       "type": "variable",
       "category": "MARKET",
       "name": "MAGIC",
-      "aliases": "",
       "description": {
          "simple": "Retorna o id (magic number) que o robô está operando.",
          "full": "Retorna o Magic Number global configurado nas definições de mercado para identificar as ordens deste robô."
@@ -507,7 +500,6 @@
       "type": "variable",
       "category": "MARKET",
       "name": "REAL",
-      "aliases": "",
       "description": {
          "simple": "Retorna o ativo real, o ativo que as ordens serão executadas.",
          "full": "Retorna a identificação string do ativo espelho ou real para o envio direto de ordens, util em contas cross-market."

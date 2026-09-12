@@ -360,7 +360,6 @@
       "type": "function",
       "category": "CANDLE",
       "name": "Candle",
-      "aliases": "",
       "description": {
          "simple": "Retorna o index da vela.",
          "full": "Esta função retorna o identificador da vela, usado para obter o index utilizando o horário especificado."

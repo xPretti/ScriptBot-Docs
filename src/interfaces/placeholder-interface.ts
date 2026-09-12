@@ -5,7 +5,7 @@ export interface PlaceholderInterface {
    type: PlaceholderType;
    category: string;
    name: string;
-   aliases: string;
+   aliases?: string;
    version?: string;
    description: PlaceholderDescription;
    parameters?: FunctionParameter[];

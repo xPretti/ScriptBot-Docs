@@ -77,7 +77,6 @@
       "type": "function",
       "category": "CONVERTER",
       "name": "ToTime",
-      "aliases": "",
       "description": {
          "simple": "Retorna o horário em forma de texto simples para data em segundos.",
          "full": "Esta função retorna o horário em forma de texto para número em segundos. Com esta função você pode acessar a vela do dia usando um horário em forma de texto, por exemplo '13:00'."
@@ -292,7 +291,6 @@
       "type": "function",
       "category": "CONVERTER",
       "name": "ToInt",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor convertido para inteiro.",
          "full": "Esta função retorna o valor convertido para inteiro. Se o valor for uma string, ele será convertido para zero. Caso seja um número decimal, será arredondado para o inteiro mais próximo."

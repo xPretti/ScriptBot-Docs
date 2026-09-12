@@ -238,7 +238,6 @@
       "type": "function",
       "category": "USER_VARIABLE",
       "name": "GetInt",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor de uma variável criada pelo usuário.",
          "full": "Esta função retorna o valor de uma variável criada pelo usuário."
@@ -572,7 +571,6 @@
       "type": "function",
       "category": "USER_VARIABLE",
       "name": "SetInt",
-      "aliases": "",
       "description": {
          "simple": "Define o valor de uma variável ou cria uma nova.",
          "full": "Esta função define o valor de uma variável. Se a variável não existir, ela será criada, caso já exista, seu valor será substituído."
@@ -695,7 +693,6 @@
       "type": "function",
       "category": "USER_VARIABLE",
       "name": "AddInt",
-      "aliases": "",
       "version": "2.06",
       "description": {
          "simple": "Adiciona um valor inteiro a uma variável existente.",

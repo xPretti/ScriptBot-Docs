@@ -3,7 +3,6 @@
       "type": "function",
       "category": "DEBUG",
       "name": "Log",
-      "aliases": "",
       "description": {
          "simple": "Imprime um texto nas Logs do ScriptBot.",
          "full": "Esta função é usada para imprimir um texto nas Logs do ScriptBot, ela é útil quando queremos separar textos de debug das Logs do Metatrader."
@@ -53,7 +52,6 @@
       "type": "function",
       "category": "DEBUG",
       "name": "Print",
-      "aliases": "",
       "description": {
          "simple": "Imprime um texto nas logs do Metatrader.",
          "full": "Esta função é usada para imprimir um texto nas logs do Metatrader, muito utilizada para depurar o código."
@@ -103,7 +101,6 @@
       "type": "function",
       "category": "DEBUG",
       "name": "See",
-      "aliases": "",
       "description": {
          "simple": "Retorna o valor informado e exibe esse valor no log para depuração.",
          "full": "Retorna o valor de uma expressão ou função, exibindo esse valor no log do robô para fins de depuração. A função não altera o resultado retornado, funcionando apenas como uma camada de visualização para acompanhar a execução do código."

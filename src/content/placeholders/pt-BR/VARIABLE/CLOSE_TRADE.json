@@ -651,7 +651,6 @@
       "type": "variable",
       "category": "CLOSE_TRADE",
       "name": "TICKET",
-      "aliases": "",
       "description": {
          "simple": "Retorna o ticket da ultima posição.",
          "full": "Retorna o número de identificação ticket da última operação encerrada de forma cronológica no histórico recente."
