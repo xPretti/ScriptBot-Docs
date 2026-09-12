@@ -13,7 +13,7 @@ const hasParams = params && params.length > 0;
 
 {
    hasParams && (
-      <Section title="Parâmetros">
+      <Section title={Astro.locals.t("placeholder.section.name.parameters")}>
          <PlaceholderParams params={params} />
       </Section>
    )

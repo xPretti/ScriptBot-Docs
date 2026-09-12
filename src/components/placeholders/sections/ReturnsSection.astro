@@ -13,25 +13,25 @@ const hasCustomReturns = returns?.error || returns?.success;
 
 {
    returns && (
-      <Section title="Retornos">
+      <Section title={Astro.locals.t("placeholder.section.name.returns")}>
          {hasCustomReturns ? (
             <div class="returnsTypes">
                <PlaceholderReturn
-                  title="Em caso de sucesso:"
+                  title={Astro.locals.t("placeholder.section.return.sucess") + ":"}
                   message={returns.success?.message}
                   type={returns.success?.type}
                />
 
                <PlaceholderReturn
-                  title="Em caso de erro:"
+                  title={Astro.locals.t("placeholder.section.return.error") + ":"}
                   message={returns.error?.message}
                   type={returns.error?.type}
                />
             </div>
          ) : (
             <PlaceholderReturn
-               title="Em caso de sucesso ou erro:"
-               message="Esta função executa uma ação, mas não retorna nenhum valor ao ser executada."
+               title={Astro.locals.t("placeholder.section.return.any") + ":"}
+               message={Astro.locals.t("placeholder.section.return.any.message")}
                type={{
                   type: "void",
                   typeLink: "/references/types",

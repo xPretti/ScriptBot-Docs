@@ -18,9 +18,9 @@ const containsAliases = elements.some((fn) => fn.aliases);
 <table class="table">
    <thead>
       <tr>
-         <th>PLACEHOLDERS</th>
-         {containsAliases && <th class="aliases">ALIASES</th>}
-         <th>RETORNOS</th>
+         <th>{Astro.locals.t("placeholder.table.placeholders")}</th>
+         {containsAliases && <th class="aliases">{Astro.locals.t("placeholder.table.aliases")}</th>}
+         <th>{Astro.locals.t("placeholder.table.returns")}</th>
       </tr>
    </thead>
 

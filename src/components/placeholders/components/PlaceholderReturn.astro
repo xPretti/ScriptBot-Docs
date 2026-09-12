@@ -22,7 +22,7 @@ const { title, message, type } = Astro.props;
                <p>{message}</p>
                {type && (
                   <div class="typeContainer">
-                     <span>Retorno:</span>
+                     <span>{Astro.locals.t("placeholder.section.return") + ":"}</span>
                      <PlaceholderParam param={type} />
                   </div>
                )}

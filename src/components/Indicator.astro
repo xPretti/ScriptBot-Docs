@@ -10,17 +10,17 @@ const { type = "UNKNOWN", instance = "0, SYMBOL, CURRENT", params = "" } = Astro
    <table class="table">
       <tbody>
          <tr>
-            <td class="param">Nome:</td>
+            <td class="param">{Astro.locals.t("indicator.name") + ":"}</td>
             <td><CodeVar>{type}</CodeVar></td>
          </tr>
          <tr>
-            <td class="param">Instância:</td>
+            <td class="param">{Astro.locals.t("indicator.instance") + ":"}</td>
             <td><CodeVar>{instance}</CodeVar></td>
          </tr>
          {
             params && (
                <tr>
-                  <td class="param">Parâmetros:</td>
+                  <td class="param">{Astro.locals.t("indicator.parameters") + ":"}</td>
                   <td>
                      <CodeVar>{params}</CodeVar>
                   </td>
@@ -29,7 +29,7 @@ const { type = "UNKNOWN", instance = "0, SYMBOL, CURRENT", params = "" } = Astro
          }
       </tbody>
    </table>
-   <Spoiler title="Imagens">
+   <Spoiler title={Astro.locals.t("spoiler.images")}>
       <div class="content">
          <h5 class="img-title">M1</h5>
          <div class="img">

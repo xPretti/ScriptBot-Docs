@@ -8,13 +8,13 @@ interface Props {
 }
 
 const { item } = Astro.props;
-const typeText = item.type === "function" ? "Função" : "Variável";
+const typeText = item.type === "function" ? Astro.locals.t("placeholder.function.type") : Astro.locals.t("placeholder.variable.type");
 ---
 
 <Section title={typeText}>
    <div class="info">
       <p class="name">
-         <span>Nome:</span>
+         <span>{Astro.locals.t("placeholder.section.info.name") + ":"}</span>
          <Clipboard text={item.name}>
             <span>{item.name}</span>
          </Clipboard>
@@ -23,7 +23,7 @@ const typeText = item.type === "function" ? "Função" : "Variável";
       {
          item.aliases && (
             <p class="name">
-               <span>Abreviação:</span>
+               <span>{Astro.locals.t("placeholder.section.info.aliases") + ":"}</span>
                <Clipboard text={item.aliases}>
                   <span>{item.aliases}</span>
                </Clipboard>

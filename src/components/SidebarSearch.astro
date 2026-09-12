@@ -9,7 +9,7 @@ import { Search } from "lucide-react";
       <input
          id="sidebar-search"
          type="text"
-         placeholder="Pesquisar na barra lateral..."
+         placeholder={Astro.locals.t("Search in the sidebar...")}
          class="search-input"
          autocomplete="off"
       />
@@ -20,13 +20,13 @@ import { Search } from "lucide-react";
          id="sidebar-no-results"
          class="no-results hidden"
       >
-         <p>Nenhum resultado encontrado.</p>
+         <p>{Astro.locals.t("No results found.")}</p>
          <button
             type="button"
             id="open-global-search"
             class="global-search-btn"
          >
-            Pesquisar em todo o site
+            {Astro.locals.t("Search the entire site.")}
          </button>
       </div>
    </div>

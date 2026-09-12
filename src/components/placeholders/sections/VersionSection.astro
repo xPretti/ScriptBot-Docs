@@ -9,7 +9,7 @@ const { version } = Astro.props;
 {
    version && (
       <div class="container">
-         <h4 class="version">Disponível a partir da versão {version}</h4>
+         <h4 class="version">{Astro.locals.t("placeholder.section.version.available") + " " + version}</h4>
       </div>
    )
 }

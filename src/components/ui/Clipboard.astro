@@ -1,5 +1,5 @@
 ---
-const { text, copiedText = "Copied!", clickToClipboardText = "Click to clipboard" } = Astro.props;
+const { text, copiedText = Astro.locals.t("clipboard.copied"), clickToClipboardText = Astro.locals.t("clipboard.click_to_clipboard") } = Astro.props;
 ---
 
 <code

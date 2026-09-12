@@ -13,14 +13,14 @@ const { item } = Astro.props;
 function buildExamples(fn: PlaceholderInterface) {
    if (!fn) return "";
 
-   let result = "//Default example:\n" + getFunctionExample(fn);
+   let result = Astro.locals.t("placeholder.section.example.default") + getFunctionExample(fn);
 
    if (fn.aliases) {
-      result += "\n\n//Using aliases:\n" + getFunctionExample(fn, true);
+      result += Astro.locals.t("placeholder.section.example.using_aliases") + getFunctionExample(fn, true);
    }
 
    if (fn.examples?.length) {
-      result += `\n\n//Other examples\n${fn.examples.join("\n")}`;
+      result += `${Astro.locals.t("placeholder.section.example.other")}${fn.examples.join("\n")}`;
    }
 
    return result;
@@ -29,7 +29,7 @@ function buildExamples(fn: PlaceholderInterface) {
 const codeContent = buildExamples(item);
 ---
 
-<Section title="Exemplos">
+<Section title={Astro.locals.t("placeholder.section.name.examples")}>
    <CodeBlock
       language="java"
       code={codeContent}
