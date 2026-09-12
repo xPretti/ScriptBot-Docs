@@ -7,7 +7,8 @@ export function getUrl(path: string) {
    return `${BASE_URL}${path}`;
 }
 
-export function getAbsolute(currentLocale: string, path: string) {
+export function getAbsolute(currentLocale: string | undefined, path: string) {
+   if (!currentLocale) return getUrl(path);
    if (currentLocale === DEFAULT_LOCALE) return getUrl(path);
    return getUrl(`/${currentLocale}${path}`);
 }

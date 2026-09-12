@@ -1,5 +1,5 @@
 ---
-import { getUrl } from "@src/utils/url-utils";
+import { getAbsolute, getUrl } from "@src/utils/url-utils";
 import type { FunctionType } from "@src/types/functions-type";
 import { TYPES_MAPPING } from "@src/data/types-data";
 import Tooltip from "@src/components/ui/Tooltip.astro";
@@ -11,7 +11,7 @@ interface Props {
 const { param } = Astro.props;
 
 const getTypeLink = (p: string | undefined) => {
-   return p ? getUrl(p) : getUrl("/references/types");
+   return p ? getAbsolute(Astro.currentLocale, p) : getAbsolute(Astro.currentLocale, "/references/types");
 };
 
 const typeTooltip = TYPES_MAPPING.get(param.type);
