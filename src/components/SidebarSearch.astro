@@ -9,7 +9,7 @@ import { Search } from "lucide-react";
       <input
          id="sidebar-search"
          type="text"
-         placeholder={Astro.locals.t("Search in the sidebar...")}
+         placeholder={Astro.locals.t("search.on_sidebar")}
          class="search-input"
          autocomplete="off"
       />
@@ -20,13 +20,13 @@ import { Search } from "lucide-react";
          id="sidebar-no-results"
          class="no-results hidden"
       >
-         <p>{Astro.locals.t("No results found.")}</p>
+         <p>{Astro.locals.t("search.no_results")}</p>
          <button
             type="button"
             id="open-global-search"
             class="global-search-btn"
          >
-            {Astro.locals.t("Search the entire site.")}
+            {Astro.locals.t("search.global")}
          </button>
       </div>
    </div>
@@ -99,29 +99,29 @@ import { Search } from "lucide-react";
    }
 </style>
 
-<script type="module">
-   // Variável fora da função init para persistir no ciclo de vida do ClientRouter
+<script>
    let currentSearchQuery = "";
 
+   // Normalização de texto
+   const normalize = (t) =>
+      t
+         .toLowerCase()
+         .normalize("NFD")
+         .replace(/[\u0300-\u036f]/g, "");
+
    const initSidebarSearch = () => {
-      const searchInput = document.getElementById("sidebar-search");
+      const searchInput = document.getElementById("sidebar-search") as HTMLInputElement | null;
       const noResults = document.getElementById("sidebar-no-results");
-      const sidebarContent = document.querySelector(".sidebar-content .top-level");
+      // Busca a lista top-level na página inteira ou dentro do container do Starlight
+      const sidebarContent = document.querySelector(".top-level") || document.querySelector("sl-sidebar-state-persist .top-level");
       const globalSearchBtn = document.getElementById("open-global-search");
 
       if (!searchInput || !noResults || !sidebarContent) return;
 
       const detailsState = new Map();
-      sidebarContent.querySelectorAll("details").forEach((d) => detailsState.set(d, d.open));
-
-      const normalize = (t) =>
-         t
-            .toLowerCase()
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "");
+      sidebarContent.querySelectorAll("details").forEach((d) => detailsState.set(d, (d as HTMLDetailsElement).open));
 
       function performSearch(query) {
-         // Atualiza a variável persistente na memória do navegador
          currentSearchQuery = query;
 
          const terms = query.trim().split(/\s+/).filter(Boolean).map(normalize);
@@ -131,58 +131,79 @@ import { Search } from "lucide-react";
 
          if (!terms.length) {
             allLi.forEach((li) => {
-               li.style.display = "";
+               (li as HTMLElement).style.display = "";
                li.classList.remove("selected");
             });
-            sidebarContent.querySelectorAll("details").forEach((d) => (d.open = detailsState.get(d)));
+            sidebarContent.querySelectorAll("details").forEach((d) => ((d as HTMLDetailsElement).open = detailsState.get(d)));
             return;
          }
 
          allLi.forEach((li) => {
-            li.style.display = "none";
+            (li as HTMLElement).style.display = "none";
             li.classList.remove("selected");
          });
 
          let matched = false;
          terms.forEach((term) => {
             allLi.forEach((li) => {
-               const text = normalize(li.querySelector("summary .large, a span")?.textContent || "");
+               const text = normalize(li.querySelector("summary .large, a span, a")?.textContent || "");
                if (text.includes(term)) {
                   matched = true;
-                  li.style.display = "";
+                  (li as HTMLElement).style.display = "";
                   li.classList.add("selected");
-                  li.querySelectorAll("li").forEach((c) => (c.style.display = ""));
+
+                  // Exibe filhos se houver
+                  li.querySelectorAll("li").forEach((c) => ((c as HTMLElement).style.display = ""));
+
+                  // Abre os pais (categories e details)
                   let p = li.parentElement;
                   while (p && p !== sidebarContent) {
-                     if (p.tagName === "LI") p.style.display = "";
-                     if (p.tagName === "DETAILS") p.open = true;
+                     if (p.tagName === "LI") (p as HTMLElement).style.display = "";
+                     if (p.tagName === "DETAILS") (p as HTMLDetailsElement).open = true;
                      p = p.parentElement;
                   }
                }
             });
          });
-         if (!matched) noResults.classList.remove("hidden");
+
+         if (!matched) {
+            noResults.classList.remove("hidden");
+         }
       }
 
-      // --- RECUPERAÇÃO DURANTE NAVEGAÇÃO ---
+      // Restaura busca anterior se houver
       if (currentSearchQuery) {
          searchInput.value = currentSearchQuery;
          performSearch(currentSearchQuery);
       }
-      // -------------------------------------
 
+      // Handler do campo de busca local
+      searchInput.oninput = (e) => {
+         performSearch((e.target as HTMLInputElement).value);
+      };
+
+      searchInput.onkeydown = (e) => {
+         if (e.key === "Escape") {
+            searchInput.value = "";
+            performSearch("");
+            searchInput.blur();
+         }
+      };
+
+      // Handler do botão de busca global
       if (globalSearchBtn) {
-         globalSearchBtn.addEventListener("click", (event) => {
+         globalSearchBtn.onclick = (event) => {
             event.stopPropagation();
             const query = searchInput.value;
             const siteSearch = document.querySelector("site-search");
-            const dialog = siteSearch?.querySelector("dialog");
+            const dialog = siteSearch?.querySelector("dialog") as HTMLDialogElement | null;
             const frame = siteSearch?.querySelector(".dialog-frame");
 
             if (dialog && frame) {
-               const closeOnOutsideClick = (e) => {
-                  const isLink = "href" in (e.target || {});
-                  const outsideFrame = document.body.contains(e.target) && !frame.contains(e.target);
+               const closeOnOutsideClick = (e: MouseEvent) => {
+                  const target = e.target as HTMLElement;
+                  const isLink = "href" in (target || {});
+                  const outsideFrame = document.body.contains(target) && !frame.contains(target);
                   if (isLink || outsideFrame) {
                      dialog.close();
                   }
@@ -202,7 +223,7 @@ import { Search } from "lucide-react";
                );
 
                const inject = () => {
-                  const input = dialog.querySelector("input.pagefind-ui__search-input");
+                  const input = dialog.querySelector("input.pagefind-ui__search-input") as HTMLInputElement | null;
                   if (input) {
                      input.value = query;
                      input.dispatchEvent(new Event("input", { bubbles: true }));
@@ -213,31 +234,27 @@ import { Search } from "lucide-react";
                };
                inject();
             }
-         });
+         };
       }
+   };
 
-      searchInput.addEventListener("input", (e) => performSearch(e.target.value));
-
-      searchInput.addEventListener("keydown", (e) => {
-         if (e.key === "Escape") {
-            searchInput.value = "";
-            performSearch("");
-            searchInput.blur();
-         }
-      });
-
-      const handleSlash = (e) => {
-         const target = e.target;
-         const isEditable = target instanceof Element && (["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName) || target.isContentEditable);
-         if (e.key === "/" && !isEditable) {
+   // Atalho da tecla / no teclado
+   const handleSlash = (e: KeyboardEvent) => {
+      const target = e.target;
+      const isEditable = target instanceof Element && (["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName) || target.isContentEditable);
+      if (e.key === "/" && !isEditable) {
+         const searchInput = document.getElementById("sidebar-search");
+         if (searchInput) {
             e.preventDefault();
             searchInput.focus();
          }
-      };
-
-      document.removeEventListener("keydown", handleSlash, { capture: true });
-      document.addEventListener("keydown", handleSlash, { capture: true });
+      }
    };
 
+   document.removeEventListener("keydown", handleSlash, { capture: true });
+   document.addEventListener("keydown", handleSlash, { capture: true });
+
+   // Executa no carregamento inicial e em navegações via ClientRouter
    document.addEventListener("astro:page-load", initSidebarSearch);
+   initSidebarSearch();
 </script>
