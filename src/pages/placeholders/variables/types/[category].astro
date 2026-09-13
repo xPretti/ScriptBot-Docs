@@ -1,0 +1,157 @@
+---
+import { VARIABLE_MAPPING } from "@src/data/placeholder-data";
+
+import { buildFunctionsSidebar, getVariablePages } from "@src/utils/functions-sidebar-utils";
+
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+
+import CodeVar from "@src/components/CodeVar.astro";
+
+import type { I18nKeys } from "node_modules/@astrojs/starlight/utils/createTranslationSystem";
+
+import { getAbsolute } from "@src/utils/url-utils";
+
+export function getStaticPaths() {
+   return Array.from(VARIABLE_MAPPING.keys()).map((category) => ({
+      params: {
+         category,
+      },
+   }));
+}
+
+const pages = getVariablePages("/placeholders/variables/types/");
+
+const { category } = Astro.params;
+
+if (!category) {
+   throw new Error("Category is required");
+}
+
+const variablesMap = VARIABLE_MAPPING.get(category);
+
+if (!variablesMap) {
+   throw new Error(`Variable category "${category}" not found`);
+}
+
+const categoryPages = Array.from(variablesMap.values()).map((variable) => ({
+   label: variable.name,
+   aliases: variable.aliases,
+   link: `/placeholders/variables/types/${category}/${variable.name}`,
+   description: variable.description.simple,
+   version: variable.version,
+}));
+
+const { sidebarGroups } = buildFunctionsSidebar(pages, (key) => Astro.locals?.t(("placeholder.category." + key) as I18nKeys));
+
+const categoryLabel = Astro.locals?.t(("placeholder.category." + category) as I18nKeys);
+---
+
+<StarlightPage
+   frontmatter={{
+      title: categoryLabel,
+      description: Astro.locals?.t("placeholder.variable.description" as I18nKeys),
+      pageLink: {
+         label: Astro.locals.t("placeholder.function.pagelink.categories" as I18nKeys),
+         href: getAbsolute(Astro.currentLocale, "/placeholders/variables/"),
+      },
+   }}
+   sidebar={[
+      {
+         label: Astro.locals?.t("placeholder.function.title" as I18nKeys),
+         items: sidebarGroups,
+      },
+   ]}
+>
+   <h1>{Astro.locals.t("placeholder.section.name.all_variables")}</h1>
+
+   <table>
+      <tr>
+         <th>
+            {Astro.locals.t("placeholder.table.placeholders")}
+         </th>
+
+         <th>
+            {Astro.locals.t("placeholder.table.aliases")}
+         </th>
+
+         <th>
+            {Astro.locals.t("placeholder.table.returns")}
+         </th>
+      </tr>
+
+      {
+         categoryPages.map((p) => (
+            <tr>
+               <td>
+                  <CodeVar>{p.label}</CodeVar>
+               </td>
+
+               <td>
+                  <CodeVar>{p.aliases}</CodeVar>
+               </td>
+
+               <td class="description">
+                  <a
+                     class="function-item"
+                     href={p.link}
+                  >
+                     {p.description}
+
+                     {p.version && (
+                        <span
+                           class="version"
+                           title={p.version}
+                        >
+                           {p.version}+
+                        </span>
+                     )}
+                  </a>
+               </td>
+            </tr>
+         ))
+      }
+   </table>
+</StarlightPage>
+
+<style>
+   div,
+   a,
+   p {
+      margin: 0;
+   }
+
+   .function-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+   }
+
+   .function-item {
+      overflow: hidden;
+      max-width: fit-content;
+      gap: 0.5em;
+      padding: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+   }
+
+   .function-item:hover {
+      color: var(--sl-color-accent-high);
+   }
+
+   .description {
+      position: relative;
+   }
+
+   .version {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      color: var(--sl-color-accent);
+      font-size: 15px;
+      font-weight: semi-bold;
+   }
+</style>

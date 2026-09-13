@@ -1,7 +1,6 @@
 ---
 import { SquareArrowOutUpRight } from "@lucide/astro";
 import Clipboard from "../ui/Clipboard.astro";
-import { getUrl } from "@src/utils/url-utils";
 
 import type { PlaceholderInterface } from "@src/interfaces/placeholder-interface";
 import type { PlaceholderType } from "@src/types/placeholder-type";
@@ -13,6 +12,9 @@ interface Props {
 
 const { elements } = Astro.props;
 const containsAliases = elements.some((fn) => fn.aliases);
+
+const pathname = Astro.url.pathname;
+const currentPathWithSlash = pathname.endsWith("/") ? pathname : `${pathname}/`;
 ---
 
 <table class="table">
@@ -56,7 +58,7 @@ const containsAliases = elements.some((fn) => fn.aliases);
 
                <td>
                   <a
-                     href={getUrl(`types/${fn.category}/${fn.name}`)}
+                     href={`${currentPathWithSlash}types/${fn.category}/${fn.name}`}
                      class="description"
                   >
                      <p
