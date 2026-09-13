@@ -1,6 +1,8 @@
 ---
 import type { FunctionType } from "@src/types/functions-type";
 import PlaceholderParam from "./PlaceholderParam.astro";
+import Check from "@lucide/astro/icons/check";
+import X from "@lucide/astro/icons/x";
 
 interface Props {
    title: string;
@@ -14,19 +16,17 @@ const { title, message, type } = Astro.props;
 {
    message && (
       <div class="returnContainer">
-         <div class="returnItem">
-            <div class="title">
-               <p>{title}</p>
-            </div>
-            <div class="value">
-               <p>{message}</p>
-               {type && (
-                  <div class="typeContainer">
-                     <span>{Astro.locals.t("placeholder.section.return") + ":"}</span>
-                     <PlaceholderParam param={type} />
-                  </div>
-               )}
-            </div>
+         <div class="titleContainer">
+            <p class="title">{title}</p>
+         </div>
+         <div class="value">
+            <p class="message">{message}</p>
+            {type && (
+               <div class="typeContainer">
+                  <span class="label">{Astro.locals.t("placeholder.section.return") + ":"}</span>
+                  <PlaceholderParam param={type} />
+               </div>
+            )}
          </div>
       </div>
    )
@@ -36,32 +36,40 @@ const { title, message, type } = Astro.props;
    .returnContainer {
       display: flex;
       flex-direction: column;
-      gap: 0.5em;
-   }
-
-   .returnItem {
-      display: flex;
-      flex-direction: column;
+      margin: 0;
+      flex: 1;
       border-radius: 5px;
-      overflow: hidden;
-      border: 1px solid var(--my-color-return-border);
+      background-color: var(--my-color-return-content);
+      outline: 1px solid var(--sl-color-gray-6);
    }
 
    .value {
-      background-color: var(--my-color-return-content);
       padding: 10px;
-      border-top: 1px solid var(--my-color-return-border);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+   }
+
+   .message {
       margin: 0;
    }
 
-   .title {
+   .titleContainer {
       display: flex;
       gap: 0.5em;
-      background-color: var(--my-color-return-header);
-      padding: 2px 5px 2px 10px;
+      background-color: var(--my-color-return-content);
+      padding: 5px 5px 5px 10px;
       width: 100%;
+   }
+
+   .title {
+      margin-top: 0;
       text-align: center;
-      font-weight: 600;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--sl-color-gray-3);
    }
 
    .returnContainer a {
@@ -75,12 +83,21 @@ const { title, message, type } = Astro.props;
 
    .typeContainer {
       display: flex;
-      margin-top: 0.5em;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 0.5rem;
       gap: 0.5em;
+   }
+
+   .label {
+      color: var(--sl-color-gray-3);
+      font-weight: 500;
+      font-size: 0.9rem;
    }
 
    .type {
       font-weight: bold;
       color: var(--my-color-function-type);
+      height: 100%;
    }
 </style>
