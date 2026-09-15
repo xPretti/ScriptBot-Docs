@@ -3,6 +3,10 @@ import { globSync } from "glob";
 import { load } from "cheerio";
 import TurndownService from "turndown";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // --- Configurações ---
 const CONFIG = {
@@ -59,6 +63,25 @@ function convertTables($) {
    });
 }
 
+// Analisadores
+function getIgnoredLanguages() {
+   const i18nPath = path.join(__dirname, "..", "src", "content", "i18n");
+
+   if (!fs.existsSync(i18nPath)) {
+      console.warn(`Pasta '${i18nPath}' não encontrada.`);
+      return new Set();
+   }
+
+   const files = fs.readdirSync(i18nPath).filter((file) => file.endsWith(".json"));
+
+   return new Set(files.map((file) => path.basename(file, ".json")));
+}
+
+function isIgnoredFolder(folderName) {
+   const ignoreLanguages = getIgnoredLanguages();
+   return ignoreLanguages.has(folderName);
+}
+
 // --- Processo Principal ---
 
 function init() {
@@ -79,11 +102,18 @@ function init() {
    for (const file of files) {
       if (file.includes("404.html")) continue;
 
+      const folders = path.dirname(file).split(path.sep);
+
+      if (folders.some((folder) => isIgnoredFolder(folder))) {
+         console.log(`Ignorando: ${file}`);
+         continue;
+      }
+
       const html = fs.readFileSync(file, "utf8");
       const $ = load(html);
 
       // Cleanup HTML
-      $("script, style, nav, footer, aside").remove();
+      $("script, style, nav, footer, aside, [llm-ignore]").remove();
       convertTables($);
 
       const content = $(".sl-markdown-content").html() || $("article").html() || $("main").html();

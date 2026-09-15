@@ -20,6 +20,7 @@ const { id = `tooltip-${Math.random().toString(36).substring(2, 9)}`, delay = 20
       id={id}
       popover="manual"
       class="tooltip-popover"
+      llm-ignore
    >
       <slot name="content" />
    </div>

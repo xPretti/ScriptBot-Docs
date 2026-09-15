@@ -37,7 +37,10 @@ const currentPathWithSlash = pathname.endsWith("/") ? pathname : `${pathname}/`;
                      </Clipboard>
 
                      {fn.aliases && (
-                        <div class="aliasesMobile">
+                        <div
+                           class="aliasesMobile"
+                           llm-ignore
+                        >
                            <Clipboard text={fn.aliases}>
                               <p>{fn.aliases}</p>
                            </Clipboard>

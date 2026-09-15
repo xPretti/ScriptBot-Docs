@@ -9,7 +9,11 @@ const { text, copiedText = Astro.locals.t("clipboard.copied"), clickToClipboardT
    title={clickToClipboardText}
 >
    <slot />
-   <span class="tooltip">{copiedText}</span>
+   <span
+      class="tooltip"
+      llm-ignore
+      >{copiedText}</span
+   >
 </code>
 
 <script>
